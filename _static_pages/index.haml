@@ -2,13 +2,35 @@
 layout: home
 \---
 
-{% for category in site.categories %}
-%h2.category_title
-  {{ category[0] }}
-%ul
-  {% for post in category[1] %}
-  %li.post_list
-    %a{:href => "{{ post.url }}"} {{ post.title }}
+.col
+  {% for category in site.categories limit:3 %}
+  %h2.category_title
+    {{ category[0] }}
+  %ul
+    {% for post in category[1] %}
+    %li.post_list
+      %a{:href => "{{ post.url }}"} {{ post.title }}
+    {% endfor %}
   {% endfor %}
-{% endfor %}
 
+.col
+  {% for category in site.categories limit: 3 offset: 3 %}
+  %h2.category_title
+    {{ category[0] }}
+  %ul
+    {% for post in category[1] %}
+    %li.post_list
+      %a{:href => "{{ post.url }}"} {{ post.title }}
+    {% endfor %}
+  {% endfor %}
+
+.col
+  {% for category in site.categories limit: 3 offset: 6 %}
+  %h2.category_title
+    {{ category[0] }}
+  %ul
+    {% for post in category[1] %}
+    %li.post_list
+      %a{:href => "{{ post.url }}"} {{ post.title }}
+    {% endfor %}
+  {% endfor %}

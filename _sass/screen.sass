@@ -9,9 +9,12 @@
 /////////////// vars ///////////////
 
 $wistia_blue: #81c2f0
+$background_gray: #F4F4F4
+$green: #8DC63F
 
 body
   font-family: Helvetica, Arial, sans-serif
+  background-color: $background_gray
   a
     color: $wistia_blue
 
@@ -48,6 +51,18 @@ header
 .category_title
   font-size: 24px 
   margin-bottom: 10px
+  color: $green
+  text-decoration: underline
+
+.col
+  width: 25%
+  float: left
+  margin-left: 40px
+  &:first-child
+    margin-left: 0
+  a
+    color: #999
+    text-decoration: none
 
 #post
   display: inline-block

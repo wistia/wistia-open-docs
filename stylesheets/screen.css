@@ -62,83 +62,102 @@ a img {
   border: none;
 }
 
-/* line 13, ../_sass/screen.sass */
+/* line 15, ../_sass/screen.sass */
 body {
   font-family: Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4;
 }
-/* line 15, ../_sass/screen.sass */
+/* line 18, ../_sass/screen.sass */
 body a {
   color: #81c2f0;
 }
 
-/* line 18, ../_sass/screen.sass */
+/* line 21, ../_sass/screen.sass */
 h1 {
   font-size: 40px;
 }
 
-/* line 21, ../_sass/screen.sass */
+/* line 24, ../_sass/screen.sass */
 header {
   width: 1000px;
 }
-/* line 23, ../_sass/screen.sass */
+/* line 26, ../_sass/screen.sass */
 header h1 {
   font-size: 60px;
 }
-/* line 25, ../_sass/screen.sass */
+/* line 28, ../_sass/screen.sass */
 header h1 a {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
-/* line 29, ../_sass/screen.sass */
+/* line 32, ../_sass/screen.sass */
 .home {
   text-align: center;
   margin: 100px auto 0;
 }
 
-/* line 32, ../_sass/screen.sass */
+/* line 35, ../_sass/screen.sass */
 .post_pages {
   margin: 30px auto 0;
 }
 
-/* line 35, ../_sass/screen.sass */
+/* line 38, ../_sass/screen.sass */
 #container {
   width: 1000px;
   margin: 20px auto 30px;
   padding: 25px;
 }
 
-/* line 40, ../_sass/screen.sass */
+/* line 43, ../_sass/screen.sass */
 #content {
   display: inline-block;
   width: 100%;
 }
-/* line 43, ../_sass/screen.sass */
+/* line 46, ../_sass/screen.sass */
 #content ul {
   padding-left: 10px;
   margin-bottom: 20px;
   line-height: 150%;
 }
 
-/* line 48, ../_sass/screen.sass */
+/* line 51, ../_sass/screen.sass */
 .category_title {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #8dc63f;
+  text-decoration: underline;
 }
 
-/* line 52, ../_sass/screen.sass */
+/* line 57, ../_sass/screen.sass */
+.col {
+  width: 25%;
+  float: left;
+  margin-left: 40px;
+}
+/* line 61, ../_sass/screen.sass */
+.col:first-child {
+  margin-left: 0;
+}
+/* line 63, ../_sass/screen.sass */
+.col a {
+  color: #999999;
+  text-decoration: none;
+}
+
+/* line 67, ../_sass/screen.sass */
 #post {
   display: inline-block;
   width: 66%;
 }
-/* line 55, ../_sass/screen.sass */
+/* line 70, ../_sass/screen.sass */
 #post .post_title {
   margin-bottom: 20px;
   border-bottom: 2px solid gray;
 }
 
-/* line 59, ../_sass/screen.sass */
+/* line 74, ../_sass/screen.sass */
 #right_col {
   display: inline-block;
   vertical-align: top;
@@ -148,7 +167,7 @@ header h1 a {
   margin-left: 40px;
   padding: 15px;
 }
-/* line 67, ../_sass/screen.sass */
+/* line 82, ../_sass/screen.sass */
 #right_col a {
   font-size: 24px;
 }

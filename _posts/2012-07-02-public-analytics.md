@@ -1,4 +1,8 @@
-# Public & Embedded Analytics
+---
+title: Public & Embedded Analytics
+category: Analytics
+---
+
 
 ## How do I view the statistics for my embedded videos?
 

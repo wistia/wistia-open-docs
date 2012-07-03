@@ -1,4 +1,9 @@
-# Integrating Your Wistia Video With a MailChimp Email Campaign
+---
+title: Integrating Your Wistia Video With a MailChimp Email Campaign
+category: Integrations
+---
+
+# 
 
 
 `<style float-left>`[{{:mchimp.png]({{ site.url }}/{{ page.lang }}/http://mailchimp.com/.html)`</style>`[MailChimp]({{ site.url }}/{{ page.lang }}/http://mailchimp.com/.html) is our favorite email marketing system.  When we need to send an email to our wonderful customers, and don't want it to get stuck in spam filters, we use MailChimp.
