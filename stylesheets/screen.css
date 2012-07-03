@@ -1,0 +1,154 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 14, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../.rvm/gems/ruby-1.9.3-p0@wistia-doc/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 13, ../_sass/screen.sass */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* line 15, ../_sass/screen.sass */
+body a {
+  color: #81c2f0;
+}
+
+/* line 18, ../_sass/screen.sass */
+h1 {
+  font-size: 40px;
+}
+
+/* line 21, ../_sass/screen.sass */
+header {
+  width: 1000px;
+}
+/* line 23, ../_sass/screen.sass */
+header h1 {
+  font-size: 60px;
+}
+/* line 25, ../_sass/screen.sass */
+header h1 a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* line 29, ../_sass/screen.sass */
+.home {
+  text-align: center;
+  margin: 100px auto 0;
+}
+
+/* line 32, ../_sass/screen.sass */
+.post_pages {
+  margin: 30px auto 0;
+}
+
+/* line 35, ../_sass/screen.sass */
+#container {
+  width: 1000px;
+  margin: 20px auto 30px;
+  padding: 25px;
+}
+
+/* line 40, ../_sass/screen.sass */
+#content {
+  display: inline-block;
+  width: 100%;
+}
+/* line 43, ../_sass/screen.sass */
+#content ul {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+
+/* line 48, ../_sass/screen.sass */
+.category_title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* line 52, ../_sass/screen.sass */
+#post {
+  display: inline-block;
+  width: 66%;
+}
+/* line 55, ../_sass/screen.sass */
+#post .post_title {
+  margin-bottom: 20px;
+  border-bottom: 2px solid gray;
+}
+
+/* line 59, ../_sass/screen.sass */
+#right_col {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  line-height: 200%;
+  border: 2px solid red;
+  margin-left: 40px;
+  padding: 15px;
+}
+/* line 67, ../_sass/screen.sass */
+#right_col a {
+  font-size: 24px;
+}

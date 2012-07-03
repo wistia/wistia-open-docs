@@ -1,0 +1,15 @@
+---
+layout: home
+---
+{% for category in site.categories %}
+<h2 class='category_title'>
+  {{ category[0] }}
+</h2>
+<ul>
+  {% for post in category[1] %}
+  <li class='post_list'>
+    <a href='{{ post.url }}'>{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

@@ -1,0 +1,14 @@
+RewriteEngine on
+
+# External redirect any /post-slug.html to /post-slug
+RewriteCond %{THE_REQUEST} ^[A-Z]+\s([^\s]+)\.html\s
+RewriteRule .* %1 [R=301,L]
+
+# Add trailing slash to directories without them so DirectoryIndex works.
+# This does not expose the internal URL.
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME} !/$
+RewriteRule ^(.*)$  $1/
+
+Options +MultiViews
+DirectorySlash off
