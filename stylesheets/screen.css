@@ -62,67 +62,134 @@ a img {
   border: none;
 }
 
-/* line 15, ../_sass/screen.sass */
+/* line 17, ../_sass/screen.sass */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: Gill Sans Infant, Arial, sans-serif;
+  background-color: #f7f6f4;
 }
-/* line 18, ../_sass/screen.sass */
+/* line 20, ../_sass/screen.sass */
 body a {
   color: #81c2f0;
+  text-decoration: none;
 }
 
-/* line 21, ../_sass/screen.sass */
+/* line 24, ../_sass/screen.sass */
+h1, h2 {
+  color: #2f353e;
+}
+
+/* line 27, ../_sass/screen.sass */
 h1 {
   font-size: 40px;
 }
 
-/* line 24, ../_sass/screen.sass */
-header {
-  width: 1000px;
+/* line 30, ../_sass/screen.sass */
+p {
+  font-size: 16px;
+  line-height: 115%;
+  color: #616770;
 }
-/* line 26, ../_sass/screen.sass */
-header h1 {
-  font-size: 60px;
-}
-/* line 28, ../_sass/screen.sass */
-header h1 a {
-  text-decoration: none;
-  color: black;
+
+/* line 35, ../_sass/screen.sass */
+strong {
   font-weight: bold;
 }
 
-/* line 32, ../_sass/screen.sass */
+/* line 41, ../_sass/screen.sass */
+header {
+  width: 100%;
+  background-color: #f7f6f4;
+  position: relative;
+  height: 40px;
+  border-bottom: 2px solid #d9d8d6;
+}
+/* line 47, ../_sass/screen.sass */
+header #header_container {
+  width: 1200px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 52, ../_sass/screen.sass */
+header #header_container #logo {
+  left: 0;
+}
+/* line 54, ../_sass/screen.sass */
+header #header_container #logo a {
+  position: absolute;
+  background: transparent url(/images/wistia_logo_header.png) no-repeat;
+  width: 115px;
+  height: 40px;
+}
+/* line 59, ../_sass/screen.sass */
+header #header_container #logo a:hover {
+  background-position-y: -40px;
+}
+/* line 61, ../_sass/screen.sass */
+header #header_container #header_nav {
+  position: absolute;
+  right: 17px;
+}
+/* line 64, ../_sass/screen.sass */
+header #header_container #header_nav ul {
+  height: 40px;
+}
+/* line 66, ../_sass/screen.sass */
+header #header_container #header_nav ul li {
+  display: inline-block;
+  position: relative;
+}
+/* line 70, ../_sass/screen.sass */
+header #header_container #header_nav ul li:last-child a {
+  padding-right: 0;
+}
+/* line 72, ../_sass/screen.sass */
+header #header_container #header_nav li a {
+  display: block;
+  padding: 10px 25px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8c8c8c;
+  text-shadow: 0 0 2px white;
+  outline: none;
+}
+/* line 81, ../_sass/screen.sass */
+header #header_container #header_nav li a:hover {
+  color: #444444;
+}
+
+/* line 84, ../_sass/screen.sass */
 .home {
   text-align: center;
   margin: 100px auto 0;
 }
 
-/* line 35, ../_sass/screen.sass */
-.post_pages {
-  margin: 30px auto 0;
-}
-
-/* line 38, ../_sass/screen.sass */
+/* line 88, ../_sass/screen.sass */
 #container {
-  width: 1000px;
-  margin: 20px auto 30px;
-  padding: 25px;
+  width: 1200px;
+  margin: 25px auto;
 }
 
-/* line 43, ../_sass/screen.sass */
-#content {
+/* line 92, ../_sass/screen.sass */
+section {
   display: inline-block;
-  width: 100%;
+  width: 900px;
 }
-/* line 46, ../_sass/screen.sass */
+
+/* line 96, ../_sass/screen.sass */
+#content {
+  width: 900px;
+  display: inline-block;
+}
+/* line 99, ../_sass/screen.sass */
 #content ul {
   padding-left: 10px;
   margin-bottom: 20px;
   line-height: 150%;
 }
 
-/* line 51, ../_sass/screen.sass */
+/* line 104, ../_sass/screen.sass */
 .category_title {
   font-size: 24px;
   margin-bottom: 10px;
@@ -130,44 +197,162 @@ header h1 a {
   text-decoration: underline;
 }
 
-/* line 57, ../_sass/screen.sass */
+/* line 110, ../_sass/screen.sass */
 .col {
   width: 25%;
   float: left;
   margin-left: 40px;
 }
-/* line 61, ../_sass/screen.sass */
+/* line 114, ../_sass/screen.sass */
 .col:first-child {
   margin-left: 0;
 }
-/* line 63, ../_sass/screen.sass */
+/* line 116, ../_sass/screen.sass */
 .col a {
   color: #999999;
   text-decoration: none;
 }
 
-/* line 67, ../_sass/screen.sass */
-#post {
-  display: inline-block;
-  width: 66%;
+/* line 123, ../_sass/screen.sass */
+#doc_nav {
+  background-color: #bc7134;
+  width: 900px;
+  padding: 0 20px;
 }
-/* line 70, ../_sass/screen.sass */
-#post .post_title {
-  margin-bottom: 20px;
-  border-bottom: 2px solid gray;
+/* line 127, ../_sass/screen.sass */
+#doc_nav #doc_nav_container {
+  margin: 0 auto;
+  position: relative;
+}
+/* line 130, ../_sass/screen.sass */
+#doc_nav #doc_nav_container ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 133, ../_sass/screen.sass */
+#doc_nav #doc_nav_container ul li {
+  display: inline-block;
+  height: 40px;
+  margin: 0 10px;
+}
+/* line 137, ../_sass/screen.sass */
+#doc_nav #doc_nav_container ul li a {
+  position: relative;
+  padding: 10px;
+  top: 9px;
+  height: 40px;
+  color: white;
 }
 
-/* line 74, ../_sass/screen.sass */
+/* line 144, ../_sass/screen.sass */
+#post {
+  display: inline-block;
+  width: 900px;
+  padding: 20px;
+  background-color: white;
+  clear: both;
+}
+/* line 150, ../_sass/screen.sass */
+#post .post_title {
+  margin-bottom: 40px;
+  border-bottom: 2px solid gray;
+}
+/* line 153, ../_sass/screen.sass */
+#post .post_content {
+  width: 750px;
+  margin: 0 auto;
+}
+/* line 156, ../_sass/screen.sass */
+#post h2 {
+  font-size: 28px;
+  margin: 100px 0 30px;
+}
+/* line 159, ../_sass/screen.sass */
+#post p {
+  margin: 20px;
+  line-height: 120%;
+}
+/* line 162, ../_sass/screen.sass */
+#post ul {
+  list-style-type: disc;
+  line-height: 150%;
+  padding-left: 30px;
+}
+/* line 166, ../_sass/screen.sass */
+#post .section {
+  margin: 20px 0;
+  clear: both;
+}
+/* line 169, ../_sass/screen.sass */
+#post hr {
+  margin: 100px 0;
+  clear: both;
+}
+
+/* line 174, ../_sass/screen.sass */
+.post_image {
+  margin: 30px auto;
+  clear: both;
+}
+
+/* line 177, ../_sass/screen.sass */
+.center {
+  text-align: center;
+}
+
+/* line 179, ../_sass/screen.sass */
+.float_right {
+  float: right;
+  margin: 10px;
+}
+
+/* line 183, ../_sass/screen.sass */
+.video_embed {
+  text-align: center;
+  margin: 30px auto;
+}
+/* line 186, ../_sass/screen.sass */
+.video_embed iframe {
+  border: 2px solid dimGray;
+  -moz-box-shadow: #333333 1px 1px 5px 0;
+  -webkit-box-shadow: #333333 1px 1px 5px 0;
+  -o-box-shadow: #333333 1px 1px 5px 0;
+  box-shadow: #333333 1px 1px 5px 0;
+}
+
+/* line 190, ../_sass/screen.sass */
 #right_col {
   display: inline-block;
   vertical-align: top;
-  width: 25%;
-  line-height: 200%;
-  border: 2px solid red;
-  margin-left: 40px;
+  width: 200px;
+  margin: 40px 0 0 40px;
+  height: 100%;
   padding: 15px;
+  position: fixed;
 }
-/* line 82, ../_sass/screen.sass */
+/* line 199, ../_sass/screen.sass */
+#right_col ul li:first-of-type {
+  background-color: #bc7134;
+  text-align: center;
+}
+/* line 202, ../_sass/screen.sass */
+#right_col ul li:first-of-type a {
+  font-size: 18px;
+  color: white;
+}
+/* line 205, ../_sass/screen.sass */
+#right_col li {
+  background-color: green;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+/* line 209, ../_sass/screen.sass */
 #right_col a {
-  font-size: 24px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* line 213, ../_sass/screen.sass */
+.clear {
+  clear: both;
 }

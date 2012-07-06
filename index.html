@@ -1,8 +1,10 @@
 ---
 layout: home
 ---
+{% assign category_length = site.categories.count %}
+{{ category_length }}
 <div class='col'>
-  {% for category in site.categories limit:3 %}
+  {% for category in site.categories limit:4 %}
   <h2 class='category_title'>
     {{ category[0] }}
   </h2>
@@ -16,7 +18,7 @@ layout: home
   {% endfor %}
 </div>
 <div class='col'>
-  {% for category in site.categories limit: 3 offset: 3 %}
+  {% for category in site.categories limit: 4 offset: 4 %}
   <h2 class='category_title'>
     {{ category[0] }}
   </h2>
@@ -30,7 +32,21 @@ layout: home
   {% endfor %}
 </div>
 <div class='col'>
-  {% for category in site.categories limit: 3 offset: 6 %}
+  {% for category in site.categories limit: 4 offset: 8 %}
+  <h2 class='category_title'>
+    {{ category[0] }}
+  </h2>
+  <ul>
+    {% for post in category[1] %}
+    <li class='post_list'>
+      <a href='{{ post.url }}'>{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>
+<div class='col'>
+  {% for category in site.categories limit: 8 offset: 12 %}
   <h2 class='category_title'>
     {{ category[0] }}
   </h2>

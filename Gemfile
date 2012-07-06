@@ -9,3 +9,4 @@ gem "heroku", "~> 2.28.7"
 #gem 'rack-jekyll', :git => 'https://github.com/adaoraul/rack-jekyll.git' # temp removed due to issues w henrik jekyll
 gem "unicorn", "~> 4.3.1"
 gem "rdiscount"
+gem "foreman"

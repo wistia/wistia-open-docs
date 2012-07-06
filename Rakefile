@@ -20,7 +20,7 @@ end
 desc "Launch preview environment"
 task :preview do
   Rake::Task["parse_haml"].invoke
-  system "jekyll --auto --server"
+  system "foreman start"
 end
 
 desc "Build site"

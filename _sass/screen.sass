@@ -5,44 +5,97 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 @import compass/reset
+@import compass/css3
 
 /////////////// vars ///////////////
 
 $wistia_blue: #81c2f0
-$background_gray: #F4F4F4
+$background_gray: #F7F6F4
 $green: #8DC63F
+$text_color: #2F353E
 
 body
-  font-family: Helvetica, Arial, sans-serif
+  font-family: Gill Sans Infant, Arial, sans-serif
   background-color: $background_gray
   a
     color: $wistia_blue
+    text-decoration: none
+
+h1, h2
+  color: $text_color
 
 h1
   font-size: 40px
 
+p
+  font-size: 16px
+  line-height: 115%
+  color: $text_color + 50
+
+strong
+  font-weight: bold
+
+
+////////// header ////////////////
+
 header
-  width: 1000px
-  h1
-    font-size: 60px
-    a
-      text-decoration: none
-      color: black
-      font-weight: bold
+  width: 100%
+  background-color: $background_gray
+  position: relative
+  height: 40px
+  border-bottom: 2px solid $background_gray - 30
+  #header_container
+    width: 1200px
+    height: 40px
+    margin: 0 auto
+    position: relative
+    #logo
+      left: 0
+      a
+        position: absolute
+        background: transparent url(/images/wistia_logo_header.png) no-repeat
+        width: 115px
+        height: 40px
+        &:hover
+          background-position-y: -40px
+    #header_nav
+      position: absolute
+      right: 17px
+      ul
+        height: 40px
+      ul li
+        display: inline-block
+        position: relative
+        &:last-child
+          a
+            padding-right: 0
+      li a
+        display: block
+        padding: 10px 25px
+        font-size: 18px
+        text-transform: uppercase
+        letter-spacing: 2px
+        color: #8C8C8C
+        text-shadow: 0 0 2px white
+        outline: none
+        &:hover
+          color: #444
+
 .home
   text-align: center
   margin: 100px auto 0
-.post_pages
-  margin: 30px auto 0
 
 #container
-  width: 1000px
-  margin: 20px auto 30px
-  padding: 25px
+  width: 1200px
+  margin: 25px auto
+
+section
+  display: inline-block
+  width: 900px
 
 #content
+  width: 900px
   display: inline-block
-  width: 100%
   ul
     padding-left: 10px
     margin-bottom: 20px
@@ -64,20 +117,98 @@ header
     color: #999
     text-decoration: none
 
+
+//////// post /////////////
+
+#doc_nav
+  background-color: #BC7134
+  width: 900px
+  padding: 0 20px
+  #doc_nav_container
+    margin: 0 auto
+    position: relative
+    ul
+      padding: 0
+      margin: 0
+      li
+        display: inline-block
+        height: 40px
+        margin: 0 10px
+        a 
+          position: relative
+          padding: 10px
+          top: 9px
+          height: 40px
+          color: white
+
 #post
   display: inline-block
-  width: 66%
+  width: 900px
+  padding: 20px
+  background-color: white
+  clear: both
   .post_title
-    margin-bottom: 20px
+    margin-bottom: 40px
     border-bottom: 2px solid gray
+  .post_content
+    width: 750px
+    margin: 0 auto
+  h2
+    font-size: 28px
+    margin: 100px 0 30px
+  p
+    margin: 20px
+    line-height: 120%
+  ul
+    list-style-type: disc
+    line-height: 150%
+    padding-left: 30px
+  .section
+    margin: 20px 0
+    clear: both
+  hr
+    margin: 100px 0
+    clear: both
+    
+
+.post_image
+  margin: 30px auto
+  clear: both
+.center
+  text-align: center
+.float_right
+  float: right
+  margin: 10px
+
+.video_embed
+  text-align: center
+  margin: 30px auto
+  iframe
+    border: 2px solid dimGray
+    +box-shadow
 
 #right_col
   display: inline-block
   vertical-align: top
-  width: 25%
-  line-height: 200%
-  border: 2px solid red
-  margin-left: 40px 
+  width: 200px
+  margin: 40px 0 0 40px
+  height: 100%
   padding: 15px
+  position: fixed
+  ul
+    &li:first-of-type
+      background-color: #BC7134
+      text-align: center
+      a
+        font-size: 18px
+        color: white
+  li
+    background-color: green
+    padding: 5px
+    margin-bottom: 10px
   a
-    font-size: 24px
+    font-size: 14px
+    text-decoration: none
+
+.clear
+  clear: both
