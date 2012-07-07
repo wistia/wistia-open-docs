@@ -10,18 +10,21 @@
 /////////////// vars ///////////////
 
 $wistia_blue: #81c2f0
+$complementary: #f0af81
 $background_gray: #F7F6F4
 $green: #8DC63F
 $text_color: #2F353E
+$for_developers: #f0818b
 
 body
   font-family: Gill Sans Infant, Arial, sans-serif
   background-color: $background_gray
+  color: $text_color + 50
   a
     color: $wistia_blue
     text-decoration: none
 
-h1, h2
+h1, h2, h3
   color: $text_color
 
 h1
@@ -30,7 +33,6 @@ h1
 p
   font-size: 16px
   line-height: 115%
-  color: $text_color + 50
 
 strong
   font-weight: bold
@@ -121,7 +123,7 @@ section
 //////// post /////////////
 
 #doc_nav
-  background-color: #BC7134
+  background-color: $complementary
   width: 900px
   padding: 0 20px
   #doc_nav_container
@@ -153,12 +155,28 @@ section
   .post_content
     width: 750px
     margin: 0 auto
+    hr
+      margin: 100px 0
+      &:first-of-type
+        margin: 40px 0
+  h1
+    margin-bottom: 20px
+    padding-left: 10px
   h2
     font-size: 28px
     margin: 100px 0 30px
+  h3
+    font-size: 20px
+    margin: 20px 0
   p
     margin: 20px
-    line-height: 120%
+    line-height: 140%
+    &:first-child
+      padding: 4px
+      background-color: #EAEAEA
+      font-size: 22px
+      width: 800px
+      margin-left: -10px
   ul
     list-style-type: disc
     line-height: 150%
@@ -169,8 +187,11 @@ section
   hr
     margin: 100px 0
     clear: both
-    
+    &:last-child
+      margin: 40px 0
 
+    
+/////// images /////////
 .post_image
   margin: 30px auto
   clear: both
@@ -180,12 +201,52 @@ section
   float: right
   margin: 10px
 
+/////// video /////////
+
 .video_embed
   text-align: center
   margin: 30px auto
   iframe
     border: 2px solid dimGray
     +box-shadow
+
+////// code //////////
+
+.github
+  font-size: 13px
+  line-height: 150%
+
+.code
+  background-color: #EAEAEA
+  padding: 6px
+  font-family: monospace
+  &:hover
+    background-color: #EAEAEA - 20
+
+/////// post footer //////////
+
+.post_footer
+  width: 750px
+  margin: 0 auto
+  padding: 25px
+  ul
+    list-style-type: none
+  ul li
+    display: inline-block
+    vertical-align: top
+    margin-left: 40px
+    width: 250px
+    font-size: 14px
+.footer_content
+  padding: 25px
+.for_developers
+  background-color: rgba($for_developers, .2)
+  border: 2px solid rgba($for_developers, .8)
+.for_beginners
+  background-color: rgba($wistia_blue, .2)
+  border: 2px solid $wistia_blue
+
+/////// right nav box ////////
 
 #right_col
   display: inline-block
@@ -196,19 +257,22 @@ section
   padding: 15px
   position: fixed
   ul
+    background-color: white
     &li:first-of-type
-      background-color: #BC7134
+      background-color: $complementary
       text-align: center
       a
         font-size: 18px
         color: white
   li
-    background-color: green
     padding: 5px
     margin-bottom: 10px
-  a
-    font-size: 14px
-    text-decoration: none
+    a
+      color: $text_color
+      font-size: 14px
+      text-decoration: none
+  .current > a
+    color: $wistia_blue
 
 .clear
   clear: both

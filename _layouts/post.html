@@ -11,6 +11,9 @@ layout: base
   <div class='post_content'>
     {{ content }}
   </div>
+  <div class='post_footer'>
+    {% if page.for_developers == true %}{% include for_developers.html %}{% else %}{% include for_beginners.html %}{% endif %}
+  </div>
 </div>
 <script src='/javascripts/post_content_nav.js' type='text/javascript'></script>
 <script src='/javascripts/jquery.scrollTo.js'></script>

@@ -1,7 +1,7 @@
 ---
 title: Sharing Video Privately
 layout: post
-category: Private Sharing 
+category: Private Sharing
 ---
 
 <div class="post_image float_right"><img src="/images/privateshare_guide.png" alt="privateshare_guide" /></div>
@@ -29,8 +29,8 @@ Private sharing is right for you if you want to:
 
 
 
+### To start, here is a short overview of the private sharing process:
 
-<p>To start, here is a short overview of the private sharing process:</p>
 <div class="video_embed">
 <iframe width="640" height="400" src="http://app.wistia.com/embed/medias/75edd60835?controlsVisibleOnLoad=false" frameborder="0"></iframe>
 </div>

@@ -19,3 +19,9 @@
 * TODO: get a permalink icon for the left of the H2 (perhaps using a :before CSS3) emulating Campaign Monitor ( http://www.campaignmonitor.com/api/account/ )
 * TODO: get Joe to look at it and start thinking about design / platform for this / resource center
 
+## july 7 ##
+
+* got the highlight of current section working with One Page Nav jQuery plug-in ( http://trevordavis.net/blog/jquery-one-page-navigation-plugin/ ). Similar to what I put together in the Data API page but prob better :)
+* TODO: add search in the upper left of the page
+* inspiration: http://popcornjs.org/popcorn-docs/index.html
+* need to figure out YAML

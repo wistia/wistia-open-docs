@@ -82,6 +82,7 @@
 		bindInterval: function() {
 			var self = this;
 			var docHeight;
+
 			
 			self.$win.on('scroll.onePageNav', function() {
 				self.didScroll = true;
@@ -105,7 +106,7 @@
 		},
 		
 		getHash: function($link) {
-			return $link.attr('href').split('#')[1];
+			return $link.attr('href').split("#")[1];
 		},
 		
 		getPositions: function() {
@@ -115,10 +116,8 @@
 			
 			self.$nav.each(function() {
 				linkHref = self.getHash($(this));
-        console.log('#' + linkHref);
-				topPos = $('#' + linkHref).offset().top;
-        console.log(topPos);
-			
+				topPos = $("#" + linkHref).offset().top;
+
 				self.sections[linkHref] = Math.round(topPos) - self.config.scrollOffset;
 			});
 		},
