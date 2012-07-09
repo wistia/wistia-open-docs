@@ -2,34 +2,9 @@
 title: Sharing Video Privately
 layout: post
 category: Private Sharing
+post_intro: <div class="post_image float_right"><img src="/images/privateshare_guide.png" alt="privateshare_guide" /></div><p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.  With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
 ---
 
-<div class="post_image float_right"><img src="/images/privateshare_guide.png" alt="privateshare_guide" /></div>
-
-For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.  With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.
-
-
-
-
-Private sharing is right for you if you want to:
-
-*  Review and Approve content before it goes live
-
-*  Share instructional videos with your team
-
-*  Create internal content that contains sensitive information
-
-*  Charge your customers to view content in a secure environment
-
-
-
-
-----
-
-
-
-
-### To start, here is a short overview of the private sharing process:
 
 <div class="video_embed">
 <iframe width="640" height="400" src="http://app.wistia.com/embed/medias/75edd60835?controlsVisibleOnLoad=false" frameborder="0"></iframe>

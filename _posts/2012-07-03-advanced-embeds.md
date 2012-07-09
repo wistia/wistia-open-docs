@@ -3,11 +3,8 @@ title: Advanced Wistia Embed Customization
 layout: post
 category: For Developers
 for_developers: true
+post_intro: <p>We think <a href="//embed_screen.html">Wistia Super Embeds</a> are pretty awesome.  They make it easy for web video to look it's best.  But sometimes our customers might be looking to do even more customization.  This doc page will help answer some of the questions that come up with Wistia embed options.</p>
 ---
-
-We think [Wistia Super Embeds]({{ site.url }}/{{ page.lang }}/embed_screen.html) are pretty awesome.  They make it easy for web video to look it's best.  But sometimes our customers might be looking to do even more customization.  This doc page will help answer some of the questions that come up with Wistia embed options.
-
-----
 
 
 ## Custom Popovers
@@ -15,7 +12,7 @@ We think [Wistia Super Embeds]({{ site.url }}/{{ page.lang }}/embed_screen.html)
 
 Wistia's popover implementation utilizes Fancybox, a plug-in for jQuery. The Fancybox API gives access to all kinds of custom effects and settings that Wistia users can access. Here are a few of our favorites that we've helped customers implement: 
 
-### Adding a Border Around Your Video in a Popover
+## Adding a Border Around Your Video in a Popover
 
 If you're shooting video with light-colored backgrounds, a border can add definition to the video. <html><a id="a141167104_videoPopup" href="//app.wistia.com/embed/medias/4e21ff57d7.html?width=640&height=290&autoplay=false&playbutton=true&controls_visible=false&end_video_behavior=default">See an example of this effect</a><script type="text/javascript" src="//static.wistia.com/popover/popover.js"></script><script type="text/javascript">Wistia.requireFancyBoxAssets(function() {Wistia.fancyBoxJQuery("#a141167104_videoPopup").fancybox({type: "iframe",width: 640,height: 290,});});</script></html>.
 
@@ -27,7 +24,7 @@ Add this style to your CSS, or inline in between tags.
 
 ---
 
-### “Blackout” Effect Behind the Popover
+## Blackout Effect Behind the Popover
 
 Sometimes, you want to completely hide the content behind the video popover. Or, you'd like to change the color that shows up to better match your overall site color scheme. Here is how to change the Overlay Color and Opacity for your Popover (<a href="http://fast.wistia.com/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true"
 class='wistia-popover[width=640,height=360,playerColor=#636155,helpers.overlay.css.backgroundColor=#000,helpers.overlay.opacity=1,padding=60,]'>click here to experience the effect</a><script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script>).
@@ -58,7 +55,7 @@ The final embed code looks like this:
 
 ---
 
-### Adding a Title or Captions to your Popover
+## Adding a Title or Captions to your Popover
 
 Just like the color and opacity above, adding a title/caption to your popover involves the use of helpers.
 
@@ -100,7 +97,7 @@ In this example, we create a div for the videos to exist in, and then add the vi
 
 Our player API provides the ability to 'bind' actions when the video finishes - so when the first video is done, it executes a 'function', which in this case is the action of replacing the current video with the main content.
 
-Each video in the system has a 'hashed id', which in this example is <span style="color:red;font-weight:bold">d90b54e175</span> and <span style="color:red;font-weight:bold">bc9095e31e</span>.  Copy this from your embed code and input it in this template.
+Each video in the system has a 'hashed id', which in this example is <span class="code">d90b54e175</span> and <span class="code">bc9095e31e</span>.  Copy this from your embed code and input it in this template.
 
 To get the thumbnail for the second video (ie the main content) to show up before playing, you'll want to add the 'stillUrl' parameter to the first video (as shown in the example).  To get the URL for the thumbnail for the main content, the best workaround is to copy the img src URL from a popover embed code for the video, or an email marketing merge tag.
 
@@ -108,7 +105,7 @@ To get the thumbnail for the second video (ie the main content) to show up befor
   <script src="https://gist.github.com/2925931.js?file=gistfile1.html"></script>
 </div>
 
-### And now the finished product!
+## And now the finished product!
 
 <div id="video_container" class="wistia_embed video_embed" style="width:640px;height:272px;" data-video-width="640" data-video-height="272"> </div>
 

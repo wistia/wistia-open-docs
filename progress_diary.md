@@ -22,6 +22,7 @@
 ## july 7 ##
 
 * got the highlight of current section working with One Page Nav jQuery plug-in ( http://trevordavis.net/blog/jquery-one-page-navigation-plugin/ ). Similar to what I put together in the Data API page but prob better :)
-* TODO: add search in the upper left of the page
+* TODO: add search in the upper right of the page
 * inspiration: http://popcornjs.org/popcorn-docs/index.html
-* need to figure out YAML
+* need to figure out YAML -- think it's worked out.
+* added the 'footer' section - currently used for 'developers' vs 'non-developers' but could also be for different difficulty ratings.

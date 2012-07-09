@@ -12,6 +12,7 @@
 $wistia_blue: #81c2f0
 $complementary: #f0af81
 $background_gray: #F7F6F4
+$emphasis_gray: #EAEAEA
 $green: #8DC63F
 $text_color: #2F353E
 $for_developers: #f0818b
@@ -88,7 +89,7 @@ header
   margin: 100px auto 0
 
 #container
-  width: 1200px
+  width: 1050px
   margin: 25px auto
 
 section
@@ -98,10 +99,6 @@ section
 #content
   width: 900px
   display: inline-block
-  ul
-    padding-left: 10px
-    margin-bottom: 20px
-    line-height: 150%
 
 .category_title
   font-size: 24px 
@@ -120,12 +117,11 @@ section
     text-decoration: none
 
 
-//////// post /////////////
+//////// post header /////////////
 
 #doc_nav
   background-color: $complementary
   width: 900px
-  padding: 0 20px
   #doc_nav_container
     margin: 0 auto
     position: relative
@@ -143,54 +139,72 @@ section
           height: 40px
           color: white
 
+//////// post //////////
+
 #post
   display: inline-block
-  width: 900px
+  width: 860px
   padding: 20px
   background-color: white
   clear: both
-  .post_title
-    margin-bottom: 40px
-    border-bottom: 2px solid gray
-  .post_content
-    width: 750px
-    margin: 0 auto
-    hr
-      margin: 100px 0
-      &:first-of-type
-        margin: 40px 0
+
+.post_title
+  margin-bottom: 20px
+  border-bottom: 2px solid gray
   h1
     margin-bottom: 20px
     padding-left: 10px
+
+
+/////// content styles ///////
+
+.post_content
+  width: 750px
+  margin: 0 auto
+  hr
+    margin: 100px 0
   h2
     font-size: 28px
     margin: 100px 0 30px
+    &:first-of-type
+      margin-top: 40px
   h3
     font-size: 20px
     margin: 20px 0
   p
-    margin: 20px
+    width: 700px
+    margin: 20px auto
     line-height: 140%
-    &:first-child
-      padding: 4px
-      background-color: #EAEAEA
-      font-size: 22px
-      width: 800px
-      margin-left: -10px
   ul
     list-style-type: disc
     line-height: 150%
     padding-left: 30px
-  .section
-    margin: 20px 0
-    clear: both
   hr
     margin: 100px 0
     clear: both
     &:last-child
       margin: 40px 0
 
+////////// post intro paragraph styles ////////
+
+.post_intro
+  margin-left: -55px
+  margin-top: 20px
+  p, ul
+    margin: 0
+    padding: 10px
+    background-color: $emphasis_gray
+    font-size: 20px
+    width: 840px
+    line-height: 150%
+  ul
+    padding: 0
+    padding-left: 20px
+  ul li
+    list-style-position: inside
+    font-size: 16px
     
+
 /////// images /////////
 .post_image
   margin: 30px auto
@@ -212,16 +226,26 @@ section
 
 ////// code //////////
 
+.github, .code
+  margin-left: 20px
+
 .github
+  width: 680px
   font-size: 13px
   line-height: 150%
 
 .code
-  background-color: #EAEAEA
+  background-color: $emphasis_gray
+  width: 665px
   padding: 6px
   font-family: monospace
+  border: 1px solid $emphasis_gray - 20
   &:hover
-    background-color: #EAEAEA - 20
+    background-color: $emphasis_gray - 20
+
+span.code
+  margin: 0
+  padding: 2px
 
 /////// post footer //////////
 
@@ -252,7 +276,7 @@ section
   display: inline-block
   vertical-align: top
   width: 200px
-  margin: 40px 0 0 40px
+  margin-top: 40px
   height: 100%
   padding: 15px
   position: fixed
@@ -269,7 +293,7 @@ section
     margin-bottom: 10px
     a
       color: $text_color
-      font-size: 14px
+      font-size: 13px
       text-decoration: none
   .current > a
     color: $wistia_blue
