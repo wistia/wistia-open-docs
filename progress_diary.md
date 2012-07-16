@@ -26,3 +26,18 @@
 * inspiration: http://popcornjs.org/popcorn-docs/index.html
 * need to figure out YAML -- think it's worked out.
 * added the 'footer' section - currently used for 'developers' vs 'non-developers' but could also be for different difficulty ratings.
+
+## july 13 ##
+
+* been working on the design and some javascript to make the layout more consistent and easy to do.  Still needs some work.
+* majority of work has been converting the content (moving the images over, updating embeds, etc.)
+* big project next is implementation of search - seems like plugin may be the answer
+* search resources:
+  * http://pradeepnayak.in/technology/2012/06/20/search-for-your-jekyll-site/
+  * http://developmentseed.org/blog/2011/09/09/jekyll-github-pages/
+
+## july 14 ##
+
+* added (back) a glossary, for simplifying the explainers in the doc pages...perhaps to move to 'asides' later?
+* wrote the js to handle the title height positioning
+* TODO: get the shadow around the video embeds right

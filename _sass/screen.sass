@@ -12,10 +12,11 @@
 $wistia_blue: #81c2f0
 $complementary: #f0af81
 $background_gray: #F7F6F4
-$emphasis_gray: #EAEAEA
 $green: #8DC63F
 $text_color: #2F353E
 $for_developers: #f0818b
+
+//////// main styles /////////
 
 body
   font-family: Gill Sans Infant, Arial, sans-serif
@@ -27,19 +28,16 @@ body
 
 h1, h2, h3
   color: $text_color
-
 h1
   font-size: 40px
-
 p
   font-size: 16px
   line-height: 115%
-
 strong
   font-weight: bold
 
 
-////////// header ////////////////
+////////// header ///////////
 
 header
   width: 100%
@@ -84,21 +82,24 @@ header
         &:hover
           color: #444
 
+//////// content ////////////
+
 .home
   text-align: center
   margin: 100px auto 0
 
 #container
   width: 1050px
-  margin: 25px auto
+  margin: 45px auto
+
+#content
+  display: inline-block
+
+/////// doc home only ///////
 
 section
   display: inline-block
   width: 900px
-
-#content
-  width: 900px
-  display: inline-block
 
 .category_title
   font-size: 24px 
@@ -116,12 +117,11 @@ section
     color: #999
     text-decoration: none
 
-
 //////// post header /////////////
 
 #doc_nav
   background-color: $complementary
-  width: 900px
+  width: 790px
   #doc_nav_container
     margin: 0 auto
     position: relative
@@ -130,12 +130,12 @@ section
       margin: 0
       li
         display: inline-block
-        height: 40px
-        margin: 0 10px
+        height: 45px
+        margin-left: 10px
         a 
           position: relative
-          padding: 10px
-          top: 9px
+          padding: 14px 5px
+          top: 14px
           height: 40px
           color: white
 
@@ -143,72 +143,81 @@ section
 
 #post
   display: inline-block
-  width: 860px
-  padding: 20px
+  width: 700px
+  padding: 45px
   background-color: white
   clear: both
 
 .post_title
-  margin-bottom: 20px
-  border-bottom: 2px solid gray
-  h1
-    margin-bottom: 20px
-    padding-left: 10px
-
+  margin-bottom: 40px
 
 /////// content styles ///////
 
 .post_content
-  width: 750px
-  margin: 0 auto
+  width: 700px
   hr
-    margin: 100px 0
-  h2
-    font-size: 28px
-    margin: 100px 0 30px
-    &:first-of-type
-      margin-top: 40px
-  h3
-    font-size: 20px
-    margin: 20px 0
-  p
-    width: 700px
-    margin: 20px auto
-    line-height: 140%
-  ul
-    list-style-type: disc
-    line-height: 150%
-    padding-left: 30px
-  hr
-    margin: 100px 0
+    margin: 45px 0
     clear: both
     &:last-child
       margin: 40px 0
+  h2, h3, p
+    margin: 40px 0
+  h2
+    font-size: 28px
+    clear: both
+  h3
+    font-size: 20px
+  p
+    margin: 10px 0 30px
+    line-height: 150%
+    position: relative
+  ul, ol
+    padding-left: 30px
+    line-height: 150%
+    margin: 15px 0
+  ul
+    list-style-type: disc
+    margin-top: -20px
+  ol
+    list-style: decimal
+    li
+      margin-top: 10px
 
 ////////// post intro paragraph styles ////////
 
 .post_intro
-  margin-left: -55px
-  margin-top: 20px
+  margin-left: -45px
+  margin-bottom: 40px
+  background-color: $background_gray
+  padding: 45px
+  h2
+    &:first-of-type
+      margin-top: 0
   p, ul
+    width: 100%
     margin: 0
-    padding: 10px
-    background-color: $emphasis_gray
     font-size: 20px
-    width: 840px
     line-height: 150%
+  p
+    margin: 10px 0 30px
+    &:first-of-type
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
   ul
     padding: 0
     padding-left: 20px
+    margin-top: -20px
   ul li
     list-style-position: inside
-    font-size: 16px
     
 
 /////// images /////////
+
 .post_image
   margin: 30px auto
   clear: both
+  position: relative
 .center
   text-align: center
 .float_right
@@ -219,40 +228,85 @@ section
 
 .video_embed
   text-align: center
-  margin: 30px auto
+  margin: 45px auto
   iframe
     border: 2px solid dimGray
     +box-shadow
 
 ////// code //////////
 
-.github, .code
-  margin-left: 20px
-
 .github
-  width: 680px
+  width: 700px
   font-size: 13px
   line-height: 150%
+  margin: 30px 0
+.gist .gist-file .gist-data
+  padding: 15px
 
 .code
-  background-color: $emphasis_gray
-  width: 665px
+  background-color: $background_gray
+  overflow-x: scroll
+  margin: 15px 0
+  width: 685px
   padding: 6px
   font-family: monospace
-  border: 1px solid $emphasis_gray - 20
+  border: 1px solid $background_gray - 20
   &:hover
-    background-color: $emphasis_gray - 20
+    background-color: $background_gray - 20
 
 span.code
   margin: 0
   padding: 2px
 
+//////// EVIL TABLES //////
+
+table
+  font-family: monospace
+  font-size: 12px
+  margin: 45px 
+  width: 80%
+  text-align: left
+  border-collapse: collapse
+  th
+    font-size: 13px
+    font-family: 'Helvetica Neue'
+    font-weight: bold
+    padding: 8px
+    background: #8C8C8C
+    border-top: 4px solid #595959
+    border-bottom: 2px solid #fff
+    color: #000
+  td
+    padding: 8px
+    width: 200px
+    background: #f4f4f4 
+    border-bottom: 1px solid #fff
+    color: #000
+    border-top: 1px solid transparent
+  tr
+    &:hover 
+      td
+        background: #8C8C8C
+        color: #FFF
+
+////// EMBED SCREEN ////////
+
+.embed_type_content
+  display: inline-block
+  padding: 20px
+  width: 360px
+.embed_type_image
+  margin-left: 20px
+  height: 100%
+  display: inline-block
+  vertical-align: top
+
 /////// post footer //////////
 
 .post_footer
-  width: 750px
-  margin: 0 auto
-  padding: 25px
+  width: 700px
+  margin-top: 60px
+  clear: both
   ul
     list-style-type: none
   ul li
@@ -275,25 +329,34 @@ span.code
 #right_col
   display: inline-block
   vertical-align: top
-  width: 200px
-  margin-top: 40px
+  width: 225px
+  margin: 45px 0 0 30px
   height: 100%
-  padding: 15px
   position: fixed
   ul
     background-color: white
+    padding: 10px
     &li:first-of-type
       background-color: $complementary
       text-align: center
+      margin-top: -10px
+      margin-left: -10px
+      width: 215px
+      padding: 5px
+      height: 100%
+      min-height: 35px
+      margin-bottom: 20px
       a
-        font-size: 18px
+        position: relative
+        height: 100%
+        font-size: 16px
         color: white
   li
     padding: 5px
     margin-bottom: 10px
     a
       color: $text_color
-      font-size: 13px
+      font-size: 14px
       text-decoration: none
   .current > a
     color: $wistia_blue

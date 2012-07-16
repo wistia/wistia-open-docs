@@ -14,12 +14,12 @@ Wistia's popover implementation utilizes Fancybox, a plug-in for jQuery. The Fan
 
 ## Adding a Border Around Your Video in a Popover
 
-If you're shooting video with light-colored backgrounds, a border can add definition to the video. <html><a id="a141167104_videoPopup" href="//app.wistia.com/embed/medias/4e21ff57d7.html?width=640&height=290&autoplay=false&playbutton=true&controls_visible=false&end_video_behavior=default">See an example of this effect</a><script type="text/javascript" src="//static.wistia.com/popover/popover.js"></script><script type="text/javascript">Wistia.requireFancyBoxAssets(function() {Wistia.fancyBoxJQuery("#a141167104_videoPopup").fancybox({type: "iframe",width: 640,height: 290,});});</script></html>.
+If you're shooting video with light-colored backgrounds, a border can add definition to the video. <a id="a141167104_videoPopup" href="//app.wistia.com/embed/medias/4e21ff57d7.html?width=640&height=290&autoplay=false&playbutton=true&controls_visible=false&end_video_behavior=default">See an example of this effect</a><script type="text/javascript" src="//static.wistia.com/popover/popover.js"></script><script type="text/javascript">Wistia.requireFancyBoxAssets(function() {Wistia.fancyBoxJQuery("#a141167104_videoPopup").fancybox({type: "iframe",width: 640,height: 290,});});</script>.
 
 Add this style to your CSS, or inline in between tags.
 
 <div class="github">	
-<script src="https://gist.github.com/3068168.js?file=gistfile1.css"></script>
+  <script src="https://gist.github.com/3068168.js?file=gistfile1.css"></script>
 </div>
 
 ---
@@ -67,11 +67,11 @@ Let's start with the same embed code as above:
 </div>	
 
 Now, let's add the following to the 'class' area:
-
-<div class="code">	
-	title=<center><strong>SuperEmbeds Rock!</strong></center>,helpers.title.type=inside,
+<div class='code'>
+<code>	
+	title=&lt;center&gt;&lt;strong&gt;SuperEmbeds Rock!&lt;/strong&gt;&lt;/center&gt;,helpers.title.type=inside,
+</code>
 </div>
-
 We just added the title content (with the 'title=' entry) and set the title to display inside the popover frame (with the 'helpers.title.type=inside' entry).  Other options for the title type include 'float', 'outside', and 'over'.  Play around to see which you like best.
 
 
@@ -105,7 +105,7 @@ To get the thumbnail for the second video (ie the main content) to show up befor
   <script src="https://gist.github.com/2925931.js?file=gistfile1.html"></script>
 </div>
 
-## And now the finished product!
+### And now the finished product!
 
 <div id="video_container" class="wistia_embed video_embed" style="width:640px;height:272px;" data-video-width="640" data-video-height="272"> </div>
 
@@ -151,7 +151,29 @@ When a visitor lands on your page with the video and they have "wemail=" in the 
 
 ---
 
+## Creating HTML5-only Embed Codes
 
+Every single Wistia embed code type automatically supports HTML5 when it detects a device that requires it (ie. iPhones, iPads).  There is no extra work needed - standard HTML embed codes will work on your iOS device out-of-the-box.
 
+### Forcing HTML5
 
+In some cases, it makes sense to force the video to only display in HTML5 - skipping the device detection step altogether.  With Wistia iframe embeds, forcing your videos to display in HTML5 is easy.
+
+### The Platform Preference Parameter
+
+Using iframe embed codes, forcing them to default in HTML5 is as easy as adding a parameter:
+
+<span class="code">&amp;platformPreference=html5</span>
+
+So a full HTML5 player embed code would look like this:
+
+**Code:**
+<div class="code"><pre><iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"></iframe></pre></div>
+
+**HTML5 Player Example**
+
+<iframe width="640" height="300" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"></iframe>
+
+### HTML5-only Player API
+Looking to add some functionality to your Wistia videos in HTML5?  They are controllable through our standard javascript [player API](/player-api.html).
 

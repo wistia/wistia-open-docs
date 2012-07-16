@@ -93,9 +93,15 @@ Clicking the title of an individual media will move you to the Media-level Trend
 
 The media level provides detailed insight into how the video was viewed, both at an aggregate level through an engagement graph, and individually through heatmaps.
 
+To access the media-level trends page, first open up the Media Page for your video (where you can watch the video in your account).  Under the *Media Actions* drop-down menu, select "Stats".
 
+<div class="post_image center"><img src="/images/ms_zero_to_hero.png" alt="ms_zero_to_hero" /></div>
 
-To access the media-level trends page, you can either select a Media from the list in the Account or Project-level trends page, or you can open the Media page in your account (where you can watch the video) and select "Stats" from under the *Media Actions* drop-down menu.
+This will open the page with viewing stats specifically for that media.  You can see the [overall engagement graph](/audience_engagement_graph.html), summary stats, and [individual viewer heatmaps](/heatmaps.html).
+
+<div class="post_image center"><img src="/images/ms_media_page.png" alt="ms_media_page" /></div>
+
+Embedding your video on your public webpage?  Wistia Media Stats will tell you how it is performing (and [Wistia trends](/analytics.html) will show you how it is performing compared to your other video initiatives).
 
 ---
 
@@ -133,8 +139,17 @@ Under the engagement graph area and summary bar are a list of the individual vie
 
 ## Heatmaps
 
-Each viewer of a Wistia-hosted video is assigned a *heatmap*, which shows the specific interaction they had with the video.  Heatmaps are powerful for understanding how certain users watch your video.  Is there a specific topic that is interesting to viewers from your email campaign?  Do international viewers tune out quicker than local ones?  When are the most engaged viewers watching your videos?  This information and more can be derived from heatmaps.
+<div class="post_image center"><img src="/images/heatmap_sketch.png" alt="heatmap_sketch" width="650px" /></div>
 
+A video heatmap is a graphical representation of a single viewing session of your video. Each viewer of a Wistia-hosted video is assigned a *heatmap*, which shows the specific interaction they had with the video. Heatmaps contain viewer information, contextual information (when the video was watched and where) and a color-coded timeline which represents how the viewer interacted with the video.
+
+*  White means that portion of the video was not watched.
+*  green tells you that the viewer watched that part exactly once.  
+*  Yellow, orange, light red, and dark red show you that the viewer watched that part of the video two, three, four, or five times respectively.  
+
+Next to each heatmap is shown the total percentage of the video that viewer watched (parts watched multiple times are only counted once).
+
+Heatmaps are powerful for understanding how certain users watch your video.  Is there a specific topic that is interesting to viewers from your email campaign?  Do international viewers tune out quicker than local ones?  When are the most engaged viewers watching your videos?  This information and more can be derived from heatmaps.
 
 <div class="post_image center">
 <img src="/images/heatmap_image.png" alt="heatmap_image" />
@@ -145,11 +160,6 @@ The time to the left of the heatmap displays when the viewer watched the video. 
 <div class="post_image center">
 <img src="/images/heatmap_scroll.png" alt="heatmap_scroll" />
 </div>
-
-The heatmap itself displays viewing sessions in a color-coded manner.  As viewers re-watch certain portions of the video, the heatmap moves from green to red.  If a viewer completely skips a certain section, that appears empty in the heatmap (and a dip in the engagement graph above).
-
-
-
 
 Clicking on the name link on the heatmap will take you to the Viewer page for that viewer.  The Viewer page is part of the **Viewer Stream**.
 
@@ -172,11 +182,11 @@ The Viewer Stream is the other way of viewing Wistia analytics for your Account.
 To open the Viewers Stream page, select "Viewers" from under the Stats drop-down menu.
 
 
+The Viewers Stream is a snapshot of the viewers of your publicly embedded videos.  These will appear as a list of viewers, with their most recent heatmaps.
+
 <div class="post_image float_right">
 <img src="/images/viewer_stream_page.png" alt="viewer_stream_page" />
 </div>
-
-The Viewers Stream is a snapshot of the viewers of your publicly embedded videos.  These will appear as a list of viewers, with their most recent heatmaps.
 
 Use the sorting bar to specify which group of viewers you'd like to see, or use the search box to find a specific viewer.  The number bubbles next to each name designate how many videos the viewer has watched.  Clicking on a viewer will take you to the Viewer Page.
 

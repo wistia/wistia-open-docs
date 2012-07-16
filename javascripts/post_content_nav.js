@@ -1,23 +1,67 @@
 $(document).ready(function() {
-  var h2 = $('h2'),
-    h1 = $('.post_title > h1'),
-    nav_box_ul = $('#page_nav');
 
-  var text_to_id = function(text) {
-    return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
+  // getting that nav bar set right //
+  (function right_nav() {
+    var h2 = $('h2'),
+      h1 = $('.post_title > h1'),
+      nav_box_ul = $('ul#page_nav');
+
+    var text_to_id = function(text) {
+      return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
+    };
+
+    if (h2.length) {
+      h1.attr('id', text_to_id(h1.text()));
+      nav_box_ul.append('<li><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
+    }
+    else {
+      nav_box_ul.hide();
+      $('#container').css("width", 790);
+    }
+
+    h2.each( function() {
+      $this = $(this);
+      $this.attr('id', text_to_id($this.text()));
+
+      nav_box_ul.append('<li><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
+
+    });
+
+    $('#page_nav').onePageNav();
+
+
+    // get the spacing on the title bar set right
+    function space_the_topics_title() {
+      var $topics_title_box = $('#page_nav li:first-child'),
+        $title_a = $topics_title_box.find('a');
+
+      $title_a.css('top', ($topics_title_box.height() - $title_a.height())/2);
+    }
+
+    space_the_topics_title();
+
+  })();
+
+  // for the embed screen tomfoolery //
+  if ($('.embed_type_image').length) {
+    $('.embed_type_image').each( function() {
+      $this = $(this),
+      $prev_elem_height = $this.prev().outerHeight();
+
+    if ($this.outerHeight() < $prev_elem_height ) {
+      $this.css('height', $prev_elem_height );
+    }
+
+    });
   };
 
-  h1.attr('id', text_to_id(h1.text()));
-  nav_box_ul.append('<li><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
-
-  h2.each( function() {
-    $this = $(this);
-    $this.attr('id', text_to_id($this.text()));
-
-    nav_box_ul.append('<li><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
-
-  });
-
-  $('#page_nav').onePageNav();
+  // for <pre> code snippets //
+  if ($('pre').length) {
+    $('pre').each( function() {
+      $this = $(this);
+      
+      $this.html($this.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+    });
+  };
 
 });

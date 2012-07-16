@@ -2,7 +2,7 @@
 title: Adding Video to Your Website
 layout: post
 category: Embedding
-post_intro: <div class="post_image float_right"><img src="/images/puttingvideo_guide.png" alt="puttingvideo_guide" /></div><p>Putting video on your website is the best way to get your message across.</p><p>Video is an engaging medium that can communicate complex topics clearly and concisely, without a ton of effort from the viewer.  At Wistia, our goal is to make it easy to embed video on your website, and get actionable analytics from your viewers interactions.  This guide is designed to get you from a blank slate to having a great video streaming over the web, powered by Wistia.</p> <p>Public sharing is right for you if you want to:<ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul></p>
+post_intro: <div class="post_image float_right"><img src="/images/puttingvideo_guide.png" alt="puttingvideo_guide" /></div><p>Putting video on your website is the best way to get your message across.</p><p>Video is an engaging medium that can communicate complex topics clearly and concisely, without a ton of effort from the viewer.  At Wistia, our goal is to make it easy to embed video on your website, and get actionable analytics from your viewers interactions.  This guide is designed to get you from a blank slate to having a great video streaming over the web, powered by Wistia.</p><p>Public sharing is right for you if you want to:</p><ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul>
 ---
 
 <div class="video_embed">
@@ -15,16 +15,11 @@ post_intro: <div class="post_image float_right"><img src="/images/puttingvideo_g
 <img src="/images/jay_chris_roadlok.png" alt="jay_chris_roadlok" width="400px" />
 </div>
 
-To get started, we're going to need some great video content.  Already have your video? Excellent! Skip to Step 2 below.
-
 If you're looking to create some new video, there are lots of ways to do it.  You could:
 
 *  Hire a camera crew
-
 *  Record a screencast
-
 *  Shoot footage yourself
-
 *  Host a webinar
 
 If you are looking to hire a videographer, there are tons of great video producers out there - you just need to know where to look.  From producing, to shooting, to editing, to formatting - getting the content right is just as important as how you present it.
@@ -44,9 +39,7 @@ Getting your video onto the web starts by uploading it to your Wistia account.  
 Uploading Video to Wistia is as Simple As:
 
 *  [Creating a New Project]({{ site.url }}/{{ page.lang }}/projects#how_to_create_a_project.html)
-
 *  Select the "Upload Media" option from under the green "Project Actions" drop-down menu.
-
 *  Check out our [guide to uploading]({{ site.url }}/{{ page.lang }}/upload-video.html) for more information
 
 Once it is uploaded, Wistia creates several versions of the video - perfect for serving on multiple browsers and mobile devices.  Once the video is encoded, it is ready to be embedded onto your site.
