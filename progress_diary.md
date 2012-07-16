@@ -41,3 +41,10 @@
 * added (back) a glossary, for simplifying the explainers in the doc pages...perhaps to move to 'asides' later?
 * wrote the js to handle the title height positioning
 * TODO: get the shadow around the video embeds right
+* removed media stats page and heatmaps page, merged with analytics
+* removed "for marketers" guide
+* TODO: re-grab lots of images
+
+## july 16 ##
+
+* TODO: something be wrong with the js related to p tags - see 'private-analytics.html'

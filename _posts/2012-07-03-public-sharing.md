@@ -12,7 +12,7 @@ post_intro: <div class="post_image float_right"><img src="/images/puttingvideo_g
 ## Step 1. Create Your Video
 
 <div class="post_image float_right">
-<img src="/images/jay_chris_roadlok.png" alt="jay_chris_roadlok" width="400px" />
+  <img src="/images/jay_chris_roadlok.png" alt="jay_chris_roadlok" width="400px" />
 </div>
 
 If you're looking to create some new video, there are lots of ways to do it.  You could:
@@ -24,88 +24,81 @@ If you're looking to create some new video, there are lots of ways to do it.  Yo
 
 If you are looking to hire a videographer, there are tons of great video producers out there - you just need to know where to look.  From producing, to shooting, to editing, to formatting - getting the content right is just as important as how you present it.
 
-Having trouble finding a great producer? Check out [50 Grove]({{ site.url }}/{{ page.lang }}/http://50grove.com/.html), a site designed to hook up great producing talent with firms that need great video.
+Having trouble finding a great producer? Check out [50 Grove](http://50grove.com), a site designed to hook up great producing talent with firms that need great video.
 
-----
+---
 
 ## Step 2. Upload Your Video to Your Wistia Account
 
 <div class="post_image float_right">
-<img src="/images/upload-select.png" alt="upload-select" width="300px" />
+  <img src="/images/upload-select.png" alt="upload-select" width="300px" />
 </div>
 
-Getting your video onto the web starts by uploading it to your Wistia account.  Don't have one? [Click here]({{ site.url }}/{{ page.lang }}/http://wistia.com/trials/new?doc.html) to start your free 15 day trial today.
+Getting your video onto the web starts by uploading it to your Wistia account.  Don't have one? [Click here](http://wistia.com/trials/new?doc) to start your free 15 day trial today.
 
 Uploading Video to Wistia is as Simple As:
 
-*  [Creating a New Project]({{ site.url }}/{{ page.lang }}/projects#how_to_create_a_project.html)
-*  Select the "Upload Media" option from under the green "Project Actions" drop-down menu.
-*  Check out our [guide to uploading]({{ site.url }}/{{ page.lang }}/upload-video.html) for more information
+*  [Creating a New Project](/projects#how_to_create_a_project.html)
+*  Select the "Upload Media" option from under the green "Project Actions" menu.
+*  Check out our [guide to uploading](/upload-video.html) for more information
 
 Once it is uploaded, Wistia creates several versions of the video - perfect for serving on multiple browsers and mobile devices.  Once the video is encoded, it is ready to be embedded onto your site.
 
-----
+---
 
 ## Step 3. Embedding Your Video
 
 <div class="post_image float_right">
-<img src="/images/embed_video_stroke.png" alt="embed_video_stroke" width="400px" />
+  <img src="/images/embed_video_stroke.png" alt="embed_video_stroke" width="400px" />
 </div>
 
 Embed codes are pieces of code that live inside your web page and are useful for serving up video.  To grab the embed code of a video you have added to your Wistia account, first navigate to the page where you can play the video itself (also known as the "viewing page").  Select the "</> Embed" option under the green "Media Actions" drop-down menu.
 
-<style float-right>[{{:superEmbed_dialogue_publicsharing.png?350}}]({{ site.url }}/{{ page.lang }}/public_sharing.html)</style>
-Clicking this "</> Embed" option will take you to the Wistia Embed Screen.  This is where you can make some basic changes to the look and feel of your video presentation easily.  Click [here]({{ site.url }}/{{ page.lang }}/embed_screen.html) for a complete guide to interacting with the Embed Screen.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
+<div class="post_image float_right"><img src="/images/superEmbed_dialogue_publicsharing.png" alt="superEmbed_dialogue_publicsharing" width="350px" /></div>
 
-Once you have the Embed code, you can place it in an HTML file of your web page editor, or into the edit page of a CMS.  To see a breakdown of the Content Management Services Wistia works well with, and basic description of using Wistia with the CMS, check out our [integration page]({{ site.url }}/{{ page.lang }}/integration.html).
+Clicking this "</> Embed" option will take you to the Wistia Embed Screen.  This is where you can make some basic changes to the look and feel of your video presentation easily.  See our [complete guide to the embed screen](/embed_screen.html) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
 
-----
+Once you have the Embed code, you can place it in an HTML file of your web page editor, or into the edit page of a CMS.
+
+---
 
 ## Step 4. Reviewing Your Embedded Video Stats
 
 <div class="post_image float_right">
-<img src="/images/trends_dropdown_psharing.png" alt="trends_dropdown_psharing" />
+  <img src="/images/trends_dropdown_psharing.png" alt="trends_dropdown_psharing" />
 </div>
 
 Now that your video is embedded on your webpage, you can use Wistia's tracking analytics to see how your viewers are interacting with the content.  To see how your account is performing as a whole, start by selecting "Trends" from under the Stats drop-down menu.
 
-<div class="post_image float_right">
-<img src="/images/mediaactions_dropdown_psharing.png" alt="mediaactions_dropdown_psharing" />
-</div>
+<div class="clear"></div>
 
-<style float-right>[{{:mediaactions_dropdown_psharing.png}}]({{ site.url }}/{{ page.lang }}/public_sharing.html)</style>
+<div class="post_image float_right">
+  <img src="/images/mediaactions_dropdown_psharing.png" alt="mediaactions_dropdown_psharing" /></div>
 
 If instead you'd like to jump straight to the stats for a specific video, first open up the video in your account.  Once you are on the media page for that video (where you can watch the video), select "Stats" from under the Media Actions drop-down menu.
 
-<style float-right>[{{:psharing_projects_list.png}}]({{ site.url }}/{{ page.lang }}/public_sharing.html)</style>
+<div class="clear"></div>
 
-Selecting "Public & Embed Stats" will take you to the Embedded Video screen, where you can see a list of your videos that are out there in the wild and the number of plays on each.  Choose the video you would like to see stats on by clicking the thumbnail.
+<div class="post_image float_right">
+  <img src="/images/psharing_projects_list.png" alt="psharing_projects_list" /></div>
 
-<style float-right>[{{:psharing_media_stats.png}}]({{ site.url }}/{{ page.lang }}/public_sharing.html)</style>
+Selecting "Public &amp; Embed Stats" will take you to the Embedded Video screen, where you can see a list of your videos that are out there in the wild and the number of plays on each.  Choose the video you would like to see stats on by clicking the thumbnail.
+
+<div class="clear"></div>
+
+<div class="post_image float_right">
+  <img src="/images/psharing_media_stats.png" alt="psharing_media_stats" /></div>
 
 On the video embed stats page, you can see the detailed tracking statistics for each video.  The overall interaction graph shows you how viewers are tuning in and out of your video on aggregate, and the individual heatmaps below show each individual viewing instance, right down to the second.
 
-----
+---
 
-## Step 5. Advanced Features
+## Next Steps
 
-Wistia has lots of features that can help you get the most out of your publicly embedded video.
-  
-
-*  You could embed a [video playlist]({{ site.url }}/{{ page.lang }}/playlists.html) based on a Project in your account
-
-*  Use Wistia's [Video SEO]({{ site.url }}/{{ page.lang }}/video-seo.html) capabilities to bring leads to your website
-
-*  Create a [video popover]({{ site.url }}/{{ page.lang }}/embed_screen.html) effect, to show off your content without using a lot of screen real estate
-
-*  Make a [Post-Roll]({{ site.url }}/{{ page.lang }}/embed_screen.html) call-to-action after your video plays
-
-*  Add the [Social Bar]({{ site.url }}/{{ page.lang }}/embed_screen.html), to give your video player social tools like Facebook Likes
-
-*  Embed your video in a [Mailchimp campaign]({{ site.url }}/{{ page.lang }}/mailchimp.html)
-
-*  Use the [video player API]({{ site.url }}/{{ page.lang }}/player-api.html), to control and interact with the Player in your own way
-
-*  ...and so much more.  Check out the [documentation]({{ site.url }}/{{ page.lang }}/http://wistia.com/doc.html) for more ways to use an embedded Wistia video, and email us at <support@wistia.com> if you ever have any questions.
-
-
+*  You could embed a [video playlist](/playlists.html) based on a Project in your account
+*  Use Wistia's [Video SEO](/video-seo.html) capabilities to bring leads to your website
+*  Create a [video popover](/embed_screen.html) effect, to show off your content without using a lot of screen real estate
+*  Make a [Post-Roll](/embed_screen.html) call-to-action after your video plays
+*  Add the [Social Bar](/embed_screen.html), to give your video player social tools like Facebook Likes
+*  Embed your video in a [Mailchimp campaign](/mailchimp.html)
+*  Use the [video player API](/player-api.html), to control and interact with the Player in your own way

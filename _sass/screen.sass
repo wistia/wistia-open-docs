@@ -162,9 +162,10 @@ section
       margin: 40px 0
   h2, h3, p
     margin: 40px 0
+  h2, h3
+    clear: both
   h2
     font-size: 28px
-    clear: both
   h3
     font-size: 20px
   p
@@ -246,6 +247,7 @@ section
 .code
   background-color: $background_gray
   overflow-x: scroll
+  font-size: 14px
   margin: 15px 0
   width: 685px
   padding: 6px
@@ -258,13 +260,17 @@ span.code
   margin: 0
   padding: 2px
 
+div.code
+  border: 1px dashed $background_gray - 20
+
 //////// EVIL TABLES //////
 
 table
   font-family: monospace
-  font-size: 12px
-  margin: 45px 
-  width: 80%
+  border: 1px solid $background_gray - 20
+  font-size: 14px
+  margin: 30px 0
+  width: 600px
   text-align: left
   border-collapse: collapse
   th

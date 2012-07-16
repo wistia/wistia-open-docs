@@ -2,53 +2,23 @@
 title: Wistia and Posterous Blogs
 layout: post
 category: Embedding
+post_intro: <div class="post_image float_right"><img src="/images/posterous_logo.jpeg" width="100px" alt="posterous_logo" /></div> <p><a href="http://posterous.com">Posterous</a> is a simple blogging platform similar to <a href="http://tumblr.com">Tumblr</a> and <a href="http://wordpress.com">Wordpress</a>. Using Wistia's standard HTML embed codes, we can embed videos as part of the content for any blog you might be managing through Posterous.</p>
 ---
 
-`<style float-left>`{{:posterous_logo.jpeg?100}}`</style>`
-\\
-[Posterous]({{ site.url }}/{{ page.lang }}/http://posterous.com/.html) is a simple blogging platform similar to [Tumblr]({{ site.url }}/{{ page.lang }}/http://tumblr.com/.html) and [Wordpress]({{ site.url }}/{{ page.lang }}/http://wordpress.com/.html). Using Wistia's standard HTML embed codes, we can embed videos as part of the content for any blog you might be managing through Posterous.
-\\
-\\
+<div class="post_image center"><img src="/images/posterous1.png" width="300px" alt="posterous1" /></div>
 
-----
-\\
-### Posting Video to a Posterous Blog
+The first step is to choose the video for your Posterous blog post.  In this case, I've chosen to show off an excellent team video for the email marketing analytics company [Litmus](http://litmus.com).
 
-`<style float-right>`{{:posterous1.png?300}}`</style>`
-\\
-\\
-The first step is to choose the video for your Posterous blog post.  In this case, I've chosen to show off an excellent team video for the email marketing analytics company [Litmus]({{ site.url }}/{{ page.lang }}/http://litmus.com/.html).
-\\
-\\
-\\
-\\
-\\
-`<style float-right>`{{:posterous2.png}}`</style>`
-\\
-\\
-\\
-\\
-\\
-Grab the embed code for your video by clicking the "`</>` Embed" button below the viewing window, or by selecting "`</>` Embed" from the /Media Actions/ drop-down menu.
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-\\
-`<style float-right>`{{:posterous3.png?300}}`</style>`
-\\
+<div class="post_image center"><img src="/images/posterous_embed.png" alt="posterous_embed" /></div>
+
+Grab the embed code for your video by clicking the <span class="code">&lt;/&gt; Embed</span> button below the viewing window, or by selecting <span class="code">&lt;/&gt; Embed</span> from the Media Actions menu.
+
+<div class="post_image float_right"><img src="/images/posterous3.png" width="300px" alt="posterous3" /></div>
+
 Paste the HTML embed code into Posterous' HTML editing window for your latest post, and voila! A Wistia video embedded in a Posterous post.
-\\
-\\
-\\
-\\
-\\
-`<style float-right>`{{:posterous4.png}}`</style>`
-\\
+
+<div class="post_image float_right"><img src="/images/posterous4.png" alt="posterous4" /></div>
+
 Now, you can use Posterous excellent analytics and sharing tools to spread your videos to your friends, prospects, and colleagues.
-\\
-\\
+
+

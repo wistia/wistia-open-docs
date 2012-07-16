@@ -1,11 +1,10 @@
-# Wistia Video Player API
-
-## Overview
-
-The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.
-
-**Note:** for custom javascript you write to interface with a Wistia embed, add it to your source *under* the Wistia embed (ie. the footer)
-
+---
+layout: post
+category: For Developers
+for_developers: true
+title: Wistia Video Player API
+post_intro: <p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p><p><strong>Note:</strong> for custom javascript you write to interface with a Wistia embed, add it to your source *under* the Wistia embed (ie. the footer).</p>
+---
 
 ## The Methods
 
@@ -32,32 +31,31 @@ The Wistia video player has a JavaScript API which supports a number of ways to 
  | volume(level)           | Sets the current volume level. 'level' is a decimal value between 0 and 1.                                                                           | 
  | width()                 | Gets the current width of the embed (the video plus any plugins on the left and right).                                                              | 
  | width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.                                                        | 
-                                                                                                                                                                       
+
 ## How to use the API
 
 Accessing the Player API is different depending on the type of embed code you're using.
 
-
-*  For the iframe embed code (this is the default embed type), you can use [the iframe player API]({{ site.url }}/{{ page.lang }}/iframe-api.html).
-
+*  For the iframe embed code (this is the default embed type), you can use [the iframe player API](/iframe-api.html).
 *  Or, if you're using the API embed code, you can access the JavaScript API directly.
 
 ### iframe embed code
 
-To access the API when using iframe embed codes, you just need to include an extra script on your page and you're off to the races. Take a look at the [iframe player API page]({{ site.url }}/{{ page.lang }}/iframe-api.html) for all the details.
+To access the API when using iframe embed codes, you just need to include an extra script on your page and you're off to the races. Take a look at the [iframe player API page](/iframe-api.html) for all the details.
 
+## API embed code
 
-### API embed code
+The 'API' version of the Wistia embed codes includes a variable <span class="code">wistiaEmbed</span> to make this easy.
 
-The 'API' version of the Wistia embed codes includes a variable **''wistiaEmbed''** to make this easy.
-
-`<style center>`var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });`{javascript}`</style>`
+<div class="code"><pre>
+<style center>var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });{javascript}</style>
+</pre></div>
 
 In this instance, you can reference the video object using the **''wistiaEmbed''** variable.  If you have multiple videos on your page, you should update this variable to something specific to this video.
 
 As an example, if the following JS code is executed, the video will start to play:
 
-`<style center>`wistiaEmbed.play();`{javascript}`</style>`
+<style center>wistiaEmbed.play();{javascript}</style>
 
 ## Examples
 
@@ -67,51 +65,55 @@ Wistia's video player API provides functionality to easily accomplish common goa
 
 In this example, let's assume that we want to fire a Javascript function when the viewer gets 60 seconds into the video. In order to accomplish this, we only need the bind method from the API.  The Javascript code can be seen below:
 
-`<code javascript>``<script type="text/javascript">` 
+<div class="code"><pre>
+<script type="text/javascript"> 
     wistiaEmbed.bind("timechange", function (t) {
     if(t > 60 && t < 62) {
       // Insert code to be executed here
     }
     });
-`</script>` `</code>`
+</script>
+</pre></div>
 
 The bind function monitors the state of the video in an event loop. Every 500 milliseconds, it checks to see if the video's time position has changed. If it has, it runs your function with the current time (t) as the only argument.
 
 ### Alert when the video ends
 
-`<code javascript>``<script type="text/javascript">` 
+<div class="code"><pre>
+<script type="text/javascript"> 
     wistiaEmbed.bind("end", function () {
     alert("Hello world!");
     });
-`</script>` `</code>`
-
+</script>
+</pre></div>
 
 ### Grab the email address of your video viewers
 
-With [Wistia Turnstile]({{ site.url }}/{{ page.lang }}/http://wistia.com/product/turnstile.html), you can require your viewers to enter an email address to view video content on your webpage.  Using the "conversion" event, you can trigger actions based on the email being entered - including passing that email on to another service!
-\\
-\\
-`<code javascript>``<script type="text/javascript">`
-wistiaEmbed.bind("conversion", function(type, val) {
-// function to be executed
+With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require your viewers to enter an email address to view video content on your webpage.  Using the "conversion" event, you can trigger actions based on the email being entered - including passing that email on to another service!
+
+<div class="code"><pre>
+<script type="text/javascript">
+  wistiaEmbed.bind("conversion", function(type, val) {
+  // function to be executed
 });
-`</script>``</code>`
-\\
+</script>
+</pre></div>
+
 At this time, the "type" of conversion is always 'pre-roll-email', and the "val" is the viewers email address.
-\\
 
 ### Alert on play just once
 
 With the bind method, every time "play" is triggered, your function will be executed. But sometimes a user will scroll back to the beginning and hit Play again. If you want to avoid your function being executed again, you need to unbind it. 
 
-`<code javascript>``<script type="text/javascript">`
+<div class="code"><pre>
+<script type="text/javascript">
     function playFunc() {
     alert("Played the first time!");
     wistiaEmbed.unbind("play", playFunc);
     }
     wistiaEmbed.bind("play", playFunc);
-`</script>``</code>`
-
+</script>
+</pre></div>
 
 ## Embedding Options
 
@@ -136,7 +138,7 @@ In our example embed **''Wistia.embed("bfc34aa023", { ... options ... });''** th
  | smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.                                                                                                                                                                                                                                                                                             | 
  | stillUrl              | string  | The still image that should appear before the video is played.                                                                                                                                                                                                                                                                                         | 
  | trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.                                                                                                                                                                                                                                                                             | 
- | videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the [iframe API]({{ site.url }}/{{ page.lang }}/iframe-api.html). API/SEO embeds don't need any modifications. [Check out the demo!]({{ site.url }}/{{ page.lang }}/http://wistia.github.com/demobin/video-foam/.html) | 
+ | videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the [iframe API](/iframe-api.html). API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam) | 
  | videoQuality          | string  | Specify the starting video quality. sd-only/hd-only/auto                                                                                                                                                                                                                                                                                               | 
  | videoWidth            | integer | The original width of the video.                                                                                                                                                                                                                                                                                                                       | 
  | videoHeight           | integer | The original height of the video.                                                                                                                                                                                                                                                                                                                      | 
@@ -147,27 +149,24 @@ In our example embed **''Wistia.embed("bfc34aa023", { ... options ... });''** th
 
 To show how options work, suppose I want to embed a video that defaults to the HTML5 player and plays automatically on page load. I might alter the embed javascript to look like this:
 
-
-`<code javascript>``<div id="my_container">``</div>`
-`<script type="text/javascript">` 
+<div class="code"><pre>
+<div id="my_container"></div>
+<script type="text/javascript"> 
     var wistiaEmbed = Wistia.embed("bfc34aa023", {
     platformPreference: "html5",
     autoPlay: true,
     container: "my_container"
     });
-`</script>``</code>`
+</script></pre>
+</div>
 
 # Plugin Options
 
 Our plugins have a lot of options too! Check them out:
 
+*  [Socialbar](/socialbar-params.html)
+*  [Post-Roll Call To Action](/postroll-params.html)
+*  [Interactive Transcript](/transcript-params.html)
+*  [Turnstile Email Capturing](/turnstile-params.html)
 
-*  [Socialbar]({{ site.url }}/{{ page.lang }}/socialbar-params.html)
-
-*  [Post-Roll Call To Action]({{ site.url }}/{{ page.lang }}/postroll-params.html)
-
-*  [Interactive Transcript]({{ site.url }}/{{ page.lang }}/transcript-params.html)
-
-*  [Turnstile Email Capturing]({{ site.url }}/{{ page.lang }}/turnstile-params.html)
-
-And if you're looking at these, you might want more info on [constructing an embed code]({{ site.url }}/{{ page.lang }}/construct-an-embed-code.html).
+And if you're looking at these, you might want more info on [constructing an embed code](/construct-an-embed-code.html).

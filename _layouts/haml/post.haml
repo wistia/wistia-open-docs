@@ -32,8 +32,8 @@ layout: base
 
         function heightFinder(elem) {
           var height = elem.outerHeight(true);
-          if (elem.nextUntil(":not(p, ul)").length) {
-            elem.nextUntil(":not(p, ul, a, span)").each( function() { 
+          if (elem.nextUntil(":not(p, ul, ol, a, span)").length) {
+            elem.nextUntil(":not(p, ul, ol, a, span)").each( function() { 
               height += $(this).outerHeight(true);
             });
           }
@@ -50,7 +50,7 @@ layout: base
               });
             }
             else {
-              //$img.css("top", offset_diff );
+              //$img.css("top", -offset_diff );
             }
           }
         }
