@@ -16,8 +16,8 @@
 ## july 5 ##
 
 * Installed Foreman to handle Jekyll server and Compass updates.  Still need to add HAML updates.  Foreman is SICK (adding 'foreman start' to rake task 'jekyll preview').
-* TODO: get a permalink icon for the left of the H2 (perhaps using a :before CSS3) emulating Campaign Monitor ( http://www.campaignmonitor.com/api/account/ )
-* TODO: get Joe to look at it and start thinking about design / platform for this / resource center
+* (-) TODO: get a permalink icon for the left of the H2 (perhaps using a :before CSS3) emulating Campaign Monitor ( http://www.campaignmonitor.com/api/account/ )
+* (X) TODO: get Joe to look at it and start thinking about design / platform for this / resource center
 
 ## july 7 ##
 
@@ -48,3 +48,12 @@
 ## july 16 ##
 
 * TODO: something be wrong with the js related to p tags - see 'private-analytics.html'
+* TODO: emulate GitHub help with 'bootcamp', 'breadcrumbs'
+* TODO: Github also has sweet 'drawers'
+
+## july 17 ##
+
+* drawer ideas: 'don't have a video?', 'what is embedding?', 'what are heatmaps?'
+* holy crap, finally finished first pass of the content
+* TODO: run through images and start pulling new ones
+* TODO: get on the main page

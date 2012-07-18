@@ -14,9 +14,10 @@ $(document).ready(function() {
       h1.attr('id', text_to_id(h1.text()));
       nav_box_ul.append('<li><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
     }
+    // if no nav box, then hide it entirely and re-center main post //
     else {
       nav_box_ul.hide();
-      $('#container').css("width", 790);
+      $('#container').css("width", 720);
     }
 
     h2.each( function() {

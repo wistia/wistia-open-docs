@@ -5,7 +5,7 @@ category: Before You Upload
 ---
 
 <div class="video_embed">
-  <iframe width="640" height="360" src="http://app.wistia.com/embed/medias/dbeb843c6e" frameborder="0" style="border: 2px gray solid" ></iframe>
+  <iframe src="http://fast.wistia.com/embed/iframe/dbeb843c6e?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=371&videoWidth=660" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="660" height="371"></iframe>
 </div>
 
 ----

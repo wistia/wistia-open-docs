@@ -1,7 +1,6 @@
 ---
 title: iframe Video Player API
 layout: post
-category: For Developers
 ---
 
 Accessing the [Video Player API](/player-api.html) when using iframe embeds is easy!

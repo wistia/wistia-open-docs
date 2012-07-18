@@ -108,20 +108,20 @@ Embedding your video on your public webpage?  Wistia Media Stats will tell you h
 ### Engagement Graph
 
 <div class="post_image float_right">
-<img src="/images/single_media.png" alt="single_media" />
+  <img src="/images/single_media.png" alt="single_media" />
 </div>
 
 The blue section of the engagement graph shows the engagement of viewers who clicked play on the video.  The orange section on top shows the number of times that section was re-watched. Move your cursor over the graph (from left to right) to see specific information for a time in the video, and click the graph to jump to that point in the video.
 
 
-More on [Audience Engagement Graphs]({{ site.url }}/{{ page.lang }}/audience_engagement_graph.html).
+More on [Audience Engagement Graphs](/audience_engagement_graph.html).
 
 ---
 
 ### Plays by Date
 
 <div class="post_image float_right">
-<img src="/images/single_media_pbd.png" alt="single_media_pbd" />
+  <img src="/images/single_media_pbd.png" alt="single_media_pbd" />
 </div>
 
 Select the 'plays by date' tab above the engagement graph to see Trends-type data for the video. Moving the yellow tabs below the graph will change the date range, while hovering over the graph will display specific view count data for that date. 
@@ -207,7 +207,7 @@ The activity bar underneath the viewer name tracks the number of videos the view
 
 ### Tagging With Emails
 
-Adding a name to a viewer makes it easy to track their viewing sessions in your analytics.  You can also tag viewers with email address automatically, using [email marketing]({{ site.url }}/{{ page.lang }}/email_marketing.html) embeds.
+Adding a name to a viewer makes it easy to track their viewing sessions in your analytics.  You can also tag viewers with email address automatically, using [email marketing](/email_marketing.html) embeds.
 
 Once your viewer is tagged with an email, you can sort to view them in the Viewer Stream by clicking the "With Emails" option on the sorting bar.
 
