@@ -1,3 +1,8 @@
+---
+title: Randor Analytics
+category: Getting Started
+---
+
 # Understanding Video Analytics
 
 \\

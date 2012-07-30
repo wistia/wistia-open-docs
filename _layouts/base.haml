@@ -1,0 +1,26 @@
+!!! Strict
+%html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', :lang => 'en' }
+  %head
+    %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
+    %link{ rel: 'stylesheet', type: 'text/css', href: '/stylesheets/screen.css' }
+    %script{ type: 'text/javascript', src: '/javascripts/jquery.min.js' }
+    %title
+      Wistia Documentation
+  %body
+    %header
+      #header_container
+        #logo
+          %a{ href: '/' }
+        #header_nav
+          %ul
+            %li
+              %a{ href: '/pricing' } pricing
+            %li 
+              %a{ href: '/blog' } blog
+            %li 
+              %a{ href: '/login' } login
+    #container
+      #content
+        {{ content }}
+      #right_col
+        %ul#page_nav

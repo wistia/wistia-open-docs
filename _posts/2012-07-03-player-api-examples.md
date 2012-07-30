@@ -1,7 +1,7 @@
 ---
 title: Wistia Video Player API Examples
 layout: post
-category: Player API
+category: For Developers
 ---
 
 ## Adding Chapter Links to a Video

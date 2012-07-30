@@ -1,3 +1,8 @@
+---
+title: Glossary
+category: Getting Started
+---
+
 
 ## What is transcoding?
 

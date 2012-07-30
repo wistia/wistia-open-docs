@@ -1,17 +1,7 @@
 
 # http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
-desc "Parse haml layouts"
-task :parse_haml do
-  print "Parsing Haml layouts && includes..."
-  system(%{
-    cd _static_pages &&
-    for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
-    cd ../_layouts/haml && 
-    for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
-    cd ../../_includes/haml &&
-    for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
-  })
-  puts "done."
+desc "Parse compass"
+task :parse_compass do
   print "Compiling the compass ..."
   system "compass compile"
   puts "done."
@@ -19,13 +9,13 @@ end
 
 desc "Launch preview environment"
 task :preview do
-  Rake::Task["parse_haml"].invoke
+  Rake::Task["parse_compass"].invoke
   system "foreman start"
 end
 
 desc "Build site"
 task :build do |task, args|
-  Rake::Task["parse_haml"].invoke
+  Rake::Task["parse_compass"].invoke
   system "bundle exec jekyll"
 end
 

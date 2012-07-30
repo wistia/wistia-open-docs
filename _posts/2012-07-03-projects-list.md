@@ -1,7 +1,7 @@
 ---
 title: The Projects List Page
 layout: post
-category: Organization
+category: Media Management
 post_intro: <p>The Projects List page is the homepage of your account.  From here, you can navigate to your Projects and create new ones.</p>
 ---
 

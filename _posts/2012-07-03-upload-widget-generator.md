@@ -1,7 +1,6 @@
 ---
 title: Upload Widget Generator
 layout: post
-category: Sharing
 post_intro: <p>Upload widgets are perfect for consumer generated content (ie. your viewers upload content they created directly to a Wistia project). Using Wistia Upload Widgets creates an "upload button" on a public page you specify. Upload Widgets are available by default to enterprise-level plans only.</p><p>For more technical information on how Upload Widgets work, read on here:<a href="/upload-widget.html"> upload widgets tech specs</a></p>
 ---
 

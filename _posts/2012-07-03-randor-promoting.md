@@ -1,3 +1,8 @@
+---
+title: Randor Promoting
+category: Getting Started
+---
+
 # Promoting Your Wistia Video
 
 \\

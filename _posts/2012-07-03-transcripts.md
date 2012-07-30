@@ -1,7 +1,7 @@
 ---
 title: Create an Interactive Transcript for your Wistia Video
 layout: post
-category: Sharing
+category: Embedding
 post_intro: <p>Transcripts are an incredible way for viewers to follow the content of your video.  Our transcripts are also linked word by word to your video, so your viewers can jump ahead (or rewind) by simply clicking on a specific word in the transcript.  The transcripts can also be indexed as part of your video sitemap, which makes the transcript extremely powerful for SEO purposes.  See more about our transcript product on the <a href="http://wistia.com/product/transcripts">transcripts tour page</a>.</p><p>So how do you go about creating a transcript?  This quick tutorial will show you the way.</p>
 ---
 

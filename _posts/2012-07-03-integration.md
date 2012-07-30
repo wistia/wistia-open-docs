@@ -1,3 +1,7 @@
+---
+title: Integration
+---
+
 # Embedding Wistia in 3rd Party Sites
 
 We love seeing Wistia videos out there in the wild. While for some of our customers, keeping all videos inside their private account makes the most sense.  Other customers are looking to embed their videos anywhere, from content management platforms to blogs, personal webpages, and other web services.  

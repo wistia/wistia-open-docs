@@ -1,7 +1,7 @@
 ---
 title: Permission Levels in Wistia
 layout: post
-category: Contacts
+category: Private Sharing
 post_intro: <p>Each contact in your Wistia account has a set of permissions.</p><p>These permissions set out the rules for how they can interact with the files in your account. In general, the permissions users can have are:</p><ul><li>Create Projects</li><li>Upload &amp; Download Media</li><li>Share Media/Projects</li><li>Track Stats and Account Usage Levels</li><li>Create New Contacts</li><li>Embed Videos</li></ul>
 ---
 

@@ -1,3 +1,8 @@
+---
+title: Randor Basics
+category: Getting Started
+---
+
 # Wistia Basics
 
 \\

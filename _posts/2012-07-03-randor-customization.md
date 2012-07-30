@@ -1,3 +1,8 @@
+---
+title: Randor Customization
+category: Getting Started
+---
+
 # Customize Your Embed
 
 \\
