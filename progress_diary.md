@@ -97,3 +97,5 @@
 * Next project is setting up search app (Sinatra?)
   - will searches be passed in URL (yes) and if so, how?
 * working around haml issues. haml haml haml.
+* had to revert to old jekyll (not henrik's haml-sickness) because of issues.  May try implementing henrik's haml stuff in current jekyll. This means still running old rake task to convert haml to html, etc.
+* now on to Sinatra, which is pretty sick

@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'nokogiri'
-require 'yajl/json_gem'
 require 'tire'
 
 # Adapted from https://raw.github.com/PascalW/jekyll_indextank/master/indexer.rb && https://github.com/jaysoo/jaysoo.ca/blob/master/_plugins/indexer.rb
@@ -9,8 +8,10 @@ module Jekyll
 
   class Indexer < Generator
 
+    puts "running"
+    
     Tire.configure do
-      url site.config['elasticsearch_url']
+      url '127.0.0.1:9200'
     end
 
     def generate(site)
@@ -22,56 +23,52 @@ module Jekyll
       # indexing posts
       puts 'Indexing posts...'
 
+      posts_counter = 0
+      posts_arr = []
+
+      site.posts.each do |post|
+        text = extract_text(site, post)
+        date_str = post.data['created_at'] || post.date.strftime('%Y-%m-%d %H:%MZ')
+
+        document = {
+          :title => post.data['title'],
+          :text => text,
+          :date => date_str,
+          :url => base_url + post.url,
+          :id => posts_counter,
+          :type => 'post',
+          :description => post.data['description'] || ""
+        }
+
+        if post.tags
+          document['tags'] = post.tags
+        end
+
+        if post.data.has_key?('category')
+          document['category'] = post.data['category']
+        end
+
+        posts_arr << document
+        posts_counter += 1
+      end
+
       Tire.index 'posts' do
 
         delete
-        create
+        create :mappings => {
 
-        site.posts.each do |post|
-          text = extract_text(site, post)
-          date_str = post.data['created_at'] || post.date.strftime('%Y-%m-%d %H:%MZ')
+          :post => { 
+            :properties => {
+              :id => { type: 'integer', index: 'not_analyzed', include_in_all: false },
+              :title => { type: 'string', analyzer: 'snowball', boost: '2.0' },
+              :text => { type: 'string', analyzer: 'snowball' },
+              :description => { type: 'string', analyzer: 'snowball' } 
+            } 
+          } 
+        }
 
-          document = {
-            :title => post.data['title'],
-            :text => text,
-            :date => date_str,
-            :url => base_url + post.url
-          }
-
-          if post.tags
-            document['tags'] = post.tags
-          end
-
-          if post.data.has_key?('category')
-            document['category'] = post.data['category']
-          end
-
-          store document
-        end
-      end
-
-      # indexing pages
-      puts 'Indexing pages...'
-      pages = site.pages
-      pages = pages.find_all {|p| p.output_ext == '.html' } 
-      pages.reject! {|p| p.data['noindex'] } 
-
-
-      Tire.index 'pages' do
-        pages.each do |page|
-          text = extract_text(site, page)
-
-          url = page.url()
-
-          document = {
-            :title => page.data['title'],
-            :text => text,
-            :url => base_url + url
-          }
-
-          store document
-
-        end
+        import posts_arr
+        refresh 
       end
 
       puts 'Indexing done!'
@@ -81,8 +78,8 @@ module Jekyll
     def extract_text(site, page)
       page.render(site.layouts, site.site_payload)
       doc = Nokogiri::HTML(page.output)
-      main = doc.css("#main")
-      page_text = main.text.gsub("\r"," ").gsub("\n"," ").gsub(/\s+/, " ")
+      doc.css('script').remove().css('#doc_nav').remove()
+      page_text = doc.text.gsub("\r"," ").gsub("\n"," ").gsub(/\s+/, " ")
     end
 
   end 
