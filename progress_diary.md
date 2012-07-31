@@ -87,3 +87,13 @@
   - for simplicity, I'm researching a method that would index content on site build (aka could be set to exclude files, would index the built HTML, etc.) this would be based on the IndexTank implementation: https://github.com/PascalW/jekyll_indextank/blob/master/indexer.rb put possibly translated for ElasticSearch etc.
   - the trouble with this approach is it does not use Mysql, which would rule out Sphinx
   - using Tire and Elasticsearch seems to be done before: http://jaysoo.ca/2012/02/02/added-search-to-website/
+
+## july 31 ##
+
+* got search queries working using Elasticsearch and Tire:
+  - http://karmi.github.com/tire/
+  - https://github.com/karmi/tire/
+* idea from all this came from Jay Soo site http://jaysoo.ca/2012/02/02/added-search-to-website/
+* Next project is setting up search app (Sinatra?)
+  - will searches be passed in URL (yes) and if so, how?
+* working around haml issues. haml haml haml.

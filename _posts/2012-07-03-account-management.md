@@ -82,4 +82,3 @@ To see billing statements, you must be logged in as the account owner.  Choose t
 
 ## How do I add/remove managers from my Wistia account?
 Choose the "Account Settings" item under the "Account" tab from any page within your Wistia account.  Click the "Add / remove managers" button on the Accounts page. A dialog will appear.  To add managers, enter the new manager's email address into the text box and click the "Add" button.  To remove existing managers, click the "Remove" button in the far right hand column. 
-
