@@ -1,7 +1,8 @@
 ---
-title: Upload a Video to Wistia
+title: Uploading
 layout: post
 category: Before You Upload
+description: Learn how uploading with Wistia works.
 ---
 
 <div class="video_embed">

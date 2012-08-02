@@ -105,23 +105,7 @@ header
 
 /////// doc home only ///////
 
-#search_bar
-  width: $total_width
-  margin: 0 auto
-  .bar_part
-    width: $post_width
-    height: 40px
-    margin: 15px auto
-    background-color: white
-    display: inline-block
-    border: 2px solid $complementary
-  .label
-    width: 40px
-    display: inline-block
-    text-align: left
-    vertical-align: top
-    position: relative
-    top: 28px
+
 
 #articles_list
   width: $post_width
@@ -387,3 +371,32 @@ table
 
 .clear
   clear: both
+
+////////// SEARCH ////////////
+
+.search_bar
+  margin-bottom: $padding
+  #home
+    width: $total_width
+  input
+    width: 80%
+    height: 16px
+    font-size: 14px
+  button
+    font-size: 14px
+
+#results
+  min-height: 350px
+.results_header
+  border-bottom: 1px solid
+  margin-bottom: $padding*2
+.result
+  margin: $padding 0 $padding*2
+  h2
+    margin: 0
+  a
+    font-size: 24px
+  p
+    margin-top: $padding/2
+    width: 550px
+

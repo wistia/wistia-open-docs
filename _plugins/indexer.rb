@@ -62,7 +62,7 @@ module Jekyll
               :id => { type: 'integer', index: 'not_analyzed', include_in_all: false },
               :title => { type: 'string', analyzer: 'snowball', boost: '2.0' },
               :text => { type: 'string', analyzer: 'snowball' },
-              :description => { type: 'string', analyzer: 'snowball' } 
+              :description => { type: 'string', analyzer: 'snowball', boost: '1.5' } 
             } 
           } 
         }

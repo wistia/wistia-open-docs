@@ -3,6 +3,7 @@
   %head
     %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
     %link{ rel: 'stylesheet', type: 'text/css', href: '/stylesheets/screen.css' }
+    %script{ type: 'text/javascript', src: '/javascripts/jquery.min.js' }
     %title
       Wistia Documentation
   %body
@@ -10,9 +11,20 @@
       %h1
         Wistia Documentation
     #container
-      #search_bar{ style: 'text-align:center;' }
-        .bar_part{ style:'width:80%;height:40px;margin:0 auto 40px;background-color:white;display:inline-block;border: 2px solid red;'}
-        .label{ style:'width:5%;display:inline-block;text-align:left;vertical-align:top;margin-top:15px;' } Search!
+      .search_bar
+        %input#search_text{type: "text"}
+        %button#search_button Search!
       #content
         %section
           {{ content }}
+
+:javascript
+
+  $(document).ready(function() {
+
+    $('#search_button').on('click', function() {
+      var query = $('#search_text').val().replace(/' '/, '_');
+      window.location.replace("http://localhost:4000/search.html?query=" + query);
+    });
+
+  });

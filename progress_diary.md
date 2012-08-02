@@ -99,3 +99,9 @@
 * working around haml issues. haml haml haml.
 * had to revert to old jekyll (not henrik's haml-sickness) because of issues.  May try implementing henrik's haml stuff in current jekyll. This means still running old rake task to convert haml to html, etc.
 * now on to Sinatra, which is pretty sick
+
+## aug 1 ##
+
+* worked for a while on getting the Sinatra app to return a HAML page, should I iframe, should I generate layouts on the app side, etc.
+* that was dumb. Now going to have Sinatra app return JSON & JSONP, which will be interpreted on the doc side by js
+* tried to add in prism.js quickly ( http://prismjs.com/ ) but failed.  Will revisit.

@@ -3,6 +3,7 @@
   <head>
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
     <link href='/stylesheets/screen.css' rel='stylesheet' type='text/css' />
+    <script src='/javascripts/jquery.min.js' type='text/javascript'></script>
     <title>
       Wistia Documentation
     </title>
@@ -14,9 +15,9 @@
       </h1>
     </header>
     <div id='container'>
-      <div id='search_bar' style='text-align:center;'>
-        <div class='bar_part' style='width:80%;height:40px;margin:0 auto 40px;background-color:white;display:inline-block;border: 2px solid red;'></div>
-        <div class='label' style='width:5%;display:inline-block;text-align:left;vertical-align:top;margin-top:15px;'>Search!</div>
+      <div class='search_bar'>
+        <input id='search_text' type='text' />
+        <button id='search_button'>Search!</button>
       </div>
       <div id='content'>
         <section>
@@ -26,3 +27,15 @@
     </div>
   </body>
 </html>
+<script type='text/javascript'>
+  //<![CDATA[
+    $(document).ready(function() {
+    
+      $('#search_button').on('click', function() {
+        var query = $('#search_text').val().replace(/' '/, '_');
+        window.location.replace("http://localhost:4000/search.html?query=" + query);
+      });
+    
+    });
+  //]]>
+</script>

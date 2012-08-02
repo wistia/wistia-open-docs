@@ -32,7 +32,7 @@ end
 
 desc "Build site"
 task :build do |task, args|
-  Rake::Task["parse_compass"].invoke
+  Rake::Task["parse_content"].invoke
   system "bundle exec jekyll"
 end
 

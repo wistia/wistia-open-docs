@@ -2,24 +2,9 @@
 title: Wistia Quickstart Guide
 layout: post
 category: Quick Guides
+description: So you’ve signed up for a Wistia account. Welcome! Now what? Our Quickstart guide is here to help you navigate your account set-up and get started on accomplishing tasks that will bring value to your business.
+post_intro: <p>So you’ve signed up for a Wistia account. Welcome! Now what?</p><p>Our Quickstart guide is here to help you navigate your account set-up and get started on accomplishing tasks that will bring value to your business.</p><p>This guide contains:</p><ul><li>A walkthrough of the crucial screens in your Wistia account</li><li>Detailed instructions on the key tasks to help you get started</li></ul>
 ---
-
-`<style float-right>`{{:quickstart_guide.png}}`</style>`//If you would prefer to view as a PDF, click [here]({{ site.url }}/{{ page.lang }}/http://files.wistia.com/doc/Wistia Quickstart Guide.pdf.html)//
-\\
-\\
-So you’ve signed up for a Wistia account. Welcome! Now what?
-\\
-\\
-Our Quickstart guide is here to help you navigate your account set-up and get started on accomplishing tasks that will bring value to your business. 
-\\
-\\
-
-**This guide contains:**\\
-
-*  A walkthrough of the crucial screens in your Wistia account\\
-
-*  Detailed instructions on the key tasks to help you get started\\
-\\
 
 # Main Screens Walkthrough
 
