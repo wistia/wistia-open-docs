@@ -2,22 +2,25 @@
 layout: base
 \---
 
-#doc_nav
+#post_container
   {% include doc_nav.html %}
-#post
-  .post_title
-    %h1 {{ page.title }}
-  .post_content
-    {% if page.post_intro %}
-    .post_intro
-      {{ page.post_intro }}
-    {% endif %}
-    {{ content }}
-  .post_footer 
-    {% if page.for_developers == true %}{% include for_developers.html %}{% else %}{% include for_beginners.html %}{% endif %}
-      
+  #post
+    .post_title
+      %h1 {{ page.title }}
+    .post_content
+      {% if page.post_intro %}
+      .post_intro
+        {{ page.post_intro }}
+      {% endif %}
+      {{ content }}
+    .post_footer 
+      {% if page.for_developers == true %}{% include for_developers.html %}{% else %}{% include for_beginners.html %}{% endif %}
+
+#right_col
+  %ul#page_nav
+    
 
 %script{ src:'/javascripts/post_content_nav.js', type:'text/javascript' }
-%script{ src: "/javascripts/jquery.scrollTo.js" }
-%script{ src: "/javascripts/jquery.nav.js" }
-%script{ src: "/javascripts/images_layout.js" }
+%script{ src: '/javascripts/jquery.scrollTo.js' }
+%script{ src: '/javascripts/jquery.nav.js' }
+%script{ src: '/javascripts/image_layout.js' }

@@ -105,3 +105,8 @@
 * worked for a while on getting the Sinatra app to return a HAML page, should I iframe, should I generate layouts on the app side, etc.
 * that was dumb. Now going to have Sinatra app return JSON & JSONP, which will be interpreted on the doc side by js
 * tried to add in prism.js quickly ( http://prismjs.com/ ) but failed.  Will revisit.
+* added search boxes across the doc. attempting to style it Joe-style :)
+* added in the generate_categories plugin, which needs some work/customization.  Will be using the category pages as the breadcrumbs.
+* speaking of categories, might come back to tackle something like this in the future: http://www.brousalis.com/blog/2012/07/08/jekyll-category-list-plugin/
+* Added compass ellipsis to the title to make sure it stays clean. Damn compass is good.
+* Built in breadcrumbs & category pages.  Starting to look slick.

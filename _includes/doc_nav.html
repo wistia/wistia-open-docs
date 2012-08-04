@@ -1,16 +1,29 @@
-<div id='doc_nav_container'>
-  <ul>
-    <li>
-      <a href='/account-management.html'>Account Management</a>
-    </li>
-    <li>
-      <a href='/organization.html'>Projects &amp; Media</a>
-    </li>
-    <li>
-      <a href='/analytics.html'>Analytics</a>
-    </li>
-    <li>
-      <a href='/public-sharing.html'>Sharing &amp; Embedding</a>
-    </li>
-  </ul>
+<div id='doc_nav'>
+  <div id='doc_nav_container'>
+    <ul>
+      {% if page.category and page.type != 'category' %}
+      <li id='breadcrumbs'>
+        <a href="http://wistia.com/doc/categories/{{ page.category | downcase | replace: ' ', '_' }}.html">{{ page.category }}</a>
+        <span class='breadcrumb_post_title'>
+          &gt;
+          {{ page.title }}
+        </span>
+      </li>
+      {% else %}
+      <li id='breadcrumbs'>
+        <a href='http://wistia.com/doc/'>Doc Main</a>
+        <span class='breadcrumb_post_title'>
+          &gt;
+          {{ page.category }}
+        </span>
+      </li>
+      {% endif %}
+      <li id='nav_search_box'>
+        <div class='search_bar nav_bar'>
+          <input class='nav_bar' id='search_text' placeholder='search our docs' type='text' />
+          <button id='search_button'>search</button>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>

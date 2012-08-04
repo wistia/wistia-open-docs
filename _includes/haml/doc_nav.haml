@@ -1,10 +1,20 @@
-#doc_nav_container
-  %ul
-    %li
-      %a{ href: '/account-management.html' } Account Management
-    %li
-      %a{ href: '/organization.html' } Projects &amp; Media
-    %li
-      %a{ href: '/analytics.html' } Analytics
-    %li
-      %a{ href: '/public-sharing.html' } Sharing &amp; Embedding
+#doc_nav
+  #doc_nav_container
+    %ul
+      {% if page.category and page.type != 'category' %}
+      %li#breadcrumbs
+        %a{ href: "http://wistia.com/doc/categories/{{ page.category | downcase | replace: ' ', '_' }}.html" } {{ page.category }}
+        %span.breadcrumb_post_title
+          &gt;
+          {{ page.title }}
+      {% else %}
+      %li#breadcrumbs
+        %a{ href: 'http://wistia.com/doc/' } Doc Main
+        %span.breadcrumb_post_title
+          &gt;
+          {{ page.category }}
+      {% endif %}
+      %li#nav_search_box
+        .search_bar.nav_bar
+          %input#search_text.nav_bar{ type: "text", placeholder: "search our docs" }
+          %button#search_button search

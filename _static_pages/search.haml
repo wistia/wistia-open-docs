@@ -2,15 +2,12 @@
 layout: post
 \---
 
-.search_bar
-  %input#search_text{type: "text"}
-  %button#search_button Search!
 %div#results
 
 :javascript
 
   $(document).ready(function() {
-    var query = window.location.href.split('?')[1].split('=')[1],
+    var query = (window.location.href.split('?')[1] || "").split('=')[1],
       results_json;
 
     function send_search(query, callback) {
@@ -32,17 +29,19 @@ layout: post
       return "<div class='results_header'><h1>results for '" + query.replace(/_/g, ' ') + "'</h1></div>";
     }
 
-    send_search(query, function(data) {
-      var result_html = "",
-        header = results_header(query);
-        
-      results_json = data.results;
-      $.each(results_json, function(i, val) {
-        if (i < 5 ) { result_html += convert_json_to_html(val); }
-      });
+    if (query) {
+      send_search(query, function(data) {
+        var result_html = "",
+          header = results_header(query);
+          
+        results_json = data.results;
+        $.each(results_json, function(i, val) {
+          result_html += convert_json_to_html(val);
+        });
 
-      $('#results').append( header ).append( result_html );
-    });
+        $('#results').append( header ).append( result_html );
+      });
+    }
 
     $('.post_title').hide();
     $('.search_bar button').on('click', function() {

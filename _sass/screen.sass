@@ -6,6 +6,7 @@
 
 @import compass/reset
 @import compass/css3
+@import compass/utilities/text/ellipsis
 
 /////////////// vars ///////////////
 
@@ -97,15 +98,29 @@ header
   margin: 100px auto 0
 
 #container
-  width: 980px
+  width: 970px
   margin: 40px auto
 
-#content
+#post_container
   display: inline-block
+
+/////// category pages ( doc/categories/blah )//////
+
+#category_container
+  position: relative
+  left: 120px
+  .category
+    width: $post_width
+    padding: $padding
+    background-color: white
+    h2
+      margin-bottom: $padding/2
 
 /////// doc home only ///////
 
-
+#container_home
+  @extend #container
+  width: 720px
 
 #articles_list
   width: $post_width
@@ -140,17 +155,31 @@ header
     position: relative
     ul
       padding: 0
-      margin: 0
+      margin: 0 auto
+      width: $post_width
+      position: relative
+      height: 45px
       li
         display: inline-block
-        height: 45px
-        margin-left: 30px
+        position: absolute
+        color: $text_color
         a 
-          position: relative
           padding: 14px 5px
-          top: 14px
           height: 40px
           color: white
+          text-decoration: underline
+      li#breadcrumbs
+        +ellipsis
+        left: 0
+        top: 15px
+        width: 340px
+        color: white
+        .breadcrumb_post_title
+          color: white
+      li#nav_search_box
+        right: 0
+        top: 9px
+
 
 //////// post //////////
 
@@ -188,6 +217,7 @@ header
     line-height: 150%
   ul
     list-style-type: disc
+    position: relative
   ol
     list-style: decimal
     li
@@ -369,6 +399,8 @@ table
   .current > a
     color: $wistia_blue
 
+///// utility classes ///////
+
 .clear
   clear: both
 
@@ -376,14 +408,21 @@ table
 
 .search_bar
   margin-bottom: $padding
-  #home
-    width: $total_width
+  text-align: center
   input
     width: 80%
     height: 16px
     font-size: 14px
   button
     font-size: 14px
+
+#doc_nav_container
+  .search_bar
+    margin: 0
+    text-align: left
+    width: 100%
+    input
+      width: 220px
 
 #results
   min-height: 350px
@@ -399,4 +438,3 @@ table
   p
     margin-top: $padding/2
     width: 550px
-
