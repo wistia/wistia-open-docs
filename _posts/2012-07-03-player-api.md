@@ -47,9 +47,9 @@ To access the API when using iframe embed codes, you just need to include an ext
 
 The 'API' version of the Wistia embed codes includes a variable <span class="code">wistiaEmbed</span> to make this easy.
 
-<div class="code"><pre>
-<style center>var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });{javascript}</style>
-</pre></div>
+<pre><code class="language-javascript">
+var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });
+</code></pre>
 
 In this instance, you can reference the video object using the **''wistiaEmbed''** variable.  If you have multiple videos on your page, you should update this variable to something specific to this video.
 
@@ -65,39 +65,39 @@ Wistia's video player API provides functionality to easily accomplish common goa
 
 In this example, let's assume that we want to fire a Javascript function when the viewer gets 60 seconds into the video. In order to accomplish this, we only need the bind method from the API.  The Javascript code can be seen below:
 
-<div class="code"><pre>
+<pre><code class="language-javascript">
 <script type="text/javascript"> 
-    wistiaEmbed.bind("timechange", function (t) {
-    if(t > 60 && t < 62) {
-      // Insert code to be executed here
-    }
-    });
+wistiaEmbed.bind("timechange", function (t) {
+  if(t > 60 && t < 62) {
+    // Insert code to be executed here
+  }
+});
 </script>
-</pre></div>
+</code></pre>
 
 The bind function monitors the state of the video in an event loop. Every 500 milliseconds, it checks to see if the video's time position has changed. If it has, it runs your function with the current time (t) as the only argument.
 
 ### Alert when the video ends
 
-<div class="code"><pre>
+<pre><code class="language-javascript">
 <script type="text/javascript"> 
-    wistiaEmbed.bind("end", function () {
-    alert("Hello world!");
-    });
+wistiaEmbed.bind("end", function () {
+  alert("Hello world!");
+});
 </script>
-</pre></div>
+</code></pre>
 
 ### Grab the email address of your video viewers
 
 With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require your viewers to enter an email address to view video content on your webpage.  Using the "conversion" event, you can trigger actions based on the email being entered - including passing that email on to another service!
 
-<div class="code"><pre>
+<pre><code class="language-javascript">
 <script type="text/javascript">
-  wistiaEmbed.bind("conversion", function(type, val) {
+wistiaEmbed.bind("conversion", function(type, val) {
   // function to be executed
 });
 </script>
-</pre></div>
+</code></pre>
 
 At this time, the "type" of conversion is always 'pre-roll-email', and the "val" is the viewers email address.
 
@@ -105,15 +105,17 @@ At this time, the "type" of conversion is always 'pre-roll-email', and the "val"
 
 With the bind method, every time "play" is triggered, your function will be executed. But sometimes a user will scroll back to the beginning and hit Play again. If you want to avoid your function being executed again, you need to unbind it. 
 
-<div class="code"><pre>
+<pre><code class="language-javascript">
 <script type="text/javascript">
-    function playFunc() {
-    alert("Played the first time!");
-    wistiaEmbed.unbind("play", playFunc);
-    }
-    wistiaEmbed.bind("play", playFunc);
+function playFunc() {
+  alert("Played the first time!");
+  wistiaEmbed.unbind("play", playFunc);
+}
+
+wistiaEmbed.bind("play", playFunc);
 </script>
-</pre></div>
+</code></pre>
+
 
 ## Embedding Options
 
@@ -149,16 +151,15 @@ In our example embed **''Wistia.embed("bfc34aa023", { ... options ... });''** th
 
 To show how options work, suppose I want to embed a video that defaults to the HTML5 player and plays automatically on page load. I might alter the embed javascript to look like this:
 
-<div class="code"><pre>
+<pre><code class='language-javascript'>
 <div id="my_container"></div>
-<script type="text/javascript"> 
-    var wistiaEmbed = Wistia.embed("bfc34aa023", {
-    platformPreference: "html5",
-    autoPlay: true,
-    container: "my_container"
-    });
-</script></pre>
-</div>
+var wistiaEmbed = Wistia.embed("bfc34aa023", {
+  platformPreference: "html5",
+  autoPlay: true,
+  container: "my_container"
+});
+</code></pre>
+
 
 # Plugin Options
 

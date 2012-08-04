@@ -36,6 +36,12 @@ task :build do |task, args|
   system "bundle exec jekyll"
 end
 
+desc "launch search"
+task :es do
+  system "elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.3/config/elasticsearch.yml"
+end
+
+
 desc "Deploy latest code in _site to production"
 task :deploy do
   puts "updating github"

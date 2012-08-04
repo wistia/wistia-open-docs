@@ -57,8 +57,8 @@ $(document).ready(function() {
   };
 
   // for <pre> code snippets //
-  if ($('pre').length) {
-    $('pre').each( function() {
+  if ($('.code pre').length) {
+    $('.code pre').each( function() {
       $this = $(this);
       
       $this.html($this.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'));

@@ -13,6 +13,8 @@ pre[class*="language-"] {
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
+  line-height: 150%;
+  font-size: 14px;
 	
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -27,7 +29,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
+	margin: 15px 0;
 	overflow: auto;	
 }
 

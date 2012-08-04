@@ -41,9 +41,9 @@ Here is the normal Popover code:
 
 Inside the “class” area, we're going to use 'helpers' to add this additional functionality:
 
-<div class="code">	
+<pre><code class='language-javascript'>
 	helpers.overlay.css.backgroundColor=#000,helpers.overlay.opacity=1,padding=20
-</div>
+</code></pre>
 
 We also added padding, to provide that 'picture frame' effect around the video.
 
@@ -68,11 +68,10 @@ Let's start with the same embed code as above:
 </div>	
 
 Now, let's add the following to the 'class' area:
-<div class='code'>
-<code>	
-	title=&lt;center&gt;&lt;strong&gt;SuperEmbeds Rock!&lt;/strong&gt;&lt;/center&gt;,helpers.title.type=inside,
-</code>
-</div>
+<pre><code class="language-javascript">	
+	title=<center><strong>SuperEmbeds Rock!</strong></center>,helpers.title.type=inside,
+</code></pre>
+
 We just added the title content (with the 'title=' entry) and set the title to display inside the popover frame (with the 'helpers.title.type=inside' entry).  Other options for the title type include 'float', 'outside', and 'over'.  Play around to see which you like best.
 
 
@@ -226,11 +225,9 @@ First, try embedding your video onto your page, to make sure it works properly w
 
 Next, review the source code for your embedded video on your page. You'll notice some javascript similar to the following:
 
-<div class="code"><pre>
-<script type="text/javascript">
+<pre><code class="language-javascript">
   wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });
-</script>
-</pre></div>
+</code></pre>
 
 The <span class="code">wistiaEmbed</span> variable can be used to control the video.  If you plan to have multiple videos on your page, change the 'wistiaEmbed' variable to something more specific, like the name of your video (ie. 'mattDamon').
 
@@ -280,11 +277,12 @@ To mute a video on load, you can simply set the volume to 0 on your video object
 
 Here's what the embed code looks like, note the <span class="code">.volume(0)</span> added to the end.
 
-<div class="code"><pre>
+<pre><code class="language-javascript">
+
 <div id="wistia_47254d52b7" style="height:360px;width:640px;"></div>
-<script type="text/javascript" src="http://static.wistia.com/static/E-v1.js"></script>
-<script type="text/javascript">mutedEmbed = Wistia.embed("47254d52b7").volume(0);</script>
-</pre></div>
+mutedEmbed = Wistia.embed("47254d52b7").volume(0);
+
+</code></pre>
 
 ---
 
