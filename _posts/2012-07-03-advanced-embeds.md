@@ -3,7 +3,8 @@ title: Advanced Wistia Embed Customization
 layout: post
 category: For Developers
 for_developers: true
-post_intro: <p>We think <a href="//embed_screen.html">Wistia Super Embeds</a> are pretty awesome.  They make it easy for web video to look it's best.  But sometimes our customers might be looking to do even more customization.  This doc page will help answer some of the questions that come up with Wistia embed options.</p>
+type: post
+post_intro: <p>We think <a href="//localhost:4000/embed_screen.html">Wistia Super Embeds</a> are pretty awesome.  They make it easy for web video to look it's best.  But sometimes our customers might be looking to do even more customization.  This doc page will help answer some of the questions that come up with Wistia embed options.</p>
 ---
 
 
@@ -168,7 +169,7 @@ Using iframe embed codes, forcing them to default in HTML5 is as easy as adding 
 So a full HTML5 player embed code would look like this:
 
 **Code:**
-<div class="code"><pre><iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"></iframe></pre></div>
+<div class="code"><pre>&lt;iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"&gt;&lt;/iframe&gt;</pre></div>
 
 **HTML5 Player Example**
 

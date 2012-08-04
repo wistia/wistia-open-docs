@@ -17,7 +17,7 @@ Facebook embeds show up right in your news feed.  Your followers can click to pl
 **To embed your video into Facebook:**
 
 *  In your account, open up the video you'd like to embed.
-<div class="post_image float_right"><img src="/images/description_sb.png|" alt="" /></div>
+<div class="post_image float_right"><img src="/images/description_sb.png" alt="" /></div>
 *  Select "Add Sidebar Element" under the Media Actions drop-down.  Select "add a description", and then give your video some info, like a quick blurb about the video.  This is going to show up as a description in the Facebook news feed.
 *  Back under the Media Actions menu, select “share by link”.
 *  Copy the share link, paste it into your Facebook status box and click “share”.

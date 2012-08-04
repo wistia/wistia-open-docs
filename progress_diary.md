@@ -108,5 +108,11 @@
 * added search boxes across the doc. attempting to style it Joe-style :)
 * added in the generate_categories plugin, which needs some work/customization.  Will be using the category pages as the breadcrumbs.
 * speaking of categories, might come back to tackle something like this in the future: http://www.brousalis.com/blog/2012/07/08/jekyll-category-list-plugin/
+
+## aug 3 ##
 * Added compass ellipsis to the title to make sure it stays clean. Damn compass is good.
 * Built in breadcrumbs & category pages.  Starting to look slick.
+* customized the categories plugin, which used to have ugly URL (base/categories/category_name/index.html) and now has pretty URL (base/categories/category_name.html)
+* Spent a lot of time getting the breadcrumbs right - added a layout for non-post pages (utilities) and fought w Liquid to get it to show custom breadcrumbs even for those pages.  The key was to put everything on one line!!
+* I know this is probably early, but also put in keyboard shortcuts to get to search ('/') and to enter search query.
+* TODO: the footers for each post, and perhaps an overall footer?

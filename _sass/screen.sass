@@ -104,17 +104,7 @@ header
 #post_container
   display: inline-block
 
-/////// category pages ( doc/categories/blah )//////
 
-#category_container
-  position: relative
-  left: 120px
-  .category
-    width: $post_width
-    padding: $padding
-    background-color: white
-    h2
-      margin-bottom: $padding/2
 
 /////// doc home only ///////
 
@@ -368,7 +358,7 @@ table
   display: inline-block
   vertical-align: top
   width: $post_width/3
-  margin: 45px 0 0 $padding
+  margin: 0 0 0 $padding
   height: 100%
   position: fixed
   ul
@@ -404,6 +394,21 @@ table
 .clear
   clear: both
 
+/////// utility pages ( categories, search, blah )//////
+
+#utilities_container
+  position: relative
+  left: 125px
+
+/////// categories ////////
+
+.category
+  width: $post_width
+  padding: $padding
+  background-color: white
+  h2
+    margin-bottom: $padding/2
+
 ////////// SEARCH ////////////
 
 .search_bar
@@ -411,8 +416,8 @@ table
   text-align: center
   input
     width: 80%
-    height: 16px
-    font-size: 14px
+    height: 15px
+    font-size: 13px
   button
     font-size: 14px
 
@@ -422,9 +427,12 @@ table
     text-align: left
     width: 100%
     input
-      width: 220px
+      width: 180px
+      padding: 4px
+      padding-bottom: 1px
 
 #results
+  @extend #post
   min-height: 350px
 .results_header
   border-bottom: 1px solid

@@ -1,17 +1,15 @@
 \---
-layout: base
+layout: utilities
 type: category
 \---
 
-#category_container
-  {% include doc_nav.html %}
-  .category
-    %h1.category_title 
-      %span{ style: 'color: #6B6760;' } Categories &gt;
-      {{ page.title }}
-    %ul.posts_list
-      {% for post in site.categories[page.category] %}
-      %h2
-        %a{ href: "{{ post.url }}" } 
-          {{ post.title }}
-      {% endfor %}
+.category
+  %h1.category_title 
+    %span{ style: 'color: #6B6760;' } Categories &gt;
+    {{ page.title }}
+  %ul.posts_list
+    {% for post in site.categories[page.category] %}
+    %h2
+      %a{ href: "{{ post.url }}" } 
+        {{ post.title }}
+    {% endfor %}

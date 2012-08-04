@@ -4,6 +4,7 @@
     %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
     %link{ rel: 'stylesheet', type: 'text/css', href: '/stylesheets/screen.css' }
     %script{ type: 'text/javascript', src: '/javascripts/jquery.min.js' }
+    %script{ src: '/javascripts/search_text.js' }
     %title
       Wistia Documentation
   %body
@@ -12,19 +13,9 @@
         Wistia Documentation
     #container_home
       .search_bar
-        %input#search_text{type: "text"}
+        %input#search_text{type: "text", placeholder: "search our docs" }
         %button#search_button Search!
       #content
         %section
           {{ content }}
 
-:javascript
-
-  $(document).ready(function() {
-
-    $('#search_button').on('click', function() {
-      var query = $('#search_text').val().replace(/' '/, '_');
-      window.location.replace("http://localhost:4000/search.html?query=" + query);
-    });
-
-  });
