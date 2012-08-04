@@ -647,3 +647,21 @@ table tr:hover td {
   margin-top: 15px;
   width: 550px;
 }
+
+/* line 449, ../_sass/screen.sass */
+.no_result {
+  margin-top: -30px;
+}
+/* line 451, ../_sass/screen.sass */
+.no_result p {
+  line-height: 200%;
+}
+/* line 453, ../_sass/screen.sass */
+.no_result .query {
+  color: #333333;
+}
+
+/* line 455, ../_sass/screen.sass */
+.description {
+  color: #aaaaaa;
+}

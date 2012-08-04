@@ -15,7 +15,7 @@ $(document).ready(function() {
     url = json.url;
 
     return "<div class='result'><h2><a href='" + url + "'>" + title + "</a></h2>" + 
-      "<p>" + description + "</p></div>";
+      "<p class='description'>" + description + "</p></div>";
   }
 
   function results_header(query) {
@@ -23,7 +23,7 @@ $(document).ready(function() {
       html_end_str = "</h1></div>";
 
     if (query) {
-      return html_start_str + "results for '" + query.replace(/_/g, ' ') + "'" + html_end_str; 
+      return html_start_str + "Results for '" + query.replace(/_/g, ' ') + "'" + html_end_str; 
     }
     else { 
       return html_start_str + "enter a search to begin" + html_end_str;
@@ -35,10 +35,16 @@ $(document).ready(function() {
     send_search(query, function(data) {
       var result_html = "";
 
-      results_json = data.results;
-      $.each(results_json, function(i, val) {
-        result_html += convert_json_to_html(val);
-      });
+      if (data.results.length > 0) {
+        results_json = data.results;
+        $.each(results_json, function(i, val) {
+          result_html += convert_json_to_html(val);
+        });
+      }
+      else {
+        result_html = "<div class='no_result'><p>We couldn't find any results for your query, <span class='query'>'" + query + "'</span>." + 
+          "<p>Please try another or head back to the <a href='/'>Documentation Main page</a>.</p></div>";
+      }
 
       $('#results').append( header ).append( result_html );
     });
