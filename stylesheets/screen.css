@@ -600,23 +600,23 @@ table tr:hover td {
   width: 80%;
   height: 15px;
   font-size: 13px;
+  padding: 4px;
+  padding-bottom: 1px;
 }
-/* line 421, ../_sass/screen.sass */
+/* line 423, ../_sass/screen.sass */
 .search_bar button {
   font-size: 14px;
 }
 
-/* line 425, ../_sass/screen.sass */
+/* line 427, ../_sass/screen.sass */
 #doc_nav_container .search_bar {
   margin: 0;
   text-align: left;
   width: 100%;
 }
-/* line 429, ../_sass/screen.sass */
+/* line 431, ../_sass/screen.sass */
 #doc_nav_container .search_bar input {
   width: 180px;
-  padding: 4px;
-  padding-bottom: 1px;
 }
 
 /* line 434, ../_sass/screen.sass */
