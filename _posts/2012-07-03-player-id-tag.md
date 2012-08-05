@@ -8,9 +8,11 @@ post_intro: <p>Using the Video Player API, you can create simple ID tagging that
 
 ## URL Query String Approach
 
-The custom query string URL approach produces a link like this: <span class="code">http://your-video-URL.com?wemail=example@mail.com</span>.
+The custom query string URL approach produces a link like this: 
 
-If you have access to the user's email address (through log-in or form submittal, etc.) you can replace the 'example@mail.com' string with this information.  Note, the URL on the page where the video is embedded (and played from) must have the custom query string.
+<pre><code class="language-markup">http://your-video-URL.com?wemail=example@mail.com</code></pre>
+
+If you have access to the user's email address (through log-in or form submittal, etc.) you can replace the <span class="code">example@mail.com</span> string with this information.  Note, the URL on the page where the video is embedded (and played from) must have the custom query string.
 
 ---
 
@@ -22,8 +24,9 @@ The new Wistia API embeds includes an option to track the viewer's email when th
 
 Inside the embed code, you will see a snippet that appears like this:
 
-<div class="code">
-<pre><script type="text/javascript"> 
+<pre><code class="language-markup">
+<script type="text/javascript"> 
+</code><code class='language-javascript'>
   var wistiaEmbed = Wistia.embed("bfc34aa023", {
     platformPreference: "html5",
     autoPlay: true,
@@ -31,12 +34,13 @@ Inside the embed code, you will see a snippet that appears like this:
     container: "my_container"
   });
 </script>
-</pre></div>
+</code></pre>
 
 We will be adding the <span class="code">trackEmail</span> embed option:
 	
-<div class="code"><pre>
+<pre><code class="language-markup">
 <script type="text/javascript"> 
+</code><code class='language-javascript'>
   var wistiaEmbed = Wistia.embed("bfc34aa023", {
     platformPreference: "html5",
     autoPlay: true,
@@ -45,7 +49,8 @@ We will be adding the <span class="code">trackEmail</span> embed option:
     trackEmail: "userEmail"
   });
 </script>
-</pre></div>
+</code></pre>
+
 
 The variables for Wistia video hashed ID (<span class="code">bfc34aa023</span>) and email address (<span class="code">UserEmail</span>) need to be updated to reflect your embedded video ID and the variable of your identifiable user information.
 

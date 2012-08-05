@@ -21,7 +21,10 @@ Using iframe embed codes, forcing them to default in HTML5 is as easy as adding 
 So a full HTML5 player embed code would look like this:
 
 **Code:**
-<div class="code"><pre><iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"></iframe></pre></div>
+
+<pre><code class="language-markup">
+<iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"></iframe>
+</code></pre>
 
 **HTML5 Player Example**
 

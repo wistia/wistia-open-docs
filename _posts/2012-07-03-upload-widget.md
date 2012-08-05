@@ -10,13 +10,13 @@ post_intro: <p>The Upload Widget is a snippet of HTML, CSS, and JS that you can 
 
 The snippet should take the following form:
 
-<div class="code"><pre>
+<pre><code class='language-markup'>
 <div id="wistia-upload-widget" style="width: 500px; height: 75px;"></div>
 <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
 <script>
 var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: '4bD' });
 </script>
-</pre></div>
+</code></pre>
 
 
 Use your project's public ID as the <span class="code">publicProjectId</span> parameter on the last line (in this instance, **4bD**).
@@ -91,7 +91,7 @@ The file was transferred to our servers correctly, but an error occurred during 
 
 ## Example
 
-<div class="code"><pre>
+<pre><code class="language-markup">
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -105,6 +105,7 @@ The file was transferred to our servers correctly, but an error occurred during 
     &lt;script src="http://static.wistia.com/javascripts/upload_widget.js"&gt;&lt;/script&gt;
     &lt;div id="output"&gt;&lt;p&gt;Output:&lt;/p&gt;&lt;/div&gt;
     &lt;script&gt;
+</code><code class="language-javascript">
       var progressMessages = 0;
       var cb = {
         'initializationComplete': function() {
@@ -250,4 +251,4 @@ The file was transferred to our servers correctly, but an error occurred during 
     &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</pre></div>
+</code></pre>

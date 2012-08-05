@@ -57,8 +57,8 @@ $(document).ready(function() {
   };
 
   // for <pre> code snippets //
-  if ($('.code pre').length) {
-    $('.code pre').each( function() {
+  if ($('pre').length) {
+    $('pre').find('code.language-markup').each( function() {
       $this = $(this);
       
       $this.html($this.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'));

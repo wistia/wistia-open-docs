@@ -19,9 +19,18 @@ If you're shooting video with light-colored backgrounds, a border can add defini
 
 Add this style to your CSS, or inline in between tags.
 
-<div class="github">	
-  <script src="https://gist.github.com/3068168.js?file=gistfile1.css"></script>
-</div>
+<pre><code class='language-css'>
+#fancybox-content {
+  border: 5px solid black !important;
+}
+
+#fancybox-outer {
+  padding-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+</code></pre>
 
 ---
 
@@ -34,10 +43,11 @@ To do this, you'll need to add attributes to the Inline styling for the Fancybox
 
 Here is the normal Popover code:
 
-<div class="github">
-<script src="https://gist.github.com/3068173.js?file=gistfile1.html"></script>
-</div> 
-
+<pre><code class="language-markup">
+&lt;a href="http://fast.wistia.com/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" 
+class="wistia-popover[width=640,height=360,playerColor=#636155]"&gt;&lt;img src="http://embed.wistia.com/deliveries/d88b25fd28dda2795fa3c754f6d08221cfb8b206.jpg?image_play_button=true&image_crop_resized=150x84" /&gt;&lt;/a&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"&gt;&lt;/script&gt;
+</code></pre>
 
 Inside the “class” area, we're going to use 'helpers' to add this additional functionality:
 
@@ -50,9 +60,11 @@ We also added padding, to provide that 'picture frame' effect around the video.
 
 The final embed code looks like this:
 
-<div class="github">
-  <script src="https://gist.github.com/3068173.js?file=gistfile1.html"></script>	
-</div>
+<pre><code class='language-markup'>
+&lt;a href="http://fast.wistia.com/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" 
+class="wistia-popover[width=640,height=360,playerColor=#636155]"&gt;&lt;img src="http://embed.wistia.com/deliveries/d88b25fd28dda2795fa3c754f6d08221cfb8b206.jpg?image_play_button=true&image_crop_resized=150x84" /&gt;&lt;/a&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"&gt;&lt;/script&gt;
+</code></pre>
 
 ---
 
@@ -63,11 +75,14 @@ Just like the color and opacity above, adding a title/caption to your popover in
 
 Let's start with the same embed code as above:
 
-<div class="github">
-  <script src="https://gist.github.com/3068173.js?file=gistfile1.html"></script>	
-</div>	
+<pre><code class='language-markup'>
+&lt;a href="http://fast.wistia.com/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" 
+class="wistia-popover[width=640,height=360,playerColor=#636155]"&gt;&lt;img src="http://embed.wistia.com/deliveries/d88b25fd28dda2795fa3c754f6d08221cfb8b206.jpg?image_play_button=true&image_crop_resized=150x84" /&gt;&lt;/a&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"&gt;&lt;/script&gt;
+</code></pre>
 
 Now, let's add the following to the 'class' area:
+
 <pre><code class="language-javascript">	
 	title=<center><strong>SuperEmbeds Rock!</strong></center>,helpers.title.type=inside,
 </code></pre>
@@ -83,9 +98,15 @@ To see what this looks like, check this <a href="http://fast.wistia.com/embed/if
 
 You'd like to send viewers a URL that they can open, and the popover will automatically display.
 
-<div class="github">	
-  <script src="https://gist.github.com/3068211.js?file=gistfile1.js"></script>
-</div>
+<pre><code class='language-javascript'>
+$(document).ready( function() {
+  var url = window.location.href.toString();
+  if ( url.indexOf('launch-the-popover') != -1 )
+  {
+    wistiaJQuery('a[class^=wistia-popover]').first().click();
+  }
+});
+</code></pre>
 
 If you have more than one popover on the page, you'll want to add an ID onto the link, so you can launch specific popovers.
 
@@ -101,9 +122,35 @@ Each video in the system has a 'hashed id', which in this example is <span class
 
 To get the thumbnail for the second video (ie the main content) to show up before playing, you'll want to add the 'stillUrl' parameter to the first video (as shown in the example).  To get the URL for the thumbnail for the main content, the best workaround is to copy the img src URL from a popover embed code for the video, or an email marketing merge tag.
 
-<div class="github">
-  <script src="https://gist.github.com/2925931.js?file=gistfile1.html"></script>
-</div>
+<pre><code class='language-markup'>
+&lt;div id="video_container" class="wistia_embed" style="width:640px;height:272px;" data-video-width="640" data-video-height="272"&gt; &lt;/div&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"&gt;&lt;/script&gt;
+&lt;script&gt;/*&lt;![CDATA[*/
+</code>
+<code class='language-javascript'>
+preRollEmbed = Wistia.embed("d90b54e175", {
+  version: "v1",
+  videoWidth: "640",
+  videoHeight: "272",
+  chromeless: true,
+  container: "video_container",
+  stillUrl: 'http://embed-0.wistia.com/deliveries/629013b3611293b5b3a4880570f4811b6c0db036.jpg'
+});
+preRollEmbed.bind("end", function() {
+  preRollEmbed.remove();
+  wistiaEmbed = Wistia.embed("bc9095e31e", {
+    version: "v1",
+    videoWidth: "640",
+    videoHeight: "272",
+    controlsVisibleOnLoad: true,
+    container: "video_container",
+    autoPlay: true
+  });
+});
+</code>
+<code class='language-markup'>
+/*]]&gt;*/&lt;/script&gt;
+</code></pre>
 
 ### And now the finished product!
 
@@ -145,9 +192,19 @@ If you are putting video thumbnails in your email messages, we recommend making 
 If you'd like to enable this behavior, copy and paste this JavaScript snippet with your embed code.
 When a visitor lands on your page with the video and they have "wemail=" in the URL (this is the mechanism by which Wistia passes emails to our analytics from emails), the video will automatically start playing. For everyone else who doesn't arrive via email, the video won't autoplay. 
 
-<div class="github">
-<script src="https://gist.github.com/3019601.js?file=selective_autoplay.js"></script>
-</div>
+<pre><code class='language-markup'>
+&lt;script&gt;
+</code>
+<code class='language-javascript'>
+// Put this somewhere after your embed.
+// Update 'wemail' to your string
+if (/wemail=/.test(location.href)) {
+  wistiaEmbed.play();
+}
+</code>
+<code class='language-markup'>
+&lt;/script&gt;
+</code></pre>
 
 ---
 
@@ -168,7 +225,7 @@ Using iframe embed codes, forcing them to default in HTML5 is as easy as adding 
 So a full HTML5 player embed code would look like this:
 
 **Code:**
-<div class="code"><pre>&lt;iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"&gt;&lt;/iframe&gt;</pre></div>
+<pre><code class='language-markup'>&lt;iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"&gt;&lt;/iframe&gt;</code></pre>
 
 **HTML5 Player Example**
 
@@ -233,9 +290,9 @@ The <span class="code">wistiaEmbed</span> variable can be used to control the vi
 
 The template link below can be used to help build the chapter links.  Replace the "wistiaEmbed" with your video's variable name, change the '60' to your desired time (in seconds), and replace the "Your link text here" with the text you wish to appear as your link text.
 
-<div class="code"><pre>
-<a href="#" onclick="wistiaEmbed.time(60);return false;">Your link text here</a>
-</pre></div>
+<pre><code class='language-markup'>
+  &lt;a href="#" onclick="wistiaEmbed.time(60);return false;"&gt;Your link text here&lt;/a&gt;
+</code></pre>
 
 This is all that is necessary to create chaptering link for your embedded video.  If you wish to create multiple chaptering links for the same video, simply copy the link you created and replace the link text and seek time with the appropriate values.
 
@@ -253,9 +310,9 @@ Next, it is important to get the Description element into the mode where we can 
 
 The structure of the code to create Chapter links is as follows:
 
-<div class="code"><pre>
-<a href="#media" onclick="parent.theMediaEmbed.seek(90);return(false);">1:30 New Section</a>
-</pre></div>
+<pre><code class='language-markup'>
+  &lt;a href="#media" onclick="parent.theMediaEmbed.seek(90);return(false);"&gt;1:30 New Section&lt;/a&gt;
+</code></pre>
 
 To modify this code for your video, simply replace the number in the <span class="code">.seek(90)</span> with the location that you wish the chapter marking to seek to in seconds.  Next, edit the text "1:30 New Section" between the <span class="code">&lt;</span> and the <span class="code">&gt;</span> to be the text that you wish to display for that chapter.
 
@@ -277,11 +334,15 @@ To mute a video on load, you can simply set the volume to 0 on your video object
 
 Here's what the embed code looks like, note the <span class="code">.volume(0)</span> added to the end.
 
-<pre><code class="language-javascript">
-
-<div id="wistia_47254d52b7" style="height:360px;width:640px;"></div>
-mutedEmbed = Wistia.embed("47254d52b7").volume(0);
-
+<pre><code class="language-markup">
+&lt;div id="wistia_47254d52b7" style="height:360px;width:640px;"&gt;&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+</code>
+<code class="language-javascript">
+  mutedEmbed = Wistia.embed("47254d52b7").volume(0);
+</code>
+<code class="language-markup">
+&lt;/script&gt;
 </code></pre>
 
 ---

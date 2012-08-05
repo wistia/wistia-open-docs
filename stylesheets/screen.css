@@ -210,7 +210,7 @@ header #header_container #header_nav li a:hover {
 /* line 132, ../_sass/screen.sass */
 .post_list a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
 }
 /* line 135, ../_sass/screen.sass */
 .post_list a:hover {

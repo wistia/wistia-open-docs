@@ -33,21 +33,21 @@ width(w)                        | Sets the width of the entire embed.
 
 The Playlist API can only currently be accessed from an 'API' Playlist embed. It includes a variable **''wistiaPlaylist''** to make it easy.
 
-<span class="code">var wistiaPlaylist = Wistia.playlist("abcde12345", { ... options ... });</span>
+<pre><code class='language-javascript'>var wistiaPlaylist = Wistia.playlist("abcde12345", { ... options ... });</code></pre>
 
 In this instance, you can reference the playlist object using the <span class="code">wistiaPlaylist</span> variable. If you have multiple playlists on your page, you should update this variable to something specific to this playlist.
 
 As an example, if the following JS code is executed, the email address "max@wistia.com" will be tracked for all the videos in the playlist.
 
-<span class="code">wistiaPlaylist.setEmail("max@wistia.com")</span>
+<pre><code class='language-javascript'>wistiaPlaylist.setEmail("max@wistia.com")</code></pre>
 
 Or if I wanted to pause the current video:
 
-<span class="code">wistiaPlaylist.currentVideo().pause()</span>
+<pre><code class='language-javascript'>wistiaPlaylist.currentVideo().pause()</code></pre>
 
 ## Embedding Options
 
-In our example embed **''Wistia.playlist("abcde12345", { ... options ... });''** there are two arguments: the playlist's hashed ID, and a set of embedding options. Here is a list of available options:
+In our example embed <span class="code">Wistia.playlist("abcde12345", { ... options ... });</span> there are two arguments: the playlist's <span class="code">hashed ID</span>, and a set of <span class="code">embedding options</span>. Here is a list of available options:
 
 Option Name     | Type    | Description                                                                                                                                                                  | 
 -----------     | ----    | -----------                                                                                                                                                                  | 
