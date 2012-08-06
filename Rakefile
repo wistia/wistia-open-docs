@@ -37,8 +37,8 @@ task :build do |task, args|
 end
 
 desc "launch search"
-task :es do
-  system "elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.3/config/elasticsearch.yml"
+task :test_search do
+  system "foreman start -f Procfile_search"
 end
 
 
@@ -50,4 +50,32 @@ task :deploy do
   puts "pushing to heroku"
   system "git push heroku master"
   puts "done."
+end
+
+# add a title to a post like np title="Blah this is my title"
+desc "Create a new blog post"
+task :np do
+
+  title = ENV["title"] || "new-post"
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+
+  puts "creating a new post, entitled #{title}"
+
+  path = "_posts/#{ Date.today }-#{ slug }.md"
+
+  if File.exist?(path)
+  	puts "[WARN] File exists - skipping create"
+  else
+    File.open(path, "w") do |post|
+      post.puts "---"
+      post.puts "layout: post"
+      post.puts "title: \"#{ title.gsub(/-/, ' ')}\""
+      post.puts "description: "
+      post.puts "category: "
+      post.puts "---"
+    end
+  end
+
+  exit 1
+
 end

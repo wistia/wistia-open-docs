@@ -116,3 +116,6 @@
 * Spent a lot of time getting the breadcrumbs right - added a layout for non-post pages (utilities) and fought w Liquid to get it to show custom breadcrumbs even for those pages.  The key was to put everything on one line!!
 * I know this is probably early, but also put in keyboard shortcuts to get to search ('/') and to enter search query.
 * TODO: the footers for each post, and perhaps an overall footer?
+
+## aug 6 ##
+* got Max Kohl set up running the new doc locally. He handled it no problem, except for all the errors it threw at him.  Ended up having to remove the Indexer plugin - no way to get it running in production only at this point. Will need to find another way 'round that issue.

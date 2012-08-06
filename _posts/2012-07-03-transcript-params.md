@@ -19,7 +19,7 @@ title: Transcript Params
  canPrint       | boolean | Determines whether a print link is provided on the interactive transcript. Defaults to true.                                 
  container      | string  | The container ID where we will place the interactive transcript. Only useful for API embed.                                  
  height         | integer | The height of the interactive transcript. Defaults to 200px if below the video, or the height of the video if on the side.   
- onloadCollapse | boolean | Determines whether the transcript starts out collapsed. Defaults to false.                                                   
+ collapseOnload | boolean | Determines whether the transcript starts out collapsed. Defaults to false.                                                   
  position       | string  | The grid location where the transcript should live. Can be above/below/left/right.                                           
  version        | string  | Must be "v2".                                                                                                                
  width          | integer | The width of the interactive transcript. Defaults to the width of the embed if below the video, or 275px if on the side.     
