@@ -7,10 +7,11 @@ category: Media Management
 
 <div class="video_embed"><iframe src="http://fast.wistia.com/embed/iframe/59ad3f2dc4?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe></div>
 
-
 Just like Ben says in the video, we all make mistakes.  If you've embedded a video, and now you need to update it in a hurry, the **Replace Video** tool is a quick and easy way to get it done.  As a bonus, you won't lose stats already created for the original video.
 
 **NOTE:** you can replace any video in your account using this feature, but in order for the change to appear automatically on your website, you'll need to use iframe embeds.
+
+**DOUBLE NOTE:** this won't replace any copies of the video you've made in your account, only the original. 
 
 ## Step 1: Find the Video in Your Account
 
