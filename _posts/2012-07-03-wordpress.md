@@ -19,7 +19,7 @@ post_intro: <p>Wistia and Wordpress go together like...chocolate and marshmallow
 
 To center your video in Wordpress, you will first use an outer div with the style "text-align: center".  Then, add the inline-block styling to the video div (see the code below, the "style" attributes in both divs can be copied to your own page).
 
-<div class="code"><pre>
+<pre><code class='language-markup'>
 <div id="the_video" style="text-align: center;">
 
   <div id="wistia_5af2188e71" style="width:640px;height:360px;display: inline-block; *display: inline; margin: 0 auto; vertical-align: top;  zoom: 1;" data-video-width="640" data-video-height="360">
@@ -37,7 +37,8 @@ To center your video in Wordpress, you will first use an outer div with the styl
     });/*]]*/</script>
 
 </div>
-</pre></div>
+</code></pre>
+
 
 ## Adding the Wistia XML Sitemap Entry to a Wordpress 'Robots.txt' File
 
