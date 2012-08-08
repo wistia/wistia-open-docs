@@ -12,11 +12,24 @@ To make this work, we will be adding a 'binding event' to your Wistia embeds.  N
 
 After you paste your Wistia embed code, you'll be adding a block of javascript below.  See the example below for a template:
 
-<div class="github">	
-  <script src="https://gist.github.com/3111761.js?file=Google Analytics Script.js"></script>
-</div>
+<pre><code class="language-javascript">
+<script type="text/javascript">
+function gaFunc() {
+  _gaq.push(['_trackEvent', 'Video','Play', 'My Sample Video Title']);
+  wistiaEmbed.unbind("play", gaFunc);
+}
+
+wistiaEmbed.bind("play", gaFunc);
+
+wistiaEmbed.bind("end", function () {
+  _gaq.push(['_trackEvent', 'Video','Complete', 'My Sample Video Title']);
+});
+</script>
+</code></pre>
 
 In the code snippet example above, you should update the 'My Sample Video Title' with the title of your video.
+
+**Note:** If you are using Google Analytics for more than one video on a page, you should update the <span class='code'>wistiaEmbed</span> variable in both the code above AND in your embed code.
 
 ## Step 2: Track viewing in Google Analytics Dashboard
 
