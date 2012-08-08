@@ -175,6 +175,8 @@ header #header_container #header_nav li a:hover {
 /* line 104, ../_sass/screen.sass */
 #post_container {
   display: inline-block;
+  position: relative;
+  left: 250px;
 }
 
 /* line 111, ../_sass/screen.sass */
@@ -524,7 +526,7 @@ table tr:hover td {
   display: inline-block;
   vertical-align: top;
   width: 220px;
-  margin: 0 0 0 30px;
+  margin: 0 30px 0 0;
   height: 100%;
   position: fixed;
 }
