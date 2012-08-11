@@ -24,6 +24,18 @@ $for_developers: #f0818b
 $post_width: 660px
 $total_width: $post_width + ($padding * 2)
 
+//////////// mixins ///////////////
+
+@mixin letterpress($opacity, $base-color: white)
+  text-shadow: 0 0 0 transparent, 0 1px 0 rgba( $base-color, $opacity )
+
+@mixin box-emboss($opacity, $opacity2)
+  box-shadow: rgba(white, $opacity) 0 1px 0, inset rgba( black, $opacity2) 0 1px 0
+
+@mixin link-hover($link_color: $wistia_blue)
+  &:hover
+    color: $link_color - 30
+  
 //////// main styles /////////
 
 body
@@ -38,6 +50,7 @@ h1, h2, h3
   color: $title_color
 h1
   font-size: 32px
+  +letterpress(.2, $text_color)
 p
   font-size: 16px
   line-height: 115%
@@ -130,10 +143,8 @@ header
 .post_list
   margin-bottom: 10px
   a
-    text-decoration: none
     font-size: 16px
-    &:hover
-      color: $wistia_blue - 30
+    +link-hover
 
 //////// post header /////////////
 
@@ -164,6 +175,7 @@ header
         top: 15px
         width: 340px
         color: white
+        +letterpress(.3, $text_color)
         .breadcrumb_post_title
           color: white
       li#nav_search_box
@@ -212,6 +224,8 @@ header
     list-style: decimal
     li
       margin-top: $padding/2
+  a
+    +link-hover
 
 ////////// post intro paragraph styles ////////
 
@@ -258,6 +272,7 @@ header
 .video_embed
   margin: $padding 0
   iframe
+    +box-emboss(0.8, 0.05)
     border: 2px solid $border_color
 
 ////// code //////////
@@ -379,6 +394,7 @@ table
         height: 100%
         font-size: 16px
         color: white
+        +letterpress(.3, $text_color)
   li
     padding: 5px
     margin-bottom: $padding/2
@@ -416,12 +432,13 @@ table
   text-align: center
   input
     width: 80%
-    height: 15px
+    height: 14px
     font-size: 13px
     padding: 4px
     padding-bottom: 1px
   button
-    font-size: 14px
+    font-size: 13px
+    padding: 4px
 
 #doc_nav_container
   .search_bar

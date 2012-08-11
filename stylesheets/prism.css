@@ -8,7 +8,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: #333;
 	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -35,7 +35,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #F7F6F4;
+	background: #f7f6f4;
 }
 
 /* Inline code */
@@ -63,13 +63,13 @@ pre[class*="language-"] {
 .token.tag,
 .token.boolean,
 .token.number {
-	color: #905;
+	color: #F0AF81;
 }
 
 .token.selector,
 .token.attr-name,
 .token.string {
-	color: #690;
+	color: #8DC63F;
 }
 
 .token.operator,
@@ -84,7 +84,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: #07a;
+	color: #4991C4;
 }
 
 
@@ -99,4 +99,54 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
+}
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08);
+	background: -moz-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	background: -webkit-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	background: -o-linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	background: linear-gradient(left, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	
+	pointer-events: none;
+	
+	line-height: inherit;
+	white-space: pre;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start);
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		min-width: 1em;
+		padding: 0 .5em;
+		background-color: hsla(24, 20%, 50%,.4);
+		color: hsl(24, 20%, 95%);
+		font: bold 65%/1.5 sans-serif;
+		text-align: center;
+		vertical-align: .3em;
+		border-radius: 999px;
+		text-shadow: none;
+		box-shadow: 0 1px white;
+	}
+	
+	.line-highlight[data-end]:after {
+		content: attr(data-end);
+		top: auto;
+		bottom: .4em;
+	}
+.token a {
+	color: inherit;
 }
