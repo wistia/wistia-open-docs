@@ -38,18 +38,20 @@ $(document).ready(function() {
   function sizeImages() {
     $(".post_image").each(function() {
       var $img_div = $(this),
-    $width = $('#post').width();
+      $width = $('#post').width(),
+      $img = $img_div.find('img'),
+      $img_src = $img.attr('src'),
+      $resize_str = "?image_resize=";
 
-    if ($img_div.hasClass('float_right')) {
-      $img_div.find('img').width( $width/2 - 10 );
-    }
-    else if ($img_div.hasClass('center')) {
-      $img_div.find('img').width( $width );
-    }
-
-    if ($img_div.width() > $width) {
-      $img_div.addClass('center').find('img').width( $width - 10);
-    }
+      if ($img_div.hasClass('float_right')) {
+        $img.attr('src', $img_src + $resize_str + ($width / 2));
+      }
+      else if ($img_div.hasClass('center')) {
+        $img.attr('src', $img_src + $resize_str + $width);
+      }
+      if ($img_div.width() > $width) {
+        $img_div.addClass('center').find('img').width( $width - 10).attr('src', $img_src + $resize_str + $width);
+      }
     });
   }
 

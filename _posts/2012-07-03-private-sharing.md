@@ -2,53 +2,33 @@
 title: Sharing Video Privately
 layout: post
 category: Private Sharing
-post_intro: <div class="post_image float_right"><img src="/images/privateshare_guide.png" alt="privateshare_guide" /></div><p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.  With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
+post_intro: <div class="post_image intro_image"><img src="http://embed.wistia.com/deliveries/40ebc2c0ffbe573a22b04a255d3971fa8896b986.png" alt="privateshare_guide" /></div><p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.  With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p class="clear">Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
 ---
 
 
 <div class="video_embed">
-<iframe width="640" height="400" src="http://app.wistia.com/embed/medias/75edd60835?controlsVisibleOnLoad=false" frameborder="0"></iframe>
+  <div id="wistia_75edd60835" class="wistia_embed" style="width:640px;height:400px;" data-video-width="640" data-video-height="400"><object id="wistia_75edd60835_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:400px;position:relative;width:640px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=4991C4&mediaDuration=161.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda4b6a18767456f089336f8c4e3f14c130fc03e3.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F614c6eca159fcd802c7a79b94d15f35dd232160f.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=4991C4&mediaDuration=161.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda4b6a18767456f089336f8c4e3f14c130fc03e3.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F614c6eca159fcd802c7a79b94d15f35dd232160f.bin" name="wistia_75edd60835_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
+  <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+  <script>
+  wistiaEmbed = Wistia.embed("75edd60835", {
+    version: "v1",
+    videoWidth: 640,
+    videoFoam: true,
+    videoHeight: 400,
+    controlsVisibleOnLoad: false,
+    playerColor: "4991C4"
+  });
+  </script>
+  <script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/75edd60835/metadata.js"></script>
 </div>
 
 
 
 ----
 
-## Step 1. Create Your Video
+## Chose the Project to Share
 
-<div class="post_image float_right"><img src="/images/chris.png" alt="crlvideo" width="300px" /></div>
-
-To get started, we're going to need some great video content.  Already have your video? Excellent! Skip to Step 2 below.
-
-
-
-If you're looking to create some new video, there are lots of ways to do it.  You could:
-
-*  Hire a camera crew
-*  Record a screencast
-*  Shoot footage yourself
-*  Record a webinar
-
-
-If you are looking to hire a videographer, here are tons of great video producers out there - you just need to know where to look.  From producing, to shooting, to editing, to formatting - getting the content right is just as important as how you present it.
-
-
-
-
-Having trouble finding a great producer? Check out [50 Grove](http://50grove.com), a site designed to hook up great producing talent with firms that need great video.
-
-
-
-
-
-
-
-----
-
-
-## Step 2. Upload Your Video to Your Wistia Account
-
-<div class="post_image float_right"><img src="/images/upload-select1.png" alt="upload-select" width="200px" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/bf546e5dabb9a84a6d53eb09849cb655e5aa0198.png" alt="upload-select" /></div>
 
 Getting your video onto the web starts by uploading it to your Wistia account.  Don't have one? [Start your free 15 day trial today](http://wistia.com/trials/new?doc).
 
@@ -62,9 +42,9 @@ Getting your video onto the web starts by uploading it to your Wistia account.  
 ----
 
 
-## Step 3. Invite Your Viewers In
+## Invite Your Viewers In
 
-<div class="post_image float_right"><img src="/images/share_proj.png" width="150px" alt="share_proj" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/42611fc9a1641be9e8374afd496a20e01abffcc6.png" alt="share_proj" /></div>
 
 
 
@@ -75,74 +55,57 @@ Now that your content is uploaded, it is time to bring your private viewers in. 
 Inside the share screen, enter the email addresses of contacts you would like to share this project privately with.  You can then set whether they need to create a password.  At the bottom, you can customize the text from the message they will receive to first access the content you've allowed them to view.
 
 
-<div class="post_image float_right"><img src="/images/share_box.png" alt="share_box" width="300px" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d.png" alt="share_box" /></div>
 
 
 
 **FAQ:** *Why don't I set a password for my viewers?*
 
-We've found the best way for unwanted viewers to view secure content is through the original email.  Sending a group email that contains the login and password needed to access secure content can be grabbed easily: from a stolen laptop, from a hacked email account, even read right off the screen at a coffee shop.  With Wistia, your invited viewers receive an email with a one-time use activation code, and then create their own password.
-
-
-
+The best way for unwanted viewers to view secure content is through the original email.  Sending a group email that contains the login and password needed to access secure content can be grabbed easily: from a stolen laptop, from a hacked email account, even read right off the screen at a coffee shop.  With Wistia, your invited viewers receive an email with a one-time use activation code, and then create their own password.
 
 
 ----
 
 
-## Step 4. Managing Permissions
+## Managing Permissions
 
-<div class="post_image float_right"><img src="/images/manage_link.png" alt="manage_link" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/79c437faf6d7df72b320256c45e1a5e8082eed16.png" alt="manage_link" /></div>
 
 
 Wistia accounts include permissions and access controls for managers, to set who can view media and what they can view.  To manage permissions for contacts on a Project, click the "Manage" link under the 'Sharing' Sidebar Element.
 
 
 
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/777cd4548ed48ebee4e7bec3327a61c74559f34e.png" alt="share_screen" /></div>
 The share screen shows which users currently have access to the Project, and what permissions they have.  From here, managers can add permissions like:
-
-
-<div class="post_image float_right"><img src="/images/share_screen.png" alt="share_screen" /></div>
-
 
 *  Upload, which allows the viewer to upload new content
 *  Download, which allows the viewer to download content from the Project
 *  Share, which means the viewer can share the Project with new viewers
+
 Removing viewer access can also be done by clicking the small trash can icon at the end of each viewer row.
 
 ----
 
-## Step 5. Review Your Viewers Activity
+## Review Your Viewers Activity
 
 Now that you have invited some viewers in to view your private content, it's time to see if they actually watched!  This is especially helpful for reviews and approvals and training or educational content.
 
-<div class="post_image float_right"><img src="/images/private_user_sessions_dropdown.png" alt="private_user_sessions_dropdown" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/66053f64b40ce2f176637e495273eb93d4f49dd2.png" alt="private_user_sessions_dropdown" /></div>
 
 To view the individual user statistics for people you invited into Wistia, select the "User sessions" option under the "Stats" tab at the top of any page in your Wistia account.
 
 You will see a list of all user sessions for the users that have logged into your Wistia account.  To see exactly what each user did in each session, click on the "Stats" magnifying glass next to the session. 
 
 
-<div class="post_image float_right"><img src="/images/sessions-list1.png" alt="sessions-list1" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/ac77964367e67b73d9cbc706538c0fe884cb9a60.png" alt="sessions-list1" /></div>
+
 A complete audit trail will be shown with all of the actions the user took while they were logged in to your Wistia account.  This includes amount of time spent on various pages as well as video heatmaps for the videos that they viewed.
 
-<div class="post_image center"><img src="/images/user-stats1.png" alt="user-stats1" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/30f18531a91fdc69b5ba6911b48f6ec503ba1e3d.png" alt="user-stats1" /></div>
 
 
 ---
-
-## Step 6. Advanced Features
-
-Wistia has even more features to help you get the most out of your private video sharing experience:
-
-
-
-* [Share the Video by Link](private_sharing_features#privately_share_video_by_link.html) (not as secure, but still privately contained in your Wistia account)
-* [Email Alerts](alerts#how_do_i_adjust_my_email_alert_settings.html) so you know who is accessing your content
-* [Updating/Removing content access](contacts#how_to_remove_content_access_for_a_contact.html) for a contact in your Wistia account
-
----
-
 
 ## How Wistia Appears For Your Viewers
 
@@ -152,7 +115,7 @@ When you invite new viewers into your account to privately view video, they will
 
 ### The Share Dialog Box
 
-<div class="post_image float_right"><img src="/images/ben-share2.png" alt="ben-share2" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d.png" alt="ben-share2" /></div>
 
 We'll start with a quick review of the Share dialog box.
 
@@ -162,28 +125,16 @@ You can also choose whether the user needs a password to access the content. If 
 
 You can also customize the wording of the email message that will be sent to the people you are inviting. 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### The Invitation Email
 
-<div class="post_image float_right"><img src="/images/shared-email1.png" alt="shared-email1" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/ef169c85d0894e2cb800fe376e21b4fea0aee88e.png" alt="shared-email1" /></div>
 
 After clicking the "Share" button, your viewer will receive an email at the address you have designated.  This email will include an invitation to view the project you are sharing, along with a link for their access.  This activation link is specifically designed for their email, and is only good for one use (the email cannot be forwarded).
 
 
 ### The Credential Creation Screen
 
-<div class="post_image float_right"><img src="/images/credentials2.png" alt="credentials2" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/6dc3b3ce1c35d22643f5105de3e1ae1140aa3355.png" alt="credentials2" /></div>
 
 After clicking the activation link, viewers who have never interacted with the Wistia system will land on a page where they can create Wistia credentials.  If you have required them to use a password to access the content, they will need to create a password for their access as well.
 
@@ -199,10 +150,5 @@ Use the slider to test out the difference between views!
 
 To hide the sharing list from viewers, simply hover over the "Sharing" sidebar element on the right-hand side of the Project, and click the trash can icon that appears next to the word 'Sharing'.  To bring the sidebar element back at any time, choose "Add Sidebar Element" under the"Project Actions" drop-down and then add a "Sharing List" sidebar element.
 
-
-
-
 <iframe style="border: 0px  none;" name="proj_diff2" src="http://files.wistia.com/doc/views_diff2.html" frameborder="0" marginwidth="0px" marginheight="0px" scrolling="no" width="640px" height="360px"></iframe>
-
-----
 

@@ -18,11 +18,11 @@ $text_color: #4D4942 + 30
 $title_color: #333
 $padding: 30px
 $border_color: $background_gray - 30
-//$text_color: #2F353E
 $for_developers: #f0818b
 
 $post_width: 660px
 $total_width: $post_width + ($padding * 2)
+$fixed_column_width: 260px
 
 //////////// mixins ///////////////
 
@@ -35,6 +35,14 @@ $total_width: $post_width + ($padding * 2)
 @mixin link-hover($link_color: $wistia_blue)
   &:hover
     color: $link_color - 30
+
+@mixin hide-text
+  font: 0px/0 a
+  text-shadow: none
+  color: transparent
+
+@mixin outline-border
+  border: 2px solid $border_color
   
 //////// main styles /////////
 
@@ -57,6 +65,8 @@ p
 strong
   font-weight: bold
   color: $title_color
+em
+  font-style: italic
 
 
 ////////// header ///////////
@@ -111,13 +121,13 @@ header
   margin: 100px auto 0
 
 #container
-  width: 970px
+  width: 980px
   margin: 40px auto
 
 #post_container
   display: inline-block
   position: relative
-  left: 250px
+  left: $fixed_column_width + 30
 
 /////// doc home only ///////
 
@@ -260,12 +270,18 @@ header
   margin: $padding auto
   clear: both
   position: relative
+  overflow: hidden
+  +outline-border
+  img
+    vertical-align: top
 .center
   text-align: center
 .float_right, .intro_image
   float: right
   margin: $padding/2
   margin-right: 0
+.intro_image
+  border: none
 
 /////// video /////////
 
@@ -273,7 +289,7 @@ header
   margin: $padding 0
   iframe
     +box-emboss(0.8, 0.05)
-    border: 2px solid $border_color
+    +outline-border
 
 ////// code //////////
 
@@ -372,32 +388,38 @@ table
 #right_col
   display: inline-block
   vertical-align: top
-  width: $post_width/3
-  margin: 0 $padding 0 0
+  width: $fixed_column_width
+  margin: 0 30px 0 0 // yes, this is useless, but good for measuring space between the nav col and the post content
   height: 100%
   position: fixed
   ul
     background-color: white
-    padding: 10px
-    &li:first-of-type
+    padding: $padding
+  li
+    padding: 15px 0
+    border-bottom: 1px dashed #DDD
+    &:first-of-type
       background-color: $complementary
       text-align: center
-      margin-top: -10px
-      margin-left: -10px
-      width: $post_width/3 - 10
+      margin-top: -$padding
+      margin-left: -$padding
+      width: $fixed_column_width - 10
       padding: 5px
       height: 100%
       min-height: 35px
       margin-bottom: $padding/2
+      border-bottom: none
+      +letterpress(.3, $text_color)
       a
         position: relative
         height: 100%
         font-size: 16px
         color: white
         +letterpress(.3, $text_color)
-  li
-    padding: 5px
-    margin-bottom: $padding/2
+    &:last-of-type
+      border-bottom: none
+      margin-bottom: 0
+      padding-bottom: 0
     a
       color: $text_color
       font-size: 14px

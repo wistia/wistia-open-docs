@@ -16,13 +16,13 @@ Yes! If you decide to convert from a Trial to a fully functional Wistia account,
 ## How do I make my company logo appear in my Wistia account?
 To upload your logo, you must be logged in as the account owner. Choose the "Account Settings" option under the "Account" tab at the top of any page in your Wistia account.  Then, choose the "Upload your logo" button.  This will cause a dialog box to appear that will guide you through the process of uploading and displaying your company logo in your Wistia account.
 
-<div class="post_image center"><img src="/images/upload-logo.png" width="400px" alt="upload-logo" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/c77b6d361116d8baa8c8b2175c526dd682223956.png" alt="upload_logo" /></div>
 
 
 ---
 
 ## Can I filter my own views out of my analytics?
-<div class="post_image float_right"><img src="/images/embed_settings_screen.png" width="300px" alt="embed_settings_screen" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/c3b7767bf8523160c7ded97ff69ea4bf260b5ce1.png" alt="embed_settings_screen" /></div>
 <p style="margin-top:60px;">
 Yes!  You can filter out your views based on IP, and those of the other testers you might have looking at your Wistia videos before launch.  In the Account Dashboard, click the "Embed Settings" dialogue page - this contains a box where you can enter comma-separated IP addresses.  The IP Filtering tool is only available on the Account Dashboard, so you will need owner-level permissions to access it.
 </p>
@@ -34,7 +34,7 @@ Yes!  You can filter out your views based on IP, and those of the other testers 
 ## How do I change the URL (web address) of my Wistia account?
 To change your Wistia account URL, you must be logged in as the account owner.  Choose the "Account Settings" option under the "Account" tab at the top of any page in your Wistia account.  Then, choose the "Settings" button.  A dialog box like the one shown below will appear.
 
-<div class="post_image center"><img src="/images/account-settings.png" width="500px" alt="account-settings" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/f7cccd88af9bfe8ac2ab39061bfebbae29fcd93e.png" alt="account-settings" /></div>
 
 In the section labeled "Address" you will see a text box showing the current URL of your Wistia account (in the case of the above picture, http://ben.wistia.com).  Simply type the name you wish to use in the text box (only letters, numbers, and hyphens) and press the "Save settings" button at the bottom. 
 
@@ -62,7 +62,7 @@ Once you save, everything should be switched over for you, and you are now rocki
 ---
 
 ## How do I see my account limits and usage?
-<div class="post_image float_right"><img src="/images/subscription.png" width="180px" alt="subscription" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/e9d0506033f5d35682bfe1f741f3dc2099467de9.png" alt="subscription" /></div>
 
 To see account limits, you must be logged in as the account owner.  Choose the "Account Settings" option under the "Account" tab at the top of any page in your Wistia account. Along the right hand side of the Account page, you will see usage and limit information within the panel labeled "Current Subscription". 
 
@@ -75,10 +75,12 @@ To see account limits, you must be logged in as the account owner.  Choose the "
 
 To see billing statements, you must be logged in as the account owner.  Choose the "Account Settings" option under the "Account" tab at the top of any page in your Wistia account. From here, click the  "Billing statements" button.  This will bring up a dialog box showing a list of all the receipts for your transactions.
 
-<div class="post_image center"><img src="/images/billing.png" width="450px" alt="billing" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/ab90b75617a960e658aa84c3eb8e17a8e8f0d70f.png" alt="billing" /></div>
 
 
 ---
 
 ## How do I add/remove managers from my Wistia account?
 Choose the "Account Settings" item under the "Account" tab from any page within your Wistia account.  Click the "Add / remove managers" button on the Accounts page. A dialog will appear.  To add managers, enter the new manager's email address into the text box and click the "Add" button.  To remove existing managers, click the "Remove" button in the far right hand column. 
+
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/1ac3c146ef56721d5e8718229243ba6c66158cf3.png" alt="add_managers" /></div>
