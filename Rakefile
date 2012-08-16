@@ -1,3 +1,4 @@
+require 'date'
 
 # http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
 desc "Parse compass"

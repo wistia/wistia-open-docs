@@ -11,7 +11,11 @@
       </li>
       {% else %}
       <li id='breadcrumbs'>
+        {% if page.category %}
         <a href="http://localhost:4000/categories/{{ page.category | downcase | replace: ' ', '_' }}.html">{{ page.category }}</a>
+        {% else %}
+        <a href='http://localhost:4000'>Doc Main</a>
+        {% endif %}
         <span class='breadcrumb_post_title'>
           &gt;
           {{ page.title }}

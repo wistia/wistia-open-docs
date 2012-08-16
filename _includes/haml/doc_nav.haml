@@ -9,7 +9,11 @@
           {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
       {% else %}
       %li#breadcrumbs
+        {% if page.category %}
         %a{ href: "http://localhost:4000/categories/{{ page.category | downcase | replace: ' ', '_' }}.html" } {{ page.category }}
+        {% else %}
+        %a{ href: 'http://localhost:4000' } Doc Main
+        {% endif %}
         %span.breadcrumb_post_title
           &gt;
           {{ page.title }}

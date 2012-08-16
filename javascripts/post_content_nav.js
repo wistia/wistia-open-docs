@@ -16,8 +16,11 @@ $(document).ready(function() {
     }
     // if no nav box, then hide it entirely and re-center main post //
     else {
+      $post_container = $('#post_container');
       nav_box_ul.hide();
-      $('#container').css("width", 720);
+      $post_width = $post_container.width();
+      $('#container').css("width", $post_width);
+      $('#post_container').css("left", 0);
     }
 
     h2.each( function() {

@@ -1,7 +1,6 @@
 ---
 title: Use Wistia With a MailChimp Email Campaign
 layout: post
-category: Email Marketing
 ---
 
 <div class="post_image intro_image float_right"><img src="http://embed.wistia.com/deliveries/79ba6d71f2de6aa71d02bcecaf2fe823ea09ec02.png" alt="mchimp_logo" width="200px" /></div>
