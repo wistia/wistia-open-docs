@@ -3,14 +3,26 @@ title: Email Marketing and Wistia
 layout: post
 category: Email Marketing
 description: Video and email are a match made in heaven. Learn how we integrate with some of the top email marketing platforms to make your campaigns even more poweful in no time.
-post_intro: <div class="post_image float_right"><img src="/images/email_marketing_guide.png" alt="email_marketing_guide" width="200px" /></div><p>Email marketing campaigns are great for engaging your prospects with timely messages.  When done right, they can be an excellent driver of business value.  Adding video to the mix is an effective way to increase click-through rates and maximize engagement with your message.  Wistia makes it easy to integrate video with your email-marketing campaigns, as well as measure the results down to the individual viewer, second-by-second.</p><p>After this tutorial you will be able to integrate video into your email marketing campaigns, and understand which recipients are engaged with your message.</p><div class="post_image center"><img src="/images/email_heatmap.png" alt="email_heatmap" width="600px" /></div>
+post_intro: <div class="post_image intro_image float_right"><img src="http://embed.wistia.com/deliveries/e13eae6e347f3939c10712245b2df2ff1156d68e.png" width="200px" alt="email_marketing_guide"/></div><p>Email marketing campaigns are great for engaging your prospects with timely messages.  When done right, they can be an excellent driver of business value.</p><p>Adding video to the mix is an effective way to increase click-through rates and maximize engagement with your message.  Wistia makes it easy to integrate video with your email-marketing campaigns, as well as measure the results down to the individual viewer, second-by-second.</p><p>After this tutorial you will be able to integrate video into your email marketing campaigns, and understand which recipients are engaged with your message.</p><div class="post_image center"><img src="http://embed.wistia.com/deliveries/97291f1a3b3898ec951a80296504441a9b3d0ce0.png" alt="email_heatmap" /></div>
 ---
 
 ## Email Marketing Feature Screencast
 
 <div class="video_embed">
-  <iframe width="640" height="400" src="http://app.wistia.com/embed/medias/027bb4b325?controlsVisibleOnLoad=false" frameborder="0" style="border: 2px gray solid;" ></iframe></div>
-
+<div id="wistia_027bb4b325" class="wistia_embed" style="width:640px;height:400px;" data-video-width="640" data-video-height="400"><object id="wistia_027bb4b325_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:400px;position:relative;width:640px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F347d80ab1aa8160173a3b28570ba30c96025132a.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=213.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F7e68a7d752b167366b189c942e19fc6cdf0539c0.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fbc8f47d59ef5b6006035bf4522b841ce99057f28.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F347d80ab1aa8160173a3b28570ba30c96025132a.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=213.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F7e68a7d752b167366b189c942e19fc6cdf0539c0.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fbc8f47d59ef5b6006035bf4522b841ce99057f28.bin" name="wistia_027bb4b325_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("027bb4b325", {
+  version: "v1",
+  videoWidth: 640,
+  videoFoam: true,
+  videoHeight: 400,
+  controlsVisibleOnLoad: false,
+  playerColor: "4991C4"
+});
+</script>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/027bb4b325/metadata.js"></script>
+</div>
 **Note:** The 'path' to the email marketing dialogue has been updated (it has been split out from the 'embed' dialogue).  See the image below for reference (look for the "Email Marketing" option under the Media Actions menu. Updated screencast to come :)
 
 ----
@@ -21,10 +33,11 @@ Let's get cranking on creating some awesome email campaigns with video!
 
 ### Select Your Video
 
-<div class="post_image float_right"><img src="/images/email_integ1.png" alt="email_integ1" /></div>
 First, pick the video from your account you want to embed in an email.  You'll need to embed it on your landing page (if you're planning to use one) and also create an email embed.
 
 Start by embedding the video on the landing page you'll be using (if you're having it point to your Wistia Media Page, you're all set).  Follow the embedding steps if you have any trouble: [Embedding Your Video](/public_sharing.html).
+
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/d129371996ba14ee95adaf0fc17ce5b3bbf2f31d.png" alt="email_integ1" /></div>
 
 Next, select "Email Marketing" from under the Media Actions drop-down menu.
 
@@ -32,13 +45,11 @@ Next, select "Email Marketing" from under the Media Actions drop-down menu.
 
 ### Select Your Email Marketing Provider
 
-<div class="post_image float_right"><img src="/images/email_integ2.png" alt="email_integ2" /></div>
-
 Next, select your provider from the drop-down list.  We've got a whole list of the best in the biz, like [Constant Contact](http://constantcontact.com), [MailChimp](http://mailchimp.com), [Campaign Monitor](http://www.campaignmonitor.com), and [MadMimi](http://madmimi.com).
 
 After you choose your email marketing provider, you can customize the settings for your campaign.
 
-<div class="post_image center"><img src="/images/email_integ_screen.png" alt="email_integ_screen" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/43a348de097029eb4e1b4040f0407e4095939a11.png" alt="email_integ_screen" /></div>
 
 Thumbnail width refers to the size of the thumbnail image in your email.  Do you want it to dominate the email? Or should it be playing 3rd fiddle?  450px is our standard width, but you can change it as you see fit.
 
@@ -50,7 +61,7 @@ Link to means where people will end up after clicking the thumbnail image.  By d
 
 Once you've got your settings dialed in, copy the "video merge tag", and paste it into the HTML editor for your email provider.  Voila! The thumbnail image will appear, attached to a link to your video.  And in the background, we'll be collecting stats on which email addresses viewed your videos (available in the Public Stats area of your account).
 
-<div class="post_image center"><img src="/images/email_partial_heatmap.png" alt="email_partial_heatmap" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/44087ef2759f48e1b04d72cac7ba90e058f0f388.png" alt="email_partial_heatmap" /></div>
 
 ---
 
@@ -216,7 +227,7 @@ When someone clicks the dynamic link in your email campaign, they will be taken 
 
 When you view the statistics for your video you will see analytics for each person who clicked through from your email campaign as shown in the following example:
 
-<div class="post_image center"><img src="/images/email-heatmap.png" alt="email-heatmap" width="600px" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/96221f9edb1dab5794bdca3c634426dfb1d48189.png" alt="email-heatmap" /></div>
 
 This data can also be exported to a spreadsheet as well using Wistia's [Stats Export feature](/stats-api.html) to help you more easily sort through large data sets.
 

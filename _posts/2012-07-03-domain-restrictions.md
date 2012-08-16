@@ -11,7 +11,7 @@ Video embed domain restrictions allows you to prevent a malicious viewer from st
 
 
 
-<div class="post_image center"><img src="/images/domain_restrictions_popup.png" alt="domain_restrictions_popup" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/867299a5760f489450dfffc5c08b5ccacfa75463.png" alt="domain_restrictions_popup" /></div>
 
 To get started with video embed domain restrictions:
 
@@ -19,4 +19,3 @@ To get started with video embed domain restrictions:
 2. A dialog box will open where you can configure your domain restrictions (see image below).  Click the "Enabled" radio button and type the domains that you wish to use for your embeds into the box (comma separated).  Press the "Save Embed Settings" button when finished.
 3. Put your embed on a webpage hosted on a domain you entered in Step #2 and you are good to go!
 
----
