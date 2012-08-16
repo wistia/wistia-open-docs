@@ -2,6 +2,7 @@
 title: The Embed Screen & You
 layout: post
 category: Embedding
+description: Our embed builder makes it super easy to customize the look and functionality of your embedded videos. 
 post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player window or in the "Media Actions" drop-down menu, the Embed Screen is where you can choose your embed type, customize the player experience, and add social sharing functionality.</p><p>Let's take a look at what options are available through the embed screen, and how you can use them for your publicly embedded videos.</p>
 ---
 

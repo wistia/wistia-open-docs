@@ -2,6 +2,7 @@
 title: Exporting from Video Editors
 layout: post
 category: Before You Upload
+description: Get the low down on our recommended file settings when finishing up your videos.
 post_intro: <p>This article gives you the steps to export video from various video editors for optimal performance on Wistia. However, each video is different and each person will have different priorities for their videos. So feel free to explore and mess around with the custom settings in your video editor to discover what works best for you and your videos.</p>
 ---
 

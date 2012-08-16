@@ -1,6 +1,7 @@
 ---
 title: Randor Promoting
 category: Getting Started
+description: Wistia makes it super easy to promote your video to the world. From email marketing to social sharing, we've got it all covered.
 ---
 
 # Promoting Your Wistia Video

@@ -2,6 +2,7 @@
 title: Publicly Accessible Stats
 layout: post
 category: Analytics
+documentation: Want to share your videos' stats with the world? It's super easy with these few steps!
 post_intro: <p>Sometimes you want to let your users see the statistics for a given video on your site.  At Wistia, we're more than happy to provide a publicly accessible page with anonymized statistics.  However, this functionality is not enabled by default, so before continuing, please <a href="mailto:support@wistia.com">contact us</a> to request it to be enabled for your account.</p><p>After you have received confirmation that the feature has been turned on, the next step is to craft a link which your site's visitors can use to access your video's statistics.</p>
 ---
 

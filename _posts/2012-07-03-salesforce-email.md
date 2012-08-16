@@ -1,6 +1,7 @@
 ---
 title: Salesforce.com
 layout: post
+description: Wistia's built in alert system can be easily integrated with your Salesforce account to keep track of your leads' video viewing activity. 
 category: Integrations
 ---
 

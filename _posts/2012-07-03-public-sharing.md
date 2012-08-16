@@ -2,6 +2,7 @@
 title: Adding Video to Your Website
 layout: post
 category: Embedding
+description: Want to add video to your website but don't know where to start? Here's a quick guide to get you off the ground!
 post_intro: <div class="post_image intro_image"><img src="/images/puttingvideo_guide.png" alt="puttingvideo_guide" /></div><p>Putting video on your website is the best way to get your message across.</p><p>Video is an engaging medium that can communicate complex topics clearly and concisely, without a ton of effort from the viewer.  At Wistia, our goal is to make it easy to embed video on your website, and get actionable analytics from your viewers interactions.  This guide is designed to get you from a blank slate to having a great video streaming over the web, powered by Wistia.</p><p>Public sharing is right for you if you want to:</p><ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul>
 ---
 

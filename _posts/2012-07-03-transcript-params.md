@@ -2,6 +2,7 @@
 layout: post
 for_developers: true
 title: Transcript Params
+description: Want the parameters of the transcripts? Say no more, here they are!
 ---
 
 ## Transcript Example:

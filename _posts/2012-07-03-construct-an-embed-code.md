@@ -2,6 +2,7 @@
 title: Constructing an embed code
 layout: post
 category: For Developers
+descrption: Learn how to construct an embed code starting with just the video ID!
 for_developers: true
 ---
 

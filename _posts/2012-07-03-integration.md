@@ -1,5 +1,7 @@
 ---
 title: Integration
+description: Using a 3rd party service to host your website? We've got documentation for embedding Wistia videos in all of the major services available. 
+
 ---
 
 # Embedding Wistia in 3rd Party Sites

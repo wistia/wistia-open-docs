@@ -2,6 +2,7 @@
 title: Wistia and Posterous Blogs
 layout: post
 category: Embedding
+description: Posterous is a cool blog platform, and it's super easy to add Wistia videos into any post to take advantage of their analytics too.
 post_intro: <div class="post_image float_right"><img src="/images/posterous_logo.jpeg" width="100px" alt="posterous_logo" /></div> <p><a href="http://posterous.com">Posterous</a> is a simple blogging platform similar to <a href="http://tumblr.com">Tumblr</a> and <a href="http://wordpress.com">Wordpress</a>. Using Wistia's standard HTML embed codes, we can embed videos as part of the content for any blog you might be managing through Posterous.</p>
 ---
 

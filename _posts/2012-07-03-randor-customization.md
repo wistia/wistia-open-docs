@@ -1,6 +1,7 @@
 ---
 title: Randor Customization
 category: Getting Started
+description: Ready to start customizing your Wistia videos? Learn more with the next video in the Randor series!
 ---
 
 # Customize Your Embed

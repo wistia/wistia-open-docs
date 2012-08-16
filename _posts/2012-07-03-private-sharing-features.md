@@ -1,6 +1,7 @@
 ---
 title: Private Sharing Features
 layout: post
+description: Wistia makes it easy to privately share your videos with people. Invite people via email, require a password, and track how they watch in a secure environment. 
 category: Private Sharing
 ---
 

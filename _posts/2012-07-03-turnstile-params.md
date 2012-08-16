@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Turnstile Params
+description: Want access to the parameters for the Turnstile feature? Ask and ye shall receive. 
 for_developers: true
 ---
 

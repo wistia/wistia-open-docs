@@ -1,6 +1,7 @@
 ---
 title: Randor Analytics
 category: Getting Started
+description: This video series covers all the basics of Wistia's analytics features!
 ---
 
 # Understanding Video Analytics

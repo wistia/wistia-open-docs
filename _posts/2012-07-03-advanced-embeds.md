@@ -2,6 +2,7 @@
 title: Advanced Wistia Embed Customization
 layout: post
 category: For Developers
+description: Learn how to create awesome add ons and effects to your embed codes with these tutorials!
 for_developers: true
 type: post
 post_intro: <p>We think <a href="//localhost:4000/embed_screen.html">Wistia Super Embeds</a> are pretty awesome.  They make it easy for web video to look it's best.  But sometimes our customers might be looking to do even more customization.  This doc page will help answer some of the questions that come up with Wistia embed options.</p>

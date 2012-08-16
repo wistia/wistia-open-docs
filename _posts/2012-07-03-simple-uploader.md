@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Simple Uploader
+description: Wistia provides a simple uploader that is non flash based and can handle files up to 4GB. Here's where to find it.
 ---
 
 If you are having trouble with uploads completing, please try our simple uploader without the progress bar. The simple uploader can be accessed by clicking the "simple uploader" link as shown in the image below.

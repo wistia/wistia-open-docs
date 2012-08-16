@@ -2,6 +2,7 @@
 title: Identity Tagging
 layout: post
 category: Analytics
+description: Want to tag a heat map with an email automatically? Or manually enter a name? Learn how here!
 post_intro: <p><b>Identity Tagging</b> is all about who is watching your videos, and watching their behavior over time.  Using emails and names, Wistia makes it easy to identify your most engaged viewers.</p>
 ---
 

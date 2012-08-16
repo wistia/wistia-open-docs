@@ -1,6 +1,7 @@
 ---
 title: Glossary
 category: Getting Started
+description: Confused by all of these fancy web video terms such as bandwidth, transcoding, and Ruedlinger? Have no fear, we've got your answered covered? 
 ---
 
 

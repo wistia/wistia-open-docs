@@ -1,6 +1,7 @@
 ---
 title: Randor Basics
 category: Getting Started
+description: OK, so you've got your new Wistia account set up. Now what? Watch this quick video to get a solid foundation set up!
 ---
 
 # Wistia Basics

@@ -1,5 +1,6 @@
 ---
 title: Embedded Login Form
+description: Want to embed a Wistia login form for your private viewers? Here's how!
 layout: post
 ---
 

@@ -2,6 +2,8 @@
 title: Building Custom Slimlist Themes
 layout: post
 category: For Developers
+description: Interested in building your own Wistia playlist themes? Now you can!
+
 ---
 
 The Slimlist is an ultra-lightweight, video playlist framework built entirely in JavaScript.

@@ -1,6 +1,7 @@
 ---
 title: What is an Audience Engagement Graph?
 layout: post
+description: Learn more about the engagement graph, a representation of how your audience as a whole has engaged with your video. 
 category: Analytics
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Domain Restrictions
 layout: post
+description: Lock your embeds down to your domain only with our domain restriction feature!
 category: Embedding
 ---
 

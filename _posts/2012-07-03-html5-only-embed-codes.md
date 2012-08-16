@@ -2,6 +2,8 @@
 title: Wistia & HTML5
 layout: post
 category: For Developers
+description: Need HTML5 only embeds? No sweat. Find out how with these simple steps.
+
 ---
 
 ## Creating HTML5-only Embed Codes

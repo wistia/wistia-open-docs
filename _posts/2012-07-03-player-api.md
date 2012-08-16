@@ -3,6 +3,7 @@ layout: post
 category: For Developers
 for_developers: true
 title: Wistia Video Player API
+description: The Wistia player has a built in Javascript API, providing you with a variety of ways to create awesome functions and interact with the player.
 post_intro: <p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p><p><strong>Note:</strong> for custom javascript you write to interface with a Wistia embed, add it to your source *under* the Wistia embed (ie. the footer).</p>
 ---
 

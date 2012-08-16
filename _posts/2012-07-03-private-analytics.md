@@ -2,6 +2,7 @@
 title: Private Analytics
 layout: post
 category: Analytics
+description: When you invite contacts in to your Wistia account to privately watch your videos, we also track their viewing behavior. View all of the activity/statistics for each time they log in.
 post_intro: <p>If you have invited viewers in to view videos in your account through the <a href="/private-sharing.html">Private Sharing</a> workflow, their analytics will show up in the Private Sessions area of your account.  To view these viewing sessions, follow the directions below</p>
 ---
 

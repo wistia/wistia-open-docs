@@ -3,6 +3,7 @@ title: Wistia Playlist API
 layout: post
 category: For Developers
 for_developers: true
+description: Wistia Playlists have an API which give you access to its functionality and behavior! 
 post_intro: <p>Wistia playlists have a javascript API which gives you control over its behavior, and gives you access to the <a href="/player-api.html">Player API</a> for the currently embedded video.</p>
 ---
 

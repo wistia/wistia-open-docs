@@ -1,5 +1,6 @@
 ---
 title: iframe Video Player API
+description: Full documentation for accessing the Player API through an iframe embed code!
 layout: post
 ---
 
