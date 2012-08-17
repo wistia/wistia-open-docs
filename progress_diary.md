@@ -119,3 +119,11 @@
 
 ## aug 6 ##
 * got Max Kohl set up running the new doc locally. He handled it no problem, except for all the errors it threw at him.  Ended up having to remove the Indexer plugin - no way to get it running in production only at this point. Will need to find another way 'round that issue.
+
+## aug 17 ##
+* Fell a bit behind here, quick updates: 
+  * updated SASS with mixins (some limited refactoring)
+  * updated styling to better reflect doc per Joe's feedback
+  * Max K went through and added descriptions to each post - gonna be awesome for search results.
+  * Will be using the Bakery to serve images for the doc.  Pulling new images page-by-page (fun!) uploading them to Bakery, and then placing delivery URLs in as img src.  
+  * Added javascript to re-size images dynamically based on class.
