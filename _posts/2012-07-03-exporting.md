@@ -105,7 +105,7 @@ To send a sequence or clip from Final Cut Pro to Compressor, select the sequence
 
 ## Final Cut X
 
-<div class="post_image float_right"><img src="/images/finalcutx_export.png" alt="finalcutx_export" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/9462a250be482463bfc2f6015279b6642e66f643.png" alt="finalcutx_export" /></div>
 
 Exporting from Final Cut X is similar to iMovie export.  To reach the Export Menu, select "Export" from under the "Share" drop-down menu.
 
@@ -117,7 +117,7 @@ From the file format drop-down, select the "H.264" codec.  Then click "next", an
 
 To export your iMovie video project, select the project you wish to export from the iMovie Project Library and choose Share &gt; Export Movie.
 
-<div class="post_image center"><img src="/images/imovie-size.jpg" alt="imovie-size" width="350px" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/d9fed1664fce966debccdefec84b9f564a94d6cb.png" alt="imovie-size" /></div>
 
 You will be prompted to select the size that you want your video to be exported at.  For situations where most users will be viewing the video within your Wistia page, a 'medium size' video will work perfectly.  If you are confident that most of your viewers will be using higher-speed internet connections, or if you would like to display the video at a larger resolution on your web page, a 'large size' video will work well.
 
@@ -127,7 +127,7 @@ Choose a filename and location, and click Export. Your video will be saved to yo
 
 ## QuickTime Pro
 
-<div class="post_image float_right"><img src="/images/quicktime_pro.png" alt="quicktime_pro" width="300px" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/42d2696efddb067ca8e238212444c6c19eff923a.png" alt="quicktime_pro" /></div>
 
 To easily export a video from QuickTime Pro, open the movie you wish to export and choose File &gt; Export. In the Export pop-up menu you will be given a choice of formats in which to save your video. For easiest and most consistent performance on Wistia, we recommend selecting Movie to QuickTime Movie, which exports your video as a MOV file. Choose Default Settings from the Use pop-up menu, choose a filename and location, and click Save. Your video will be saved to your computer as a MOV file which you can then easily [upload](/upload-video.html) to Wistia.
 
@@ -135,6 +135,6 @@ To easily export a video from QuickTime Pro, open the movie you wish to export a
 
 ## ScreenFlow
 
-<div class="post_image float_right"><img src="/images/screenflow_export.jpg" alt="" width="300px" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/e2ea358871e38d394195c6a207cdd648b1296914.png" alt="" /></div>
 
 To export a screencast from ScreenFlow, open the screen recording you wish to export and choose File &gt; Export. From the Preset pop-up menu, choose Web - High (Best Quality). For the dimensions, make it scale by 100% so that your viewers will be able to see the details of your screen as clearly as possible. Choose a filename and location, and click Export. Your video will be saved to your computer as a MOV file which you can then easily [upload](/upload-video.html) to Wistia.

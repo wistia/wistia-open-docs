@@ -7,11 +7,11 @@ post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player wi
 ---
 
 <p>
-<div class="post_image center"><img src="/images/super_embed_large.png" alt="super_embed_large" width="700px" /></div>
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/1856ed5c774555ea40859d6a1bfa1723c96722f5.png" alt="super_embed_large" /></div>
 </p>
 
-<div class="post_image" style="margin-bottom: -2px;">
-  <img src="http://wistia.com/doc/_media/1_embed_type.png" width="264px" id="#embed_type">
+<div class="post_image embed_screen_image" style="margin-bottom: -2px;">
+  <img src="http://embed.wistia.com/deliveries/4910e4047ffa16cdb848f1d2818b4020667b2b1c.png" width="264px" id="#embed_type">
 </div>
 <div id="embedType" style="border:4px solid #CAF6FC;">
   <div class="embed_type_content">
@@ -22,12 +22,12 @@ post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player wi
   </div>
 
   <div class="embed_type_image" style="border-left:4px solid #CAF6FC;">
-    <img src="http://wistia.com/doc/_media/super_embedtype_open.png" width="264px" />
+    <img src="http://embed.wistia.com/deliveries/ae88e987e67605fca502861ec74f85f3c4772be3.png" width="264px" />
   </div>
 </div>
 
-<div class="post_image" style="margin-bottom: -2px;">
-  <img src="http://wistia.com/doc/_media/2_customization.png">
+<div class="post_image embed_screen_image" style="margin-bottom: -2px;">
+  <img src="http://embed.wistia.com/deliveries/4443a488d72603263fb9a914c30202eb68755c6f.png">
 </div>
 <div id="embedType" style="border:4px solid #6FA8EB;height:478px">
   <div class="embed_type_content">
@@ -39,12 +39,12 @@ post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player wi
     </p>
   </div>
   <div class="embed_type_image" style="border-left:4px solid #6FA8EB;">
-    <img src="http://wistia.com/doc/_media/super_playercust.png" >
+    <img src="http://embed.wistia.com/deliveries/102581454659d68e9c9ae7598cc9a515e994d379.png" >
   </div>
 </div>
 
-<div class="post_image" style="margin-bottom: -2px;">
-  <img src="http://wistia.com/doc/_media/3_social.png">
+<div class="post_image embed_screen_image" style="margin-bottom: -2px;">
+  <img src="http://embed.wistia.com/deliveries/402599cc1bb7366f348df85001c13c886799f6bd.png">
 </div>
 <div class="embedType" style="border:4px solid #DCED92;">
   <div class="embed_type_content">
@@ -55,13 +55,13 @@ post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player wi
       If you allow your viewers to copy the embed code of the video, the badge and URL will travel with the video, making it a great option for track-back links.
     </p>
   </div>
-  <div class="embed_type_image" style="border-left:4px solid #DCED92;">
-    <img src="http://wistia.com/doc/_media/super_socialsharing.png">
+  <div class="embed_type_image" style="border-left:4px solid #DCED92;height: 389px;">
+    <img src="http://embed.wistia.com/deliveries/02034cd70d791d85167fa9336913fd382a0ca7c9.png">
   </div>
 </div>
 
-<div class="post_image" style="margin-bottom: -2px;">
-  <img src="http://wistia.com/doc/_media/4_CTA.png">
+<div class="post_image embed_screen_image" style="margin-bottom: -2px;">
+  <img src="http://embed.wistia.com/deliveries/06da21e413a93ed76b16750b5a9a75572c00d6c7.png">
 </div>
 <div class="embedType" style="border:4px solid #FF8950;">
   <div class="embed_type_content">
@@ -70,23 +70,21 @@ post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player wi
     </p>
   </div>
   <div class="embed_type_image" style="border-left:4px solid #FF8950;">
-    <img src="http://wistia.com/doc/_media/super_CTA_config.png">
+    <img src="http://embed.wistia.com/deliveries/be2de921e4e67d957dfcdeb0b0043c2948d7d6d1.png">
   </div>
 </div>
 
-<div class="post_image" style="margin-bottom: -2px;">
-  <img src="http://wistia.com/doc/_media/5_transcript.png">
+<div class="post_image embed_screen_image" style="margin-bottom: -2px;">
+  <img src="http://embed.wistia.com/deliveries/577666e7c4fb51dfe0ad646cb913b0d0767a135b.png">
 </div>
 <div class="embedType" style="border: 4px solid #FFEA32;">
   <div class="embed_type_content">
     <p>
-      Wistia Interactive Transcripts are excellent for longer-form content and SEO purposes.  Control the layout of your transcript when you embed it with SuperEmbeds (more on generating transcripts <a href="http://wistia.com/doc/transcripts">here</a>).
+      Wistia Interactive Transcripts are excellent for longer-form content and SEO purposes.  Control the layout of your transcript when you embed it with SuperEmbeds (more on generating transcripts <a href="http://localhost:4000/transcripts.html">here</a>).
     </p>
   </div>
   <div class="embed_type_image" style="border-left:4px solid #FFEA32;">
-    <img src="http://wistia.com/doc/_media/super_interactivetrans.png">
+    <img src="http://embed.wistia.com/deliveries/32a80873af3e7f18022d5fe54750ef1f52474a8b.png">
   </div>
 </div>
-
----
 
