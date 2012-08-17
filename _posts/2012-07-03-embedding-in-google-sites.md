@@ -1,7 +1,7 @@
 ---
 title: Embedding Video in Google Sites
 layout: post
-description: Google Sites is an awesome website platform. Here's how to get your Wistia up there!
+description: Google Sites is an awesome website platform. Here's how to add a Wistia video to a Google site!
 category: Embedding
 ---
 

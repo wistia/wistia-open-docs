@@ -1,7 +1,7 @@
 ---
 title: Domain Restrictions
 layout: post
-description: Lock your embeds down to your domain only with our domain restriction feature!
+description: Lock videos down to be viewable in domains you specify using Domain Restrictions. 
 category: Embedding
 ---
 
