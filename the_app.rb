@@ -40,6 +40,6 @@ end
 # github will hit this URL after a commit so we can auto-update
 # the doc. omg this is cool.
 post '/update' do
-  spawn('bundle', 'exec', 'jekyll', chdir: File.dirname(__FILE__))
+  spawn('rake', 'nuclear_update', chdir: File.dirname(__FILE__))
   'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
 end

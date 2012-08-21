@@ -45,9 +45,9 @@ task :build => :pre_jekyll do
 end
 
 
-# note: this is only for production
+# note: this is only for production, be careful it will erase your shit
 desc "Auto-update the doc"
-task :self_update => [:update_from_git, :pre_jekyll, :build]
+task :nuclear_update => [:update_from_git, :pre_jekyll, :build]
 
 desc "Updates from origin/master"
 task :update_from_git do
