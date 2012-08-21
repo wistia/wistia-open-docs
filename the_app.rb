@@ -1,7 +1,14 @@
+#
+# This app handles search requests and also has a hook to allow for self-updating
+#
+
 require 'tire'
 require 'pp'
 require 'sinatra'
 require 'haml'
+
+# fix so foreman gets logging
+$stdout.sync = true
 
 get "/search/:q" do
   q = params[:q]
@@ -30,3 +37,9 @@ get "/search/:q" do
   end
 end
 
+# github will hit this URL after a commit so we can auto-update
+# the doc. omg this is cool.
+post '/update' do
+  spawn('bundle', 'exec', 'jekyll', chdir: File.dirname(__FILE__))
+  'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
+end

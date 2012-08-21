@@ -2,84 +2,98 @@ require 'rubygems'
 require 'nokogiri'
 require 'tire'
 
-# Adapted from https://raw.github.com/PascalW/jekyll_indextank/master/indexer.rb && https://github.com/jaysoo/jaysoo.ca/blob/master/_plugins/indexer.rb
+# Adapted from https://raw.github.com/PascalW/jekyll_indextank/master/indexer.rb && 
+#              https://github.com/jaysoo/jaysoo.ca/blob/master/_plugins/indexer.rb
 
 module Jekyll
-
   class Indexer < Generator
 
-    puts "running"
-    
-    Tire.configure do
-      url '127.0.0.1:9200'
+    attr_accessor :site
+
+    def initialize(config = {})
+      super(config)
+
+      Tire.configure do
+        url config['elasticsearch_host']
+      end
     end
 
+
     def generate(site)
+      # convenience, so we don't have to pass this around
+      self.site = site
 
-      raise ArgumentError.new 'Missing elasticsearch_url.' unless site.config['elasticsearch_url']
-      return unless site.config['doindex']
-      base_url = site.config['production_url']
+      print 'Indexing posts... '
 
-      # indexing posts
-      puts 'Indexing posts...'
-
-      posts_counter = 0
-      posts_arr = []
-
-      site.posts.each do |post|
-        text = extract_text(site, post)
-        date_str = post.data['created_at'] || post.date.strftime('%Y-%m-%d %H:%MZ')
-
-        document = {
-          :title => post.data['title'],
-          :text => text,
-          :date => date_str,
-          :url => base_url + post.url,
-          :id => posts_counter,
-          :type => 'post',
-          :description => post.data['description'] || ""
-        }
-
-        if post.tags
-          document['tags'] = post.tags
-        end
-
-        if post.data.has_key?('category')
-          document['category'] = post.data['category']
-        end
-
-        posts_arr << document
-        posts_counter += 1
-      end
+      # get all the posts
+      all_posts = site.posts.map { |post| hash_for_post(post) }
 
       Tire.index 'posts' do
 
+        # clear 'em all
         delete
-        create :mappings => {
 
+        # some config stuff
+        create :mappings => {
           :post => { 
             :properties => {
-              :id => { type: 'integer', index: 'not_analyzed', include_in_all: false },
-              :title => { type: 'string', analyzer: 'snowball', boost: '2.0' },
-              :text => { type: 'string', analyzer: 'snowball' },
-              :description => { type: 'string', analyzer: 'snowball', boost: '1.5' } 
+              :id           =>  { type: 'integer', index: 'not_analyzed', include_in_all: false },
+              :title        =>  { type: 'string', analyzer: 'snowball', boost: '2.0' },
+              :text         =>  { type: 'string', analyzer: 'snowball' },
+              :description  =>  { type: 'string', analyzer: 'snowball', boost: '1.5' } 
             } 
           } 
         }
 
-        import posts_arr
+        # add all posts to index
+        import all_posts
+
+        # stay cool
         refresh 
       end
 
-      puts 'Indexing done!'
+      puts 'done!'
 
+    rescue Errno::ECONNREFUSED => e
+      puts "elasticsearch isn't running FYI you idiot"
     end
 
-    def extract_text(site, page)
-      page.render(site.layouts, site.site_payload)
-      doc = Nokogiri::HTML(page.output)
+
+    # returns the post as a hash suitable for jamming into elasticsearch!
+    def hash_for_post(post)
+      document = {
+        :id => next_id,
+        :title => post.data['title'],
+        :text => text_for_post(post),
+        :date => post.data['created_at'] || post.date.strftime('%Y-%m-%d %H:%MZ'),
+        :url => post.url,
+        :type => 'post',
+        :description => post.data['description'] || ""
+      }
+
+      document['tags'] = post.tags if post.tags
+      document['category'] = post.data['category'] if post.data.has_key?('category')
+
+      document
+    end
+
+
+    # returns a string which is the raw text of the page
+    def text_for_post(post)
+      post.render(site.layouts, site.site_payload)
+
+      doc = Nokogiri::HTML(post.output)
       doc.css('script').remove().css('#doc_nav').remove()
-      page_text = doc.text.gsub("\r"," ").gsub("\n"," ").gsub(/\s+/, " ")
+
+      # one line it
+      doc.text.gsub(/[\r\n\s]+/," ")
+    end
+
+
+    # just makes IDs for posts
+    def next_id
+      @id ||= 0
+      @id += 1
     end
 
   end 

@@ -8,7 +8,7 @@ gem "RedCloth"
 gem "rdiscount"
 gem "foreman"
 gem "nokogiri", "~> 1.5.5"
+gem "tire", "~> 0.4.2"
+gem "sinatra"
+gem "shotgun"
 
-group :production do
-  gem "tire", "~> 0.4.2"
-end

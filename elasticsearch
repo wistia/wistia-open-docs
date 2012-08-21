@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+$stdout.sync = true
+
+if `which elasticsearch` != ''
+  `elasticsearch -f`
+else
+  puts "You don't have elasticsearch installed. No worries."
+  # just sit here
+  while true
+    sleep 1
+  end
+end
