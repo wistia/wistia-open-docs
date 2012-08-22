@@ -52,12 +52,67 @@ Or if I wanted to pause the current video:
 
 In our example embed <span class="code">Wistia.playlist("abcde12345", { ... options ... });</span> there are two arguments: the playlist's <span class="code">hashed ID</span>, and a set of <span class="code">embedding options</span>. Here is a list of available options:
 
-Option Name     | Type    | Description                                                                                                                                                                  | 
------------     | ----    | -----------                                                                                                                                                                  | 
+Option Name     | Type    | Description
+-----------     | ----    | -----------
 autoAdvance     | boolean | When true, automatically embed the next video when the current video ends. Default is true.
 container       | string  | The container ID where the playlist will be embedded. Defaults to "wistia_{hashed_id}".
 loop            | boolean | When true, the playlist will begin again from the start when the last video ends. Default is false.
-media_{si}_{vi} | object  | Specify embedding options for a specific video by index as specified in the [Player API](/player-api.html). si and vi should each be a number. 
+media\_\{si}\_\{vi} | object  | Specify embedding options for a specific video by index as specified in the [Player API](/player-api.html). si and vi should each be a number. 
 theme           | string  | The playlist's theme. Current acceptable values are "trim", "steam", "tango", or "bare". For API embeds, this needs to correspond with the script included on the page.
 version         | string  | Must be "v1".
 videoOptions    | object  | Specify embedding options for each video as specified in the [Player API](/player-api.html).
+
+## Playlist API Examples
+
+### Load a random video on page load
+
+To load a random video from your playlist on page load, and then play a random video after each video ends, use script like this:
+
+<pre><code class="language-javascript">
+&lt;div id="wistia_1d35830d05" class="wistia_embed" style="width:640px;height:503px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1%2Cplaylist-v1%2Cplaylist-v1-bento.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+wistiaPlaylist = Wistia.playlist("1d35830d05", {
+  version: "v1",
+  theme: "bento",
+  videoOptions: {
+    autoPlay: false,
+    videoWidth: 640,
+    videoHeight: 360
+  },
+  media_0_0: {
+    autoPlay: false,
+    controlsVisibleOnLoad: false
+  },
+  bento: {
+    menuPosition: "bottom"
+  }
+});
+
+function playlist_count(playlist) {
+  var video_inc = 0,
+  section_inc = 0;
+
+  playlist.eachSection( function() {
+    section_inc += 1;
+  })
+  playlist.eachVideo( function() {
+    video_inc += 1;
+  });
+  return [section_inc - 1, video_inc - 1];
+};
+
+function rand(num) {
+  return Math.floor(Math.random() * num);
+};
+
+wistiaPlaylist.ready( function() {
+
+  wistiaPlaylist.embed( rand(playlist_count(wistiaPlaylist)[0]), rand(playlist_count(wistiaPlaylist)[1]) );
+  wistiaPlaylist.bind('end', function() {
+    wistiaPlaylist.embed( rand(playlist_count(wistiaPlaylist)[0]), rand(playlist_count(wistiaPlaylist)[1]) );
+  });
+
+});
+&lt;/script&gt;
+</code></pre>

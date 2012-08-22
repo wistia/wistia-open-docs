@@ -212,9 +212,7 @@ if (/wemail=/.test(location.href)) {
 
 Every single Wistia embed code type automatically supports HTML5 when it detects a device that requires it (ie. iPhones, iPads).  There is no extra work needed - standard HTML embed codes will work on your iOS device out-of-the-box.
 
-### Forcing HTML5
-
-In some cases, it makes sense to force the video to only display in HTML5 - skipping the device detection step altogether.  With Wistia iframe embeds, forcing your videos to display in HTML5 is easy.
+In some (rare) cases, it makes sense to force the video to only display in HTML5 - skipping the device detection step altogether.  With Wistia iframe embeds, forcing your videos to display in HTML5 is easy.
 
 ### The Platform Preference Parameter
 
@@ -346,4 +344,15 @@ Here's what the embed code looks like, note the <span class="code">.volume(0)</s
 </code></pre>
 
 ---
+
+## Set the background of your video to transparent
+
+If you are embedding a Wistia video on a website with a white background, the natural black background of the Wistia player can look a little out of place. Instead, using a <span class='code'>wmode=transparent</span> string parameter, the background of the player loading can be set to transparent.
+
+So a finished iframe embed code would look something like this:
+
+<pre><code class="language-markup">
+<iframe src="http://fast.wistia.com/embed/iframe/e4a27b971d?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640&wmode=transparent" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+</code></pre>
+
 
