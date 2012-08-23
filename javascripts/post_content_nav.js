@@ -60,11 +60,23 @@ $(document).ready(function() {
   };
 
   // for <pre> code snippets //
+  function browser_escape_characters(span) {
+    span.html(span.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+  };
+
+  if ($('span.code').length) {
+    $('span.code').each( function() {
+      $this = $(this);
+
+      browser_escape_characters($this);
+    });
+  };
+
   if ($('pre').length) {
     $('pre').find('code.language-markup').each( function() {
       $this = $(this);
-      
-      $this.html($this.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+
+      browser_escape_characters($this);
     });
   };
 

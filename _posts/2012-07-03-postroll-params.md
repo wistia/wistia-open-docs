@@ -8,15 +8,16 @@ for_developers: true
 ### Postroll Example (jump to the end!)
 
 <div class="video_embed">
-<div id="wistia_4d8229898d" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<div id="wistia_4d8229898d" style="width:660px;height:371px;" data-video-width="660" data-video-height="371">&nbsp;</div>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"></script>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1-gridify%2CpostRoll-v1.js"></script>
 
 <script>/*<![CDATA[*/
 wistiaEmbed = Wistia.embed("4d8229898d", {
-    videoWidth: "640",
-    videoHeight: "360",
-    controlsVisibleOnLoad: true
+    videoWidth: "660",
+    videoHeight: "371",
+    controlsVisibleOnLoad: true,
+    playerColor: "4991C4"
 });
 Wistia.plugin.postRoll(wistiaEmbed, {
     version: "v1",
@@ -50,11 +51,19 @@ Our links use <span class="code">target="\_blank"</span> to pop open a new windo
 
 ### Iframe Example
 
-<div class="code"><pre><iframe src="http://fast.wistia.com/embed/iframe/abcde12345?videoWidth=640&videoHeight=360&plugin[postRoll][version]=v1&plugin[postRoll][text]=You made it to the end of my video! Now check out my product.&plugin[postRoll][link]=http://myawesomeproduct.com/awesome&plugin[postRoll][style][background]=#404040&plugin[postRoll][style][color]=#ffffff" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe></pre></div>
+<pre><code class='language-markup'>
+<iframe src="http://fast.wistia.com/embed/iframe/abcde12345?videoWidth=640&videoHeight=360
+&plugin[postRoll][version]=v1&plugin[postRoll][text]=You made it to the end of my video! Now check out my product.
+&plugin[postRoll][link]=http://myawesomeproduct.com/awesome
+&plugin[postRoll][style][background]=#404040
+&plugin[postRoll][style][color]=#ffffff"
+ allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+</code></pre>
 
 ### API Embed Example
 
-<div class="code"><pre><div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<pre><code class="language-markup">
+<div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
 <script src="http://fast.wistia.com/static/E-v1.js"></script>
 <script src="http://fast.wistia.com/static/concat/E-v1-gridify,postRoll-v1.js"></script>
 <script>
@@ -71,4 +80,5 @@ style: {
   color: "#ffffff"
 }
 });
-</script></pre></div>
+</script>
+</code></pre>

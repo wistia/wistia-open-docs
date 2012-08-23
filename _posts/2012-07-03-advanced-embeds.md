@@ -189,7 +189,8 @@ preRollEmbed.bind("end", function() {
 
 If you are putting video thumbnails in your email messages, we recommend making the videos autoplay whenever a viewer reaches the page by clicking the email link. This “selective autoplay” can be accomplished by writing a very short script that looks for a token included in the email links.
 
-If you'd like to enable this behavior, copy and paste this JavaScript snippet with your embed code.
+If you'd like to enable this behavior, copy and paste this JavaScript snippet with your embed code. **Note:** you must use the 'API' embed type for this to work.
+
 When a visitor lands on your page with the video and they have "wemail=" in the URL (this is the mechanism by which Wistia passes emails to our analytics from emails), the video will automatically start playing. For everyone else who doesn't arrive via email, the video won't autoplay. 
 
 <pre><code class='language-markup'>

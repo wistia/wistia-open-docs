@@ -237,6 +237,46 @@ header
   a
     +link-hover
 
+
+///// Span Styles //////
+
+.action_menu
+  background-color: #BFDE67
+  color: white
+  padding: 2px 4px
+
+.faux_button
+  background-color: #E9E7E4
+  border: 3px solid #D5D4D2
+  color: #666
+  font-family: Arial, Sans-Serif
+  padding: 2px 4px
+  margin-left: 3px
+  font-size: 13px
+
+.code
+  background-color: $background_gray
+  color: $text_color
+  overflow-x: scroll
+  font-size: 14px
+  margin: $padding/2 0
+  width: 646px
+  padding: 6px
+  font-family: monospace
+  border: 1px dashed $border_color
+  &:hover
+    background-color: $border_color
+
+span.code
+  margin: 0
+  padding: 2px
+
+.edit_tag
+  background: transparent url(http://embed.wistia.com/deliveries/c4728e279c91c74605f00f6c2629a646ed3905af.png) no-repeat
+  padding-left: 33px
+  display: inline-block
+  height: 10px
+
 ////////// post intro paragraph styles ////////
 
 .post_intro
@@ -291,32 +331,7 @@ header
     +box-emboss(0.8, 0.05)
     +outline-border
 
-////// code //////////
 
-.github
-  width: $post_width
-  font-size: 13px
-  line-height: 150%
-  margin: 30px 0
-.gist .gist-file .gist-data
-  padding: 15px
-
-.code
-  background-color: $background_gray
-  color: $text_color
-  overflow-x: scroll
-  font-size: 14px
-  margin: $padding/2 0
-  width: 646px
-  padding: 6px
-  font-family: monospace
-  border: 1px dashed $border_color
-  &:hover
-    background-color: $border_color
-
-span.code
-  margin: 0
-  padding: 2px
 
 //////// EVIL TABLES //////
 
@@ -417,6 +432,8 @@ table
         font-size: 16px
         color: white
         +letterpress(.3, $text_color)
+        &:hover
+          color: white
     &:last-of-type
       border-bottom: none
       margin-bottom: 0
@@ -425,6 +442,8 @@ table
       color: $text_color
       font-size: 14px
       text-decoration: none
+      &:hover
+        color: $text_color - 20
   .current > a
     color: $wistia_blue
 

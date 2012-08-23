@@ -2,58 +2,38 @@
 title: Sharing Video Privately
 layout: post
 category: Private Sharing
-post_intro: <div class="post_image intro_image"><img src="http://embed.wistia.com/deliveries/40ebc2c0ffbe573a22b04a255d3971fa8896b986.png" alt="privateshare_guide" /></div><p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.  With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p class="clear">Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
+post_intro: <div class="post_image intro_image"><img src="http://embed.wistia.com/deliveries/40ebc2c0ffbe573a22b04a255d3971fa8896b986.png" alt="privateshare_guide" /></div><p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.</p><p>With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p class="clear">Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
 description: Wistia makes it easy to privately share your videos with people. Invite people via email, require a password, and track how they watch in a secure environment.
 ---
 
 
 <div class="video_embed">
-  <div id="wistia_75edd60835" class="wistia_embed" style="width:640px;height:400px;" data-video-width="640" data-video-height="400"><object id="wistia_75edd60835_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:400px;position:relative;width:640px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=4991C4&mediaDuration=161.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda4b6a18767456f089336f8c4e3f14c130fc03e3.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F614c6eca159fcd802c7a79b94d15f35dd232160f.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=4991C4&mediaDuration=161.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda4b6a18767456f089336f8c4e3f14c130fc03e3.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F614c6eca159fcd802c7a79b94d15f35dd232160f.bin" name="wistia_75edd60835_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
-  <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
-  <script>
-  wistiaEmbed = Wistia.embed("75edd60835", {
-    version: "v1",
-    videoWidth: 640,
-    videoFoam: true,
-    videoHeight: 400,
-    controlsVisibleOnLoad: false,
-    playerColor: "4991C4"
-  });
-  </script>
-  <script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/75edd60835/metadata.js"></script>
+<div id="wistia_75edd60835" class="wistia_embed" style="width:660px;height:413px;" data-video-width="660" data-video-height="413"><object id="wistia_75edd60835_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553541300" style="display:block;height:413px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="customColor=4991C4&mediaDuration=161.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda4b6a18767456f089336f8c4e3f14c130fc03e3.jpg%3Fimage_crop_resized%3D660x413&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F614c6eca159fcd802c7a79b94d15f35dd232160f.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="customColor=4991C4&mediaDuration=161.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda4b6a18767456f089336f8c4e3f14c130fc03e3.jpg%3Fimage_crop_resized%3D660x413&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F614c6eca159fcd802c7a79b94d15f35dd232160f.bin" name="wistia_75edd60835_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("75edd60835", {
+  version: "v1",
+  videoWidth: 660,
+  videoHeight: 413,
+  playerColor: "4991C4"
+});
+</script>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/75edd60835/metadata.js"></script>
 </div>
 
 
 
 ----
 
-## Chose the Project to Share
-
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/bf546e5dabb9a84a6d53eb09849cb655e5aa0198.png" alt="upload-select" /></div>
-
-Getting your video onto the web starts by uploading it to your Wistia account.  Don't have one? [Start your free 15 day trial today](http://wistia.com/trials/new?doc).
-
-<p>Uploading Video to Wistia is as simple as:</p>
-
-<p><ul>
-<li><a href="/projects#how_to_create_a_project">Creating a New Project</a></li>
-<li>Select the "Upload Media" option from under the green "Project Actions" drop-down menu.</li>
-</ul></p>
-
-----
-
-
-## Invite Your Viewers In
+## Invite Viewers
 
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/42611fc9a1641be9e8374afd496a20e01abffcc6.png" alt="share_proj" /></div>
 
 
 
-Now that your content is uploaded, it is time to bring your private viewers in.  Wistia has designed accounts to be as secure as possible - the default settings only let users in if they have proper credentials.  One way the manager of an account can invite new viewers in to view private content is using the "Share by Email" feature.  From the Project screen, select "Share Project" from under the green "Project Actions" drop-down menu.
+Managers in your Wistia account can invite new viewers to view private content using the "Share by Email" feature.  From the Project screen, select "Share Project" from under the green "Project Actions" drop-down menu.
 
-
-
-Inside the share screen, enter the email addresses of contacts you would like to share this project privately with.  You can then set whether they need to create a password.  At the bottom, you can customize the text from the message they will receive to first access the content you've allowed them to view.
+Enter the email addresses of contacts you would like to share this project privately with.  You can then set whether they need to create a password.  At the bottom, you can customize the text from the message they will receive to first access the content you've allowed them to view.
 
 
 <div class="post_image center"><img src="http://embed.wistia.com/deliveries/fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d.png" alt="share_box" /></div>
@@ -67,6 +47,28 @@ The best way for unwanted viewers to view secure content is through the original
 
 ----
 
+## Privately share video by link
+
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/271cc76d4c475b6997d5b9c49f6ee087c9badd50.png" alt="share-project" /></div>
+
+This is the best sharing method to use if you want to:
+<ul style="margin-top: 5px;"><li>Send out a single link from your own email account to a group people to allow them to view your video</li>
+<li>Track how people watch your video, but are less concerned about associating viewing with a viewer's email address</li></ul>
+ 
+Once you have uploaded your videos to your project, from within the project hover over the "Project Actions" menu and choose the "Share Project" option.
+
+<div class="clear"></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/7fe31ba39993a9f10f9416325c68a3f710d1d4f4.png" alt="share_by_link" /></div>
+
+When the dialog appears choose the tab which says "Share by Link".  The screen to the left will be seen.  To create a link which can be pasted into an email, click the "Enable sharing by link for this project" button.
+
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/0157656ae67a9ee92aa77f99f8235b8db2b8b1df.png" alt="share-by-link-2" /></div>
+
+Once the button has been clicked, the link will appear.  You can simply copy this link and paste it into an email or put it on a webpage.  When users click on this link, they will automatically be taken into this Wistia project.
+
+If the "Disable sharing by link for this project" is clicked the previous project link will no longer be active.  Users that click on a disabled link will be denied access to your content. 
+
+---
 
 ## Managing Permissions
 

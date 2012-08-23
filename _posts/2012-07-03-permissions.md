@@ -3,7 +3,7 @@ title: Permission Levels in Wistia
 layout: post
 category: Private Sharing
 description: Each contact in your Wistia account has a set of permissions. These permissions set out the rules for how they can interact with the files in your account.
-post_intro: <p>Each contact in your Wistia account has a set of permissions.</p><p>These permissions set out the rules for how they can interact with the files in your account. In general, the permissions users can have are:</p><ul><li>Create Projects</li><li>Upload &amp; Download Media</li><li>Share Media/Projects</li><li>Track Stats and Account Usage Levels</li><li>Create New Contacts</li><li>Embed Videos</li></ul>
+post_intro: <p>Each contact in your Wistia account has a set of permissions.</p><p>These permissions set out the rules for how they can interact with the files in your account.</p><p>In general, the permissions users can have are:</p><ul><li>Create Projects</li><li>Upload &amp; Download Media</li><li>Share Media/Projects</li><li>Track Stats and Account Usage Levels</li><li>Create New Contacts</li><li>Embed Videos</li></ul>
 ---
 
 
@@ -21,7 +21,7 @@ Owners have access to anything a manager or contact does, but in addition, they 
 
 ## Manager-Level Permissions
 
-"Managers" in Wistia are the controllers of the content in accounts.  Each Wistia account, no matter the level, comes default with 2 Manager spots (one is defaulted to the Owner of the Account).  Managers can do things like add Projects, upload medias, and share those Projects/videos with new viewers.  They can also control contacts, create new groups, and send messages out to those contacts.
+"Managers" in Wistia are the controllers of the content in accounts. Managers can do things like add Projects, upload medias, and share those Projects/videos with new viewers.  They can also control contacts, create new groups, and send messages out to those contacts.
 
 Managers can:
 
