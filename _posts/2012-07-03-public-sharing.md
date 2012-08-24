@@ -3,71 +3,75 @@ title: Adding Video to Your Website
 layout: post
 category: Embedding
 description: Want to add video to your website but don't know where to start? Here's a quick guide to get you off the ground!
-post_intro: <div class="post_image intro_image"><img src="/images/puttingvideo_guide.png" alt="puttingvideo_guide" /></div><p>Putting video on your website is the best way to get your message across.</p><p>Video is an engaging medium that can communicate complex topics clearly and concisely, without a ton of effort from the viewer.  At Wistia, our goal is to make it easy to embed video on your website, and get actionable analytics from your viewers interactions.  This guide is designed to get you from a blank slate to having a great video streaming over the web, powered by Wistia.</p><p>Public sharing is right for you if you want to:</p><ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul>
+post_intro: <div class="post_image intro_image"><img src="http://embed.wistia.com/deliveries/e4fae4cdfda58c83e8444785425e32309c0d1c3b.png" alt="puttingvideo_guide" /></div><p>Putting video on your website is the best way to get your message across.</p><p>The act of putting a video on your website is called <strong>embedding</strong>, and in this guide we're going to show you how to get it done right.</p><p>Embedding video is right for you if you want to:</p><ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul>
 ---
 
 <div class="video_embed">
-  <iframe src="http://fast.wistia.com/embed/iframe/5c913cd4fb?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true" allowtransparency="true" frameborder="0" class="wistia_embed" name="wistia_embed" width="640" height="360" style="border:2px solid gray;"></iframe>
+<div id="wistia_5c913cd4fb" class="wistia_embed" style="width:660px;height:371px;" data-video-width="660" data-video-height="371"><object id="wistia_5c913cd4fb_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:371px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F25bdff785c723eb9310f9822171f64a2b55f9ea9.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=112.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Ff31d085ff86462067d5892f03ea95daebec4c941.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fb4e71ad2b9b72446a43346e2e89854ca49e40634.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F25bdff785c723eb9310f9822171f64a2b55f9ea9.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=112.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Ff31d085ff86462067d5892f03ea95daebec4c941.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fb4e71ad2b9b72446a43346e2e89854ca49e40634.bin" name="wistia_5c913cd4fb_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("5c913cd4fb", {
+  version: "v1",
+  videoWidth: 660,
+  videoHeight: 371,
+  playerColor: "4991C4"
+});
+</script>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/5c913cd4fb/metadata.js"></script>
 </div>
 
-## Step 1. Create Your Video
+## Upload Your Video
 
-<div class="post_image float_right">
-  <img src="/images/jay_chris_roadlok.png" alt="jay_chris_roadlok" width="400px" />
-</div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/5695b32b1de5048682ee2cbc2fe2aec94f70c771.png" alt="upload-select" /></div> 
 
-If you're looking to create some new video, there are lots of ways to do it.  You could:
+The first step is uploading the video you want on your website to Wistia. *Already done that? Move to embedding!*
 
-*  Hire a camera crew
-*  Record a screencast
-*  Shoot footage yourself
-*  Host a webinar
+To upload your video, open the Project where you want the video to end up.
 
-If you are looking to hire a videographer, there are tons of great video producers out there - you just need to know where to look.  From producing, to shooting, to editing, to formatting - getting the content right is just as important as how you present it.
+Select the *Upload Media* option from under the <span class="action_menu">Project Actions</span> menu.
 
-Having trouble finding a great producer? Check out [50 Grove](http://50grove.com), a site designed to hook up great producing talent with firms that need great video.
+Check out our [guide to uploading](/upload-video) for more information
+
+After uploading is complete, Wistia encodes several versions of the video - perfect for serving on multiple browsers and mobile devices.  Once these versions are complete, it is ready to be embedded onto your site.
 
 ---
 
-## Step 2. Upload Your Video to Your Wistia Account
+## Generate the Embed Code
 
-<div class="post_image float_right">
-  <img src="/images/upload-select.png" alt="upload-select" width="300px" />
-</div>
+<div class="post_image float_right"> <img src="http://embed.wistia.com/deliveries/62f01c7e318746526f5bfafeda82ad96807db9a4.png" alt="embed_video_stroke" /> </div>
 
-Getting your video onto the web starts by uploading it to your Wistia account.  Don't have one? [Click here](http://wistia.com/trials/new?doc) to start your free 15 day trial today.
 
-Uploading Video to Wistia is as Simple As:
+**Embed codes** are snippets of code pasted on your web page that are useful for serving up content (i.e. video).  To generate the embed code for your video, start by selecting the *&lt;/&gt; Embed* option under the <span class='action_menu'>Media Actions</span> menu.
 
-*  [Creating a New Project](/projects#how_to_create_a_project.html)
-*  Select the "Upload Media" option from under the green "Project Actions" menu.
-*  Check out our [guide to uploading](/upload-video.html) for more information
+<div class='clear'></div>
 
-Once it is uploaded, Wistia creates several versions of the video - perfect for serving on multiple browsers and mobile devices.  Once the video is encoded, it is ready to be embedded onto your site.
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/edda8e48e886fbfc42a8a6b6d0264fbbe160afd6.png" alt="superEmbed_dialogue_publicsharing" /></div>
+
+Clicking this option will take you to the Wistia Embed Screen.  This is where you can make some basic changes to the look and feel of your video presentation.
+
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/fbe53b9002062e623f346aaaf7c850d33b0cd5dc.png" alt="copy_embed_code" /></div>
+
+See our [complete guide to the embed screen](/embed_screen) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
 
 ---
 
-## Step 3. Embedding Your Video
+## Pasting your Embed Code onto Your Page
 
-<div class="post_image float_right">
-  <img src="/images/embed_video_stroke.png" alt="embed_video_stroke" width="400px" />
-</div>
+Once you have copied the embed code, the next step is to paste it into your web page editor (which could be a CMS tool, blog, HTML document, etc.) This is where it gets complicated to talk in specifics, since each website management system is different, but here are some tips:
 
-Embed codes are pieces of code that live inside your web page and are useful for serving up video.  To grab the embed code of a video you have added to your Wistia account, first navigate to the page where you can play the video itself (also known as the "viewing page").  Select the "</> Embed" option under the green "Media Actions" drop-down menu.
+*Tips for Embedding Video the Fun Way*
 
-<div class="post_image float_right"><img src="/images/superEmbed_dialogue_publicsharing.png" alt="superEmbed_dialogue_publicsharing" width="350px" /></div>
+  1. If you are using a CMS, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
+  2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
+  3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
 
-Clicking this "</> Embed" option will take you to the Wistia Embed Screen.  This is where you can make some basic changes to the look and feel of your video presentation easily.  See our [complete guide to the embed screen](/embed_screen.html) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
-
-Once you have the Embed code, you can place it in an HTML file of your web page editor, or into the edit page of a CMS.
+Most users don't have trouble embedding Wistia video. When they do, 
 
 ---
 
 ## Step 4. Reviewing Your Embedded Video Stats
 
-<div class="post_image float_right">
-  <img src="/images/trends_dropdown_psharing.png" alt="trends_dropdown_psharing" />
-</div>
+<div class="post_image float_right"><img src="/images/trends_dropdown_psharing.png" alt="trends_dropdown_psharing" /></div>
 
 Now that your video is embedded on your webpage, you can use Wistia's tracking analytics to see how your viewers are interacting with the content.  To see how your account is performing as a whole, start by selecting "Trends" from under the Stats drop-down menu.
 
