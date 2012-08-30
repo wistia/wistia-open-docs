@@ -57,7 +57,7 @@ See our [complete guide to the embed screen](/embed_screen) for more info.  Once
 
 ## Pasting your Embed Code onto Your Page
 
-Once you have copied the embed code, the next step is to paste it into your web page editor (which could be a CMS tool, blog, HTML document, etc.) This is where it gets complicated to talk in specifics, since each website management system is different, but here are some tips:
+Once you have copied the embed code, the next step is to paste it into your web page editor (which could be a CMS, blog, HTML document, etc.) This is where it gets complicated to talk in specifics, since each website management system is different, but here are some tips:
 
 *Tips for Embedding Video the Fun Way*
 

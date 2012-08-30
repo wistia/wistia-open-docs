@@ -9,31 +9,31 @@ post_intro: <p>The Wistia video player has a JavaScript API which supports a num
 
 ## The Methods
 
- | Method                  | Description                                                                                                                                          | 
- | ------                  | -----------                                                                                                                                          | 
- | bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", and "timechange". | 
- | duration()              | Returns the length of the video in seconds                                                                                                           | 
- | height()                | Gets the current height of the embed (the video plus any plugins above or below).                                                                    | 
- | height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.                                                       | 
- | name()                  | Returns the name of the video                                                                                                                        | 
- | pause()                 | This causes the video player to pause the video if it is currently playing.                                                                          | 
- | play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.                                                   | 
- | ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.              | 
- | setEmail(email)         | Associates the email string with this view of the video.                                                                                             | 
- | state()                 | This returns the current state of the video player: "unknown" (a.k.a not started), "ended", "playing", "paused".                                     | 
- | time()                  | This returns the viewer's current position in the video (in seconds).                                                                                | 
- | time(t)                 | This causes the video player to seek to time specified by the ''t'' parameter (in seconds).                                                          | 
- | unbind(event, function) | Lets you remove a previously binded function from an event. If function is not specified, all bindings for the event will be removed.                | 
- | videoHeight()           | Gets the current height of the video, excluding any plugins.                                                                                         | 
- | videoHeight(h)          | Sets the height of the video. The height of the embed will be automatically resized to fit the plugins.                                              | 
- | videoWidth()            | Gets the current width of the video, excluding any plugins.                                                                                          | 
- | videoWidth(w)           | Sets the width of the video. The width of the embed will be automatically resized to fit the plugins.                                                | 
- | volume()                | Returns the current volume level. Value between 0 and 1.                                                                                             | 
- | volume(level)           | Sets the current volume level. 'level' is a decimal value between 0 and 1.                                                                           | 
- | width()                 | Gets the current width of the embed (the video plus any plugins on the left and right).                                                              | 
- | width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.                                                        | 
+Method                  | Description 
+------                  | -----------
+bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", and "timechange".
+duration()              | Returns the length of the video in seconds                                                                  
+height()                | Gets the current height of the embed (the video plus any plugins above or below).                                                         
+height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.                                              
+name()                  | Returns the name of the video                                                                                                             
+pause()                 | This causes the video player to pause the video if it is currently playing.                                                               
+play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.                                          
+ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.     
+setEmail(email)         | Associates the email string with this view of the video.                                                                                      
+state()                 | This returns the current state of the video player: "unknown" (a.k.a not started), "ended", "playing", "paused".                            
+time()                  | This returns the viewer's current position in the video (in seconds).                                                                     
+time(t)                 | This causes the video player to seek to time specified by the ''t'' parameter (in seconds).                                                 
+unbind(event, function) | Lets you remove a previously binded function from an event. If function is not specified, all bindings for the event will be removed.         
+videoHeight()           | Gets the current height of the video, excluding any plugins.                                                                                
+videoHeight(h)          | Sets the height of the video. The height of the embed will be automatically resized to fit the plugins.                                     
+videoWidth()            | Gets the current width of the video, excluding any plugins.                                                                                   
+videoWidth(w)           | Sets the width of the video. The width of the embed will be automatically resized to fit the plugins.                                 
+volume()                | Returns the current volume level. Value between 0 and 1.                                                                              
+volume(level)           | Sets the current volume level. 'level' is a decimal value between 0 and 1.                                                          
+width()                 | Gets the current width of the embed (the video plus any plugins on the left and right).                                             
+width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.                                       
 
-## How to use the API
+## Using the API
 
 Accessing the Player API is different depending on the type of embed code you're using.
 
@@ -44,7 +44,7 @@ Accessing the Player API is different depending on the type of embed code you're
 
 To access the API when using iframe embed codes, you just need to include an extra script on your page and you're off to the races. Take a look at the [iframe player API page](/iframe-api.html) for all the details.
 
-## API embed code
+### API embed code
 
 The 'API' version of the Wistia embed codes includes a variable <span class="code">wistiaEmbed</span> to make this easy.
 
@@ -117,6 +117,53 @@ wistiaEmbed.bind("play", playFunc);
 </script>
 </code></pre>
 
+### Playing a second video on Post Roll click
+
+By binding a click event onto the video container and verifying that the post roll has run, you can play a second video in the same container (Post Roll: "Click here to watch your free video!" and then have the video actually play in the same video container).
+
+Notes:
+
+  * *the ID on the video &lt;div&gt; is made generic: 'video_container'*
+  * *the 'on' method requires jQuery 1.7 or greater*
+
+<pre><code class="language-javascript">
+&lt;div id="video_container" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1%2CpostRoll-v1.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+firstVideo = Wistia.embed("993554ba94", {
+  version: "v1",
+  videoWidth: 640,
+  videoHeight: 360,
+  controlsVisibleOnLoad: true,
+  container: "video_container"
+});
+Wistia.plugin.postRoll(firstVideo, {
+  version: "v1",
+  text: "Play the Second Video!",
+  link: "#",
+  style: {
+    backgroundColor: "#616161",
+    color: "#ffffff",
+    fontSize: "36px",
+    fontFamily: "Gill Sans, Helvetica, Arial, sans-serif"
+  }
+});
+
+$('#video_container').on('click', '.wistia-postroll', function(e) {
+  e.preventDefault();
+  firstVideo.remove();
+  secondVideo = Wistia.embed("9dc0fc7d3a", {
+    version: "v1",
+    videoWidth: "640",
+    videoHeight: "360",
+    controlsVisibleOnLoad: true,
+    container: "video_container",
+    autoPlay: true
+  });
+});
+&lt;/script&gt;
+</code></pre>
 
 ## Embedding Options
 
@@ -162,7 +209,7 @@ var wistiaEmbed = Wistia.embed("bfc34aa023", {
 </code></pre>
 
 
-# Plugin Options
+## Plugin Options
 
 Our plugins have a lot of options too! Check them out:
 
