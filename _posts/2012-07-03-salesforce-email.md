@@ -5,9 +5,9 @@ description: Wistia's built in alert system can be easily integrated with your S
 category: Integrations
 ---
 
-Many organizations that use video in their sales process also use Salesforce.com to manage their leads, opportunities, and sales pipelines.  As a result, Wistia has integrated with Salesforce.com to allow Salesforce.com users to associate activity in their Wistia account with contacts, leads, and opportunities in Salesforce.com.  
+Many organizations that use video in their sales process also use Salesforce.com to manage their leads, opportunities, and sales pipelines.  As a result, Wistia has integrated with Salesforce.com to allow Salesforce.com users to associate activity in their Wistia account with contacts, leads, and opportunities in Salesforce.com.
 
-Those using Wistia in a sales context often find the [Wistia Email Alerts]({{ site.url }}/{{ page.lang }}/alerts.html) to be extremely valuable in keeping up with a prospect's activities within their Wistia accounts.  These alerts can be set to email the sales person when any of the following events occur within the Wistia system:
+Those using Wistia in a sales context often find the [Wistia Email Alerts](/alerts) to be extremely valuable in keeping up with a prospect's activities within their Wistia accounts.  These alerts can be set to email the sales person when any of the following events occur within the Wistia system:
 
 
 *  **New media** - Alert manager when media is uploaded or copied into a project
@@ -34,40 +34,43 @@ To enable this capability is three simple steps:
 
 The subsequent sections will cover how to do all three of these steps in addition to how to use the Wistia Alerts in Salesforce once integrated.
 
-## 1. - Enabling "Email to Salesforce"
+## Enable "Email to Salesforce"
 
 If your Salesforce.com administrator has already enabled the "Email to Salesforce" capability within your company's Salesforce.com implementation, you can skip this step.  If this capability has not yet been enabled, it will require your administrator to make one simple change in the configuration.
 
 When your Salesforce.com administrator is logged in, they will have a panel along the left-hand side of the screen in Salesforce which is titled "Administration Setup".  Under this panel, have them expand the option labeled "Email Administration".  There will be an item in this list titled "Email to Salesforce".  Click on this item and the main window will display options for "Email to Salesforce".
 
-`<style center>`{{:enable-email-to-sf.png?600|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/8d7469a270e1cdd8b463ba58efe362dd4c2ae97f.png" alt="enable-email-to-sf" /></div>
 
 In the main window, click the "Edit" button.  This will then allow the administrator to make changes to the configuration.  Once in edit mode, simply check the checkbox next to "Active" and hit the "Save" button.
 
-The "Email to Salesforce" capability has now been enabled.
+The "Email to Salesforce" capability has now been enabled. Hurray!
 
-## 2. - Setting up your "Email to Salesforce" preferences
+## Set up "Email to Salesforce" preferences
 
 The next step is to set up your "Email to Salesforce" preferences so that your Wistia Alerts will be received by the Salesforce.com system.  To do this, log into your Salesforce.com account and click on the "Setup" link in the header (shown on the screenshot below).
 
-`<style center>`{{:salesforce-setup.png?600|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/4f66865387dd4652a5d96e9d88729443feef19fc.png" alt="salesforce-setup" /></div>
 
 This will bring you to a page where you should see a panel titled "Personal Setup" on the left-hand side of the page.  Expand the option that says "Email" and you should see an item labeled "My Email to Salesforce".  Click on this link to bring up the "Email to Salesforce" preferences screen" (shown below).
 
-`<style center>`{{:personal-email-salesforce-pref2.png?600|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/110a1ed991a1706363e5a02d245b9f6bc4318b6c.png" alt="salesforce-3" /></div>
 
-On this screen, simply enter the email address "alerts@wistia.com" in the "My Acceptable Email Addresses" box.  This will enable Salesforce to receive your alert messages from the Wistia system.
+On this screen, simply enter the email address "alerts@wistia.com" in the <span class="code">My Acceptable Email Addresses</span> box.  This will enable Salesforce to receive your alert messages from the Wistia system.
 
-It is also recommend that you uncheck the "Email me confirmation of association" checkbox toward the bottom of the form if it is currently checked.  If this box is not unchecked, you will receive an email at your normal email account every time an alert message is received by Salesforce.
+It is also recommend that you uncheck the <span class="code">Email me confirmation of association</span> checkbox toward the bottom of the form if it is currently checked.  If this box is not unchecked, you will receive an email at your normal email account every time an alert message is received by Salesforce.
 
 When finished, simply click the "Save" button at the bottom of the page.
-## 3. - Adding your Salesforce address in Wistia
 
-To configure your Wistia account to send your alert messages to Salesforce, first copy the "Email to Salesforce Address" shown on the Email to Salesforce configuration screen shown above.  This address will be in the format: emailtosalesforce@xxxxxxxxxxxxxxxxxxx.in.salesforce.com
+## Add Salesforce address in Wistia
+
+To configure your Wistia account to send your alert messages to Salesforce, first copy the "Email to Salesforce Address" shown on the Email to Salesforce configuration screen shown above.  This address will be in the format:
+
+<span class="code">emailtosalesforce@xxxxxxxxxxxxxxxxxxx.in.salesforce.com</span>
 
 Once you have copied that email address, log into your Wistia account.  Under the "Account" tab at the top of any Wistia page, choose the "My Settings" option.  This will bring you to a preferences page where you can configure your personal Wistia settings.  Towards the bottom of the page, underneath the Email Alerts, a Salesforce.com logo is shown with a text box next to it.  Simply paste your Email to Salesforce address into this box and hit the "Save Settings" button at the bottom of the page.
 
-`<style center>`{{:wistia-salesforce.png?500|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/557e502a6969097b0b44cf79d1f7db37ec04863b.png" alt="wistia-salesforce" /></div>
 
 Your Wistia and Salesforce.com integration is now complete!
 
@@ -77,18 +80,18 @@ As mentioned in the introduction, the Wistia/Salesforce.com integration allows y
 
 Once you have completed the above integration steps, the next time that you receive a Wistia Alert, you will also see a new Salesforce Task show up in the "My Task" section of your homepage.  The screenshot below shows how this will appear.
 
-`<style center>`{{:new-salesforce-alerts.png?600|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/78d5cd686f63d770284655309e0dc5efd70ca62b.png" alt="salesforce-new-alerts" /></div>
 
-To to assign the alert to a particular contact, lead, or opportunity simply click on the subject of the Task in the "My Tasks" section.  Once you are on the Task Detail screen, click the edit button to edit the Task. 
+To to assign the alert to a particular contact, lead, or opportunity simply click on the subject of the Task in the "My Tasks" section. Once you are on the Task Detail screen, click the edit button to edit the Task. 
 
-`<style center>`{{:task-detail-salesforce.png?600|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/a0acb3c38d5d9a349c0680af3ea0b10faaeacdde.png" alt="task-detail-salesforce" /></div>
 
 Once you have hit the edit button you will see the "Task Edit" screen similar to the one below.  Here, you can assign this Alert to a Contact, Lead, or Opportunity.  In the specific case shown in the screenshot below, the Task has been associated with the Lead "John Doe".  You can also set up follow-up reminders if they are appropriate.  When finished editing, hit the "Save" button.
 
-`<style center>`{{:task-edit-salesforce.png?600|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/873e3e9e1db0cd7134b5037dc83db6cf68d195dc.png" alt="task-edit-salesforce" /></div>
 
 Now when you go the page in Salesforce.com for the Contact, Lead, or Opportunity you will now see this activity displayed in either the "Open Activities" or "Activity History" depending on the status set when editting the Task.  You can see an example an alert associated with a Lead in the screenshot below.
 
-`<style center>`{{:lead-w-activity.png?600|}}`</style>`
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/dc76965f9a460c806cc268c41ecd1af5423be66b.png" alt="lead-w-activity" /></div>
 
 By using Wistia integrated with Salesforce, you can easily see which prospects are actively engaged with your content to help you better allocate resources and time to the right leads.

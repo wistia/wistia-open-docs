@@ -58,7 +58,6 @@ h1, h2, h3
   color: $title_color
 h1
   font-size: 32px
-  +letterpress(.2, $text_color)
 p
   font-size: 16px
   line-height: 115%
@@ -232,6 +231,8 @@ header
     position: relative
   ol
     list-style: decimal
+    border-left: 10px solid $complementary
+    padding: 0 40px
     li
       margin-top: $padding/2
   a
@@ -276,6 +277,14 @@ span.code
   padding-left: 33px
   display: inline-block
   height: 10px
+
+.help_bubble
+  background: transparent url(http://fast.wistia.com/images/zebra/elements/questionhelp_dark.png) no-repeat
+  padding-left: 28px
+  display: inline-block
+  height: 28px
+  position: relative
+  top: 8px
 
 ////////// post intro paragraph styles ////////
 
@@ -327,7 +336,7 @@ span.code
 
 .video_embed
   margin: $padding 0
-  iframe
+  div
     +box-emboss(0.8, 0.05)
     +outline-border
 

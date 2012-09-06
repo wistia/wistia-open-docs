@@ -2,7 +2,7 @@
 title: Adding Video to Your Website
 layout: post
 category: Embedding
-description: Want to add video to your website but don't know where to start? Here's a quick guide to get you off the ground!
+description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
 post_intro: <div class="post_image intro_image"><img src="http://embed.wistia.com/deliveries/e4fae4cdfda58c83e8444785425e32309c0d1c3b.png" alt="puttingvideo_guide" /></div><p>Putting video on your website is the best way to get your message across.</p><p>The act of putting a video on your website is called <strong>embedding</strong>, and in this guide we're going to show you how to get it done right.</p><p>Embedding video is right for you if you want to:</p><ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul>
 ---
 
@@ -49,6 +49,7 @@ After uploading is complete, Wistia encodes several versions of the video - perf
 
 Clicking this option will take you to the Wistia Embed Screen.  This is where you can make some basic changes to the look and feel of your video presentation.
 
+<div class='clear'></div>
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/fbe53b9002062e623f346aaaf7c850d33b0cd5dc.png" alt="copy_embed_code" /></div>
 
 See our [complete guide to the embed screen](/embed_screen) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
@@ -65,45 +66,24 @@ Once you have copied the embed code, the next step is to paste it into your web 
   2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
   3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
 
-Most users don't have trouble embedding Wistia video. When they do, 
-
 ---
 
-## Step 4. Reviewing Your Embedded Video Stats
+## Embedded Video Stats
 
-<div class="post_image float_right"><img src="/images/trends_dropdown_psharing.png" alt="trends_dropdown_psharing" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/dac7d2599cc3c996b0cf6efa4604b08d8b2df285.png" alt="media_stats_psharing" /></div>
 
-Now that your video is embedded on your webpage, you can use Wistia's tracking analytics to see how your viewers are interacting with the content.  To see how your account is performing as a whole, start by selecting "Trends" from under the Stats drop-down menu.
+Now that your video is embedded on your webpage, you can use Wistia's tracking analytics to see how your viewers are interacting with the content.  
 
-<div class="clear"></div>
-
-<div class="post_image float_right">
-  <img src="/images/mediaactions_dropdown_psharing.png" alt="mediaactions_dropdown_psharing" /></div>
-
-If instead you'd like to jump straight to the stats for a specific video, first open up the video in your account.  Once you are on the media page for that video (where you can watch the video), select "Stats" from under the Media Actions drop-down menu.
+Start by selecting "Stats" from under the <span class="action_menu">Media Actions</span> menu.
 
 <div class="clear"></div>
 
-<div class="post_image float_right">
-  <img src="/images/psharing_projects_list.png" alt="psharing_projects_list" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/5fd2f185054f9b835d27c66ff94f3027c9729c2b.png" alt="psharing_media_stats" /></div>
 
-Selecting "Public &amp; Embed Stats" will take you to the Embedded Video screen, where you can see a list of your videos that are out there in the wild and the number of plays on each.  Choose the video you would like to see stats on by clicking the thumbnail.
+On the video embed stats page, you can see the detailed tracking statistics for each video.
 
-<div class="clear"></div>
+The overall interaction graph shows you how viewers are tuning in and out of your video on aggregate.
 
-<div class="post_image float_right">
-  <img src="/images/psharing_media_stats.png" alt="psharing_media_stats" /></div>
+The individual heatmaps below show each individual viewing instance, right down to the second.
 
-On the video embed stats page, you can see the detailed tracking statistics for each video.  The overall interaction graph shows you how viewers are tuning in and out of your video on aggregate, and the individual heatmaps below show each individual viewing instance, right down to the second.
 
----
-
-## Next Steps
-
-*  You could embed a [video playlist](/playlists.html) based on a Project in your account
-*  Use Wistia's [Video SEO](/video-seo.html) capabilities to bring leads to your website
-*  Create a [video popover](/embed_screen.html) effect, to show off your content without using a lot of screen real estate
-*  Make a [Post-Roll](/embed_screen.html) call-to-action after your video plays
-*  Add the [Social Bar](/embed_screen.html), to give your video player social tools like Facebook Likes
-*  Embed your video in a [Mailchimp campaign](/mailchimp.html)
-*  Use the [video player API](/player-api.html), to control and interact with the Player in your own way

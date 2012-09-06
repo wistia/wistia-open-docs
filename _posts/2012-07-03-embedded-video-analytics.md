@@ -1,5 +1,5 @@
 ---
-title: Wistia Analytics
+title: Embedded Video Analytics
 layout: post
 category: Analytics
 description: Wistia's analytics are designed to help you understand how your audience engages with your content. Dive in to everything you could dream of knowing about Wistia's all time favorite subject, Statistics. 
@@ -211,3 +211,26 @@ Adding a name to a viewer makes it easy to track their viewing sessions in your 
 Once your viewer is tagged with an email, you can sort to view them in the Viewer Stream by clicking the "With Emails" option on the sorting bar.
 
 ---
+
+## Share Your Stats Publicly
+
+
+If you want to share stats for one of your videos by link, we can provide you with a publicly accessible page with anonymized statistics (i.e. the emails are removed!).
+
+However, this functionality is not enabled by default, so before continuing, please [ contact us ]( mailto:support@wistia.com ) to request it to be enabled for your account.
+
+The next step is to craft a link which your site's visitors can use to access your video's statistics.
+
+The URL for the link should be in the form of...
+	
+<span class="code">http://app.wistia.com/stats/&lt;media-id&gt;</span>
+
+...where <span class="code">&lt;media-id&gt;</span> is the unique id representing your video.  You can find the id for a video in the address bar at the top of your browser while you are on the video's page in Wistia.
+
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/8b6f4b90426a391f8cd5c039837cea16403ab00d.png" alt="media-id" /></div>
+
+The characters at the end of the URL are a unique id just for your video.  The id to use from the screenshot below would be **p9wrk3464f**.  So the URL for the stats for that video would be <span class="code">http://app.wistia.com/stats/p9wrk3464f</span>.
+
+The publicly accessible stats page looks similar to the main stats pages, except with identifiable information removed!
+
+<div class="post_image center"><img src="http://embed.wistia.com/deliveries/6a10d13cf62a1b7e9decb92c197611f1b100cd46.png" alt="public-stats-page" /></div>
