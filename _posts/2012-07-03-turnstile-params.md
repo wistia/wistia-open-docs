@@ -5,16 +5,14 @@ description: Want access to the parameters for the Turnstile feature? Ask and ye
 for_developers: true
 ---
 
-## Turnstile Example
-
-<div id="wistia_4d8229898d" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<div id="wistia_4d8229898d" style="width:660px;height:371px;" data-video-width="660" data-video-height="371">&nbsp;</div>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"></script>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1-gridify%2CrequireEmail-v1.js"></script>
 
 <script>/*<![CDATA[*/
 wistiaEmbed = Wistia.embed("4d8229898d", {
-    videoWidth: "640",
-    videoHeight: "360",
+    videoWidth: "660",
+    videoHeight: "371",
     controlsVisibleOnLoad: true
 });
 Wistia.plugin.requireEmail(wistiaEmbed, {
@@ -45,28 +43,37 @@ style option, you can override the default sizing.
 
 ## Iframe Example
 
-<div class="code"><pre><iframe src="http://fast.wistia.com/embed/iframe/abcde12345?videoWidth=640&videoHeight=360&plugin[requireEmail][version]=v1&plugin[requireEmail][topText]=Please enter your email below.&plugin[requireEmail][bottomText]=We may use this email to contact you about the product, but we won't be too pushy.&plugin[requireEmail][style][background]=#660000&plugin[requireEmail][style][color]=#eeffee" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe></pre></div>
+<pre><code class="language-markup">
+<iframe src="http://fast.wistia.com/embed/iframe/abcde12345
+  ?videoWidth=640&videoHeight=360&plugin[requireEmail][version]=v1
+  &plugin[requireEmail][topText]=Please enter your email below.
+  &plugin[requireEmail][bottomText]=We may use this email to contact you about the product, but we won't be too pushy.
+  &plugin[requireEmail][style][background]=#660000&plugin[requireEmail][style][color]=#eeffee" 
+  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" 
+  name="wistia_embed" width="640" height="360">
+</iframe>
+</code></pre>
 
 ## API Embed Example
 
-<div class="code"><pre>
+<pre><code class="language-javascript">
 &lt;div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
 &lt;script src="http://fast.wistia.com/static/E-v1.js"&gt;&lt;/script&gt;
 &lt;script src="http://fast.wistia.com/static/concat/E-v1-gridify,requireEmail-v1.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-wistiaEmbed = Wistia.embed("abcde12345", {
-videoWidth: 640,
-videoHeight: 360
-});
-Wistia.plugin.requireEmail(wistiaEmbed, {
-version: "v1",
-topText: "Please enter your email below.",
-bottomText: "We may use this email to contact you about the product, but we won't be too pushy.",
-style: {
-  background: "#660000",
-  color: "#eeffee"
-}
-});
+  wistiaEmbed = Wistia.embed("abcde12345", {
+    videoWidth: 640,
+    videoHeight: 360
+  });
+  Wistia.plugin.requireEmail(wistiaEmbed, {
+    version: "v1",
+    topText: "Please enter your email below.",
+    bottomText: "We may use this email to contact you about the product, but we won't be too pushy.",
+    style: {
+      background: "#660000",
+      color: "#eeffee"
+    }
+  });
 &lt;/script&gt;
-</pre></div>
+</code></pre>
 

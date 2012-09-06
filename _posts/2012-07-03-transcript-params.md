@@ -27,28 +27,36 @@ description: Want the parameters of the transcripts? Say no more, here they are!
 
 Note that, for <span class="code">onloadCollapse</span> to work, <span class="code">canCollapse</span> must also be true.
 
-## Iframe Example
+## iframe Example
 
-<div class="code"><pre><iframe src="http://fast.wistia.com/embed/iframe/abcde12345?videoWidth=640&videoHeight=360&plugin[transcript][version]=v2&plugin[transcript][position]=below&plugin[transcript][height]=300&plugin[transcript][canDownload]=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="560"></iframe></pre></div>
+<pre><code class="language-markup">
+<iframe src="http://fast.wistia.com/embed/iframe/abcde12345
+  ?videoWidth=640&videoHeight=360&plugin[transcript][version]=v2
+  &plugin[transcript][position]=below&plugin[transcript][height]=300
+  &plugin[transcript][canDownload]=true" 
+  allowtransparency="true" frameborder="0" scrolling="no" 
+  class="wistia_embed" name="wistia_embed" width="640" height="560">
+</iframe>
+</code></pre>
 
 ## API Embed Example
 
-<div class="code"><pre>
+<pre><code class="language-markup">
 &lt;div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
 &lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-wistiaEmbed = Wistia.embed("abcde12345", {
-  version: "v1",
-  videoWidth: 640,
-  videoHeight: 360,
-  controlsVisibleOnLoad: true,
-  playerColor: "aae3d8"
-});
-Wistia.plugin.transcript(wistiaEmbed, {
-  version: "v2",
-  position: "below",
-  height: 300,
-  canDownload: true
-});
-&lt;/script>
-</pre></div>
+  wistiaEmbed = Wistia.embed("abcde12345", {
+    version: "v1",
+    videoWidth: 640,
+    videoHeight: 360,
+    controlsVisibleOnLoad: true,
+    playerColor: "aae3d8"
+  });
+  Wistia.plugin.transcript(wistiaEmbed, {
+    version: "v2",
+    position: "below",
+    height: 300,
+    canDownload: true
+  });
+&lt;/script&gt;
+</code></pre>
