@@ -573,7 +573,7 @@ table tr:hover td {
 }
 
 /* line 414, ../_sass/screen.sass */
-#right_col {
+#right_col, #api_nav_col {
   display: inline-block;
   vertical-align: top;
   width: 260px;
@@ -582,17 +582,17 @@ table tr:hover td {
   position: fixed;
 }
 /* line 421, ../_sass/screen.sass */
-#right_col ul {
+#right_col ul, #api_nav_col ul {
   background-color: white;
   padding: 30px;
 }
 /* line 424, ../_sass/screen.sass */
-#right_col li {
+#right_col li, #api_nav_col li {
   padding: 15px 0;
   border-bottom: 1px dashed #dddddd;
 }
 /* line 427, ../_sass/screen.sass */
-#right_col li:first-of-type {
+#right_col li:first-of-type, #api_nav_col li:first-of-type {
   background-color: #f0af81;
   height: 45px;
   text-align: center;
@@ -605,7 +605,7 @@ table tr:hover td {
   text-shadow: 0 0 0 transparent, 0 1px 0 rgba(107, 103, 96, 0.3);
 }
 /* line 438, ../_sass/screen.sass */
-#right_col li:first-of-type a {
+#right_col li:first-of-type a, #api_nav_col li:first-of-type a {
   position: relative;
   height: 100%;
   font-size: 16px;
@@ -613,27 +613,27 @@ table tr:hover td {
   text-shadow: 0 0 0 transparent, 0 1px 0 rgba(107, 103, 96, 0.3);
 }
 /* line 444, ../_sass/screen.sass */
-#right_col li:first-of-type a:hover {
+#right_col li:first-of-type a:hover, #api_nav_col li:first-of-type a:hover {
   color: white;
 }
 /* line 446, ../_sass/screen.sass */
-#right_col li:last-of-type {
+#right_col li:last-of-type, #api_nav_col li:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 /* line 450, ../_sass/screen.sass */
-#right_col li a {
+#right_col li a, #api_nav_col li a {
   color: #6b6760;
   font-size: 14px;
   text-decoration: none;
 }
 /* line 454, ../_sass/screen.sass */
-#right_col li a:hover {
+#right_col li a:hover, #api_nav_col li a:hover {
   color: #57534c;
 }
 /* line 456, ../_sass/screen.sass */
-#right_col .current > a {
+#right_col .current > a, #api_nav_col .current > a {
   color: #4991c4;
 }
 

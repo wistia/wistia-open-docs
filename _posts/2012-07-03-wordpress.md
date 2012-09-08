@@ -6,9 +6,9 @@ description: Wordpress is one of the most popular blog/website platforms out the
 post_intro: <p>Wistia and Wordpress go together like...chocolate and marshmallow (insert your favorite food pairing).</p><p>Wordpress is a great platform, but it's not always so nice to things like iframes and javascript (which are essential for video embed codes). To prevent issues with your Wistia embeds in Wordpress, we built the <a href="http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin">Wistia Wordpress Plug-in</a>.</p><p>If you're using Wistia with Wordpress, we strongly recommend you install the plug-in!</p>
 ---
 
-<div class="post_image center"><img src="/images/wistia_wordpress.png" alt="wistia_wordpress" /></div>
+<div class="post_image center" style="border:none;"><img src="http://embed.wistia.com/deliveries/1a201481ddaac983f2f573bb3955c556b502f9da.png" alt="wistia_wordpress" /></div>
 
-## Using Wordpress
+## Tips for Using Wordpress
 
 *  When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code.
 
@@ -47,8 +47,7 @@ If you are looking to use your Wordpress page with Wistia's Video SEO tool, you 
 
 To update your Robots.txt file in Wordpress, you will need a special plug-in called 'KB Robots.txt'.  [Read more about the plug-in](http://adambrown.info/b/widgets/kb-robots-txt) and download it for your Wordpress site on their [plug-in page](http://wordpress.org/extend/plugins/kb-robotstxt).
 
-<div class="post_image float_right"><img src="/images/video-seo-setup2.png" alt="video-seo-setup2" /></div>
+<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/ec5f981b2a57494d9ea5bd09fcb3b26a280c8663.png" alt="video-seo-setup2" /></div>
 
-Once the plug-in is installed, you should have a new "Options" menu, and a 'KB Robots.txt' admin page.  This page should give you an editable box to add your Wistia Video SEO 'Robots.txt' line: 'Sitemap: http://app.wistia.com/sitemaps/XXX.xml'.  You can obtain that line from the Video SEO tool.
-
+Once the plug-in is installed, you should have a new *Options* menu, and a *KB Robots.txt* admin page.  This page should give you an editable box to add your Wistia Video SEO 'Robots.txt' line. You will obtain that line from the [Video SEO](/video-seo) area of your account.
 
