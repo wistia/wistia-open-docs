@@ -424,35 +424,36 @@ table
   li
     padding: 15px 0
     border-bottom: 1px dashed #DDD
-    &:first-of-type
-      background-color: $complementary
-      height: 45px
-      text-align: center
-      margin-top: -$padding
-      margin-left: -$padding
-      width: $fixed_column_width - 10
-      padding: 0 5px
-      margin-bottom: $padding/2
-      border-bottom: none
-      +letterpress(.3, $text_color)
-      a
-        position: relative
-        height: 100%
-        font-size: 16px
-        color: white
-        +letterpress(.3, $text_color)
-        &:hover
-          color: white
-    &:last-of-type
-      border-bottom: none
-      margin-bottom: 0
-      padding-bottom: 0
     a
       color: $text_color
       font-size: 14px
       text-decoration: none
       &:hover
         color: $text_color - 20
+  .title_list_item
+    background-color: $complementary
+    height: 45px
+    text-align: center
+    margin-top: -$padding
+    margin-left: -$padding
+    width: $fixed_column_width - 10
+    padding: 0 5px
+    margin-bottom: $padding/2
+    border-bottom: none
+    +letterpress(.3, $text_color)
+    a
+      position: relative
+      height: 100%
+      font-size: 16px
+      color: white
+      +letterpress(.3, $text_color)
+      &:hover
+        color: white
+    &:last-of-type
+      border-bottom: none
+      margin-bottom: 0
+      padding-bottom: 0
+
   .current > a
     color: $wistia_blue
 
@@ -527,3 +528,46 @@ table
 
 #api_nav_col
   @extend #right_col
+  ul
+    height: 450px
+    overflow-y: scroll
+  .title_list_item
+    margin: 0
+    list-style-type: none
+  .header_link
+    border: none
+    border-top: 1px dashed #DDD
+    margin-top: 10px
+    padding-bottom: $padding/6
+    a
+      font-weight: bold
+  .sub_link
+    padding: $padding/6 0
+    border: none
+    a
+      font-size: 12px
+#post.api
+  p, li
+    font-size: 14px
+  h1
+    font-size: 36px
+  h2
+    font-size: 28px
+    color: $title_color
+    background-color: $background_gray
+    padding: $padding/3 $padding
+    margin-left: -30px
+    +letterpress(.6)
+  h3, h5
+    font-weight: bold
+  h3
+    font-size: 20px
+    color: $complementary
+  h4
+    font-size: 16px
+    text-decoration: underline
+    margin: $padding/2 0
+  h5
+    margin: $padding/2 0
+  pre
+    overflow-x: scroll

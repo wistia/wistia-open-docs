@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // getting that nav bar set right //
   (function right_nav() {
-    var h2 = $('h2'),
+    var h_arr = $('h2,h3'),
       h1 = $('.post_title > h1'),
       nav_box_ul = $('ul#page_nav');
 
@@ -10,33 +10,28 @@ $(document).ready(function() {
       return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
     };
 
-    if (h2.length) {
-      h1.attr('id', text_to_id(h1.text()));
-      nav_box_ul.append('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
-    }
-    // if no nav box, then hide it entirely and re-center main post //
-    else {
-      $post_container = $('#post_container');
-      nav_box_ul.hide();
-      $post_width = $post_container.width();
-      $('#container').css("width", $post_width);
-      $('#post_container').css("left", 0);
-    }
+    h1.attr('id', text_to_id(h1.text()));
+    $('#api_nav_col').prepend('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
 
-    h2.each( function() {
+    h_arr.each( function() {
       $this = $(this);
       $this.attr('id', text_to_id($this.text()));
 
-      nav_box_ul.append('<li><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
-
+      if ($this.is('h3')) {
+        nav_box_ul.append('<li class="sub_link"><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
+      }
+      else {
+        nav_box_ul.append('<li class="header_link"><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
+      }
     });
 
     $('#page_nav').onePageNav();
+    $('li.header_link:first').css('border', 'none').css('margin-top', 0).css('padding-top', 0);
 
 
     // get the spacing on the title bar set right
     function space_the_topics_title() {
-      var $topics_title_box = $('#page_nav li:first-child'),
+      var $topics_title_box = $('li.title_list_item'),
         $title_a = $topics_title_box.find('a');
 
       $title_a.css('top', ($topics_title_box.height() - $title_a.height())/2);
