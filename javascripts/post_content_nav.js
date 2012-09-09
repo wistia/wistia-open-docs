@@ -25,9 +25,10 @@ $(document).ready(function() {
 
     h2.each( function() {
       $this = $(this);
-      $this.attr('id', text_to_id($this.text()));
+      $text = $(this).text(),
+      $this.attr('id', text_to_id($this.text())).prepend('<a class="subtopic_anchor" href="#' + $this.attr('id') + '">#</a></li>');
 
-      nav_box_ul.append('<li><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
+      nav_box_ul.append('<li><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
 
     });
 

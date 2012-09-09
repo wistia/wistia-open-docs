@@ -238,6 +238,15 @@ header
   a
     +link-hover
 
+  .subtopic_anchor
+    color: #EEE
+    position: absolute
+    left: 10px
+    +transition-property
+    +transition-duration(.5s)
+    &:hover
+      color: $text_color
+
 
 ///// Span Styles //////
 
@@ -453,6 +462,9 @@ table
       border-bottom: none
       margin-bottom: 0
       padding-bottom: 0
+  .title_list_item.current
+    a
+      color: white
 
   .current > a
     color: $wistia_blue

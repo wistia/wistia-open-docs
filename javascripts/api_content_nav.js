@@ -14,15 +14,21 @@ $(document).ready(function() {
     $('#api_nav_col').prepend('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
 
     h_arr.each( function() {
-      $this = $(this);
+      var $this = $(this);
+
       $this.attr('id', text_to_id($this.text()));
 
+      var $text = $(this).text();
+
       if ($this.is('h3')) {
-        nav_box_ul.append('<li class="sub_link"><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
+        nav_box_ul.append('<li class="sub_link"><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
       }
       else {
-        nav_box_ul.append('<li class="header_link"><a href="#' + $this.attr('id') + '">' + $this.text() + '</a></li>');
+        nav_box_ul.append('<li class="header_link"><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
       }
+
+      $this.attr('id', text_to_id($this.text())).prepend('<a class="subtopic_anchor" href="#' + $this.attr('id') + '">#</a></li>');
+
     });
 
     $('#page_nav').onePageNav();
