@@ -27,7 +27,7 @@ $fixed_column_width: 260px
 //////////// mixins ///////////////
 
 @mixin letterpress($opacity, $base-color: white)
-  text-shadow: 0 0 0 transparent, 0 1px 0 rgba( $base-color, $opacity )
+  text-shadow: 0 0 0 transparent, 0 -1px 1px rgba( $base-color, $opacity )
 
 @mixin box-emboss($opacity, $opacity2)
   box-shadow: rgba(white, $opacity) 0 1px 0, inset rgba( black, $opacity2) 0 1px 0
@@ -140,19 +140,52 @@ header
   padding: $padding
   background-color: white
 
+.quickstart
+  position: relative
+  margin-bottom: $padding
+  text-align: center
+  li
+    display: inline-block
+    position: relative
+    margin-right: 12px
+    border: 1px solid #DDD
+    &:last-child
+      margin-right: 0
+    a
+      width: 150px
+      height: 150px
+      display: block
+      text-decoration: none
+      text-align: center
+      &:hover
+        h3
+          background-color: #DDD - 20
+        img
+          opacity: 1
+      img
+        opacity: 0.7
+      h3
+        padding: 5px 0
+        background-color: #DDD
+        position: relative
+        left: -1px
+        top: -28px
+        width: 152px
+        color: $text_color
+
 .category_title
   margin-bottom: $padding
   h3
-    font-size: 20px
+    font-size: 18px
     margin-bottom: 10px
-    color: $green
-    border-bottom: 1px solid $green
+    color: $text_color
+    border-bottom: 1px solid #DDD
     padding-bottom: 5px
 
 .post_list
   margin-bottom: 10px
   a
-    font-size: 16px
+    font-size: 14px
     +link-hover
 
 //////// post header /////////////
@@ -226,18 +259,18 @@ header
   ul, ol
     padding-left: $padding
     line-height: 150%
+    border-left: 10px solid $complementary
   ul
-    list-style-type: disc
+    list-style-type: none
     position: relative
   ol
     list-style: decimal
-    border-left: 10px solid $complementary
-    padding: 0 40px
     li
       margin-top: $padding/2
   a
     +link-hover
 
+  // those little anchors before each h2 and h3
   .subtopic_anchor
     color: #EEE
     position: absolute
@@ -263,6 +296,7 @@ header
   padding: 2px 4px
   margin-left: 3px
   font-size: 13px
+  text-transform: uppercase
 
 .code
   background-color: $background_gray
@@ -381,6 +415,9 @@ table
       td
         background: #8C8C8C
         color: #FFF
+      a
+        color: white
+        text-decoration: underline
 
 ////// EMBED SCREEN ////////
 
@@ -439,6 +476,10 @@ table
       text-decoration: none
       &:hover
         color: $text_color - 20
+    &:last-of-type
+      border-bottom: none
+      margin-bottom: 0
+      padding-bottom: 0  
   .title_list_item
     background-color: $complementary
     height: 45px
@@ -458,16 +499,15 @@ table
       +letterpress(.3, $text_color)
       &:hover
         color: white
-    &:last-of-type
-      border-bottom: none
-      margin-bottom: 0
-      padding-bottom: 0
+
   .title_list_item.current
-    a
+    a, &:hover
       color: white
 
   .current > a
     color: $wistia_blue
+    &:hover
+      color: $wistia_blue
 
 ///// utility classes ///////
 

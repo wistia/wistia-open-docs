@@ -127,3 +127,15 @@
   * Max K went through and added descriptions to each post - gonna be awesome for search results.
   * Will be using the Bakery to serve images for the doc.  Pulling new images page-by-page (fun!) uploading them to Bakery, and then placing delivery URLs in as img src.  
   * Added javascript to re-size images dynamically based on class.
+
+## Sep 7 ##
+* Fell behind again - will have to check the commit logs to catch this document up.  Has been mostly image stuff.
+* Brendan did some awesome work on the technical backbone of the doc - still need to comb through his updates more closely.
+* Images have been pulled, moved to the bakery, and inserted.
+* Data API page is next
+
+## Sep 9 ##
+* Data API is done - in one brilliant explosion of light, energy, and caffeine. Moved over, hundreds of lines of markup removed, it was great.
+* Attacking 'Quickstart' Guide and Randor Pages next, TODO: get Joe on main page?
+* UPDATE: no quickstart guide - it would be too long, and I don't think anyone would use it. Instead, Github style 'bootcamp' quickstart (group of pages up top).
+* Got some work done on that tonight
