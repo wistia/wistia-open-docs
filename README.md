@@ -17,10 +17,11 @@ Based on markdown syntax by [John Gruber](http://daringfireball.net/projects/mar
 To add a new post, use *rake np title=FOO* - this will create post file in directory w date and title slug w Yaml
 
 ### To see changes ###
-**rake preview** to bundle site, launch local server, and track changes to site/styling (if this fails, remove 'Indexer' plugin)
+**rake preview** to bundle site, launch local server, and track changes to site/styling
+*Note:* Changes to layouts, includes, etc. should be done on the HAML file itself, and then re-run **rake preview**.
 
-### For running search locally ###
-Install elasticsearch ([here](http://www.elasticsearch.org/download/) or install via homebrew '*brew install elasticsearch*'
-**gem install tire** (also included in bundler as a production gem)
-**rake test_search** this will launch a foreman instance (*Procfile_search*) running both Elasticsearch and a Sinatra App w/ Tire
+### Re: Images ###
+Images get uploaded to the Bakery - currently live in Jeff's account, but will be moved to Home account in the future.
 
+### Styling ###
+Wistia Doc uses sass and Compass. See more about Compass: http://compass-style.org/
