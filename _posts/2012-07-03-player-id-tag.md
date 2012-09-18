@@ -2,9 +2,9 @@
 title: Embed Code Id Tagging
 layout: post
 category: For Developers
-for_developers: true
 description: Pass an ID for each viewer to your stats through the player API using these simple steps!
 post_intro: <p>Using the Video Player API, you can create simple ID tagging that passes user info into your Wistia stats.  Your two options for executing this is:</p> <ol><li>using the <span class="code">wemail=</span> URL query string</li><li>a separate function using the trackEmail embed option.</li></ol>
+footer: 'for_developers'
 ---
 
 ## URL Query String Approach

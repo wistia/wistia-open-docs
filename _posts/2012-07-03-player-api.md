@@ -1,68 +1,86 @@
 ---
 layout: post
 category: For Developers
-for_developers: true
 title: Wistia Video Player API
 description: The Wistia player has a built in Javascript API, providing you with a variety of ways to create awesome functions and interact with the player.
-post_intro: <p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p><p><strong>Note:</strong> for custom javascript you write to interface with a Wistia embed, add it to your source *under* the Wistia embed (ie. the footer).</p>
+post_intro: <p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p><p><strong>Note:</strong> for custom javascript you write to interface with a Wistia embed, add it to your source <em>under</em> the Wistia embed (ie. the footer).</p>
+footer: 'for_developers'
 ---
 
-## The Methods
+## Methods
 
-Method                  | Description 
+Method                  | Description
 ------                  | -----------
 bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", and "timechange".
-duration()              | Returns the length of the video in seconds                                                                  
-height()                | Gets the current height of the embed (the video plus any plugins above or below).                                                         
-height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.                                              
-name()                  | Returns the name of the video                                                                                                             
-pause()                 | This causes the video player to pause the video if it is currently playing.                                                               
-play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.                                          
-ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.     
-setEmail(email)         | Associates the email string with this view of the video.                                                                                      
-state()                 | This returns the current state of the video player: "unknown" (a.k.a not started), "ended", "playing", "paused".                            
-time()                  | This returns the viewer's current position in the video (in seconds).                                                                     
-time(t)                 | This causes the video player to seek to time specified by the ''t'' parameter (in seconds).                                                 
-unbind(event, function) | Lets you remove a previously binded function from an event. If function is not specified, all bindings for the event will be removed.         
-videoHeight()           | Gets the current height of the video, excluding any plugins.                                                                                
-videoHeight(h)          | Sets the height of the video. The height of the embed will be automatically resized to fit the plugins.                                     
-videoWidth()            | Gets the current width of the video, excluding any plugins.                                                                                   
-videoWidth(w)           | Sets the width of the video. The width of the embed will be automatically resized to fit the plugins.                                 
-volume()                | Returns the current volume level. Value between 0 and 1.                                                                              
-volume(level)           | Sets the current volume level. 'level' is a decimal value between 0 and 1.                                                          
-width()                 | Gets the current width of the embed (the video plus any plugins on the left and right).                                             
-width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.                                       
+duration()              | Returns the length of the video in seconds
+height()                | Gets the current height of the embed (the video plus any plugins above or below).
+height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.
+name()                  | Returns the name of the video
+pause()                 | This causes the video player to pause the video if it is currently playing.
+play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.
+ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.
+setEmail(email)         | Associates the email string with this view of the video.
+state()                 | This returns the current state of the video player: "unknown" (a.k.a not started), "ended", "playing", "paused".
+time()                  | This returns the viewer's current position in the video (in seconds).
+time(t)                 | This causes the video player to seek to time specified by the ''t'' parameter (in seconds).
+unbind(event, function) | Lets you remove a previously binded function from an event. If function is not specified, all bindings for the event will be removed.
+videoHeight()           | Gets the current height of the video, excluding any plugins.
+videoHeight(h)          | Sets the height of the video. The height of the embed will be automatically resized to fit the plugins.
+videoWidth()            | Gets the current width of the video, excluding any plugins.
+videoWidth(w)           | Sets the width of the video. The width of the embed will be automatically resized to fit the plugins.
+volume()                | Returns the current volume level. Value between 0 and 1.
+volume(level)           | Sets the current volume level. 'level' is a decimal value between 0 and 1.
+width()                 | Gets the current width of the embed (the video plus any plugins on the left and right).
+width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.
 
 ## Using the API
 
-Accessing the Player API is different depending on the type of embed code you're using.
+It is possible to access the javascript API using any embed type: API, SEO, or iframe. If you are using the iframe API, you will need to insert the [iframe player API script](/iframe-api.html) at the bottom of your page. In our voyage for simplicity, we want to make the iframe API and Javascript interaction with it easier (so that someday only the iframe embed code type will be necessary).
 
-*  For the iframe embed code (this is the default embed type), you can use [the iframe player API](/iframe-api.html).
-*  Or, if you're using the API embed code, you can access the JavaScript API directly.
+If you are having trouble using the Player API, or just want to show off what you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
 
-### iframe embed code
+### The 'wistiaEmbed' Variable
 
-To access the API when using iframe embed codes, you just need to include an extra script on your page and you're off to the races. Take a look at the [iframe player API page](/iframe-api.html) for all the details.
-
-### API embed code
-
-The 'API' version of the Wistia embed codes includes a variable <span class="code">wistiaEmbed</span> to make this easy.
+The *API* version of the Wistia embed codes includes a variable <span class="code">wistiaEmbed</span> to make this easy.
 
 <pre><code class="language-javascript">
 var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });
 </code></pre>
 
-In this instance, you can reference the video object using the **''wistiaEmbed''** variable.  If you have multiple videos on your page, you should update this variable to something specific to this video.
+You can reference the video object using the **''wistiaEmbed''** variable.  If you have multiple videos on your page, you should update this variable to something specific to this video.
 
 As an example, if the following JS code is executed, the video will start to play:
 
-<style center>wistiaEmbed.play();{javascript}</style>
+<div class="code"><pre>wistiaEmbed.play();{javascript}</pre></div>
 
 ## Examples
 
-### Trigger an event at a specific time
+To get you making video magic as fast as possible, here are some examples of common javascript player API projects.
 
-Wistia's video player API provides functionality to easily accomplish common goals.
+### Start Video Playback at a Specific Time
+
+In this example, you want the video to skip ahead a certain amount of time when the viewer presses 'play'. This utilizes the <span class="code">bind on play</span> functionality built into the API.
+
+<pre><code class="language-javascript">
+<div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("29b0fbf547", {
+  version: "v1",
+  videoWidth: 640,
+  videoHeight: 360,
+  playerColor: "4991C4"
+});
+// insert the 'bind on play' function
+wistiaEmbed.bind('play', function() {
+  // use the .time() method to jump ahead 10 seconds
+  wistiaEmbed.time(10);
+});
+</script>
+</code></pre>
+
+
+### Trigger an event at a specific time
 
 In this example, let's assume that we want to fire a Javascript function when the viewer gets 60 seconds into the video. In order to accomplish this, we only need the bind method from the API.  The Javascript code can be seen below:
 

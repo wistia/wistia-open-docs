@@ -2,9 +2,9 @@
 title: Wistia Playlist API
 layout: post
 category: For Developers
-for_developers: true
 description: Wistia Playlists have an API which give you access to its functionality and behavior! 
 post_intro: <p>Wistia playlists have a javascript API which gives you control over its behavior, and gives you access to the <a href="/player-api.html">Player API</a> for the currently embedded video.</p>
+footer: 'for_developers'
 ---
 
 ## The Methods
@@ -47,6 +47,8 @@ As an example, if the following JS code is executed, the email address "max@wist
 Or if I wanted to pause the current video:
 
 <pre><code class='language-javascript'>wistiaPlaylist.currentVideo().pause()</code></pre>
+
+If you are having trouble using the Player API, or just want to show off what you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
 
 ## Embedding Options
 

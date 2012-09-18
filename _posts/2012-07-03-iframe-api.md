@@ -2,6 +2,7 @@
 title: iframe Video Player API
 description: Full documentation for accessing the Player API through an iframe embed code!
 layout: post
+footer: 'for_developers'
 ---
 
 Accessing the [Video Player API](/player-api.html) when using iframe embeds is easy!
@@ -24,13 +25,24 @@ Now you can access the API by getting the <span class="code">wistiaApi</span> pr
 You can assign an ID to each wistia iframe so you can get an easy handle to it.
 Take a look:
 
-<div class="code">
-<pre>wistiaEmbed = document.getElementById("my_iframe").wistiaApi;
+<pre><code class="language-javascript">
+wistiaEmbed = document.getElementById("my_iframe").wistiaApi;
+wistiaEmbed.bind("end", function() {
+  alert("The video ended!");
+});
+wistiaEmbed.time(30).play();
+</code></pre>
+
+or in jQuery:
+
+<pre><code class="language-javascript">
+wistiaEmbed = jQuery("#my_iframe")[0].wistiaApi;
 wistiaEmbed.bind("end", function() {
   alert("The video ended!");
 });
 wistiaEmbed.time(30).play();
 </pre></div>
+
 
 Take a look at the [Video Player API](/player-api.html) for the full documentation on what's possible.
 

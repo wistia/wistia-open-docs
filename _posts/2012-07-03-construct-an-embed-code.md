@@ -3,7 +3,7 @@ title: Constructing an embed code
 layout: post
 category: For Developers
 description: Learn how to construct an embed code starting with just the video ID!
-for_developers: true
+footer: 'for_developers'
 ---
 
 As long as you have the hashed_id for a video, you can easily produce an embed code without even hitting our servers!

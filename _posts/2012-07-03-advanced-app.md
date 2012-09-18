@@ -4,6 +4,7 @@ layout: post
 category: For Developers
 description: Create sweet advanced functions on top of your videos within the Wistia app with these tutorials.
 post_intro: <p>If you want to customize the experience your viewers have when watching videos inside your Wistia account, start here.</p>
+footer: 'for_developers'
 ---
 
 ## Seek to a specific time on page load

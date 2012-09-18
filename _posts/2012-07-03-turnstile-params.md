@@ -2,7 +2,7 @@
 layout: post
 title: Turnstile Params
 description: Want access to the parameters for the Turnstile feature? Ask and ye shall receive. 
-for_developers: true
+footer: 'for_developers'
 ---
 
 <div id="wistia_4d8229898d" style="width:660px;height:371px;" data-video-width="660" data-video-height="371">&nbsp;</div>

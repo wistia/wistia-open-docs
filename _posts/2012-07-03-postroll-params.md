@@ -2,7 +2,7 @@
 layout: post
 title: Postroll Parameters
 description: Need to find the parameters for the post roll call to action feature? Look no further, they're all here!
-for_developers: true
+footer: 'for_developers'
 ---
 
 ### Postroll Example (jump to the end!)

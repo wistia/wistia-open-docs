@@ -2,7 +2,7 @@
 title: Social Bar Params
 layout: post
 description: Want access to the social button parameters? Here they are in all of their glory. 
-for_developers: true
+footer: 'for_developers'
 ---
 
 ## Social Sharing Example

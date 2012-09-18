@@ -3,6 +3,7 @@ title: Salesforce.com
 layout: post
 description: Wistia's built in alert system can be easily integrated with your Salesforce account to keep track of your leads' video viewing activity. 
 category: Integrations
+footer: 'for_intermediates'
 ---
 
 Many organizations that use video in their sales process also use Salesforce.com to manage their leads, opportunities, and sales pipelines.  As a result, Wistia has integrated with Salesforce.com to allow Salesforce.com users to associate activity in their Wistia account with contacts, leads, and opportunities in Salesforce.com.

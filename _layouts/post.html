@@ -20,7 +20,7 @@ type: post
       {{ content }}
     </div>
     <div class='post_footer'>
-      {% if page.for_developers == true %}{% include for_developers.html %}{% else %}{% include for_beginners.html %}{% endif %}
+      {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
     </div>
   </div>
 </div>

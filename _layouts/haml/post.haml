@@ -17,8 +17,8 @@ type: post
         {{ page.post_intro }}
       {% endif %}
       {{ content }}
-    .post_footer 
-      {% if page.for_developers == true %}{% include for_developers.html %}{% else %}{% include for_beginners.html %}{% endif %}
+    .post_footer
+      {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
 
 %script{ src:'/javascripts/post_content_nav.js', type:'text/javascript' }
 %script{ src: '/javascripts/jquery.scrollTo.js' }

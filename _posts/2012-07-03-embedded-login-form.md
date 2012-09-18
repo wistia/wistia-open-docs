@@ -2,6 +2,7 @@
 title: Embedded Login Form
 description: Want to embed a Wistia login form for your private viewers? Here's how!
 layout: post
+footer: 'for_developers'
 ---
 
 It's easy to embed a Wistia login form on your website and style it how you like. Use the code below as a template, but substitute your Wistia account hostname for app.wistia.com. For example, if your account is located at http://myaccount.wistia.com, then you'd change all instances of http://app.wistia.com with http://myaccount.wistia.com.

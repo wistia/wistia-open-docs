@@ -4,7 +4,7 @@ title: Account Setup
 layout: post
 category: Account Management
 description: Questions about admin type stuff? Account Dashboards? Billing statements? Don't worry, we've got it all covered right here.
-
+footer: 'for_intermediates'
 ---
 
 <div class="video_embed">
