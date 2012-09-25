@@ -1,6 +1,6 @@
 ---
 title: Wistia Playlist API
-layout: post
+layout: api
 category: For Developers
 description: Wistia Playlists have an API which give you access to its functionality and behavior! 
 post_intro: <p>Wistia playlists have a javascript API which gives you control over its behavior, and gives you access to the <a href="/player-api.html">Player API</a> for the currently embedded video.</p>
@@ -66,55 +66,16 @@ videoOptions    | object  | Specify embedding options for each video as specifie
 
 ## Playlist API Examples
 
+### Use a Link to Start a Specific Video or Playlist Section
+
+Using the <span class="code">play(sectionIndex, videoIndex)</span> method, you can build a link that will start a specific Section or Video for you.
+
+Check out how to get it done in the [Demobin](http://wistia.github.com/demobin/playlist-control-links/).
+
+---
+
 ### Load a random video on page load
 
-To load a random video from your playlist on page load, and then play a random video after each video ends, use script like this:
+You can load a random video from your playlist on page load, and then play a random video after each video ends, using a the playlistData methods, and a bind on "end".
 
-<pre><code class="language-javascript">
-&lt;div id="wistia_1d35830d05" class="wistia_embed" style="width:640px;height:503px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
-&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1%2Cplaylist-v1%2Cplaylist-v1-bento.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-wistiaPlaylist = Wistia.playlist("1d35830d05", {
-  version: "v1",
-  theme: "bento",
-  videoOptions: {
-    autoPlay: false,
-    videoWidth: 640,
-    videoHeight: 360
-  },
-  media_0_0: {
-    autoPlay: false,
-    controlsVisibleOnLoad: false
-  },
-  bento: {
-    menuPosition: "bottom"
-  }
-});
-
-function playlist_count(playlist) {
-  var video_inc = 0,
-  section_inc = 0;
-
-  playlist.eachSection( function() {
-    section_inc += 1;
-  })
-  playlist.eachVideo( function() {
-    video_inc += 1;
-  });
-  return [section_inc - 1, video_inc - 1];
-};
-
-function rand(num) {
-  return Math.floor(Math.random() * num);
-};
-
-wistiaPlaylist.ready( function() {
-
-  wistiaPlaylist.embed( rand(playlist_count(wistiaPlaylist)[0]), rand(playlist_count(wistiaPlaylist)[1]) );
-  wistiaPlaylist.bind('end', function() {
-    wistiaPlaylist.embed( rand(playlist_count(wistiaPlaylist)[0]), rand(playlist_count(wistiaPlaylist)[1]) );
-  });
-
-});
-&lt;/script&gt;
-</code></pre>
+Check out how it works in the [Demobin](http://wistia.github.com/demobin/random-playlist-video/).

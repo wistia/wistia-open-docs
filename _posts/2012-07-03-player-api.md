@@ -7,7 +7,7 @@ post_intro: <p>The Wistia video player has a JavaScript API which supports a num
 footer: 'for_developers'
 ---
 
-## Methods
+## Player API Methods
 
 Method                  | Description
 ------                  | -----------
@@ -51,39 +51,39 @@ You can reference the video object using the **''wistiaEmbed''** variable.  If y
 
 As an example, if the following JS code is executed, the video will start to play:
 
-<div class="code"><pre>wistiaEmbed.play();{javascript}</pre></div>
+<div class="code"><pre>wistiaEmbed.play();</pre></div>
 
 ## Embedding Options
 
 In our example embed **''Wistia.embed("bfc34aa023", { ... options ... });''** there are two arguments: the media's hashed ID, and a set of embedding options. Here is a list of available options:
 
- | Option Name           | Type    | Description
- | -----------           | ----    | -----------
- | autoPlay              | boolean | flash/html5 only. Doesn't work on mobile. When true, the video plays as soon as it's ready.
- | canonicalTitle        | string  | The title of the page, used for social features.
- | canonicalUrl          | string  | The url of the page, used for social features.
- | chromeless            | boolean | flash only. When true, player is created without controls.
- | container             | string  | The element that should container the embed. Defaults to wistia_{hashed_id}
- | controlsVisibleOnLoad | boolean | flash only. When true, controls are visible before you click play.
- | doNotTrack            | boolean | When true, embed will not track views.
- | endVideoBehavior      | string  | flash only. Behavior when the video ends: default/reset/loop.
- | fullscreenButton      | boolean | Show fullscreen button. Default is true.
- | pageUrl               | string  | The page that the embed thinks it's embedded on. Defaults to the current page.
- | platformPreference    | string  | Accepts: 'flash', 'html5', or 'external'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'flash'.
- | playButton            | boolean | flash/external only. When true, display play button over video poster.
- | playbar               | boolean | Show playbar. Default is true.
- | playerColor           | string  | Set custom color on play button/controls. HTML5 player has access to custom play button color only.
- | smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.
- | stillUrl              | string  | The still image that should appear before the video is played.
- | trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
- | videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the [iframe API](/iframe-api.html). API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam) |
- | videoQuality          | string  | Specify the starting video quality. sd-only/hd-only/auto
- | videoWidth            | integer | The original width of the video.
- | videoHeight           | integer | The original height of the video.
- | volumeControl         | boolean | Show volume control. Default is false.
- | wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
+Option Name           | Type    | Description
+-----------           | ----    | -----------
+autoPlay              | boolean | flash/html5 only. Doesn't work on mobile. When true, the video plays as soon as it's ready.
+canonicalTitle        | string  | The title of the page, used for social features.
+canonicalUrl          | string  | The url of the page, used for social features.
+chromeless            | boolean | flash only. When true, player is created without controls.
+container             | string  | The element that should container the embed. Defaults to wistia_{hashed_id}
+controlsVisibleOnLoad | boolean | flash only. When true, controls are visible before you click play.
+doNotTrack            | boolean | When true, embed will not track views.
+endVideoBehavior      | string  | flash only. Behavior when the video ends: default/reset/loop.
+fullscreenButton      | boolean | Show fullscreen button. Default is true.
+pageUrl               | string  | The page that the embed thinks it's embedded on. Defaults to the current page.
+platformPreference    | string  | Accepts: 'flash', 'html5', or 'external'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'flash'.
+playButton            | boolean | flash/external only. When true, display play button over video poster.
+playbar               | boolean | Show playbar. Default is true.
+playerColor           | string  | Set custom color on play button/controls. HTML5 player has access to custom play button color only.
+smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.
+stillUrl              | string  | The still image that should appear before the video is played.
+trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
+videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the [iframe API](/iframe-api.html). API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam) |
+videoQuality          | string  | Specify the starting video quality. sd-only/hd-only/auto
+videoWidth            | integer | The original width of the video.
+videoHeight           | integer | The original height of the video.
+volumeControl         | boolean | Show volume control. Default is false.
+wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
 
-### Miscellaneous Options
+### Using Options
 
 To show how options work, suppose I want to embed a video that defaults to the HTML5 player and plays automatically on page load. I might alter the embed javascript to look like this:
 
@@ -96,7 +96,22 @@ var wistiaEmbed = Wistia.embed("bfc34aa023", {
 });
 </code></pre>
 
-## Examples
+---
+
+## Plugin Options
+
+Our plugins have a lot of options too! Check them out:
+
+*  [Socialbar](/socialbar-params.html)
+*  [Post-Roll Call To Action](/postroll-params.html)
+*  [Interactive Transcript](/transcript-params.html)
+*  [Turnstile Email Capturing](/turnstile-params.html)
+
+And if you're looking at these, you might want more info on [constructing an embed code](/construct-an-embed-code.html).
+
+---
+
+## Player API Examples
 
 To get you making video magic as fast as possible, here are some examples of common javascript player API projects. We have also moved many of the more involved examples over to our [demobin](http://wistia.github.com/demobin) for your review.
 
@@ -178,6 +193,26 @@ At this time, the "type" of conversion is always 'pre-roll-email', and the "val"
 
 ---
 
+### Mute the Video on Load
+
+<pre><code class="language-javascript">
+&lt;div id="wistia_tlb0v41zjd" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+wistiaEmbed = Wistia.embed("tlb0v41zjd", {
+  version: "v1",
+  videoWidth: 640,
+  videoHeight: 360,
+  volumeControl: true,
+  controlsVisibleOnLoad: true,
+  playerColor: "4991C4"
+});
+wistiaEmbed.volume(0);
+&lt;/script&gt;
+</code></pre>
+
+---
+
 ### Selective Autoplay (Autoplay for viewers from specific sources)
 
 Selective Autoplay will automatically play your embedded video based on the presence of a query string you specify.
@@ -200,6 +235,13 @@ function playFunc() {
 wistiaEmbed.bind("play", playFunc);
 </script>
 </code></pre>
+
+---
+### Add Custom Pre-Roll to Your Videos
+
+By binding the loading of a second video on the 'end' event of the first one, it is easy to create your own custom 'pre-roll' videos.
+
+See the full demo on our [Custom Pre-Roll Demo Page](http://wistia.github.com/demobin/custom-pre-roll/).
 
 ---
 
@@ -229,13 +271,19 @@ HTML5 player instances are still controllable through our standard javascript [p
 
 ---
 
-## Plugin Options
+### Set the background of your video to transparent
 
-Our plugins have a lot of options too! Check them out:
+If you are embedding a Wistia video on a website with a white background, the natural black background of the Wistia player can look a little out of place. Instead, using a <span class='code'>wmode=transparent</span> string parameter, the background of the player loading can be set to transparent.
 
-*  [Socialbar](/socialbar-params.html)
-*  [Post-Roll Call To Action](/postroll-params.html)
-*  [Interactive Transcript](/transcript-params.html)
-*  [Turnstile Email Capturing](/turnstile-params.html)
+So a finished iframe embed code would look something like this:
 
-And if you're looking at these, you might want more info on [constructing an embed code](/construct-an-embed-code.html).
+<pre><code class="language-markup">
+<iframe src="http://fast.wistia.com/embed/iframe/e4a27b971d?
+controlsVisibleOnLoad=true&playerColor=4991C4&version=v1
+&videoHeight=360&videoWidth=640&wmode=transparent" 
+allowtransparency="true" frameborder="0" scrolling="no" 
+class="wistia_embed" name="wistia_embed" width="640"
+height="360"></iframe>
+</code></pre>
+
+

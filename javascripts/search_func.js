@@ -4,7 +4,7 @@ $(document).ready(function() {
     results_json;
 
   function send_search(query, callback) {
-    $.getJSON("http://localhost:9393/search/" + query + "?format=json&amp;callback=?", function(data) { 
+    $.getJSON( WistiaDoc.search_app_url() + query + "?format=json&amp;callback=?", function(data) { 
       callback(data);
     });
   }
