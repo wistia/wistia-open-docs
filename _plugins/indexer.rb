@@ -26,7 +26,7 @@ module Jekyll
       print 'Indexing posts... '
 
       # get all the posts
-      all_posts = site.posts.map { |post| hash_for_post(post) }
+      all_posts = site.posts.select{ |post| post.data['category'] != "no_index"}.map { |post| hash_for_post(post) }
 
       Tire.index 'posts' do
 
