@@ -1,7 +1,7 @@
 $(document).ready(function() {
   function perform_search() {
     var entered_query = $('#search_text').val().replace(/ /g, '_');
-    window.location.replace( WistiaDoc.web_app_url() + "/search?query=" + entered_query );
+    window.location.replace( "/search?query=" + entered_query );
   }
 
   $('#search_button').on('click', function() {
