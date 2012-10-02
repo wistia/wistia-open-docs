@@ -46,10 +46,10 @@ end
 
 
 # note: this is only for production, be careful it will erase your shit
-desc "Auto-update the doc"
-task :nuclear_update => [:update_from_git, :pre_jekyll, :build]
+desc "Auto-update the doc. DONT DO THIS LOCALLY!!!!!!"
+task :nuclear_update => [:update_from_git, :build]
 
-desc "Updates from origin/master"
+desc "Updates from origin/master. DONT DO THIS LOCALLY!!!!!"
 task :update_from_git do
   `git fetch && git reset --hard origin/master`
 end

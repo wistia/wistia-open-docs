@@ -12,7 +12,14 @@ set :public_folder, Proc.new { File.join( root , '_site') }
 # fix so foreman gets logging
 $stdout.sync = true
 
-get "/search/:q" do
+
+# this is for development, so we can load 
+get "/doc/*" do |path|
+  send_file File.join(settings.public_folder, path, 'index.html')
+end
+
+
+get "/doc/search/:q" do
   q = params[:q]
 
   q.gsub!("_", " ")
@@ -41,7 +48,7 @@ end
 
 # github will hit this URL after a commit so we can auto-update
 # the doc. omg this is cool.
-post '/update' do
+post '/doc/update' do
   spawn('rake', 'nuclear_update', chdir: File.dirname(__FILE__))
   'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
 end
