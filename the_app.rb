@@ -7,6 +7,8 @@ require 'pp'
 require 'sinatra'
 require 'haml'
 
+set :public_folder, Proc.new { File.join( root , '_site') }
+
 # fix so foreman gets logging
 $stdout.sync = true
 
