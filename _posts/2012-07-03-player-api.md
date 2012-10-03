@@ -7,6 +7,26 @@ post_intro: <p>The Wistia video player has a JavaScript API which supports a num
 footer: 'for_developers'
 ---
 
+## Using the API
+
+It is possible to access the javascript API using any embed type: API, SEO, or iframe. If you are using the iframe API, you will need to insert the [iframe player API script](/iframe-api.html) at the bottom of your page. In our voyage for simplicity, we want to make the iframe API and Javascript interaction with it easier (so that someday only the iframe embed code type will be necessary).
+
+If you are having trouble using the Player API, or just want to show off what you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
+
+### The 'wistiaEmbed' Variable
+
+The *API* version of the Wistia embed codes includes a variable <span class="code">wistiaEmbed</span> to make this easy.
+
+<pre><code class="language-javascript">
+var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });
+</code></pre>
+
+You can reference the video object using the **''wistiaEmbed''** variable.  If you have multiple videos on your page, you should update this variable to something specific to this video.
+
+As an example, if the following JS code is executed, the video will start to play:
+
+<div class="code"><pre>wistiaEmbed.play();</pre></div>
+
 ## Player API Methods
 
 Method                  | Description
@@ -33,25 +53,7 @@ volume(level)           | Sets the current volume level. 'level' is a decimal va
 width()                 | Gets the current width of the embed (the video plus any plugins on the left and right).
 width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.
 
-## Using the API
 
-It is possible to access the javascript API using any embed type: API, SEO, or iframe. If you are using the iframe API, you will need to insert the [iframe player API script](/iframe-api.html) at the bottom of your page. In our voyage for simplicity, we want to make the iframe API and Javascript interaction with it easier (so that someday only the iframe embed code type will be necessary).
-
-If you are having trouble using the Player API, or just want to show off what you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
-
-### The 'wistiaEmbed' Variable
-
-The *API* version of the Wistia embed codes includes a variable <span class="code">wistiaEmbed</span> to make this easy.
-
-<pre><code class="language-javascript">
-var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });
-</code></pre>
-
-You can reference the video object using the **''wistiaEmbed''** variable.  If you have multiple videos on your page, you should update this variable to something specific to this video.
-
-As an example, if the following JS code is executed, the video will start to play:
-
-<div class="code"><pre>wistiaEmbed.play();</pre></div>
 
 ## Embedding Options
 
