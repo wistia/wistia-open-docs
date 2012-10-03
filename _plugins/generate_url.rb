@@ -2,10 +2,15 @@
 module Jekyll
 
   module AssetFilter
-    def post_link_url(input)
-      baseurl = @context.registers[:site].config["baseurl"]
-      "#{baseurl}/#{input}"
+    def post_url(input)
+      "/doc/#{input}"
     end
+
+    def category_url(cat)
+      cat_dir = @context.registers[:site].config['category_dir']
+      "#{cat_dir}/#{CategoryIndex.normalize_name(cat)}"
+    end
+
   end
 
 end

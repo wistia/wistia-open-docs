@@ -3,14 +3,14 @@
     %ul
       {% if page.type != 'post' %}
       %li#breadcrumbs
-        %a{ href: "{{ '/' | asset_url }}" } Doc Main
+        %a{ href: "{{ '/doc' | asset_url }}" } Doc Main
         %span.breadcrumb_post_title
           &gt;
           {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
       {% else %}
       %li#breadcrumbs
         {% if page.category %}
-        %a{ href: "/categories/{{ page.category | downcase | replace: ' ', '_' }}" } {{ page.category }}
+        %a{ href: "{{ page.category | category_url }}" } {{ page.category }}
         {% else %}
         %a{ href: "{{ '/' | asset_url }}" } Doc Main
         {% endif %}

@@ -48,6 +48,10 @@ module Jekyll
   # The CategoryIndex class creates a single category page for the specified category.
   class CategoryIndex < Page
     
+    def self.normalize_name(name)
+      name.downcase.gsub(/ /, '-')
+    end
+
     # Initializes a new CategoryIndex.
     #
     #  +base+         is the String path to the <source>.
@@ -57,7 +61,7 @@ module Jekyll
       @site = site
       @base = base
       @dir  = category_dir
-      @name = "#{category.downcase.gsub(/ /, '_')}.html"
+      @name = "#{self.class.normalize_name(category)}/index.html"
       self.process(@name)
       # Read the YAML data from the layout page.
       self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
@@ -68,7 +72,7 @@ module Jekyll
       meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Category: '
       self.data['description'] = "#{meta_description_prefix}#{category}"
     end
-    
+
   end
   
   

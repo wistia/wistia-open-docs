@@ -3,7 +3,7 @@
     <ul>
       {% if page.type != 'post' %}
       <li id='breadcrumbs'>
-        <a href="{{ '/' | asset_url }}">Doc Main</a>
+        <a href="{{ '/doc' | asset_url }}">Doc Main</a>
         <span class='breadcrumb_post_title'>
           &gt;
           {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
@@ -12,7 +12,7 @@
       {% else %}
       <li id='breadcrumbs'>
         {% if page.category %}
-        <a href="/categories/{{ page.category | downcase | replace: ' ', '_' }}">{{ page.category }}</a>
+        <a href='{{ page.category | category_url }}'>{{ page.category }}</a>
         {% else %}
         <a href="{{ '/' | asset_url }}">Doc Main</a>
         {% endif %}

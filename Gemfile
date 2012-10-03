@@ -11,4 +11,5 @@ gem "nokogiri", "~> 1.5.5"
 gem "tire", "~> 0.4.2"
 gem "sinatra"
 gem "shotgun"
+gem 'rack-rewrite'
 

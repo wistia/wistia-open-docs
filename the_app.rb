@@ -6,16 +6,50 @@ require 'tire'
 require 'pp'
 require 'sinatra'
 require 'haml'
+require 'rack/rewrite'
 
 # fix so foreman gets logging
 $stdout.sync = true
 
-# this is also for dev, so that our sinatra app can serve up the files
-# the jekyll generated for us
-set :public_folder, Proc.new { File.join( root , '_site') }
+use Rack::Rewrite do
+  rewrite %r{/doc(.*)}, '$1'
+end
+
+class SuperStatic
+  def initialize(app)
+    @app = app
+    @root = File.join(File.dirname(__FILE__), '_site')
+    @file_server = Rack::File.new(@root)
+  end
+
+  def call(env)
+    path = env['PATH_INFO']
+    file_path = File.join(@root, path)
+    file_path_with_index = File.join(@root, path, 'index.html')
+    if FileTest.file?(file_path)
+      send_file(file_path)
+    elsif FileTest.file?(file_path_with_index)
+      send_file(file_path_with_index)
+    else
+      @app.call(env)
+    end
+  end
+
+  def send_file(path)
+    [ 200,
+      {
+        'Content-Length' => ::File.size(path).to_s,
+        'Content-Type'   => Rack::Mime.mime_type(::File.extname(path))
+      },
+      [::File.read(path)]
+    ]
+  end
+end
+
+use SuperStatic
 
 
-get "/doc/search/:q" do
+get "/search/:q" do
   q = params[:q]
 
   q.gsub!("_", " ")
@@ -44,25 +78,9 @@ end
 
 # github will hit this URL after a commit so we can auto-update
 # the doc. omg this is cool.
-post '/doc/update' do
+post '/update' do
   spawn('rake', 'nuclear_update', chdir: File.dirname(__FILE__))
   'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
 end
 
-
-# this is for development, so we can load 
-get "*" do |path|
-  full_path = File.join(settings.public_folder, path)
-  docless_path = File.join(settings.public_folder, path.gsub(%r|^/doc|, ''))
-
-  if File.directory?(full_path)
-    send_file File.join(full_path, 'index.html')
-  elsif File.exists?(full_path)
-    send_file full_path
-  elsif File.exists?(docless_path)
-    send_file docless_path
-  else
-    raise 'File not found'
-  end
-end
 
