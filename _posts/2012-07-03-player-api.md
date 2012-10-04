@@ -9,7 +9,7 @@ footer: 'for_developers'
 
 ## Using the API
 
-It is possible to access the javascript API using any embed type: API, SEO, or iframe. If you are using the iframe API, you will need to insert the [iframe player API script](/iframe-api.html) at the bottom of your page. In our voyage for simplicity, we want to make the iframe API and Javascript interaction with it easier (so that someday only the iframe embed code type will be necessary).
+It is possible to access the javascript API using any embed type: API, SEO, or iframe. If you are using the iframe API, you will need to insert the [iframe player API script](#using_popovers_and_the_player_api) at the bottom of your page. In our voyage for simplicity, we want to make the iframe API and Javascript interaction with it easier (so that someday only the iframe embed code type will be necessary).
 
 If you are having trouble using the Player API, or just want to show off what you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
 
@@ -26,6 +26,55 @@ You can reference the video object using the **''wistiaEmbed''** variable.  If y
 As an example, if the following JS code is executed, the video will start to play:
 
 <div class="code"><pre>wistiaEmbed.play();</pre></div>
+
+### Using iframes and the Player API
+
+There is a script that can be used to access the player API from 
+outside the iframe. It has the same interface as the normal player API, 
+but with the caveat that it won't work in IE7 and below (it won't break
+anything, it just doesn't work). If you aren't too concerned with outdated 
+browsers, this is the recommended way to access the player API.
+
+Put the following just before the <span class="code">&lt;/body&gt;</span> tag:
+
+<div class="code">&lt;script src="//fast.wistia.com/static/iframe-api-v1.js"&gt;&lt;/script&gt;</div>
+
+**Note:** It must come after any iframe embeds on the page, so it **cannot** be added inside the <span class="code">&lt;head&gt;</span> tag.
+
+Now you can access the API by getting the <span class="code">wistiaApi</span> property from the iframe element.
+You can assign an ID to each wistia iframe so you can get an easy handle to it.
+Take a look:
+
+<pre><code class="language-javascript">
+wistiaEmbed = document.getElementById("my_iframe").wistiaApi;
+wistiaEmbed.bind("end", function() {
+  alert("The video ended!");
+});
+wistiaEmbed.time(30).play();
+</code></pre>
+
+or in jQuery:
+
+<pre><code class="language-javascript">
+wistiaEmbed = jQuery("#my_iframe")[0].wistiaApi;
+wistiaEmbed.bind("end", function() {
+  alert("The video ended!");
+});
+wistiaEmbed.time(30).play();
+</code></pre>
+
+### Using Popovers and the Player API
+
+Wistia Popovers are just iframes that are injected into the page. If you include the <span class="code">iframe API</span> script as detailed above, you can bind to a special jQuery event to get at it. Note, you'll need to use <span class="code">wistiaJQuery</span> (it's included in our popover code) to catch the <span class="code">wistia-popover</span> event.
+
+<pre><code class="language-javascript">
+wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
+  iframe.wistiaApi.time(30).play();
+  iframe.wistiaApi.bind("end", function() {
+    alert("The video ended!");
+  });
+});
+</code></pre>
 
 ## Player API Methods
 
@@ -78,7 +127,7 @@ playerColor           | string  | Set custom color on play button/controls. HTML
 smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.
 stillUrl              | string  | The still image that should appear before the video is played.
 trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
-videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the [iframe API](/iframe-api.html). API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam) |
+videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam) |
 videoQuality          | string  | Specify the starting video quality. sd-only/hd-only/auto
 videoWidth            | integer | The original width of the video.
 videoHeight           | integer | The original height of the video.

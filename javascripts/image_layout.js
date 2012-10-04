@@ -14,9 +14,9 @@ $(document).ready(function() {
       else if ($img_div.hasClass('center')) {
         $img.attr('src', $img_src + $resize_str + $width);
       }
-      if ($img_div.width() > $width) {
-        $img_div.addClass('center').find('img').width( $width - 10).attr('src', $img_src + $resize_str + $width);
-      }
+//    if ($img_div.width() > $width) {
+//      $img_div.addClass('center').find('img').width( $width - 10).attr('src', $img_src + $resize_str + $width);
+//    }
     });
     fixFloatedImages();
   }  

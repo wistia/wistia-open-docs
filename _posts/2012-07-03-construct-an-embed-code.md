@@ -8,7 +8,7 @@ footer: 'for_developers'
 
 As long as you have the hashed_id for a video, you can easily produce an embed code without even hitting our servers!
 
-The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the [Data API](http://wistia.com/doc/wistia_api.html).
+The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the [Data API](/data-api).
 
 We pass parameters into an iframe embed via the src attribute. They're just 
 simple URL parameters, with the keys namespaced by brackets.
