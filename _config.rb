@@ -1,3 +1,3 @@
 
-Base_path = "/newdoc"
+BASEPATH = "/newdoc"
 

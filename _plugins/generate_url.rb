@@ -4,7 +4,7 @@ module Jekyll
 
   module AssetFilter
     def post_url(input)
-      "#{Base_path}/#{input}"
+      "#{BASEPATH}/#{input}"
     end
 
     def category_url(cat)

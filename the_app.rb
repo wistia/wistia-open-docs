@@ -12,10 +12,8 @@ require '_config'
 # fix so foreman gets logging
 $stdout.sync = true
 
-@base_path = Base_path
-
 use Rack::Rewrite do
-  rewrite %r{/doc(.*)}, '$1'
+  rewrite %r{#{BASEPATH}(.*)}, '$1'
 end
 
 class SuperStatic
