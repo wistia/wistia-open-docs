@@ -7,9 +7,12 @@ require 'pp'
 require 'sinatra'
 require 'haml'
 require 'rack/rewrite'
+require '_config'
 
 # fix so foreman gets logging
 $stdout.sync = true
+
+@base_path = Base_path
 
 use Rack::Rewrite do
   rewrite %r{/doc(.*)}, '$1'

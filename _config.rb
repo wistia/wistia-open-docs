@@ -1,0 +1,3 @@
+
+Base_path = "/newdoc"
+
