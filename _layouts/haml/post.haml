@@ -20,7 +20,7 @@ type: post
     .post_footer
       {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
 
-%script{ src:'/javascripts/post_content_nav.js', type:'text/javascript' }
-%script{ src: '/javascripts/jquery.scrollTo.js' }
-%script{ src: '/javascripts/jquery.nav.js' }
-%script{ src: '/javascripts/image_layout.js' }
+%script{ src: "{{ '/javascripts/post_content_nav' | javascript_url }}" }
+%script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
+%script{ src: "{{ '/javascripts/jquery.nav' | javascript_url }}" }
+%script{ src: "{{ '/javascripts/image_layout' | javascript_url }}" }

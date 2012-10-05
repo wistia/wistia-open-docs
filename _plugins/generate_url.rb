@@ -7,6 +7,14 @@ module Jekyll
       "#{BASEPATH}#{input}"
     end
 
+    def stylesheet_url(input)
+      "#{BASEPATH}#{input}.css"
+    end
+
+    def javascript_url(input)
+      "#{BASEPATH}#{input}.js"
+    end
+
     def category_url(cat)
       cat_dir = @context.registers[:site].config['category_dir']
       "#{cat_dir}/#{CategoryIndex.normalize_name(cat)}"

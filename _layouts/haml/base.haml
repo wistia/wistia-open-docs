@@ -5,9 +5,9 @@
 %html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', :lang => 'en' }
   %head
     %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
-    %link{ rel: 'stylesheet', type: 'text/css', href: '/stylesheets/screen.css' }
-    %link{ rel: 'stylesheet', type: 'text/css', href: '/stylesheets/prism.css' }
-    %script{ type: 'text/javascript', src: '/javascripts/jquery.min.js' }
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/screen' | stylesheet_url }}" }
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/prism' | stylesheet_url }}" }
+    %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
     %title
       Wistia Documentation
     :javascript
@@ -29,5 +29,5 @@
       #content
         {{ content }}
 
-%script{ src: '/javascripts/prism.js' }
-%script{ src: '/javascripts/search_text.js' }
+%script{ src: "{{ '/javascripts/prism' | javascript_url }}" }
+%script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }
