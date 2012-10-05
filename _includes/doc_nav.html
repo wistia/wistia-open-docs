@@ -3,7 +3,7 @@
     <ul>
       {% if page.type != 'post' %}
       <li id='breadcrumbs'>
-        <a href="{{ '/doc' | asset_url }}">Doc Main</a>
+        <a href="{{ '/' | asset_url }}">Doc Main</a>
         <span class='breadcrumb_post_title'>
           &gt;
           {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
@@ -24,7 +24,7 @@
       {% endif %}
       <li id='nav_search_box'>
         <div class='search_bar nav_bar'>
-          <input class='nav_bar' id='search_text' placeholder='search our docs' type='text' />
+          <input class='nav_bar' id='search_text' placeholder='Search our docs' type='text' />
           <button id='search_button'>search</button>
         </div>
       </li>

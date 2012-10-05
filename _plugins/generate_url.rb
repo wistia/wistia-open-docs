@@ -1,10 +1,10 @@
 
 module Jekyll
-  require '_config'
+  require_relative '../_config'
 
   module AssetFilter
     def post_url(input)
-      "#{BASEPATH}/#{input}"
+      "#{BASEPATH}#{input}"
     end
 
     def category_url(cat)
