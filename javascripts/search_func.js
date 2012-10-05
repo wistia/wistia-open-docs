@@ -4,7 +4,7 @@ $(document).ready(function() {
     results_json;
 
   function send_search(query, callback) {
-    $.getJSON( '/doc/search/' + query + "?format=json&amp;callback=?", function(data) { 
+    $.getJSON( basepath + '/search/' + query + "?format=json&amp;callback=?", function(data) { 
       callback(data);
     });
   }

@@ -1,3 +1,6 @@
+\---
+\---
+
 !!! Strict
 %html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', :lang => 'en' }
   %head
@@ -7,6 +10,8 @@
     %script{ type: 'text/javascript', src: '/javascripts/jquery.min.js' }
     %title
       Wistia Documentation
+    :javascript
+      var basepath = "{{ '' | post_url }}";
   %body
     %header
       #header_container

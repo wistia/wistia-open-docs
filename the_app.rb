@@ -7,7 +7,7 @@ require 'pp'
 require 'sinatra'
 require 'haml'
 require 'rack/rewrite'
-require_relative '../_config'
+require_relative './_config'
 
 # fix so foreman gets logging
 $stdout.sync = true
