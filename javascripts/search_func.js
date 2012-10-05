@@ -14,7 +14,7 @@ $(document).ready(function() {
     description = json.description;
     url = json.url;
 
-    return "<div class='result'><h2><a href='" + url + "'>" + title + "</a></h2>" + 
+    return "<div class='result'><h2><a href='" + basepath + url + "'>" + title + "</a></h2>" + 
       "<p class='description'>" + description + "</p></div>";
   }
 
