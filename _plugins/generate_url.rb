@@ -17,7 +17,7 @@ module Jekyll
 
     def category_url(cat)
       cat_dir = @context.registers[:site].config['category_dir']
-      "#{cat_dir}/#{CategoryIndex.normalize_name(cat)}"
+      post_url("#{cat_dir}/#{CategoryIndex.normalize_name(cat)}")
     end
 
   end
