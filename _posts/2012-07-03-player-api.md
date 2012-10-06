@@ -178,7 +178,7 @@ wistiaEmbed = Wistia.embed("29b0fbf547", {
   version: "v1",
   videoWidth: 640,
   videoHeight: 360,
-  playerColor: "4991C4"
+  playerColor: "688AAD"
 });
 // insert the 'bind on play' function
 wistiaEmbed.bind('play', function() {
@@ -256,7 +256,7 @@ wistiaEmbed = Wistia.embed("tlb0v41zjd", {
   videoHeight: 360,
   volumeControl: true,
   controlsVisibleOnLoad: true,
-  playerColor: "4991C4"
+  playerColor: "688AAD"
 });
 wistiaEmbed.volume(0);
 &lt;/script&gt;
@@ -330,7 +330,7 @@ So a finished iframe embed code would look something like this:
 
 <pre><code class="language-markup">
 <iframe src="http://fast.wistia.com/embed/iframe/e4a27b971d?
-controlsVisibleOnLoad=true&playerColor=4991C4&version=v1
+controlsVisibleOnLoad=true&playerColor=688AAD&version=v1
 &videoHeight=360&videoWidth=640&wmode=transparent" 
 allowtransparency="true" frameborder="0" scrolling="no" 
 class="wistia_embed" name="wistia_embed" width="640"

@@ -1,5 +1,5 @@
 ---
-title: Adding Video to Your Website
+title: Embedding Video on Your Website
 layout: post
 category: Embedding
 description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
@@ -7,14 +7,14 @@ post_intro: <div class="post_image intro_image"><img src="http://embed.wistia.co
 ---
 
 <div class="video_embed">
-<div id="wistia_5c913cd4fb" class="wistia_embed" style="width:660px;height:371px;" data-video-width="660" data-video-height="371"><object id="wistia_5c913cd4fb_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:371px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F25bdff785c723eb9310f9822171f64a2b55f9ea9.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=112.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Ff31d085ff86462067d5892f03ea95daebec4c941.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fb4e71ad2b9b72446a43346e2e89854ca49e40634.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F25bdff785c723eb9310f9822171f64a2b55f9ea9.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=112.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Ff31d085ff86462067d5892f03ea95daebec4c941.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fb4e71ad2b9b72446a43346e2e89854ca49e40634.bin" name="wistia_5c913cd4fb_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
+<div id="wistia_5c913cd4fb" class="wistia_embed" style="width:660px;height:371px;" data-video-width="660" data-video-height="371"><object id="wistia_5c913cd4fb_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:371px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=688AAD&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F25bdff785c723eb9310f9822171f64a2b55f9ea9.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=112.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Ff31d085ff86462067d5892f03ea95daebec4c941.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fb4e71ad2b9b72446a43346e2e89854ca49e40634.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=688AAD&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F25bdff785c723eb9310f9822171f64a2b55f9ea9.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=112.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Ff31d085ff86462067d5892f03ea95daebec4c941.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fb4e71ad2b9b72446a43346e2e89854ca49e40634.bin" name="wistia_5c913cd4fb_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("5c913cd4fb", {
   version: "v1",
   videoWidth: 660,
   videoHeight: 371,
-  playerColor: "4991C4"
+  playerColor: "688AAD"
 });
 </script>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/5c913cd4fb/metadata.js"></script>

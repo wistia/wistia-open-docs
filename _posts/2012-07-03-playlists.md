@@ -13,7 +13,7 @@ Wistia playlists are representative of a Project's contents within your Wistia a
 Embedded playlists automatically show the videos contained in the project.  If videos are added to the project, those videos will automatically show up in the playlist.  If the videos are re-ordered in the project, the videos in the playlist will be re-ordered accordingly.  If the titles of the videos in the project are changed....you guessed it, the titles of the videos in the playlist will change as well.
 
 <div class="video_embed">
-<iframe src="http://fast.wistia.com/embed/playlists/1d35830d05?bento%5BmenuPosition%5D=bottom&media_0_0%5BautoPlay%5D=false&media_0_0%5BcontrolsVisibleOnLoad%5D=false&theme=bento&version=v1&videoOptions%5BautoPlay%5D=true&videoOptions%5BplayerColor%5D=4991C4&videoOptions%5BvideoHeight%5D=371&videoOptions%5BvideoWidth%5D=660" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_playlist" name="wistia_playlist" width="660" height="514"></iframe>
+<iframe src="http://fast.wistia.com/embed/playlists/1d35830d05?bento%5BmenuPosition%5D=bottom&media_0_0%5BautoPlay%5D=false&media_0_0%5BcontrolsVisibleOnLoad%5D=false&theme=bento&version=v1&videoOptions%5BautoPlay%5D=true&videoOptions%5BplayerColor%5D=688AAD&videoOptions%5BvideoHeight%5D=371&videoOptions%5BvideoWidth%5D=660" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_playlist" name="wistia_playlist" width="660" height="514"></iframe>
 </div>
 
 ---

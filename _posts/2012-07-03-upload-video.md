@@ -14,7 +14,7 @@ wistiaEmbed = Wistia.embed("dbeb843c6e", {
   videoWidth: 660,
   videoHeight: 371,
   controlsVisibleOnLoad: true,
-  playerColor: "4991C4"
+  playerColor: "688AAD"
 });
 </script>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/dbeb843c6e/metadata.js"></script>

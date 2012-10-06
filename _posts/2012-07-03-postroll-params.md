@@ -17,7 +17,7 @@ wistiaEmbed = Wistia.embed("4d8229898d", {
     videoWidth: "660",
     videoHeight: "371",
     controlsVisibleOnLoad: true,
-    playerColor: "4991C4"
+    playerColor: "688AAD"
 });
 Wistia.plugin.postRoll(wistiaEmbed, {
     version: "v1",
