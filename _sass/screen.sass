@@ -10,8 +10,8 @@
 
 /////////////// vars ///////////////
 
-$wistia_blue: #4991C4
-$complementary: #f0af81
+$header_blue: #C0DBEB
+$accent_blue: #688AAD
 $background_gray: #F7F6F4
 $green: #8DC63F
 $text_color: #4D4942 + 30
@@ -20,7 +20,7 @@ $padding: 30px
 $border_color: $background_gray - 30
 
 // footer colors
-// for_beginners is wistia_blue
+// for_beginners is accent_blue
 $for_intermediates: $green
 $for_developers: #f0818b
 
@@ -31,12 +31,12 @@ $fixed_column_width: 260px
 //////////// mixins ///////////////
 
 =letterpress($opacity, $base-color: white)
-  text-shadow: 0 0 0 transparent, 0 -1px 1px rgba( $base-color, $opacity )
+  +text-shadow( 0 -1px 1px rgba( $base-color, $opacity ))
 
 =box-emboss($opacity, $opacity2)
-  box-shadow: rgba(white, $opacity) 0 1px 0, inset rgba( black, $opacity2) 0 1px 0
+  +box-shadow( rgba(white, $opacity) 0 1px 0, inset rgba( black, $opacity2) 0 1px 0 )
 
-=link-hover($link_color: $wistia_blue)
+=link-hover($link_color: $accent_blue)
   &:hover
     color: $link_color - 30
 
@@ -51,18 +51,23 @@ $fixed_column_width: 260px
 =footer-styling($color)
   background-color: rgba($color, .2)
   border: 2px solid rgba($color, .8)
+
+=anti-alias
+  -webkit-font-smoothing: antialiased
+
 //////// main styles /////////
 
 body
-  font-family: Gill Sans Infant, Arial, sans-serif
-  background-color: $background_gray
+  font-family: "Helvetica Neue," helvetica, arial, sans-serif
+  background-color: white
   color: $text_color
   a
-    color: $wistia_blue
+    color: $accent_blue
     text-decoration: none
 
 h1, h2, h3
   color: $title_color
+  +anti-alias
 h1
   font-size: 32px
 p
@@ -79,9 +84,9 @@ em
 
 header
   width: 100%
-  background-color: $background_gray
   position: relative
   height: 40px
+  background-color: $background_gray
   border-bottom: 2px solid $border_color
   #header_container
     width: 1200px
@@ -124,7 +129,14 @@ header
 
 .home
   text-align: center
-  margin: 100px auto 0
+  height: 200px
+  padding: $padding/2 0
+
+#home_logo
+  margin: 0 auto
+  width: 673px
+  height: 187px
+  background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
 #container
   width: 980px
@@ -146,6 +158,12 @@ header
   margin: 0 auto
   padding: $padding
   background-color: white
+  h3
+    font-size: 18px
+    margin-bottom: 10px
+    color: $text_color
+    border-bottom: 1px solid #DDD
+    padding-bottom: 5px
 
 .quickstart
   position: relative
@@ -198,7 +216,7 @@ header
 //////// post header /////////////
 
 #doc_nav
-  background-color: $complementary
+  background-color: $header_blue
   width: $total_width
   #doc_nav_container
     margin: 0 auto
@@ -216,17 +234,18 @@ header
         a 
           padding: 14px 5px
           height: 40px
-          color: white
+          color: $accent_blue
           text-decoration: underline
       li#breadcrumbs
         +ellipsis
         left: 0
         top: 15px
         width: 340px
-        color: white
-        +letterpress(.3, $text_color)
+        color: $accent_blue
+        +letterpress(.3, white)
+        +anti-alias
         .breadcrumb_post_title
-          color: white
+          color: $accent_blue
       li#nav_search_box
         right: 0
         top: 9px
@@ -266,7 +285,7 @@ header
   ul, ol
     padding-left: $padding
     line-height: 150%
-    border-left: 10px solid $complementary
+    border-left: 10px solid $header_blue
   ul
     list-style-type: none
     position: relative
@@ -279,13 +298,13 @@ header
 
   // those little anchors before each h2 and h3
   .subtopic_anchor
-    color: #EEE
+    color: lighten($accent_blue, 40%)
     position: absolute
     left: 10px
     +transition-property
     +transition-duration(.5s)
     &:hover
-      color: $text_color
+      color: $accent_blue
 
 
 ///// Span Styles //////
@@ -339,10 +358,7 @@ span.code
 ////////// post intro paragraph styles ////////
 
 .post_intro
-  margin-left: -$padding
   margin-bottom: $padding
-  background-color: $background_gray
-  padding: $padding
   h2
     &:first-of-type
       margin-top: 0
@@ -470,7 +486,7 @@ table
 .for_developers
   +footer-styling($for_developers)
 .for_beginners
-  +footer-styling($wistia_blue)
+  +footer-styling($accent_blue)
 .for_intermediates
   +footer-styling($for_intermediates)
 
@@ -500,7 +516,7 @@ table
       margin-bottom: 0
       padding-bottom: 0  
   .title_list_item
-    background-color: $complementary
+    background-color: $header_blue
     height: 45px
     text-align: center
     margin-top: -$padding
@@ -509,24 +525,24 @@ table
     padding: 0 5px
     margin-bottom: $padding/2
     border-bottom: none
-    +letterpress(.3, $text_color)
     a
       position: relative
       height: 100%
       font-size: 16px
-      color: white
-      +letterpress(.3, $text_color)
+      color: $accent_blue
+      +letterpress(.3, white)
+      +anti-alias
       &:hover
-        color: white
+        color: $accent_blue
 
   .title_list_item.current
-    a, &:hover
-      color: white
+    a, a:hover
+      color: $accent_blue
 
   .current > a
-    color: $wistia_blue
+    color: $accent_blue
     &:hover
-      color: $wistia_blue
+      color: $accent_blue
 
 ///// utility classes ///////
 
@@ -633,7 +649,7 @@ table
     font-weight: bold
   h3
     font-size: 20px
-    color: $complementary
+    color: $header_blue
   h4
     font-size: 16px
     text-decoration: underline
