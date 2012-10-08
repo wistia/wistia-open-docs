@@ -57,6 +57,7 @@ end
 # add a title to a post like np title="Blah this is my title"
 desc "Create a new blog post"
 task :np do
+  require 'date'
 
   title = ENV["title"] || "new-post"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
