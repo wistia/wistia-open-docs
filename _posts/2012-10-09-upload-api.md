@@ -122,7 +122,7 @@ achieved in Ruby quite simply using the 'multipart-post' gem.
 
 Installation:
 
-<span class='code'>$ gem install multipart-post</span>
+<pre><code class="language-vim">$ gem install multipart-post</code></pre>
 
 ### Example code:
 <pre><code class="language-ruby">
