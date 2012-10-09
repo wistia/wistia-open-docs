@@ -21,17 +21,156 @@ layout: home
       %a{ href: "{{ '/account-setup' | post_url }}" }
         %img{ src: "http://embed.wistia.com/deliveries/dd14ab49a4cba2ee39edeeaa2922b2fcc74c2e0a.png", height: '150', width: '150' }
         %h3 Account Setup
-  %ul
-    {% for category in site.categories %}
-    %li.category_title
-      %h3
-        {{ category[0] }}
-      %ul
-        {% for post in category[1] %}
-        %li.post_list
-          %a{:href => "{{ post.url | post_url }}" } 
-            {{ post.title }}
-        {% endfor %}
-    {% endfor %}
 
+  %ul
+    %li.category_list
+      %h3 
+        %a{ href: "{{ 'getting-set-up' | category_url }}" } Getting Set Up
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/account-setup' | post_url }}" } Account Setup
+          %span.hint Customize your account to make it your own.
+        %li
+          %a{ href: "{{ '/viewer-rec' | post_url }}" } What Viewers Need to Watch Wistia Video
+          %span.hint 
+            What your audience needs to view Wistia video 
+            %br 
+            (hint: not much).
+        %li
+          %a{ href: "{{ '/exporting' | post_url }}" } Exporting From Video Editors
+          %span.hint Export video from editing software to look good on the web.
+        %li
+          %a{ href: "{{ '/projects' | post_url }}" } Guide to Projects in Wistia
+          %span.hint How to use projects, and actions you can take in them.
+        %li
+          %a{ href: "{{ '/media' | post_url }}" } Guide to Using Media in Wistia
+          %span.hint A guide to actions you can take with media in your account.
+        %li
+          %a{ href: "{{ '/security' | post_url }}" } Wistia Video Security
+          %span.hint 
+            We want to keep you (and your videos) safe.
+            %br
+            Info on our approach to security.
+
+    %li.category_list
+      %h3 
+        %a{ href: "{{ 'embedding' | category_url }}" } Embedding
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/embedding' | post_url }}" } Embedding Video on Your Website
+          %span.hint The crash course on adding video to your website using Wistia.
+        %li
+          %a{ href: "{{ '/embed-screen' | post_url }}" } Using the SuperEmbed Screen
+          %span.hint Learn how to customize your video player experience for viewers.
+        %li
+          %a{ href: "{{ '/playlists' | post_url }}" } Video Playlists
+          %span.hint A guide to using multi-video players (playlists).
+        %li
+          %a{ href: "{{ '/social-sharing' | post_url }}" } Social Sharing
+          %span.hint Adding your content to social media like Facebook and Twitter.
+        %li
+          %a{ href: "{{ '/domain-restrictions' | post_url }}" } Domain Restrictions
+          %span.hint Restrict the domains where your embedded content will work.
+        %li
+          %a{ href: "{{ '/transcripts' | post_url }}" } Using Interactive Transcripts
+          %span.hint How to order and embed transcripts with your videos.
+
+    %li.category_list
+      %h3 
+        %a{ href: "{{ 'private-sharing | category_url }}" } Private Sharing
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/private-sharing' | post_url }}" } Sharing Video Privately
+          %span.hint Securely share your content with a group you control.
+        %li
+          %a{ href: "{{ '/contacts' | post_url }}" } Contact Management
+          %span.hint How to manage the folks you give private access to.
+        %li
+          %a{ href: "{{ '/permissions' | post_url }}" } Permission Types in Wistia
+          %span.hint 
+            Learn how specific permissions can be given to
+            %br
+            different contacts.
+        %li
+          %a{ href: "{{ '/alerts' | post_url }}" } Tracking Alerts
+          %span.hint Get email alerts regarding contact activity.
+
+    %li.category_list
+      %h3 
+        %a{ href: "{{ 'analytics' | category_url }}" } Analytics
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } Analytics for Embedded Video
+          %span.hint 
+            All the info on gathering, using, and deciphering the stats for videos
+            on your website.
+        %li
+          %a{ href: "{{ '/private-analytics' | post_url }}" } Analytics for Private Video
+          %span.hint Learn how to private users are tracked in Wistia.
+        %li
+          %a{ href: "{{ '/identity-tagging' | post_url }}" } Identity Tagging
+          %span.hint The methods to apply Wistia email tracking to viewers.
+
+    %li.category_list
+      %h3 
+        %a{ href: "{{ 'integrations' | category_url }}" } Integrations
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/wordpress' | post_url }}" } Wordpress
+          %span.hint Using Wordpress and Wistia.
+        %li
+          %a{ href: "{{ '/drupal' | post_url }}" } Drupal
+          %span.hint Embed your videos in Drupal sites.
+        %li
+          %a{ href: "{{ '/joomla' | post_url }}" } Joomla
+          %span.hint Embed video easily into Joomla.
+        %li
+          %a{ href: "{{ '/google-analytics' | post_url }}" } Google Analytics
+          %span.hint Pass useful stats from embedded video into Google Analytics.
+        %li
+          %a{ href: "{{ '/clicky' | post_url }}" } Clicky
+          %span.hint Pass tracking stats from embedded video into Clicky.
+        %li
+          %a{ href: "{{ '/salesforce' | post_url }}" } Salesforce.com
+          %span.hint Pass private tracking alerts into Salesforce CRM.
+
+    %li.category_list
+      %h3 
+        %a{ href: "{{ 'public-sharing' | category_url }}" } Public Sharing
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/email-marketing' | post_url }}" } Email Marketing
+          %span.hint How to create email merge tags for tracking email recipients.
+        %li
+          %a{ href: "{{ '/video-seo' | post_url }}" } Video SEO
+          %span.hint Using video to drive better search engine ranking for your site.
+        %li
+          %a{ href: "{{ '/podcast' | post_url }}" } RSS/Podcasts
+          %span.hint Create an RSS feed or podcast from a Wistia project.
+        %li
+          %a{ href: "{{ '/replaceable-video' | post_url }}" } Replaceable Video
+          %span.hint With Wistia, dynamically replace your content and it will update everywhere.
+
+    %li.category_list.developers
+      %h3 
+        %a{ href: "{{ 'for-developers' | category_url }}" } For Developers
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/player-api' | post_url }}" } The Player API
+        %li
+          %a{ href: "{{ '/data-api' | post_url }}" } The Data API
+        %li
+          %a{ href: "{{ '/playlist-api' | post_url }}" } Playlist API
+        %li
+          %a{ href: "{{ '/stats-api' | post_url }}" } Exporting Stats (Stats API) 
+        %li
+          %a{ href: "{{ '/popover-customization' | post_url }}" } Popover Style Customization
+        %li
+          %a{ href: "{{ '/player-id-tag' | post_url }}" } Embed Code ID Tagging
+        %li
+          %a{ href: "{{ '/oembed' | post_url }}" } Using oEmbed format with Wistia
+        %li
+          %a{ href: "{{ '/construct-an-embed-code' | post_url }}" } Construct an Embed Code
+        %li
+          %a{ href: "{{ 'upload-widget-specs' | post_url }}" } Upload Widgets
 

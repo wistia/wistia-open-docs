@@ -1,6 +1,5 @@
 ---
 title: Randor Analytics
-category: Getting Started
 layout: post
 description: This video series covers all the basics of Wistia's analytics features!
 ---

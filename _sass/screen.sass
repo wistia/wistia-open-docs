@@ -13,8 +13,10 @@
 $header_blue: #C0DBEB
 $accent_blue: #688AAD
 $background_gray: #F7F6F4
+$background_blue: rgba(192, 219, 235, .3)
 $green: #8DC63F
-$text_color: #4D4942 + 30
+$text_color: #6B6760
+$hint_color: #CCC
 $title_color: #333
 $padding: 30px
 $border_color: $background_gray - 30
@@ -50,7 +52,6 @@ $fixed_column_width: 260px
 
 =footer-styling($color)
   background-color: rgba($color, .2)
-  border: 2px solid rgba($color, .8)
 
 =anti-alias
   -webkit-font-smoothing: antialiased
@@ -69,7 +70,7 @@ h1, h2, h3
   color: $title_color
   +anti-alias
 h1
-  font-size: 32px
+  font-size: 36px
 p
   font-size: 16px
   line-height: 115%
@@ -97,7 +98,7 @@ header
       left: 0
       a
         position: absolute
-        background: transparent url(/images/wistia_logo_header.png) no-repeat
+        background: transparent url(/images/elements/nav-logo.png) no-repeat
         width: 115px
         height: 40px
         &:hover
@@ -105,6 +106,7 @@ header
     #header_nav
       position: absolute
       right: 17px
+      font-family: "Gill Sans", Helvetica, Arial, sans-serif
       ul
         height: 40px
       ul li
@@ -194,24 +196,44 @@ header
         background-color: #DDD
         position: relative
         left: -1px
-        top: -28px
+        top: -27px
         width: 152px
         color: $text_color
+        font-size: 14px !important
 
-.category_title
+.category_list
   margin-bottom: $padding
-  h3
+  h3 a
     font-size: 18px
     margin-bottom: 10px
     color: $text_color
     border-bottom: 1px solid #DDD
     padding-bottom: 5px
 
-.post_list
+.developers
+  padding: $padding/3
+  margin-left: -$padding/2
+  margin-top: -$padding/2
+  background-color: $background_blue
+
+.post_list li
   margin-bottom: 10px
+  position: relative
   a
     font-size: 14px
     +link-hover
+  span
+    font-size: 14px
+
+.hint
+  margin-left: $padding
+  color: $hint_color
+  visibility: hidden
+  font-style: italic
+  position: absolute
+  right: 0
+  display: inline-block
+  max-width: 350px
 
 //////// post header /////////////
 
@@ -238,6 +260,7 @@ header
           text-decoration: underline
       li#breadcrumbs
         +ellipsis
+        height: 18px
         left: 0
         top: 15px
         width: 340px
@@ -273,7 +296,11 @@ header
   h2, h3
     line-height: 120%
   h2
-    font-size: 24px
+    font-size: 28px
+    color: $title_color
+    padding: $padding/3 $padding
+    margin-left: -$padding
+    +letterpress(.6)
   h3, p, ul, ol
     margin: $padding/2 0
   h3
@@ -358,14 +385,13 @@ span.code
 ////////// post intro paragraph styles ////////
 
 .post_intro
-  margin-bottom: $padding
+  margin-bottom: 2 * $padding
   h2
     &:first-of-type
       margin-top: 0
   p, ul
     width: 100%
     margin: $padding/2 0
-    font-size: 20px
     line-height: 150%
   p
     &:first-of-type
@@ -521,8 +547,8 @@ table
     text-align: center
     margin-top: -$padding
     margin-left: -$padding
-    width: $fixed_column_width - 10
-    padding: 0 5px
+    width: $fixed_column_width - 30
+    padding: 0 $padding/2
     margin-bottom: $padding/2
     border-bottom: none
     a
@@ -549,6 +575,9 @@ table
 .clear
   clear: both
 
+.unhide
+  visibility: visible
+
 /////// utility pages ( categories, search, blah )//////
 
 #utilities_container
@@ -569,15 +598,19 @@ table
 .search_bar
   margin-bottom: $padding
   text-align: center
+  position: relative
   input
     width: 80%
     height: 14px
-    font-size: 13px
+    font-size: 14px
     padding: 4px
     padding-bottom: 1px
   button
     font-size: 13px
     padding: 4px
+    position: relative
+    vertical-align: top
+    top: -2px
 
 #doc_nav_container
   .search_bar
@@ -586,6 +619,9 @@ table
     width: 100%
     input
       width: 180px
+      position: relative
+      top: 2px
+      height: 15px
 
 #results
   @extend #post
@@ -603,7 +639,6 @@ table
     margin-top: $padding/2
     width: 550px
 .no_result
-  margin-top: -$padding
   p
     line-height: 200%
   .query
@@ -636,14 +671,12 @@ table
 #post.api
   p, li
     font-size: 14px
-  h1
-    font-size: 36px
   h2
     font-size: 28px
     color: $title_color
-    background-color: $background_gray
     padding: $padding/3 $padding
     margin-left: -$padding
+    background-color: $background_blue
     +letterpress(.6)
   h3, h5
     font-weight: bold

@@ -56,17 +56,17 @@ than using an iframe).  In this case we do the following:
 First, add a container to the page, and make sure it has a unique ID attribute:
 
 <pre><code class="language-markup">
-  &lt;div id="wistia_abcde12345" style="height:387px;width:640px" data-video-width="640" data-video-height="360"&gt;
-    this is displayed if javascript is disabled
-  &lt;/div&gt;
+&lt;div id="wistia_abcde12345" style="height:387px;width:640px" data-video-width="640" data-video-height="360"&gt;
+  this is displayed if javascript is disabled
+&lt;/div&gt;
 </code></pre>
 
 
 Next, including all the required external scripts:
 
 <pre><code class="language-markup">
-  &lt;script src="http://fast.wistia.com/static/E-v1.js"&gt;&lt;/script&gt;
-  &lt;script src="http://fast.wistia.com/static/concat/E-v1-gridify,socialbar-v1.js"&gt;&lt;/script&gt;
+&lt;script src="http://fast.wistia.com/static/E-v1.js"&gt;&lt;/script&gt;
+&lt;script src="http://fast.wistia.com/static/concat/E-v1-gridify,socialbar-v1.js"&gt;&lt;/script&gt;
 </code></pre>
 
 Now initialize the embed and pass in the video parameters:

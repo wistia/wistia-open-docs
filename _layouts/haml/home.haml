@@ -6,7 +6,7 @@
     %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
     %script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }
     %title
-      Wistia Documentation
+      Wistia Documentation Main
     :javascript
       var basepath = "{{ '' | post_url }}";
   %body
@@ -20,3 +20,15 @@
         %section
           {{ content }}
 
+
+:javascript
+  $('.post_list li').each( function() {
+    $this = $(this);
+    var $a = $this.find("a");
+    var $hint = $this.find(".hint");
+    $a.hover(function() {
+      $hint.addClass("unhide");
+    }, function() {
+      $hint.removeClass("unhide");
+    });
+  });

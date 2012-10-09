@@ -7,16 +7,16 @@ task :pre_jekyll do
   system "compass compile"
   puts "done."
 
-  print "  Rendering Haml layouts ... "
+  print "  Rendering Haml includes ... "
   system(%{
-    cd _layouts/haml && 
+    cd _includes/haml && 
     for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
   })
   puts "done."
 
-  print "  Rendering Haml includes ... "
+  print "  Rendering Haml layouts ... "
   system(%{
-    cd _includes/haml && 
+    cd _layouts/haml && 
     for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
   })
   puts "done."

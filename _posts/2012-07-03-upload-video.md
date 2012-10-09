@@ -1,7 +1,6 @@
 ---
 title: Uploading
 layout: post
-category: Before You Upload
 description: Learn how uploading with Wistia works.
 ---
 

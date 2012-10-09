@@ -6,7 +6,7 @@
     <script src="{{ '/javascripts/jquery.min' | javascript_url }}" type='text/javascript'></script>
     <script src="{{ '/javascripts/search_text' | javascript_url }}"></script>
     <title>
-      Wistia Documentation
+      Wistia Documentation Main
     </title>
     <script type='text/javascript'>
       //<![CDATA[
@@ -31,3 +31,17 @@
     </div>
   </body>
 </html>
+<script type='text/javascript'>
+  //<![CDATA[
+    $('.post_list li').each( function() {
+      $this = $(this);
+      var $a = $this.find("a");
+      var $hint = $this.find(".hint");
+      $a.hover(function() {
+        $hint.addClass("unhide");
+      }, function() {
+        $hint.removeClass("unhide");
+      });
+    });
+  //]]>
+</script>

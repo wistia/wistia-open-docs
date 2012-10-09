@@ -2,7 +2,7 @@
 title: Replace Your Video
 layout: post
 description: There's nothing worse than embedding your new video in your site, and realizing there's a mistake in an edit or a typo in a graphic. Use Wistia's replace video tool to easily get a new video up in no time.
-category: Media Management
+category: Public Sharing
 ---
 
 <div class="video_embed">

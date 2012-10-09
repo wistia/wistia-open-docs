@@ -1,5 +1,5 @@
 ---
-title: Embed Code Id Tagging
+title: Embed Code ID Tagging
 layout: post
 category: For Developers
 description: Pass an ID for each viewer to your stats through the player API using these simple steps!

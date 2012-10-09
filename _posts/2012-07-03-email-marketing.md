@@ -1,7 +1,7 @@
 ---
 title: Email Marketing and Wistia
 layout: post
-category: Email Marketing
+category: Public Sharing
 description: Learn how we integrate with some of the top email marketing platforms to make your campaigns even more powerful in no time.
 post_intro: <div class="post_image intro_image float_right"><img src="http://embed.wistia.com/deliveries/e13eae6e347f3939c10712245b2df2ff1156d68e.png" width="200px" alt="email_marketing_guide"/></div><p>Email marketing campaigns are great for engaging your prospects with timely messages.  When done right, they can be an excellent driver of business value.</p><p>Adding video to the mix is an effective way to increase click-through rates and maximize engagement with your message.  Wistia makes it easy to integrate video with your email-marketing campaigns, as well as measure the results down to the individual viewer, second-by-second.</p><p>After this tutorial you will be able to integrate video into your email marketing campaigns, and understand which recipients are engaged with your message.</p><div class="post_image center"><img src="http://embed.wistia.com/deliveries/97291f1a3b3898ec951a80296504441a9b3d0ce0.png" alt="email_heatmap" /></div>
 footer: 'for_intermediates'
@@ -30,6 +30,8 @@ wistiaEmbed = Wistia.embed("027bb4b325", {
 ## Using Wistia Email Marketing Integration
 
 Let's get cranking on creating some awesome email campaigns with video!
+
+Note: we created specific documentation for our most popular merge tag options, [MailChimp]({{ '/mailchimp' | post_url }}) and [Campaign Monitor]({{ '/campaign-monitor' | post_url }}). If you are using those platforms, check out the specific documentation!
 
 ### Select Your Video
 
