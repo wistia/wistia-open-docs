@@ -2,6 +2,7 @@
 title: Adding Your Wistia Video to a Campaign Monitor Email
 layout: post
 description: We love Campagin Monitor. Lucky for us, adding a Wistia video to an email campaign is pretty easy, too. Learn how here!
+category: Public Sharing
 ---
 
 <div class="post_image intro_image float_right"><img src="http://embed.wistia.com/deliveries/dfc00817495ec1fc99716cbf8478203617e0f03d.png" alt="campaign_monitor_lg" width="250px" /></div>
