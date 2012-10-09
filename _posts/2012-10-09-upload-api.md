@@ -106,6 +106,12 @@ body will contain a JSON object
 
 This data structure may change in future releases.
 
+## Example
+
+Uploading a media file with cURL:
+<pre><code class='language-markup'>
+$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F project_id=&lt;PROJECT_HASHED_ID&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/
+</code></pre>
 
 ## Ruby code
 
