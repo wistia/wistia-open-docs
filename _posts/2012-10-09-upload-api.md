@@ -6,10 +6,11 @@ category: For Developers
 footer: 'for_developers'
 ---
 
-The Wistia Upload API is a simple HTTP endpoint designed to streamline the
-process of uploading new media to your account. Simply supply the required
-parameters and **POST** your media file to **https://upload.wistia.com/** as
-multipart-form encoded data.
+The Upload API is the best way to programmatically get new videos and files
+into your Wistia account.
+
+Simply supply the required parameters and **POST** your media file to
+**https://upload.wistia.com/** as multipart-form encoded data.
 
 Media uploaded in this manner will be immediately visible in your account, but
 may still require processing (as is the case for uploads in general).
