@@ -23,7 +23,7 @@ $border_color: $background_gray - 30
 
 // footer colors
 // for_beginners is accent_blue
-$for_intermediates: $green
+$for_intermediates: #8aad68
 $for_developers: #f0818b
 
 $post_width: 660px
@@ -500,15 +500,22 @@ table
   margin-top: 2 * $padding
   clear: both
   ul
+    position: relative
+    width: 600px
+    height: 90px   
     list-style-type: none
-  ul li
-    display: inline-block
-    vertical-align: top
-    margin-left: 40px
-    width: 250px
-    font-size: 14px
+    li
+      position: absolute
+      width: 250px
+      &:first-child
+        left: 45px
+      &:last-child
+        right: 45px
 .footer_content
-  padding: 25px
+  padding: $padding
+  p
+    font-size: 15px
+    margin-bottom: $padding/6
 .for_developers
   +footer-styling($for_developers)
 .for_beginners
