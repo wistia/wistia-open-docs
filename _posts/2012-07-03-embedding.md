@@ -30,7 +30,7 @@ To upload your video, open the Project where you want the video to end up.
 
 Select the *Upload Media* option from under the <span class="action_menu">Project Actions</span> menu.
 
-Check out our [guide to uploading](/upload-video) for more information
+Check out our [guide to uploading]({{ '/upload-video' | post_url }}) for more information
 
 After uploading is complete, Wistia encodes several versions of the video - perfect for serving on multiple browsers and mobile devices.  Once these versions are complete, it is ready to be embedded onto your site.
 
@@ -52,7 +52,7 @@ Clicking this option will take you to the Wistia Embed Screen.  This is where yo
 <div class='clear'></div>
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/fbe53b9002062e623f346aaaf7c850d33b0cd5dc.png" alt="copy_embed_code" /></div>
 
-See our [complete guide to the embed screen](/embed_screen) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
+See our [complete guide to the embed screen]({{ '/embed_screen' | post_url }}) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
 
 ---
 
@@ -72,7 +72,7 @@ Once you have copied the embed code, the next step is to paste it into your web 
 
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/dac7d2599cc3c996b0cf6efa4604b08d8b2df285.png" alt="media_stats_psharing" /></div>
 
-Now that your video is embedded on your webpage, you can use Wistia's tracking analytics to see how your viewers are interacting with the content.  
+Now that your video is embedded on your webpage, you can use Wistia's tracking analytics to see how your viewers are interacting with the content.
 
 Start by selecting "Stats" from under the <span class="action_menu">Media Actions</span> menu.
 

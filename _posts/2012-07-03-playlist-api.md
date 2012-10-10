@@ -3,7 +3,7 @@ title: Wistia Playlist API
 layout: api
 category: For Developers
 description: Wistia Playlists have an API which give you access to its functionality and behavior! 
-post_intro: <p>Wistia playlists have a javascript API which gives you control over its behavior, and gives you access to the <a href="/player-api.html">Player API</a> for the currently embedded video.</p>
+post_intro: <p>Wistia playlists have a javascript API which gives you control over its behavior, and gives you access to the Player API for the currently embedded video.</p>
 footer: 'for_developers'
 ---
 
@@ -11,7 +11,7 @@ footer: 'for_developers'
 
 Method | Description
 ----- | -----------
-currentVideo()                  | Return a handle to the currently embedded video, which lets you access the [Player API](/player-api.html).
+currentVideo()                  | Return a handle to the currently embedded video, which lets you access the [Player API]({{ '/player-api' | post_url }}).
 embed(sectionIndex, videoIndex) | Embed the video in the playlist corresponding to the given indices.
 embedNext()                     | Embed the next video in the playlist.
 height()                        | Returns the height of the entire embed.
@@ -62,7 +62,7 @@ loop            | boolean | When true, the playlist will begin again from the st
 media\_\{si}\_\{vi} | object  | Specify embedding options for a specific video by index as specified in the [Player API](/player-api.html). si and vi should each be a number. 
 theme           | string  | The playlist's theme. Current acceptable values are "trim", "steam", "tango", or "bare". For API embeds, this needs to correspond with the script included on the page.
 version         | string  | Must be "v1".
-videoOptions    | object  | Specify embedding options for each video as specified in the [Player API](/player-api.html).
+videoOptions    | object  | Specify embedding options for each video as specified in the [Player API]({{ '/player-api' | post_url }}).
 
 ## Playlist API Examples
 

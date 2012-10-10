@@ -80,7 +80,7 @@ post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player wi
 <div class="embedType" style="border: 4px solid #FFEA32;">
   <div class="embed_type_content">
     <p>
-      Wistia Interactive Transcripts are excellent for longer-form content and SEO purposes.  Control the layout of your transcript when you embed it with SuperEmbeds (more on generating transcripts <a href="http://localhost:4000/transcripts.html">here</a>).
+      Wistia Interactive Transcripts are excellent for longer-form content and SEO purposes.  Control the layout of your transcript when you embed it with SuperEmbeds ([more on generating transcripts]({{ '/transcripts' | post_url }})).
     </p>
   </div>
   <div class="embed_type_image" style="border-left:4px solid #FFEA32;">

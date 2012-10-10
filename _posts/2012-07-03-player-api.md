@@ -158,7 +158,7 @@ Our plugins have a lot of options too! Check them out:
 *  [Interactive Transcript](/transcript-params.html)
 *  [Turnstile Email Capturing](/turnstile-params.html)
 
-And if you're looking at these, you might want more info on [constructing an embed code](/construct-an-embed-code.html).
+And if you're looking at these, you might want more info on [constructing an embed code]({{ '/construct-an-embed-code' | post_url }}).
 
 ---
 
@@ -318,7 +318,7 @@ So a full HTML5 player embed code would look like this:
 &lt;iframe width="960" height="450" src="http://app.wistia.com/embed/medias/e71f9baf4d?platformPreference=html5" frameborder="0"&gt;&lt;/iframe&gt;
 </code></pre>
 
-HTML5 player instances are still controllable through our standard javascript [player API](/player-api.html).
+HTML5 player instances are still controllable through the normal Player API methods.
 
 ---
 

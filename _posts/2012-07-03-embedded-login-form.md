@@ -5,12 +5,12 @@ layout: post
 footer: 'for_developers'
 ---
 
-It's easy to embed a Wistia login form on your website and style it how you like. Use the code below as a template, but substitute your Wistia account hostname for app.wistia.com. For example, if your account is located at http://myaccount.wistia.com, then you'd change all instances of http://app.wistia.com with http://myaccount.wistia.com.
+It's easy to embed a Wistia login form on your website and style it how you like. Use the code below as a template, but substitute your Wistia account hostname for app.wistia.com. For example, if your account is located at <span class="code">http://myaccount.wistia.com</span>, then you'd change all instances of <span class="code">http://app.wistia.com</span> with <span class="code">http://myaccount.wistia.com</span>.
 
 
 Here's the HTML code for a basic Wistia login form:
 
-<div class="code"><pre>
+<pre><code class="language-markup">
 <form action="https://app.wistia.com/sessions" method="post"> 
   <p> 
     <label for='session_login'>Email</label> 
@@ -24,7 +24,7 @@ Here's the HTML code for a basic Wistia login form:
     <button type='submit'>Login to Wistia</button> 
   </p>
 </form>
-</pre></div>
+</code></pre>
 
 
 Here's an example of the sample code in action. Try the login form, it really works and it's secure.

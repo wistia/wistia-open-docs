@@ -96,11 +96,11 @@ The media level provides detailed insight into how the video was viewed, both at
 
 To access the media-level trends page, first open up the Media Page for your video (where you can watch the video in your account).  Under the *Media Actions* drop-down menu, select "Stats".
 
-This will open the page with viewing stats specifically for that media.  You can see the [overall engagement graph](/audience_engagement_graph.html), summary stats, and [individual viewer heatmaps](/heatmaps.html).
+This will open the page with viewing stats specifically for that media.  You can see the [overall engagement graph]({{ '/audience_engagement_graph' | post_url }}), summary stats, and [individual viewer heatmaps](#heatmaps).
 
 <div class="post_image center"><img src="http://embed.wistia.com/deliveries/12ba4ab2ca59f3616215f091bb9b3ae60f22c5b3.png" alt="ms_media_page" /></div>
 
-Embedding your video on your public webpage?  Wistia Media Stats will tell you how it is performing (and [Wistia trends](/analytics.html) will show you how it is performing compared to your other video initiatives).
+Embedding your video on your public webpage?  Wistia Media Stats will tell you how it is performing (and [Wistia trends](#accountlevel_trends_view) will show you how it is performing compared to your other video initiatives).
 
 ---
 
@@ -113,7 +113,7 @@ Embedding your video on your public webpage?  Wistia Media Stats will tell you h
 The blue section of the engagement graph shows the engagement of viewers who clicked play on the video.  The orange section on top shows the number of times that section was re-watched. Move your cursor over the graph (from left to right) to see specific information for a time in the video, and click the graph to jump to that point in the video.
 
 
-More on [Audience Engagement Graphs](/audience_engagement_graph.html).
+More on [Audience Engagement Graphs]({{ '/audience_engagement_graph' | post_url }}).
 
 ---
 
@@ -206,31 +206,6 @@ The activity bar underneath the viewer name tracks the number of videos the view
 
 ### Tagging With Emails
 
-Adding a name to a viewer makes it easy to track their viewing sessions in your analytics.  You can also tag viewers with email address automatically, using [email marketing](/email_marketing.html) embeds.
+Adding a name to a viewer makes it easy to track their viewing sessions in your analytics.  You can also tag viewers with email address automatically, using [email marketing embeds]({{ '/email_marketing' | post_url }}).
 
 Once your viewer is tagged with an email, you can sort to view them in the Viewer Stream by clicking the "With Emails" option on the sorting bar.
-
----
-
-## Share Your Stats Publicly
-
-
-If you want to share stats for one of your videos by link, we can provide you with a publicly accessible page with anonymized statistics (i.e. the emails are removed!).
-
-However, this functionality is not enabled by default, so before continuing, please [ contact us ]( mailto:support@wistia.com ) to request it to be enabled for your account.
-
-The next step is to craft a link which your site's visitors can use to access your video's statistics.
-
-The URL for the link should be in the form of...
-	
-<span class="code">http://app.wistia.com/stats/&lt;media-id&gt;</span>
-
-...where <span class="code">&lt;media-id&gt;</span> is the unique id representing your video.  You can find the id for a video in the address bar at the top of your browser while you are on the video's page in Wistia.
-
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/8b6f4b90426a391f8cd5c039837cea16403ab00d.png" alt="media-id" /></div>
-
-The characters at the end of the URL are a unique id just for your video.  The id to use from the screenshot below would be **p9wrk3464f**.  So the URL for the stats for that video would be <span class="code">http://app.wistia.com/stats/p9wrk3464f</span>.
-
-The publicly accessible stats page looks similar to the main stats pages, except with identifiable information removed!
-
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/6a10d13cf62a1b7e9decb92c197611f1b100cd46.png" alt="public-stats-page" /></div>

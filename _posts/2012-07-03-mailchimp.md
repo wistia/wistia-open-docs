@@ -20,7 +20,7 @@ So let's dive in to how to create an email campaign with Wistia &amp; MailChimp!
 
 The first step is choosing the video you'd like to show off in your campaign.
 
-Start by embedding the video on the landing page you'll be using (or, if you're having it point to your Wistia Media Page, you're all set).  Follow the embedding steps if you have any trouble: [Embedding Your Video](/public_sharing.html).
+Start by embedding the video on the landing page you'll be using (or, if you're having it point to your Wistia Media Page, you're all set).  Follow the embedding steps if you have any trouble: [Embedding Your Video]({{ '/embedding' | post_url }}).
 
 ## Create Your Merge Tag
 
@@ -37,6 +37,7 @@ In the Email Marketing window, choose "MailChimp" from the Email provider drop-d
 ## Paste Your Merge Tag Into MailChimp
 
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/40571d43323b5683c89326dfdef60ea9e40b6e63.png" alt="" /></div>
+
 After getting the thumbnail and link settings working the way you'd like, copy the "Video Merge Tag" code, and paste it into the body of your MailChimp email.
 
 **Tip:** I normally send myself a test, to make sure everything is working correctly.

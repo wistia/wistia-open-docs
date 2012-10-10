@@ -10,11 +10,37 @@ post_intro: <p>This article gives you the steps to export video from various vid
 
 Wistia does have a few specifications and guidelines we recommend following in order to obtain the best performance using our service.
 
-### Video
+<div class="exporting_guide_box">
+<h3>
+  <i class="icon-facetime-video"></i>
+  Video
+</h3>
+<ul>
+<li>Codec: <span class="answer">h.264</span></li>
+<li>Resolution: <span class="answer">between 640px and 1280px wide</span></li>
+<li>Bitrate: <span class="answer">2,000 - 5,000kbps</span></li>
+<li>Aspect Ratio: <span class="answer">Get Crazy! We accept videos of any aspect ratio.</span></li>
+</ul>
+</div>
 
-In order to provide the best quality at the lowest bitrate, we recommend using the H.264 video codec and a frame size between 640 and 1280 pixels wide whenever possible. We accept videos of any aspect ratio. It is also recommended that you keep the bit rate of your video to less than 3,000 kilobits per second.
+<p></p>
 
-In regards to video format, Wistia accepts most of the common file formats (see a partial list below), but **for most consistent performance we generally recommend exporting files in an MP4 or MOV format**. If a file type is not explicitly supported (or recognized) by Wistia, users will simply be able to download the file.
+<div class="exporting_guide_box">
+<h3>
+  <i class="icon-volume-up"></i>
+  Audio
+</h3>
+<p>What? You mean the audio on these things is important!?  Well of course it is!</p>
+<ul>
+<li>Codec: <span class="answer">AAC (Advanced Audio Codec)</span></li>
+<li>Sample Rate: <span class="answer">44.4mhz</span></li>
+<li>Channels: <span class="answer">2-channel Stereo</span></li>
+</ul>
+</div>
+
+### Files Wistia Supports
+
+Wistia accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in an MP4 or MOV format*. If a file type is not explicitly supported (or recognized) by Wistia, users will simply be able to download the file.
 
 <table>
   <tbody>
@@ -41,15 +67,11 @@ In regards to video format, Wistia accepts most of the common file formats (see 
   </tbody>
 </table>
 
-### Audio
 
-What? You mean the audio on these things is important!?  Well of course it is!
-
-Videos uploaded to Wistia should use **2-channel stereo, and we recommend the AAC codec, 44.4mhz**.
 
 ### Note on File Sizes
 
-The standard Wistia upload function supports files up to **2 Gigabytes** in size. It is possible to upload larger files using the [Simple Uploader](/simple-uploader.html), but this is not recommended. Wistia transcodes all video before it can be shared, so that your viewers have the best playback experience possible. Part of the transcoding process is compressing the video using an efficient codec like FLV and MP4. As a result, the quality of your original upload matters only up to a certain point.
+The standard Wistia upload function supports files up to **2 Gigabytes** in size. It is possible to upload larger files using the [Simple Uploader]({{ '/simple-uploader' | post_url }}), but this is not recommended. Wistia transcodes all video before it can be shared, so that your viewers have the best playback experience possible. Part of the transcoding process is compressing the video using an efficient codec like FLV and MP4. As a result, the quality of your original upload matters only up to a certain point.
 
 We recommend adhering to 1280px wide and 3 - 5,000kbps as the max settings for upload, as it will reduce the likeliness of upload errors. If you find yourself with a short video (under 2 hours) that is larger than 2GB, it's likely something has gone wrong or a compression step was missed.
 
@@ -57,7 +79,7 @@ We recommend adhering to 1280px wide and 3 - 5,000kbps as the max settings for u
 
 ## Adobe Premiere Pro
 
-To export a video from Adobe Premiere Pro for use in Wistia, place your video clip in the Premiere timeline. Choose File &gt; Export &gt; Adobe Media Encoder. The Export Settings window will appear. Choose QuickTime from the Format drop-down menu. Click OK. Choose a filename and location. Your video will be saved to your computer as a MOV file which you can then easily [upload](/upload-video.html) to Wistia.
+To export a video from Adobe Premiere Pro for use in Wistia, place your video clip in the Premiere timeline. Choose File &gt; Export &gt; Adobe Media Encoder. The Export Settings window will appear. Choose QuickTime from the Format drop-down menu. Click OK. Choose a filename and location. Your video will be saved to your computer as a MOV file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ---
 
@@ -69,7 +91,7 @@ To export a file from Adobe Captivate, select 'Publish' from under the File menu
 
 ## Camtasia
 
-The simplest and quickest way to export a screencast from Camtasia is to use the preset production options.{{ :camtasia.png?275}} With the project you wish to share open in Camtasia Studio, click the Produce and Share button. On the first page of the Production Wizard, choose Web from the drop down menu. Click Next. Give your video a name and destination and click Finish. The video will be rendered in a MP4 file which you can then easily [upload](/upload-video.html) to Wistia.
+The simplest and quickest way to export a screencast from Camtasia is to use the preset production options.{{ :camtasia.png?275}} With the project you wish to share open in Camtasia Studio, click the Produce and Share button. On the first page of the Production Wizard, choose Web from the drop down menu. Click Next. Give your video a name and destination and click Finish. The video will be rendered in a MP4 file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 If you are not satisfied with the quality of the video produced using Camtasia's given presets, you can increase the quality in two ways. Whenever you first place a screencast in Camtasia's timeline you are asked to choose what dimensions you want to edit the video in. Larger dimensions allow you to watch the video at a bigger size without losing quality. You can also adjust the quality by using the custom production settings in the Production Wizard (Produce and Share button &gt; Custom production settings &gt; Next &gt; MP4/FLV/SWF – Flash Output &gt; Next &gt; Flash Options button &gt; Video tab).
 
@@ -77,7 +99,7 @@ If you are not satisfied with the quality of the video produced using Camtasia's
 
 ## Exporting from Compressor
 
-To encode a QuickTime movie using Compressor for playback on Wistia, you must create an encoding job. In Compressor, choose Job &gt; New Job With File. Select the media file you wish to use and click Open. An encoding job for the selected media file appears in the Batch window. In the Settings tab, drag the MPEG-4 setting from Apple/Formats to the job in the Batch window. If you want, you can change the name and destination of the encoded file, or just leave them the same as the source file. Click Submit in the Batch window. The video will be encoded as an MP4 file which you can then easily [upload](/upload-video.html) to Wistia.
+To encode a QuickTime movie using Compressor for playback on Wistia, you must create an encoding job. In Compressor, choose Job &gt; New Job With File. Select the media file you wish to use and click Open. An encoding job for the selected media file appears in the Batch window. In the Settings tab, drag the MPEG-4 setting from Apple/Formats to the job in the Batch window. If you want, you can change the name and destination of the encoded file, or just leave them the same as the source file. Click Submit in the Batch window. The video will be encoded as an MP4 file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ---
 
@@ -87,19 +109,19 @@ There are three ways to export video for use on Wistia from Final Cut Pro: using
 
 ### Using QuickTime conversion
 
-The easiest way to export a movie from Final Cut Pro is to use QuickTime conversion. Select a clip or sequence in the Browser or open a sequence in the Timeline, then choose File &gt; Export &gt; Using QuickTime Conversion. Choose a name and location for the file. From the Format pop-up menu choose QuickTime Movie. Choose Default Settings from the Use pop-up menu and click Save. Your video will be saved to your computer as a MOV file which you can then easily [upload](/upload-video.html) to Wistia.
+The easiest way to export a movie from Final Cut Pro is to use QuickTime conversion. Select a clip or sequence in the Browser or open a sequence in the Timeline, then choose File &gt; Export &gt; Using QuickTime Conversion. Choose a name and location for the file. From the Format pop-up menu choose QuickTime Movie. Choose Default Settings from the Use pop-up menu and click Save. Your video will be saved to your computer as a MOV file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ### Using Compressor as a standalone application
 
 To use Compressor as a standalone application, you must first create a QuickTime movie file to submit to Compressor. Since this will only be a temporary intermediate file, we recommend creating a QuickTime reference movie, which can be created quicker and takes up less space than a standard QuickTime movie because the video refers to your sequence's original media files when possible instead of storing all of the media in the file itself. However, since this file simply references other media stored on your computer, it will not work on other computers that don't have all the required media.
 
-{{ :fcp_ref_movie.jpg?250}}To create a QuickTime reference movie, select the sequence or clip in the Browser that you want to export and choose File &gt; Export &gt; QuickTime Movie. Choose a name and location for the file. Choose Current Settings and include both Audio and Video. Markers does not matter, as they will not be included in your final Wistia video. Make sure the Make Movie Self-Contained box is unchecked and click Save. Then follow the directions for [exporting video from Compressor](/exporting#compressor.html).
+{{ :fcp_ref_movie.jpg?250}}To create a QuickTime reference movie, select the sequence or clip in the Browser that you want to export and choose File &gt; Export &gt; QuickTime Movie. Choose a name and location for the file. Choose Current Settings and include both Audio and Video. Markers does not matter, as they will not be included in your final Wistia video. Make sure the Make Movie Self-Contained box is unchecked and click Save. Then follow the directions for exporting video from Compressor.
 
 ### Final Cut Pro to Compressor
 
-You can also send a movie to Compressor by exporting a Browser clip or sequence directly from Final Cut Pro to Compressor. Exporting a video from Final Cut Pro to Compressor works nearly the same as [using Compressor as a standalone application](/exporting#using compressor as a standalone application.html), the only difference being that you can skip the intermediate step of creating a QuickTime movie.
+You can also send a movie to Compressor by exporting a Browser clip or sequence directly from Final Cut Pro to Compressor. Exporting a video from Final Cut Pro to Compressor works nearly the same as using Compressor as a standalone application (above), the only difference being that you can skip the intermediate step of creating a QuickTime movie.
 
-To send a sequence or clip from Final Cut Pro to Compressor, select the sequence or clip in the Browser and choose File &gt; Send To &gt; Compressor. Compressor will open and you will see the sequence or clip appear in a Compressor Batch window. In the Settings tab, drag the MPEG-4 setting from Apple/Formats to the job in the Batch window. Choose where the video will be saved by dragging a destination preset from the Destinations tab to your job in the Batch window. Click Submit in the Batch window. The video will be encoded as an MP4 file which you can then easily [upload](/upload-video.html) to Wistia.
+To send a sequence or clip from Final Cut Pro to Compressor, select the sequence or clip in the Browser and choose File &gt; Send To &gt; Compressor. Compressor will open and you will see the sequence or clip appear in a Compressor Batch window. In the Settings tab, drag the MPEG-4 setting from Apple/Formats to the job in the Batch window. Choose where the video will be saved by dragging a destination preset from the Destinations tab to your job in the Batch window. Click Submit in the Batch window. The video will be encoded as an MP4 file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ---
 
@@ -121,7 +143,7 @@ To export your iMovie video project, select the project you wish to export from 
 
 You will be prompted to select the size that you want your video to be exported at.  For situations where most users will be viewing the video within your Wistia page, a 'medium size' video will work perfectly.  If you are confident that most of your viewers will be using higher-speed internet connections, or if you would like to display the video at a larger resolution on your web page, a 'large size' video will work well.
 
-Choose a filename and location, and click Export. Your video will be saved to your computer as an M4V file which you can then easily [upload](/upload-video.html) to your Wistia account.
+Choose a filename and location, and click Export. Your video will be saved to your computer as an M4V file which you can then easily [upload]({{ '/upload-video' | post_url }}) to your Wistia account.
 
 ---
 
@@ -129,7 +151,7 @@ Choose a filename and location, and click Export. Your video will be saved to yo
 
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/42d2696efddb067ca8e238212444c6c19eff923a.png" alt="quicktime_pro" /></div>
 
-To easily export a video from QuickTime Pro, open the movie you wish to export and choose File &gt; Export. In the Export pop-up menu you will be given a choice of formats in which to save your video. For easiest and most consistent performance on Wistia, we recommend selecting Movie to QuickTime Movie, which exports your video as a MOV file. Choose Default Settings from the Use pop-up menu, choose a filename and location, and click Save. Your video will be saved to your computer as a MOV file which you can then easily [upload](/upload-video.html) to Wistia.
+To easily export a video from QuickTime Pro, open the movie you wish to export and choose File &gt; Export. In the Export pop-up menu you will be given a choice of formats in which to save your video. For easiest and most consistent performance on Wistia, we recommend selecting Movie to QuickTime Movie, which exports your video as a MOV file. Choose Default Settings from the Use pop-up menu, choose a filename and location, and click Save. Your video will be saved to your computer as a MOV file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ---
 
@@ -137,4 +159,4 @@ To easily export a video from QuickTime Pro, open the movie you wish to export a
 
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/e2ea358871e38d394195c6a207cdd648b1296914.png" alt="" /></div>
 
-To export a screencast from ScreenFlow, open the screen recording you wish to export and choose File &gt; Export. From the Preset pop-up menu, choose Web - High (Best Quality). For the dimensions, make it scale by 100% so that your viewers will be able to see the details of your screen as clearly as possible. Choose a filename and location, and click Export. Your video will be saved to your computer as a MOV file which you can then easily [upload](/upload-video.html) to Wistia.
+To export a screencast from ScreenFlow, open the screen recording you wish to export and choose File &gt; Export. From the Preset pop-up menu, choose Web - High (Best Quality). For the dimensions, make it scale by 100% so that your viewers will be able to see the details of your screen as clearly as possible. Choose a filename and location, and click Export. Your video will be saved to your computer as a MOV file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
