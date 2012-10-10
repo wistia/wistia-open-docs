@@ -8,12 +8,16 @@
 @import compass/css3
 @import compass/utilities/text/ellipsis
 
+////////////////////////////////////
+
+@import font-awesome
+
 /////////////// vars ///////////////
 
 $header_blue: #C0DBEB
 $accent_blue: #688AAD
 $background_gray: #F7F6F4
-$background_blue: rgba(192, 219, 235, .3)
+$background_blue: rgba($header_blue, .3)
 $green: #8DC63F
 $text_color: #6B6760
 $hint_color: #CCC
@@ -62,6 +66,10 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
   @each $prefix in $prefixes
     &::#{$prefix}selection
       background: $background
+
+=callout-box($color)
+  padding: $padding/2
+  background-color: rgba($color, .3)
 
 //////// main styles /////////
 
@@ -505,8 +513,7 @@ table
 /////// Exporting Page ///////
 
 .exporting_guide_box
-  background-color: $background_blue
-  padding: $padding/2
+  +callout-box($header_blue)
   h3
     font-weight: bold
     margin-top: 0
