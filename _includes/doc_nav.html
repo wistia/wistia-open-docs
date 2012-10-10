@@ -3,7 +3,9 @@
     <ul>
       {% if page.type != 'post' %}
       <li id='breadcrumbs'>
-        <a href="{{ '/' | post_url }}">Doc Main</a>
+        <a href="{{ '/' | post_url }}" style='padding-left: 0;'>
+          <i class='icon-home icon-large'></i>
+        </a>
         <span class='breadcrumb_post_title'>
           &gt;
           {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
@@ -12,9 +14,17 @@
       {% else %}
       <li id='breadcrumbs'>
         {% if page.category %}
+        <a href="{{ '/' | post_url }}">
+          <i class='icon-home icon-large'></i>
+        </a>
+        <span class='breadcrumb_post_title'>
+          &gt;
+        </span>
         <a href='{{ page.category | category_url }}'>{{ page.category }}</a>
         {% else %}
-        <a href="{{ '/' | post_url }}">Doc Main</a>
+        <a href="{{ '/' | post_url }}">
+          <i class='icon-home icon-large'></i>
+        </a>
         {% endif %}
         <span class='breadcrumb_post_title'>
           &gt;

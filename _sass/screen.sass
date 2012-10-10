@@ -30,6 +30,8 @@ $post_width: 660px
 $total_width: $post_width + ($padding * 2)
 $fixed_column_width: 260px
 
+$prefixes: ("-webkit-","-moz-", "-o-", "")
+
 //////////// mixins ///////////////
 
 =letterpress($opacity, $base-color: white)
@@ -55,6 +57,11 @@ $fixed_column_width: 260px
 
 =anti-alias
   -webkit-font-smoothing: antialiased
+
+=selection($background)
+  @each $prefix in $prefixes
+    &::#{$prefix}selection
+      background: $background
 
 //////// main styles /////////
 
@@ -207,7 +214,6 @@ header
     font-size: 18px
     margin-bottom: 10px
     color: $text_color
-    border-bottom: 1px solid #DDD
     padding-bottom: 5px
 
 .developers
@@ -290,6 +296,8 @@ header
 
 .post_content
   width: $post_width
+  *
+    +selection($background_blue)
   h2, hr
     margin: $padding 0
     clear: both
@@ -493,6 +501,30 @@ table
     display: inline-block
     li
       margin-bottom: 10px
+
+/////// Exporting Page ///////
+
+.exporting_guide_box
+  background-color: $background_blue
+  padding: $padding/2
+  h3
+    font-weight: bold
+    margin-top: 0
+    color: $accent_blue
+  p
+    margin: -15px 0 15px
+    font-size: 14px
+    color: lighten($text_color, 30%)
+  ul
+    border: none
+    margin: 0
+    padding: 0
+    li
+      color: $accent_blue
+  .answer
+    color: lighten($text_color, 20%)
+    font-weight: normal
+      
 
 /////// post footer //////////
 
