@@ -1,6 +1,6 @@
+require_relative '../_config'
 
 module Jekyll
-  require_relative '../_config'
 
   module AssetFilter
     def post_url(input)

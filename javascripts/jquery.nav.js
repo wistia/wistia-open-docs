@@ -102,7 +102,7 @@
 					self.docHeight = docHeight;
 					self.getPositions();
 				}
-			}, 250);
+			}, 250 );
 		},
 		
 		getHash: function($link) {
