@@ -71,6 +71,10 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
   padding: $padding/2
   background-color: rgba($color, .3)
 
+=transition
+  +transition-property
+  +transition-duration(.5s)
+
 //////// main styles /////////
 
 body
@@ -344,8 +348,7 @@ header
     color: lighten($accent_blue, 40%)
     position: absolute
     left: 10px
-    +transition-property
-    +transition-duration(.5s)
+    +transition
     &:hover
       color: $accent_blue
 
@@ -564,7 +567,7 @@ table
 
 /////// post nav box ////////
 
-#right_col
+#post_content_nav
   display: inline-block
   vertical-align: top
   width: $fixed_column_width
@@ -574,6 +577,9 @@ table
   ul
     background-color: white
     padding: $padding
+    height: 450px
+    overflow-y: scroll
+    list-style-type: none
   li
     padding: 15px 0
     border-bottom: 1px dashed #DDD
@@ -616,6 +622,20 @@ table
     &:hover
       color: $accent_blue
 
+  .header_link
+    border: none
+    border-top: 1px dashed #DDD
+    margin-top: 10px
+    padding-bottom: $padding/6
+    a
+      font-weight: bold
+
+  .sub_link
+    padding: $padding/6 0
+    border: none
+    a
+      font-size: 12px
+
 ///// utility classes ///////
 
 .clear
@@ -642,11 +662,12 @@ table
 ////////// SEARCH ////////////
 
 .search_bar
-  margin-bottom: $padding
+  margin: $padding auto
   text-align: center
   position: relative
+  width: $post_width
   input
-    width: 80%
+    width: 88%
     height: 14px
     font-size: 14px
     padding: 4px
@@ -694,26 +715,7 @@ table
 
 //////////// DATA API /////////////
 
-#api_nav_col
-  @extend #right_col
-  ul
-    height: 450px
-    overflow-y: scroll
-  .title_list_item
-    margin: 0
-    list-style-type: none
-  .header_link
-    border: none
-    border-top: 1px dashed #DDD
-    margin-top: 10px
-    padding-bottom: $padding/6
-    a
-      font-weight: bold
-  .sub_link
-    padding: $padding/6 0
-    border: none
-    a
-      font-size: 12px
+
 #post.api
   p, li
     font-size: 14px
