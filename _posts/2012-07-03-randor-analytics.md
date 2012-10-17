@@ -63,8 +63,8 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 **Part I**
 
 *(0:08)* This quote has been attributed to [Peter Drucker](http://en.wikipedia.org/wiki/Peter_Drucker.html).<br/>
-*(0:50)* Check the [Analytics doc page](/analytics) for more on both Account Trends and the Viewer Stream.<br/>
-*(1:40)* For more on engagement graphs, [head here](/audience-engagement-graph).<br/>
+*(0:50)* Check the [Analytics doc page]({{ '/analytics' | post_url }}) for more on both Account Trends and the Viewer Stream.<br/>
+*(1:40)* For more on engagement graphs, [head here]({{ '/audience-engagement-graph' | post_url }}).<br/>
 
 **Part II**
 
@@ -72,7 +72,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 ## Ready for More?
 
-This is (for now) the last video in the series!  You can head back, and check out our [Wistia Basics](/randor-basics) video, or [Customizing Your Embed](/randor-customization) or [Promoting Your Video](/randor-promoting).
+This is (for now) the last video in the series!  You can head back, and check out our [Wistia Basics]({{ '/randor-basics' | post_url }}) video, or [Customizing Your Embed]({{ '/randor-customization' | post_url }}) or [Promoting Your Video]({{ '/randor-promoting' | post_url }}).
 
 What other Wistia training videos would you like to see?
 

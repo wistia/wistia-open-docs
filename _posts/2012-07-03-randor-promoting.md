@@ -64,7 +64,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 *(0:35)* there isn't necessarily a strict definition of 'business-type fun'.<br/>
 *(0:45)* Email clients (like Outlook, Apple Mail, Gmail, Sparrow) are designed to strip out video and anything else that might be malicious.  This approach is the closest we can get at the present time to allowing your viewers to watch video from an email.  There are actually lots of benefits from doing it this way - for starters, the viewer ends up on your site, where they can buy your product!<br/>
 *(1:17)* Enabling the video to be embedded in an email marketing campaign means that viewers can access your video's Wistia page by a URL, without having to enter a password.<br/>
-*(1:28)* Indeed, we do have a whole bunch.  See the full list on our [email marketing doc page](/email-marketing#email_provider_list.html).<br/>
+*(1:28)* Indeed, we do have a whole bunch.  See the full list on our [email marketing doc page]({{ '/email-marketing#email_provider_list' | post_url }}).<br/>
 
 **Video SEO**
 
@@ -72,7 +72,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 *(3:26)* While Jeff can control where people appear, he cannot control where they end up.  In this case, Ben ended up in Siberia.  Poor Ben.<br/>
 *(4:05)* In many cases, your website might already have a robots.txt file. If so, you will need to determine how to go about editing it. Wordpress for example, has plug-ins like [KB Robots.txt](/http://wordpress.org/extend/plugins/kb-robotstxt/.html) which provide control over your robots.txt file.<br/>
 *(4:30)* Once you have created and validated your video sitemap, the 'SEO' embed type option will appear.  Your videos must be embedded using this embed type to add them to the Video Sitemap.<br/>
-*(5:30)* If for any reason Video SEO isn't demystified for you, there is lots more info on our [Video SEO page](/video-seo).<br/>
+*(5:30)* If for any reason Video SEO isn't demystified for you, there is lots more info on our [Video SEO page]({{ '/video-seo' | post_url }}).<br/>
 
 **Facebook & Twitter**
 
@@ -84,7 +84,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 The next video in the series is **"Understanding Wistia Analytics"**.  It covers interacting with your video analytics, and also details a few real-world examples of making better video through analytics.
 
-Watch it right now: [Understanding Wistia Analytics](/randor-analytics).
+Watch it right now: [Understanding Wistia Analytics]({{ '/randor-analytics' | post_url }}).
 
 <script>
 var url = window.location.href.toString();

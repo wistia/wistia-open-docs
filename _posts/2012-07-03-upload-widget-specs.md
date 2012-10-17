@@ -3,7 +3,7 @@ layout: post
 category: For Developers
 title: Upload Widgets Dev Info
 description: The upload widget is a simple yet poweful tool for uploading videos outside of your Wistia account. Embed them anywhere you want people to upload content!
-post_intro: <p>The Upload Widget is a snippet of HTML, CSS, and JS that you can embed on your page to allow viewers of that page to upload their own media to your site.  It's great for user generated content campaigns (UGC).</p> <p>Wistia has an <a href="/upload-widgets">Upload Widget Generator</a> that you can use to make embedding an upload widget easy and quick for non-technical users.  The rest of this page is geared primarily towards developers that want more control over how their page behaves with the widget.</p>
+post_intro: <p>The Upload Widget is a snippet of HTML, CSS, and JS that you can embed on your page to allow viewers of that page to upload their own media to your site.  It's great for user generated content campaigns (UGC).</p> <p>Wistia has an <a href="/newdoc/upload-widgets">Upload Widget Generator</a> that you can use to make embedding an upload widget easy and quick for non-technical users.  The rest of this page is geared primarily towards developers that want more control over how their page behaves with the widget.</p>
 footer: 'for_developers'
 ---
 

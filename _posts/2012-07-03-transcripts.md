@@ -30,7 +30,7 @@ Once your transcript is ready, it will appear to all viewers who view the video 
 
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/7c0e0ad7a43e609209c4f313355782670d1a09f3.png" alt="superembed_dialogue_transcripts" /></div>
 
-To embed your transcript, select the &lt;/&gt; Embed dialogue as you normally would to embed your video (for more help on this, head over here: [embedding a video](/media#how_to_embed_a_video.html)).
+To embed your transcript, select the &lt;/&gt; Embed dialogue as you normally would to embed your video (for more help on this, head over here: [embedding a video]({{ '/embedding' | post_url }})).
 
 Check the "Include Interactive Transcript" checkbox, and then copy and paste your embed code as you normally would.  You can style the transcript to appear to the left, underneath, or to the right of the video.
 

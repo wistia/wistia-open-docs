@@ -41,9 +41,9 @@ Once a file has been chosen, you will see the progress of the file uploading as 
 
 <div class="post_image center"><img src="http://embed.wistia.com/deliveries/804697cd6143ac58ff53770f178bb6a764ba6e30.png" alt="uploading1" /></div>
 
-If you are having trouble with uploads completing, please try our [simple uploader without the progress bar](/simple-uploader.html).
+If you are having trouble with uploads completing, please try our [simple uploader without the progress bar]({{ '/simple-uploader' | post_url }}).
 
-For instructions on the best way to encode your video prior to uploading it, check our [video exporting page](/exporting.html).
+For instructions on the best way to encode your video prior to uploading it, check our [video exporting page]({{ '/exporting' | post_url }}).
 
 ----
 

@@ -70,29 +70,29 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 *(0:25)* to create a New Project, select "New Project" from under the Actions drop-down menu
 *(0:45)* We did a bit of time-warping to accomplish this.  It can take some time to upload & process videos!
-*(1:00)* For a list of the formats we accept, refer here: [Optimal Export settings](/export-settings#optimal_export_settings_for_wistia)
+*(1:00)* For a list of the formats we accept, refer here: [Optimal Export settings]({{ '/export-settings#optimal_export_settings_for_wistia' | post_url }})
 *(1:15)* This was the best thumbnail because Chris looks so awkward.
 
 **Embedding**
 
-*(2:10)* To see that video on customization, head here: [Customizing Your Embed](/randor_customization)
-*(2:20)* In this example, I used a Wordpress blog, but there are lots of different site types and platforms you can embed Wistia videos into.  See our [list of tested sites](/integration).
+*(2:10)* To see that video on customization, head here: [Customizing Your Embed]( {{ '/randor_customization' | post_url }})
+*(2:20)* In this example, I used a Wordpress blog, but there are lots of different site types and platforms you can embed Wistia videos into.  See our [list of tested sites]({{ '/integration' | post_url }}).
 
 **Stats Intro**
 
-*(3:20)* For more on Wistia Analytics, head here: [Understanding Analytics](/randor_analytics).
+*(3:20)* For more on Wistia Analytics, head here: [Understanding Analytics]({{ '/randor_analytics' | post_url }}).
 
 **Account Settings**
 
 *(4:00)* You can access the Account Dashboard under the "Account" drop-down menu anywhere in your account.
-*(4:40)* For more on what different user-levels can access in your account, read up on [permissions](/permissions).
+*(4:40)* For more on what different user-levels can access in your account, read up on [permissions]({{ '/permissions' | post_url }}).
 *(5:40)* It's true, Chris couldn't wait.  In fact, he watches the other videos daily.
 
 ## Ready for More?
 
 The next video in the series is **"Customizing Your Embed"**.  From colors, to controls, to interactivity, the SuperEmbed builder gives you ultimate video customizing power.
 
-Watch it right now: [Customizing Your Embed](/randor-customization).
+Watch it right now: [Customizing Your Embed]({{ '/randor-customization' | post_url }}).
 
 <script>
   var url = window.location.href.toString();

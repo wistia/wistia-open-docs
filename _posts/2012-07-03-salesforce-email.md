@@ -8,7 +8,7 @@ footer: 'for_intermediates'
 
 Many organizations that use video in their sales process also use Salesforce.com to manage their leads, opportunities, and sales pipelines.  As a result, Wistia has integrated with Salesforce.com to allow Salesforce.com users to associate activity in their Wistia account with contacts, leads, and opportunities in Salesforce.com.
 
-Those using Wistia in a sales context often find the [Wistia Email Alerts](/alerts) to be extremely valuable in keeping up with a prospect's activities within their Wistia accounts.  These alerts can be set to email the sales person when any of the following events occur within the Wistia system:
+Those using Wistia in a sales context often find the [Wistia Email Alerts]({{ '/alerts' | post_url }}) to be extremely valuable in keeping up with a prospect's activities within their Wistia accounts.  These alerts can be set to email the sales person when any of the following events occur within the Wistia system:
 
 
 *  **New media** - Alert manager when media is uploaded or copied into a project

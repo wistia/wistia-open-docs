@@ -43,11 +43,11 @@ To center your video in Wordpress, you will first use an outer div with the styl
 
 ## Adding the Wistia XML Sitemap Entry to a Wordpress 'Robots.txt' File
 
-If you are looking to use your Wordpress page with Wistia's Video SEO tool, you will need to update your Robots.txt file.  For more on Video SEO and the Robots.txt file, check out our [Video SEO primer](/video-seo#setup.html).
+If you are looking to use your Wordpress page with Wistia's Video SEO tool, you will need to update your Robots.txt file.  For more on Video SEO and the Robots.txt file, check out our [Video SEO primer]({{ '/video-seo#setup' | post_url }}).
 
 To update your Robots.txt file in Wordpress, you will need a special plug-in called 'KB Robots.txt'.  [Read more about the plug-in](http://adambrown.info/b/widgets/kb-robots-txt) and download it for your Wordpress site on their [plug-in page](http://wordpress.org/extend/plugins/kb-robotstxt).
 
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/ec5f981b2a57494d9ea5bd09fcb3b26a280c8663.png" alt="video-seo-setup2" /></div>
 
-Once the plug-in is installed, you should have a new *Options* menu, and a *KB Robots.txt* admin page.  This page should give you an editable box to add your Wistia Video SEO 'Robots.txt' line. You will obtain that line from the [Video SEO](/video-seo) area of your account.
+Once the plug-in is installed, you should have a new *Options* menu, and a *KB Robots.txt* admin page.  This page should give you an editable box to add your Wistia Video SEO 'Robots.txt' line. You will obtain that line from the [Video SEO]({{ '/video-seo' | post_url }}) area of your account.
 

@@ -20,7 +20,7 @@ Flash updates their plugin on a pretty regular basis, so we always recommend mak
 
 ## Try our simple uploader
 
-Sometimes the flash uploader just won't be co-operative, which is why we have our [HTML5 uploader](/simple-uploader). Using this uploader can prevent the download from crashing due to flash. While this doesn't provide a progress bar (or the ability to que files for upload) it is more stable and can handle files larger than 2GB. 
+Sometimes the flash uploader just won't be co-operative, which is why we have our [HTML5 uploader]({{ '/simple-uploader' | post_url }}). Using this uploader can prevent the download from crashing due to flash. While this doesn't provide a progress bar (or the ability to que files for upload) it is more stable and can handle files larger than 2GB. 
 
 ## Reset your internet connection
 
