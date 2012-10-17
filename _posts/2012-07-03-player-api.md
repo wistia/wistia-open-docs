@@ -37,7 +37,7 @@ browsers, this is the recommended way to access the player API.
 
 Put the following just before the <span class="code">&lt;/body&gt;</span> tag:
 
-<div class="code">&lt;script src="//fast.wistia.com/static/iframe-api-v1.js"&gt;&lt;/script&gt;</div>
+<pre><code class="language-vim">&lt;script src="//fast.wistia.com/static/iframe-api-v1.js"&gt;&lt;/script&gt;</code></pre>
 
 **Note:** It must come after any iframe embeds on the page, so it **cannot** be added inside the <span class="code">&lt;head&gt;</span> tag.
 
