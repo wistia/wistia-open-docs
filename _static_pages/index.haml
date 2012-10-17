@@ -1,6 +1,13 @@
 \---
-layout: home
+layout: base
+title: Main
 \---
+
+#home_logo
+
+.search_bar
+  %input#search_text{type: "text", placeholder: "search the docs" }
+  %button#search_button Search!
 
 #articles_list
   %h3 Quickstart
@@ -174,3 +181,14 @@ layout: home
         %li
           %a{ href: "{{ 'upload-widget-specs' | post_url }}" } Upload Widgets
 
+:javascript
+  $('.post_list li').each( function() {
+    $this = $(this);
+    var $a = $this.find("a");
+    var $hint = $this.find(".hint");
+    $a.hover(function() {
+      $hint.addClass("unhide");
+    }, function() {
+      $hint.removeClass("unhide");
+    });
+  });

@@ -1,6 +1,12 @@
 ---
-layout: home
+layout: base
+title: Main
 ---
+<div id='home_logo'></div>
+<div class='search_bar'>
+  <input id='search_text' placeholder='search the docs' type='text' />
+  <button id='search_button'>Search!</button>
+</div>
 <div id='articles_list'>
   <h3>Quickstart</h3>
   <ul class='quickstart'>
@@ -239,3 +245,17 @@ layout: home
     </li>
   </ul>
 </div>
+<script type='text/javascript'>
+  //<![CDATA[
+    $('.post_list li').each( function() {
+      $this = $(this);
+      var $a = $this.find("a");
+      var $hint = $this.find(".hint");
+      $a.hover(function() {
+        $hint.addClass("unhide");
+      }, function() {
+        $hint.removeClass("unhide");
+      });
+    });
+  //]]>
+</script>
