@@ -11,24 +11,13 @@
     :javascript
       var basepath = "{{ '' | post_url }}";
     %title
-      Wistia Documentation
+      {% if page.title == '' %} wDoc {% else %} wDoc: {{ page.title }} {% endif %}
     
   %body
     %header
-      #header_container
-        #logo
-          %a{ href: '/' }
-        #header_nav
-          %ul
-            %li
-              %a{ href: '/pricing' } pricing
-            %li 
-              %a{ href: '/blog' } blog
-            %li 
-              %a{ href: '/login' } login
+      {% include header.html %}
     #container
-      #content
-        {{ content }}
+      {{ content }}
 
 
 %script{ src: "{{ '/javascripts/prism' | javascript_url }}" }

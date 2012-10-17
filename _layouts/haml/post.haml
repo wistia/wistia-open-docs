@@ -3,7 +3,7 @@ layout: base
 type: post
 \---
 
-#right_col
+#post_content_nav
   %ul#page_nav
 
 #post_container
@@ -17,10 +17,12 @@ type: post
         {{ page.post_intro }}
       {% endif %}
       {{ content }}
+    {% if page.api != true %}
     .post_footer
       {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
+    {% endif %}
 
-%script{ src: "{{ '/javascripts/post_content_nav' | javascript_url }}" }
+{% if page.api == true %} {% include api_js.html %} {% else %} {% include post_js.html %} {% endif %}
 %script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/jquery.nav' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/image_layout' | javascript_url }}" }
