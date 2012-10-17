@@ -1,5 +1,6 @@
 ---
-layout: api
+layout: post
+api: true
 category: For Developers
 title: Wistia Video Player API
 description: The Wistia player has a built in Javascript API, providing you with a variety of ways to create awesome functions and interact with the player.
