@@ -11,7 +11,7 @@ $(document).ready(function() {
     };
 
     h1.attr('id', text_to_id(h1.text()));
-    $('#api_nav_col').prepend('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
+    nav_box_ul.prepend('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
 
     h_arr.each( function() {
       var $this = $(this);
@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
 
     $('#page_nav').onePageNav();
-    $('li.header_link:first').css('border', 'none').css('margin-top', 0).css('padding-top', 0);
+    $('li.header_link:first').css('border', 'none');
 
 
     // get the spacing on the title bar set right
