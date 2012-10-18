@@ -33,7 +33,7 @@ $for_developers: #f0818b
 
 $post_width: 660px
 $total_width: 960px
-$fixed_column_width: 300px
+$fixed_column_width: 280px
 
 $prefixes: ("-webkit-","-moz-", "-o-", "")
 
@@ -169,7 +169,7 @@ header
 #post_container
   display: inline-block
   position: relative
-  left: $fixed_column_width + 30
+  left: $fixed_column_width + 20
 
 /////// doc home only ///////
 
@@ -259,6 +259,7 @@ header
 //////// post header /////////////
 
 #doc_nav
+  padding-top: 20px
   background: white
   width: $post_width
   #doc_nav_container
@@ -290,9 +291,8 @@ header
         .breadcrumb_post_title
           color: $accent_blue
       li#nav_search_box
-        right: 0
+        right: 20px
         top: 9px
-
 
 //////// post //////////
 
@@ -320,6 +320,7 @@ header
     height: 1px
     background-color: #bbb
     border: 0
+    margin-top: 40px
     
   h2, h3
     line-height: 120%
@@ -331,14 +332,15 @@ header
   h3, p
     margin: $padding/2 0 $padding/2 $padding
   h3
-    font-size: 18px
+    font-size: 24px
     clear: both
   p
     margin-left: $padding
+    margin-right: $padding
     line-height: 150%
     position: relative
   ul, ol
-    padding-left: $padding
+    padding-left: $padding - 10
     line-height: 150%
     border-left: 10px solid $header_blue
   ul
@@ -414,6 +416,7 @@ span.code
 .post_intro
   margin-bottom: 2 * $padding
   margin-left: $padding
+  margin-right: $padding
   h2
     &:first-of-type
       margin-top: 0
@@ -580,14 +583,10 @@ table
   position: fixed
   background-color: white
   ul
-    background-color: white
-    padding: $padding
-    height: 450px
-    overflow-y: scroll
     list-style-type: none
     padding: 20px
   li
-    border-bottom: 1px solid #444
+    border-bottom: 1px solid #bbb
     a
       display: block
       padding: 20px 0px
@@ -595,7 +594,7 @@ table
       font-size: 14px
       text-decoration: none
       &:hover
-        color: $text_color - 20
+        color: $text_color - 60
     &:last-of-type
       border-bottom: none
       margin-bottom: 0
@@ -666,16 +665,18 @@ table
   width: $post_width
   input
     width: 88%
-    height: 14px
     font-size: 14px
-    padding: 4px
-    padding-bottom: 1px
+    border: 1px solid #bbb
+    padding: 5px 10px
   button
-    font-size: 13px
-    padding: 4px
+    font-size: 12px
     position: relative
     vertical-align: top
-    top: -2px
+    background: #eee
+    border: 1px solid #bbb
+    font-style: italic
+    padding: 5px 10px
+
 
 #doc_nav_container
   .search_bar
