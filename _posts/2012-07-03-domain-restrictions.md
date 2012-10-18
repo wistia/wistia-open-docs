@@ -8,11 +8,9 @@ footer: 'for_intermediates'
 
 Video embed domain restrictions allows you to prevent a malicious viewer from stealing your embed code off your page.  When domain restriction is set up, the videos in your account will only display on the domains you specify.
 
-**Note:** Domain Restrictions will not work with SSL embeds.
+{{ 'Domain Restrictions will not work with SSL embeds.' | note }}
 
-
-
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/867299a5760f489450dfffc5c08b5ccacfa75463.png" alt="domain_restrictions_popup" /></div>
+{% post_image hashed_id: '867299a5760f489450dfffc5c08b5ccacfa75463', class: 'center' %}
 
 To get started with video embed domain restrictions:
 

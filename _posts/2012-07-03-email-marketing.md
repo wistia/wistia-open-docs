@@ -3,7 +3,7 @@ title: Email Marketing and Wistia
 layout: post
 category: Public Sharing
 description: Learn how we integrate with some of the top email marketing platforms to make your campaigns even more powerful in no time.
-post_intro: <div class="post_image intro_image float_right"><img src="http://embed.wistia.com/deliveries/e13eae6e347f3939c10712245b2df2ff1156d68e.png" width="200px" alt="email_marketing_guide"/></div><p>Email marketing campaigns are great for engaging your prospects with timely messages.  When done right, they can be an excellent driver of business value.</p><p>Adding video to the mix is an effective way to increase click-through rates and maximize engagement with your message.  Wistia makes it easy to integrate video with your email-marketing campaigns, as well as measure the results down to the individual viewer, second-by-second.</p><p>After this tutorial you will be able to integrate video into your email marketing campaigns, and understand which recipients are engaged with your message.</p><div class="post_image center"><img src="http://embed.wistia.com/deliveries/97291f1a3b3898ec951a80296504441a9b3d0ce0.png" alt="email_heatmap" /></div>
+post_intro: <img class="post_image intro_image float_right" src="http://embed.wistia.com/deliveries/e13eae6e347f3939c10712245b2df2ff1156d68e.png" width="200px" alt="email_marketing_guide"/><p>Email marketing campaigns are great for engaging your prospects with timely messages.  When done right, they can be an excellent driver of business value.</p><p>Adding video to the mix is an effective way to increase click-through rates and maximize engagement with your message.  Wistia makes it easy to integrate video with your email-marketing campaigns, as well as measure the results down to the individual viewer, second-by-second.</p><p>After this tutorial you will be able to integrate video into your email marketing campaigns, and understand which recipients are engaged with your message.</p><img class="center post_image" src="http://embed.wistia.com/deliveries/97291f1a3b3898ec951a80296504441a9b3d0ce0.png" width="660" alt="email_heatmap" />
 footer: 'for_intermediates'
 ---
 
@@ -39,7 +39,7 @@ First, pick the video from your account you want to embed in an email.  You'll n
 
 Start by embedding the video on the landing page you'll be using (if you're having it point to your Wistia Media Page, you're all set).  Follow the embedding steps if you have any trouble: [Embedding Your Video]({{ '/embedding' | post_url }}).
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/d129371996ba14ee95adaf0fc17ce5b3bbf2f31d.png" alt="email_integ1" /></div>
+{% post_image hashed_id: 'd129371996ba14ee95adaf0fc17ce5b3bbf2f31d', class: 'center' %}
 
 Next, select "Email Marketing" from under the Media Actions drop-down menu.
 
@@ -51,7 +51,7 @@ Next, select your provider from the drop-down list.  We've got a whole list of t
 
 After you choose your email marketing provider, you can customize the settings for your campaign.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/43a348de097029eb4e1b4040f0407e4095939a11.png" alt="email_integ_screen" /></div>
+{% post_image hashed_id: '43a348de097029eb4e1b4040f0407e4095939a11', class: 'center' %}
 
 Thumbnail width refers to the size of the thumbnail image in your email.  Do you want it to dominate the email? Or should it be playing 3rd fiddle?  450px is our standard width, but you can change it as you see fit.
 
@@ -63,7 +63,7 @@ Link to means where people will end up after clicking the thumbnail image.  By d
 
 Once you've got your settings dialed in, copy the "video merge tag", and paste it into the HTML editor for your email provider.  Voila! The thumbnail image will appear, attached to a link to your video.  And in the background, we'll be collecting stats on which email addresses viewed your videos (available in the Public Stats area of your account).
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/44087ef2759f48e1b04d72cac7ba90e058f0f388.png" alt="email_partial_heatmap" /></div>
+{% post_image hashed_id: '44087ef2759f48e1b04d72cac7ba90e058f0f388', class: 'center' %}
 
 ---
 
@@ -94,74 +94,23 @@ This is the full list of providers we currently integrate with:
 
 The following is a table that includes the email clients we have encountered that support dynamic links, and the merge tags needed to take advantage of them.
 
-<table>
-  <tbody>
-    <tr>
-      <th>Provider</th>
-      <th>URL Email Merge Tag</th>
-    </tr>
-    <tr>
-      <td>AWeber</td>
-      <td >{!email}</td>
-    </tr>
-    <tr>
-      <td>Blue Hornet</td>
-      <td >%%to_email%%</td>
-    </tr>
-    <tr>
-      <td>Campaign Monitor</td>
-      <td ><pre>[email]</pre></td>
-    </tr>
-    <tr>
-      <td>Constant Contact</td>
-      <td >$SUBSCRIBER.EMAIL$</td>
-    </tr>
-    <tr>
-      <td>Emailvision</td>
-      <td ><pre>[EMV FIELD]EMAIL[EMV /FIELD]</pre></td>
-    </tr>
-    <tr>
-      <td>Emma</td>
-      <td >Not Available</td>
-    </tr>
-    <tr>
-      <td>GetResponse</td>
-      <td ><pre>[email]</pre></td>
-    </tr>
-    <tr>
-      <td>Hubspot</td>
-      <td>{{contact.email}}</td>
-    </tr>
-    <tr>
-      <td>iContact</td>
-      <td ><pre>[email]</pre></td>
-    </tr>
-    <tr>
-      <td>Infusionsoft</td>
-      <td >~Contact.Email~</td>
-    </tr>
-    <tr>
-      <td>MailChimp</td>
-      <td >%%URL:EMAIL%%</td>
-    </tr>
-    <tr>
-      <td>Marketo</td>
-      <td >{% raw %}{{lead.Email Address:default=noemail}}{% endraw %}</pre></td>
-    </tr>
-    <tr>
-      <td>Pardot</td>
-      <td >%%email%%</td>
-    </tr>
-    <tr>
-      <td>Vertical Response</td>
-      <td >{EMAIL_ADDRESS}</td>
-    </tr>
-    <tr>
-      <td>ExactTarget</td>
-      <td >%%Email Address%%</td>
-    </tr>
-  </tbody>
-</table>
+Provider  |  URL Email Merge Tag
+----------|----------------------
+AWeber    |  {!email}
+Blue Hornet  |  %%to_email%%
+Campaign Monitor | <pre>[email]</pre>
+Constant Contact | $SUBSCRIBER.EMAIL$
+Emailvision  |  <pre>[EMV FIELD]EMAIL[EMV /FIELD]</pre>
+Emma  | Not Available
+GetResponse  |  <pre>[email]</pre>
+Hubspot  | {% raw %}<pre>{{contact.email}}</pre>{% endraw %}
+iContact  |  <pre>[email]</pre>
+Infusionsoft  |  ~Contact.Email~
+MailChimp  |  %%URL:EMAIL%%
+Marketo  |  <pre>{{lead.Email Address:default=noemail}}</pre>
+Pardot  |  %%email%%
+Vertical Response  |  {EMAIL_ADDRESS}
+ExactTarget  |  %%Email Address%%
 
 ---
 
@@ -229,7 +178,7 @@ When someone clicks the dynamic link in your email campaign, they will be taken 
 
 When you view the statistics for your video you will see analytics for each person who clicked through from your email campaign as shown in the following example:
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/96221f9edb1dab5794bdca3c634426dfb1d48189.png" alt="email-heatmap" /></div>
+{% post_image hashed_id: '96221f9edb1dab5794bdca3c634426dfb1d48189', class: 'center' %}
 
 This data can also be exported to a spreadsheet as well using Wistia's [Stats Export feature]({{ '/stats-api' | post_url }}) to help you more easily sort through large data sets.
 

@@ -21,13 +21,13 @@ wistiaEmbed = Wistia.embed("59ad3f2dc4", {
 
 Just like Ben says in the video, we all make mistakes.  If you've embedded a video, and now you need to update it in a hurry, the **Replace Video** tool is a quick and easy way to get it done.  As a bonus, you won't lose stats already created for the original video.
 
-**NOTE:** you can replace any video in your account using this feature, but in order for the change to appear automatically on your website, you must be using iframe embeds.
+{{ "You can replace any video in your account using this feature, but in order for the change to appear automatically on your website, you must be using iframe embeds." | note }}
 
-**DOUBLE NOTE:** this won't replace any copies of the video you've made in your account, only the original. 
+{{ "This won't replace any copies of the video you've made in your account, only the original." | note }}
 
 ## Select the Video to be Replaced
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/05b52293ca30983d8bf5203c78c07857553d6964.png" alt="replace1" /></div>
+{% post_image hashed_id: '05b52293ca30983d8bf5203c78c07857553d6964', width: 320, class: 'float_right' %}
 
 Open up the media page in your account for the video that needs replacing.
 
@@ -36,19 +36,19 @@ Find the "Replace Video" option under the green Media Actions drop-down menu
 
 ## Choose the Replacement Video 
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/3cdd2c451899e0b35a26717f3c95eb8199bfd4a6.png" alt="replace2" /></div>
+{% post_image hashed_id: '3cdd2c451899e0b35a26717f3c95eb8199bfd4a6', width: 660, class: 'center' %}
 
 In the pop-up window, selecting "Upload Replacement" will bring up a dialogue box so that you can locate the video you want to replace the current video with.
 
 ## After Upload
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/a5c47cabc5bf11548bc57f5d19cf81e16d230cdf.png" alt="replace4" /></div>
+{% post_image hashed_id: 'a5c47cabc5bf11548bc57f5d19cf81e16d230cdf', width: 660, class: 'center' %}
 
 Once the new video is finished uploading, Wistia will encode it and perform the backend work to replace the old video with the new one, immediately, across the internet.
 
 When the encoding/replacing process is done, the new video will appear in your account.  No need to update embed codes, URLs, or sharing.  All done!
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/eadf1d5c180b2580c747542f5ffe9e337976ac9a.png" alt="replace5" /></div>
+{% post_image hashed_id: 'eadf1d5c180b2580c747542f5ffe9e337976ac9a', width: 660, class: 'center' %}
 
 Geez, Adam looks good, doesn't he?
 

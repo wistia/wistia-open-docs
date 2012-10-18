@@ -73,9 +73,10 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
   h3
     color: $h3-color
     font-weight: bold
-    margin: 0 $padding
+    margin: 0 $padding/2
   p
     font-size: 14px
+    margin-left: $padding/2
 
 =transition
   +transition-property
@@ -342,8 +343,16 @@ header
     clear: both
     color: $accent_blue
     margin: $padding 0
-  h3, h4, h5, p, pre, ol, ul
+  h3, h4, h5, p
     margin: $padding/2 0 $padding/2 $padding
+  ol, ul
+    margin: $padding 0
+    line-height: 150%
+    border-left: 10px solid $header_blue
+  ol
+    padding-left: 42px
+  ul
+    padding-left: 20px
   h3, h5
     font-weight: bold
   h4
@@ -354,10 +363,8 @@ header
     margin-right: $padding
     line-height: 150%
     position: relative
-  ul, ol
-    padding-left: $padding - 10
-    line-height: 150%
-    border-left: 10px solid $header_blue
+    pre
+      margin: $padding/2 0 $padding/2 $padding
   ul
     list-style-type: none
     position: relative
@@ -437,21 +444,23 @@ span.code
 .faq
   @extend .post_callout_boxes
   +callout-box($note_color)
+.tip
+  @extend .post_callout_boxes
+  +callout-box($background_blue)
 
 
 ////////// post intro paragraph styles ////////
 
 .post_intro
-  margin-bottom: 2 * $padding
-  margin-left: $padding
-  margin-right: $padding
-  h2
-    &:first-of-type
-      margin-top: 0
+  margin: $padding
+  margin-left: 0
+  &:first-of-type
+    margin-top: 0
   p, ul
     width: 100%
     margin: $padding/2 0
     line-height: 150%
+    font-size: 18px
   p
     &:first-of-type
       margin-top: 0
@@ -462,6 +471,9 @@ span.code
     padding-left: $padding/2
   ul li
     list-style-position: inside
+
+  .center
+    margin-left: 0
     
 
 /////// images /////////
@@ -476,10 +488,11 @@ span.code
     vertical-align: top
 .center
   text-align: center
+  margin-left: -$padding
 .float_right, .intro_image
   float: right
   margin: $padding/2
-  margin-right: 0
+  margin-right: -($padding) - 2
 .intro_image
   border: none
 
@@ -520,6 +533,9 @@ table
       a
         color: white
         text-decoration: underline
+  tr td pre
+    margin: 0
+    padding: 0
 
 ////// EMBED SCREEN ////////
 
@@ -553,12 +569,15 @@ table
 
 .exporting_guide_box
   +callout-box($header_blue)
+  h3
+    margin: 0
   p
-    margin: -15px 0 15px
+    margin: 0 0 $padding/2 $padding
     color: lighten($text_color, 30%)
   ul
     border: none
     margin: 0
+    margin-left: $padding
     padding: 0
     li
       color: $accent_blue

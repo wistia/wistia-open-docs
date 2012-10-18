@@ -17,11 +17,11 @@ The URL for the link should be in the form of...
 
 ...where <span class="code">&lt;media-id&gt;</span> is the unique id representing your video.  You can find the id for a video in the address bar at the top of your browser while you are on the video's page in Wistia.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/8b6f4b90426a391f8cd5c039837cea16403ab00d.png" alt="media-id" /></div>
+{% post_image hashed_id: '8b6f4b90426a391f8cd5c039837cea16403ab00d', class: 'center' %}
 
 The characters at the end of the URL are a unique id just for your video.  The id to use from the screenshot below would be **p9wrk3464f**.  So the URL for the stats for that video would be <span class="code">http://app.wistia.com/stats/p9wrk3464f</span>.
 
 The publicly accessible stats page looks similar to the main stats pages, except with identifiable information removed!
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/6a10d13cf62a1b7e9decb92c197611f1b100cd46.png" alt="public-stats-page" /></div>
+{% post_image hashed_id: '6a10d13cf62a1b7e9decb92c197611f1b100cd46', class: 'center' %}
 

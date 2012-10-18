@@ -27,7 +27,7 @@ All content in Wistia must be uploaded inside a **Project**.  Projects work just
 
 To create a new Project, select *New Project* under the <span class="action_menu">Actions</span> menu.
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/ddbe1f41c6c03e460ac7f2e2820a88556ca878b6.png" alt="upload-select3" /></div>
+{% post_image hashed_id: 'ddbe1f41c6c03e460ac7f2e2820a88556ca878b6', width: 320, class: 'float_right'%}
 
 Once you are in your new Project, you can give it a title by clicking <span class="edit_tag">&nbsp;</span> next to the title bar (it says "Untitled Project" by default).
 
@@ -39,7 +39,7 @@ From the upload dialogue box, choose the file to upload from your local computer
 
 Once a file has been chosen, you will see the progress of the file uploading as in the image below.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/804697cd6143ac58ff53770f178bb6a764ba6e30.png" alt="uploading1" /></div>
+{% post_image hashed_id: '804697cd6143ac58ff53770f178bb6a764ba6e30', class: 'center'%}
 
 If you are having trouble with uploads completing, please try our [simple uploader without the progress bar]({{ '/simple-uploader' | post_url }}).
 

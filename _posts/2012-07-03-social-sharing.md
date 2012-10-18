@@ -34,11 +34,11 @@ To embed your video into Facebook:
 *  Copy the share link, paste it into your Facebook status box and click “share”.
 *  Your friends will be able to see the video in their News Feed, and even play it within the Feed - how neat is that!?
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/27e43f133e7e090c2d698413ccadf2df1451ecb1.png" alt="description" /></div>
+{% post_image hashed_id: '27e43f133e7e090c2d698413ccadf2df1451ecb1', class: 'center' %}
 
 ### How it looks
 
-<div class="post_image center" style="border:none;"><img src="http://embed.wistia.com/deliveries/1901fdc9b3c4eb617604817f88beb5028c72ae92.png" alt="fb_embed_steps" /></div>
+{% post_image hashed_id: '1901fdc9b3c4eb617604817f88beb5028c72ae92', class: 'intro_image center' %}
 
 ## Posting to Facebook from your website
 

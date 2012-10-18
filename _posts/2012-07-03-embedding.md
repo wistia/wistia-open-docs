@@ -22,7 +22,7 @@ wistiaEmbed = Wistia.embed("5c913cd4fb", {
 
 ## Upload Your Video
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/5695b32b1de5048682ee2cbc2fe2aec94f70c771.png" alt="upload-select" /></div> 
+{% post_image hashed_id: '5695b32b1de5048682ee2cbc2fe2aec94f70c771', width: 320, class: 'float_right' %}
 
 The first step is uploading the video you want on your website to Wistia. *Already done that? Move to embedding!*
 
@@ -38,19 +38,20 @@ After uploading is complete, Wistia encodes several versions of the video - perf
 
 ## Generate the Embed Code
 
-<div class="post_image float_right"> <img src="http://embed.wistia.com/deliveries/62f01c7e318746526f5bfafeda82ad96807db9a4.png" alt="embed_video_stroke" /> </div>
+{% post_image hashed_id: '62f01c7e318746526f5bfafeda82ad96807db9a4', width: 320, class: 'float_right' %}
 
 
 **Embed codes** are snippets of code pasted on your web page that are useful for serving up content (i.e. video).  To generate the embed code for your video, start by selecting the *&lt;/&gt; Embed* option under the <span class='action_menu'>Media Actions</span> menu.
 
 <div class='clear'></div>
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/edda8e48e886fbfc42a8a6b6d0264fbbe160afd6.png" alt="superEmbed_dialogue_publicsharing" /></div>
+{% post_image hashed_id: 'edda8e48e886fbfc42a8a6b6d0264fbbe160afd6', width: 320, class: 'float_right' %}
 
 Clicking this option will take you to the Wistia Embed Screen.  This is where you can make some basic changes to the look and feel of your video presentation.
 
 <div class='clear'></div>
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/fbe53b9002062e623f346aaaf7c850d33b0cd5dc.png" alt="copy_embed_code" /></div>
+
+{% post_image hashed_id: 'fbe53b9002062e623f346aaaf7c850d33b0cd5dc', width: 320, class: 'float_right' %}
 
 See our [complete guide to the embed screen]({{ '/embed_screen' | post_url }}) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
 
@@ -70,7 +71,7 @@ Once you have copied the embed code, the next step is to paste it into your web 
 
 ## Embedded Video Stats
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/dac7d2599cc3c996b0cf6efa4604b08d8b2df285.png" alt="media_stats_psharing" /></div>
+{% post_image hashed_id: 'dac7d2599cc3c996b0cf6efa4604b08d8b2df285', width: 320, class: 'float_right' %}
 
 Now that your video is embedded on your webpage, you can use Wistia's tracking analytics to see how your viewers are interacting with the content.
 
@@ -78,7 +79,7 @@ Start by selecting "Stats" from under the <span class="action_menu">Media Action
 
 <div class="clear"></div>
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/5fd2f185054f9b835d27c66ff94f3027c9729c2b.png" alt="psharing_media_stats" /></div>
+{% post_image hashed_id: '5fd2f185054f9b835d27c66ff94f3027c9729c2b', width: 320, class: 'float_right' %}
 
 On the video embed stats page, you can see the detailed tracking statistics for each video.
 

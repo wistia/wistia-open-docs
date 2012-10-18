@@ -27,7 +27,7 @@ wistiaEmbed = Wistia.embed("75edd60835", {
 
 ## Invite Viewers
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/42611fc9a1641be9e8374afd496a20e01abffcc6.png" alt="share_proj" /></div>
+{% post_image hashed_id: '42611fc9a1641be9e8374afd496a20e01abffcc6', width: 320, class: 'float_right' %}
 
 
 Managers in your Wistia account can invite new viewers to view private content using the "Share by Email" feature.  From the Project screen, select "Share Project" from under the green "Project Actions" drop-down menu.
@@ -35,7 +35,7 @@ Managers in your Wistia account can invite new viewers to view private content u
 Enter the email addresses of contacts you would like to share this project privately with.  You can then set whether they need to create a password.  At the bottom, you can customize the text from the message they will receive to first access the content you've allowed them to view.
 
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d.png" alt="share_box" /></div>
+{% post_image hashed_id: 'fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d', class: 'center' %}
 
 
 
@@ -49,7 +49,7 @@ Enter the email addresses of contacts you would like to share this project priva
 
 ## Privately share video by link
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/271cc76d4c475b6997d5b9c49f6ee087c9badd50.png" alt="share-project" /></div>
+{% post_image hashed_id: '271cc76d4c475b6997d5b9c49f6ee087c9badd50', width: 320, class: 'float_right' %}
 
 This is the best sharing method to use if you want to:
 <ul style="margin-top: 5px;"><li>Send out a single link from your own email account to a group people to allow them to view your video</li>
@@ -58,11 +58,12 @@ This is the best sharing method to use if you want to:
 Once you have uploaded your videos to your project, from within the project hover over the "Project Actions" menu and choose the "Share Project" option.
 
 <div class="clear"></div>
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/7fe31ba39993a9f10f9416325c68a3f710d1d4f4.png" alt="share_by_link" /></div>
+
+{% post_image hashed_id: '7fe31ba39993a9f10f9416325c68a3f710d1d4f4', width: 320, class: 'float_right' %}
 
 When the dialog appears choose the tab which says "Share by Link".  The screen to the left will be seen.  To create a link which can be pasted into an email, click the "Enable sharing by link for this project" button.
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/0157656ae67a9ee92aa77f99f8235b8db2b8b1df.png" alt="share-by-link-2" /></div>
+{% post_image hashed_id: '0157656ae67a9ee92aa77f99f8235b8db2b8b1df', width: 320, class: 'float_right' %}
 
 Once the button has been clicked, the link will appear.  You can simply copy this link and paste it into an email or put it on a webpage.  When users click on this link, they will automatically be taken into this Wistia project.
 
@@ -72,14 +73,12 @@ If the "Disable sharing by link for this project" is clicked the previous projec
 
 ## Managing Permissions
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/79c437faf6d7df72b320256c45e1a5e8082eed16.png" alt="manage_link" /></div>
-
+{% post_image hashed_id: '79c437faf6d7df72b320256c45e1a5e8082eed16', width: 320, class: 'float_right' %}
 
 Wistia accounts include permissions and access controls for managers, to set who can view media and what they can view.  To manage permissions for contacts on a Project, click the "Manage" link under the 'Sharing' Sidebar Element.
 
+{% post_image hashed_id: '777cd4548ed48ebee4e7bec3327a61c74559f34e', width: 320, class: 'float_right' %}
 
-
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/777cd4548ed48ebee4e7bec3327a61c74559f34e.png" alt="share_screen" /></div>
 The share screen shows which users currently have access to the Project, and what permissions they have.  From here, managers can add permissions like:
 
 *  Upload, which allows the viewer to upload new content
@@ -94,18 +93,17 @@ Removing viewer access can also be done by clicking the small trash can icon at 
 
 Now that you have invited some viewers in to view your private content, it's time to see if they actually watched!  This is especially helpful for reviews and approvals and training or educational content.
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/66053f64b40ce2f176637e495273eb93d4f49dd2.png" alt="private_user_sessions_dropdown" /></div>
+{% post_image hashed_id: '66053f64b40ce2f176637e495273eb93d4f49dd2', width: 320, class: 'float_right' %}
 
 To view the individual user statistics for people you invited into Wistia, select the "User sessions" option under the "Stats" tab at the top of any page in your Wistia account.
 
 You will see a list of all user sessions for the users that have logged into your Wistia account.  To see exactly what each user did in each session, click on the "Stats" magnifying glass next to the session. 
 
-
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/ac77964367e67b73d9cbc706538c0fe884cb9a60.png" alt="sessions-list1" /></div>
+{% post_image hashed_id: 'ac77964367e67b73d9cbc706538c0fe884cb9a60', width: 320, class: 'float_right' %}
 
 A complete audit trail will be shown with all of the actions the user took while they were logged in to your Wistia account.  This includes amount of time spent on various pages as well as video heatmaps for the videos that they viewed.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/30f18531a91fdc69b5ba6911b48f6ec503ba1e3d.png" alt="user-stats1" /></div>
+{% post_image hashed_id: '30f18531a91fdc69b5ba6911b48f6ec503ba1e3d', class: 'center' %}
 
 
 ---
@@ -118,7 +116,7 @@ When you invite new viewers into your account to privately view video, they will
 
 ### The Share Dialog Box
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d.png" alt="ben-share2" /></div>
+{% post_image hashed_id: 'fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d', width: 320, class: 'float_right' %}
 
 We'll start with a quick review of the Share dialog box.
 
@@ -130,14 +128,14 @@ You can also customize the wording of the email message that will be sent to the
 
 ### The Invitation Email
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/ef169c85d0894e2cb800fe376e21b4fea0aee88e.png" alt="shared-email1" /></div>
+{% post_image hashed_id: 'ef169c85d0894e2cb800fe376e21b4fea0aee88e', width: 320, class: 'float_right' %}
 
 After clicking the "Share" button, your viewer will receive an email at the address you have designated.  This email will include an invitation to view the project you are sharing, along with a link for their access.  This activation link is specifically designed for their email, and is only good for one use (the email cannot be forwarded).
 
 
 ### The Credential Creation Screen
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/6dc3b3ce1c35d22643f5105de3e1ae1140aa3355.png" alt="credentials2" /></div>
+{% post_image hashed_id: '6dc3b3ce1c35d22643f5105de3e1ae1140aa3355', width: 320, class: 'float_right' %}
 
 After clicking the activation link, viewers who have never interacted with the Wistia system will land on a page where they can create Wistia credentials.  If you have required them to use a password to access the content, they will need to create a password for their access as well.
 

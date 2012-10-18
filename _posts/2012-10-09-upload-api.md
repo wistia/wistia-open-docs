@@ -4,10 +4,9 @@ title: The Wistia Upload API
 description: A simple mechanism for getting your videos into Wistia.
 category: For Developers
 footer: 'for_developers'
+post_intro: "<p>The Upload API is the best way to programmatically get new videos and files into your Wistia account.</p>"
 ---
 
-The Upload API is the best way to programmatically get new videos and files
-into your Wistia account.
 
 Simply supply the required parameters and **POST** your media file to
 **https://upload.wistia.com/** as multipart-form encoded data.
@@ -23,7 +22,7 @@ may still require processing (as is the case for uploads in general).
 
 ## The Request
 
-* **(POST https://upload.wistia.com/)**
+<pre><code class="language-vim">POST https://upload.wistia.com/</code></pre>
 
 All parameters (with the exception of *file*) may be encoded into the request
 body or included as part of the query string.

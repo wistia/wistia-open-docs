@@ -8,5 +8,5 @@ If you are having trouble with uploads completing, please try our simple uploade
 
 If you do not see the message below, simply click on the <span class="help_bubble"></span> in the circle on the right-hand side of the bar below the Project title. 
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/e478141ce24a008c51db367aeed631326140e972.png" alt="simple_uploader" /></div>
+{% post_image hashed_id: 'e478141ce24a008c51db367aeed631326140e972', class: 'center' %}
 

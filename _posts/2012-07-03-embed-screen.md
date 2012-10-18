@@ -6,9 +6,7 @@ description: Our embed builder makes it super easy to customize the look and fun
 post_intro: <p>After clicking the "&lt;/&gt; Embed" function under the player window or in the "Media Actions" drop-down menu, the Embed Screen is where you can choose your embed type, customize the player experience, and add social sharing functionality.</p><p>Let's take a look at what options are available through the embed screen, and how you can use them for your publicly embedded videos.</p>
 ---
 
-<p>
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/1856ed5c774555ea40859d6a1bfa1723c96722f5.png" alt="super_embed_large" /></div>
-</p>
+{% post_image hashed_id: '1856ed5c774555ea40859d6a1bfa1723c96722f5', class: 'center' %}
 
 <div class="post_image embed_screen_image" style="margin-bottom: -2px;">
   <img src="http://embed.wistia.com/deliveries/4910e4047ffa16cdb848f1d2818b4020667b2b1c.png" width="264px" id="#embed_type">

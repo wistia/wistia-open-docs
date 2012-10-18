@@ -45,7 +45,7 @@ Nothing ruins your mood like an error message you can't fix. We're here to help!
 
 ## Error Message 1:
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/53192a004d5a60f6ea53d3f45347a4c6a5ed8432.png" alt="VideoSEOTroubleshooting" /></div>
+{% post_image hashed_id: '53192a004d5a60f6ea53d3f45347a4c6a5ed8432', class: 'center' %}
 
 **1. The video is embedded with the wrong embed type**
 
@@ -63,7 +63,7 @@ Nothing ruins your mood like an error message you can't fix. We're here to help!
 
 ## Error Message 2
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/8f1dfd0539f21e06e2d614b008d42b3ff535644d.png" alt="VideoSEOWrongDomain" /></div>
+{% post_image hashed_id: '8f1dfd0539f21e06e2d614b008d42b3ff535644d', class: 'center' %}
 
 **1. The video isn't embedded on the proper domain**
 

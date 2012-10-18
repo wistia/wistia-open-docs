@@ -24,6 +24,6 @@ To get started, go into a project in your Wistia account you wish to create a pl
 
 Once you have selected the "Playlist embed" option, you will be taken to a page where you can customize your playlist and get the embed code.  An example of this customization screen can be seen below.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/901ea518be0ec1c807cba4e525d42c59c7e291bb.png" alt="playlist_customization" /></div>
+{% post_image hashed_id: '901ea518be0ec1c807cba4e525d42c59c7e291bb', class: 'center' %}
 
 Choose the **theme** you want to use, the **size** for the embedded playlist, and other customization settings on the SuperPlaylist builder.

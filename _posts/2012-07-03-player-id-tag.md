@@ -13,7 +13,9 @@ The custom query string URL approach produces a link like this:
 
 <pre><code class="language-markup">http://your-video-URL.com?wemail=example@mail.com</code></pre>
 
-If you have access to the user's email address (through log-in or form submittal, etc.) you can replace the <span class="code">example@mail.com</span> string with this information.  Note, the URL on the page where the video is embedded (and played from) must have the custom query string.
+If you have access to the user's email address (through log-in or form submittal, etc.) you can replace the <span class="code">example@mail.com</span> string with this information.
+
+{{ "The URL on the page where the video is embedded (and played from) must have the custom query string." | note }}
 
 ---
 
@@ -21,7 +23,7 @@ If you have access to the user's email address (through log-in or form submittal
 
 The new Wistia API embeds includes an option to track the viewer's email when they watch the video.  This process is predicated on there being a variable available on the client-side for tracking emails (ie. after they log in, their user info is tracked in a cookie).
 
-**Note:** you will need to use the "API" version of the embed code to utilize this feature
+{{ "You will need to use the 'API' version of the embed code to utilize this feature" | note }}
 
 Inside the embed code, you will see a snippet that appears like this:
 

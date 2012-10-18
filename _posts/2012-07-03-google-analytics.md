@@ -36,25 +36,25 @@ In the code snippet example above, you should update the 'My Sample Video Title'
 
 Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Google Analytics Dashboard.
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/d65c31e1c319b67c41664711dc64faa2cd92078b.png" alt="google_dash1" /></div>
+{% post_image hashed_id: 'd65c31e1c319b67c41664711dc64faa2cd92078b', width: '320', class: 'float_right' %} 
 
 The first step is to navigate to the Event Tracking section.  Click the "Content" area of the left hand nav bar, and then select "Event Tracking".  The Event Tracking section will show the total number of events, the average number of events per visit, and the Top Events.  To see just the video events, select "Categories".
 
 ----
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/95e8b116efde2bb9f055e6b50af5a7d8c3f6e816.png" alt="google_dash2" /></div>
+{% post_image hashed_id: '95e8b116efde2bb9f055e6b50af5a7d8c3f6e816', width: '320', class: 'float_right' %} 
 
 The "Categories" events will now contain a "Video" section, which you defined in the Javascript earlier.  Click "video" to drill into the specific event descriptions.
 
 ----
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/9833481aa5a9e6a38c077c7cd365518248e87b65.png" alt="google_dash3" /></div>
+{% post_image hashed_id: '9833481aa5a9e6a38c077c7cd365518248e87b65', width: '320', class: 'float_right' %} 
 
 The "Video" section page will show the total number of plays and the total number of complete plays, which we defined in separate Javascript functions earlier.  To see the plays or completes for a specific video (if you have started tracking multiple videos through GA) click on "Play" or "Complete".
 
 ----
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/6617f95f699a9e84a28d25e33ea199c0219a5158.png" alt="google_dash4" /></div>
+{% post_image hashed_id: '6617f95f699a9e84a28d25e33ea199c0219a5158', width: '320', class: 'float_right' %} 
 
 The final drill down shows what specific video titles (defined in the javascript function above) were played.
 

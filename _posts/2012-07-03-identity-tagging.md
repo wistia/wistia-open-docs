@@ -31,21 +31,21 @@ For Wistia customers with advanced web design know-how and resources, there are 
 
 ## Tagging Viewers by Name
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/6c1f8ce3a1b55fd528903c7fe7c172816a601164.png" alt="id_media_stats_page" /></div>
+{% post_image hashed_id: '6c1f8ce3a1b55fd528903c7fe7c172816a601164', class: 'center' %}
 
 Sometimes, you know who is viewing your videos.  Maybe you sent a client a link through an email, or you speak to a progressive customer by phone and recommend they review a video.  Opening the [analytics for that video]({{ '/embedded-video-analytics' | post_url }}), you see an IP, location, and time that makes sense to be someone you recognize.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/414795a39fb1cfaef24874c56b2355fdb3ad94af.png" alt="id_media_stats_page_viewer" /></div>
+{% post_image hashed_id: '414795a39fb1cfaef24874c56b2355fdb3ad94af', class: 'center' %}
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/e4342b916b739158f578fe1b545f51eb2670dc3f.png" alt="single_viewer" /></div>
+{% post_image hashed_id: 'e4342b916b739158f578fe1b545f51eb2670dc3f', width: 320, class: 'float_right' %}
 
 Clicking through the name (currently "Verizon Internet Services") will bring you to this viewer's page.  Once they are named, this page will accumulate their future video viewings as well.
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/aec09549631ba0450c630c5c2bcaf5c9bc9fb4bd.png" alt="lenny_viewer" /></div>
+{% post_image hashed_id: 'aec09549631ba0450c630c5c2bcaf5c9bc9fb4bd', width: 320, class: 'float_right' %}
 
 Next to the current name is a green "edit" tag.  Selecting that (or clicking anywhere in the name) will allow you to re-name the viewer.  Enter their name, and press 'return'.
 
 In the future, you can check in on your viewer by opening the [viewer stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }}) and searching for their name on the sorting bar.  You can also sort by "named" viewer.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/9624d8a4e4b3c484c72d04bfa2bde57b89813437.png" alt="stream_w_lenny" /></div>
+{% post_image hashed_id: '9624d8a4e4b3c484c72d04bfa2bde57b89813437', class: 'center' %}
 

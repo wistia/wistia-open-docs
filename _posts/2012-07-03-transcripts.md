@@ -8,27 +8,27 @@ post_intro: <p>Transcripts are an incredible way for viewers to follow the conte
 
 ## Select Your Video
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/f17582f66e21c0860aa1552a636bfe8389446a17.png" alt="transcript1" /></div>
+{% post_image hashed_id: 'f17582f66e21c0860aa1552a636bfe8389446a17', width: 320, class: 'float_right' %}
 
 First, you need to choose on your account you'd like to have transcribed.  Then, navigate to the media page for that video (the page where you can play the video itself).
 
 ## Order the Transcript
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/81600753f46400d191411d432a4492eb2b2faab4.png" alt="transcript2" /></div>
+{% post_image hashed_id: '81600753f46400d191411d432a4492eb2b2faab4', width: 320, class: 'float_right' %}
 
 Now that you've chosen your video, you will need to order the transcript.  Under the green <span class="action_menu">Media Actions</span> menu, select the *Create Transcript* option.
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/79deebb2595f9633ab723065a8a40d36b131bfc4.png" alt="transcript-order-dialogue" /></div>
+{% post_image hashed_id: '79deebb2595f9633ab723065a8a40d36b131bfc4', class: 'center' %}
 
 This will launch a dialogue box that shows the rates and total cost of transcribing your video.  Once you're ready to order the transcript, click "create transcript".  Within 24 hours, you will receive an email confirming the transcript is now available on the media page for that video.
 
 ## Use Your Transcript
 
-<div class="post_image center"><img src="http://embed.wistia.com/deliveries/4a44059b2df81e62d49b98153f04f19aaaf04254.png" alt="finished_transcript" /></div>
+{% post_image hashed_id: '4a44059b2df81e62d49b98153f04f19aaaf04254', class: 'center' %}
 
 Once your transcript is ready, it will appear to all viewers who view the video within your account, or it can be embedded publicly with the video.
 
-<div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/7c0e0ad7a43e609209c4f313355782670d1a09f3.png" alt="superembed_dialogue_transcripts" /></div>
+{% post_image hashed_id: '7c0e0ad7a43e609209c4f313355782670d1a09f3', width: 320, class: 'float_right' %}
 
 To embed your transcript, select the &lt;/&gt; Embed dialogue as you normally would to embed your video (for more help on this, head over here: [embedding a video]({{ '/embedding' | post_url }})).
 
