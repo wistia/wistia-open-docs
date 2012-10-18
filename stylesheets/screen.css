@@ -1739,6 +1739,7 @@ span.code {
   margin-left: 15px;
 }
 
+<<<<<<< HEAD
 /* line 439, ../_sass/screen.sass */
 .post_intro {
   margin: 30px 0;
@@ -1747,31 +1748,79 @@ span.code {
   color: #333333;
 }
 /* line 445, ../_sass/screen.sass */
+=======
+/* line 453, ../_sass/screen.sass */
+.expert_tip img {
+  float: left;
+  margin: 15px;
+}
+/* line 456, ../_sass/screen.sass */
+.expert_tip p:first-of-type {
+  margin-top: 15px;
+}
+
+/* line 461, ../_sass/screen.sass */
+.post_intro {
+  margin: 30px;
+  margin-left: 0;
+}
+/* line 464, ../_sass/screen.sass */
+.post_intro:first-of-type {
+  margin-top: 0;
+}
+/* line 466, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_intro p, .post_intro ul {
   margin: 0;
   padding: 15px 30px 0 30px;
   line-height: 150%;
+<<<<<<< HEAD
   font-size: 16px;
 }
 /* line 451, ../_sass/screen.sass */
+=======
+  font-size: 18px;
+}
+/* line 472, ../_sass/screen.sass */
+.post_intro p:first-of-type {
+  margin-top: 0;
+}
+/* line 474, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_intro p:last-child {
   padding-bottom: 15px;
 }
+<<<<<<< HEAD
 /* line 453, ../_sass/screen.sass */
+=======
+/* line 476, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_intro ul {
   padding: 0;
   padding-left: 15px;
 }
+<<<<<<< HEAD
 /* line 456, ../_sass/screen.sass */
 .post_intro ul li {
   list-style-position: inside;
 }
 /* line 459, ../_sass/screen.sass */
+=======
+/* line 479, ../_sass/screen.sass */
+.post_intro ul li {
+  list-style-position: inside;
+}
+/* line 482, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_intro .center {
   margin-left: 0;
 }
 
+<<<<<<< HEAD
 /* line 465, ../_sass/screen.sass */
+=======
+/* line 488, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_image {
   margin: 30px auto;
   clear: both;
@@ -1779,35 +1828,59 @@ span.code {
   overflow: hidden;
   border: 1px solid #bbbbbb;
 }
+<<<<<<< HEAD
 /* line 471, ../_sass/screen.sass */
+=======
+/* line 494, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_image img {
   vertical-align: top;
 }
 
+<<<<<<< HEAD
 /* line 473, ../_sass/screen.sass */
+=======
+/* line 496, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .center {
   text-align: center;
   margin-left: -30px;
 }
 
+<<<<<<< HEAD
 /* line 476, ../_sass/screen.sass */
+=======
+/* line 499, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .float_right, .intro_image {
   float: right;
   margin: 15px;
   margin-right: -32px;
 }
 
+<<<<<<< HEAD
 /* line 480, ../_sass/screen.sass */
+=======
+/* line 503, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .intro_image {
   border: none;
 }
 
+<<<<<<< HEAD
 /* line 485, ../_sass/screen.sass */
+=======
+/* line 508, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .video_embed {
   margin: 30px 0;
 }
 
+<<<<<<< HEAD
 /* line 490, ../_sass/screen.sass */
+=======
+/* line 513, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 table {
   font-size: 14px;
   margin: 30px 0;
@@ -1815,7 +1888,11 @@ table {
   text-align: left;
   border-collapse: collapse;
 }
+<<<<<<< HEAD
 /* line 496, ../_sass/screen.sass */
+=======
+/* line 520, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 table th {
   font-size: 15px;
   font-family: "Helvetica Neue";
@@ -1824,7 +1901,11 @@ table th {
   border-bottom: 2px solid white;
   color: white;
 }
+<<<<<<< HEAD
 /* line 503, ../_sass/screen.sass */
+=======
+/* line 528, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 table td {
   padding: 10px 20px;
   background: rgba(192, 219, 235, 0.3);
@@ -1832,30 +1913,50 @@ table td {
   color: #688aad;
   border-top: 1px solid transparent;
 }
+<<<<<<< HEAD
 /* line 511, ../_sass/screen.sass */
+=======
+/* line 537, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 table tr:hover td {
   background: rgba(160, 187, 203, 0.3);
   color: #284a6d;
 }
+<<<<<<< HEAD
 /* line 514, ../_sass/screen.sass */
+=======
+/* line 540, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 table tr:hover a {
   color: #284a6d;
   text-decoration: underline;
 }
+<<<<<<< HEAD
 /* line 517, ../_sass/screen.sass */
+=======
+/* line 543, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 table tr td pre {
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
 /* line 523, ../_sass/screen.sass */
+=======
+/* line 549, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .embed_type_content {
   display: inline-block;
   padding: 20px;
   width: 320px;
 }
 
+<<<<<<< HEAD
 /* line 527, ../_sass/screen.sass */
+=======
+/* line 553, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .embed_type_image {
   margin-left: 20px;
   height: 100%;
@@ -1863,32 +1964,56 @@ table tr td pre {
   vertical-align: top;
 }
 
+<<<<<<< HEAD
 /* line 532, ../_sass/screen.sass */
+=======
+/* line 558, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .embed_screen_image {
   border: none;
 }
 
+<<<<<<< HEAD
 /* line 537, ../_sass/screen.sass */
+=======
+/* line 563, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .randor_links {
   width: 430px;
   margin: 0 auto;
 }
+<<<<<<< HEAD
 /* line 540, ../_sass/screen.sass */
+=======
+/* line 566, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .randor_links p {
   width: 195px;
   display: inline-block;
   vertical-align: top;
 }
+<<<<<<< HEAD
 /* line 544, ../_sass/screen.sass */
 .randor_links ul {
   display: inline-block;
 }
 /* line 546, ../_sass/screen.sass */
+=======
+/* line 570, ../_sass/screen.sass */
+.randor_links ul {
+  display: inline-block;
+}
+/* line 572, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .randor_links ul li {
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 /* line 551, ../_sass/screen.sass */
+=======
+/* line 577, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .exporting_guide_box {
   padding: 15px;
   background-color: rgba(192, 219, 235, 0.3);
@@ -1906,89 +2031,153 @@ table tr td pre {
   font-size: 14px;
   margin-left: 15px;
 }
+<<<<<<< HEAD
 /* line 553, ../_sass/screen.sass */
 .exporting_guide_box h3 {
   margin: 0;
 }
 /* line 555, ../_sass/screen.sass */
+=======
+/* line 579, ../_sass/screen.sass */
+.exporting_guide_box h3 {
+  margin: 0;
+}
+/* line 581, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .exporting_guide_box p {
   margin: 0 0 15px 30px;
   color: #b6b3ae;
 }
+<<<<<<< HEAD
 /* line 558, ../_sass/screen.sass */
+=======
+/* line 584, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .exporting_guide_box ul {
   border: none;
   margin: 0;
   margin-left: 30px;
   padding: 0;
 }
+<<<<<<< HEAD
 /* line 563, ../_sass/screen.sass */
 .exporting_guide_box ul li {
   color: #688aad;
 }
 /* line 565, ../_sass/screen.sass */
+=======
+/* line 589, ../_sass/screen.sass */
+.exporting_guide_box ul li {
+  color: #688aad;
+}
+/* line 591, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .exporting_guide_box .answer {
   color: #9e9a93;
   font-weight: normal;
 }
 
+<<<<<<< HEAD
 /* line 572, ../_sass/screen.sass */
+=======
+/* line 598, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_footer {
   margin-top: 60px;
   clear: both;
 }
+<<<<<<< HEAD
 /* line 575, ../_sass/screen.sass */
+=======
+/* line 601, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_footer ul {
   position: relative;
   width: 600px;
   height: 90px;
   list-style-type: none;
 }
+<<<<<<< HEAD
 /* line 580, ../_sass/screen.sass */
+=======
+/* line 606, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_footer ul li {
   position: absolute;
   width: 250px;
 }
+<<<<<<< HEAD
 /* line 583, ../_sass/screen.sass */
 .post_footer ul li:first-child {
   left: 45px;
 }
 /* line 585, ../_sass/screen.sass */
+=======
+/* line 609, ../_sass/screen.sass */
+.post_footer ul li:first-child {
+  left: 45px;
+}
+/* line 611, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .post_footer ul li:last-child {
   right: 45px;
 }
 
+<<<<<<< HEAD
 /* line 587, ../_sass/screen.sass */
 .footer_content {
   padding: 30px;
 }
 /* line 589, ../_sass/screen.sass */
+=======
+/* line 613, ../_sass/screen.sass */
+.footer_content {
+  padding: 30px;
+}
+/* line 615, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .footer_content p {
   font-size: 15px;
   margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
 /* line 592, ../_sass/screen.sass */
+=======
+/* line 618, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .for_developers {
   background-color: rgba(240, 129, 139, 0.2);
 }
 
+<<<<<<< HEAD
 /* line 594, ../_sass/screen.sass */
+=======
+/* line 620, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .for_beginners {
   background-color: rgba(104, 138, 173, 0.2);
 }
 
+<<<<<<< HEAD
 /* line 596, ../_sass/screen.sass */
+=======
+/* line 622, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .for_intermediates {
   background-color: rgba(138, 173, 104, 0.2);
 }
 
+<<<<<<< HEAD
 /* line 602, ../_sass/screen.sass */
 .api #post_content_nav {
   position: absolute;
 }
 
 /* line 605, ../_sass/screen.sass */
+=======
+/* line 628, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav {
   display: inline-block;
   vertical-align: top;
@@ -1996,16 +2185,28 @@ table tr td pre {
   position: fixed;
   background-color: white;
 }
+<<<<<<< HEAD
 /* line 611, ../_sass/screen.sass */
+=======
+/* line 634, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav ul {
   list-style-type: none;
   padding: 20px;
 }
+<<<<<<< HEAD
 /* line 614, ../_sass/screen.sass */
 #post_content_nav li {
   border-bottom: 1px solid #bbbbbb;
 }
 /* line 616, ../_sass/screen.sass */
+=======
+/* line 637, ../_sass/screen.sass */
+#post_content_nav li {
+  border-bottom: 1px solid #bbbbbb;
+}
+/* line 639, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav li a {
   display: block;
   padding: 20px 0px;
@@ -2013,17 +2214,29 @@ table tr td pre {
   font-size: 14px;
   text-decoration: none;
 }
+<<<<<<< HEAD
 /* line 622, ../_sass/screen.sass */
 #post_content_nav li a:hover {
   color: #2f2b24;
 }
 /* line 624, ../_sass/screen.sass */
+=======
+/* line 645, ../_sass/screen.sass */
+#post_content_nav li a:hover {
+  color: #2f2b24;
+}
+/* line 647, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav li:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+<<<<<<< HEAD
 /* line 629, ../_sass/screen.sass */
+=======
+/* line 652, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav .title_list_item a {
   padding: 0 0 20px 0;
   position: relative;
@@ -2032,6 +2245,7 @@ table tr td pre {
   font-size: 26px;
   color: black;
 }
+<<<<<<< HEAD
 /* line 636, ../_sass/screen.sass */
 #post_content_nav .title_list_item a:hover {
   color: #688aad;
@@ -2049,70 +2263,133 @@ table tr td pre {
   color: #688aad;
 }
 /* line 648, ../_sass/screen.sass */
+=======
+/* line 659, ../_sass/screen.sass */
+#post_content_nav .title_list_item a:hover {
+  color: #688aad;
+}
+/* line 663, ../_sass/screen.sass */
+#post_content_nav .title_list_item.current a, #post_content_nav .title_list_item.current a:hover {
+  color: #688aad;
+}
+/* line 666, ../_sass/screen.sass */
+#post_content_nav .current > a {
+  color: #688aad;
+}
+/* line 668, ../_sass/screen.sass */
+#post_content_nav .current > a:hover {
+  color: #688aad;
+}
+/* line 671, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav .header_link {
   border: none;
   border-top: 1px solid #bbbbbb;
   margin-top: 5px;
   padding: 5px 0;
 }
+<<<<<<< HEAD
 /* line 653, ../_sass/screen.sass */
+=======
+/* line 676, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav .header_link a {
   font-weight: bold;
   padding: 5px 0;
 }
+<<<<<<< HEAD
 /* line 657, ../_sass/screen.sass */
+=======
+/* line 680, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav .sub_link {
   padding: 5px 0;
   border: none;
 }
+<<<<<<< HEAD
 /* line 660, ../_sass/screen.sass */
+=======
+/* line 683, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #post_content_nav .sub_link a {
   font-size: 12px;
   padding: 5px 0;
 }
 
+<<<<<<< HEAD
 /* line 666, ../_sass/screen.sass */
+=======
+/* line 689, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .clear {
   clear: both;
 }
 
+<<<<<<< HEAD
 /* line 669, ../_sass/screen.sass */
+=======
+/* line 692, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .unhide {
   visibility: visible;
 }
 
+<<<<<<< HEAD
 /* line 674, ../_sass/screen.sass */
+=======
+/* line 697, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #utilities_container {
   position: relative;
   left: 125px;
 }
 
+<<<<<<< HEAD
 /* line 680, ../_sass/screen.sass */
+=======
+/* line 703, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .category {
   width: 660px;
   padding: 30px;
   background-color: white;
 }
+<<<<<<< HEAD
 /* line 684, ../_sass/screen.sass */
+=======
+/* line 707, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .category h2 {
   margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 /* line 689, ../_sass/screen.sass */
+=======
+/* line 712, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .search_bar {
   margin: 30px auto;
   text-align: center;
   position: relative;
   width: 660px;
 }
+<<<<<<< HEAD
 /* line 694, ../_sass/screen.sass */
+=======
+/* line 717, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .search_bar input {
   width: 84%;
   font-size: 14px;
   border: 1px solid #bbbbbb;
   padding: 5px 10px;
 }
+<<<<<<< HEAD
 /* line 699, ../_sass/screen.sass */
+=======
+/* line 722, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .search_bar button {
   font-size: 14px;
   position: relative;
@@ -2123,13 +2400,21 @@ table tr td pre {
   padding: 5px 10px;
 }
 
+<<<<<<< HEAD
 /* line 710, ../_sass/screen.sass */
+=======
+/* line 733, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #doc_nav_container .search_bar {
   margin: 0;
   text-align: left;
   width: 100%;
 }
+<<<<<<< HEAD
 /* line 714, ../_sass/screen.sass */
+=======
+/* line 737, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #doc_nav_container .search_bar input {
   width: 180px;
   position: relative;
@@ -2137,17 +2422,26 @@ table tr td pre {
   height: 15px;
 }
 
+<<<<<<< HEAD
 /* line 720, ../_sass/screen.sass */
+=======
+/* line 743, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #results {
   min-height: 350px;
 }
 
+<<<<<<< HEAD
 /* line 723, ../_sass/screen.sass */
+=======
+/* line 746, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .results_header {
   border-bottom: 1px solid;
   margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
 /* line 726, ../_sass/screen.sass */
 .result {
   margin: 30px 0 30px;
@@ -2161,37 +2455,76 @@ table tr td pre {
   font-size: 24px;
 }
 /* line 732, ../_sass/screen.sass */
+=======
+/* line 749, ../_sass/screen.sass */
+.result {
+  margin: 30px 0 30px;
+}
+/* line 751, ../_sass/screen.sass */
+.result h2 {
+  margin: 0;
+}
+/* line 753, ../_sass/screen.sass */
+.result a {
+  font-size: 24px;
+}
+/* line 755, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .result p {
   margin-top: 15px;
   width: 550px;
 }
 
+<<<<<<< HEAD
 /* line 736, ../_sass/screen.sass */
 .no_result p {
   line-height: 200%;
 }
 /* line 738, ../_sass/screen.sass */
+=======
+/* line 759, ../_sass/screen.sass */
+.no_result p {
+  line-height: 200%;
+}
+/* line 761, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .no_result .query {
   color: #333333;
 }
 
+<<<<<<< HEAD
 /* line 740, ../_sass/screen.sass */
+=======
+/* line 763, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 .description {
   color: #aaaaaa;
 }
 
+<<<<<<< HEAD
 /* line 745, ../_sass/screen.sass */
+=======
+/* line 768, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #beegee {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
 }
+<<<<<<< HEAD
 /* line 750, ../_sass/screen.sass */
 #beegee path {
   fill: #aaffff;
 }
 /* line 754, ../_sass/screen.sass */
+=======
+/* line 773, ../_sass/screen.sass */
+#beegee path {
+  fill: #aaffff;
+}
+/* line 777, ../_sass/screen.sass */
+>>>>>>> working on video seo tips
 #beegee .q0, #beegee .q1, #beegee .q2, #beegee .q3, #beegee .q4, #beegee .q5, #beegee .q6, #beegee .q7, #beegee .q8, #beegee .q9 {
   fill: white;
 }
