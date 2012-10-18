@@ -73,7 +73,7 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
   h3
     color: $h3-color
     font-weight: bold
-    margin-top: 0
+    margin: 0 $padding
   p
     font-size: 14px
 
@@ -97,7 +97,7 @@ h1, h2, h3
   font-style: italic
   color: $title_color
 h1
-  font-size: 36px
+  font-size: 45px
 p
   font-size: 16px
   line-height: 115%
@@ -310,7 +310,7 @@ header
   clear: both
 
 .post_title
-  margin: $padding
+  margin: $padding 0
 
 /////// content styles ///////
 
@@ -325,32 +325,28 @@ header
     margin-top: $padding
   h2, h3
     line-height: 120%
-  h2
-    margin: $padding
-    clear: both
-    font-size: 28px
-    color: $title_color
-    padding: $padding/3 0
-    margin-left: $padding
     &:hover
       .subtopic_anchor
         color: $accent_blue
-  h3, p
-    margin: $padding/2 0 $padding/2 $padding
+  h2
+    margin: $padding
+    clear: both
+    font-size: 32px
+    color: $title_color
+    padding: $padding/3 0
+    margin-left: $padding
   h3
     font-size: 24px
     clear: both
     color: $accent_blue
-  h3, p, ul, ol
-    margin: $padding/2 0
+    margin: $padding 0
+  h3, h4, h5, p, pre, ol, ul
+    margin: $padding/2 0 $padding/2 $padding
   h3, h5
     font-weight: bold
   h4
     font-size: 16px
     text-decoration: underline
-    margin: $padding/2 0
-  h5
-    margin: $padding/2 0
   p
     margin-left: $padding
     margin-right: $padding
@@ -402,9 +398,8 @@ header
   color: $text_color
   overflow-x: scroll
   font-size: 14px
-  margin: $padding/2 0
-  width: 646px
-  padding: 6px
+  margin: $padding/2 $padding
+  padding: $padding/5
   font-family: monospace
   border: 1px dashed $border_color
   &:hover
@@ -474,6 +469,7 @@ span.code
   clear: both
   position: relative
   overflow: hidden
+  border: 1px solid #BBB
   img
     vertical-align: top
 .center
@@ -494,31 +490,30 @@ span.code
 
 table
   font-family: monospace
-  border: 1px solid $border_color
   font-size: 14px
-  margin: $padding 0
-  width: 100%
+  margin: $padding
+  width: $post_width - 40
   text-align: left
   border-collapse: collapse
   th
-    font-size: 13px
+    font-size: 15px
     font-family: 'Helvetica Neue'
     font-weight: bold
-    padding: 8px
-    background: $background_gray - 50
-    border-bottom: 2px solid #fff
-    color: #000
+    padding: $padding/3
+    background: $accent_blue
+    border-bottom: 2px solid white
+    color: white
   td
     padding: 8px
     width: 200px
-    background: $background_gray 
-    border-bottom: 1px solid #fff
-    color: #000
+    background: $background_blue
+    border-bottom: 1px solid white
+    color: $accent_blue
     border-top: 1px solid transparent
   tr
     &:hover 
       td
-        background: #8C8C8C
+        background: $accent_blue
         color: #FFF
       a
         color: white
@@ -648,16 +643,18 @@ table
   .header_link
     border: none
     border-top: 1px dashed #DDD
-    margin-top: 10px
-    padding-bottom: $padding/6
+    margin-top: 5px
+    padding: $padding/6 0
     a
       font-weight: bold
+      padding: $padding/6 0
 
   .sub_link
     padding: $padding/6 0
     border: none
     a
       font-size: 12px
+      padding: $padding/6 0
 
 ///// utility classes ///////
 
