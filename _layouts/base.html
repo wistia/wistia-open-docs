@@ -20,8 +20,7 @@
     <header>
       {% include header.html %}
     </header>
-    <div class='{% if page.api %} api {% endif %}' id='container'>
-      <span class='brendan'>{{ page.api }}</span>
+    <div class='{% if page.api %}api{% endif %}' id='container'>
       {{ content }}
     </div>
   </body>
