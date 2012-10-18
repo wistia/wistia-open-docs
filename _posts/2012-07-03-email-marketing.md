@@ -129,6 +129,10 @@ The following is a table that includes the email clients we have encountered tha
       <td ><pre>[email]</pre></td>
     </tr>
     <tr>
+      <td>Hubspot</td>
+      <td>{{contact.email}}</td>
+    </tr>
+    <tr>
       <td>iContact</td>
       <td ><pre>[email]</pre></td>
     </tr>

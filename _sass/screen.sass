@@ -14,6 +14,7 @@
 
 /////////////// vars ///////////////
 
+$header_color: #000000
 $header_blue: #C0DBEB
 $accent_blue: #688AAD
 $background_gray: #F7F6F4
@@ -31,8 +32,8 @@ $for_intermediates: #8aad68
 $for_developers: #f0818b
 
 $post_width: 660px
-$total_width: $post_width + ($padding * 2)
-$fixed_column_width: 260px
+$total_width: 960px
+$fixed_column_width: 300px
 
 $prefixes: ("-webkit-","-moz-", "-o-", "")
 
@@ -81,13 +82,15 @@ body
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
   background-color: white
   color: $text_color
+  +anti-alias
   a
     color: $accent_blue
     text-decoration: none
 
 h1, h2, h3
+  font-family: Times, serif
+  font-style: italic
   color: $title_color
-  +anti-alias
 h1
   font-size: 36px
 p
@@ -109,7 +112,7 @@ header
   background-color: $background_gray
   border-bottom: 2px solid $border_color
   #header_container
-    width: 1200px
+    width: 960px
     height: 40px
     margin: 0 auto
     position: relative
@@ -160,8 +163,8 @@ header
   background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
 #container
-  width: 980px
-  margin: 40px auto
+  width: 960px
+  margin: 0 auto
 
 #post_container
   display: inline-block
@@ -256,10 +259,9 @@ header
 //////// post header /////////////
 
 #doc_nav
-  background-color: $header_blue
-  width: $total_width
+  background: white
+  width: $post_width
   #doc_nav_container
-    margin: 0 auto
     position: relative
     ul
       padding: 0
@@ -297,36 +299,42 @@ header
 #post
   display: inline-block
   width: $post_width
-  padding: $padding
   background-color: white
   clear: both
 
 .post_title
-  margin-bottom: $padding
+  margin: $padding
 
 /////// content styles ///////
 
 .post_content
-  width: $post_width
   *
     +selection($background_blue)
-  h2, hr
-    margin: $padding 0
+  h1
+    margin-left: $padding
+  h2
+    margin: $padding
     clear: both
+  hr
+    clear: both
+    height: 1px
+    background-color: #bbb
+    border: 0
+    
   h2, h3
     line-height: 120%
   h2
     font-size: 28px
     color: $title_color
-    padding: $padding/3 $padding
-    margin-left: -$padding
-    +letterpress(.6)
-  h3, p, ul, ol
-    margin: $padding/2 0
+    padding: $padding/3 0
+    margin-left: $padding
+  h3, p
+    margin: $padding/2 0 $padding/2 $padding
   h3
     font-size: 18px
     clear: both
   p
+    margin-left: $padding
     line-height: 150%
     position: relative
   ul, ol
@@ -405,6 +413,7 @@ span.code
 
 .post_intro
   margin-bottom: 2 * $padding
+  margin-left: $padding
   h2
     &:first-of-type
       margin-top: 0
@@ -431,7 +440,6 @@ span.code
   clear: both
   position: relative
   overflow: hidden
-  +outline-border
   img
     vertical-align: top
 .center
@@ -447,9 +455,6 @@ span.code
 
 .video_embed
   margin: $padding 0
-  div
-    +box-emboss(0.8, 0.05)
-    +outline-border
 
 //////// EVIL TABLES //////
 
@@ -565,25 +570,27 @@ table
 .for_intermediates
   +footer-styling($for_intermediates)
 
+
 /////// post nav box ////////
 
 #post_content_nav
   display: inline-block
   vertical-align: top
   width: $fixed_column_width
-  margin: 0 30px 0 0 // yes, this is useless, but good for measuring space between the nav col and the post content
-  height: 100%
   position: fixed
+  background-color: white
   ul
     background-color: white
     padding: $padding
     height: 450px
     overflow-y: scroll
     list-style-type: none
+    padding: 20px
   li
-    padding: 15px 0
-    border-bottom: 1px dashed #DDD
+    border-bottom: 1px solid #444
     a
+      display: block
+      padding: 20px 0px
       color: $text_color
       font-size: 14px
       text-decoration: none
@@ -592,24 +599,15 @@ table
     &:last-of-type
       border-bottom: none
       margin-bottom: 0
-      padding-bottom: 0  
+      padding-bottom: 0
   .title_list_item
-    background-color: $header_blue
-    height: 45px
-    text-align: center
-    margin-top: -$padding
-    margin-left: -$padding
-    width: $fixed_column_width - 30
-    padding: 0 $padding/2
-    margin-bottom: $padding/2
-    border-bottom: none
     a
+      padding: 0 0 20px 0
       position: relative
-      height: 100%
-      font-size: 16px
-      color: $accent_blue
-      +letterpress(.3, white)
-      +anti-alias
+      font-family: Times, serif
+      font-style: italic
+      font-size: 26px
+      color: $header_color
       &:hover
         color: $accent_blue
 
@@ -739,3 +737,15 @@ table
     margin: $padding/2 0
   pre
     overflow-x: scroll
+
+#beegee
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 0
+  path
+    fill: #aff
+    //stroke: #fff
+    //stroke-width: 1
+  .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
+    fill: #fff
