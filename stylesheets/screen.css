@@ -86,8 +86,8 @@ a img {
  *    Work: Lead Product Designer @ http://kyruus.com */
 @font-face {
   font-family: "FontAwesome";
-  src: url('/stylesheets/../fonts/fontawesome-webfont.eot');
-  src: local("☺"), url('/stylesheets/../fonts/fontawesome-webfont.woff') format('woff'), url('/stylesheets/../fonts/fontawesome-webfont.ttf') format('truetype'), url('/stylesheets/../fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+  src: url(/newdoc/fonts/fontawesome-webfont.eot);
+  src: local("☺"), url(/newdoc/fonts/fontawesome-webfont.woff) format('woff'), url(/newdoc/fonts/fontawesome-webfont.ttf) format('truetype'), url(/newdoc/fonts/fontawesome-webfont.svg#FontAwesomeRegular) format('svg');
 }
 
 /*  Font Awesome styles

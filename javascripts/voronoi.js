@@ -1,7 +1,5 @@
 $(function(){
   
-  console.log('start');
-
   var width = $(document).width();
   var height = $(document).height();
 
@@ -40,7 +38,5 @@ $(function(){
         .filter(function(d) { return this.getAttribute("d") != d; })
         .attr("d", function(d) { return d; });
   }
-
-  console.log('end');
 
 });
