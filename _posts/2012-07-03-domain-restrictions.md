@@ -4,9 +4,9 @@ layout: post
 description: Lock videos down to be viewable in domains you specify using Domain Restrictions. 
 category: Embedding
 footer: 'for_intermediates'
+post_intro: "<p>Video embed domain restrictions allows you to prevent a malicious viewer from stealing your embed code off your page.  When domain restriction is set up, the videos in your account will only display on the domains you specify.</p>"
 ---
 
-Video embed domain restrictions allows you to prevent a malicious viewer from stealing your embed code off your page.  When domain restriction is set up, the videos in your account will only display on the domains you specify.
 
 {{ 'Domain Restrictions will not work with SSL embeds.' | note }}
 

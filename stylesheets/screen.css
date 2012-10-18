@@ -2143,14 +2143,14 @@ table tr td pre {
 }
 /* line 710, ../_sass/screen.sass */
 .search_bar input {
-  width: 88%;
+  width: 84%;
   font-size: 14px;
   border: 1px solid #bbbbbb;
   padding: 5px 10px;
 }
 /* line 715, ../_sass/screen.sass */
 .search_bar button {
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   vertical-align: top;
   background: #eeeeee;
