@@ -96,6 +96,7 @@ h1, h2, h3
   font-family: Times, serif
   font-style: italic
   color: $title_color
+  +anti-alias
 h1
   font-size: 45px
 p
@@ -134,8 +135,8 @@ header
           background-position-y: -40px
     #header_nav
       position: absolute
-      right: 17px
-      font-family: "Gill Sans", Helvetica, Arial, sans-serif
+      right: 0
+      font-family: "GillSansInfantStdRegular", "Gill Sans", Helvetica, Arial, sans-serif
       ul
         height: 40px
       ul li
@@ -146,13 +147,14 @@ header
             padding-right: 0
       li a
         display: block
-        padding: 10px 25px
+        padding: .6em 1.4em
         font-size: 18px
         text-transform: uppercase
         letter-spacing: 2px
         color: #8C8C8C
         text-shadow: 0 0 2px white
         outline: none
+        +anti-alias
         &:hover
           color: #444
 
@@ -229,6 +231,8 @@ header
         width: 152px
         color: $text_color
         font-size: 14px !important
+        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
+        font-style: normal
 
 .category_list
   margin-bottom: $padding
