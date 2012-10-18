@@ -20,12 +20,12 @@
     <header>
       {% include header.html %}
     </header>
-    <div id='container'>
+    <div class='{% if page.api %} api {% endif %}' id='container'>
+      <span class='brendan'>{{ page.api }}</span>
       {{ content }}
     </div>
   </body>
 </html>
 <script src="{{ '/javascripts/prism' | javascript_url }}"></script>
-<script src="{{ '/javascripts/prism.ruby' | javascript_url }}"></script>
-<script src="{{ '/javascripts/prism.vim' | javascript_url }}"></script>
+<script src="{{ '/javascripts/prism.extensions' | javascript_url }}"></script>
 <script src="{{ '/javascripts/search_text' | javascript_url }}"></script>

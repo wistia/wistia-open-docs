@@ -93,8 +93,9 @@ body
     color: $accent_blue
     text-decoration: none
 
-h1, h2, h3
+h1, h2, h3, h4
   font-family: Times, serif
+  margin-left: $padding
   font-style: italic
   color: $title_color
   +anti-alias
@@ -319,8 +320,7 @@ header
 /////// content styles ///////
 
 .post_content
-  h1
-    margin-left: $padding
+
   hr
     clear: both
     height: 1px
@@ -329,36 +329,19 @@ header
     margin-top: $padding
   h2, h3
     line-height: 120%
-    &:hover
-      .subtopic_anchor
-        color: $accent_blue
-  h2
     margin: $padding
     clear: both
     font-size: 32px
     color: $title_color
     padding: $padding/3 0
     margin-left: $padding
-  h3
-    font-size: 24px
-    clear: both
-    color: $accent_blue
-    margin: $padding 0
-  h3, h4, h5, p
-    margin: $padding/2 0 $padding/2 $padding
-  ol, ul
-    margin: $padding 0
-    line-height: 150%
-    border-left: 10px solid $header_blue
-  ol
-    padding-left: 42px
-  ul
-    padding-left: 20px
-  h3, h5
-    font-weight: bold
   h4
-    font-size: 16px
-    text-decoration: underline
+    font-weight: bold
+    font-size: 20px
+    margin-top: 40px
+
+  p, pre, ol, ul
+    margin: $padding/2 0
   p
     margin-left: $padding
     margin-right: $padding
@@ -370,6 +353,7 @@ header
     list-style-type: none
     position: relative
   ol
+    padding-left: $padding + 10
     list-style: decimal
     li
       margin-top: $padding/2
@@ -505,23 +489,20 @@ span.code
 //////// EVIL TABLES //////
 
 table
-  font-family: monospace
   font-size: 14px
-  margin: $padding
-  width: $post_width - 40
+  margin: $padding 0
+  width: 100%
   text-align: left
   border-collapse: collapse
   th
     font-size: 15px
     font-family: 'Helvetica Neue'
-    font-weight: bold
-    padding: $padding/3
+    padding: 10px 20px
     background: $accent_blue
     border-bottom: 2px solid white
     color: white
   td
-    padding: 8px
-    width: 200px
+    padding: 10px 20px
     background: $background_blue
     border-bottom: 1px solid white
     color: $accent_blue
@@ -529,10 +510,10 @@ table
   tr
     &:hover 
       td
-        background: $accent_blue
-        color: #FFF
+        background: $background_blue - 32
+        color: $accent_blue - 64
       a
-        color: white
+        color: $accent_blue - 64
         text-decoration: underline
   tr td pre
     margin: 0
@@ -618,6 +599,9 @@ table
 
 
 /////// post nav box ////////
+.api
+  #post_content_nav
+    position: absolute
 
 #post_content_nav
   display: inline-block
@@ -664,7 +648,7 @@ table
 
   .header_link
     border: none
-    border-top: 1px dashed #DDD
+    border-top: 1px solid #bbb
     margin-top: 5px
     padding: $padding/6 0
     a

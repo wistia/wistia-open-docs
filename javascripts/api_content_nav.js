@@ -11,7 +11,7 @@ $(document).ready(function() {
     };
 
     h1.attr('id', text_to_id(h1.text()));
-    nav_box_ul.prepend('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
+    nav_box_ul.prepend('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + '</a></li>');
 
     h_arr.each( function() {
       var $this = $(this);

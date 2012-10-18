@@ -16,11 +16,10 @@
   %body
     %header
       {% include header.html %}
-    #container
+    #container{ class: "{% if page.api %}api{% endif %}" }
       {{ content }}
 
 
 %script{ src: "{{ '/javascripts/prism' | javascript_url }}" }
-%script{ src: "{{ '/javascripts/prism.ruby' | javascript_url }}" }
-%script{ src: "{{ '/javascripts/prism.vim' | javascript_url }}" }
+%script{ src: "{{ '/javascripts/prism.extensions' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }

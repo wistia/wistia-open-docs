@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     if (h2.length) {
       h1.attr('id', text_to_id(h1.text()));
-      nav_box_ul.append('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + ' Topics</a></li>');
+      nav_box_ul.append('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + '</a></li>');
     }
     // if no nav box, then hide it entirely and re-center main post //
     else {
