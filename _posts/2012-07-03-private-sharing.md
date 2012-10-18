@@ -30,7 +30,6 @@ wistiaEmbed = Wistia.embed("75edd60835", {
 <div class="post_image float_right"><img src="http://embed.wistia.com/deliveries/42611fc9a1641be9e8374afd496a20e01abffcc6.png" alt="share_proj" /></div>
 
 
-
 Managers in your Wistia account can invite new viewers to view private content using the "Share by Email" feature.  From the Project screen, select "Share Project" from under the green "Project Actions" drop-down menu.
 
 Enter the email addresses of contacts you would like to share this project privately with.  You can then set whether they need to create a password.  At the bottom, you can customize the text from the message they will receive to first access the content you've allowed them to view.
@@ -40,10 +39,11 @@ Enter the email addresses of contacts you would like to share this project priva
 
 
 
-**FAQ:** *Why don't I set a password for my viewers?*
+<div class="faq">
+<h3><i class="icon-search"></i> FAQ: Why don't I set a password for my viewers?</h3>
 
-The best way for unwanted viewers to view secure content is through the original email.  Sending a group email that contains the login and password needed to access secure content can be grabbed easily: from a stolen laptop, from a hacked email account, even read right off the screen at a coffee shop.  With Wistia, your invited viewers receive an email with a one-time use activation code, and then create their own password.
-
+<p>The best way for unwanted viewers to view secure content is through the original email.  Sending a group email that contains the login and password needed to access secure content can be grabbed easily: from a stolen laptop, from a hacked email account, even read right off the screen at a coffee shop.  With Wistia, your invited viewers receive an email with a one-time use activation code, and then create their own password.</p>
+</div>
 
 ----
 

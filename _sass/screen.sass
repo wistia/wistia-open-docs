@@ -26,6 +26,8 @@ $title_color: #333
 $padding: 30px
 $border_color: $background_gray - 30
 
+$note_color: yellow
+
 // footer colors
 // for_beginners is accent_blue
 $for_intermediates: #8aad68
@@ -63,14 +65,17 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
 =anti-alias
   -webkit-font-smoothing: antialiased
 
-=selection($background)
-  @each $prefix in $prefixes
-    &::#{$prefix}selection
-      background: $background
-
-=callout-box($color)
+=callout-box($background-color, $h3-color: $accent_blue)
   padding: $padding/2
-  background-color: rgba($color, .3)
+  background-color: rgba($background-color, .3)
+  margin: $padding/2 0
+  clear: both
+  h3
+    color: $h3-color
+    font-weight: bold
+    margin-top: 0
+  p
+    font-size: 14px
 
 =transition
   +transition-property
@@ -102,6 +107,8 @@ strong
 em
   font-style: italic
 
+pre
+  overflow-x: scroll
 
 ////////// header ///////////
 
@@ -308,32 +315,42 @@ header
 /////// content styles ///////
 
 .post_content
-  *
-    +selection($background_blue)
   h1
     margin-left: $padding
-  h2
-    margin: $padding
-    clear: both
   hr
     clear: both
     height: 1px
     background-color: #bbb
     border: 0
-    margin-top: 40px
-    
+    margin-top: $padding
   h2, h3
     line-height: 120%
   h2
+    margin: $padding
+    clear: both
     font-size: 28px
     color: $title_color
     padding: $padding/3 0
     margin-left: $padding
+    &:hover
+      .subtopic_anchor
+        color: $accent_blue
   h3, p
     margin: $padding/2 0 $padding/2 $padding
   h3
     font-size: 24px
     clear: both
+    color: $accent_blue
+  h3, p, ul, ol
+    margin: $padding/2 0
+  h3, h5
+    font-weight: bold
+  h4
+    font-size: 16px
+    text-decoration: underline
+    margin: $padding/2 0
+  h5
+    margin: $padding/2 0
   p
     margin-left: $padding
     margin-right: $padding
@@ -410,6 +427,20 @@ span.code
   height: 28px
   position: relative
   top: 8px
+
+/// post callout boxes ///
+
+.post_callout_boxes
+  p:last-child
+    margin-bottom: 0
+
+.note
+  @extend .post_callout_boxes
+  +callout-box($note_color)
+.faq
+  @extend .post_callout_boxes
+  +callout-box($note_color)
+
 
 ////////// post intro paragraph styles ////////
 
@@ -525,13 +556,8 @@ table
 
 .exporting_guide_box
   +callout-box($header_blue)
-  h3
-    font-weight: bold
-    margin-top: 0
-    color: $accent_blue
   p
     margin: -15px 0 15px
-    font-size: 14px
     color: lighten($text_color, 30%)
   ul
     border: none
@@ -712,32 +738,7 @@ table
 .description
   color: #AAA
 
-//////////// DATA API /////////////
-
-
-#post.api
-  p, li
-    font-size: 14px
-  h2
-    font-size: 28px
-    color: $title_color
-    padding: $padding/3 $padding
-    margin-left: -$padding
-    background-color: $background_blue
-    +letterpress(.6)
-  h3, h5
-    font-weight: bold
-  h3
-    font-size: 20px
-    color: $accent_blue
-  h4
-    font-size: 16px
-    text-decoration: underline
-    margin: $padding/2 0
-  h5
-    margin: $padding/2 0
-  pre
-    overflow-x: scroll
+//////////// background shee /////////////
 
 #beegee
   position: absolute
@@ -750,3 +751,4 @@ table
     //stroke-width: 1
   .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
     fill: #fff
+

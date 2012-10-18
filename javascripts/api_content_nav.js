@@ -32,6 +32,7 @@ $(document).ready(function() {
     });
 
     $('#page_nav').onePageNav();
+    nav_box_ul.css('overflow-y', 'scroll');
     $('li.header_link:first').css('border', 'none');
 
 
