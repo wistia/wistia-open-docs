@@ -3,7 +3,7 @@ $(document).ready(function() {
   function fixFloatedImages() {
     $(".post_image.float_right").each(function() {
       var $img = $(this),
-        $p = $img.next('p'),
+        $p = $img.closest('p').next('p'),
         $prev_elem = $img.prev();
 
       function heightFinder(elem) {
@@ -29,10 +29,13 @@ $(document).ready(function() {
           }
         }
       }
+
       offsetFinder();
+
       $img.find('img').load(function() {
         offsetFinder();
       });
+
     });
   }
 
