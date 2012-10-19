@@ -177,6 +177,7 @@ header
 #container
   width: 960px
   margin: 0 auto
+  position: relative
 
 #post_container
   display: inline-block
@@ -361,6 +362,8 @@ header
     border-left: 10px solid $header_blue
     padding-left: $padding - 10
     line-height: 150%
+    li p
+      margin: $padding/2 0
   ul
     list-style-type: none
     position: relative
@@ -470,6 +473,7 @@ span.code
   font-size: 16px
   background: #eee
   color: #333
+  padding: $padding/2 0
 
   p, ul
     margin: 0
@@ -510,6 +514,7 @@ span.code
   margin-right: -($padding) - 2
 .intro_image
   border: none
+  margin-right: 0
 
 /////// video /////////
 
@@ -724,6 +729,9 @@ table
   h2
     margin-bottom: $padding/2
     font-size: 20px
+    a
+      +link-hover
+
 
 ////////// SEARCH ////////////
 
@@ -763,13 +771,14 @@ table
   min-height: 350px
 .results_header
   border-bottom: 1px solid
-  margin-bottom: $padding
+  margin: $padding 0
 .result
   margin: $padding 0 $padding
   h2
     margin: 0
   a
     font-size: 24px
+    +link-hover
   p
     margin-top: $padding/2
     width: 550px
@@ -789,7 +798,7 @@ table
   left: 0
   z-index: 0
   path
-    fill: #aff
+    fill: $header_blue
     //stroke: #fff
     //stroke-width: 1
   .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
@@ -798,7 +807,7 @@ table
 .activated
   #beegee
     path
-      fill: #aff
+      fill: $accent_blue
       stroke: #bbb
       stroke-width: 1
     .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9

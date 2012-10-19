@@ -3,7 +3,7 @@ title: Embedding Video on Your Website
 layout: post
 category: Embedding
 description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
-post_intro: <div class="post_image intro_image"><img src="http://embed.wistia.com/deliveries/e4fae4cdfda58c83e8444785425e32309c0d1c3b.png" alt="puttingvideo_guide" /></div><p>Putting video on your website is the best way to get your message across.</p><p>The act of putting a video on your website is called <strong>embedding</strong>, and in this guide we're going to show you how to get it done right.</p><p>Embedding video is right for you if you want to:</p><ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul>
+post_intro: <img class="post_image intro_image" src="http://embed.wistia.com/deliveries/e4fae4cdfda58c83e8444785425e32309c0d1c3b.png" alt="puttingvideo_guide" width="150" /><p>Putting video on your website is the best way to get your message across.</p><p>The act of putting a video on your website is called <strong>embedding</strong>, and in this guide we're going to show you how to get it done right.</p><p>Embedding video is right for you if you want to:</p><ul><li>Add video to your website, blog, or wiki</li><li>Track how your audience as a whole watches your video</li><li>Track how individuals watch your video</li></ul>
 ---
 
 <div class="video_embed">
