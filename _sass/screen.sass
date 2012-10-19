@@ -144,6 +144,9 @@ header
         height: 40px
       ul li
         display: inline-block
+        /* For IE 7 */
+        zoom: 1
+        *display: inline
         position: relative
         &:last-child
           a
@@ -180,6 +183,9 @@ header
 
 #post_container
   display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
   position: relative
   left: $fixed_column_width + 20
 
@@ -207,6 +213,9 @@ header
   text-align: center
   li
     display: inline-block
+    /* For IE 7 */
+    zoom: 1
+    *display: inline
     position: relative
     margin-right: 12px
     border: 1px solid #DDD
@@ -267,8 +276,11 @@ header
   font-style: italic
   position: absolute
   right: 0
-  display: inline-block
   max-width: 350px
+  display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
 
 //////// post header /////////////
 
@@ -285,9 +297,12 @@ header
       position: relative
       height: 45px
       li
-        display: inline-block
         position: absolute
         color: $text_color
+        display: inline-block
+        /* For IE 7 */
+        zoom: 1
+        *display: inline
         a 
           color: $accent_blue
           text-decoration: underline
@@ -310,6 +325,9 @@ header
 
 #post
   display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
   width: $post_width
   background-color: white
   clear: both
@@ -417,12 +435,18 @@ span.code
   background: transparent url(http://embed.wistia.com/deliveries/c4728e279c91c74605f00f6c2629a646ed3905af.png) no-repeat
   padding-left: 33px
   display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
   height: 10px
 
 .help_bubble
   background: transparent url(http://fast.wistia.com/images/zebra/elements/questionhelp_dark.png) no-repeat
   padding-left: 28px
   display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
   height: 28px
   position: relative
   top: 8px
@@ -556,12 +580,18 @@ table
 
 .embed_type_content
   display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
   padding: 20px
   width: $post_width / 2 - 10
 .embed_type_image
   margin-left: 20px
   height: 100%
   display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
   vertical-align: top
 .embed_screen_image
   border: none
@@ -574,9 +604,15 @@ table
   p
     width: 195px
     display: inline-block
+    /* For IE 7 */
+    zoom: 1
+    *display: inline
     vertical-align: top
   ul
     display: inline-block
+    /* For IE 7 */
+    zoom: 1
+    *display: inline
     li
       margin-bottom: 10px
 
@@ -638,6 +674,9 @@ table
 
 #post_content_nav
   display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
   vertical-align: top
   width: $fixed_column_width
   position: fixed
