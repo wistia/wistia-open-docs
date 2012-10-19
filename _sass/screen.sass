@@ -68,7 +68,7 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
 =callout-box($background-color, $h3-color: $accent_blue)
   padding: $padding/2
   background-color: rgba($background-color, .3)
-  margin: $padding/2 0
+  margin: $padding 0
   clear: both
   h3
     color: $h3-color
@@ -340,6 +340,9 @@ header
     color: $title_color
     padding: $padding/3 0
     margin-left: $padding
+    &:hover
+      .subtopic_anchor
+        color: $accent_blue
   h4
     font-weight: bold
     font-size: 20px
@@ -450,6 +453,8 @@ span.code
   @extend .post_callout_boxes
   +callout-box($background_blue)
   position: relative
+  h3
+    padding-top: 0
   img
     position: absolute
     left: $padding
@@ -490,7 +495,7 @@ span.code
 /////// images /////////
 
 .post_image
-  margin: $padding auto
+  margin: $padding/2 auto
   clear: both
   position: relative
   overflow: hidden
