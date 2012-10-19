@@ -1713,6 +1713,7 @@ header #header_container #header_nav li a:hover {
   margin: 15px 30px;
   padding: 6px;
   font-family: monospace;
+<<<<<<< HEAD
   border: 1px dashed #d9d8d6;
 }
 <<<<<<< HEAD
@@ -1729,16 +1730,25 @@ header #header_container #header_nav li a:hover {
 =======
 /* line 412, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+}
+
+/* line 409, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 span.code {
   margin: 0;
   padding: 2px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 415, ../_sass/screen.sass */
 =======
 /* line 416, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 413, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .edit_tag {
   background: transparent url(http://embed.wistia.com/deliveries/c4728e279c91c74605f00f6c2629a646ed3905af.png) no-repeat;
   padding-left: 33px;
@@ -1747,10 +1757,14 @@ span.code {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 421, ../_sass/screen.sass */
 =======
 /* line 422, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 419, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .help_bubble {
   background: transparent url(http://fast.wistia.com/images/zebra/elements/questionhelp_dark.png) no-repeat;
   padding-left: 28px;
@@ -1761,29 +1775,41 @@ span.code {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 429, ../_sass/screen.sass */
 =======
 /* line 430, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 427, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .seo_faq {
   margin-left: 0;
   font-size: 24px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 436, ../_sass/screen.sass */
 =======
 /* line 437, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 434, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_callout_boxes p:last-child, .note p:last-child, .faq p:last-child, .tip p:last-child, .expert_tip p:last-child {
   margin-bottom: 0;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 439, ../_sass/screen.sass */
 =======
 /* line 440, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 437, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .note {
   padding: 15px;
   background-color: rgba(255, 255, 0, 0.3);
@@ -1804,10 +1830,14 @@ span.code {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 442, ../_sass/screen.sass */
 =======
 /* line 443, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 440, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .faq {
   padding: 15px;
   background-color: rgba(255, 255, 0, 0.3);
@@ -1828,10 +1858,14 @@ span.code {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 445, ../_sass/screen.sass */
 =======
 /* line 446, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 443, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .tip {
   padding: 15px;
   background-color: rgba(192, 219, 235, 0.3);
@@ -1852,10 +1886,14 @@ span.code {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 449, ../_sass/screen.sass */
 =======
 /* line 450, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 447, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .expert_tip {
   padding: 15px;
   background-color: rgba(192, 219, 235, 0.3);
@@ -1876,6 +1914,7 @@ span.code {
   margin-left: 15px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 453, ../_sass/screen.sass */
 =======
 /* line 454, ../_sass/screen.sass */
@@ -1884,11 +1923,19 @@ span.code {
 }
 /* line 456, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 451, ../_sass/screen.sass */
+.expert_tip h3 {
+  padding-top: 0;
+}
+/* line 453, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .expert_tip img {
   position: absolute;
   left: 30px;
   padding-top: 0;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 457, ../_sass/screen.sass */
 .expert_tip p {
@@ -1902,15 +1949,26 @@ span.code {
 }
 /* line 462, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 457, ../_sass/screen.sass */
+.expert_tip p {
+  padding-left: 70px;
+}
+/* line 459, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .expert_tip p:first-of-type {
   margin-top: 0;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 464, ../_sass/screen.sass */
 =======
 /* line 467, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 464, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_intro {
   margin: 30px 0;
   font-size: 16px;
@@ -1918,10 +1976,14 @@ span.code {
   color: #333333;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 470, ../_sass/screen.sass */
 =======
 /* line 473, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 470, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_intro p, .post_intro ul {
   margin: 0;
   margin-right: 30px;
@@ -1929,6 +1991,7 @@ span.code {
   line-height: 150%;
   font-size: 16px;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 477, ../_sass/screen.sass */
 .post_intro p:last-child {
@@ -1942,11 +2005,19 @@ span.code {
 }
 /* line 482, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 477, ../_sass/screen.sass */
+.post_intro p:last-child {
+  padding-bottom: 15px;
+}
+/* line 479, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_intro ul {
   padding: 0;
   padding-left: 15px;
   margin-top: 15px;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 483, ../_sass/screen.sass */
 .post_intro ul li {
@@ -1960,15 +2031,26 @@ span.code {
 }
 /* line 489, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 483, ../_sass/screen.sass */
+.post_intro ul li {
+  list-style-position: inside;
+}
+/* line 486, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_intro .center {
   margin-left: 0;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 492, ../_sass/screen.sass */
 =======
 /* line 495, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 492, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_image {
   margin: 15px auto;
   clear: both;
@@ -1977,29 +2059,41 @@ span.code {
   border: 1px solid #bbbbbb;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 498, ../_sass/screen.sass */
 =======
 /* line 501, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 498, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_image img {
   vertical-align: top;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 500, ../_sass/screen.sass */
 =======
 /* line 503, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 500, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .center {
   text-align: center;
   margin-left: -30px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 503, ../_sass/screen.sass */
 =======
 /* line 506, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 503, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .float_right, .intro_image {
   float: right;
   margin: 15px;
@@ -2007,28 +2101,40 @@ span.code {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 507, ../_sass/screen.sass */
 =======
 /* line 510, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 507, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .intro_image {
   border: none;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 512, ../_sass/screen.sass */
 =======
 /* line 515, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 512, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .video_embed {
   margin: 30px 0;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 517, ../_sass/screen.sass */
 =======
 /* line 520, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 517, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 table {
   font-size: 14px;
   margin: 30px 0;
@@ -2037,10 +2143,14 @@ table {
   border-collapse: collapse;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 523, ../_sass/screen.sass */
 =======
 /* line 526, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 523, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 table th {
   font-size: 15px;
   font-family: "Helvetica Neue";
@@ -2050,10 +2160,14 @@ table th {
   color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 530, ../_sass/screen.sass */
 =======
 /* line 533, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 530, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 table td {
   padding: 10px 20px;
   background: rgba(192, 219, 235, 0.3);
@@ -2062,38 +2176,54 @@ table td {
   border-top: 1px solid transparent;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 538, ../_sass/screen.sass */
 =======
 /* line 541, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 538, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 table tr:hover td {
   background: rgba(160, 187, 203, 0.3);
   color: #284a6d;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 541, ../_sass/screen.sass */
 =======
 /* line 544, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 541, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 table tr:hover a {
   color: #284a6d;
   text-decoration: underline;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 544, ../_sass/screen.sass */
 =======
 /* line 547, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 544, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 table tr td pre {
   margin: 0;
   padding: 0;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 550, ../_sass/screen.sass */
 =======
 /* line 553, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 550, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .embed_type_content {
   display: inline-block;
   padding: 20px;
@@ -2101,10 +2231,14 @@ table tr td pre {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 554, ../_sass/screen.sass */
 =======
 /* line 557, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 554, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .embed_type_image {
   margin-left: 20px;
   height: 100%;
@@ -2113,33 +2247,46 @@ table tr td pre {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 559, ../_sass/screen.sass */
 =======
 /* line 562, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 559, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .embed_screen_image {
   border: none;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 564, ../_sass/screen.sass */
 =======
 /* line 567, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 564, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .randor_links {
   width: 430px;
   margin: 0 auto;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 567, ../_sass/screen.sass */
 =======
 /* line 570, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 567, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .randor_links p {
   width: 195px;
   display: inline-block;
   vertical-align: top;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 571, ../_sass/screen.sass */
 .randor_links ul {
@@ -2153,15 +2300,26 @@ table tr td pre {
 }
 /* line 576, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 571, ../_sass/screen.sass */
+.randor_links ul {
+  display: inline-block;
+}
+/* line 573, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .randor_links ul li {
   margin-bottom: 10px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 578, ../_sass/screen.sass */
 =======
 /* line 581, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 578, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .exporting_guide_box {
   padding: 15px;
   background-color: rgba(192, 219, 235, 0.3);
@@ -2181,6 +2339,7 @@ table tr td pre {
   margin-left: 15px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 580, ../_sass/screen.sass */
 .exporting_guide_box h3 {
   margin: 0;
@@ -2193,21 +2352,33 @@ table tr td pre {
 }
 /* line 585, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 580, ../_sass/screen.sass */
+.exporting_guide_box h3 {
+  margin: 0;
+}
+/* line 582, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .exporting_guide_box p {
   margin: 0 0 15px 30px;
   color: #b6b3ae;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 585, ../_sass/screen.sass */
 =======
 /* line 588, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 585, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .exporting_guide_box ul {
   border: none;
   margin: 0;
   margin-left: 30px;
   padding: 0;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 590, ../_sass/screen.sass */
 .exporting_guide_box ul li {
@@ -2221,25 +2392,40 @@ table tr td pre {
 }
 /* line 595, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 590, ../_sass/screen.sass */
+.exporting_guide_box ul li {
+  color: #688aad;
+}
+/* line 592, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .exporting_guide_box .answer {
   color: #9e9a93;
   font-weight: normal;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 599, ../_sass/screen.sass */
 =======
 /* line 602, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 599, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_footer {
   margin-top: 60px;
   clear: both;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 602, ../_sass/screen.sass */
 =======
 /* line 605, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 602, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_footer ul {
   position: relative;
   width: 600px;
@@ -2247,14 +2433,19 @@ table tr td pre {
   list-style-type: none;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 607, ../_sass/screen.sass */
 =======
 /* line 610, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 607, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_footer ul li {
   position: absolute;
   width: 250px;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 610, ../_sass/screen.sass */
 .post_footer ul li:first-child {
@@ -2268,10 +2459,18 @@ table tr td pre {
 }
 /* line 615, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 610, ../_sass/screen.sass */
+.post_footer ul li:first-child {
+  left: 45px;
+}
+/* line 612, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .post_footer ul li:last-child {
   right: 45px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 614, ../_sass/screen.sass */
 .footer_content {
@@ -2285,52 +2484,79 @@ table tr td pre {
 }
 /* line 619, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 614, ../_sass/screen.sass */
+.footer_content {
+  padding: 30px;
+}
+/* line 616, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .footer_content p {
   font-size: 15px;
   margin-bottom: 5px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 619, ../_sass/screen.sass */
 =======
 /* line 622, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 619, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .for_developers {
   background-color: rgba(240, 129, 139, 0.2);
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 621, ../_sass/screen.sass */
 =======
 /* line 624, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 621, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .for_beginners {
   background-color: rgba(104, 138, 173, 0.2);
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 623, ../_sass/screen.sass */
 =======
 /* line 626, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 623, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .for_intermediates {
   background-color: rgba(138, 173, 104, 0.2);
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 629, ../_sass/screen.sass */
 =======
 /* line 632, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 629, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .api #post_content_nav {
   position: absolute;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 632, ../_sass/screen.sass */
 =======
 /* line 635, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 632, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav {
   display: inline-block;
   vertical-align: top;
@@ -2339,14 +2565,19 @@ table tr td pre {
   background-color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 638, ../_sass/screen.sass */
 =======
 /* line 641, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 638, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav ul {
   list-style-type: none;
   padding: 20px;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 641, ../_sass/screen.sass */
 #post_content_nav li {
@@ -2360,6 +2591,13 @@ table tr td pre {
 }
 /* line 646, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 641, ../_sass/screen.sass */
+#post_content_nav li {
+  border-bottom: 1px solid #bbbbbb;
+}
+/* line 643, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav li a {
   display: block;
   padding: 20px 0px;
@@ -2367,6 +2605,7 @@ table tr td pre {
   font-size: 14px;
   text-decoration: none;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 649, ../_sass/screen.sass */
 #post_content_nav li a:hover {
@@ -2380,16 +2619,27 @@ table tr td pre {
 }
 /* line 654, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 649, ../_sass/screen.sass */
+#post_content_nav li a:hover {
+  color: #2f2b24;
+}
+/* line 651, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav li:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 656, ../_sass/screen.sass */
 =======
 /* line 659, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 656, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav .title_list_item a {
   padding: 0 0 20px 0;
   position: relative;
@@ -2398,6 +2648,7 @@ table tr td pre {
   font-size: 26px;
   color: black;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 663, ../_sass/screen.sass */
 #post_content_nav .title_list_item a:hover {
@@ -2418,23 +2669,30 @@ table tr td pre {
 /* line 675, ../_sass/screen.sass */
 =======
 /* line 666, ../_sass/screen.sass */
+=======
+/* line 663, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav .title_list_item a:hover {
   color: #688aad;
 }
-/* line 670, ../_sass/screen.sass */
+/* line 667, ../_sass/screen.sass */
 #post_content_nav .title_list_item.current a, #post_content_nav .title_list_item.current a:hover {
   color: #688aad;
 }
-/* line 673, ../_sass/screen.sass */
+/* line 670, ../_sass/screen.sass */
 #post_content_nav .current > a {
   color: #688aad;
 }
-/* line 675, ../_sass/screen.sass */
+/* line 672, ../_sass/screen.sass */
 #post_content_nav .current > a:hover {
   color: #688aad;
 }
+<<<<<<< HEAD
 /* line 678, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 675, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav .header_link {
   border: none;
   border-top: 1px solid #bbbbbb;
@@ -2442,51 +2700,72 @@ table tr td pre {
   padding: 5px 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 680, ../_sass/screen.sass */
 =======
 /* line 683, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 680, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav .header_link a {
   font-weight: bold;
   padding: 5px 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 684, ../_sass/screen.sass */
 =======
 /* line 687, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 684, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav .sub_link {
   padding: 5px 0;
   border: none;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 687, ../_sass/screen.sass */
 =======
 /* line 690, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 687, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #post_content_nav .sub_link a {
   font-size: 12px;
   padding: 5px 0;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 693, ../_sass/screen.sass */
 =======
 /* line 696, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 693, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .clear {
   clear: both;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 696, ../_sass/screen.sass */
 =======
 /* line 699, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 696, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .unhide {
   visibility: visible;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 702, ../_sass/screen.sass */
 .category_layout #container, .category_layout #container_home {
@@ -2500,6 +2779,9 @@ table tr td pre {
 .main_layout #container, .main_layout #container_home {
 =======
 /* line 704, ../_sass/screen.sass */
+=======
+/* line 701, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #utilities_container {
 >>>>>>> updated styles
   position: relative;
@@ -2508,30 +2790,42 @@ table tr td pre {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 716, ../_sass/screen.sass */
 =======
 /* line 710, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 707, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .category {
   width: 660px;
   padding: 30px 0;
   background-color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 720, ../_sass/screen.sass */
 =======
 /* line 714, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 711, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .category h2 {
   margin-bottom: 15px;
   font-size: 20px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 726, ../_sass/screen.sass */
 =======
 /* line 719, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 716, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .search_bar {
   margin: 30px auto;
   text-align: center;
@@ -2539,10 +2833,14 @@ table tr td pre {
   width: 660px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 731, ../_sass/screen.sass */
 =======
 /* line 724, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 721, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .search_bar input {
   width: 84%;
   font-size: 14px;
@@ -2550,10 +2848,14 @@ table tr td pre {
   padding: 5px 10px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 736, ../_sass/screen.sass */
 =======
 /* line 729, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 726, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .search_bar button {
   font-size: 14px;
   position: relative;
@@ -2565,20 +2867,28 @@ table tr td pre {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 747, ../_sass/screen.sass */
 =======
 /* line 740, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 737, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #doc_nav_container .search_bar {
   margin: 0;
   text-align: left;
   width: 100%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 751, ../_sass/screen.sass */
 =======
 /* line 744, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 741, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #doc_nav_container .search_bar input {
   width: 180px;
   position: relative;
@@ -2587,24 +2897,33 @@ table tr td pre {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 757, ../_sass/screen.sass */
 =======
 /* line 750, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 747, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #results {
   min-height: 350px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 760, ../_sass/screen.sass */
 =======
 /* line 753, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 750, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .results_header {
   border-bottom: 1px solid;
   margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 763, ../_sass/screen.sass */
 .result {
@@ -2621,24 +2940,32 @@ table tr td pre {
 /* line 769, ../_sass/screen.sass */
 =======
 /* line 756, ../_sass/screen.sass */
+=======
+/* line 753, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .result {
   margin: 30px 0 30px;
 }
-/* line 758, ../_sass/screen.sass */
+/* line 755, ../_sass/screen.sass */
 .result h2 {
   margin: 0;
 }
-/* line 760, ../_sass/screen.sass */
+/* line 757, ../_sass/screen.sass */
 .result a {
   font-size: 24px;
 }
+<<<<<<< HEAD
 /* line 762, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 759, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .result p {
   margin-top: 15px;
   width: 550px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 773, ../_sass/screen.sass */
 .no_result p {
@@ -2652,30 +2979,46 @@ table tr td pre {
 }
 /* line 768, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 763, ../_sass/screen.sass */
+.no_result p {
+  line-height: 200%;
+}
+/* line 765, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .no_result .query {
   color: #333333;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 777, ../_sass/screen.sass */
 =======
 /* line 770, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 767, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 .description {
   color: #aaaaaa;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 782, ../_sass/screen.sass */
 =======
 /* line 775, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 772, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #beegee {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* line 787, ../_sass/screen.sass */
 #beegee path {
@@ -2689,6 +3032,13 @@ table tr td pre {
 }
 /* line 784, ../_sass/screen.sass */
 >>>>>>> updated styles
+=======
+/* line 777, ../_sass/screen.sass */
+#beegee path {
+  fill: #aaffff;
+}
+/* line 781, ../_sass/screen.sass */
+>>>>>>> 404 page addition
 #beegee .q0, #beegee .q1, #beegee .q2, #beegee .q3, #beegee .q4, #beegee .q5, #beegee .q6, #beegee .q7, #beegee .q8, #beegee .q9 {
   fill: white;
 }

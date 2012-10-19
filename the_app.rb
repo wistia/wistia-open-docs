@@ -49,7 +49,6 @@ end
 
 use SuperStatic
 
-
 get "/search/:q" do
   q = params[:q]
 
@@ -85,4 +84,8 @@ post '/update' do
   'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
 end
 
+# 404 page
+not_found do
+  send_file(File.join(File.dirname(__FILE__), '_site', '404.html'), {:status => 404})
+end
 
