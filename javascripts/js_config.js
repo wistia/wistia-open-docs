@@ -1,6 +1,6 @@
 WistiaDoc = {
   url: "http://wistia.com",
-  path: "/newdoc",
+  path: "/doc",
   port: ":4000",
   search_path: "/search",
   search_port: ":9393",

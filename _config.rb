@@ -1,3 +1,3 @@
 
-BASEPATH = "/newdoc"
+BASEPATH = "/doc"
 
