@@ -183,13 +183,17 @@ type: main
           %a{ href: "{{ 'upload-widget-specs' | post_url }}" } Upload Widgets
 
 :javascript
-  $('.post_list li').each( function() {
-    $this = $(this);
-    var $a = $this.find("a");
-    var $hint = $this.find(".hint");
-    $a.hover(function() {
-      $hint.addClass("unhide");
-    }, function() {
-      $hint.removeClass("unhide");
+  var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false );
+
+  if (!iOS) {
+    $('.post_list li').each( function() {
+      $this = $(this);
+      var $a = $this.find("a");
+      var $hint = $this.find(".hint");
+      $a.hover(function() {
+        $hint.addClass("unhide");
+      }, function() {
+        $hint.removeClass("unhide");
+      });
     });
-  });
+  }
