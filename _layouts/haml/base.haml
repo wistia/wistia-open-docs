@@ -13,7 +13,7 @@
     %title
       {% if page.title == '' %} wDoc {% else %} wDoc: {{ page.title }} {% endif %}
     
-  %body
+  %body{ class: "{{ page.type }}_layout" }
     %header
       {% include header.html %}
     #container{ class: "{% if page.api %}api{% endif %}" }
@@ -23,3 +23,6 @@
 %script{ src: "{{ '/javascripts/prism' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/prism.extensions' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }
+
+%script{ src: "{{ '/javascripts/d3.v2.min' | javascript_url }}" }
+%script{ src: "{{ '/javascripts/voronoi' | javascript_url }}" }
