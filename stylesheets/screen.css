@@ -1259,7 +1259,7 @@ pre {
 }
 
 /* line 119, ../_sass/screen.sass */
-header {
+#header {
   width: 100%;
   position: relative;
   height: 40px;
@@ -1267,39 +1267,39 @@ header {
   border-bottom: 2px solid #d9d8d6;
 }
 /* line 125, ../_sass/screen.sass */
-header #header_container {
+#header #header_container {
   width: 960px;
   height: 40px;
   margin: 0 auto;
   position: relative;
 }
 /* line 130, ../_sass/screen.sass */
-header #header_container #logo {
+#header #header_container #logo {
   left: 0;
 }
 /* line 132, ../_sass/screen.sass */
-header #header_container #logo a {
+#header #header_container #logo a {
   position: absolute;
   background: transparent url(/images/elements/nav-logo.png) no-repeat;
   width: 115px;
   height: 40px;
 }
 /* line 137, ../_sass/screen.sass */
-header #header_container #logo a:hover {
+#header #header_container #logo a:hover {
   background-position-y: -40px;
 }
 /* line 139, ../_sass/screen.sass */
-header #header_container #header_nav {
+#header #header_container #header_nav {
   position: absolute;
   right: 0;
   font-family: "GillSansInfantStdRegular", "Gill Sans", Helvetica, Arial, sans-serif;
 }
 /* line 143, ../_sass/screen.sass */
-header #header_container #header_nav ul {
+#header #header_container #header_nav ul {
   height: 40px;
 }
 /* line 145, ../_sass/screen.sass */
-header #header_container #header_nav ul li {
+#header #header_container #header_nav ul li {
   display: inline-block;
   /* For IE 7 */
   zoom: 1;
@@ -1307,11 +1307,11 @@ header #header_container #header_nav ul li {
   position: relative;
 }
 /* line 152, ../_sass/screen.sass */
-header #header_container #header_nav ul li:last-child a {
+#header #header_container #header_nav ul li:last-child a {
   padding-right: 0;
 }
 /* line 154, ../_sass/screen.sass */
-header #header_container #header_nav li a {
+#header #header_container #header_nav li a {
   display: block;
   padding: 0.6em 1.4em;
   font-size: 18px;
@@ -1323,7 +1323,7 @@ header #header_container #header_nav li a {
   -webkit-font-smoothing: antialiased;
 }
 /* line 164, ../_sass/screen.sass */
-header #header_container #header_nav li a:hover {
+#header #header_container #header_nav li a:hover {
   color: #444444;
 }
 

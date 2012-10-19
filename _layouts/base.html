@@ -17,9 +17,9 @@
     </title>
   </head>
   <body class='{{ page.type }}_layout'>
-    <header>
+    <div id='header'>
       {% include header.html %}
-    </header>
+    </div>
     <div class='{% if page.api %}api{% endif %}' id='container'>
       {{ content }}
     </div>
