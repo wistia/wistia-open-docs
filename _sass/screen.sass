@@ -96,7 +96,6 @@ body
 
 h1, h2, h3, h4, .seo_faq
   font-family: Times, serif
-  margin-left: $padding
   font-style: italic
   color: $title_color
   +anti-alias
@@ -330,6 +329,9 @@ header
     background-color: #bbb
     border: 0
     margin-top: $padding
+  h1, h2, h3, h4
+    margin-left: $padding
+
   h2, h3
     line-height: 120%
     margin: $padding
@@ -696,18 +698,28 @@ table
 
 /////// utility pages ( categories, search, blah )//////
 
-#utilities_container
-  position: relative
-  left: 125px
+.category_layout
+  #container
+    position: relative
+    background: white
+    width: $post_width
+    padding: 0 $padding
+
+.main_layout
+  #container
+    position: relative
+    background: white
+    width: 700px
 
 /////// categories ////////
 
 .category
   width: $post_width
-  padding: $padding
+  padding: $padding 0
   background-color: white
   h2
     margin-bottom: $padding/2
+    font-size: 20px
 
 ////////// SEARCH ////////////
 
@@ -779,3 +791,11 @@ table
   .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
     fill: #fff
 
+.activated
+  #beegee
+    path
+      fill: #aff
+      stroke: #bbb
+      stroke-width: 1
+    .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
+      fill: #fff

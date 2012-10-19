@@ -6,6 +6,8 @@ $(function(){
   // make a canvas that fills the screen!
   $('body').prepend("<div id='beegee' width=" + width + " height=" + height + "></div>");
 
+  $('#beegee').on('dblclick', function(){ $('body').toggleClass('activated') });
+
   var vertices = d3.range(600).map(function(d) {
     return [Math.random() * width, Math.random() * height];
   });
