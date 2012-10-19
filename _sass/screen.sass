@@ -74,6 +74,7 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
     color: $h3-color
     font-weight: bold
     margin: 0 $padding/2
+    font-size: 24px
   p
     font-size: 14px
     margin-left: $padding/2
@@ -93,7 +94,7 @@ body
     color: $accent_blue
     text-decoration: none
 
-h1, h2, h3, h4
+h1, h2, h3, h4, .seo_faq
   font-family: Times, serif
   margin-left: $padding
   font-style: italic
@@ -101,6 +102,7 @@ h1, h2, h3, h4
   +anti-alias
 h1
   font-size: 45px
+  margin-left: 0
 p
   font-size: 16px
   line-height: 115%
@@ -196,6 +198,7 @@ header
   h3
     font-size: 18px
     margin-bottom: 10px
+    margin-left: 0
     color: $text_color
     border-bottom: 1px solid #DDD
     padding-bottom: 5px
@@ -349,6 +352,10 @@ header
     position: relative
     pre
       margin: $padding/2 0 $padding/2 $padding
+  ul, ol
+    border-left: 10px solid $header_blue
+    padding-left: $padding - 10
+    line-height: 150%
   ul
     list-style-type: none
     position: relative
@@ -417,6 +424,10 @@ span.code
   position: relative
   top: 8px
 
+.seo_faq
+  margin-left: 0
+  font-size: 24px
+
 /// post callout boxes ///
 
 .post_callout_boxes
@@ -434,11 +445,17 @@ span.code
   +callout-box($background_blue)
 
 .expert_tip
+  @extend .post_callout_boxes
+  +callout-box($background_blue)
+  position: relative
   img
-    float: left
-    margin: $padding/2
+    position: absolute
+    left: $padding
+    padding-top: 0
+  p
+    padding-left: $padding * 2 + 10
   p:first-of-type
-    margin-top: $padding/2
+    margin-top: 0
 
 ////////// post intro paragraph styles ////////
 
@@ -450,6 +467,7 @@ span.code
 
   p, ul
     margin: 0
+    margin-right: 30px
     padding: $padding/2 $padding 0 $padding
     line-height: 150%
     font-size: 16px
@@ -459,6 +477,7 @@ span.code
   ul
     padding: 0
     padding-left: $padding/2
+    margin-top: $padding/2
   ul li
     list-style-position: inside
 

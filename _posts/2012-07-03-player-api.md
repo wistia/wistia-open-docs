@@ -26,7 +26,7 @@ You can reference the video object using the **''wistiaEmbed''** variable.  If y
 
 As an example, if the following JS code is executed, the video will start to play:
 
-<div class="code"><pre>wistiaEmbed.play();</pre></div>
+<pre><code class="language-javascript">wistiaEmbed.play();</code></pre>
 
 ### Using iframes and the Player API
 
@@ -128,7 +128,7 @@ playerColor           | string  | Set custom color on play button/controls. HTML
 smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.
 stillUrl              | string  | The still image that should appear before the video is played.
 trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
-videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam) |
+videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam)
 videoQuality          | string  | Specify the starting video quality. sd-only/hd-only/auto
 videoWidth            | integer | The original width of the video.
 videoHeight           | integer | The original height of the video.
