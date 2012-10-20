@@ -1,0 +1,22 @@
+---
+layout: base
+title: Agency Docs
+type: main
+---
+<div id='home_logo'></div>
+<div id='articles_list'>
+  {% include quickstart.html %}
+  <ul>
+    <li class='category_list'>
+      <h3>
+        <a href="{{ 'agency' | category_url }}">Agency</a>
+      </h3>
+      <ul class='post_list'>
+        <li>
+          <a href="{{ '/agency-faq' | post_url }}">Agency Introduction</a>
+          <span class='hint'>Our one-sheet'r on getting started with an Agency Account.</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

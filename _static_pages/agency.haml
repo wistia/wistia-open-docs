@@ -1,0 +1,19 @@
+\---
+layout: base
+title: Agency Docs
+type: main
+\---
+
+#home_logo
+
+#articles_list
+  {% include quickstart.html %}
+
+  %ul
+    %li.category_list
+      %h3 
+        %a{ href: "{{ 'agency' | category_url }}" } Agency
+      %ul.post_list
+        %li
+          %a{ href: "{{ '/agency-faq' | post_url }}" } Agency Introduction
+          %span.hint Our one-sheet'r on getting started with an Agency Account.
