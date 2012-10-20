@@ -203,6 +203,8 @@
 * BUG FIX: remove index page JS for iOS devices
 * TODO: post-commit hook not working post-launch...
 
-
+## Oct 20
+* Added Agency Main Page - only one doc so far, so not pushed
+* Added Agency FAQ page
 
 
