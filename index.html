@@ -9,33 +9,7 @@ type: main
   <button id='search_button'>Search!</button>
 </div>
 <div id='articles_list'>
-  <h3>Quickstart</h3>
-  <ul class='quickstart'>
-    <li id='uploading'>
-      <a href="{{ '/upload-video' | post_url }}">
-        <img height='150' src='http://embed.wistia.com/deliveries/06b62a44885178a56c8dd8c904778b4ce0327437.png' width='150' />
-        <h3>Uploading</h3>
-      </a>
-    </li>
-    <li id='embedding'>
-      <a href="{{ '/embedding' | post_url }}">
-        <img height='150' src='http://embed.wistia.com/deliveries/9012a7d691002a7aefad6d9968cedcd89316991c.png' width='150' />
-        <h3>Embedding</h3>
-      </a>
-    </li>
-    <li id='analytics'>
-      <a href="{{ '/embedded-video-analytics' | post_url }}">
-        <img height='150' src='http://embed.wistia.com/deliveries/ca77fb8cf803a19ce0a289b898b4916c9dcfec48.png' width='150' />
-        <h3>Analytics</h3>
-      </a>
-    </li>
-    <li id='account_setup'>
-      <a href="{{ '/account-setup' | post_url }}">
-        <img height='150' src='http://embed.wistia.com/deliveries/dd14ab49a4cba2ee39edeeaa2922b2fcc74c2e0a.png' width='150' />
-        <h3>Account Setup</h3>
-      </a>
-    </li>
-  </ul>
+  {% include quickstart.html %}
   <ul>
     <li class='category_list'>
       <h3>

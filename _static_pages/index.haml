@@ -11,24 +11,7 @@ type: main
   %button#search_button Search!
 
 #articles_list
-  %h3 Quickstart
-  %ul.quickstart
-    %li#uploading
-      %a{ href: "{{ '/upload-video' | post_url }}" }
-        %img{ src: 'http://embed.wistia.com/deliveries/06b62a44885178a56c8dd8c904778b4ce0327437.png', height: '150', width: '150' }
-        %h3 Uploading
-    %li#embedding
-      %a{ href: "{{ '/embedding' | post_url }}" }
-        %img{ src: "http://embed.wistia.com/deliveries/9012a7d691002a7aefad6d9968cedcd89316991c.png", height: '150', width: '150' }
-        %h3 Embedding
-    %li#analytics
-      %a{ href: "{{ '/embedded-video-analytics' | post_url }}" }
-        %img{ src: "http://embed.wistia.com/deliveries/ca77fb8cf803a19ce0a289b898b4916c9dcfec48.png", height: '150', width: '150' }
-        %h3 Analytics
-    %li#account_setup
-      %a{ href: "{{ '/account-setup' | post_url }}" }
-        %img{ src: "http://embed.wistia.com/deliveries/dd14ab49a4cba2ee39edeeaa2922b2fcc74c2e0a.png", height: '150', width: '150' }
-        %h3 Account Setup
+  {% include quickstart.html %}
 
   %ul
     %li.category_list
