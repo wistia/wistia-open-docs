@@ -76,6 +76,10 @@ get "/search/:q" do
   end
 end
 
+get "/start" do
+  redirect "#{BASEPATH}", 301
+end
+
 # TODO: Properly re-initialize the server.
 # github will hit this URL after a commit so we can auto-update
 # the doc. omg this is cool.
