@@ -20,10 +20,6 @@
     #container{ class: "{% if page.api %}api{% endif %}" }
       {{ content }}
 
-
-%script{ src: "{{ '/javascripts/prism' | javascript_url }}" }
-%script{ src: "{{ '/javascripts/prism.extensions' | javascript_url }}" }
-%script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }
-
-%script{ src: "{{ '/javascripts/d3.v2.min' | javascript_url }}" }
-%script{ src: "{{ '/javascripts/voronoi' | javascript_url }}" }
+    / scripts and such
+    {% include addons_js.html %}
+    %script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }

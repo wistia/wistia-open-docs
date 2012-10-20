@@ -23,10 +23,8 @@
     <div class='{% if page.api %}api{% endif %}' id='container'>
       {{ content }}
     </div>
+    <!-- scripts and such -->
+    {% include addons_js.html %}
+    <script src="{{ '/javascripts/search_text' | javascript_url }}"></script>
   </body>
 </html>
-<script src="{{ '/javascripts/prism' | javascript_url }}"></script>
-<script src="{{ '/javascripts/prism.extensions' | javascript_url }}"></script>
-<script src="{{ '/javascripts/search_text' | javascript_url }}"></script>
-<script src="{{ '/javascripts/d3.v2.min' | javascript_url }}"></script>
-<script src="{{ '/javascripts/voronoi' | javascript_url }}"></script>
