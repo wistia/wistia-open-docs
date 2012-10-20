@@ -7,6 +7,10 @@ description: Learn how to use Wistia and Google Analytics together to track vide
 footer: 'for_intermediates'
 ---
 
+## Before You Get Started
+
+Make sure you have installed the [Google Analytics tracking scripts](https://support.google.com/analytics/bin/answer.py?hl=en&answer=1008080). These are necessary for any custom tracking we do below.
+
 ## Step 1: Modify Your Wistia Embed Codes
 
 To make this work, we will be adding a 'binding event' to your Wistia embeds.  Not to worry, no rocket science here, just a small change that will notify Google Analytics when the video has finished.  You'll need to use the "API" version of your Wistia embed code, which is available in the "Advanced Video Types" section of your [SuperEmbed builder]({{ '/embed_screen' | post_url }}).
