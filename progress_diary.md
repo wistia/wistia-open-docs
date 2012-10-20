@@ -1,6 +1,11 @@
 
 **Start Date:** July 2 2012
-**Goal:** Create a Jekyll-based static site for the Wistia Doc to live on. For customers, will provide a more seamless experience between multiple Wistia web presence(s). For internal Wistians, will make doc easier to update, both style and content-wise.
+<br/>
+**Goal:** Create a Jekyll-based static site for the Wistia Doc to live on. 
+<br/>
+*For customers*: will provide a more seamless experience between multiple Wistia web presence(s). 
+<br/>
+*For internal Wistians*: will make doc easier to update, both style and content-wise.
 
 ## july 2 ##
 
@@ -194,7 +199,7 @@
 ## Oct 19
 * IE fixes for inline-block content (check with @schnur on what else can be done)
 * move basepath from newdoc to doc
-* LAUNCH ::rocket::
+* LAUNCH :rocket:
 * BUG FIX: remove index page JS for iOS devices
 * TODO: post-commit hook not working post-launch...
 
