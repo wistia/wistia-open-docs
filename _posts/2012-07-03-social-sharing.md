@@ -38,7 +38,7 @@ To embed your video into Facebook:
 
 ### How it looks
 
-{% post_image hashed_id: '1901fdc9b3c4eb617604817f88beb5028c72ae92', class: 'intro_image center' %}
+{% post_image hashed_id: '1901fdc9b3c4eb617604817f88beb5028c72ae92', class: 'center' %}
 
 ## Posting to Facebook from your website
 
