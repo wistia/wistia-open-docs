@@ -139,3 +139,65 @@
 * Attacking 'Quickstart' Guide and Randor Pages next, TODO: get Joe on main page?
 * UPDATE: no quickstart guide - it would be too long, and I don't think anyone would use it. Instead, Github style 'bootcamp' quickstart (group of pages up top).
 * Got some work done on that tonight
+
+## Sep 10 ##
+* All images were moved to the bakery. Damn this took a long time. Removed 'images' directory.
+* Started moving 'bootcamp' posts to the top of the index page (Github inspired)
+
+## Sep 17 ##
+* Updates on the footer for each post. Three groups: beginners, intermediates, and for developers.
+* RANDOR! Updated the individual and group Randor pages.
+
+## Sep 18
+* Updated Player API page, move examples to the [demobin](http://wistia.github.com/demobin). Move 'advanced embeds' to just popover customization.
+* Scrunched other stuff down to player API page - like HTML5-only embed codes.
+
+## Sep 25
+* Really struggling with cross-domain posting issue - how to work across ports, etc.
+* Removed all non-relative urls...lots of work to do on this in the future.
+* Created no_index category, which is removed from search index
+
+## Oct 2
+* Moving dev and prod environments to Sinatra (to solve cross-domain issue)
+
+## Oct 3
+* Started playing with Jekyll filters - added link generator plugin and filter, to make building proper links easier w/ relative urls
+* Mega-Clean Up (@Brendan)
+* Added global Ruby config file for basepath - so we can update easily
+
+## Oct 5
+* Added javascript and stylesheet url filters
+* Updated category and search pages to use correct relative URLs
+* Began #newbox testing (@Jason)
+* Style updates to reflect @Joe recommendations
+* [SIDENOTE] first pass at a wistia iframe embed tag for Jekyll
+
+## Oct 9
+* Upload API page is created (@Jason)
+* Added font-awesome support - started out broken (UPDATE: was just a bad path, @brendan fixed later)
+* Added font-awesome icons to export page, general nav, tips & notes
+
+## Oct 17
+* Just got back from vacation (woot)
+* Simplify the layouts, so everything will point to BASE
+* Move some stuff to includes (DRY)
+* MEGA @brendan style updates
+
+## Oct 18
+* Style tweakin'
+* Create post_img tag, use across doc
+* post_intro style updates - finally looking great (@brendan)
+* Add in Casey Henry Video SEO tips
+* Created 404 Page
+* Updates to post_callout boxes style
+
+## Oct 19
+* IE fixes for inline-block content (check with @schnur on what else can be done)
+* move basepath from newdoc to doc
+* LAUNCH ::rocket::
+* BUG FIX: remove index page JS for iOS devices
+* TODO: post-commit hook not working post-launch...
+
+
+
+
