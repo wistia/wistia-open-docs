@@ -10,6 +10,7 @@
     %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
     :javascript
       var basepath = "{{ '' | post_url }}";
+
     %title
       {% if page.title == '' %} wDoc {% else %} wDoc: {{ page.title }} {% endif %}
     
