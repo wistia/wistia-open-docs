@@ -14,6 +14,7 @@ $stdout.sync = true
 
 use Rack::Rewrite do
   rewrite %r{#{BASEPATH}(.*)}, '$1'
+  r301 %r{^/doc/start/?$}, "#{BASEPATH}"
 end
 
 class SuperStatic
@@ -74,10 +75,6 @@ get "/search/:q" do
   else
     result
   end
-end
-
-get "/start" do
-  redirect "#{BASEPATH}", 301
 end
 
 # TODO: Properly re-initialize the server.
