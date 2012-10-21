@@ -62,13 +62,13 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 **Part I**
 
-*(0:08)* This quote has been attributed to [Peter Drucker](http://en.wikipedia.org/wiki/Peter_Drucker.html).<br/>
-*(0:50)* Check the [Analytics doc page]({{ '/analytics' | post_url }}) for more on both Account Trends and the Viewer Stream.<br/>
-*(1:40)* For more on engagement graphs, [head here]({{ '/audience-engagement-graph' | post_url }}).<br/>
+* *(0:08)* This quote has been attributed to [Peter Drucker](http://en.wikipedia.org/wiki/Peter_Drucker.html).
+* *(0:50)* Check the [Analytics doc page]({{ '/analytics' | post_url }}) for more on both Account Trends and the Viewer Stream.
+* *(1:40)* For more on engagement graphs, [head here]({{ '/audience-engagement-graph' | post_url }}).
 
 **Part II**
 
-*(2:05)* Yes indeed, we are that cheerful!
+* *(2:05)* Yes indeed, we are that cheerful!
 
 ## Ready for More?
 
