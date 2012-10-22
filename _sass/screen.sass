@@ -38,6 +38,7 @@ $total_width: 960px
 $fixed_column_width: 280px
 
 $prefixes: ("-webkit-","-moz-", "-o-", "")
+$directions: (left, right)
 
 //////////// mixins ///////////////
 
@@ -66,22 +67,38 @@ $prefixes: ("-webkit-","-moz-", "-o-", "")
   -webkit-font-smoothing: antialiased
 
 =callout-box($background-color, $h3-color: $accent_blue)
-  padding: $padding/2
+  padding: $padding
   background-color: rgba($background-color, .3)
   margin: $padding 0
   clear: both
   h3
     color: $h3-color
-    font-weight: bold
-    margin: 0 $padding/2
     font-size: 24px
+    font-weight: bold
+    margin: 0
+    padding: 0
+    vertical-align: top
+    +inline-block
   p
     font-size: 14px
-    margin-left: $padding/2
+    margin-left: $padding
+
+=inline-block
+  display: inline-block
+  /* For IE 7 */
+  zoom: 1
+  *display: inline
 
 =transition
   +transition-property
   +transition-duration(.5s)
+
+=floated-images
+  @each $direction in $directions
+    .float_#{$direction}
+      float: $direction
+      margin: $padding/2 $padding
+      margin-#{$direction}: -($padding) - 2
 
 //////// main styles /////////
 
@@ -143,11 +160,8 @@ pre
       ul
         height: 40px
       ul li
-        display: inline-block
-        /* For IE 7 */
-        zoom: 1
-        *display: inline
         position: relative
+        +inline-block
         &:last-child
           a
             padding-right: 0
@@ -182,12 +196,9 @@ pre
   margin: 0 auto
 
 #post_container
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
   position: relative
   left: $fixed_column_width + 20
+  +inline-block
 
 /////// doc home only ///////
 
@@ -212,13 +223,10 @@ pre
   margin-bottom: $padding
   text-align: center
   li
-    display: inline-block
-    /* For IE 7 */
-    zoom: 1
-    *display: inline
     position: relative
     margin-right: 12px
     border: 1px solid #DDD
+    +inline-block
     &:last-child
       margin-right: 0
     a
@@ -277,10 +285,7 @@ pre
   position: absolute
   right: 0
   max-width: 350px
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
+  +inline-block
 
 //////// post header /////////////
 
@@ -299,10 +304,7 @@ pre
       li
         position: absolute
         color: $text_color
-        display: inline-block
-        /* For IE 7 */
-        zoom: 1
-        *display: inline
+        +inline-block
         a 
           color: $accent_blue
           text-decoration: underline
@@ -324,14 +326,11 @@ pre
 //////// post //////////
 
 #post
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
   width: $post_width
   background-color: white
   clear: both
   padding-bottom: $padding
+  +inline-block
 
 .post_title
   margin: $padding 0
@@ -434,22 +433,16 @@ span.code
 .edit_tag
   background: transparent url(http://embed.wistia.com/deliveries/c4728e279c91c74605f00f6c2629a646ed3905af.png) no-repeat
   padding-left: 33px
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
   height: 10px
+  +inline-block
 
 .help_bubble
   background: transparent url(http://fast.wistia.com/images/zebra/elements/questionhelp_dark.png) no-repeat
   padding-left: 28px
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
   height: 28px
   position: relative
   top: 8px
+  +inline-block
 
 .seo_faq
   margin-left: 0
@@ -458,10 +451,12 @@ span.code
 /// post callout boxes ///
 
 .post_callout_boxes
-  p:first-child
+  p
+    width: 70%
     margin-top: 0
-  p:last-child
-    margin-bottom: 0
+    +inline-block
+    &:last-child
+      margin-bottom: 0
 
 .note
   @extend .post_callout_boxes
@@ -530,13 +525,10 @@ span.code
 .center
   text-align: center
   margin-left: -$padding
-.float_right, .intro_image
-  float: right
-  margin: $padding/2
-  margin-right: -($padding) - 2
-.intro_image
+.intro_image, .integration_logo
   border: none
-  margin-right: 0
++floated-images
+
 
 /////// video /////////
 
@@ -683,12 +675,10 @@ table
   background-color: white
   ul
     list-style-type: none
-    padding: 20px
   li
-    border-bottom: 1px solid #bbb
     a
       display: block
-      padding: 20px 0px
+      padding: $padding/2
       color: $text_color
       font-size: 14px
       text-decoration: none
@@ -699,6 +689,9 @@ table
       margin-bottom: 0
       padding-bottom: 0
   .title_list_item
+    padding: 0
+    margin-left: $padding/2
+    border-bottom: 1px solid $title_color
     a
       padding: 0 0 20px 0
       position: relative
@@ -706,17 +699,20 @@ table
       font-style: italic
       font-size: 26px
       color: $header_color
-      &:hover
-        color: $accent_blue
 
   .title_list_item.current
+    li
+      background: none
     a, a:hover
-      color: $accent_blue
+      padding: 0 0 20px 0
+      background: none
+      color: $title_color
 
   .current > a
-    color: $accent_blue
+    background-color: $background_blue
+    padding: 15px
     &:hover
-      color: $accent_blue
+      color: $title_color
 
   .header_link
     border: none
