@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   function fixFloatedImages() {
-    $(".post_image.float_right").each(function() {
+    $(".float_right, .float_left").each(function() {
       var $img = $(this),
         $p = $img.closest('p').next('p'),
         $prev_elem = $img.prev();
