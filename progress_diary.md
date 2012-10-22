@@ -201,10 +201,17 @@
 * move basepath from newdoc to doc
 * LAUNCH :rocket:
 * BUG FIX: remove index page JS for iOS devices
-* TODO: post-commit hook not working post-launch...
+* **TODO**: post-commit hook not working post-launch...[fixed]
 
 ## Oct 20
 * Added Agency Main Page - only one doc so far, so not pushed
 * Added Agency FAQ page
+
+## Oct 21
+* Did some style re-tweaking to post navigation, to reflect Squarespace Style ( http://www.squarespace.com/press )
+  * Perhaps we could do more pictures on the doc pages, Hero/Header style like the new Squarespace re-design?
+  * Once we consolidate the doc into fewer pages, to make this easier :wink2:
+* Also, started squashing the separate Integrations pages into one page...easier for folks to read over (so easy to get run over with too many pages!)
+  * **Note to self**, don't ever remove live pages again until we have re-write rules in place (ie Wordpress page dummy)
 
 
