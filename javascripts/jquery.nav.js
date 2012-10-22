@@ -177,7 +177,6 @@
 				});
 			}
 
-			e.preventDefault();
 		},
 		
 		scrollChange: function() {
