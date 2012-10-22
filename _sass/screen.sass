@@ -21,7 +21,7 @@ $background_gray: #F7F6F4
 $background_blue: rgba($header_blue, .3)
 $green: #8DC63F
 $text_color: #6B6760
-$hint_color: #CCC
+$hint_color: $text_color
 $title_color: #333
 $padding: 30px
 $border_color: $background_gray - 30
@@ -286,6 +286,7 @@ pre
   right: 0
   max-width: 350px
   +inline-block
+
 
 //////// post header /////////////
 
@@ -727,6 +728,7 @@ table
     a
       font-size: 12px
       padding: $padding/6 0
+      line-height: 130%
 
 ///// utility classes ///////
 
