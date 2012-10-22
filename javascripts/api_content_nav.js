@@ -6,6 +6,13 @@ $(document).ready(function() {
       h1 = $('.post_title > h1'),
       nav_box_ul = $('ul#page_nav');
 
+    var section_title_to_nav_title = function(text) {
+      if ((/\:\s/).test(text)) {
+        text = text.split(/\:\s/)[1];
+      }
+      return text;
+    };
+
     var text_to_id = function(text) {
       return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
     };
@@ -21,7 +28,7 @@ $(document).ready(function() {
       var $text = $(this).text();
 
       if ($this.is('h3')) {
-        nav_box_ul.append('<li class="sub_link"><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
+        nav_box_ul.append('<li class="sub_link"><a href="#' + $this.attr('id') + '">' + section_title_to_nav_title($text) + '</a></li>');
       }
       else {
         nav_box_ul.append('<li class="header_link"><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
@@ -31,7 +38,7 @@ $(document).ready(function() {
 
     });
 
-    $('#page_nav').onePageNav();
+    $('#page_nav').onePageNav({ changeHash: true });
     $('li.header_link:first').css('border', 'none');
 
 
