@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     });
 
-    $('#page_nav').onePageNav();
+    $('#page_nav').onePageNav({ changeHash: true });
 
 
     // get the spacing on the title bar set right
