@@ -14,7 +14,7 @@ $stdout.sync = true
 
 use Rack::Rewrite do
   rewrite %r{#{BASEPATH}(.*)}, '$1'
-  r301 %r{/doc/start/?$}, "#{BASEPATH}"
+  r301 %r{/start/?}, "#{BASEPATH}"
 end
 
 class SuperStatic
