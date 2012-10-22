@@ -136,19 +136,21 @@ type: main
       </h3>
       <ul class='post_list'>
         <li>
-          <a href="{{ '/joomla' | post_url }}">Joomla</a>
-          <span class='hint'>Embed video easily into Joomla.</span>
+          <a href="{{ '/integrations' | post_url }}">Integrations Index</a>
+        </li>
+        <li>
+          <a href="{{ '/wordpress' | post_url }}">Wordpress</a>
         </li>
         <li>
           <a href="{{ '/google-analytics' | post_url }}">Google Analytics</a>
           <span class='hint'>Pass useful stats from embedded video into Google Analytics.</span>
         </li>
         <li>
-          <a href="{{ '/clicky' | post_url }}">Clicky</a>
-          <span class='hint'>Pass tracking stats from embedded video into Clicky.</span>
+          <a href="{{ '/joomla' | post_url }}">Joomla</a>
+          <span class='hint'>Tips on embedding your videos into Joomla.</span>
         </li>
         <li>
-          <a href="{{ '/salesforce' | post_url }}">Salesforce.com</a>
+          <a href="{{ '/salesforce' | post_url }}">Salesforce</a>
           <span class='hint'>Pass private tracking alerts into Salesforce CRM.</span>
         </li>
       </ul>
@@ -218,9 +220,9 @@ type: main
     
     if (!iOS) {
       $('.post_list li').each( function() {
-        $this = $(this);
-        var $a = $this.find("a");
-        var $hint = $this.find(".hint");
+        var $this = $(this),
+          $a = $this.find("a"),
+          $hint = $this.find(".hint");
         $a.hover(function() {
           $hint.addClass("unhide");
         }, function() {

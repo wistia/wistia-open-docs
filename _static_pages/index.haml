@@ -107,16 +107,17 @@ type: main
         %a{ href: "{{ 'integrations' | category_url }}" } Integrations
       %ul.post_list
         %li
-          %a{ href: "{{ '/joomla' | post_url }}" } Joomla
-          %span.hint Embed video easily into Joomla.
+          %a{ href: "{{ '/integrations' | post_url }}" } Integrations Index
+        %li
+          %a{ href: "{{ '/wordpress' | post_url }}" } Wordpress
         %li
           %a{ href: "{{ '/google-analytics' | post_url }}" } Google Analytics
           %span.hint Pass useful stats from embedded video into Google Analytics.
         %li
-          %a{ href: "{{ '/clicky' | post_url }}" } Clicky
-          %span.hint Pass tracking stats from embedded video into Clicky.
+          %a{ href: "{{ '/joomla' | post_url }}" } Joomla
+          %span.hint Tips on embedding your videos into Joomla.
         %li
-          %a{ href: "{{ '/salesforce' | post_url }}" } Salesforce.com
+          %a{ href: "{{ '/salesforce' | post_url }}" } Salesforce
           %span.hint Pass private tracking alerts into Salesforce CRM.
 
     %li.category_list
@@ -164,9 +165,9 @@ type: main
 
   if (!iOS) {
     $('.post_list li').each( function() {
-      $this = $(this);
-      var $a = $this.find("a");
-      var $hint = $this.find(".hint");
+      var $this = $(this),
+        $a = $this.find("a"),
+        $hint = $this.find(".hint");
       $a.hover(function() {
         $hint.addClass("unhide");
       }, function() {
