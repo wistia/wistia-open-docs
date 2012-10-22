@@ -173,7 +173,6 @@
 						if(self.config.end) {
 							self.config.end();
 						}
-            window.location.hash = newLoc;
 					}
 				});
 			}
