@@ -6,10 +6,12 @@ $(document).ready(function() {
       h1 = $('.post_title > h1'),
       nav_box_ul = $('ul#page_nav');
 
+    // funk to make text useful as links
     var text_to_id = function(text) {
       return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
     };
 
+    // if there is h2s on the page, we should create the nav box on the page
     if (h2.length) {
       h1.attr('id', text_to_id(h1.text()));
       nav_box_ul.append('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + '</a></li>');
@@ -25,8 +27,10 @@ $(document).ready(function() {
 
     h2.each( function() {
       $this = $(this);
-      $text = $(this).text(),
-      $this.attr('id', text_to_id($this.text())).prepend('<a class="subtopic_anchor" href="#' + $this.attr('id') + '">#</a></li>');
+      $text = $(this).text();
+
+      // add the subtopic anchors before the h2
+      $this.attr('id', text_to_id($this.text())).prepend('<a class="subtopic_anchor" href="#' + $this.attr('id') + '">#</a>');
 
       nav_box_ul.append('<li><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
 
