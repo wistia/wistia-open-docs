@@ -665,14 +665,12 @@ table
     position: absolute
 
 #post_content_nav
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
-  vertical-align: top
-  width: $fixed_column_width
-  position: fixed
   background-color: white
+  padding-top: $padding/3
+  position: fixed
+  width: $fixed_column_width
+  vertical-align: top
+  +inline-block
   ul
     list-style-type: none
   li
@@ -716,16 +714,16 @@ table
 
   .header_link
     border: none
-    border-top: 1px solid #bbb
     margin-top: 5px
+    margin-left: $padding/2
     padding: $padding/6 0
     a
       font-weight: bold
       padding: $padding/6 0
 
   .sub_link
-    padding: $padding/6 0
     border: none
+    margin-left: 20px
     a
       font-size: 12px
       padding: $padding/6 0
