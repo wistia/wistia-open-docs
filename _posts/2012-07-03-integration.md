@@ -5,13 +5,120 @@ description: Wistia plays well with lots of 3rd party services. See some of the 
 post_intro: <p>As we update our embedding processes and APIs, Wistia will get better and better at integrating with other top-notch services. On this doc page, we'll do our best to keep track of places where Wistia works out-of-the-box for embedding, and also where deeper integrations have been built</p>
 ---
 
-## Embedding
+## Wordpress
 
-We love seeing Wistia videos out there in the wild. If you are looking to embed your videos on your website, be it a small blog or enterprise content management system, this is the place to check. The table below contacts a quick-glance guide to embedding, and if we have specific instructions on using Wistia with the specific 3rd party service, we'll provide them below.
+{% post_image hashed_id: 'bdad3d0b4f6e6581194fbcbd25dd9626501c7c80', width: 200, class: 'integration_logo float_left' %}
+
+Using the [Wistia Wordpress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin), you can add your embed codes and they will be protected. It won't take up any space in your Wordpress admin dashboard, but instead works quietly in the background (as it should).
+
+<div class="clear"></div>
+
+{{ "Wistia embed codes can only be used with Wordpress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between Wordpress.com hosted blogs and Wordpress installs</a>." | note }}
+
+### Tips for Using Wordpress
+
+*  When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code.
+*  If you have larger resolution videos, and they are appearing smaller or squished, access the Wordpress admin control panel (Settings -> Media -> Maximum Video Embed Size) and set the max to the largest size of your video ('no limit' setting doesn't work, must be actual size).
+
+### Styling Your Embed in Wordpress
+
+To center your video in Wordpress, you will first use an outer div with the style "text-align: center".  Then, add the inline-block styling to the video div (see the code below, the "style" attributes in both divs can be copied to your own page).
+
+<pre><code class='language-markup'>
+<div id="the_video" style="text-align: center;">
+
+  <div id="wistia_5af2188e71" style="width:640px;height:360px;display: inline-block; *display: inline; margin: 0 auto; vertical-align: top;  zoom: 1;" data-video-width="640" data-video-height="360">
+    <object id="wistia_5af2188e71_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:100%;position:relative;width:100%;">
+    <param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-02-08"></param><param name="allowfullscreen" value="true"></param>
+    <param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param>
+    <param name="flashvars" value="videoUrl=http://embed.wistia.com/deliveries/008ea72d13517143c0e738b91aca90aa9a17ab98.bin&&hdUrl=http://embed.wistia.com/deliveries/39aacc9a8f142e920273ed35d62dbc6fefd04acd.bin&stillUrl=http://embed.wistia.com/deliveries/44f16ff951e71f077d458933fd68ec02a35bd23d.bin"></param>
+    <embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-02-08" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" wmode="opaque" flashvars="videoUrl=http://embed.wistia.com/deliveries/008ea72d13517143c0e738b91aca90aa9a17ab98.bin&hdUrl=http://embed.wistia.com/deliveries/39aacc9a8f142e920273ed35d62dbc6fefd04acd.bin&stillUrl=http://embed.wistia.com/deliveries/44f16ff951e71f077d458933fd68ec02a35bd23d.bin" style="display:block;height:100%;position:relative;width:100%;"></embed></object></div>
+    <script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"></script>
+    <script>/*<![CDATA[*/
+      wistiaEmbed = Wistia.embed("5af2188e71", {
+      videoWidth: "640",
+      videoHeight: "360",
+      controlsVisibleOnLoad: true
+    });/*]]*/</script>
+
+</div>
+</code></pre>
 
 
-CMS | Success?
-----|----------
+### Using Wistia Video SEO with Wordpress
+
+If you are looking to use your Wordpress page with Wistia's Video SEO tool, you will need to update your Robots.txt file.  For more on Video SEO and the Robots.txt file, check out our [Video SEO primer]({{ '/video-seo#setup' | post_url }}).
+
+To update your Robots.txt file in Wordpress, you will need a special plug-in called 'KB Robots.txt'.  [Read more about the plug-in](http://adambrown.info/b/widgets/kb-robots-txt) and download it for your Wordpress site on their [plug-in page](http://wordpress.org/extend/plugins/kb-robotstxt).
+
+{% post_image hashed_id: 'ec5f981b2a57494d9ea5bd09fcb3b26a280c8663', width: 320, class: 'float_right' %}
+
+Once the plug-in is installed, you should have a new *Options* menu, and a *KB Robots.txt* admin page.  This page should give you an editable box to add your Wistia Video SEO 'Robots.txt' line. You will obtain that line from the [Video SEO]({{ '/video-seo' | post_url }}) area of your account.
+
+## Drupal
+
+{% post_image hashed_id: '97d57d4890140c3e6f529e7e58fe7b7d3610d9b5', width: 200, class: 'integration_logo float_left' %}
+
+The [Media:Wistia Drupal Module](http://drupal.org/project/media_wistia) makes embedding both videos and playlists easy using either Wistia URLs or embed codes. 
+
+This was updated by dev-god [TravisCarden](http://drupal.org/user/236758), thanks Travis!
+
+<div class="clear"></div>
+
+## Expression Engine
+
+{% post_image hashed_id: 'aaffdd3319f6a532ecb071811f2fd071e57a0a46', width: 200, class: 'integration_logo float_left' %}
+
+Posting a video on an Expression Engine page can be accomplished using any embed code, or through oEmbed links through a special plug-in lovingly designed by user [Antenna](http://devot-ee.com/add-ons/antenna).
+
+<div class="clear"></div>
+
+### Squarespace
+
+{% post_image hashed_id: '5bc3046a0b10664ef4c5bc96b4cd18ad3c056215', width: 200, class: 'integration_logo float_left' %}
+
+With Wistia and Squarespace, embedding a video is as easy as pasting in your embed codes.
+
+<div class="clear"></div>
+
+### Shopify
+
+<style float-left>[{{:shopify_logo.jpeg?150]({{ site.url }}/{{ page.lang }}/integration#shopify.html)</style>
+<html><a href="http://wistia.com/doc/integration#shopify/" style="text-decoration: none; color: #000; font-weight: bold;">Shopify</a></html>
+
+Shopify makes setting up your online store a breeze.  Adding Wistia videos is a great way to show off your product, explain how it works, and introduce your customers to your brand.
+
+To embed a Wistia video on a Shopify page, simply drop the HTML embed codes into the HTML editing space for your page.
+
+### Wix
+
+<style float-left>[{{:wixlogo.jpeg?150]({{ site.url }}/{{ page.lang }}/integration#wix.html)</style>
+<html><a href="http://wistia.com/doc/integration#wix/" style="text-decoration: none; color: #000; font-weight: bold;">Wix</a></html>
+
+Wix is a Flash-based website builder with drag & drop functionality.  With an emphasis on great looking pages and layout, Wix is **Note:** Wix is built upon Flash, which means that using their sites will prevent your videos from appearing on mobile devices that don't support Flash (notably iPhones).
+
+To embed a Wistia video in your Wix website, go to Add --> Widgets --> HTML. Click on the "Settings" for the HTML widget and you can paste your Wistia embed code where it reads "Insert HTML Code". Once you save it, you should be all set.
+
+### Joomla
+
+<style float-left>[{{:joomla_logo.jpg?150]({{ site.url }}/{{ page.lang }}/joomla.html)</style>
+
+<html><a href="http://wistia.com/doc/integration#joomla/" style="text-decoration: none; color: #000; font-weight: bold;">Joomla</a></html>
+
+Joomla is an open-sourced platform that is very useful for managing content dynamically.  Embedding your video on Joomla keeps visitors inside of your site experience, instead of navigating through public video communities.
+
+The best way to embed in Joomla is to use the TinyMCE editor advanced settings to prevent deletion of raw HTML and iframes.
+
+For more on embedding in Joomla, please refer to our Joomla doc page: [Embedding in Joomla]({{ site.url }}/{{ page.lang }}/joomla.html)
+
+---
+
+## Services Wistia Works With
+
+We love seeing Wistia videos out there in the wild. This is an in-complete list of places we've seen Wistia videos embedded.
+
+Service | Description | URL
+--------|-------------|-----
 [{{:wordpress_logosmall.jpg?25]({{ site.url }}/{{ page.lang }}/http://wordpress.org/.html)[Wordpress]({{ site.url }}/{{ page.lang }}/wordpress.html)                [{{:dot.jpg]({{ site.url }}/{{ page.lang }}/integration.html)[{{:dot.jpg]({{ site.url }}/{{ page.lang }}/integration.html)
 [{{:basecamp.jpeg?25]({{ site.url }}/{{ page.lang }}/http://basecamphq.com/.html)[Basecamp]({{ site.url }}/{{ page.lang }}/.html)                                   [{{:dot.jpg]({{ site.url }}/{{ page.lang }}/integration.html)                                                             
 [{{:wildapricot_logo.jpg?25]({{ site.url }}/{{ page.lang }}/http://www.wildapricot.com/default.aspx.html)[Wild Apricot]({{ site.url }}/{{ page.lang }}/.html)       [{{:dot.jpg]({{ site.url }}/{{ page.lang }}/integration.html)                                                             
@@ -30,171 +137,3 @@ CMS | Success?
 [{{:weebly_logo.png?25}}]({{ site.url }}/{{ page.lang }}/http://www.weebly.com/.html)[Weebly]({{ site.url }}/{{ page.lang }}/.html)                                 [{{:dot.jpg]({{ site.url }}/{{ page.lang }}/integration.html)                                                             
 [{{:lexblog.png?25}}]({{ site.url }}/{{ page.lang }}/http://lexblog.com/.html)[LexBlog]({{ site.url }}/{{ page.lang }}/.html)                                       [{{:dot.jpg]({{ site.url }}/{{ page.lang }}/integration.html)                                                             
 [{{:sharepoint.png?25}}]({{ site.url }}/{{ page.lang }}/http://sharepoint.microsoft.com/.html)[SharePoint]({{ site.url }}/{{ page.lang }}/.html)                    [{{:dot.jpg]({{ site.url }}/{{ page.lang }}/integration.html)                                                             
-
-We have done our best to track down all the places our customers have embedded Wistia videos. If you've embedded Wistia videos in someplace new, let us know [by email](mailto:contact@wistia.com).
-
-## Content Management Systems
-
-<style float-left>[{{:wordpress_logomed.jpg?150}}]({{ site.url }}/{{ page.lang }}/wordpress.html)</style>
-<html><a href="http://wistia.com/doc/wordpress/" style="text-decoration: none; color: #000; font-weight: bold;">Wordpress</a></html>
-
-With Wordpress and Wistia, you can post new videos to your blog and see how your audience reacts. Get actionable information on questions like are they watching the whole video? Are they skipping to different parts?
-
-Note, you currently need the installed version of Wordpress to take advantage of this integration.  To see more on integrating with Wordpress, please click [here]({{ site.url }}/{{ page.lang }}/wordpress.html).  To read more on the difference between Wordpress.com hosted blogs and Wordpress installs, check [their article on Wordpress.com vs. Wordpress.org]({{ site.url }}/{{ page.lang }}/http://en.support.wordpress.com/com-vs-org/.html).
-
-----
-
-<style float-left>[{{:sharepoint_logo.png?150}}]({{ site.url }}/{{ page.lang }}/integration#sharepoint.html)</style>
-<html><a href="http://wistia.com.doc/integration#sharepoint" style="text-decoration: none; color: #000; font-weight: bold;">SharePoint</a></html>
-
-SharePoint is Microsoft's proprietary web application platform aimed at content and document management among teams.  Create an intranet portal to share documents and manage content within your team.
-
-Wistia's standard HTML embed codes work out-of-the-box with SharePoint.  Some users may have HTTPS pop-up issues based on security settings.  If this is the case, make sure you have enabled SSL embed functionality for your embed.
-
-----
-
-<style float-left>[{{:basecamp.jpeg?150]({{ site.url }}/{{ page.lang }}/integration#basecamp.html)</style>
-<html><a href="http://wistia.com/doc/integration#basecamp" style="text-decoration: none; color: #000; font-weight: bold;">Basecamp</a></html>
-
-Basecamp is the popular online collaboration tool for businesses built by the guys over at 37signals. Sharing your video on Basecamp makes it easier for co-workers to see what you are describing, makes training and marketing messages clear, and keeps a log of your internal video efforts.
-
-----
-
-<style float-left>[{{:wildapricot.jpg?150]({{ site.url }}/{{ page.lang }}/integration#wildapricot.html)</style>
-<html><a href="http://wistia.com/doc/integration#wildapricot/" style="text-decoration: none; color: #000; font-weight: bold;">Wild Apricot</a></html>
-
-Wild Apricot is easy to use web-based Member Management software and website builder.  With Wild Apricot and Wistia, it is easy to control who has access to your publicly embedded videos.
-
-----
-
-<style float-left>[{{:druplicon.png?150]({{ site.url }}/{{ page.lang }}/integration#drupal.html)</style>
-
-<html><a href="http://wistia.com/doc/integration#drupal/" style="text-decoration: none; color: #000; font-weight: bold;">Drupal</a></html>
-
-Drupal is an open-sourced CMS that runs the gamut from personal blogs to enterprise applications.
-
-To embed your video on Drupal, we recommend you use the Wistia Drupal Plug-in [download here]({{ site.url }}/{{ page.lang }}/http://drupal.org/project/media_wistia.html) (huuuge shoutout to [EvanDonovan]({{ site.url }}/{{ page.lang }}/http://drupal.org/user/168664.html) for building it on our behalf).
-
-----
-
-<style float-left>[{{:joomla_logo.jpg?150]({{ site.url }}/{{ page.lang }}/joomla.html)</style>
-
-<html><a href="http://wistia.com/doc/integration#joomla/" style="text-decoration: none; color: #000; font-weight: bold;">Joomla</a></html>
-
-Joomla is an open-sourced platform that is very useful for managing content dynamically.  Embedding your video on Joomla keeps visitors inside of your site experience, instead of navigating through public video communities.
-
-The best way to embed in Joomla is to use the TinyMCE editor advanced settings to prevent deletion of raw HTML and iframes.
-
-For more on embedding in Joomla, please refer to our Joomla doc page: [Embedding in Joomla]({{ site.url }}/{{ page.lang }}/joomla.html)
-
-----
-
-<style float-left>[{{google_sites.png?150}}]({{ site.url }}/{{ page.lang }}/embedding_in_google_sites.html)</style>
-
-<html><a href="http://wistia.com/doc/embedding_in_google_sites/" style="text-decoration: none; color: #000; font-weight: bold;">Google Sites</a></html>
-
-Google Sites are a free alternative for creating and hosting web page content.  Embedding your Wistia videos in your Google Site makes sharing content and then tracking what your viewers think a breeze!
-
-For more on embedding in Google Sites, please check out our Google Sites doc page: [Embedding in Google Sites]({{ site.url }}/{{ page.lang }}/embedding_in_google_sites.html)
-
-----
-
-<style float-left>[{{:expeng.jpeg?150]({{ site.url }}/{{ page.lang }}/integration#expression engine.html)</style>
-<html><a href="http://wistia.com/doc/integration#expression engine/" style="text-decoration: none; color: #000; font-weight: bold;">Expression Engine</a></html>
-
-Expression Engine is a professional web publishing platform that prides itself on flexibility and customer service.  Posting a video on an Expression Engine page can be accomplished using standard HTML, or through oEmbed links through a special plug-in lovingly designed by user [Antenna]({{ site.url }}/{{ page.lang }}/http://devot-ee.com/add-ons/antenna/.html).
-
-----
-
-## Blogging Platforms
-
-<style float-left>[{{:blogger_logo.jpeg?150}}]({{ site.url }}/{{ page.lang }}/integration#blogger.html)</style>
-
-<html><a href="http://wistia.com/doc/integration#blogger/" style="text-decoration: none; color: #000; font-weight: bold;">Blogger</a></html>
-
-Posting a new video to your Blogger account is as easy as grabbing the HTML [embed code]({{ site.url }}/{{ page.lang }}/embed-video.html) for your video, and pasting it into the blog content. Share videos with your audience, and track how they interact with it.
-
-----
-
-<style float-left>[{{:posterous.png?150}}]({{ site.url }}/{{ page.lang }}/posterous.html)</style>
-
-<html><a href="http://wistia.com/doc/integration#posterous/" style="text-decoration: none; color: #000; font-weight: bold;">Posterous</a></html>
-
-Posterous is a new and fast-growing blog posting platform. Share your videos easily using Wistia HTML embed codes in the Posterous HTML editing environment.
-
-To see more on integrating with Posterous, please click [here]({{ site.url }}/{{ page.lang }}/posterous.html).
-
-----
-
-<style float-left>[{{:tumblr_logo.png?150}}]({{ site.url }}/{{ page.lang }}/integration#tumblr.html)</style>
-
-<html><a href="http://wistia.com/doc/integration#tumblr/" style="text-decoration: none; color: #000; font-weight: bold;">Tumblr</a></html>
-
-Tumblr is a leading micro-blogging platform - perfect for sharing video!  Putting your Wistia videos up on your Tumblr blog is as easy as generating an iframe embed, and pasting it into the "Embed a Video" option on Tumblr.  
-
-**Note to iOS viewers:** currently, the only way to get videos uploaded to Tumblr to work on iPhones is to paste embed codes into the HTML-editable "caption" area of Post creator.
-
-----
-
-<style float-left>[{{:squarespace_logo.png?150}}]({{ site.url }}/{{ page.lang }}/integration#squarespace.html)</style>
-<html><a href="http://wistia.com/doc/integration#squarespace/" style="text-decoration: none; color: #000; font-weight: bold;">Squarespace</a></html>
-
-Squarespace is the easiest way to set up a premium website without lots of development.  With Wistia and Squarespace, embedding a video can be done with HTML, iframe, and even javascript embeds.  You can also take advantage of our [popover]({{ site.url }}/{{ page.lang }}/popover.html) functionality and playlists.
-
-----
-
-<style float-left>[{{:lexblog_logo.png?150}}]({{ site.url }}/{{ page.lang }}/integration#lexblog.html)</style>
-<html><a href="http://wistia.com/doc/integration#lexblog/" style="text-decoration: none; color: #000; font-weight: bold;">LexBlog</a></html>
-
-LexBlog is the blogging platform for professional and practicing lawyers.  LexBlog provides helpful tech support and a contact person for conquering tech issues.
-
-Embedding videos as part of LexBlog posts works with all Wistia embed codes.
-
-----
-
-## ...and Where Else?
-
-The list of places where our customers are embedding their Wistia videos grows every week.  If you've got an idea for a useful integration, drop us a line at <support@wistia.com>!
-
-----
-
-<style float-left>[{{:facebook_logo.png?150}}]({{ site.url }}/{{ page.lang }}/social-sharing.html)</style>
-<html><a href="http://wistia.com/doc/social-sharing/" style="text-decoration: none; color: #000; font-weight: bold;">Facebook</a></html>
-
-Facebook is...well you know what Facebook is.  It's one of the best places to get your message out, and video is the strongest way to share your message across.  Wistia has made it easy to share your video as a Facebook "status update" (instructions [here]({{ site.url }}/{{ page.lang }}/social-sharing.html) and will continue to add Facebook functionality in the future.
-
-----
-
-<style float-left>[{{:ebay.png?150]({{ site.url }}/{{ page.lang }}/integration#ebay.html)</style><html><a href="http://wistia.com/doc/integration#ebay/" style="text-decoration: none; color: #000; font-weight: bold;">eBay</a></html>
-
-Nothing sets your auction apart like adding video.  With Wistia analytics, you can see what percentage of your visitors engaged in the video, and how much they watched (did they constantly rewatch a 5-second scene?  Maybe that is the more important info to assess the quality of the product!)
-For more information on posting a video to eBay, reach out to us at <support@wistia.com>.
-
-----
-
-<style float-left>[{{:shopify_logo.jpeg?150]({{ site.url }}/{{ page.lang }}/integration#shopify.html)</style>
-<html><a href="http://wistia.com/doc/integration#shopify/" style="text-decoration: none; color: #000; font-weight: bold;">Shopify</a></html>
-
-Shopify makes setting up your online store a breeze.  Adding Wistia videos is a great way to show off your product, explain how it works, and introduce your customers to your brand.
-
-To embed a Wistia video on a Shopify page, simply drop the HTML embed codes into the HTML editing space for your page.
-
-----
-
-<style float-left>[{{:wixlogo.jpeg?150]({{ site.url }}/{{ page.lang }}/integration#wix.html)</style>
-<html><a href="http://wistia.com/doc/integration#wix/" style="text-decoration: none; color: #000; font-weight: bold;">Wix</a></html>
-
-Wix is a Flash-based website builder with drag & drop functionality.  With an emphasis on great looking pages and layout, Wix is **Note:** Wix is built upon Flash, which means that using their sites will prevent your videos from appearing on mobile devices that don't support Flash (notably iPhones).
-
-To embed a Wistia video in your Wix website, go to Add --> Widgets --> HTML. Click on the "Settings" for the HTML widget and you can paste your Wistia embed code where it reads "Insert HTML Code". Once you save it, you should be all set.
-
-----
-
-<style float-left>[{{:weebly_largelogo.png?150]({{ site.url }}/{{ page.lang }}/integration#weebly.html)</style>
-<html><a href="http://wistia.com/doc/integration#weebly/" style="text-decoration: none; color: #000; font-weight: bold;">Weebly</a></html>
-
-Weebly is a CMS built for those without a lot of web coding experience.  It is a great way to build a webpage quickly and easily with multimedia widget add-ons.
-
-To embed a Wistia video in your Weebly site, copy the embed code for the Wistia video you would like to embed, and paste it into a "Custom HTML" Element in your Weebly editor.  After adding a "Custom HTML" Element to your page, select the Element and click the "Edit Custom HTML Link" at the top of the page.  Weebly's support page also includes instructions on creating a "Custom HTML" Element: [Embed Audio and Video with Weebly]({{ site.url }}/{{ page.lang }}/http://kb.weebly.com/embed-audio-and-video.html.html).
-
-
