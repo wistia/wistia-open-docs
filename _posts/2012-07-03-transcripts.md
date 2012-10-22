@@ -18,7 +18,7 @@ First, you need to choose on your account you'd like to have transcribed.  Then,
 
 Now that you've chosen your video, you will need to order the transcript.  Under the green <span class="action_menu">Media Actions</span> menu, select the *Create Transcript* option.
 
-{% post_image hashed_id: '79deebb2595f9633ab723065a8a40d36b131bfc4', class: 'center' %}
+{% post_image hashed_id: '3fadf1b3a758c0fd6ccb6eb368d9287cafd8a3d8', class: 'center' %}
 
 This will launch a dialogue box that shows the rates and total cost of transcribing your video.  Once you're ready to order the transcript, click "create transcript".  Within 24 hours, you will receive an email confirming the transcript is now available on the media page for that video.
 
