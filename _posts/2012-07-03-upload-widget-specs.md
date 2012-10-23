@@ -228,23 +228,23 @@ The file was transferred to our servers correctly, but an error occurred during 
         },
 
         'uploadSuccess': function(jsonFile) {
-          $('#output').append(&lt;p&gt;uploadSuccess3&lt;/p&gt;);
+          $('#output').append('&lt;p&gt;uploadSuccess3&lt;/p&gt;');
         },
 
         'uploadComplete': function() {
-          $('#output').append(&lt;p&gt;uploadComplete3&lt;/p&gt;);
+          $('#output').append('&lt;p&gt;uploadComplete3&lt;/p&gt;');
         },
 
         'postUploadFailure': function(error) {
-          $('#output').append(&lt;p&gt;postUploadFailure3: ' + error + &lt;/p&gt;);
+          $('#output').append('&lt;p&gt;postUploadFailure3: ' + error + &lt;/p&gt;');
         },
 
         'fileQueueError': function(error) {
-          $('#output').append(&lt;p&gt;fileQueueError3: ' + error.code + &lt;/p&gt;);
+          $('#output').append('&lt;p&gt;fileQueueError3: ' + error.code + &lt;/p&gt;');
         },
 
         'uploadError': function(error) {
-          $('#output').append(&lt;p&gt;uploadError3: ' + error.code + &lt;/p&gt;);
+          $('#output').append('&lt;p&gt;uploadError3: ' + error.code + &lt;/p&gt;');
         }
       };
 
