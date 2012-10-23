@@ -4,14 +4,8 @@ layout: post
 category: For Developers
 description: Learn how to construct an embed code starting with just the video ID!
 footer: 'for_developers'
+post_intro: <p>As long as you have the hashed_id for a video, you can easily produce an embed code without even hitting our servers!</p><p>The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the <a href="/doc/data-api">Data API</a>.</p><p>We pass parameters into an iframe embed via the src attribute. They're just simple URL parameters, with the keys namespaced by brackets.</p>
 ---
-
-As long as you have the hashed_id for a video, you can easily produce an embed code without even hitting our servers!
-
-The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the [Data API]({{ '/data-api' | post_url }}).
-
-We pass parameters into an iframe embed via the src attribute. They're just 
-simple URL parameters, with the keys namespaced by brackets.
 
 For example, say we have the hashed_id of the video we want to embed, but we
 want to change the color of the play button, hide the fullscreen button, and
@@ -19,7 +13,7 @@ add a socialbar. Here's how we do it...
 
 ## Building an iframe embed code
 
-Ok, for this example we'll be using a hashed_id of <span class="code">'abcde12345'</span>. Just substitute your hashed_id anywhere you see <span class="code">'abcde12345'</span>.
+Ok, for this example we'll be using a hashed_id of `'abcde12345'`. Just substitute your hashed_id anywhere you see `'abcde12345'`.
 
 First, build the base URL:
 
