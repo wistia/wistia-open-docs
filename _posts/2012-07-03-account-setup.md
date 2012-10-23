@@ -39,11 +39,7 @@ You can filter out your views based on IP, and those of the other testers you mi
 In the Account Dashboard, click the *Embed Settings* option - this contains an IP filtering section where you can enter comma-separated IP addresses.
 
 
-<div class="note">
-<h3><i class="icon-bullhorn"></i> Note</h3>
-<p>The IP Filtering tool is only available on the Account Dashboard, so you will need owner-level permissions to access it.</p>
-</div>
-
+{{ "The IP Filtering tool is only available on the Account Dashboard, so you will need owner-level permissions to access it." | note }}
 
 <div class="clear"></div>
 
@@ -57,10 +53,7 @@ To change your Wistia account URL, you must be logged in as the account owner. C
 
 In the section labeled "Address" you will see a text box showing the current URL of your Wistia account (in the case of the above picture, http://ben.wistia.com).  Simply type the name you wish to use in the text box (only letters, numbers, and hyphens) and press <span class="faux_button">Save settings</span> at the bottom. 
 
-<div class="note">
-<h3><i class="icon-bullhorn"></i> Note</h3>
-<p>Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work.</p>
-</div>
+{{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
 
 ---
 
@@ -76,15 +69,9 @@ Once that is set up, the CNAME gets propagated (which can take a couple hours, s
 
 Once you save, everything should be switched over for you, and you are now rocking custom a URL!
 
-<div class="note">
-<h3><i class="icon-bullhorn"></i> Note</h3>
-<p>Any links previously shared or videos embedded from your account will still operate as normal.</p>
-</div>
+{{ "Any links previously shared or videos embedded from your account will still operate as normal." | note }}
 
-<div class="note">
-<h3><i class="icon-bullhorn"></i> Note</h3>
-<p>CNAME'ing your domain won't change the name in the embed codes. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos.  This choice was made because video loading effect it would have - essentially our focus is on your video loading fast.</p>
-</div>
+{{ "CNAME'ing your domain won't change the name in the embed codes. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos.  This choice was made because video loading effect it would have - essentially our focus is on your video loading fast." | note }}
 
 ---
 
