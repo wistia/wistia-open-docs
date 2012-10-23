@@ -107,7 +107,35 @@ width(w)                | Sets the width of the embed. The video will be resized
 
 ## Embedding Options
 
-In our example embed **''Wistia.embed("bfc34aa023", { ... options ... });''** there are two arguments: the media's hashed ID, and a set of embedding options. Here is a list of available options:
+In our example embed **''Wistia.embed("bfc34aa023", { ... options ... });''** there are two arguments: the media's hashed ID, and a set of embedding options. 
+
+Embedding options can be used to update the video quality, interactive experience, and controls available to viewers.
+
+Here's how use of embedding options works for API and SEO embed codes:
+
+<pre><code class='language-javascript'>
+<div id="my_container"></div>
+var wistiaEmbed = Wistia.embed("bfc34aa023", {
+  platformPreference: "html5",
+  autoPlay: true,
+  container: "my_container"
+});
+</code></pre>
+
+For iframe embed codes, these must be added to the *iframe src* using <span class="code">&embeddingOption=value</span>, like so:
+
+<pre data-line="2-5"><code class='language-javascript'>
+&lt;iframe src="http://fast.wistia.com/embed/iframe/2cf8fbb2c0?
+  controlsVisibleOnLoad=true
+  &version=v1
+  &videoHeight=360&videoWidth=640
+  &volumeControl=true" 
+  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+
+Here is a list of available options:
 
 Option Name           | Type    | Description
 -----------           | ----    | -----------
@@ -134,19 +162,6 @@ videoWidth            | integer | The original width of the video.
 videoHeight           | integer | The original height of the video.
 volumeControl         | boolean | Show volume control. Default is false.
 wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
-
-### Using Options
-
-To show how options work, suppose I want to embed a video that defaults to the HTML5 player and plays automatically on page load. I might alter the embed javascript to look like this:
-
-<pre><code class='language-javascript'>
-<div id="my_container"></div>
-var wistiaEmbed = Wistia.embed("bfc34aa023", {
-  platformPreference: "html5",
-  autoPlay: true,
-  container: "my_container"
-});
-</code></pre>
 
 ---
 
