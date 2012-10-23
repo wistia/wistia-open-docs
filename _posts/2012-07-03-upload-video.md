@@ -4,20 +4,7 @@ layout: post
 description: Learn how uploading with Wistia works.
 ---
 
-<div class="video_embed">
-<div id="wistia_dbeb843c6e" class="wistia_embed" style="width:660px;height:371px;" data-video-width="660" data-video-height="371"><object id="wistia_dbeb843c6e_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:371px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=4991C4&mediaDuration=75.1&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F459342995010bb47e6ee6b200f13685096f8f94d.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda16bcaf9c769a72650763cb3c790997c2e0b73b.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=4991C4&mediaDuration=75.1&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F459342995010bb47e6ee6b200f13685096f8f94d.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fda16bcaf9c769a72650763cb3c790997c2e0b73b.bin" name="wistia_dbeb843c6e_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("dbeb843c6e", {
-  version: "v1",
-  videoWidth: 660,
-  videoHeight: 371,
-  controlsVisibleOnLoad: true,
-  playerColor: "688AAD"
-});
-</script>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/dbeb843c6e/metadata.js"></script>
-</div>
+{% embedly http://home.wistia.com/medias/dbeb843c6e, height: 371, videoHeight: 371 %}
 
 ----
 

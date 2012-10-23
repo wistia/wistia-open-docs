@@ -3,27 +3,13 @@ title: Email Marketing and Wistia
 layout: post
 category: Public Sharing
 description: Learn how we integrate with some of the top email marketing platforms to make your campaigns even more powerful in no time.
-post_intro: <img class="post_image intro_image float_right" src="http://embed.wistia.com/deliveries/e13eae6e347f3939c10712245b2df2ff1156d68e.png" width="200px" alt="email_marketing_guide"/><p>Email marketing campaigns are great for engaging your prospects with timely messages.  When done right, they can be an excellent driver of business value.</p><p>Adding video to the mix is an effective way to increase click-through rates and maximize engagement with your message.  Wistia makes it easy to integrate video with your email-marketing campaigns, as well as measure the results down to the individual viewer, second-by-second.</p><p>After this tutorial you will be able to integrate video into your email marketing campaigns, and understand which recipients are engaged with your message.</p><img class="center post_image" src="http://embed.wistia.com/deliveries/97291f1a3b3898ec951a80296504441a9b3d0ce0.png" width="660" alt="email_heatmap" />
+post_intro: <img class="post_image intro_image float_right" src="http://embed.wistia.com/deliveries/e13eae6e347f3939c10712245b2df2ff1156d68e.png" width="200px" alt="email_marketing_guide"/><p>Email marketing campaigns are great for engaging your prospects with timely messages.  When done right, they can be an excellent driver of business value.</p><p>Adding video to the mix is an effective way to increase click-through rates and maximize engagement with your message.  Wistia makes it easy to integrate video with your email-marketing campaigns, as well as measure the results down to the individual viewer, second-by-second.</p><p>After this tutorial you will be able to integrate video into your email marketing campaigns, and understand which recipients are engaged with your message.</p><img class="center intro_image post_image" src="http://embed.wistia.com/deliveries/97291f1a3b3898ec951a80296504441a9b3d0ce0.png" width="660" alt="email_heatmap" />
 footer: 'for_intermediates'
 ---
 
-## Email Marketing Feature Screencast
+{% embedly http://home.wistia.com/medias/027bb4b325 %}
 
-<div class="video_embed">
-<div id="wistia_027bb4b325" class="wistia_embed" style="width:660px;height:413px;" data-video-width="660" data-video-height="413"><object id="wistia_027bb4b325_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:400px;position:relative;width:640px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=688AAD&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F347d80ab1aa8160173a3b28570ba30c96025132a.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=213.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F7e68a7d752b167366b189c942e19fc6cdf0539c0.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fbc8f47d59ef5b6006035bf4522b841ce99057f28.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=688AAD&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F347d80ab1aa8160173a3b28570ba30c96025132a.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=213.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F7e68a7d752b167366b189c942e19fc6cdf0539c0.jpg%3Fimage_crop_resized%3D640x400&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fbc8f47d59ef5b6006035bf4522b841ce99057f28.bin" name="wistia_027bb4b325_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("027bb4b325", {
-  version: "v1",
-  videoWidth: 660,
-  videoHeight: 413,
-  controlsVisibleOnLoad: false,
-  playerColor: "688AAD"
-});
-</script>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/027bb4b325/metadata.js"></script>
-</div>
-**Note:** The 'path' to the email marketing dialogue has been updated (it has been split out from the 'embed' dialogue).  See the image below for reference (look for the "Email Marketing" option under the Media Actions menu. Updated screencast to come :)
+{{ "The 'path' to the email marketing dialogue has been updated (it has been split out from the 'embed' dialogue).  See the image below for reference (look for the 'Email Marketing' option under the Media Actions menu. Updated screencast to come <i class='icon-bolt'></i>" | note }}
 
 ----
 

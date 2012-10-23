@@ -7,19 +7,7 @@ description: Questions about admin type stuff? Account Dashboards? Billing state
 footer: 'for_intermediates'
 ---
 
-<div class="video_embed">
-  <div id="wistia_b0778cb217" class="wistia_embed" style="width:660px;height:413px;" data-video-width="660" data-video-height="413"><object id="wistia_b0778cb217_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:413px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="customColor=688AAD&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F0fa41904defad7a39f5a5a0c56bb1b3de63ca875.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=198.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fc0fc42a25a1ec4ef35630eec41dae9d9a9419567.jpg%3Fimage_crop_resized%3D660x413&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F55a71ef3140402e9328ee4bf9564dda8ce22e883.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="customColor=688AAD&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F0fa41904defad7a39f5a5a0c56bb1b3de63ca875.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=198.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fc0fc42a25a1ec4ef35630eec41dae9d9a9419567.jpg%3Fimage_crop_resized%3D660x413&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F55a71ef3140402e9328ee4bf9564dda8ce22e883.bin" name="wistia_b0778cb217_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
-  <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
-  <script>
-  wistiaEmbed = Wistia.embed("b0778cb217", {
-    version: "v1",
-    videoWidth: 660,
-    videoHeight: 413,
-    playerColor: "688AAD"
-  });
-  </script>
-  <script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/b0778cb217/metadata.js"></script>
-</div>
+{% embedly http://home.wistia.com/medias/b0778cb217 %}
 
 ---
 

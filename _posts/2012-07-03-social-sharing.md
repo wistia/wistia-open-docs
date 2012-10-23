@@ -6,19 +6,7 @@ description: Want to get social with your Wistia videos? We make it simple to sh
 post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles like Facebook and Twitter can be used to spread a business message effectively, especially if delivered in an easy to consume and share way.  The best way to do that is with video - it's perfect for social media attention spans, so it tends to 'travel' better than blocks of text.</p><p>Now that you've got your video uploaded to Wistia, how do you share it and track the performance on Social Media sites?  This tutorial will help.  The two services we're focused on here are Facebook and Twitter.</p>
 ---
 
-<div class="video_embed">
-  <div id="wistia_d4df1638dd" class="wistia_embed" style="width:660px;height:413px;" data-video-width="660" data-video-height="413"><object id="wistia_d4df1638dd_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:413px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="customColor=4991C4&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F791fb3ae1d3e77c570607cfd3057a7edba037fb5.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=124.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feff83d5780a75785bc2c732ebfe539efc5b8093b.jpg%3Fimage_crop_resized%3D660x413&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fad5ec82be1be83f96e26463cc8cce1800d647385.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="customColor=4991C4&hdUrl%5Bheight%5D=800&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F791fb3ae1d3e77c570607cfd3057a7edba037fb5.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=124.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feff83d5780a75785bc2c732ebfe539efc5b8093b.jpg%3Fimage_crop_resized%3D660x413&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Fad5ec82be1be83f96e26463cc8cce1800d647385.bin" name="wistia_d4df1638dd_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
-  <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
-  <script>
-  wistiaEmbed = Wistia.embed("d4df1638dd", {
-    version: "v1",
-    videoWidth: 660,
-    videoHeight: 413,
-    playerColor: "4991C4"
-  });
-  </script>
-  <script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/d4df1638dd/metadata.js"></script>
-</div>
+{% embedly http://home.wistia.com/medias/d4df1638dd %}
 
 ## Facebook
 
