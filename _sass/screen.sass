@@ -6,7 +6,7 @@
 
 @import compass/reset
 @import compass/css3
-@import compass/utilities/text/ellipsis
+@import compass/utilities
 
 ////////////////////////////////////
 
@@ -465,25 +465,31 @@ span.code
 .faq
   @extend .post_callout_boxes
   +callout-box($note_color)
+  p
+    margin: $padding/2 0 0
 .tip
   @extend .post_callout_boxes
   +callout-box($background_blue)
 
 .expert_tip
   @extend .post_callout_boxes
-  +callout-box($background_blue)
   position: relative
+  background: transparent url(http://embed.wistia.com/deliveries/661c19b720a884cbafd7b199d63d1d14874cf6e2.png) 110% 60% no-repeat
+  overflow: hidden
+  +callout-box($background_blue)
   h3
     padding-top: 0
   img
     position: absolute
-    left: $padding
-    padding-top: 0
+    top: -5px
+    right: -45px
+    +border-radius(75px)
+    +opacity(.8)
   p
-    padding-left: $padding * 2 + 10
-  p:first-of-type
-    margin-top: 0
-
+    padding: 0
+    margin: 0
+    margin-top: 5px
+    display: block
 ////////// post intro paragraph styles ////////
 
 .post_intro
