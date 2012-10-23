@@ -1742,7 +1742,7 @@ span.code {
   clear: both;
 }
 /* line 74, ../_sass/screen.sass */
-.note h3 {
+.note h4 {
   color: #688aad;
   font-size: 24px;
   font-weight: bold;
@@ -1768,7 +1768,7 @@ span.code {
   clear: both;
 }
 /* line 74, ../_sass/screen.sass */
-.faq h3 {
+.faq h4 {
   color: #688aad;
   font-size: 24px;
   font-weight: bold;
@@ -1798,7 +1798,7 @@ span.code {
   clear: both;
 }
 /* line 74, ../_sass/screen.sass */
-.tip h3 {
+.tip h4 {
   color: #688aad;
   font-size: 24px;
   font-weight: bold;
@@ -1827,7 +1827,7 @@ span.code {
   clear: both;
 }
 /* line 74, ../_sass/screen.sass */
-.expert_tip h3 {
+.expert_tip h4 {
   color: #688aad;
   font-size: 24px;
   font-weight: bold;
@@ -2050,7 +2050,7 @@ table tr td pre {
   clear: both;
 }
 /* line 74, ../_sass/screen.sass */
-.exporting_guide_box h3 {
+.exporting_guide_box h4 {
   color: #688aad;
   font-size: 24px;
   font-weight: bold;
