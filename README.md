@@ -21,29 +21,30 @@ Images get uploaded to the Bakery - currently live in Jeff's account, but will b
 
 Images have their own Jekyll 'tag':
 
-{% post_image hashed_id: *video hashed id* (string), width: *width* (integer), class: *classes* (string) %}
+    {% post_image hashed_id: *video hashed id* (string), width: *width* (integer), class: *classes* (string) %}
 
 ### Videos
 
 Videos are generated using the embedly plugin (oEmbed):
 
-{% embedly http://home.wistia.com/medias/AAAAAAA %}
+    {% embedly http://home.wistia.com/medias/AAAAAAA %}
 
-  defaults: 
-    * playerColor: "688AAD" # $accent_blue from screen.sass
-    * width: "660"
-    * height: "413"
-    * videoWidth: "660"
-    * videoHeight: "413"
-    * playButton: true
-    * embedType: "seo"
-    * controlsVisibleOnLoad: false
+defaults: 
+
+* playerColor: "688AAD" # $accent_blue from screen.sass
+* width: "660"
+* height: "413"
+* videoWidth: "660"
+* videoHeight: "413"
+* playButton: true
+* embedType: "seo"
+* controlsVisibleOnLoad: false
 
 ### Links
 
 Links also use a custom filter, so we can control the root path:
 
-{{ '/link-to-page' | post_url }}
+    {{ '/link-to-page' | post_url }}
 
 ### To see changes
 **rake preview** to bundle site, launch local server, and track changes to site/styling (localhost:9393)
