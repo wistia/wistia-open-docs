@@ -42,7 +42,7 @@ Put the following just before the <span class="code">&lt;/body&gt;</span> tag:
 
 {{ "It must come after any iframe embeds on the page, so it <strong>cannot</strong> be added inside the <span class='code'>&lt;head&gt;</span> tag." | note }}
 
-Now you can access the API by getting the <span class="code">wistiaApi</span> property from the iframe element.
+Now you can access the API by getting the `wistiaApi` property from the iframe element.
 You can assign an ID to each wistia iframe so you can get an easy handle to it.
 Take a look:
 
@@ -66,7 +66,7 @@ wistiaEmbed.time(30).play();
 
 ### Using Popovers and the Player API
 
-Wistia Popovers are just iframes that are injected into the page. If you include the <span class="code">iframe API</span> script as detailed above, you can bind to a special jQuery event to get at it. Note, you'll need to use <span class="code">wistiaJQuery</span> (it's included in our popover code) to catch the <span class="code">wistia-popover</span> event.
+Wistia Popovers are just iframes that are injected into the page. If you include the `iframe API` script as detailed above, you can bind to a special jQuery event to get at it. Note, you'll need to use `wistiaJQuery` (it's included in our popover code) to catch the `wistia-popover` event.
 
 <pre><code class="language-javascript">
 wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
@@ -122,7 +122,7 @@ var wistiaEmbed = Wistia.embed("bfc34aa023", {
 });
 </code></pre>
 
-For iframe embed codes, these must be added to the *iframe src* using <span class="code">&embeddingOption=value</span>, like so:
+For iframe embed codes, these must be added to the *iframe src* using `&embeddingOption=value`, like so:
 
 <pre data-line="2-5"><code class='language-javascript'>
 &lt;iframe src="http://fast.wistia.com/embed/iframe/2cf8fbb2c0?
@@ -184,7 +184,7 @@ To get you making video magic as fast as possible, here are some examples of com
 
 ### Start Video Playback at a Specific Time
 
-In this example, you want the video to skip ahead a certain amount of time when the viewer presses 'play'. This utilizes the <span class="code">bind on play</span> functionality built into the API.
+In this example, you want the video to skip ahead a certain amount of time when the viewer presses 'play'. This utilizes the `bind on play` functionality built into the API.
 
 <pre><code class="language-javascript">
 <div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
@@ -226,7 +226,7 @@ The bind function monitors the state of the video in an event loop. Every 500 mi
 
 ### Add Chaptering Links to your Embedded Video
 
-Using the <span class="code">.time()</span> method from the Player API, you can add chapters quickly and easily.
+Using the `.time()` method from the Player API, you can add chapters quickly and easily.
 
 Check out the [Chaptering Demo](http://wistia.github.com/demobin/chaptering/) for more on how this works.
 
@@ -326,7 +326,7 @@ Every single Wistia embed code type automatically supports HTML5 when it detects
 
 That being said, there are (potentially) some instances where HTML5 only is advisable. This is easy using the platformPreference parameter:
 
-<span class="code">&amp;platformPreference=html5</span>
+`&platformPreference=html5`
 
 So a full HTML5 player embed code would look like this:
 
@@ -340,7 +340,7 @@ HTML5 player instances are still controllable through the normal Player API meth
 
 ### Set the background of your video to transparent
 
-If you are embedding a Wistia video on a website with a white background, the natural black background of the Wistia player can look a little out of place. Instead, using a <span class='code'>wmode=transparent</span> string parameter, the background of the player loading can be set to transparent.
+If you are embedding a Wistia video on a website with a white background, the natural black background of the Wistia player can look a little out of place. Instead, using a `wmode=transparent` string parameter, the background of the player loading can be set to transparent.
 
 So a finished iframe embed code would look something like this:
 

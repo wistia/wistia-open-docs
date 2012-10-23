@@ -27,7 +27,7 @@ Start by embedding the video on the landing page you'll be using (or, if you're 
 
 {% post_image hashed_id: '2f2d65382f208f22150318c6ccc7358a06a6b244', width: 320, class: 'float_right' %}
 
-The next step is to create the merge tag for your Campaign Monitor email. On your video's media page, select <span class="code">Email Marketing</span> from under the Media Actions menu.
+The next step is to create the merge tag for your Campaign Monitor email. On your video's media page, select 'Email Marketing from under the <span class="action_menu">Media Actions</span> menu.
 
 
 Select "Campaign Monitor" as your provider.  Then, update the size of the thumbnail to your liking, and update the URL to point to where your video is embedded.  By default, it will point to the URL of your video in your Wistia account.

@@ -34,7 +34,7 @@ wistiaEmbed.bind("end", function () {
 
 In the code snippet example above, you should update the 'My Sample Video Title' with the title of your video.
 
-{{ "If you are using Google Analytics for more than one video on a page, you should update the <span class='code'>wistiaEmbed</span> variable in both the code above AND in your embed code." | note }}
+{{ "If you are using Google Analytics for more than one video on a page, you should update the <code>wistiaEmbed</code> variable in both the code above AND in your embed code." | note }}
 
 ## Step 2: Track viewing in Google Analytics Dashboard
 
