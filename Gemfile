@@ -5,6 +5,7 @@ gem "domainatrix"
 gem "foreman"
 gem "haml", "~> 3.1.6"
 gem "jekyll"
+gem "json"
 gem "nokogiri", "~> 1.5.5"
 gem 'rack-rewrite'
 gem "RedCloth"
