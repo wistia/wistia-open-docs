@@ -214,4 +214,11 @@
 * Also, started squashing the separate Integrations pages into one page...easier for folks to read over (so easy to get run over with too many pages!)
   * **Note to self**, don't ever remove live pages again until we have re-write rules in place (ie Wordpress page dummy)
 
-
+## Oct 23
+* Updates to Video SEO page ( to make Casey look good! )
+* Installed embedly plugin, using it for pulling Wistia SEO embed codes over oEmbed
+* Troubleshooting: if you add a new gem to the project, things get f'ed on the server (because it needs to bundle install...perhaps we need to make this part of the nuclear_update?).  To fix:
+  ssh wistia-docbox
+  screen -d -r
+  [new tab] cd /opt/apps/wistia-docbox
+  rake nuclear_upate or bundle install, etc.
