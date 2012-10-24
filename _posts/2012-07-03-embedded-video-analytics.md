@@ -177,3 +177,39 @@ The activity bar underneath the viewer name tracks the number of videos the view
 Adding a name to a viewer makes it easy to track their viewing sessions in your analytics.  You can also tag viewers with email address automatically, using [email marketing embeds]({{ '/email_marketing' | post_url }}).
 
 Once your viewer is tagged with an email, you can sort to view them in the Viewer Stream by clicking the "With Emails" option on the sorting bar.
+
+---
+
+## Exporting Analytics Data
+
+While we work hard on making our analytics interface powerful yet easy-to-use, it can sometimes be necessary to export your stats data for further analysis. Read on if you'd like to learn how that is done.
+
+First, head to the stats page for one of your videos (it has a link like `http://&lt;account&gt;.wistia.com/stats/medias/&lt;id&gt;`).
+
+On the right hand side of the bar that separates the aggregate statistics from the video heatmaps, a link is shown which says `Export as CSV`.
+
+{% post_image hashed_id: 'aea76162b72d95f66c647bd748d348100732f9a3', class: 'center' %}
+
+Click on the link and a dialog box will appear. Get your filters right, and then select the <span class="faux_button">EXPORT</span> button.
+
+The CSV file with stats and emails and heatmap data can be spliced and manipulated in Excel, or even imported into Marketing Automation software like [MailChimp](http://mailchimp.com).
+
+In the CSV file, each line represents one view of the video.  The data provided includes:
+
+*  Date
+*  IP Address
+*  Country
+*  Region (State)
+*  City
+*  Latitude
+*  Longitude
+*  Organization
+*  Email (if passed through)
+*  Percent of Video Viewed
+
+There are also a variety of options of how to filter the data.  These include:
+
+*  All events or only those where the play button was pressed
+*  Number of events to return and offset in the total set
+*  Date range for the events to retrieve
+
