@@ -4,12 +4,18 @@ layout: post
 category: For Developers
 description: Learn how to construct an embed code starting with just the video ID!
 footer: 'for_developers'
-post_intro: <p>As long as you have the hashed_id for a video, you can easily produce an embed code without even hitting our servers!</p><p>The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the <a href="/doc/data-api">Data API</a>.</p><p>We pass parameters into an iframe embed via the src attribute. They're just simple URL parameters, with the keys namespaced by brackets.</p>
+post_intro: <p>As long as you have the <code>hashed_id</code> for a video, you can produce an embed code without even hitting our servers.</p><p>It's pretty easy, check it out!</p>
 ---
+
+The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the <a href="{{ '/data-api' | post_url }}">Data API</a>.
+
+We pass parameters into an iframe embed via the src attribute. They're just simple URL parameters, with the keys namespaced by brackets.
 
 For example, say we have the hashed_id of the video we want to embed, but we
 want to change the color of the play button, hide the fullscreen button, and
-add a socialbar. Here's how we do it...
+add a socialbar. Here's how we do it:
+
+{{ "Before you get too deep here, you might want to check out our <a href='/doc/oembed'>oEmbed endpoint</a>. It provides a simple way to generate Wistia embed codes without you having to write much code. The only downside is you'll have to make an extra request to get an embed code." | note }}
 
 ## Building an iframe embed code
 
@@ -105,3 +111,12 @@ wistiaEmbed.volume(.5);
 &lt;/script&gt;
 </code></pre>
 
+
+## Building an SEO embed code
+
+Unfortunately you can't programmatically build an SEO-compatible embed yourself right now.
+
+Google's video search is a bit antiquated in that it can't properly detect videos inside iframes 
+(which is our preferred method of embedding video). They only recognize the &lt;object&gt;&lt;embed&gt; style embed codes.
+
+The good news is you can easily use our <a href="{{ '/oembed' | post_url }}">oEmbed endpoint</a> to generate an SEO embed for you.
