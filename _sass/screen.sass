@@ -100,6 +100,14 @@ $directions: (left, right)
       margin: $padding/2 $padding
       margin-#{$direction}: -($padding) - 2
 
+//////// placeholdahs ///////
+
+%header_fonts
+  font-family: Times, serif
+  font-style: italic
+  color: $title_color
+  +anti-alias
+
 //////// main styles /////////
 
 body
@@ -112,10 +120,8 @@ body
     text-decoration: none
 
 h1, h2, h3, h4, .seo_faq
-  font-family: Times, serif
-  font-style: italic
-  color: $title_color
-  +anti-alias
+  @extend %header_fonts
+
 h1
   font-size: 45px
   margin-left: 0
@@ -740,6 +746,18 @@ table
 
 .unhide
   visibility: visible
+
+#top-link
+  @extend %header_fonts
+  color: white
+  display: none
+  position: fixed
+  right: $padding
+  bottom: $padding
+  text-decoration: none
+  background: rgba($title_color, .6)
+  padding: 10px
+  font-weight: bold
 
 /////// utility pages ( categories, search, blah )//////
 
