@@ -22,7 +22,7 @@ module Jekyll
     end
 
     def klass
-      @params[:class]
+      @params[:class] || 'center'
     end
 
     def url
