@@ -549,6 +549,7 @@ table
   width: 100%
   text-align: left
   border-collapse: collapse
+  table-layout: fixed
   th
     font-size: 15px
     font-family: 'Helvetica Neue'
@@ -562,6 +563,7 @@ table
     border-bottom: 1px solid white
     color: $accent_blue
     border-top: 1px solid transparent
+    word-wrap: break-word
   tr
     &:hover 
       td
@@ -692,6 +694,7 @@ table
       border-bottom: none
       margin-bottom: 0
       padding-bottom: 0
+
   .title_list_item
     padding: 0
     border-bottom: 1px solid $title_color
@@ -702,13 +705,13 @@ table
       font-style: italic
       font-size: 26px
       color: $header_color
-
-  .title_list_item.current
-    li
-      background: none
-    a, a:hover
-      background: none
-      color: $title_color
+    &.current
+      li
+        background: none
+      a, a:hover
+        padding: 0 0 20px $padding/2
+        background: none
+        color: $title_color
 
   .current > a
     background-color: $background_blue
