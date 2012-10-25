@@ -2043,42 +2043,4 @@ want that in the URL. Here&#039;s what we&#039;d have:
 
 ### Resizing Images
 
-Say you have the URL for a 
-StillImage file from one of your videos in Wistia. You desperately want to resize it to be 450 pixels wide. No problem.
-
-First, take the URL of your image:
-
-<pre><code class="language-markup">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eab.bin</code></pre>
-
-Then, decide if you want a jpeg, png, or gif. You probably want a jpeg. Drop the .bin and add .jpg:
-
-<pre><code class="language-markup">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.jpg</code></pre>
-
-Now add a special query string to resize the image on the fly. 
-In this case, we&#039;re trying to resize to a width of 450 pixels, so we&#039;ll use the image_resize parameter:
-
-<pre><code class="language-markup">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.jpg?image_resize=450</code></pre>
-
-You can provide that URL directly to a client. 
-No need to pre-process the request or anything. When the client&#039;s browser issues a GET 
-request for that image, our massive server farm will divert all resources to resizing your image and return it directly to the client!
-
-Oh, so you want more resizing options, huh?? Here they are:
-
-Parameter |  Description
-image_resize | geometry string used to resize the image
-image_crop | geometry string used to crop the image (this is applied after a resize, if you provided both params
-image_crop_resized | geometry string used to create an image of the exact specified size without distortion – useful for thumbnails
-
-
-You may be wondering what a “geometry string” is. 
-If you&#039;ve ever used ImageMagick, it&#039;s the same format they use for resizing and cropping images. 
-[ Here&#039;s a good reference ](http://www.simplesystems.org/RMagick/doc/imusage.html#geometry).
-
-If you&#039;re too lazy to read that, here are a few quick examples:
-
-What you want to do     | Query string to do it
-------------------------|--------------------------
-Resize the image to be 400 pixels wide | ?image_resize=400
-Create a thumbnail that&#039;s exactly 450&times;200 pixels | ?image_crop_resized=450&times;200
-Resize an image to 640 px wide, but if it&#039;s less than 640px leave it alone | ?image_resize=640&gt;
+Using the Data API or [oEmbed endpoint]({{ '/oembed' | post_url }}), you can obtain the thumbnail URL for your video, and then manipulate it. Check [working with images]({{'/working-with-images' | post_url }})

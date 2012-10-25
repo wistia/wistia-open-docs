@@ -102,7 +102,15 @@ ssl | boolean | Determines whether the embed code should use https. Defaults to 
 
 ---
 
-## troubleshooting
+## Working With The Thumbnail
+
+Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a direct link to the thumbnail image asset. If your implementation involves using the thumbnail image (i.e. building your own 'popover' embeds, displaying your own play button, etc.) you should use this thumbnail image, which by default has no Wistia play button overlaid on it.
+
+See our [working with Wistia images]({{ '/working-with-images' | post_url }}) guide for more info!
+
+---
+
+## Troubleshooting
 
   1. If an invalid URL (one that doesn't match our regular expression above) is given, the endpoint will return <span class="code">404 Not Found</span>.
   2. If an unparseable URL is given in the url param, the endpoint will return <span class="code">404 Not Found</span>.
