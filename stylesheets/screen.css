@@ -2167,7 +2167,7 @@ table tr td pre {
   display: block;
   padding: 15px;
   color: #6b6760;
-  font-size: 14px;
+  font-size: 15px;
   text-decoration: none;
 }
 /* line 689, ../_sass/screen.sass */
@@ -2183,72 +2183,67 @@ table tr td pre {
 /* line 695, ../_sass/screen.sass */
 #post_content_nav .title_list_item {
   padding: 0;
-  margin-left: 15px;
   border-bottom: 1px solid #333333;
 }
-/* line 699, ../_sass/screen.sass */
+/* line 698, ../_sass/screen.sass */
 #post_content_nav .title_list_item a {
-  padding: 0 0 20px 0;
+  padding: 0 0 20px 15px;
   position: relative;
   font-family: Times, serif;
   font-style: italic;
   font-size: 26px;
   color: black;
 }
-/* line 708, ../_sass/screen.sass */
+/* line 707, ../_sass/screen.sass */
 #post_content_nav .title_list_item.current li {
   background: none;
 }
-/* line 710, ../_sass/screen.sass */
+/* line 709, ../_sass/screen.sass */
 #post_content_nav .title_list_item.current a, #post_content_nav .title_list_item.current a:hover {
-  padding: 0 0 20px 0;
   background: none;
   color: #333333;
 }
-/* line 715, ../_sass/screen.sass */
+/* line 713, ../_sass/screen.sass */
 #post_content_nav .current > a {
   background-color: rgba(192, 219, 235, 0.3);
   padding: 15px;
 }
-/* line 718, ../_sass/screen.sass */
+/* line 716, ../_sass/screen.sass */
 #post_content_nav .current > a:hover {
   color: #333333;
 }
-/* line 721, ../_sass/screen.sass */
+/* line 719, ../_sass/screen.sass */
 #post_content_nav .header_link {
-  border: none;
-  margin-top: 5px;
   margin-left: 15px;
-  padding: 5px 0;
+  padding: 5px 0 0;
 }
-/* line 726, ../_sass/screen.sass */
+/* line 722, ../_sass/screen.sass */
 #post_content_nav .header_link a {
   font-weight: bold;
   padding: 5px 0;
 }
-/* line 730, ../_sass/screen.sass */
+/* line 726, ../_sass/screen.sass */
 #post_content_nav .sub_link {
-  border: none;
-  margin-left: 20px;
+  margin-left: 30px;
 }
-/* line 733, ../_sass/screen.sass */
+/* line 728, ../_sass/screen.sass */
 #post_content_nav .sub_link a {
-  font-size: 12px;
-  padding: 5px 0;
+  font-size: 14px;
+  padding: 2px 0;
   line-height: 130%;
 }
 
-/* line 740, ../_sass/screen.sass */
+/* line 735, ../_sass/screen.sass */
 .clear {
   clear: both;
 }
 
-/* line 743, ../_sass/screen.sass */
+/* line 738, ../_sass/screen.sass */
 .unhide {
   visibility: visible;
 }
 
-/* line 749, ../_sass/screen.sass */
+/* line 744, ../_sass/screen.sass */
 .category_layout #container, .category_layout #container_home, .search_layout #container, .search_layout #container_home {
   position: relative;
   background: white;
@@ -2256,20 +2251,20 @@ table tr td pre {
   padding: 0 30px;
 }
 
-/* line 756, ../_sass/screen.sass */
+/* line 751, ../_sass/screen.sass */
 .main_layout #container, .main_layout #container_home {
   position: relative;
   background: white;
   width: 700px;
 }
 
-/* line 763, ../_sass/screen.sass */
+/* line 758, ../_sass/screen.sass */
 .category {
   width: 660px;
   padding: 30px 0;
   background-color: white;
 }
-/* line 767, ../_sass/screen.sass */
+/* line 762, ../_sass/screen.sass */
 .category h2 {
   margin-bottom: 15px;
   font-size: 20px;
@@ -2279,21 +2274,21 @@ table tr td pre {
   color: #4a6c8f;
 }
 
-/* line 776, ../_sass/screen.sass */
+/* line 771, ../_sass/screen.sass */
 .search_bar {
   margin: 30px auto;
   text-align: center;
   position: relative;
   width: 660px;
 }
-/* line 781, ../_sass/screen.sass */
+/* line 776, ../_sass/screen.sass */
 .search_bar input {
   width: 84%;
   font-size: 14px;
   border: 1px solid #bbbbbb;
   padding: 5px 10px;
 }
-/* line 786, ../_sass/screen.sass */
+/* line 781, ../_sass/screen.sass */
 .search_bar button {
   font-size: 14px;
   position: relative;
@@ -2304,13 +2299,13 @@ table tr td pre {
   padding: 5px 10px;
 }
 
-/* line 797, ../_sass/screen.sass */
+/* line 792, ../_sass/screen.sass */
 #doc_nav_container .search_bar {
   margin: 0;
   text-align: left;
   width: 100%;
 }
-/* line 801, ../_sass/screen.sass */
+/* line 796, ../_sass/screen.sass */
 #doc_nav_container .search_bar input {
   width: 180px;
   position: relative;
@@ -2318,26 +2313,26 @@ table tr td pre {
   height: 15px;
 }
 
-/* line 807, ../_sass/screen.sass */
+/* line 802, ../_sass/screen.sass */
 #results {
   min-height: 350px;
 }
 
-/* line 810, ../_sass/screen.sass */
+/* line 805, ../_sass/screen.sass */
 .results_header {
   border-bottom: 1px solid;
   margin: 30px 0;
 }
 
-/* line 813, ../_sass/screen.sass */
+/* line 808, ../_sass/screen.sass */
 .result {
   margin: 30px 0 30px;
 }
-/* line 815, ../_sass/screen.sass */
+/* line 810, ../_sass/screen.sass */
 .result h2 {
   margin: 0;
 }
-/* line 817, ../_sass/screen.sass */
+/* line 812, ../_sass/screen.sass */
 .result a {
   font-size: 24px;
 }
@@ -2345,49 +2340,49 @@ table tr td pre {
 .result a:hover {
   color: #4a6c8f;
 }
-/* line 820, ../_sass/screen.sass */
+/* line 815, ../_sass/screen.sass */
 .result p {
   margin-top: 15px;
   width: 550px;
 }
 
-/* line 824, ../_sass/screen.sass */
+/* line 819, ../_sass/screen.sass */
 .no_result p {
   line-height: 200%;
 }
-/* line 826, ../_sass/screen.sass */
+/* line 821, ../_sass/screen.sass */
 .no_result .query {
   color: #333333;
 }
 
-/* line 828, ../_sass/screen.sass */
+/* line 823, ../_sass/screen.sass */
 .description {
   color: #aaaaaa;
 }
 
-/* line 833, ../_sass/screen.sass */
+/* line 828, ../_sass/screen.sass */
 #beegee {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
 }
-/* line 838, ../_sass/screen.sass */
+/* line 833, ../_sass/screen.sass */
 #beegee path {
   fill: #c0dbeb;
 }
-/* line 842, ../_sass/screen.sass */
+/* line 837, ../_sass/screen.sass */
 #beegee .q0, #beegee .q1, #beegee .q2, #beegee .q3, #beegee .q4, #beegee .q5, #beegee .q6, #beegee .q7, #beegee .q8, #beegee .q9 {
   fill: white;
 }
 
-/* line 847, ../_sass/screen.sass */
+/* line 842, ../_sass/screen.sass */
 .activated #beegee path {
   fill: #688aad;
   stroke: #bbbbbb;
   stroke-width: 1;
 }
-/* line 851, ../_sass/screen.sass */
+/* line 846, ../_sass/screen.sass */
 .activated #beegee .q0, .activated #beegee .q1, .activated #beegee .q2, .activated #beegee .q3, .activated #beegee .q4, .activated #beegee .q5, .activated #beegee .q6, .activated #beegee .q7, .activated #beegee .q8, .activated #beegee .q9 {
   fill: white;
 }
