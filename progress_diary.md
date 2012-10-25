@@ -220,5 +220,9 @@
 * Troubleshooting: if you add a new gem to the project, things get f'ed on the server (because it needs to bundle install...perhaps we need to make this part of the nuclear_update?).  To fix:
   ssh wistia-docbox
   screen -d -r
-  [new tab] cd /opt/apps/wistia-docbox
+  [new tab] cd /opt/apps/wistia-doc
   rake nuclear_upate or bundle install, etc.
+
+## Oct 25
+* Added 'back to top' button for API pages
+* Squarespace integration in the hizzy
