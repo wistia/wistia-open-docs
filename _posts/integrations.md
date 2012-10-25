@@ -55,7 +55,8 @@ For more info, and a guide to using API/SEO embed codes, see the [Joomla doc pag
 
 With Wistia and Squarespace, embedding a video is as easy as pasting in your embed codes.
 
-Pretty awesome, huh?
+<a href="{{ '/squarespace' | post_url }}">Get the details on how it all works.</a>
+
 
 <div class="clear"></div>
 
@@ -71,7 +72,7 @@ To embed a Wistia video in your Wix website, go to *Add --> Widgets --> HTML*. C
 
 ## Services Wistia Plays Well With
 
-We love seeing Wistia videos out there in the wild. This is an in-complete list of services that make Wistia embed codes feel right at home.
+We love seeing Wistia videos out there in the wild. This is an incomplete list of services that make Wistia embed codes feel right at home.
 
 * Basecamp
 * Blogger
