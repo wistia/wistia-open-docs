@@ -9,30 +9,15 @@ footer: 'for_developers'
 
 ## The Endpoint
 
-Our oEmbed endpoint is: <span class="code">http://fast.wistia.com/oembed</span>
+Our oEmbed endpoint is: `http://fast.wistia.com/oembed`
 
 Currently, our oEmbed endpoint recognizes two URL formats:
-<table>
-  <tbody>
-    <tr>
-      <th>Type</th>
-      <th>Example URL</th>
-    </tr>
-    <tr>
-      <td>iframe embed code URLs</td>
-      <td>http://fast.wistia.com/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8</td>
-    </tr>
-    <tr>
-      <td>iframed playlist URLs</td>
-      <td>http://fast.wistia.com/embed/playlists/fbe3880a4e?theme=trime&version=v1
-&videoOptions%5BvideoHeight%5D=360&videoOptions%5BvideoWidth%5D=640</td>
-    </tr>
-    <tr>
-      <td>Public media URLs</td>
-      <td>http://home.wistia.com/medias/e4a27b971d</td>
-    </tr>
-  </tbody>
-</table>
+
+Type | Example URL
+-----|-------------
+iframe embed code URLs | http://fast.wistia.com/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
+iframed playlist URLs | http://fast.wistia.com/embed/playlists/fbe3880a4e?theme=trime&version=v1&videoOptions%5BvideoHeight%5D=360&videoOptions%5BvideoWidth%5D=640
+Public media URLs | http://home.wistia.com/medias/e4a27b971d
 
 It's likely we'll add more URLs to this list in the future.
 
@@ -90,7 +75,7 @@ This returns:
 }
 </code></pre>
 
-If you're looking for XML instead of JSON, use: <span class="code">http://fast.wistia.com/oembed.xml</span>
+If you're looking for XML instead of JSON, use: `http://fast.wistia.com/oembed.xml`
 
 For all the fine details about the options supported, see the official [oEmbed spec](http://oembed.com).
 
@@ -104,59 +89,20 @@ The required url parameter that's passed in supports all the options detailed in
 
 We also accept some additional parameters that can change the output of the embed code:
 
-<table>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>callback</td>
-      <td>string</td>
-      <td>Only application to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.</td>
-    </tr>
-    <tr>
-      <td>embedType</td>
-      <td>string</td>
-      <td>Only applicable to videos and playlists. Accepts "iframe", "api", "seo", "popover", "playlist_iframe", and "playlist_api".</td>
-    </tr>
-    <tr>
-      <td>handle</td>
-      <td>string</td>
-      <td>Only applicable to "api", "seo", and "playlist_api" embed types. Sets the javascript handle. Default is "wistiaEmbed" for medias and "wistiaPlaylist" for playlists.</td>
-    </tr>
-    <tr>
-      <td>height</td>
-      <td>integer</td>
-      <td>The requested height of the video embed. Defaults to the native size of the video or 640, whichever is smaller.</td>
-    </tr>
-    <tr>
-      <td>popoverHeight</td>
-      <td>integer</td>
-      <td>Only applicable to "popover" embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.</td>
-    </tr>
-    <tr>
-      <td>popoverWidth</td>
-      <td>integer</td>
-      <td>Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.</td>
-    </tr>
-    <tr>
-      <td>ssl</td>
-      <td>boolean</td>
-      <td>Determines whether the embed code should use https. Defaults to false.</td>
-    </tr>
-    <tr>
-      <td>width</td>
-      <td>integer</td>
-      <td>The requested width of the video embed. Defaults to the native size of the video or 360, whichever is smaller.</td>
-    </tr>
-  </tbody>
-</table>
+Name | Type  | Description
+-----|-------|------------
+callback | string | Only application to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
+embedType | string | Only applicable to videos and playlists. Accepts "iframe", "api", "seo", "popover", "playlist_iframe", and "playlist_api".
+width | integer | The requested width of the video embed. Defaults to the native size of the video or 360, whichever is smaller.
+height | integer | The requested height of the video embed. Defaults to the native size of the video or 640, whichever is smaller.
+handle | string | Only applicable to "api", "seo", and "playlist_api" embed types. Sets the javascript handle. Default is "wistiaEmbed" for medias and "wistiaPlaylist" for playlists.
+popoverHeight | integer | Only applicable to "popover" embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.
+popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
+ssl | boolean | Determines whether the embed code should use https. Defaults to false.
 
 ---
 
-## Troubleshooting
+## troubleshooting
 
   1. If an invalid URL (one that doesn't match our regular expression above) is given, the endpoint will return <span class="code">404 Not Found</span>.
   2. If an unparseable URL is given in the url param, the endpoint will return <span class="code">404 Not Found</span>.

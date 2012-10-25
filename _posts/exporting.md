@@ -32,7 +32,7 @@ Wistia does have a few specifications and guidelines we recommend following in o
 </h3>
 <ul>
 <li>Codec: <span class="answer">AAC (Advanced Audio Codec)</span></li>
-<li>Sample Rate: <span class="answer">44.4mhz</span></li>
+<li>Sample Rate: <span class="answer">44.1mhz</span></li>
 <li>Channels: <span class="answer">2-channel Stereo</span></li>
 </ul>
 </div>
@@ -41,31 +41,12 @@ Wistia does have a few specifications and guidelines we recommend following in o
 
 Wistia accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in an MP4 or MOV format*. If a file type is not explicitly supported (or recognized) by Wistia, users will simply be able to download the file.
 
-<table>
-  <tbody>
-    <tr>
-      <th>Media Type</th>
-      <th>Formats Accepted</th>
-    </tr>
-    <tr>
-      <td>Video</td>
-      <td>MOV, MPG, AVI, FLV, F4V, MP4, M4V, ASF, WMV, VOB, MOD, 3GP, MKV, DIVX, XVID</td>
-    </tr>
-    <tr>
-      <td>Audio</td>
-      <td>MP3, WAV, AIF, AU, M4A</td>
-    </tr>
-    <tr>
-      <td>Documents</td>
-      <td>PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX</td>
-    </tr>
-    <tr>
-      <td>Images</td>
-      <td>JPG, PNG, GIF, TIFF, BMP, DCM</td>
-    </tr>
-  </tbody>
-</table>
-
+Media Type | Formats Accepted
+-----------|------------------
+Video | MOV, MPG, AVI, FLV, F4V, MP4, M4V, ASF, WMV, VOB, MOD, 3GP, MKV, DIVX, XVID
+Audio | MP3, WAV, AIF, AU, M4A
+Documents | PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
+Images | JPG, PNG, GIF, TIFF, BMP, DCM
 
 
 ### Note on File Sizes

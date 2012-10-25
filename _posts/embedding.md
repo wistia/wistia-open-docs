@@ -41,7 +41,7 @@ Clicking this option will take you to the Wistia Embed Screen.  This is where yo
 
 {% post_image hashed_id: 'fbe53b9002062e623f346aaaf7c850d33b0cd5dc', width: 320, class: 'float_right' %}
 
-See our [complete guide to the embed screen]({{ '/embed_screen' | post_url }}) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
+See our [complete guide to the embed screen]({{ '/embed-screen' | post_url }}) for more info.  Once you have all the settings set the way you would like them, copy the embed code from the top box.
 
 ---
 
