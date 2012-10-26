@@ -23,6 +23,28 @@ Navigate to a video in your account and copy the URL from your browsers address 
 I've highlighted the URL in a pink box.
 
 
+### But what if I want to add a SuperEmbed to Squarespace?
+
+{% post_image hashed_id: '9b2840e63c59322535c2f1747f02601b0c02a56e', width: 1039, height: 834 %}
+
+Well then, you're in luck! To get the full power of SuperEmbeds, you can just get the URL from the iframe embed code and use that!
+
+Head to the SuperEmbed builder for your video, customize it, then copy the embed code. It will look something like this:
+
+<pre><code class="language-markup">
+<iframe src="http://fast.wistia.com/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+</code></pre>
+
+Now, grab the URL from the <code>src</code> parameter of your embed code.
+In this example the URL is:
+
+<pre><code class="language-markup">
+http://fast.wistia.com/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640
+</code></pre>
+
+Copy this URL, it's what you'll use in the next step.
+
+
 ## 2. Add a video block in Squarespace
 
 {% post_image hashed_id: 'cdd78d7532000745430f2968a6fcded98dfc2854', width: 1151, height: 742 %}
