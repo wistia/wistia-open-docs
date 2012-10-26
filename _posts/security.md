@@ -17,8 +17,6 @@ focus on what you do best – running your business.
 
 From catastrophe planning to low level encryption of credentials, Wistia's focus on security allows your business to have peace of mind that your content is being protected. Work with confidence, Wistia has you covered.
 
-If you are interested in the technical specs of our security procedures, please download our [Wistia Security Overview PDF](http://wistia.com/documents/wistia_security.pdf).
-
 ---
 
 We're continually taking steps to make your videos as secure as possible:
