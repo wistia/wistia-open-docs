@@ -169,10 +169,10 @@ wmode                 | string  | flash only. The flash window mode of the embed
 
 Our plugins have a lot of options too! Check them out:
 
-*  [Socialbar](/socialbar-params.html)
-*  [Post-Roll Call To Action](/postroll-params.html)
-*  [Interactive Transcript](/transcript-params.html)
-*  [Turnstile Email Capturing](/turnstile-params.html)
+*  [Socialbar]({{ '/socialbar-params' | post_url }})
+*  [Post-Roll Call To Action]({{ '/postroll-params' | post_url }})
+*  [Interactive Transcript]({{ '/transcript-params' | post_url }})
+*  [Turnstile Email Capturing]({{ '/turnstile-params' | post_url }})
 
 And if you're looking at these, you might want more info on [constructing an embed code]({{ '/construct-an-embed-code' | post_url }}).
 
