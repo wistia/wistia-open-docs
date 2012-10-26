@@ -86,21 +86,20 @@ body will contain a JSON object
 
 <pre><code class="language-json">
 {
-  "id"           => 11431326,
-  "name"         => "dramatic_squirrel.mp4",
-  "content_type" => "video/mp4",
-  "extension"    => "mp4",
-  "filesize"     => 199467,
-  "md5"          => "a71f326ebf2ba2631eee0f8695cfa953",
-  "hashed_id"    => "9f322f1de84697ae56c8904dd9e62a3fda5207cc",
-  "height"       => 240, 
-  "width"        => 320, 
-  "length"       => 5.333,
-  "created_at"   => "2012-10-09T16:31:34+00:00",
-  "updated_at"   => "2012-10-09T16:31:34+00:00",
-  "ready"        => true,
-  "status"       => 2,
-  "progress"     => 1.0
+  "id"=>2208087, 
+  "name"=>"dramatic_squirrel.mp4", 
+  "type"=>"Video", 
+  "created"=>"2012-10-26T16:47:09+00:00", 
+  "updated"=>"2012-10-26T16:47:10+00:00", 
+  "duration"=>5.333000183105469, 
+  "hashed_id"=>"gn69c10tqw",
+  "progress"=>0.0,
+  "thumbnail"=>
+  {
+    "url"=>"http://embed.wistia.com/deliveries/ffbada01610466e66f67a5dbbf473ed6574a6405.jpg?image_crop_resized=100x60", 
+    "width"=>100, 
+    "height"=>60
+  }
 }
 </code></pre>
 
