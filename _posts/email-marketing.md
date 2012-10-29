@@ -82,21 +82,22 @@ The following is a table that includes the email clients we have encountered tha
 
 Provider  |  URL Email Merge Tag
 ----------|----------------------
-AWeber    |  {!email}
-Blue Hornet  |  %%to_email%%
-Campaign Monitor | <pre>[email]</pre>
-Constant Contact | $SUBSCRIBER.EMAIL$
-Emailvision  |  <pre>[EMV FIELD]EMAIL[EMV /FIELD]</pre>
+AWeber    |  `{!email}`
+Blue Hornet  |  `%%to_email%%`
+Campaign Monitor | `[email]`
+Constant Contact | `$SUBSCRIBER.EMAIL$`
+Emailvision  |  `[EMV FIELD]EMAIL[EMV /FIELD]`
 Emma  | Not Available
-GetResponse  |  <pre>[email]</pre>
-Hubspot  | {% raw %}<pre>{{contact.email}}</pre>{% endraw %}
-iContact  |  <pre>[email]</pre>
-Infusionsoft  |  ~Contact.Email~
-MailChimp  |  %%URL:EMAIL%%
-Marketo  |  <pre>{{lead.Email Address:default=noemail}}</pre>
-Pardot  |  %%email%%
-Vertical Response  |  {EMAIL_ADDRESS}
-ExactTarget  |  %%Email Address%%
+GetResponse  |  `[email]`
+Hubspot  | {`{ contact.email }`}
+iContact  |  `[email]`
+Infusionsoft  |  `~Contact.Email~`
+MailChimp  |  `%%URL:EMAIL%%`
+Marketo  |  {`{lead.Email Address:default=noemail}`}
+Pardot  |  `%%email%%`
+Vertical Response  |  `{EMAIL_ADDRESS}`
+ExactTarget  |  `%%Email Address%%`
+Convio Luminate | `[[S1:primary_email]]`
 
 ---
 
