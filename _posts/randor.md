@@ -2,10 +2,8 @@
 title: Project Randor
 description: Project Randor is a fun and informative web series covering the basics of Wistia. Join Chris and Jeff and they walk you through all there is to know about the Wistia application!
 layout: post
-
+post_intro: <p>We know this web video stuff can be confusing!  That's why we put together a video series to help.</p> <p>Not only will it answer some basic questions about how web video works, it will also guide you through Wistia.  You'll be off to the races in no time!</p>
 ---
-
-We know this web video stuff can be confusing!  That's why we put together a video series to help.  Not only will it answer some basic questions about how web video works, it will also guide you through Wistia.  You'll be off to the races in no time!
 
 ## Wistia Basics
 
