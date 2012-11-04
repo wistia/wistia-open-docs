@@ -58,7 +58,7 @@ Project Settings are useful for **turning off comments** for a Project and video
 
 To get started, select *Project Settings* from under the <span class='action_menu'>Project Actions</span> menu.
 
-### Disable comments for a project
+## Disable comments for a project
 
 To turn off comments (preventing **ALL** users from seeing or making comments), open the "Project Settings" dialogue from the <span class='action_menu'>Project Actions</span> menu.
 
