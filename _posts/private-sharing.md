@@ -12,20 +12,20 @@ description: Wistia makes it easy to privately share your videos with people. In
 
 ## Invite Viewers
 
-{% post_image hashed_id: '42611fc9a1641be9e8374afd496a20e01abffcc6', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'b4776e01d8fbe98d585ad48337ddd84e1ad135f3', width: 320, class: 'float_right' %}
 
 
-Managers in your Wistia account can invite new viewers to view private content using the "Share by Email" feature.  From the Project screen, select "Share Project" from under the green "Project Actions" drop-down menu.
+Managers in your Wistia account can invite new viewers to view private content using the "Sharing and Privacy" feature.  From the Project screen, select "Sharing and Privacy" from under the green "Project Actions" drop-down menu. 
 
-Enter the email addresses of contacts you would like to share this project privately with.  You can then set whether they need to create a password.  At the bottom, you can customize the text from the message they will receive to first access the content you've allowed them to view.
+Enter the email addresses of contacts you would like to share this project privately with in the box where it says "Enter email addresses to add users."  You can then set whether they need to create a password. You can customize the text from the message they will receive to first access the content you've allowed them to view by clicking on "Add a personal message."
 
 
-{% post_image hashed_id: 'fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d', class: 'center' %}
+{% post_image hashed_id: '52ceeb3b8914f9fc0695bbf5de808f09da1242eb', class: 'center' %}
 
 
 
 <div class="faq">
-<h3><i class="icon-search"></i> FAQ: Why don't I set a password for my viewers?</h3>
+<h4><i class="icon-search"></i> FAQ: Why don't I set a password for my viewers?</h4>
 
 <p>The best way for unwanted viewers to view secure content is through the original email.  Sending a group email that contains the login and password needed to access secure content can be grabbed easily: from a stolen laptop, from a hacked email account, even read right off the screen at a coffee shop.  With Wistia, your invited viewers receive an email with a one-time use activation code, and then create their own password.</p>
 </div>
@@ -34,43 +34,47 @@ Enter the email addresses of contacts you would like to share this project priva
 
 ## Privately share video by link
 
-{% post_image hashed_id: '271cc76d4c475b6997d5b9c49f6ee087c9badd50', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '5f693f7bb68f4e19a64d27bd796ed2fd4aaa6cc5', width: 320, class: 'float_right' %}
 
 This is the best sharing method to use if you want to:
-<ul style="margin-top: 5px;"><li>Send out a single link from your own email account to a group people to allow them to view your video</li>
-<li>Track how people watch your video, but are less concerned about associating viewing with a viewer's email address</li></ul>
+<ul style="margin-top: 5px;"><li><i>Send out a single link from your own email account to a group people to allow them to view your video.</i></li>
+<br>
+<li><i>Track how people watch your video, but are less concerned about associating viewing with a viewer's email address.</i></li></ul>
  
-Once you have uploaded your videos to your project, from within the project hover over the "Project Actions" menu and choose the "Share Project" option.
+Once you have uploaded your videos to your project, from within the project hover over the "Project Actions" menu and choose the "Sharing and Privacy" option.
 
 <div class="clear"></div>
 
-{% post_image hashed_id: '7fe31ba39993a9f10f9416325c68a3f710d1d4f4', width: 320, class: 'float_right' %}
+When the sharing window appears, the privacy of that project will display be displayed at the top (see image below). To create a link that can be sent out and viewed anonymously, switch the account over to "unlocked" and hit the save button at the bottom of the window.  
 
-When the dialog appears choose the tab which says "Share by Link".  The screen to the left will be seen.  To create a link which can be pasted into an email, click the "Enable sharing by link for this project" button.
+{% post_image hashed_id: 'bdf6515ef60205244d65a384e0e2bbc8f0f72071', class: 'center' %}
 
-{% post_image hashed_id: '0157656ae67a9ee92aa77f99f8235b8db2b8b1df', width: 320, class: 'float_right' %}
+Once the project has been set to "unlocked," the link displayed will no longer be grayed out.  You can simply copy this link and paste it into an email or put it on a webpage.  When users click on this link, they will automatically be taken into this Wistia project.
 
-Once the button has been clicked, the link will appear.  You can simply copy this link and paste it into an email or put it on a webpage.  When users click on this link, they will automatically be taken into this Wistia project.
+{% post_image hashed_id: '8316737d63d3d76bd5c8267086af31a337832054', class: 'center' %}
 
-If the "Disable sharing by link for this project" is clicked the previous project link will no longer be active.  Users that click on a disabled link will be denied access to your content. 
+If the project is set to "locked" then the project link will no longer be active.  Users that click on a disabled link will be denied access to your content. 
 
 ---
 
 ## Managing Permissions
 
-{% post_image hashed_id: '79c437faf6d7df72b320256c45e1a5e8082eed16', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'aba5a7d7e2c9566d5acc817530c88d60946f454c', width: 320, class: 'float_right' %}
 
-Wistia accounts include permissions and access controls for managers, to set who can view media and what they can view.  To manage permissions for contacts on a Project, click the "Manage" link under the 'Sharing' Sidebar Element.
-
-{% post_image hashed_id: '777cd4548ed48ebee4e7bec3327a61c74559f34e', width: 320, class: 'float_right' %}
+Wistia accounts include permissions and access controls for managers, to set who can view media and what they can view.  To manage permissions for contacts on a Project, click the "Sharing and Privacy" option under Project Actions. 
 
 The share screen shows which users currently have access to the Project, and what permissions they have.  From here, managers can add permissions like:
 
-*  Upload, which allows the viewer to upload new content
-*  Download, which allows the viewer to download content from the Project
-*  Share, which means the viewer can share the Project with new viewers
+*  <i><b>Admin</b>, which gives the user manager permissions for that particular Project.</i>
+*  <i><b>Upload</b>, which allows the viewer to upload new content.</i>
+*  <i><b>Download</b>, which allows the viewer to download content from the Project.</i>
+*  <i><b>Share</b>, which means the viewer can share the Project with new viewers.</i>
+*  <i><b>Stats</b>, which gives the viewer the ability to view stats for all videos in the Project.</i>
 
-Removing viewer access can also be done by clicking the small trash can icon at the end of each viewer row.
+{% post_image hashed_id: '167c9f4350ba34ed71c445ac84400dd28e8ee3e1', class: 'center' %}
+
+
+Removing viewer access can also be done by clicking the small "x" icon at the end of each viewer row. This will strike out the user, and they won't be fully removed from the project until "Save" is clicked.
 
 ----
 
@@ -101,11 +105,11 @@ When you invite new viewers into your account to privately view video, they will
 
 ### The Share Dialog Box
 
-{% post_image hashed_id: 'fd253ac4993cee49f0a3b6dfbfb5fc5df2adab6d', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '52ceeb3b8914f9fc0695bbf5de808f09da1242eb', width: 320, class: 'float_right' %}
 
 We'll start with a quick review of the Share dialog box.
 
-Enter the emails of the people you'd like to invite in the “Share with” box. Assign the permissions you'd like them to have for this project. You can allow them to upload, download original files, or share with others.
+Enter the emails of the people you'd like to invite in the “Enter email addresses to add users” box. Assign the permissions you'd like them to have for this project. You can give them manager permissions for that particular project, allow them to upload, download original files, share with others, and provide them access to stats for all videos in that project.
 
 You can also choose whether the user needs a password to access the content. If you choose to require a password (more secure), the user will be prompted to create a password when they click on the link in the email. In the future, the user will be required to enter their email and password in order to gain access to the content that has been shared with them. If no password is required, the user will be taken directly to the project upon clicking the link.
 
@@ -115,7 +119,7 @@ You can also customize the wording of the email message that will be sent to the
 
 {% post_image hashed_id: 'ef169c85d0894e2cb800fe376e21b4fea0aee88e', width: 320, class: 'float_right' %}
 
-After clicking the "Share" button, your viewer will receive an email at the address you have designated.  This email will include an invitation to view the project you are sharing, along with a link for their access.  This activation link is specifically designed for their email, and is only good for one use (the email cannot be forwarded).
+After clicking the "Add User" button, your viewer will receive an email at the address you have designated.  This email will include an invitation to view the project you are sharing, along with a link for their access.  This activation link is specifically designed for their email, and is only good for one use (the email cannot be forwarded).
 
 
 ### The Credential Creation Screen
@@ -133,8 +137,8 @@ Use the slider to test out the difference between views!
 
 <iframe style="border: 0px  none;" name="proj_diff" src="http://files.wistia.com/doc/views_diff.html" frameborder="0" marginwidth="0px" marginheight="0px" scrolling="no" width="640px" height="360px"></iframe>
 
+Users who have been given the "Admin" permission for the project will be able to see every option under Project Actions, and will also be able to see all other shared users on the project via the "Sharing and Privacy" screen. Users with the "Stats" permission will see the Stats option under Project actions, users with the "Upload" permission will see the Upload option under Project Actions, etc. 
 
-To hide the sharing list from viewers, simply hover over the "Sharing" sidebar element on the right-hand side of the Project, and click the trash can icon that appears next to the word 'Sharing'.  To bring the sidebar element back at any time, choose "Add Sidebar Element" under the"Project Actions" drop-down and then add a "Sharing List" sidebar element.
+Users who have been given the "Share" permission (but not the "Admin" permission) will see a slightly different Sharing screen. They will be able to add email addresses into the "Share with" box, and will only be able to give out the permissions that they currently have for that Project. They can also customize the email message that is sent out as well. Here is what that Sharing screen looks like: 
 
-<iframe style="border: 0px  none;" name="proj_diff2" src="http://files.wistia.com/doc/views_diff2.html" frameborder="0" marginwidth="0px" marginheight="0px" scrolling="no" width="640px" height="360px"></iframe>
-
+{% post_image hashed_id: '2e2a22f2fa3ff9368c23c213d219030d2246a392', class: 'center' %}
