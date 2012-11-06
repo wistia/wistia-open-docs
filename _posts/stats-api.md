@@ -1,61 +1,227 @@
 ---
-title: Stats API
 layout: post
-category: For Developers
-description: Want to export your statistics out of Wistia? We make it easy to grab the stats for an individual video at a time in a .csv file.
-footer: 'for_developers'
+api: true
+title: Stats API
+description: Learn how to access your stats via our API.
 ---
 
-Wistia provides a simple API to access individual viewer data for Wistia videos embedded on your website.  This data is provided in a comma-separated value (CSV) format.  In the CSV file, each line represents one view of the video.
+## Account
 
-The URL used to export analytics for a video is of the form:
+### Account: Show
 
-<div class="code">https://&lt;account&gt;.wistia.com/stats/medias/&lt;id&gt;/events.&lt;format&gt;</div>
+The stats API allows you to retrieve some account-wide information.
 
-Here <span class="code">&lt;account&gt;</span> is your Wistia account key used in all URLs which reference your account.  <span class="code">&lt;id&gt;</span> is the Wistia id number of the video. <span class="code">&lt;format&gt;</span> can be either csv for json.
+#### The Request
 
-The easiest way to construct this base URL is, once you you are logged in to your Wistia account, go to Stats --&gt; Trends and then chose the video you wish to export stats for.  The URL displayed in the address bar will be of the form:
+In order to tell Wistia that you want stats for your account, issue a **GET** request to the following URL:
 
-<div class="code">http://&lt;account&gt;.wistia.com/stats/medias/&lt;id&gt;</div>
+<div class="code">GET https://api.wistia.com/v1/stats/account.json</div>
 
-Simply append <span class="code">/events.csv</span> and this will form your base URL.
+#### The Response
 
-All filter options are added via query string.  The query string parameters and possible values are:
+#### Fields
 
+Field | Description
+------|------------
+loads | The total number of times any video from this account has been loaded.
+plays | The total number of times any video from this account has been played.
+hours_watched | The total amount of time spent watching the videos in this account.
 
-*  **filter=view** This will show only events where the play button was pressed by the user.  If this option is not used, all events (included those where the video was not played) will be returned.
-*  **limit** An integer that specifies the number of event records to return.  This has an upper limit of 1000.
-*  **offset** An integer that specifies an offset in the total set to allow the caller to retrieve events in the middle of the total set.
-*  **start_date** A date *(in the form of yyyy-mm-dd)* which specifies the earliest date for which to retrieve events.
-*  **end_date** A date *(in the form of yyyy-mm-dd)* which specifies the latest date for which to retrieve events.
+### Account: By Date
 
-Events are always returned in descending order of the date on which they were created.  This means that the most recent events will be returned first.
+You can also get account-wide stats for a particular date range.
 
-Example:  To retrieve the 100 most recent play events for media #12345 in my Wistia account named **''foo''** starting on March 1, 2010, the request would be:
+#### The Request
 
-<div class="code"><pre>https://foo.wistia.com/stats/medias/12345/events.csv?filter=view&start_date=2010-03-01&limit=100</pre></div>
+In order to tell Wistia that you want account-wide stats for a particular date range, issue a **GET** request to the following URL:
 
-## Authentication
+<div class="code">GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=&lt;start date&gt;&amp;end_date=&lt;end date&gt;</div>
 
-All analytics API requests must be authenticated.  These requests are authenticated using Wistia user credentials for a user that has access to the specified resource.
+#### Parameters
 
-To access the data programmatically, Wistia uses HTTP basic authentication.  HTTP basic authentication requires a username and password.  For this API, the username is the email address of the Wistia manager that has access to the stats for this video and the password is the password that manager uses to log in to Wistia.
+Parameter Name | Description
+---------------|------------
+start_date     | The beginning of the date range for which you would like to receive stats. Use the following format to represent October 5th, 2012: '2012-10-05'.
+end_date       | The end of the date range for which you would like to receive stats. This parameter takes the same format as start_date.
 
-If you are using a tool or method that passes HTTP basic authentication credentials in the URL rather than inserting them programmatically into header of the request, you will need to URL encode the ** @ ** in the email address of the username.  To do this, replace the ** @ ** in the email address with **%40** .
+#### The Response
 
-As always, it is recommend that you use HTTPS for these requests as using plain HTTP will result in passing Wistia credentials in plain-text.
+The response will come back as an array of objects, with each object representing the stats for a particular day.
 
+#### Fields
 
-## Examples
+The fields available for each day are as follows:
 
-To get the latest 100 play events for a media in JSON format:
+Field | Description
+------|------------
+data_date | The date which this object represents.
+loads     | The number of times a video from this account was loaded on the day in question.
+plays     | The number of times a video from this account was played on the day in question.
+hours_watched | The total amount of time spent watching videos in this account on the day in question.
 
-	
-<pre><code class="language-markup">curl -u <email>:<password> https://<account>.wistia.com/stats/medias/<media id>/events.json?filter=view&limit=100</code></pre>
+#### Examples
 
+##### JSON
 
-To get the play events for the first day of March, 2010 in CSV format:
+**Status:** 200 OK
 
-	
-<pre><code class="language-markup">curl -u <email>:<password> https://<account>.wistia.com/stats/medias/<media id>/events.csv?filter=view&limit=1000&start_date=2010-03-01&end_date=2010-03-01 > 2010-03-01_events.csv</code></pre>
+<pre><code class="language-json">
+[
+  {
+    &quot;data_date&quot;: &quot;2012-10-09&quot;,
+    &quot;loads&quot;: 100,
+    &quot;plays&quot;: 80,
+    &quot;hours_watched&quot;: 21.9
+  },
+  {
+    &quot;data_date&quot;: &quot;2012-10-08&quot;,
+    &quot;loads&quot;: 60,
+    &quot;plays&quot;: 45,
+    &quot;hours_watched&quot;: 12.4
+  }
+]
+</code></pre>
+
+## Project
+
+### Project: Show
+
+The stats API allows you to retrieve information about all the videos in a project.
+
+#### The Request
+
+In order to retrieve stats for a project, issue a **GET** request to the following URL:
+
+<div class="code">GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;.json</div>
+
+#### The Response
+
+The response will come back as a single object representing the stats for this project.
+
+#### Fields
+
+Field | Description
+------|------------
+loads | The total number of times the videos in this project have been loaded.
+plays | The total number of times the videos in this project have been played.
+hours_watched | The total time spent viewing the videos in this project.
+number_of_videos | The total number of videos in this project.
+
+#### Examples
+
+##### JSON
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+{
+  &quot;loads&quot;: 5498,
+  &quot;plays&quot;: 3942,
+  &quot;hours_watched&quot;: 59.8,
+  &quot;number_of_videos&quot;: 8,
+}
+</code></pre>
+
+### Project: By Date
+
+You can use the stats API to get information about a project for a specific date range.
+
+#### The Request
+
+In order to get stats for a project during a range of dates, issue a **GET** request to the following URL:
+
+<div class="code">GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;/by_date.json</div>
+
+#### Parameters
+
+Parameter | Description
+----------|------------
+start_date | The beginning of the date range. Use the following format to represent October 5th, 2012: '2012-10-05'.
+end_date | The end of the date range. This parameter takes the same format as start_date.
+
+#### The Response
+
+The response will be an array of objects, with each object representing the information for a particular date.
+
+#### Fields
+
+Field | Description
+------|------------
+data_date | The date for which this object contains project data.
+loads | The number of times any video from the project was loaded on the given date.
+plays | The number of times any video from the project was played on the given date.
+hours_watched | The total amount of time spent watching videos in the project on the given date.
+
+## Media
+
+### Media: Show
+
+The Wistia stats API can be used to retrieve stats for any given video.
+
+#### The Request
+
+In order to get stats for a video, issue a **GET** request to the following URL:
+
+<div class="code">GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;.json</div>
+
+#### The Response
+
+#### Fields
+
+Field | Description
+------|------------
+loads | The total number of times this video has been loaded.
+plays | The total number of times this video has been played.
+play_rate | The percentage of visitors who clicked play (between 0 and 1).
+hours_watched | The total time spent watching this video.
+engagement | The average percentage of the video that gets viewed (between 0 and 1).
+visitors | The total number of unique people that have loaded this video.
+
+### Media: By Date
+
+#### The Request
+
+<div class="code">GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/by_date.json</div>
+
+#### Parameters
+
+Parameter | Description
+----------|------------
+start_date | The beginning of the date range for which you want to retrieve data.
+end_date | The end of the date range for which you want to retrieve data.
+
+#### The Response
+
+Each object in the response array will give the stats for 1 day's worth of data. The objects' fields are listed below:
+
+#### Fields
+
+Field | Description
+------|------------
+data_date | The date for which this object contains stats about the video.
+loads | The number of times this video was loaded on the given day.
+plays | The number of times this video was played on the given day.
+hours_watched | The total time spent watching this video on the given day.
+
+### Media: Engagement
+
+Using the stats API, you can retrieve the data used to construct the engagement graphs at the top of the stats page for any video in Wistia.
+
+#### The Request
+
+<div class="code">GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/engagement.json</div>
+
+#### Parameters
+
+This method does not take any parameters besides the media-id that is already specified in the URL.
+
+#### The Response
+
+The response will come back as a single object that represents the main engagement data:
+
+#### Fields
+
+Field | Description
+------|------------
+engagement | The percentage of the video that was viewed, averaged across all viewing sessions.
 
