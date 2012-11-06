@@ -64,7 +64,7 @@ task :np do
 
   puts "creating a new post, entitled #{title}"
 
-  path = "_posts/#{ Date.today }-#{ slug }.md"
+  path = "_posts/#{ slug }.md"
 
   if File.exist?(path)
   	puts "[WARN] File exists - skipping create"
