@@ -15,7 +15,7 @@ The stats API allows you to retrieve some account-wide information.
 
 In order to tell Wistia that you want stats for your account, issue a **GET** request to the following URL:
 
-<div class="code">GET https://api.wistia.com/v1/stats/account.json</div>
+`GET https://api.wistia.com/v1/stats/account.json`
 
 #### The Response
 
@@ -35,7 +35,7 @@ You can also get account-wide stats for a particular date range.
 
 In order to tell Wistia that you want account-wide stats for a particular date range, issue a **GET** request to the following URL:
 
-<div class="code">GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=&lt;start date&gt;&amp;end_date=&lt;end date&gt;</div>
+`GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=&lt;start date&gt;&amp;end_date=&lt;end date&gt;`
 
 #### Parameters
 
@@ -92,7 +92,7 @@ The stats API allows you to retrieve information about all the videos in a proje
 
 In order to retrieve stats for a project, issue a **GET** request to the following URL:
 
-<div class="code">GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;.json</div>
+`GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;.json`
 
 #### The Response
 
@@ -130,7 +130,7 @@ You can use the stats API to get information about a project for a specific date
 
 In order to get stats for a project during a range of dates, issue a **GET** request to the following URL:
 
-<div class="code">GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;/by_date.json</div>
+`GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;/by_date.json`
 
 #### Parameters
 
@@ -162,7 +162,7 @@ The Wistia stats API can be used to retrieve stats for any given video.
 
 In order to get stats for a video, issue a **GET** request to the following URL:
 
-<div class="code">GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;.json</div>
+`GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;.json`
 
 #### The Response
 
@@ -181,7 +181,7 @@ visitors | The total number of unique people that have loaded this video.
 
 #### The Request
 
-<div class="code">GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/by_date.json</div>
+`GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/by_date.json`
 
 #### Parameters
 
@@ -209,7 +209,7 @@ Using the stats API, you can retrieve the data used to construct the engagement 
 
 #### The Request
 
-<div class="code">GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/engagement.json</div>
+`GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/engagement.json`
 
 #### Parameters
 
