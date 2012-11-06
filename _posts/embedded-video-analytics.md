@@ -184,7 +184,7 @@ Once your viewer is tagged with an email, you can sort to view them in the Viewe
 
 While we work hard on making our analytics interface powerful yet easy-to-use, it can sometimes be necessary to export your stats data for further analysis. Read on if you'd like to learn how that is done.
 
-First, head to the stats page for one of your videos (it has a link like `http://&lt;account&gt;.wistia.com/stats/medias/&lt;id&gt;`).
+First, head to the stats page for one of your videos (it has a link like `http://<account>.wistia.com/stats/medias/<id>`).
 
 On the right hand side of the bar that separates the aggregate statistics from the video heatmaps, a link is shown which says `Export as CSV`.
 
