@@ -11,7 +11,7 @@ We know that keeping your data **safe, available,
 and backed up** is critical when trusting a service provider with your data. We don't
 expect anything less from our vendors and neither should you.
 
-The security PDF below is an overview of
+We've designed
 our external and internal security policies and procedures so that you can relax and
 focus on what you do best – running your business.
 
