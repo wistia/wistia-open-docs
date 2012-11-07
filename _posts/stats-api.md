@@ -224,4 +224,108 @@ The response will come back as a single object that represents the main engageme
 Field | Description
 ------|------------
 engagement | The percentage of the video that was viewed, averaged across all viewing sessions.
+engagement_data | An array which can be used as the data source for creating an engagement graph. Normally, each cell in the array represents how many times 1 second of the video has been viewed. However, for longer form content (over 1000 seconds), the array will be scaled down to 1000 items, with each item representing more than 1 second of playback.
 
+## Visitors
+
+### Visitors: List
+
+This method allows you to retrieve a list of visitors that have watched videos in your account.
+
+#### The Request
+
+`GET https://api.wistia.com/v1/stats/visitors.json`
+
+#### Parameters
+
+Parameter | Description
+----------|------------
+page | The page of results that you want, based on the per_page parameter.
+per_page | The maximum number of results to return. This value is capped at 100.
+filter | This parameter is optional and can take one of two values: 'name' or 'email'. Without the parameter, all visitors are returned. For the value 'name', only named visitors are returned. For the value 'email', only visitors with an email address are returned.
+
+#### The Response
+
+The response will be an array of objects. Each object represents a single visitor with the following fields:
+
+#### Fields
+
+Field | Description
+------|------------
+created_at | When the visitor was created - i.e. when they first loaded a video in the account.
+last_active_at | The last time the visitor played a video.
+last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
+loads | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
+plays | The total number of videos that have been viewed by this visitor.
+visitor_identity | An object with 2 fields (name and email) that represents and available identity info for this visitor.
+
+### Visitors: Show
+
+This method allows you to retrieve the information for a single visitor.
+
+#### The Request
+
+`GET https://api.wistia.com/v1/stats/visitors/&lt;visitor-key&gt;.json`
+
+#### Parameters
+
+This method does not take any parameters besides the visitor-key that is already specified in the URL.
+
+#### The Response
+
+The response will be a single object representing the visitor's information. It contains the following fields:
+
+#### Fields
+
+Field | Description
+------|------------
+created_at | When the visitor was created - i.e. when they first loaded a video in the account.
+last_active_at | The last time the visitor played a video.
+last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
+loads | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
+plays | The total number of videos that have been viewed by this visitor.
+visitor_identity | An object with 2 fields (name and email) that represents and available identity info for this visitor.
+
+## Events
+
+### Events: List
+
+This method allows you to retrieve a list of events (viewing sessions) from your account.
+
+#### The Request
+
+`GET https://api.wistia.com/v1/stats/events.json`
+
+#### Parameters
+
+Parameter | Description
+----------|------------
+media_id  | An optional parameter specifying the video for which you would like to retrieve events.
+visitor_id | An optional parameter specifying the visitor for which you would like to retrieve events.
+page_size | The maximum number of events to retrieve. This number is capped at 100. If you need to get more than 100 events, please issue multiple requests.
+offset | The first event to return from the result set. Useful if you need to get more than 100 events.
+
+#### The Response
+
+The response will be an array of objects. Each one represents a single viewing session (event) and has the following fields:
+
+#### Fields
+
+Field | Description
+------|------------
+received_at | The date and time that the event happened.
+visitor_key | The id of the visitor, which can be used to retrieve further information about them.
+embed_url | The URL of the page where the video was viewed.
+client_kbps | The user's connection speed while downloading the video.
+percent_viewed | How much of the video was watched during this session (0 to 100).
+ip | The viewer's IP address.
+org | The organization that the IP address belongs to.
+country | The viewer's country, based on IP.
+region | The viewer's region, based on IP.
+city | The viewer's city, based on IP.
+lat | The latitude of the viewer's IP.
+lon | The longitude of the viewer's IP.
+email | The viewer's email address, if available.
+media_id | An identifier indicating which video was watched.
+media_url | The video's URL in the Wistia account.
+media_name | The name of the video.
