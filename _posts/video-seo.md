@@ -6,7 +6,7 @@ description: Video SEO is a powerful tool for your business, and here at Wistia 
 post_intro: <p>Video SEO is the act of proactively submitting your content, through what’s called a “Video Sitemap", so that it’s easier for Google and other search engines to find it.</p><p>Once your video sitemap is submitted your videos can:</p><ul><li>Appear inline in universal search results</li><li>Send people directly to your website when clicked on in search results</li><li>Boost overall placement for your page</li><li>Appear in video specific search results, like http://video.google.com</li></ul>
 ---
 
-<div class="expert_tip">
+<div class="expert_tip video_seo">
   <h4><i class='icon-thumbs-up'></i> Expert Tips!</h4>
   <p>Our friend <strong>Casey Henry</strong>, web manager from <a href='http://seomoz.org'>SEOmoz</a>, provided some awesome tips on Video SEO in the article below.</p>
 </div>
@@ -43,7 +43,7 @@ The first thing you need to do is authorize Wistia to host your video sitemap an
  
 ## Robots.txt File Setup
 
-<div class="expert_tip">
+<div class="expert_tip video_seo">
   <h4><i class='icon-thumbs-up'></i> Robots.txt</h4>
   <p>When search engines crawl your web content they first look for a file called ‘robots.txt’ in the root of your website. This file tells search engines what to index on your site and also where your video sitemap is located.</p>
   <p>A common SEO problem is blocking search engines from crawling your website with robots.txt, make sure you allow search engines to crawl and find your content.</p>
@@ -67,7 +67,7 @@ Once you have added the line to your robots.txt and typed the URL, click the <sp
 
 The next step is on Google's end. Google will review the sitemap entries, and check the content they point to (i.e. where you said the video was). It can take up to a week to complete this step.
 
-## Embed Your Videos Using the SEO Embed Type
+## Embed Video Using the SEO Embed Type
 
 After your robots.txt file is verified, you will 'unlock' the *SEO* embed code type, which you'll need to use to make sure videos are picked up in search results.
 
@@ -90,7 +90,7 @@ In order to have the SEO embed type available for your embeds, you need to have 
 
 This will then bring up a dialog box where you can enter the relevant information about your video (like tags, description).
 
-<div class="expert_tip">
+<div class="expert_tip video_seo">
   <h4><i class='icon-thumbs-up'></i> Making Sitemap Entries</h4>
   <p><strong>Title:</strong> I’ve found that having the title of your video match the meta title of your page will help a video snippet appear along with your page in search engine result pages.</p>
   <p><strong>Description:</strong> Be as descriptive as possible but make sure you are not going overboard with keywords you want your video to rank for. Make the description useful for viewers, not for bots.</p>
@@ -124,7 +124,7 @@ In the end, the goal is to get your content to rank higher in search engines lik
 *  Show up as a featured video in search engine results pages
 *  Display in video specific search results
 
-<div class="expert_tip">
+<div class="expert_tip video_seo">
   <h4><i class='icon-thumbs-up'></i> Getting to the Top!</h4>
   <p>Make sure you have related content on your page so that search engines have context surrounding the video. Once your snippet is shown in search results, you should see a nice increase in click-through-rates!</p>
 </div>

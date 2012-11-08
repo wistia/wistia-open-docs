@@ -479,7 +479,6 @@ code
 .expert_tip
   @extend .post_callout_boxes
   position: relative
-  background: transparent url(http://embed.wistia.com/deliveries/661c19b720a884cbafd7b199d63d1d14874cf6e2.png) 110% 60% no-repeat
   overflow: hidden
   +callout-box($background_blue)
   h3
@@ -495,6 +494,22 @@ code
     margin: 0
     margin-top: 5px
     display: block
+
+=expert-tip-images($y)
+  background:
+    repeat: no-repeat
+    position: 110% #{$y}
+
+.video_seo
+  +expert-tip-images(60%)
+  background:
+    image: url(http://embed.wistia.com/deliveries/661c19b720a884cbafd7b199d63d1d14874cf6e2.png)
+
+.expression_engine
+  +expert-tip-images(40%)
+  background:
+    image: url(http://embed.wistia.com/deliveries/035aae7c13d02975a0e714b86125e65a01d7a792.png)
+
 ////////// post intro paragraph styles ////////
 
 .post_intro

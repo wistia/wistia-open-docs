@@ -33,6 +33,8 @@ This was updated by dev-god [TravisCarden](http://drupal.org/user/236758), thank
 
 Posting a video on an Expression Engine page can be accomplished using any embed code, or through oEmbed links through a special plug-in lovingly designed by user [Antenna](http://devot-ee.com/add-ons/antenna).
 
+[See this guide]({{ '/expression-engine' | post_url }}) to embedding Wistia video in your Expression Engine template.
+
 <div class="clear"></div>
 
 ## Joomla
