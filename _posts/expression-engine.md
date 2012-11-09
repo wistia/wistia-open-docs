@@ -1,17 +1,17 @@
 ---
-title: Using Wistia With Expression Engine
+title: Using Wistia With ExpressionEngine
 layout: post
-description: See how to embed video into Expression Engine
+description: See how to embed video into ExpressionEngine
 category: Integrations
 ---
 
 {% post_image hashed_id: 'aaffdd3319f6a532ecb071811f2fd071e57a0a46', width: 200, class: 'integration_logo float_left' %}
 
-Expression Engine is a pretty flexible CMS - there are a bunch of different ways to safely embed Wistia videos into an Expression Engine template. The approach is mostly up to the user/developer.
+ExpressionEngine is a pretty flexible CMS - there are a bunch of different ways to safely embed Wistia videos into an ExpressionEngine template. The approach is mostly up to the user/developer.
 
 <div class="expert_tip expression_engine">
   <h4><i class='icon-thumbs-up'></i> Expert Tips!</h4>
-  <p>Expression Engine expert <strong>Kyle Cotter</strong>, founder of <a href='http://cotterinteractive.com'>Cotter Interactive</a>, showed us how embedding is done in Expression Engine.</p>
+  <p>ExpressionEngine expert <strong>Kyle Cotter</strong>, founder of <a href='http://cotterinteractive.com'>Cotter Interactive</a>, showed us how embedding is done in ExpressionEngine.</p>
 </div>
 
 ## Set Up a Channel & Custom Fields
