@@ -2,7 +2,7 @@
 title: Integrations
 layout: post
 description: Wistia plays well with lots of 3rd party services. See some of the best, and how to use them, in this article.
-post_intro: <p>As we update our embedding processes and APIs, Wistia will get better and better at integrating with other top-notch services. On this doc page, we'll do our best to keep track of places where Wistia works out-of-the-box for embedding, and also where deeper integrations have been built</p>
+post_intro: <p>As we update our embedding processes and APIs, Wistia will get better and better at integrating with other top-notch services. On this doc page, we'll do our best to keep track of places where Wistia works out-of-the-box for embedding, and also where deeper integrations have been built out by our awesome friends.</p>
 ---
 
 ## Wordpress
