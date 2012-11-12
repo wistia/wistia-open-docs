@@ -19,8 +19,6 @@ In order to tell Wistia that you want stats for your account, issue a **GET** re
 
 #### The Response
 
-#### Fields
-
 Field | Description
 ------|------------
 loads | The total number of times any video from this account has been loaded.
@@ -35,7 +33,7 @@ You can also get account-wide stats for a particular date range.
 
 In order to tell Wistia that you want account-wide stats for a particular date range, issue a **GET** request to the following URL:
 
-`GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=&lt;start date&gt;&amp;end_date=&lt;end date&gt;`
+`GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=<start date>&end_date=<end date>`
 
 #### Parameters
 
@@ -48,8 +46,6 @@ end_date       | The end of the date range for which you would like to receive s
 
 The response will come back as an array of objects, with each object representing the stats for a particular day.
 
-#### Fields
-
 The fields available for each day are as follows:
 
 Field | Description
@@ -61,7 +57,7 @@ hours_watched | The total amount of time spent watching videos in this account o
 
 #### Examples
 
-##### JSON
+#### Example JSON Response
 
 **Status:** 200 OK
 
@@ -92,13 +88,11 @@ The stats API allows you to retrieve information about all the videos in a proje
 
 In order to retrieve stats for a project, issue a **GET** request to the following URL:
 
-`GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;.json`
+`GET https://api.wistia.com/v1/stats/projects/<project-id>.json`
 
 #### The Response
 
 The response will come back as a single object representing the stats for this project.
-
-#### Fields
 
 Field | Description
 ------|------------
@@ -109,7 +103,7 @@ number_of_videos | The total number of videos in this project.
 
 #### Examples
 
-##### JSON
+#### Example JSON Response
 
 **Status:** 200 OK
 
@@ -130,7 +124,7 @@ You can use the stats API to get information about a project for a specific date
 
 In order to get stats for a project during a range of dates, issue a **GET** request to the following URL:
 
-`GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;/by_date.json`
+`GET https://api.wistia.com/v1/stats/projects/<project-id>/by_date.json`
 
 #### Parameters
 
@@ -142,8 +136,6 @@ end_date | The end of the date range. This parameter takes the same format as st
 #### The Response
 
 The response will be an array of objects, with each object representing the information for a particular date.
-
-#### Fields
 
 Field | Description
 ------|------------
@@ -162,7 +154,7 @@ The Wistia stats API can be used to retrieve stats for any given video.
 
 In order to get stats for a video, issue a **GET** request to the following URL:
 
-`GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;.json`
+`GET https://api.wistia.com/v1/stats/medias/<media-id>.json`
 
 #### The Response
 
@@ -181,7 +173,7 @@ visitors | The total number of unique people that have loaded this video.
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/by_date.json`
+`GET https://api.wistia.com/v1/stats/medias/<media-id>/by_date.json`
 
 #### Parameters
 
@@ -193,8 +185,6 @@ end_date | The end of the date range for which you want to retrieve data.
 #### The Response
 
 Each object in the response array will give the stats for 1 day's worth of data. The objects' fields are listed below:
-
-#### Fields
 
 Field | Description
 ------|------------
@@ -209,7 +199,7 @@ Using the stats API, you can retrieve the data used to construct the engagement 
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/engagement.json`
+`GET https://api.wistia.com/v1/stats/medias/<media-id>/engagement.json`
 
 #### Parameters
 
@@ -218,8 +208,6 @@ This method does not take any parameters besides the media-id that is already sp
 #### The Response
 
 The response will come back as a single object that represents the main engagement data:
-
-#### Fields
 
 Field | Description
 ------|------------
@@ -265,7 +253,7 @@ This method allows you to retrieve the information for a single visitor.
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/visitors/&lt;visitor-key&gt;.json`
+`GET https://api.wistia.com/v1/stats/visitors/<visitor-key>.json`
 
 #### Parameters
 
