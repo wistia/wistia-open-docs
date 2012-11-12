@@ -158,8 +158,6 @@ In order to get stats for a video, issue a **GET** request to the following URL:
 
 #### The Response
 
-#### Fields
-
 Field | Description
 ------|------------
 loads | The total number of times this video has been loaded.
@@ -263,8 +261,6 @@ This method does not take any parameters besides the visitor-key that is already
 
 The response will be a single object representing the visitor's information. It contains the following fields:
 
-#### Fields
-
 Field | Description
 ------|------------
 created_at | When the visitor was created - i.e. when they first loaded a video in the account.
@@ -297,8 +293,6 @@ offset | The first event to return from the result set. Useful if you need to ge
 
 The response will be an array of objects. Each one represents a single viewing session (event) and has the following fields:
 
-#### Fields
-
 Field | Description
 ------|------------
 received_at | The date and time that the event happened.
@@ -317,3 +311,19 @@ email | The viewer's email address, if available.
 media_id | An identifier indicating which video was watched.
 media_url | The video's URL in the Wistia account.
 media_name | The name of the video.
+
+### Events: Show
+
+This method gives you the information about a single event from your account.
+
+#### The Request
+
+`GET https://api.wistia.com/v1/stats/events/<event-key>.json`
+
+#### Parameters
+
+This method does not take any parameters other than the event key already specified in the URL.
+
+#### The Response
+
+The response will be a single object representing the information about the event. The format and fields of this object will be the same as can be found in the Events: List method.
