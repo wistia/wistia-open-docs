@@ -61,6 +61,10 @@ get "/search/:q" do
     end
   end
 
+  Tire.configure do
+    logger 'elasticsearch.log'
+  end
+
   results_list = s.results.map do |result|
     {
       :title => result.title,
