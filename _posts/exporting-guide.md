@@ -65,6 +65,8 @@ Exporting from Final Cut X is similar to iMovie export.  To reach the Export Men
 
 From the file format drop-down, select the "H.264" codec.  Then click "next", and save the file in a useful location.
 
+{{ "If you are using the 'Chapters' functionality in FCP X, you'll need to disable them before exporting, or the upload won't work." | note }}
+
 ---
 
 ## iMovie
