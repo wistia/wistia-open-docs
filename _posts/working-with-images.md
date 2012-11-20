@@ -25,7 +25,7 @@ image_play_button_color | RGB or RGBA hex color string | 68656080
 "Geometry Strings" follow the the same format Image Magick uses for resizing and cropping images.
 [Here is a good reference on geometry strings](http://www.simplesystems.org/RMagick/doc/imusage.html#geometry).
 
-### Using oEmbed
+## Using oEmbed
 
 When using the oEmbed endpoint, part of the JSON returned is the `thumbnail_url`. By parsing that and appending parameters (listed above), we can generate a thumbnail image (for a custom popover implementation, or for showing decoratively on the page).
 
@@ -67,7 +67,32 @@ thumbnail_url = json_object.thumbnail_url + '&' + 'image_resize=450'
 
 We could have also "chopped off" the existing `image_crop_resized` parameter first, and then appended the `image_resize` using a `?` instead of an ampersand.
 
-### Other Examples
+## Using the Wistia Data API Ruby Gem
+
+When making a request against the [Data API]({{ '/data-api' | post_url }}), the media assets includes a still image (the thumbnail!).
+
+<pre><code class="language-vim">
+m = Wistia::Media.first
+m.assets.select{ |a| a.attributes["type"] == "StillImageFile" }.first
+=> #<Wistia::Media::Asset:0x007fa67caced68 @attributes={
+    "url"=>"http://embed.wistia.com/deliveries/b300126144f62ba2942ec4a4f29e949a47e16f12.bin",
+    "width"=>640, "height"=>360, "fileSize"=>48442, "contentType"=>"image/jpeg", 
+    "type"=>"StillImageFile"
+  }, @prefix_options={}, @persisted=false>
+url = _.url
+=> "http://embed.wistia.com/deliveries/b300126144f62ba2942ec4a4f29e949a47e16f12.bin"
+</code></pre>
+
+You can then apply the same geometry strings to the thumbnail URL - I would recommend updating the extension as well.
+
+<pre><code class="language-vim">
+name  = url.chomp(File.extname(url)) + ".jpg?image_crop_resized=640x360"
+=> "http://embed.wistia.com/deliveries/b300126144f62ba2942ec4a4f29e949a47e16f12.jpg?image_crop_resized=640x360"
+</code></pre>
+
+Pretty fun, right?
+
+## Other Examples
 
 Here are some other examples, just for kicks!
 
