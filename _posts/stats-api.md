@@ -25,6 +25,18 @@ loads | The total number of times any video from this account has been loaded.
 plays | The total number of times any video from this account has been played.
 hours_watched | The total amount of time spent watching the videos in this account.
 
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+  {
+    &quot;loads&quot;: 1000,
+    &quot;plays&quot;: 400,
+    &quot;hours_watched&quot;: 21.9
+  }
+</code></pre>
+
 ### Account: By Date
 
 You can also get account-wide stats for a particular date range.
@@ -54,8 +66,6 @@ data_date | The date which this object represents.
 loads     | The number of times a video from this account was loaded on the day in question.
 plays     | The number of times a video from this account was played on the day in question.
 hours_watched | The total amount of time spent watching videos in this account on the day in question.
-
-#### Examples
 
 #### Example JSON Response
 
@@ -101,8 +111,6 @@ plays | The total number of times the videos in this project have been played.
 hours_watched | The total time spent viewing the videos in this project.
 number_of_videos | The total number of videos in this project.
 
-#### Examples
-
 #### Example JSON Response
 
 **Status:** 200 OK
@@ -143,6 +151,27 @@ data_date | The date for which this object contains project data.
 loads | The number of times any video from the project was loaded on the given date.
 plays | The number of times any video from the project was played on the given date.
 hours_watched | The total amount of time spent watching videos in the project on the given date.
+
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+[
+  {
+    &quot;data_date&quot;: '2012-11-20',
+    &quot;loads&quot;: 5498,
+    &quot;plays&quot;: 3942,
+    &quot;hours_watched&quot;: 59.8
+  },
+  {
+    &quot;data_date&quot;: '2012-11-21',
+    &quot;loads&quot;: 3568,
+    &quot;plays&quot;: 1941,
+    &quot;hours_watched&quot;: 32.4
+  },
+]
+</code></pre>
 
 ## Media
 
