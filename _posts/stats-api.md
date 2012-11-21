@@ -327,7 +327,6 @@ Field | Description
 received_at | The date and time that the event happened.
 visitor_key | The id of the visitor, which can be used to retrieve further information about them.
 embed_url | The URL of the page where the video was viewed.
-client_kbps | The user's connection speed while downloading the video.
 percent_viewed | How much of the video was watched during this session (0 to 100).
 ip | The viewer's IP address.
 org | The organization that the IP address belongs to.
@@ -340,6 +339,7 @@ email | The viewer's email address, if available.
 media_id | An identifier indicating which video was watched.
 media_url | The video's URL in the Wistia account.
 media_name | The name of the video.
+iframe_heatmap_url | The URL of an HTML page that will render the heatmap for this event.
 
 ### Events: Show
 
