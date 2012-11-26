@@ -1,4 +1,4 @@
-# http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
+# HT: http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
 desc "Pre Jekyll rendering stuff"
 task :pre_jekyll do
   puts "Doing pre-Jekyll schtuffs ..."
@@ -55,7 +55,7 @@ task :update_from_git do
 end
 
 # add a title to a post like np title="Blah this is my title"
-desc "Create a new blog post"
+desc "Create a new post"
 task :np do
   require 'date'
 
