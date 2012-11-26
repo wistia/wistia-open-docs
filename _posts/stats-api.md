@@ -358,3 +358,11 @@ This method does not take any parameters other than the event key already specif
 #### The Response
 
 The response will be a single object representing the information about the event. The format and fields of this object will be the same as can be found in the Events: List method.
+
+### Events: Heatmap
+
+You can get the heatmap for any event by constructing the following URL:
+
+`GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html`
+
+Replace the &lt;event-key&gt; token with the event_key that indicates which heatmap you would like to see. You can get the &lt;event-key&gt; value from other parts of this API or from the Wistia player itself. This URL is meant to be used as the target of an iframe which can then be used to render the heatmap within your own pages.
