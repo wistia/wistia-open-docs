@@ -35,11 +35,35 @@ Wistia does have a few specifications and guidelines we recommend following in o
 </ul>
 </div>
 
+**And now, a little more explanation on why these settings are preferable:**
+
+After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like iOS devices) and we also get these versions ready to stream on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
+
+The largest resolution we create is 720p, or *1280px by 720px*.  If you upload any video larger than 1280px wide, we're going to create the following derivatives:
+
+* 1280px wide HD
+* 960px wide MD
+* 640px wide SD
+* iPhone
+* HD iPhone (for iPad3)
+
+We recommend uploading video at 1280px wide because it is the most efficient approach - your original files won't be taking up extra space in your account, and your uploading/processing times will be as speedy as possible as well.
+
+## How Wistia Does HD
+
+Because the way we do HD is a little different than more, it bears mentioning.
+
+When your viewers watch a video at 'embedding' size (640px - 960px wide) it is a waste of bandwidth to show them HD - at that size, the difference in picture is nearly imperceptible.  The HD files are also much *much* larger, which means the viewer can also have that stuttering playback experience. Not good. Instead, we have chosen smart standard definition defaults (what we call *Smart Encoding*) based on your video type (i.e. screencast, action, interview) and that is the version that is shown.
+
+Auto-HD takes over when the viewer 'full screens' the video.  At the larger size, the quality difference is definitely apparent.  We do a background bandwidth test, to make sure the viewer's download speed is fast enough to support the HD video smoothly, and if so, the stream automatically switches over.
+
+{{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, and we have created a Retina-friendly version for the iPad 3." | note }}
+
 ## Formats Wistia Supports
 
-Wistia accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in an MP4 or MOV format*. 
+Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in an MP4 or MOV format*. 
 
-If a file type is not explicitly supported (or recognized) by Wistia, users will simply be able to download the file.
+If a file type is not supported (or recognized), users will simply be able to download the file.
 
 Media Type | Formats Accepted
 -----------|------------------
