@@ -69,6 +69,14 @@ From the file format drop-down, select the "H.264" codec.  Then click "next", an
 
 ---
 
+## After Effects
+
+If you are adding your After Effects export back into an editor like Avid or Final Cut (our normal workflow), match the native sequence settings you're using in your edit.  Make sure you match codec (*ProRes, ProRes LT, HDV*), frame size (*1920x1080, 1440x1080*), and frame rate (*24, 23.98, 29.97*).
+
+If you are exporting out of After Effects for upload to Wistia, use *h.264 quicktime settings* and *1280x720* frame size.
+
+---
+
 ## iMovie
 
 To export your iMovie video project, select the project you wish to export from the iMovie Project Library and choose Share &gt; Export Movie.
