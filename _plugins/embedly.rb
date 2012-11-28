@@ -26,7 +26,7 @@ module Jekyll
 
     def render(context)
       @config  = context.registers[:site].config['embedly']
-      @api_key = @config['api_key']
+      @api_key = $config.embedly_api_key
 
       if @api_key.nil?
         raise "You must provide embed.ly api key."
@@ -40,7 +40,7 @@ module Jekyll
     def embed(url)
       provider     = Domainatrix.parse(url).domain
       param_string = ""
-      params       = (@config[provider] or {}).merge @parameters
+      params       = (@config or {}).merge @parameters
 
       params.each do |key, value|
         if @@EMBEDLY_PARAMETERS.member? key

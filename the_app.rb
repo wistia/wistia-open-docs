@@ -13,8 +13,8 @@ require_relative './_config'
 $stdout.sync = true
 
 use Rack::Rewrite do
-  rewrite %r{#{BASEPATH}(.*)}, '$1'
-  r301 %r{/start/?}, "#{BASEPATH}"
+  rewrite %r{#{$config.basepath}(.*)}, '$1'
+  r301 %r{/start/?}, "#{$config.basepath}"
 end
 
 class SuperStatic

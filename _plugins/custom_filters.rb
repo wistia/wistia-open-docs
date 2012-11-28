@@ -4,15 +4,15 @@ module Jekyll
 
   module AssetFilter
     def post_url(input)
-      "#{BASEPATH}#{input}"
+      "#{$config.basepath}#{input}"
     end
 
     def stylesheet_url(input)
-      "#{BASEPATH}#{input}.css"
+      "#{$config.basepath}#{input}.css"
     end
 
     def javascript_url(input)
-      "#{BASEPATH}#{input}.js"
+      "#{$config.basepath}#{input}.js"
     end
 
     def category_url(cat)
