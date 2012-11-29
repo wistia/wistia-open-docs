@@ -98,6 +98,7 @@ Pardot  |  `%%email%%`
 Vertical Response  |  `{EMAIL_ADDRESS}`
 ExactTarget  |  `%%Email Address%%`
 Convio Luminate | `[[S1:primary_email]]`
+Streamsend | `{`{`{email_address}`}`}`
 
 ---
 
