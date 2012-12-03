@@ -257,7 +257,7 @@ Parameter | Description
 ----------|------------
 page | The page of results that you want, based on the per_page parameter.
 per_page | The maximum number of results to return. This value is capped at 100.
-filter | This parameter is optional and can take one of two values: 'name' or 'email'. Without the parameter, all visitors are returned. For the value 'name', only named visitors are returned. For the value 'email', only visitors with an email address are returned.
+filter | This parameter is optional and can take one of two values: 'has_name' or 'has_email'. Without the parameter, all visitors are returned. For the value 'has_name', only named visitors are returned. For the value 'has_email', only visitors with an email address are returned.
 
 #### The Response
 
