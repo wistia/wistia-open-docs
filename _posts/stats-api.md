@@ -215,7 +215,7 @@ Each object in the response array will give the stats for 1 day's worth of data.
 
 Field | Description
 ------|------------
-data_date | The date for which this object contains stats about the video.
+date | The date for which this object contains stats about the video.
 loads | The number of times this video was loaded on the given day.
 plays | The number of times this video was played on the given day.
 hours_watched | The total time spent watching this video on the given day.
