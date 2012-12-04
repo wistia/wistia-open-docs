@@ -62,7 +62,7 @@ The fields available for each day are as follows:
 
 Field | Description
 ------|------------
-data_date | The date which this object represents.
+date      | The date which this object represents.
 loads     | The number of times a video from this account was loaded on the day in question.
 plays     | The number of times a video from this account was played on the day in question.
 hours_watched | The total amount of time spent watching videos in this account on the day in question.
@@ -74,13 +74,13 @@ hours_watched | The total amount of time spent watching videos in this account o
 <pre><code class="language-json">
 [
   {
-    &quot;data_date&quot;: &quot;2012-10-09&quot;,
+    &quot;date&quot;: &quot;2012-10-09&quot;,
     &quot;loads&quot;: 100,
     &quot;plays&quot;: 80,
     &quot;hours_watched&quot;: 21.9
   },
   {
-    &quot;data_date&quot;: &quot;2012-10-08&quot;,
+    &quot;date&quot;: &quot;2012-10-08&quot;,
     &quot;loads&quot;: 60,
     &quot;plays&quot;: 45,
     &quot;hours_watched&quot;: 12.4
@@ -258,6 +258,7 @@ Parameter | Description
 page | The page of results that you want, based on the per_page parameter.
 per_page | The maximum number of results to return. This value is capped at 100.
 filter | This parameter is optional and can take one of two values: 'has_name' or 'has_email'. Without the parameter, all visitors are returned. For the value 'has_name', only named visitors are returned. For the value 'has_email', only visitors with an email address are returned.
+search | If this parameter is specified, only visitors whose name or email address starts with the given value will be returned.
 
 #### The Response
 
