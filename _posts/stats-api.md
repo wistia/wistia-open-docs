@@ -21,8 +21,8 @@ In order to tell Wistia that you want stats for your account, issue a **GET** re
 
 Field | Description
 ------|------------
-loads | The total number of times any video from this account has been loaded.
-plays | The total number of times any video from this account has been played.
+load_count | The total number of times any video from this account has been loaded.
+play_count | The total number of times any video from this account has been played.
 hours_watched | The total amount of time spent watching the videos in this account.
 
 #### Example JSON Response
@@ -31,8 +31,8 @@ hours_watched | The total amount of time spent watching the videos in this accou
 
 <pre><code class="language-json">
   {
-    &quot;loads&quot;: 1000,
-    &quot;plays&quot;: 400,
+    &quot;load_count&quot;: 1000,
+    &quot;play_count&quot;: 400,
     &quot;hours_watched&quot;: 21.9
   }
 </code></pre>
@@ -62,9 +62,9 @@ The fields available for each day are as follows:
 
 Field | Description
 ------|------------
-date      | The date which this object represents.
-loads     | The number of times a video from this account was loaded on the day in question.
-plays     | The number of times a video from this account was played on the day in question.
+date          | The date which this object represents.
+load_count    | The number of times a video from this account was loaded on the day in question.
+play_count    | The number of times a video from this account was played on the day in question.
 hours_watched | The total amount of time spent watching videos in this account on the day in question.
 
 #### Example JSON Response
@@ -75,14 +75,14 @@ hours_watched | The total amount of time spent watching videos in this account o
 [
   {
     &quot;date&quot;: &quot;2012-10-09&quot;,
-    &quot;loads&quot;: 100,
-    &quot;plays&quot;: 80,
+    &quot;load_count&quot;: 100,
+    &quot;play_count&quot;: 80,
     &quot;hours_watched&quot;: 21.9
   },
   {
     &quot;date&quot;: &quot;2012-10-08&quot;,
-    &quot;loads&quot;: 60,
-    &quot;plays&quot;: 45,
+    &quot;load_count&quot;: 60,
+    &quot;play_count&quot;: 45,
     &quot;hours_watched&quot;: 12.4
   }
 ]
@@ -106,8 +106,8 @@ The response will come back as a single object representing the stats for this p
 
 Field | Description
 ------|------------
-loads | The total number of times the videos in this project have been loaded.
-plays | The total number of times the videos in this project have been played.
+load_count | The total number of times the videos in this project have been loaded.
+play_count | The total number of times the videos in this project have been played.
 hours_watched | The total time spent viewing the videos in this project.
 number_of_videos | The total number of videos in this project.
 
@@ -117,8 +117,8 @@ number_of_videos | The total number of videos in this project.
 
 <pre><code class="language-json">
 {
-  &quot;loads&quot;: 5498,
-  &quot;plays&quot;: 3942,
+  &quot;load_count&quot;: 5498,
+  &quot;play_count&quot;: 3942,
   &quot;hours_watched&quot;: 59.8,
   &quot;number_of_videos&quot;: 8,
 }
@@ -148,8 +148,8 @@ The response will be an array of objects, with each object representing the info
 Field | Description
 ------|------------
 date | The date for which this object contains project data.
-loads | The number of times any video from the project was loaded on the given date.
-plays | The number of times any video from the project was played on the given date.
+load_count | The number of times any video from the project was loaded on the given date.
+play_count | The number of times any video from the project was played on the given date.
 hours_watched | The total amount of time spent watching videos in the project on the given date.
 
 #### Example JSON Response
@@ -160,14 +160,14 @@ hours_watched | The total amount of time spent watching videos in the project on
 [
   {
     &quot;date&quot;: '2012-11-20',
-    &quot;loads&quot;: 5498,
-    &quot;plays&quot;: 3942,
+    &quot;load_count&quot;: 5498,
+    &quot;play_count&quot;: 3942,
     &quot;hours_watched&quot;: 59.8
   },
   {
     &quot;date&quot;: '2012-11-21',
-    &quot;loads&quot;: 3568,
-    &quot;plays&quot;: 1941,
+    &quot;load_count&quot;: 3568,
+    &quot;play_count&quot;: 1941,
     &quot;hours_watched&quot;: 32.4
   },
 ]
@@ -189,8 +189,8 @@ In order to get stats for a video, issue a **GET** request to the following URL:
 
 Field | Description
 ------|------------
-loads | The total number of times this video has been loaded.
-plays | The total number of times this video has been played.
+load_count | The total number of times this video has been loaded.
+play_count | The total number of times this video has been played.
 play_rate | The percentage of visitors who clicked play (between 0 and 1).
 hours_watched | The total time spent watching this video.
 engagement | The average percentage of the video that gets viewed (between 0 and 1).
@@ -216,8 +216,8 @@ Each object in the response array will give the stats for 1 day's worth of data.
 Field | Description
 ------|------------
 date | The date for which this object contains stats about the video.
-loads | The number of times this video was loaded on the given day.
-plays | The number of times this video was played on the given day.
+load_count | The number of times this video was loaded on the given day.
+play_count | The number of times this video was played on the given day.
 hours_watched | The total time spent watching this video on the given day.
 
 ### Media: Engagement
@@ -271,8 +271,8 @@ Field | Description
 created_at | When the visitor was created - i.e. when they first loaded a video in the account.
 last_active_at | The last time the visitor played a video.
 last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
-loads | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
-plays | The total number of videos that have been viewed by this visitor.
+load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
+play_count | The total number of videos that have been viewed by this visitor.
 visitor_identity | An object with 2 fields (name and email) that represents and available identity info for this visitor.
 
 ### Visitors: Show
@@ -296,8 +296,8 @@ Field | Description
 created_at | When the visitor was created - i.e. when they first loaded a video in the account.
 last_active_at | The last time the visitor played a video.
 last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
-loads | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
-plays | The total number of videos that have been viewed by this visitor.
+load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
+play_count | The total number of videos that have been viewed by this visitor.
 visitor_identity | An object with 2 fields (name and email) that represents and available identity info for this visitor.
 
 ## Events
