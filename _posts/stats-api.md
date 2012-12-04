@@ -147,7 +147,7 @@ The response will be an array of objects, with each object representing the info
 
 Field | Description
 ------|------------
-data_date | The date for which this object contains project data.
+date | The date for which this object contains project data.
 loads | The number of times any video from the project was loaded on the given date.
 plays | The number of times any video from the project was played on the given date.
 hours_watched | The total amount of time spent watching videos in the project on the given date.
@@ -159,13 +159,13 @@ hours_watched | The total amount of time spent watching videos in the project on
 <pre><code class="language-json">
 [
   {
-    &quot;data_date&quot;: '2012-11-20',
+    &quot;date&quot;: '2012-11-20',
     &quot;loads&quot;: 5498,
     &quot;plays&quot;: 3942,
     &quot;hours_watched&quot;: 59.8
   },
   {
-    &quot;data_date&quot;: '2012-11-21',
+    &quot;date&quot;: '2012-11-21',
     &quot;loads&quot;: 3568,
     &quot;plays&quot;: 1941,
     &quot;hours_watched&quot;: 32.4
