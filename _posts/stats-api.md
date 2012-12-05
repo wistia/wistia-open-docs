@@ -268,6 +268,7 @@ The response will be an array of objects. Each object represents a single visito
 
 Field | Description
 ------|------------
+visitor_key | This is a unique identifier for the visitor.
 created_at | When the visitor was created - i.e. when they first loaded a video in the account.
 last_active_at | The last time the visitor played a video.
 last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
@@ -293,6 +294,7 @@ The response will be a single object representing the visitor's information. It 
 
 Field | Description
 ------|------------
+visitor_key | This is a unique identifier for the visitor.
 created_at | When the visitor was created - i.e. when they first loaded a video in the account.
 last_active_at | The last time the visitor played a video.
 last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
