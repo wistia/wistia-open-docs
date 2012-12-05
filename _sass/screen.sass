@@ -879,8 +879,8 @@ $dotted_border: 1px dotted $dev_bg_blue
   display: block
   font:
     family: Gill Sans, Arial, sans-serif
-    weight: normal
     size: 32px
+    weight: 100
   letter-spacing: 1px
   padding: .4em 0
   padding-left: 20px
@@ -898,11 +898,12 @@ $dotted_border: 1px dotted $dev_bg_blue
     background-position: 0 -21px
 
 #container.devhq
+  position: relative
   width: 100%
 
 .devhq_header
   background: $dev_bg_blue url('/images/bg_brackets.png') repeat-x
-  margin-bottom: 45px
+  margin-bottom: 120px
   background-size: 80px
   .header_image
     background: transparent url('/images/rainbow_brackets.png') no-repeat
@@ -921,7 +922,7 @@ $dotted_border: 1px dotted $dev_bg_blue
 
 .api_button_garden
   margin-left: 10px
-  margin-bottom: 45px
+  margin-bottom: 120px
   .column
     border-right: $dotted_border
     float: left
@@ -937,9 +938,11 @@ $dotted_border: 1px dotted $dev_bg_blue
     .api_garden_square
       height: 230px
       margin-bottom: 25px
+      &:first-child
+        margin-top: -80px
       &:last-child
         border-bottom: none
-        margin-bottom: 0
+        margin-bottom: -80px
       a 
         @extend %link_with_sprite
       p
