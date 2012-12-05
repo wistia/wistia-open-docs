@@ -17,12 +17,11 @@
     </title>
   </head>
   <body class='{{ page.type }}_layout'>
-    <div id='header'>
-      {% include header.html %}
-    </div>
+    {% include header.html %}
     <div class='{% if page.api %}api{% endif %}' id='container'>
       {{ content }}
     </div>
+    {% include footer.html %}
     <!-- scripts and such -->
     {% include addons_js.html %}
     <script src="{{ '/javascripts/search_text' | javascript_url }}"></script>

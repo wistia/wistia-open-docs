@@ -15,10 +15,12 @@
       {% if page.title == '' %} wDoc {% else %} wDoc: {{ page.title }} {% endif %}
     
   %body{ class: "{{ page.type }}_layout" }
-    #header
-      {% include header.html %}
+    {% include header.html %}
+
     #container{ class: "{% if page.api %}api{% endif %}" }
       {{ content }}
+
+    {% include footer.html %}
 
     / scripts and such
     {% include addons_js.html %}
