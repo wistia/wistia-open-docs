@@ -1313,7 +1313,7 @@ updated             | The date when the media was last changed.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
 embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/construct-an-embed-code' | post_url }}">Embedding API</a>.
 description         | A description for the media which usually appears near the top of the sidebar on the media&#039;s page.
-hashed_id           | An id that can be used to construct iframe embeds by creating an iframe that points to http://app.wistia.com/embed/medias/&lt;hashed_id&gt;
+hashed_id           | This is a unique alphanumeric identified for the media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
 
 Each asset object in the assets array has the following properties:
 
