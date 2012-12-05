@@ -839,3 +839,127 @@ table
       stroke-width: 1
     .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
       fill: #fff
+
+/////////// new clearfix ////////
+
+/* http://nicolasgallagher.com/micro-clearfix-hack/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before, .cf:after
+  content: " " /* 1 */
+  display: table /* 2 */
+
+.cf:after
+  clear: both
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf 
+  *zoom: 1
+
+
+
+//////////// devHQ //////////////////
+
+$dev_bg_blue: #1353a2
+$dotted_border: 1px dotted $dev_bg_blue
+
+%link_with_sprite
+  color: $dev_bg_blue
+  cursor: pointer
+  display: block
+  font:
+    family: Gill Sans, Arial, sans-serif
+    weight: normal
+    size: 32px
+  letter-spacing: 1px
+  padding: .4em 0
+  padding-left: 20px
+  text-transform: uppercase
+  &:after
+    content: ' '
+    background: transparent url('/images/api_link_sprite.png') no-repeat
+    background-position: 0 0
+    width: 22px
+    height: 21px
+    position: absolute
+    margin: .15em .5em
+  &:hover:after
+    content: ' '
+    background-position: 0 -21px
+
+#container.devhq
+  width: 100%
+
+.devhq_header
+  background: $dev_bg_blue url('/images/bg_brackets.png') repeat-x
+  margin-bottom: 45px
+  background-size: 80px
+  .header_image
+    background: transparent url('/images/rainbow_brackets.png') no-repeat
+    margin: 0 auto
+    height: 322px
+    width: 1024px
+  h1, h2
+    text-align: center
+  h1
+    color: #444
+    font-size: 49px
+  h2
+    color: #335167
+    font-size: 32px
+    margin-top: .5em
+
+.api_button_garden
+  margin-left: 10px
+  margin-bottom: 45px
+  .column
+    border-right: $dotted_border
+    float: left
+    padding: 0 20px
+    text-align: left
+    width: 30%
+    vertical-align: top
+    &:first-child
+      padding-left: 0
+    &:last-child
+      border: none
+      padding-right: 0
+    .api_garden_square
+      height: 230px
+      margin-bottom: 25px
+      &:last-child
+        border-bottom: none
+        margin-bottom: 0
+      a 
+        @extend %link_with_sprite
+      p
+        color: $dev_bg_blue
+        font-size: 15px
+        line-height: 140%
+        padding: 0 20px
+        width: 240px
+
+.devhq_footer
+  background: $dev_bg_blue
+  height: 150px
+  width: 100%
+  a
+    @extend %link_with_sprite
+    color: white
+    font-size: 28px
+    position: relative
+    top: 45px
+    &:after
+      background-position: 0 -21px
+    &:hover:after
+      background-position: 0 0
