@@ -1983,32 +1983,6 @@ averagePercentWatched         | This is an integer between 0 and 100.  It shows 
 
 ---
 
-## Events API
-
-#### The Request
-
-<pre><code class="language-markup">GET https://api.wistia.com/v1/events.json?event_key=abc123</code></pre>
-
-Event key is required (get it from the player API)
-
-#### The Response
-
-Field    |  Description
----------|---------------
-Received_at    | Date and time that the event was received by our system
-IP  | IP address of the person who watched the video
-Country  | Country in which this event occurred
-Region  | Region in which this event occurred
-City  | City in which this event occurred
-Lat  | Latitude of the ip address where this view came from
-Lon  | Longitude of the ip address where this view came from
-Org  | Organization to which the ip address is registered
-Email  | Email address of the person who generated this event, if available
-Percent_viewed  | Percentage of the video that was seen during this viewing session
-Embed_url  | URL from which this video was played
-
----
-
 ## Account API
 
 #### The Request
