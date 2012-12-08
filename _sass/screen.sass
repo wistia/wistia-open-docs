@@ -7,6 +7,7 @@
 @import compass/reset
 @import compass/css3
 @import compass/utilities
+@import compass/css3/user-interface
 
 ////////////////////////////////////
 
@@ -870,6 +871,11 @@ table
 
 //////////// devHQ //////////////////
 
+
+@font-face
+  font-family: 'OCRBStd'
+  src: url('OCRBStd.otf') format('opentype')
+
 $dev_bg_blue: #1353a2
 $dotted_border: 1px dotted $dev_bg_blue
 
@@ -900,12 +906,42 @@ $dotted_border: 1px dotted $dev_bg_blue
 #container.devhq
   position: relative
   width: 100%
+  overflow: hidden
 
 .devhq_header
-  background: $dev_bg_blue url('/images/bg_brackets.png') repeat-x
   margin-bottom: 120px
-  background-size: 80px
+  margin-left: -25px
+  background: $dev_bg_blue
+  overflow: hidden
+  .tiled_wall
+    position: relative
+    height: 320px
+    width: 104%
+  .subheader
+    position: relative
+    height: 60px
+    width: 100%
+    #devhq_subtitle
+      font:
+        family: "Andale Mono"
+        size: 22px
+      position: absolute
+
+.one_tile
+  color: #2c5ca7
+  cursor: pointer
+  position: absolute
+  letter-spacing: 4px
+  font:
+    family: 'OCRBStd'
+    size: 52px
+  +transition-duration(.25s)
+  +user-select(none)
+  &:hover
+    color: white
+
   .header_image
+    display: none
     background: transparent url('/images/rainbow_brackets.png') no-repeat
     margin: 0 auto
     height: 322px
@@ -951,6 +987,27 @@ $dotted_border: 1px dotted $dev_bg_blue
         line-height: 140%
         padding: 0 20px
         width: 240px
+
+.sick_wrapper
+  cursor: pointer
+  color: white
+  position: absolute
+  letter-spacing: 4px
+  font:
+    family: 'OCRBStd'
+    size: 52px
+  +user-select(none)
+  .lefty, .righty, .middly
+    display: inline-block
+  .middly
+    font:
+      family: "Andale Mono"
+      size: 27px
+    letter-spacing: 0px
+
+.devhq_accent_blue
+  color: #69D0E6
+
 
 .devhq_footer
   background: $dev_bg_blue

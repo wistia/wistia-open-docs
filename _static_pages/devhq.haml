@@ -5,7 +5,12 @@ type: devhq
 \---
 
 .devhq_header 
-  .header_image
+  .tiled_wall
+    .one_tile 
+      &lt;/&gt;
+  .subheader
+    #devhq_subtitle.devhq_accent_blue
+      built by nerds, for nerds
 
 #container
   .api_button_garden.cf
@@ -66,3 +71,6 @@ type: devhq
 .devhq_footer
   #container
     %a go to the developers forum
+
+
+%script{ src: "{{ '/javascripts/devhq' | javascript_url }}" }
