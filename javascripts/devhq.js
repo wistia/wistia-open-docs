@@ -1,4 +1,4 @@
-function colorPicker(index) {
+function colorOnClick(index) {
   var length = colors.length;
   if ( index == length - 1 ) {
     return originalColor;
@@ -53,6 +53,7 @@ var padding = Math.floor(($(window).width() - 960)/ 2 / tileWidth) + 2;
 var verticalTiles = Math.floor(headerHeight / tileHeight);
 var $startTile = firstTile.remove();
 
+// the tiling process
 for (var i=0; i < horizontalTiles; i++) {
   for (var j=0; j < verticalTiles; j++) {
     var $clone = $startTile.clone();
@@ -67,8 +68,10 @@ for (var i=0; i < horizontalTiles; i++) {
   }
 }
 
+// apply colors to the original arrow
 colorEachRow();
 
+// make the top half 'open brackets'
 var openBrackets = $('.openBracket');
 openBrackets.each(function() {
   $(this).html(function(i, html) {
@@ -91,7 +94,9 @@ var widthOfTilesToBeReplaced = tilesToBeReplaced.length * tileWidth;
 var tileBeforeReplacement = tilesToBeReplaced.first().prev();
 tilesToBeReplaced.remove();
 
-// now we insert the replacement and style
+//
+// now we insert the replacement and style it
+//
 var $lefty = $("<div class='lefty'>&lt;/</div>");
 var $righty = $("<div class='righty'>&gt;</div>");
 var $middly = $("<div class='middly'>wistia<span class='devhq_accent_blue'>.</span>developers</div>");
@@ -103,13 +108,15 @@ $sickWrapper.css({
   left: parseInt(tileBeforeReplacement.css('left'), 10),
   top: parseInt(tileBeforeReplacement.css('top'), 10) + tileHeight
 });
+
 // bump the 'nerds' subtitle to line up
 var subtitleOffset = parseInt($sickWrapper.css('left'), 10) + $lefty.width();
 $('#devhq_subtitle').css('left', subtitleOffset);
 
+// these buggers change color on click
 $('.one_tile').on('click', function() {
   var $this = $(this);
   var color = $this.css('color');
   var index = colors.indexOf(color);
-  $this.css('color', colorPicker(index));
+  $this.css('color', colorOnClick(index));
 });
