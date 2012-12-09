@@ -35,14 +35,6 @@ function isOutsideArrow(i,j) {
   return (i < start + padding) || (i > start + padding + arrowWidth);
 }
 
-function colorMind(i,j) {
-  if ( isOutsideArrow(i,j) ) {
-    return originalColor;
-  } else {
-    return randomColor();
-  }
-}
-
 //
 // originalColor: #2C5CA7, colors: [ yellow: #F9D164, accent_blue: #69D0E6, orange: #F8654E ]
 //
