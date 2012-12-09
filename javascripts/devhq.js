@@ -68,7 +68,7 @@ for (var i=0; i < horizontalTiles; i++) {
     if ( !isOutsideArrow(i,j) ) {
       $clone.addClass("insideArrow row" + j);
     }
-    if ( j < 3 ) {
+    if ( j < verticalTiles/2 ) {
       $clone.addClass('openBracket');
     }
     tiledWall.append($clone);
