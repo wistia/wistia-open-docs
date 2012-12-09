@@ -1,22 +1,45 @@
-function colorOnClick(index) {
-  if (index == colors.length - 1) {
-    return originalColor;
-  } else if (index >= 0) {
-    index++;
-    return colors[index];
-  } else {
-    return colors[0];
+// given a current color, return the next color
+function addColor(currentColor) {
+  if (currentColor == "bracket_default") {
+    return "bracket_yellow";
+  } else if (currentColor == "bracket_yellow") {
+    return "bracket_blue";
+  } else if (currentColor == "bracket_blue") { 
+    return "bracket_red";
+  } else if (currentColor == "bracket_red") {
+    return "bracket_default";
   }
 }
 
+// given an element, return the color class it is currently assigned.
+function getColorFromClasses(elem) {
+  var k;
+  var classes_array = elem.attr('class').split(/\s+/);
+  for (k = 0; k < classes_array.length; k++) {
+    if ($.inArray(classes_array[k], colors) >= 0) {
+      return classes_array[k];
+    }
+  };
+  return "bracket_default";
+}
+
+// first get the current color class, remove it, then add new one
+function changeColorOnClick(elem) {
+  var currColorClass = getColorFromClasses(elem);
+  elem.removeClass(currColorClass)
+      .addClass(addColor(currColorClass));
+}
+
+// select the row, then color the row in order
 function colorEachRow() {
   for (var j = 0; j < verticalTiles; j++) {
     $(".row" + j).each(function(index) {
-      $(this).css('color', colors[index % colors.length]);
+      $(this).addClass(colors[index % colors.length]);
     });
   }
 }
 
+// find out when the arrow starts!
 function getStart(j) {
   if ( j < 2 ) {
     return 2 - j;
@@ -25,19 +48,19 @@ function getStart(j) {
   } else {
     return j - 3;
   }
-  return start;
 }
 
+// find out if a given index (hor, vert) is inside the default color arrow
 function isOutsideArrow(i,j) {
   var start = getStart(j);
   return (i < start + padding) || (i > start + padding + arrowWidth);
 }
 
 //
-// originalColor: #2C5CA7, colors: [ yellow: #F9D164, accent_blue: #69D0E6, orange: #F8654E ]
+// originalColor: #2C5CA7, colors: [ yellow: #F9D164, accent_blue: #69D0E6, red: #F8654E ]
 //
-var originalColor = 'rgb(44, 92, 167)';
-var colors = ['rgb(249, 209, 100)','rgb(105, 208, 230)','rgb(248, 101, 78)'];
+var originalColor = "bracket_default";
+var colors = ["bracket_yellow", "bracket_blue", "bracket_red"];
 
 var tiledWall = $(".tiled_wall");
 var firstTile = $(".one_tile:first");
@@ -58,6 +81,8 @@ for (var i = 0; i < horizontalTiles; i++) {
     $clone.css({ left: tileWidth * i, top: tileHeight * j });
     if ( !isOutsideArrow(i, j) ) {
       $clone.addClass("insideArrow row" + j);
+    } else {
+      $clone.addClass("bracket_default");
     }
     if ( j < verticalTiles / 2 ) {
       $clone.addClass('openBracket');
@@ -113,8 +138,5 @@ $('#devhq_subtitle').css('left', subtitleOffset);
 
 // these buggers change color on click
 $('.one_tile').on('click', function() {
-  var $this = $(this);
-  var color = $this.css('color');
-  var index = colors.indexOf(color);
-  $this.css('color', colorOnClick(index));
+  changeColorOnClick($(this));
 });

@@ -880,10 +880,11 @@ table
   src: url('OCRBStd.otf') format('opentype')
 
 $dev_bg_blue: #1353a2
+$devhq_accent_blue: #69D0E6
 $dotted_border: 1px dotted $dev_bg_blue
-
-.devhq_accent_blue
-  color: #69D0E6
+$dim_bracket: #2c5ca7 
+$bracket_red: #F8654E
+$bracket_yellow: #F9D164
 
 %link_with_sprite
   color: $dev_bg_blue
@@ -937,21 +938,30 @@ $dotted_border: 1px dotted $dev_bg_blue
       position: absolute
 
 .one_tile
-  color: #2c5ca7
   cursor: pointer
   position: absolute
   letter-spacing: 4px
   font:
-    family: 'OCRBStd'
+    family: "OCRBStd"
     size: 52px
   +transition-duration(.25s)
   +user-select(none)
-  &:hover
-    color: white
-
 // not a tasty Asian buffet, but a forwardslash that is dimmed
 .dimSlash
-  color: #2c5ca7
+  color: $dim_bracket
+.bracket_default
+  color: $dim_bracket
+  &:hover
+    color: white
+.bracket_blue
+  color: $devhq_accent_blue
+.bracket_yellow
+  color: $bracket_yellow
+.bracket_red
+  color: $bracket_red
+
+.devhq_accent_blue
+  color: $devhq_accent_blue
 
 .api_button_garden
   margin-left: 10px
