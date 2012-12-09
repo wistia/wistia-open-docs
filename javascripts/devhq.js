@@ -72,7 +72,7 @@ colorEachRow();
 var openBrackets = $('.openBracket');
 openBrackets.each(function() {
   $(this).html(function(i, html) {
-    return html.replace("/", "<span class='dimBracket'>/</span>");
+    return html.replace("/", "<span class='dimSlash'>/</span>");
   });
 });
 
