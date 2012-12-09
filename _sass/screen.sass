@@ -158,9 +158,12 @@ pre
   height: 187px
   background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
-#container
+%container
   width: 960px
   margin: 0 auto
+
+#container
+  @extend %container
 
 #post_container
   position: relative
@@ -911,6 +914,9 @@ $dotted_border: 1px dotted $dev_bg_blue
   width: 100%
   overflow: hidden
 
+.content_container
+  @extend %container
+
 .devhq_header
   margin-bottom: 120px
   margin-left: -25px
@@ -995,8 +1001,6 @@ $dotted_border: 1px dotted $dev_bg_blue
       family: "Andale Mono"
       size: 27px
     letter-spacing: 0px
-
-
 
 .devhq_footer
   background: $dev_bg_blue
