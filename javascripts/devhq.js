@@ -1,8 +1,7 @@
 function colorOnClick(index) {
-  var length = colors.length;
-  if ( index == length - 1 ) {
+  if (index == colors.length - 1) {
     return originalColor;
-  } else if ( index >= 0 ) {
+  } else if (index >= 0) {
     index++;
     return colors[index];
   } else {
@@ -11,21 +10,20 @@ function colorOnClick(index) {
 }
 
 function colorEachRow() {
-  for (var j=0; j < verticalTiles; j++) {
+  for (var j = 0; j < verticalTiles; j++) {
     $(".row" + j).each(function(index) {
-      $(this).css('color', colors[index%colors.length]);
+      $(this).css('color', colors[index % colors.length]);
     });
   }
 }
 
 function getStart(j) {
-  var start;
   if ( j < 2 ) {
-    start = 2 - j;
+    return 2 - j;
   } else if ( j >= 2 && j <= 3 ){
-    start = 0;
+    return 0;
   } else {
-    start = j - 3;
+    return j - 3;
   }
   return start;
 }
@@ -48,20 +46,20 @@ var headerHeight = tiledWall.height();
 var tileWidth = firstTile.width() + 6;
 var tileHeight = firstTile.height();
 var horizontalTiles = Math.ceil(headerWidth / tileWidth) + 2;
-var arrowWidth = Math.floor(600/tileWidth);
-var padding = Math.floor(($(window).width() - 960)/ 2 / tileWidth) + 2;
+var arrowWidth = Math.floor(600 / tileWidth);
+var padding = Math.floor(($(window).width() - 960) / 2 / tileWidth) + 2;
 var verticalTiles = Math.floor(headerHeight / tileHeight);
 var $startTile = firstTile.remove();
 
 // the tiling process
-for (var i=0; i < horizontalTiles; i++) {
-  for (var j=0; j < verticalTiles; j++) {
+for (var i = 0; i < horizontalTiles; i++) {
+  for (var j = 0; j < verticalTiles; j++) {
     var $clone = $startTile.clone();
     $clone.css({ left: tileWidth * i, top: tileHeight * j });
-    if ( !isOutsideArrow(i,j) ) {
+    if ( !isOutsideArrow(i, j) ) {
       $clone.addClass("insideArrow row" + j);
     }
-    if ( j < verticalTiles/2 ) {
+    if ( j < verticalTiles / 2 ) {
       $clone.addClass('openBracket');
     }
     tiledWall.append($clone);
