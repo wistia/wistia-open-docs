@@ -1,8 +1,7 @@
-
 Wistia Documentation
 ====================
 
-The Wistia Documentation ([http://wistia.com/doc](http://wistia.com/doc) is built on top of Jekyll.
+The Wistia Documentation ([http://wistia.com/doc](http://wistia.com/doc)) is built on top of Jekyll.
 Jekyll is a ruby-based static site generator. woot.
 
 If the doc was a living being, it would live in a cave. A sweet cave, but a cave all the same.
