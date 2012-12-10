@@ -60,7 +60,7 @@ This is the full list of providers we currently integrate with:
 *  [AWeber](http://www.aweber.com)
 *  [Blue Hornet](http://www.bluehornet.com)
 *  [Campaign Monitor](http://www.campaignmonitor.com)
-*  [Constant Contact](http://www.constantcontact.com/index.jsp.html)
+*  [Constant Contact](http://www.constantcontact.com)
 *  [Emailvision](http://www.emailvision.com)
 *  [Emma](http://myemma.com)
 *  [GetResponse](http://www.getresponse.com)
