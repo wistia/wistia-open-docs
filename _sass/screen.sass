@@ -7,6 +7,7 @@
 @import compass/reset
 @import compass/css3
 @import compass/utilities
+@import compass/css3/user-interface
 
 ////////////////////////////////////
 
@@ -157,9 +158,12 @@ pre
   height: 187px
   background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
-#container
+%container
   width: 960px
   margin: 0 auto
+
+#container
+  @extend %container
 
 #post_container
   position: relative
@@ -839,3 +843,195 @@ table
       stroke-width: 1
     .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
       fill: #fff
+
+/////////// new clearfix ////////
+
+/* http://nicolasgallagher.com/micro-clearfix-hack/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before, .cf:after
+  content: " " /* 1 */
+  display: table /* 2 */
+
+.cf:after
+  clear: both
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf 
+  *zoom: 1
+
+=col
+  display: inline-block
+  *display: inline
+  vertical-align: top
+  zoom: 1
+
+//////////// devHQ //////////////////
+
+
+@font-face
+  font-family: 'OCRBStd'
+  src: url('OCRBStd.otf'), format('opentype')
+
+$dev_bg_blue: #1353a2
+$devhq_accent_blue: #69D0E6
+$dotted_border: 1px dotted $dev_bg_blue
+$dim_bracket: #2c5ca7 
+$bracket_red: #F8654E
+$bracket_yellow: #F9D164
+
+%link_with_sprite
+  color: $dev_bg_blue
+  cursor: pointer
+  display: block
+  font:
+    family: Gill Sans, Arial, sans-serif
+    size: 32px
+    weight: 100
+  letter-spacing: 1px
+  padding: .4em 0
+  padding-left: 20px
+  text-transform: uppercase
+  &:after
+    content: ' '
+    background: transparent url('/images/api_link_sprite.png') no-repeat
+    background-position: 0 0
+    width: 22px
+    height: 21px
+    position: absolute
+    margin: .15em .5em
+  &:hover:after
+    content: ' '
+    background-position: 0 -21px
+
+#container.devhq
+  position: relative
+  width: 100%
+  overflow: hidden
+
+.content_container
+  @extend %container
+
+.devhq_header
+  margin-bottom: 120px
+  margin-left: -25px
+  background: $dev_bg_blue
+  overflow: hidden
+  .tiled_wall
+    position: relative
+    height: 320px
+    width: 104%
+  .subheader
+    position: relative
+    height: 60px
+    width: 100%
+    #devhq_subtitle
+      font:
+        family: "Andale Mono"
+        size: 22px
+      min-width: 260px
+      position: absolute
+
+.one_tile
+  cursor: pointer
+  position: absolute
+  letter-spacing: 4px
+  font:
+    family: "OCRBStd"
+    size: 52px
+  +transition-duration(.25s)
+  +user-select(none)
+// not a tasty Asian buffet, but a forwardslash that is dimmed
+.dimSlash
+  color: $dim_bracket
+.bracket_default
+  color: $dim_bracket
+  &:hover
+    color: white
+.bracket_blue
+  color: $devhq_accent_blue
+.bracket_yellow
+  color: $bracket_yellow
+.bracket_red
+  color: $bracket_red
+
+.devhq_accent_blue
+  color: $devhq_accent_blue
+
+.api_button_garden
+  margin-left: 10px
+  margin-bottom: 120px
+  .column
+    border-right: $dotted_border
+    padding: 0 20px
+    text-align: left
+    width: 30%
+    +col
+    &.last-child
+      border: none
+      padding-right: 0
+    &:first-child
+      padding-left: 0
+    .api_garden_square
+      height: 230px
+      margin-bottom: 25px
+      &.last-child
+        border-bottom: none
+        margin-bottom: -80px
+      &:first-child
+        margin-top: -80px
+      a 
+        @extend %link_with_sprite
+      p
+        color: $dev_bg_blue
+        font-size: 15px
+        line-height: 140%
+        padding: 0 20px
+        width: 240px
+
+.sick_wrapper
+  cursor: pointer
+  color: white
+  position: absolute
+  letter-spacing: 4px
+  font:
+    family: 'OCRBStd'
+    size: 52px
+  min-width: 360px
+  +user-select(none)
+  .lefty, .righty, .middly
+    +col
+  .middly
+    font:
+      family: "Andale Mono"
+      size: 27px
+    letter-spacing: 0px
+    margin-left: -2px
+    margin-right: 2px
+    padding-bottom: 4px
+    vertical-align: bottom
+
+.devhq_footer
+  background: $dev_bg_blue
+  display: block
+  height: 150px
+  a
+    @extend %link_with_sprite
+    color: white
+    font-size: 28px
+    position: relative
+    top: 45px
+    &:after
+      background-position: 0 -21px
+    &:hover:after
+      background-position: 0 0

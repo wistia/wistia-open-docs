@@ -17,7 +17,7 @@
   %body{ class: "{{ page.type }}_layout" }
     {% include header.html %}
 
-    #container{ class: "{% if page.api %}api{% endif %}" }
+    #container{ class: "{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" }
       {{ content }}
 
     {% include footer.html %}
