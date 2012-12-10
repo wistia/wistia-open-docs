@@ -870,14 +870,18 @@ table
 .cf 
   *zoom: 1
 
-
+=col
+  display: inline-block
+  *display: inline
+  vertical-align: top
+  zoom: 1
 
 //////////// devHQ //////////////////
 
 
 @font-face
   font-family: 'OCRBStd'
-  src: url('OCRBStd.otf') format('opentype')
+  src: url('OCRBStd.otf'), format('opentype')
 
 $dev_bg_blue: #1353a2
 $devhq_accent_blue: #69D0E6
@@ -935,6 +939,7 @@ $bracket_yellow: #F9D164
       font:
         family: "Andale Mono"
         size: 22px
+      min-width: 260px
       position: absolute
 
 .one_tile
@@ -968,24 +973,23 @@ $bracket_yellow: #F9D164
   margin-bottom: 120px
   .column
     border-right: $dotted_border
-    float: left
     padding: 0 20px
     text-align: left
     width: 30%
-    vertical-align: top
-    &:first-child
-      padding-left: 0
-    &:last-child
+    +col
+    &.last-child
       border: none
       padding-right: 0
+    &:first-child
+      padding-left: 0
     .api_garden_square
       height: 230px
       margin-bottom: 25px
-      &:first-child
-        margin-top: -80px
-      &:last-child
+      &.last-child
         border-bottom: none
         margin-bottom: -80px
+      &:first-child
+        margin-top: -80px
       a 
         @extend %link_with_sprite
       p
@@ -1003,19 +1007,24 @@ $bracket_yellow: #F9D164
   font:
     family: 'OCRBStd'
     size: 52px
+  min-width: 360px
   +user-select(none)
   .lefty, .righty, .middly
-    display: inline-block
+    +col
   .middly
     font:
       family: "Andale Mono"
       size: 27px
     letter-spacing: 0px
+    margin-left: -2px
+    margin-right: 2px
+    padding-bottom: 4px
+    vertical-align: bottom
 
 .devhq_footer
   background: $dev_bg_blue
+  display: block
   height: 150px
-  width: 100%
   a
     @extend %link_with_sprite
     color: white
