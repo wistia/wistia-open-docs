@@ -91,7 +91,7 @@ We also accept some additional parameters that can change the output of the embe
 
 Name | Type  | Description
 -----|-------|------------
-callback | string | Only application to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
+callback | string | Only applicable to JSON requests. When specified, JSON is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
 embedType | string | Only applicable to videos and playlists. Accepts "iframe", "api", "seo", "popover", "playlist_iframe", and "playlist_api".
 width | integer | The requested width of the video embed. Defaults to the native size of the video or 360, whichever is smaller.
 height | integer | The requested height of the video embed. Defaults to the native size of the video or 640, whichever is smaller.
@@ -99,6 +99,8 @@ handle | string | Only applicable to "api", "seo", and "playlist_api" embed type
 popoverHeight | integer | Only applicable to "popover" embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.
 popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
 ssl | boolean | Determines whether the embed code should use https. Defaults to false.
+
+If given a width, height, maxwidth, or maxheight parameter (or any combination of those), the other dimensions in the resulting embed code may change so that the video's aspect ratio is preserved.
 
 ---
 
@@ -114,9 +116,8 @@ See our [working with Wistia images]({{ '/working-with-images' | post_url }}) gu
 
   1. If an invalid URL (one that doesn't match our regular expression above) is given, the endpoint will return <span class="code">404 Not Found</span>.
   2. If an unparseable URL is given in the url param, the endpoint will return <span class="code">404 Not Found</span>.
-  3. If a media is found but has no available embed code, the endpoint will return <span class="code">501 Not Implemented</span>. Video, Audio, and Document files all currently implement oembeds.
+  3. If a media is found but has no available embed code, the endpoint will return <span class="code">501 Not Implemented</span>. Video, Image, Audio, and Document files all currently implement oembeds.
   4. If a playlist is found but has no videos, the endpoint will return <span class="code">501 Not Implemented</span>.
-  5. If a maxwidth or maxheight forces a change to the media's dimensions, it is ''not'' guaranteed to maintain the correct aspect ratio (you may see horizontal black bars above or below the video). If you expect this to happen, you should make use of the [videoFoam]({{ '/player-api' | post_url }}) option.
 
 ---
 
