@@ -56,6 +56,7 @@ Links also use a custom filter, so we can control the root path:
 ### To see changes
 
     rake preview
+
 to compile site, launch local server, and track changes to site/styling (localhost:9393)
 
 Changes to posts, javascript, and sass will take effect dynamically (you'll still need to re-load, you slacker).
