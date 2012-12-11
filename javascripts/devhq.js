@@ -11,6 +11,15 @@ function addColor(currentColor) {
   }
 }
 
+function clearAllColors(tile_array) {
+  tile_array.each(function() {
+    $this = $(this);
+    $this.removeClass(getColorFromClasses($this));
+    $this.addClass("bracket_default");
+  });
+}
+
+
 // given an element, return the color class it is currently assigned.
 function getColorFromClasses(elem) {
   var k;
@@ -61,6 +70,7 @@ function isOutsideArrow(i,j) {
 //
 var originalColor = "bracket_default";
 var colors = ["bracket_yellow", "bracket_blue", "bracket_red"];
+var colorsCleared = false;
 
 var tiledWall = $(".tiled_wall");
 var firstTile = $(".one_tile:first");
@@ -139,4 +149,14 @@ $('#devhq_subtitle').css('left', subtitleOffset);
 // these buggers change color on click
 $('.one_tile').on('click', function() {
   changeColorOnClick($(this));
+});
+
+$('.sick_wrapper').on('click', function() {
+  if (!colorsCleared) {
+    clearAllColors($('.one_tile'));
+    colorsCleared = true;
+  } else {
+    colorEachRow();
+    colorsCleared = false;
+  }
 });
