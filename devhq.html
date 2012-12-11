@@ -19,67 +19,53 @@ type: devhq
   <div class='api_button_garden'>
     <div class='column'>
       <div class='api_garden_square' id='player_api'>
-        <a>Player API</a>
+        <a href="{{ '/player-api' | post_url }}">Player API</a>
         <p>
-          Well, the way they make shows is, they make one show.
-          That show's called a pilot.
-          Then they show that show to the people who make shows,
-          and on the strength of that one show they decide if
-          they're going to make more shows.
+          A JavaScript interface to control your videos and listen for
+          events. Has universal support for both Flash and HTML5 player
+          instances and a whole gang of convenience methods to make adding
+          functionality easy.
         </p>
       </div>
       <div class='api_garden_square last-child' id='playlist_api'>
-        <a>Playlist API</a>
+        <a href="{{ '/playlist-api' | post_url }}">Playlist API</a>
         <p>
-          Well, the way they make shows is, they make one show.
-          That show's called a pilot.
-          Then they show that show to the people who make shows,
-          and on the strength of that one show they decide if
-          they're going to make more shows.
+          Lets you control Playlist look and behavior at a high level.
+          Provides hooks to give you Player API control over
+          each video in the playlist.
         </p>
       </div>
     </div>
     <div class='column'>
       <div class='api_garden_square' id='upload_api'>
-        <a>Upload API</a>
+        <a href="{{ '/upload-api' | post_url }}">Upload API</a>
         <p>
-          Well, the way they make shows is, they make one show.
-          That show's called a pilot.
-          Then they show that show to the people who make shows,
-          and on the strength of that one show they decide if
-          they're going to make more shows.
+          Programmatically upload videos to your Wistia account.
+          For integrating with video-creation apps or
+          adding as part of your video-exporting workflow!
         </p>
       </div>
       <div class='api_garden_square last-child' id='stats_api'>
-        <a>Stats API</a>
+        <a href="{{ '/stats-api' | post_url }}">Stats API</a>
         <p>
-          Well, the way they make shows is, they make one show.
-          That show's called a pilot.
-          Then they show that show to the people who make shows,
-          and on the strength of that one show they decide if
-          they're going to make more shows.
+          Access the raw analytics output for your account or specific medias.
+          Also provides access to specific viewers and heatmap data.
         </p>
       </div>
     </div>
     <div class='column last-child'>
       <div class='api_garden_square' id='data_api'>
-        <a>Data API</a>
+        <a href="{{ '/data-api' | post_url }}">Data API</a>
         <p>
-          Well, the way they make shows is, they make one show.
-          That show's called a pilot.
-          Then they show that show to the people who make shows,
-          and on the strength of that one show they decide if
-          they're going to make more shows.
+          For programmatic access to things in your Wistia account, like Projects
+          Media, and Sharings (i.e. adding access for new users).
         </p>
       </div>
       <div class='api_garden_square last-child' id='embed_api'>
-        <a>Embed API</a>
+        <a href="{{ '/embed-api' | post_url }}">Embed API</a>
         <p>
-          Well, the way they make shows is, they make one show.
-          That show's called a pilot.
-          Then they show that show to the people who make shows,
-          and on the strength of that one show they decide if
-          they're going to make more shows.
+          Build the embed codes for your media programmatically - perfect
+          for your dynamic content site!
         </p>
       </div>
     </div>
@@ -87,7 +73,7 @@ type: devhq
 </div>
 <div class='devhq_footer'>
   <div class='content_container'>
-    <a>go to the developers forum</a>
+    <a href='http://dev-forum.wistia.com' target='_blank'>go to the developers forum</a>
   </div>
 </div>
 <script src="{{ '/javascripts/devhq' | javascript_url }}"></script>

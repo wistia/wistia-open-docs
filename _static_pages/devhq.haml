@@ -16,61 +16,47 @@ type: devhq
   .api_button_garden
     .column
       #player_api.api_garden_square
-        %a Player API
+        %a{ href: "{{ '/player-api' | post_url }}" } Player API
         %p
-          Well, the way they make shows is, they make one show. 
-          That show's called a pilot. 
-          Then they show that show to the people who make shows, 
-          and on the strength of that one show they decide if 
-          they're going to make more shows. 
+          A JavaScript interface to control your videos and listen for
+          events. Has universal support for both Flash and HTML5 player
+          instances and a whole gang of convenience methods to make adding
+          functionality easy.
       #playlist_api.api_garden_square.last-child
-        %a Playlist API
+        %a{ href: "{{ '/playlist-api' | post_url }}"} Playlist API
         %p
-          Well, the way they make shows is, they make one show. 
-          That show's called a pilot. 
-          Then they show that show to the people who make shows, 
-          and on the strength of that one show they decide if 
-          they're going to make more shows. 
+          Lets you control Playlist look and behavior at a high level. 
+          Provides hooks to give you Player API control over 
+          each video in the playlist.
 
     .column
       #upload_api.api_garden_square
-        %a Upload API
+        %a{ href: "{{ '/upload-api' | post_url }}"} Upload API
         %p
-          Well, the way they make shows is, they make one show. 
-          That show's called a pilot. 
-          Then they show that show to the people who make shows, 
-          and on the strength of that one show they decide if 
-          they're going to make more shows. 
+          Programmatically upload videos to your Wistia account. 
+          For integrating with video-creation apps or 
+          adding as part of your video-exporting workflow!
       #stats_api.api_garden_square.last-child
-        %a Stats API
+        %a{ href: "{{ '/stats-api' | post_url }}"} Stats API
         %p
-          Well, the way they make shows is, they make one show. 
-          That show's called a pilot. 
-          Then they show that show to the people who make shows, 
-          and on the strength of that one show they decide if 
-          they're going to make more shows. 
+          Access the raw analytics output for your account or specific medias. 
+          Also provides access to specific viewers and heatmap data.
 
     .column.last-child
       #data_api.api_garden_square
-        %a Data API
+        %a{ href: "{{ '/data-api' | post_url }}"} Data API
         %p
-          Well, the way they make shows is, they make one show. 
-          That show's called a pilot. 
-          Then they show that show to the people who make shows, 
-          and on the strength of that one show they decide if 
-          they're going to make more shows. 
+          For programmatic access to things in your Wistia account, like Projects
+          Media, and Sharings (i.e. adding access for new users).
       #embed_api.api_garden_square.last-child
-        %a Embed API
+        %a{ href: "{{ '/embed-api' | post_url }}"} Embed API
         %p
-          Well, the way they make shows is, they make one show. 
-          That show's called a pilot. 
-          Then they show that show to the people who make shows, 
-          and on the strength of that one show they decide if 
-          they're going to make more shows. 
+          Build the embed codes for your media programmatically - perfect
+          for your dynamic content site!
 
 .devhq_footer
   .content_container
-    %a go to the developers forum
+    %a{ href: "http://dev-forum.wistia.com", target: "_blank" } go to the developers forum
 
 
 %script{ src: "{{ '/javascripts/devhq' | javascript_url }}" }
