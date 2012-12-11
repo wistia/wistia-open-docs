@@ -5,7 +5,7 @@ api: true
 category: For Developers
 description: Learn how to construct an embed code starting with just the video ID!
 footer: 'for_developers'
-post_intro: <p>There are lots of valid use cases for building embed codes dynamically. The embed API covers the best ways to get that done.</p><p>The <a href='#data-api-approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed-approach">oEmbed approach</a> is best when you have a defined set of hashed IDs - you can produce an embed code without even hitting our servers.</p>
+post_intro: <p>There are lots of valid use cases for building embed codes dynamically. The embed API covers the best ways to get that done.</p><p>The <a href='#data-api-approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed-approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the params you want and get an embed code!</p>
 ---
 
 ## Data API Approach
