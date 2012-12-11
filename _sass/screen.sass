@@ -890,7 +890,7 @@ $dim_bracket: #2c5ca7
 $bracket_red: #F8654E
 $bracket_yellow: #F9D164
 
-%link_with_sprite
+%link
   color: $dev_bg_blue
   cursor: pointer
   display: block
@@ -902,6 +902,7 @@ $bracket_yellow: #F9D164
   padding: .4em 0
   padding-left: 20px
   text-transform: uppercase
+%with_sprite
   &:after
     content: ' '
     background: transparent url(http://embed.wistia.com/deliveries/05cd0b1fdee8d76d7005440159c50b9e60737a34.png) no-repeat
@@ -921,6 +922,7 @@ $bracket_yellow: #F9D164
 
 .content_container
   @extend %container
+    
 
 .devhq_header
   margin-bottom: 120px
@@ -991,7 +993,8 @@ $bracket_yellow: #F9D164
       &:first-child
         margin-top: -80px
       a 
-        @extend %link_with_sprite
+        @extend %link
+        @extend %with_sprite
       p
         color: $dev_bg_blue
         font-size: 15px
@@ -1013,7 +1016,7 @@ $bracket_yellow: #F9D164
     +col
   .middly
     font:
-      family: "Andale Mono"
+      family: "Andale Mono", sans-serif
       size: 27px
     letter-spacing: 0px
     margin-left: -2px
@@ -1025,12 +1028,30 @@ $bracket_yellow: #F9D164
   background: $dev_bg_blue
   display: block
   height: 150px
-  a
-    @extend %link_with_sprite
-    color: white
-    font-size: 28px
+  .content_container
+    padding-left: 20px
     position: relative
-    top: 45px
+    top: 15px
+    ul li
+      margin-bottom: 2px
+  h2
+    @extend %link
+    color: white
+    font:
+      size: 28px
+      style: normal
+    padding-left: 0
+    position: relative
+    top: 5px
+  a
+    font:
+      family: "Andale Mono", monospace, sans-serif
+      size: 32px
+      weight: 100
+    letter-spacing: 1px
+    color: white
+    font-size: 15px
+    position: relative
     &:after
       background-position: 0 -21px
     &:hover:after
