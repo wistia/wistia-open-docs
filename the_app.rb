@@ -96,3 +96,12 @@ not_found do
   send_file(File.join(File.dirname(__FILE__), '_site', '404.html'), {:status => 404})
 end
 
+# DevHQ page
+get "/devhq" do
+  send_file(File.join(File.dirname(__FILE__), '_site', 'devhq.html'))
+end
+
+# Agency!
+get "/agency" do
+  send_file(File.join(File.dirname(__FILE__), '_site', 'agency.html'))
+end
