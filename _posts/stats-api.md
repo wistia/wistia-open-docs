@@ -5,11 +5,13 @@ title: Stats API
 description: Learn how to access your stats via our API.
 ---
 
+Ever looked at your Wistia heatmaps and wished you could show them to other people with ease? Ever looked at your Wistia heatmaps and wished that they were built out of purple cats instead of red, yellow, and green bars? Want to figure out which of your Wistia videos your users have already viewed and recommend them ones they haven't so they don't get bored? Want to make sure you purposely recommend the same videos repeatedly until they're annoyed enough to convert? Look no further, developers: the Wistia Stats API has you covered.
+
 ## Account
 
 ### Account: Show
 
-The stats API allows you to retrieve some account-wide information.
+The stats API allows you to retrieve some account-wide information. Don't buy a nice car to overcompensate; instead, show off how many hours of your video have been played! Or, celebrate when you reach a certain landmark.
 
 #### The Request
 
@@ -39,7 +41,7 @@ hours_watched | The total amount of time spent watching the videos in this accou
 
 ### Account: By Date
 
-You can also get account-wide stats for a particular date range.
+You can also get account-wide stats for a particular date range. No, not _that_ kind of date -- you'll still have to figure those out for yourself. Neeeerd.
 
 #### The Request
 
@@ -92,7 +94,7 @@ hours_watched | The total amount of time spent watching videos in this account o
 
 ### Project: Show
 
-The stats API allows you to retrieve information about all the videos in a project.
+The stats API allows you to retrieve information about all the videos in a project. We know you like it when we let you get specific.
 
 #### The Request
 
@@ -126,7 +128,7 @@ number_of_videos | The total number of videos in this project.
 
 ### Project: By Date
 
-You can use the stats API to get information about a project for a specific date range.
+You can use the stats API to get information about a project for a specific date range. 
 
 #### The Request
 
@@ -177,7 +179,7 @@ hours_watched | The total amount of time spent watching videos in the project on
 
 ### Media: Show
 
-The Wistia stats API can be used to retrieve stats for any given video.
+The Wistia stats API can be used to retrieve stats for any given video. Ever wanted to entice that special someone (or those hundreds of special someones viewing your page) to watch your video? Win their heart by displaying impressive data like your engagement rate. Or, give away a puppy to the thousandth viewer of your video. We heard you can 3D print those now.
 
 #### The Request
 
