@@ -12,7 +12,7 @@ post_intro: <p>There are lots of valid use cases for building embed codes dynami
 
 The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the <a href="{{ '/data-api' | post_url }}">Data API</a>.
 
-We pass parameters into an iframe embed via the src attribute. They're just simple URL parameters, with the keys namespaced by brackets.
+We pass parameters into an iframe embed via the src attribute. They're just simple URL parameters, with any sub-keys namespaced by brackets.
 
 For example, say we have the hashed_id of the video we want to embed, but we
 want to change the color of the play button, hide the fullscreen button, and
