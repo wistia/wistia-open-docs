@@ -4,7 +4,8 @@ $(document).ready(function() {
   (function right_nav() {
     var h_arr = $('h2,h3'),
       h1 = $('.post_title > h1'),
-      nav_box_ul = $('ul#page_nav');
+      nav_box_ul = $('ul#page_nav'),
+      post_content_nav = $('#post_content_nav');
 
     var section_title_to_nav_title = function(text) {
       if ((/\:\s/).test(text)) {
@@ -42,6 +43,10 @@ $(document).ready(function() {
     $('li.header_link:first').css('border', 'none');
 
 
+    if (post_content_nav.height() + 80 < $(window).height()) {
+      post_content_nav.css('position', 'fixed');
+    }
+
     // get the spacing on the title bar set right
     function space_the_topics_title() {
       var $topics_title_box = $('li.title_list_item'),
@@ -51,6 +56,8 @@ $(document).ready(function() {
     }
 
     space_the_topics_title();
+
+
 
   })();
 
@@ -66,6 +73,8 @@ $(document).ready(function() {
 
     });
   };
+
+
 
   // for <pre> code snippets //
   function browser_escape_characters(span) {
