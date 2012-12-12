@@ -418,7 +418,6 @@ visitor_identity | An object with 2 fields (name and email) that represents any 
   "play_count": 2,
   "visitor_identity": { "name": "Jim", "email": "jim@example.com" }
 }
-]
 </code></pre>
 
 ## Events
@@ -465,6 +464,71 @@ media_id | An identifier indicating which video was watched.
 media_url | The video's URL in the Wistia account.
 media_name | The name of the video.
 iframe_heatmap_url | The URL of an HTML page that will render the heatmap for this event.
+
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+[
+  {
+    "received_at": "2012-12-12T03:25:50Z",
+    "ip": "3.6.101.20",
+    "country": "TR",
+    "region": "34",
+    "city": "Istanbul",
+    "lat": 41.0186,
+    "lon": 28.9647,
+    "org": "Turk Telekom",
+    "email": "test@example.com",
+    "percent_viewed": 0.11901863354037266,
+    "embed_url": "http://wistia.com/doc/private-sharing",
+    "conversion_type": "",
+    "conversion_data": "",
+    "iframe_heatmap_url": "https://api.wistia.com/v1/stats/events/1355282749593f0.12025747820734978/iframe.html?public_token=p5j1mnpakv",
+    "visitor_key": "9DC9D7F525236E25E27E9743C0524DB0F02C703D",
+    "media_id": "75edd60835",
+    "media_name": "Private Sharing SC.mp4",
+    "media_url": "https://home.wistia.com/medias/75edd60835",
+    "thumbnail": {
+      "url":  "http://embed.wistia.com/deliveries/da4b6a18767456f089336f8c4e3f14c130fc03e3.bin",
+      "width": 640,
+      "height": 400,
+      "fileSize": 48611,
+      "contentType": "image/jpeg",
+      "type": "StillImageFile"
+    }
+  },
+  {
+    "received_at": "2012-12-12T03:23:19Z",
+    "ip": "84.64.82.205",
+    "country": "TR",
+    "region": "34",
+    "city": "Istanbul",
+    "lat": 41.0186,
+    "lon": 28.9647,
+    "org": "Turk Telekom",
+    "email": "test@example.com",
+    "percent_viewed": 0.21194901235769195,
+    "embed_url": "http://wistia.com/product/turnstile?wemail=test@example.com",
+    "conversion_type": 0,
+    "conversion_data": "",
+    "iframe_heatmap_url": "https://api.wistia.com/v1/stats/events/1355282599572f0.725406895391643/iframe.html?public_token=p5j1mnpakv",
+    "visitor_key": "9DC9D7F525236E25E27E9743C0524DB0F02C703D",
+    "media_id": "f217279600",
+    "media_name": "Turnstile - FINAL",
+    "media_url": "https://home.wistia.com/medias/f217279600",
+    "thumbnail": {
+      "url": "http://embed.wistia.com/deliveries/814cc7ac472eb24cf212cc1625c040dee75544f0.bin",
+      "width": 2489,
+      "height": 1400,
+      "fileSize": 456075,
+      "contentType": "image/jpeg",
+      "type": "StillImageFile"
+    }
+  }
+]
+</code></pre>
 
 ### Events: Show
 
