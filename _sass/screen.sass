@@ -953,10 +953,11 @@ $bracket_yellow: #F9D164
   position: absolute
   letter-spacing: -10px
   font:
-    family: "ocr-b-std"
+    family: "ocr-b-std", Courier
     size: 52px
   +transition-duration(.25s)
   +user-select(none)
+  width: 87px
 // not a tasty Asian buffet, but a forwardslash that is dimmed
 .dimSlash
   color: $dim_bracket
@@ -1026,6 +1027,8 @@ $bracket_yellow: #F9D164
     padding-bottom: 4px
     padding-left: 10px
     position: relative
+  .righty
+    margin-left: -4px
 
 .devhq_footer
   background: $dev_bg_blue
