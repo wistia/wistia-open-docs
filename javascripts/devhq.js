@@ -141,10 +141,11 @@ var newLetterSpacing = Math.floor((newMiddlyWidth - $middly.width()) / $middly.t
 $middly.width(newMiddlyWidth);
 $middly.css("letter-spacing", newLetterSpacing);
 $sickWrapper.css({
-  lineHeight: $sickWrapper.height() + "px",
   left: parseInt(tileBeforeReplacement.css('left'), 10),
   top: parseInt(tileBeforeReplacement.css('top'), 10) + tileHeight
 });
+
+$middly.css('top', tileHeight - $middly.height() - 3);
 
 // bump the 'nerds' subtitle to line up
 var subtitleOffset = parseInt($sickWrapper.css('left'), 10) + $lefty.width();
