@@ -136,8 +136,8 @@ var $middly = $("<div class='middly'>wistia<span class='devhq_accent_blue'>.</sp
 var $sickWrapper = $("<div class='sick_wrapper'></div>");
 $sickWrapper.append($lefty).append($middly).append($righty);
 tileBeforeReplacement.after($sickWrapper);
-var newMiddlyWidth = widthOfTilesToBeReplaced - $lefty.outerWidth() - $righty.outerWidth();
-var newLetterSpacing = Math.floor((newMiddlyWidth - $middly.width()) / $middly.text().length);
+var newMiddlyWidth = widthOfTilesToBeReplaced - $lefty.outerWidth() - $righty.outerWidth() - 10;
+var newLetterSpacing = Math.floor((newMiddlyWidth - $middly.outerWidth() + 10) / $middly.text().length);
 $middly.width(newMiddlyWidth);
 $middly.css("letter-spacing", newLetterSpacing);
 $sickWrapper.css({
@@ -145,7 +145,7 @@ $sickWrapper.css({
   top: parseInt(tileBeforeReplacement.css('top'), 10) + tileHeight
 });
 
-$middly.css('top', tileHeight - $middly.height() - 3);
+$middly.css('top', tileHeight - $middly.height() - 6);
 
 // bump the 'nerds' subtitle to line up
 var subtitleOffset = parseInt($sickWrapper.css('left'), 10) + $lefty.width();

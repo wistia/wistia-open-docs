@@ -879,10 +879,6 @@ table
 //////////// devHQ //////////////////
 
 
-@font-face
-  font-family: 'OCRBStd'
-  src: url('OCRBStd.otf'), format('opentype')
-
 $dev_bg_blue: #1353a2
 $devhq_accent_blue: #69D0E6
 $dotted_border: 1px dotted $dev_bg_blue
@@ -955,9 +951,9 @@ $bracket_yellow: #F9D164
 .one_tile
   cursor: pointer
   position: absolute
-  letter-spacing: 4px
+  letter-spacing: -10px
   font:
-    family: "OCRBStd"
+    family: "ocr-b-std"
     size: 52px
   +transition-duration(.25s)
   +user-select(none)
@@ -1014,9 +1010,9 @@ $bracket_yellow: #F9D164
   cursor: pointer
   color: white
   position: absolute
-  letter-spacing: 4px
+  letter-spacing: -10px
   font:
-    family: 'OCRBStd'
+    family: "ocr-b-std"
     size: 52px
   min-width: 360px
   +user-select(none)
@@ -1025,11 +1021,10 @@ $bracket_yellow: #F9D164
   .middly
     font:
       family: "Andale Mono", sans-serif
-      size: 27px
+      size: 26px
     letter-spacing: 0px
-    margin-left: -2px
-    margin-right: 2px
     padding-bottom: 4px
+    padding-left: 10px
     position: relative
 
 .devhq_footer
