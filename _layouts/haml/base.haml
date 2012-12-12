@@ -8,6 +8,11 @@
     %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/screen' | stylesheet_url }}" }
     %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/prism' | stylesheet_url }}" }
     %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
+    {% if page.developers %}
+    %script{ type: "text/javascript", src: "//use.typekit.net/pft0gev.js" } 
+    %script{ type: "text/javascript" } try{Typekit.load();}catch(e){}
+    {% endif %}
+
     :javascript
       var basepath = "{{ '' | post_url }}";
 
