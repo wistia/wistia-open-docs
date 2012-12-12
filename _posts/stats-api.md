@@ -26,7 +26,9 @@ been played! Or, celebrate when you reach a certain landmark.
 In order to tell Wistia that you want stats for your account, issue a **GET** 
 request to the following URL:
 
-`GET https://api.wistia.com/v1/stats/account.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/account.json
+</code></pre>
 
 #### The Response
 
@@ -58,7 +60,9 @@ of date -- you'll still have to figure those out for yourself. Neeeerd.
 In order to tell Wistia that you want account-wide stats for a particular date range, 
 issue a **GET** request to the following URL:
 
-`GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=<start date>&end_date=<end date>`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=&lt;start date&gt;&end_date=&lt;end date&gt;
+</code></pre>
 
 #### Parameters
 
@@ -114,7 +118,9 @@ particular project. We know you like it when we let you get specific.
 In order to retrieve stats for a project, issue a **GET** request to the following URL
 (you can find the Project ID in the URL for that project):
 
-`GET https://api.wistia.com/v1/stats/projects/<project-id>.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;.json
+</code></pre>
 
 #### The Response
 
@@ -149,7 +155,9 @@ You can use the stats API to get information about a project for a specific date
 In order to get stats for a project during a range of dates, issue a **GET** request 
 to the following URL:
 
-`GET https://api.wistia.com/v1/stats/projects/<project-id>/by_date.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;/by_date.json
+</code></pre>
 
 #### Parameters
 
@@ -205,7 +213,9 @@ print those now.
 In order to get stats for a video, issue a **GET** request to the following URL (you
  can find the Media ID in the URL for that media):
 
-`GET https://api.wistia.com/v1/stats/medias/<media-id>.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;.json
+</code></pre>
 
 #### The Response
 
@@ -237,7 +247,9 @@ visitors | The total number of unique people that have loaded this video.
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/medias/<media-id>/by_date.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/by_date.json
+</code></pre>
 
 #### Parameters
 
@@ -286,7 +298,9 @@ graphs at the top of the stats page for any video in Wistia.
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/medias/<media-id>/engagement.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/engagement.json
+</code></pre>
 
 #### Parameters
 
@@ -321,7 +335,9 @@ This method allows you to retrieve a list of visitors that have watched videos i
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/visitors.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/visitors.json
+</code></pre>
 
 #### Parameters
 
@@ -382,7 +398,9 @@ This method allows you to retrieve the information for a single visitor.
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/visitors/<visitor-key>.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/visitors/&lt;visitor-key&gt;.json`
+</code></pre>
 
 #### Parameters
 
@@ -428,7 +446,9 @@ This method allows you to retrieve a list of events (viewing sessions) from your
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/events.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/events.json
+</code></pre>
 
 #### Parameters
 
@@ -536,7 +556,9 @@ This method gives you the information about a single event from your account.
 
 #### The Request
 
-`GET https://api.wistia.com/v1/stats/events/<event-key>.json`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/events/&lt;event-key&gt;.json
+</code></pre>
 
 #### Parameters
 
@@ -588,7 +610,7 @@ Events: List method.
 You can get the heatmap for any event by constructing the following URL:
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html?public_token=<public_token>
+GET https://api.wistia.com/v1/stats/events/&lt;event-key&gt;/iframe.html?public_token=&lt;public_token&gt;
 </code></pre>
 
 Replace the **&lt;event-key&gt;** token with the event_key that indicates which 
