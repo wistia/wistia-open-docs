@@ -130,8 +130,8 @@ tilesToBeReplaced.remove();
 //
 // now we insert the replacement and style it
 //
-var $lefty = $("<div class='lefty'>&lt;/</div>");
-var $righty = $("<div class='righty'>&gt;</div>");
+var $lefty = $("<div class='lefty'>&lt;</div>");
+var $righty = $("<div class='righty'>/&gt;</div>");
 var $middly = $("<div class='middly'>wistia<span class='devhq_accent_blue'>.</span>developers</div>");
 var $sickWrapper = $("<div class='sick_wrapper'></div>");
 $sickWrapper.append($lefty).append($middly).append($righty);

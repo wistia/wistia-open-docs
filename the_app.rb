@@ -97,8 +97,8 @@ not_found do
 end
 
 # DevHQ page
-get "/devhq" do
-  send_file(File.join(File.dirname(__FILE__), '_site', 'devhq.html'))
+get "/developers" do
+  send_file(File.join(File.dirname(__FILE__), '_site', 'developers.html'))
 end
 
 # Agency!
