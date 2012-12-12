@@ -587,18 +587,19 @@ Events: List method.
 
 You can get the heatmap for any event by constructing the following URL:
 
-`GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html?public_token=abc123`
+`GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html?public_token=<public_token>`
 
-Replace the &lt;event-key&gt; token with the event_key that indicates which 
-heatmap you would like to see. You can get the &lt;event-key&gt; value from 
+Replace the **&lt;event-key&gt;** token with the event_key that indicates which 
+heatmap you would like to see. You can get the **&lt;event-key&gt;** value from 
 other parts of this API or from the Wistia player itself.
 
-Make sure you also provide your account's **public_token** as a parameter. You 
-can find your **public_token** by clicking on **API** in your Account Dashboard.
+Make sure you also provide your account's **&lt;public_token&gt;** as a parameter. You 
+can find your **&lt;public_token&gt;** by clicking on **API** in your Account Dashboard.
 
 This URL is meant to be used as the target of an iframe which can then be used 
 to render the heatmap within your own pages.
 
 Here is an example heatmap embedded right into this page:
 
-<iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="600" style="border: solid 3px gray;"></iframe>
+<iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="100%" style="border: solid 2px black;"></iframe>
+
