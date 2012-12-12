@@ -61,7 +61,7 @@ In order to tell Wistia that you want account-wide stats for a particular date r
 issue a **GET** request to the following URL:
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=&lt;start date&gt;&end_date=&lt;end date&gt;
+GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=[start date]&end_date=[end date]
 </code></pre>
 
 #### Parameters
@@ -119,7 +119,7 @@ In order to retrieve stats for a project, issue a **GET** request to the followi
 (you can find the Project ID in the URL for that project):
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;.json
+GET https://api.wistia.com/v1/stats/projects/[project-id].json
 </code></pre>
 
 #### The Response
@@ -156,7 +156,7 @@ In order to get stats for a project during a range of dates, issue a **GET** req
 to the following URL:
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/projects/&lt;project-id&gt;/by_date.json
+GET https://api.wistia.com/v1/stats/projects/[project-id]/by_date.json
 </code></pre>
 
 #### Parameters
@@ -214,7 +214,7 @@ In order to get stats for a video, issue a **GET** request to the following URL 
  can find the Media ID in the URL for that media):
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;.json
+GET https://api.wistia.com/v1/stats/medias/[media-id].json
 </code></pre>
 
 #### The Response
@@ -248,7 +248,7 @@ visitors | The total number of unique people that have loaded this video.
 #### The Request
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/by_date.json
+GET https://api.wistia.com/v1/stats/medias/[media-id]/by_date.json
 </code></pre>
 
 #### Parameters
@@ -299,7 +299,7 @@ graphs at the top of the stats page for any video in Wistia.
 #### The Request
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/medias/&lt;media-id&gt;/engagement.json
+GET https://api.wistia.com/v1/stats/medias/[media-id]/engagement.json
 </code></pre>
 
 #### Parameters
@@ -399,7 +399,7 @@ This method allows you to retrieve the information for a single visitor.
 #### The Request
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/visitors/&lt;visitor-key&gt;.json`
+GET https://api.wistia.com/v1/stats/visitors/[visitor-key].json`
 </code></pre>
 
 #### Parameters
@@ -557,7 +557,7 @@ This method gives you the information about a single event from your account.
 #### The Request
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/events/&lt;event-key&gt;.json
+GET https://api.wistia.com/v1/stats/events/[event-key].json
 </code></pre>
 
 #### Parameters
@@ -610,7 +610,7 @@ Events: List method.
 You can get the heatmap for any event by constructing the following URL:
 
 <pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/events/&lt;event-key&gt;/iframe.html?public_token=&lt;public_token&gt;
+GET https://api.wistia.com/v1/stats/events/[event-key]/iframe.html?public_token=[public_token]
 </code></pre>
 
 Replace the **&lt;event-key&gt;** token with the event_key that indicates which 
