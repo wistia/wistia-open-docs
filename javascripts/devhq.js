@@ -136,8 +136,12 @@ var $middly = $("<div class='middly'>wistia<span class='devhq_accent_blue'>.</sp
 var $sickWrapper = $("<div class='sick_wrapper'></div>");
 $sickWrapper.append($lefty).append($middly).append($righty);
 tileBeforeReplacement.after($sickWrapper);
+console.log("middly width: ", $middly.width());
+console.log("tilesToBeReplaced width: ", widthOfTilesToBeReplaced);
+console.log("sickWrapper width: ", $sickWrapper.width());
 $middly.width($middly.width() + widthOfTilesToBeReplaced - $sickWrapper.width());
 $sickWrapper.css({
+  lineHeight: $sickWrapper.height() + "px",
   left: parseInt(tileBeforeReplacement.css('left'), 10),
   top: parseInt(tileBeforeReplacement.css('top'), 10) + tileHeight
 });
