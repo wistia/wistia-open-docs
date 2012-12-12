@@ -258,6 +258,27 @@ load_count | The number of times this video was loaded on the given day.
 play_count | The number of times this video was played on the given day.
 hours_watched | The total time spent watching this video on the given day.
 
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+[
+  {
+    &quot;date&quot;: '2012-10-21',
+    &quot;load_count&quot;: 100,
+    &quot;play_count&quot;: 80,
+    &quot;hours_watched&quot;: 21.9
+  },
+  {
+    &quot;date&quot;: '2012-10-22',
+    &quot;load_count&quot;: 140,
+    &quot;play_count&quot;: 96,
+    &quot;hours_watched&quot;: 26.9
+  }
+]
+</code></pre>
+
 ### Media: Engagement
 
 Using the stats API, you can retrieve the data used to construct the engagement 
