@@ -76,7 +76,8 @@ var tiledWall = $(".tiled_wall");
 var firstTile = $(".one_tile:first");
 var headerWidth = tiledWall.width();
 var headerHeight = tiledWall.height();
-var tileWidth = firstTile.width() + 6;
+var tileWidth = firstTile.width();
+console.log("tile width:", tileWidth);
 var tileHeight = firstTile.height();
 var horizontalTiles = Math.ceil(headerWidth / tileWidth) + 2;
 var arrowWidth = Math.floor(600 / tileWidth);
@@ -148,7 +149,7 @@ $sickWrapper.css({
 $middly.css('top', tileHeight - $middly.height() - 6);
 
 // bump the 'nerds' subtitle to line up
-var subtitleOffset = parseInt($sickWrapper.css('left'), 10) + $lefty.width();
+var subtitleOffset = parseInt($sickWrapper.css('left'), 10) + $lefty.width() + 5;
 $('#devhq_subtitle').css('left', subtitleOffset);
 
 // these buggers change color on click
