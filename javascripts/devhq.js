@@ -77,7 +77,6 @@ var firstTile = $(".one_tile:first");
 var headerWidth = tiledWall.width();
 var headerHeight = tiledWall.height();
 var tileWidth = firstTile.width();
-console.log("tile width:", tileWidth);
 var tileHeight = firstTile.height();
 var horizontalTiles = Math.ceil(headerWidth / tileWidth) + 2;
 var arrowWidth = Math.floor(600 / tileWidth);
@@ -137,10 +136,10 @@ var $middly = $("<div class='middly'>wistia<span class='devhq_accent_blue'>.</sp
 var $sickWrapper = $("<div class='sick_wrapper'></div>");
 $sickWrapper.append($lefty).append($middly).append($righty);
 tileBeforeReplacement.after($sickWrapper);
-var newMiddlyWidth = widthOfTilesToBeReplaced - $lefty.outerWidth() - $righty.outerWidth() - 10;
-var newLetterSpacing = Math.floor((newMiddlyWidth - $middly.outerWidth() + 10) / $middly.text().length);
-$middly.width(newMiddlyWidth);
-$middly.css("letter-spacing", newLetterSpacing);
+//var newMiddlyWidth = widthOfTilesToBeReplaced - $lefty.outerWidth() - $righty.outerWidth() - 10;
+//var newLetterSpacing = Math.floor((newMiddlyWidth - $middly.outerWidth() + 10) / $middly.text().length);
+//$middly.width(newMiddlyWidth);
+//$middly.css("letter-spacing", newLetterSpacing);
 $sickWrapper.css({
   left: parseInt(tileBeforeReplacement.css('left'), 10),
   top: parseInt(tileBeforeReplacement.css('top'), 10) + tileHeight
@@ -149,7 +148,7 @@ $sickWrapper.css({
 $middly.css('top', tileHeight - $middly.height() - 6);
 
 // bump the 'nerds' subtitle to line up
-var subtitleOffset = parseInt($sickWrapper.css('left'), 10) + $lefty.width() + 5;
+var subtitleOffset = parseInt($sickWrapper.css('left'), 10) + $lefty.width() + 11;
 $('#devhq_subtitle').css('left', subtitleOffset);
 
 // these buggers change color on click
