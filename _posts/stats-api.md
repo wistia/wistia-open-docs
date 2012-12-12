@@ -404,6 +404,23 @@ load_count | The total number of videos that have been loaded (but not necessari
 play_count | The total number of videos that have been viewed by this visitor.
 visitor_identity | An object with 2 fields (name and email) that represents any available identity info for this visitor.
 
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+{
+  "visitor_key": "E4E7613B5C24CB0F1F7C0A1E4E874635E752263E",
+  "created_at": "2012-12-12T01:51:36Z",
+  "last_active_at": "2012-12-12T03:15:56Z",
+  "last_event_key": "1355282055737f0.4801975437439978",
+  "load_count": 3,
+  "play_count": 2,
+  "visitor_identity": { "name": "Jim", "email": "jim@example.com" }
+}
+]
+</code></pre>
+
 ## Events
 
 ### Events: List
