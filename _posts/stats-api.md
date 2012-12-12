@@ -302,6 +302,17 @@ engagement | The percentage of the video that was viewed, averaged across all vi
 engagement_data | An array which can be used as the data source for creating an engagement graph. Normally, each cell in the array represents how many times 1 second of the video has been viewed. However, for longer form content (over 1000 seconds), the array will be scaled down to 1000 items, 
 with each item representing more than 1 second of playback.
 
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+{
+  &quot;engagement&quot;: 0.75,
+  &quot;engagement_data&quot;: [ 154, 152, 152, 151, 148, ... ]
+}
+</code></pre>
+
 ## Visitors
 
 ### Visitors: List
