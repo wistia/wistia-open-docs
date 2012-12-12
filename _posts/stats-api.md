@@ -218,6 +218,21 @@ hours_watched | The total time spent watching this video.
 engagement | The average percentage of the video that gets viewed (between 0 and 1).
 visitors | The total number of unique people that have loaded this video.
 
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+{
+  &quot;load_count&quot;: 100,
+  &quot;play_count&quot;: 80,
+  &quot;play_rate&quot;: 0.54,
+  &quot;hours_watched&quot;: 21.9,
+  &quot;engagement&quot;: 0.89,
+  &quot;visitors&quot;: 94
+}
+</code></pre>
+
 ### Media: By Date
 
 #### The Request
