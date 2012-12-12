@@ -587,7 +587,9 @@ Events: List method.
 
 You can get the heatmap for any event by constructing the following URL:
 
-`GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html?public_token=<public_token>`
+<pre><code class="language-vim">
+GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html?public_token=<public_token>
+</code></pre>
 
 Replace the **&lt;event-key&gt;** token with the event_key that indicates which 
 heatmap you would like to see. You can get the **&lt;event-key&gt;** value from 
@@ -605,5 +607,7 @@ Here is an example heatmap embedded right into this page:
 
 Here is the code that we used to embed the heatmap:
 
-`<iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="100%" style="border: solid 2px black;"></iframe>`
+<pre><code class="language-markup">
+&lt;iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="100%" style="border: solid 2px black;"&gt;&lt;/iframe&gt;
+</code></pre>
 
