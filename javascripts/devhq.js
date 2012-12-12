@@ -160,3 +160,7 @@ $('.sick_wrapper').on('click', function() {
     colorsCleared = false;
   }
 });
+
+$('.devhq_footer li a').on('hover', function() {
+  $(this).next('p').toggleClass('visible');
+});

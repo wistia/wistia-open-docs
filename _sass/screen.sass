@@ -902,6 +902,7 @@ $bracket_yellow: #F9D164
   padding: .4em 0
   padding-left: 20px
   text-transform: uppercase
+
 %with_sprite
   &:after
     content: ' '
@@ -914,6 +915,13 @@ $bracket_yellow: #F9D164
   &:hover:after
     content: ' '
     background-position: 0 -21px
+
+%arrow-down
+  width: 0 
+  height: 0 
+  border-left: 20px solid transparent
+  border-right: 20px solid transparent
+  border-top: 20px solid white
 
 #container.devhq
   position: relative
@@ -1027,32 +1035,52 @@ $bracket_yellow: #F9D164
 .devhq_footer
   background: $dev_bg_blue
   display: block
-  height: 150px
+  height: 240px
   .content_container
     padding-left: 20px
     position: relative
     top: 15px
-    ul li
-      margin-bottom: 2px
+    ul
+      margin-top: 35px
+      li
+        +col
+        margin: 0 60px
+        text-align: center
+        width: 195px
   h2
     @extend %link
     color: white
+    cursor: auto
     font:
-      size: 28px
+      size: 18px
       style: normal
+      weight: normal
     padding-left: 0
     position: relative
-    top: 5px
+    text-align: center
   a
+    border-bottom: 1px solid white
     font:
-      family: "Andale Mono", monospace, sans-serif
-      size: 32px
+      family: Gill Sans, Arial, sans-serif
+      size: 26px
       weight: 100
     letter-spacing: 1px
     color: white
-    font-size: 15px
     position: relative
     &:after
       background-position: 0 -21px
     &:hover:after
       background-position: 0 0
+  p
+    color: transparent
+    line-height: 140%
+    margin-top: 5px
+    text-align: center
+    +transition-duration(.25s)
+    &.visible
+      color: white
+
+
+.devhq_footer_arrow
+  @extend %arrow-down
+  margin: 0 auto

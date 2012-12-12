@@ -52,21 +52,31 @@ type: devhq
         %a{ href: "{{ '/embed-api' | post_url }}"} Embed API
         %p
           Grab a video ID and then programmatically generate 
-          an embed code for it. Customize to your heart’s desire.
+          an embed code for it. Customize to your&nbsp;
+          %i{ class: 'icon-heart', style: 'color:red;' }>
+          's
+          desire.
 
 .devhq_footer
+  .devhq_footer_arrow
   .content_container
     %h2 Even More Development Resources
     %ul
       %li
         %a{ href: "http://dev-forum.wistia.com", target: "_blank" }
-          The Developers Forum
+          The Dev Forum
+        %p
+          Collab with other API devs to make awesome things.
       %li
         %a{ href: "http://wistia.github.com/demobin", target: "_blank" }
-          Wistia API Demobin
+          The Demobin
+        %p
+          Cool set of Wistia API demos to riff off of.
       %li
         %a{ href: "http://github.com/wistia", target: "_blank" } 
           Wistia on Github
+        %p
+          Clone some repos (including this one!)
 
 
 %script{ src: "{{ '/javascripts/devhq' | javascript_url }}" }
