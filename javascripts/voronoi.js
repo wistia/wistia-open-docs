@@ -1,7 +1,7 @@
 $(function(){
   
-  var width = $(document).width();
-  var height = $(document).height();
+  var width = $('body').width();
+  var height = $('body').height();
 
   // make a canvas that fills the screen!
   $('body').prepend("<div id='beegee' width=" + width + " height=" + height + "></div>");
