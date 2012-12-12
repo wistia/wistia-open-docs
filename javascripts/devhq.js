@@ -139,7 +139,9 @@ tileBeforeReplacement.after($sickWrapper);
 console.log("middly width: ", $middly.width());
 console.log("tilesToBeReplaced width: ", widthOfTilesToBeReplaced);
 console.log("sickWrapper width: ", $sickWrapper.width());
-$middly.width($middly.width() + widthOfTilesToBeReplaced - $sickWrapper.width());
+console.log("lefty width:", $lefty.width());
+console.log("righty width:", $righty.width());
+$middly.width(widthOfTilesToBeReplaced - $lefty.outerWidth() - $righty.outerWidth());
 $sickWrapper.css({
   lineHeight: $sickWrapper.height() + "px",
   left: parseInt(tileBeforeReplacement.css('left'), 10),
