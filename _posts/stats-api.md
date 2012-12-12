@@ -548,14 +548,57 @@ The response will be a single object representing the information about the even
 The format and fields of this object will be the same as can be found in the 
 Events: List method.
 
+#### Example JSON Response
+
+**Status:** 200 OK
+
+<pre><code class="language-json">
+{
+  "received_at": "2012-12-12T03:25:50Z",
+  "ip": "3.6.101.20",
+  "country": "TR",
+  "region": "34",
+  "city": "Istanbul",
+  "lat": 41.0186,
+  "lon": 28.9647,
+  "org": "Turk Telekom",
+  "email": "test@example.com",
+  "percent_viewed": 0.11901863354037266,
+  "embed_url": "http://wistia.com/doc/private-sharing",
+  "conversion_type": "",
+  "conversion_data": "",
+  "iframe_heatmap_url": "https://api.wistia.com/v1/stats/events/1355282749593f0.12025747820734978/iframe.html?public_token=p5j1mnpakv",
+  "visitor_key": "9DC9D7F525236E25E27E9743C0524DB0F02C703D",
+  "media_id": "75edd60835",
+  "media_name": "Private Sharing SC.mp4",
+  "media_url": "https://home.wistia.com/medias/75edd60835",
+  "thumbnail": {
+    "url":  "http://embed.wistia.com/deliveries/da4b6a18767456f089336f8c4e3f14c130fc03e3.bin",
+    "width": 640,
+    "height": 400,
+    "fileSize": 48611,
+    "contentType": "image/jpeg",
+    "type": "StillImageFile"
+  }
+}
+</code></pre>
+
 ### Events: Heatmap
 
 You can get the heatmap for any event by constructing the following URL:
 
-`GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html`
+`GET https://api.wistia.com/v1/stats/events/<event-key>/iframe.html?public_token=abc123`
 
 Replace the &lt;event-key&gt; token with the event_key that indicates which 
 heatmap you would like to see. You can get the &lt;event-key&gt; value from 
-other parts of this API or from the Wistia player itself. This URL is meant 
-to be used as the target of an iframe which can then be used to render the 
-heatmap within your own pages.
+other parts of this API or from the Wistia player itself.
+
+Make sure you also provide your account's **public_token** as a parameter. You 
+can find your **public_token** by clicking on **API** in your Account Dashboard.
+
+This URL is meant to be used as the target of an iframe which can then be used 
+to render the heatmap within your own pages.
+
+Here is an example heatmap embedded right into this page:
+
+<iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="600" style="border: solid 3px gray;"></iframe>
