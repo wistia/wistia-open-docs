@@ -79,6 +79,14 @@ wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
 });
 </code></pre>
 
+You can also capture an event when a Wistia popover is closed.
+
+<pre><code class="language-javascript">
+wistiaJQuery(document).bind("wistia-popover-close", function() {
+  alert("A Wistia video was closed!");
+});
+</code></pre>
+
 ## Player API Methods
 
 Method                  | Description
