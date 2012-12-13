@@ -286,9 +286,8 @@ See our [working with Wistia images]({{ '/working-with-images' | post_url }}) gu
 
   1. If an invalid URL (one that doesn't match our regular expression above) is given, the endpoint will return <span class="code">404 Not Found</span>.
   2. If an unparseable URL is given in the url param, the endpoint will return <span class="code">404 Not Found</span>.
-  3. If a media is found but has no available embed code, the endpoint will return <span class="code">501 Not Implemented</span>. Video, Audio, and Document files all currently implement oembeds.
+  3. If a media is found but has no available embed code, the endpoint will return <span class="code">501 Not Implemented</span>. Video, Image, Audio, and Document files all currently implement oembeds.
   4. If a playlist is found but has no videos, the endpoint will return <span class="code">501 Not Implemented</span>.
-  5. If a maxwidth or maxheight forces a change to the media's dimensions, it is ''not'' guaranteed to maintain the correct aspect ratio (you may see horizontal black bars above or below the video). If you expect this to happen, you should make use of the [videoFoam]({{ '/player-api' | post_url }}) option.
 
 ---
 
