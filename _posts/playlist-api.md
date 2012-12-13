@@ -66,7 +66,7 @@ theme           | string  | The playlist's theme. Current acceptable values are 
 version         | string  | Must be "v1".
 videoOptions    | object  | Specify embedding options for each video as specified in the [Player API]({{ '/player-api' | post_url }}).
 
-## Playlist events
+# Playlist events
 
 By default, all the standard player API events are available at the playlist level too. But we also have some playlist-specific events to let you do cool stuff on a per-video basis.
 
