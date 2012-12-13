@@ -24,8 +24,6 @@ play(sectionIndex, videoIndex)  | Plays a specific video by index.
 ready(fn)                       | Execute the function when the playlist is ready. A playlist may not be ready at various times during its lifecycle, usually while it's removing the current video and embedding the next. 
 setEmail(email)                 | Sets the email for all videos in the playlist.
 setPlayerColor(hexColor)        | Sets a custom color for the player and playlist.
-startVideo(videoIndex)          | Designates which video to start the playlist with.
-startSection(sectionIndex)      | Designates which section to start with.
 videoHeight()                   | Returns the height of the video.
 videoHeight(h)                  | Sets the height of the video. The height of the entire embed will change to compensate.
 videoWidth()                    | Returns the width of the video.
@@ -61,6 +59,8 @@ autoAdvance     | boolean | When true, automatically embed the next video when t
 container       | string  | The container ID where the playlist will be embedded. Defaults to "wistia_{hashed_id}".
 loop            | boolean | When true, the playlist will begin again from the start when the last video ends. Default is false.
 media\_\{si}\_\{vi} | object  | Specify embedding options for a specific video by index as specified in the [Player API](/player-api.html). si and vi should each be a number. 
+startVideo      | integer | Designates which video (in the given section) to start the playlist with. Defaults to 0.
+startSection    | integer | Designates which section to start with. Defaults to 0.
 theme           | string  | The playlist's theme. Current acceptable values are "trim", "steam", "tango", or "bare". For API embeds, this needs to correspond with the script included on the page.
 version         | string  | Must be "v1".
 videoOptions    | object  | Specify embedding options for each video as specified in the [Player API]({{ '/player-api' | post_url }}).
