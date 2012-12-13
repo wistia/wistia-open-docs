@@ -12,6 +12,7 @@ footer: 'for_developers'
 
 Method | Description
 ----- | -----------
+bind(event, function)           | Lets you bind a function to a playlist event. Check out the [Playlist Events](#playlist-events) for more info.
 currentVideo()                  | Return a handle to the currently embedded video, which lets you access the [Player API]({{ '/player-api' | post_url }}).
 embed(sectionIndex, videoIndex) | Embed the video in the playlist corresponding to the given indices.
 embedNext()                     | Embed the next video in the playlist.
@@ -64,6 +65,28 @@ startSection    | integer | Designates which section to start with. Defaults to 
 theme           | string  | The playlist's theme. Current acceptable values are "trim", "steam", "tango", or "bare". For API embeds, this needs to correspond with the script included on the page.
 version         | string  | Must be "v1".
 videoOptions    | object  | Specify embedding options for each video as specified in the [Player API]({{ '/player-api' | post_url }}).
+
+## Playlist events
+
+By default, all the standard player API events are available at the playlist level too. But we also have some playlist-specific events to let you do cool stuff on a per-video basis.
+
+Event Name    | Arguments                       | Description
+----------    | ---------                       | -----------
+afterembed    | sectionIndex, videoIndex        | Fired after each video is embedded. This is helpful for targeting interactions for a specific video in the playlist. The arguments are the sectionIndex and videoIndex for the current video.
+beforeembed   | sectionIndex, videoIndex        | Fired after each video is embedded. This is helpful for targeting interactions for a specific video in the playlist. The secondIndex and videoIndex are for the next video.
+end           | sectionIndex, videoIndex        | When the state of any video in the playlist changes to "ended".
+pause         | sectionIndex, videoIndex        | When the state of any video in the playlist changes to "paused".
+play          | sectionIndex, videoIndex        | When the state of any video in the playlist changes to "playing". This can fire multiple times per video if the user pauses.
+timechange    | sectionIndex, videoIndex, time  | Fired multiple times per second while the video is playing, or if the user seeks.
+
+To control a specific video with the [Player API](/player-api.html), you'll probably want to use "afterembed". Here's a quick example.
+
+<pre><code class='language-javascript'>wistiaPlaylist.bind("afterembed", function(sectionIndex, videoIndex) {
+  if (sectionIndex === 1 && videoIndex === 4) {
+    // This video was way louder than the others, so let's lower the volume to start.
+    wistiaPlaylist.currentVideo().volume(0.2);
+  }
+});</code></pre>
 
 ## Playlist API Examples
 
