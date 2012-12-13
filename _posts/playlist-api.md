@@ -18,6 +18,8 @@ embed(sectionIndex, videoIndex) | Embed the video in the playlist corresponding 
 embedNext()                     | Embed the next video in the playlist.
 height()                        | Returns the height of the entire embed.
 height(h)                       | Sets the height of the entire embed.
+onFirstVideo()                  | Returns true if the current video is the first one in the playlist.
+onLastVideo()                   | Returns true if the current video is the last one in the playlist.
 pause()                         | Pause the current video.
 play()                          | Plays the current video.
 play(sectionIndex)              | Plays the first video in the specified section.
