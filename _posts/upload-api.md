@@ -5,8 +5,9 @@ api: true
 description: A simple mechanism for getting your videos into Wistia.
 category: For Developers
 footer: 'for_developers'
-post_intro: "<p>The Upload API is the best way to programmatically get new videos and files into your Wistia account.</p>"
+post_intro: "<p>The Upload API is the best way to programmatically get new videos and files into your Wistia account.</p><p>If you are looking to have site visitors upload content (something like <em>user generated content</em>) you should also check out <a href='/doc/upload-widget-specs'>Upload Widgets</a>.</p>"
 ---
+
 
 
 Simply supply the required parameters and **POST** your media file to
