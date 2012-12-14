@@ -19,8 +19,12 @@
         </a>
         <span class='breadcrumb_post_title'>
           &gt;
+          {% if page.api %}
+          <a href="{{ '/developers' | post_url }}">Developers</a>
+          {% else %}
+          <a href='{{ page.category | category_url }}'>{{ page.category }}</a>
+          {% endif %}
         </span>
-        <a href='{{ page.category | category_url }}'>{{ page.category }}</a>
         {% else %}
         <a href="{{ '/' | post_url }}">
           <i class='icon-home icon-large'></i>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Wistia Upload API
+api: true
 description: A simple mechanism for getting your videos into Wistia.
 category: For Developers
 footer: 'for_developers'

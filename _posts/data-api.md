@@ -1,4 +1,3 @@
-
 ---
 api: true
 layout: post

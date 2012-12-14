@@ -8,6 +8,7 @@
         %span.breadcrumb_post_title
           &gt;
           {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
+
       {% else %}
       %li#breadcrumbs
         {% if page.category %}
@@ -15,7 +16,11 @@
           %i.icon-home.icon-large
         %span.breadcrumb_post_title
           &gt;
-        %a{ href: "{{ page.category | category_url }}" } {{ page.category }}
+          {% if page.api %}
+          %a{ href: "{{ '/developers' | post_url }}" } Developers
+          {% else %}
+          %a{ href: "{{ page.category | category_url }}" } {{ page.category }}
+          {% endif %}
         {% else %}
         %a{ href: "{{ '/' | post_url }}" }
           %i.icon-home.icon-large
