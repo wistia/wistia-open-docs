@@ -4,7 +4,7 @@ api: true
 category: For Developers
 title: Wistia Video Player API
 description: The Wistia player has a built in Javascript API, providing you with a variety of ways to create awesome functions and interact with the player.
-post_intro: <p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p><p><strong>Note:</strong> for custom javascript you write to interface with a Wistia embed, add it to your source <em>under</em> the Wistia embed (ie. the footer).</p>
+post_intro: "<p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p><p><strong>Note:</strong> for custom javascript you write to interface with a Wistia embed, add it to your source <em>under</em> the Wistia embed (ie. the footer).</p><p><strong>Popovers:</strong> We've got a page setup if you are looking for <a href='http://wistia.com/doc/popover-customization'>popover customization options</a>.</p>"
 footer: 'for_developers'
 ---
 

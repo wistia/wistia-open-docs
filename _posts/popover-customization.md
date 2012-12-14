@@ -4,7 +4,7 @@ layout: post
 category: For Developers
 description: Customize your 'popover' embeds with these tips.
 footer: 'for_developers'
-post_intro: <p>Wistia's popover (lightbox) implementation utilizes Fancybox, a plug-in for jQuery. The Fancybox API gives access to all kinds of custom effects and settings that Wistia users can access. Here are a few of our favorites that we've helped customers implement.</p>
+post_intro: <p>Wistia's popover (lightbox) implementation utilizes <a href='http://http://fancybox.net/'>Fancybox</a>, a plug-in for jQuery. The Fancybox API gives access to all kinds of custom effects and settings that Wistia users can access. Here are a few of our favorites that we've helped customers implement.</p>
 ---
 
 ## Adding a Border Around Your Video in a Popover
