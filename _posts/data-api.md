@@ -159,6 +159,10 @@ depends on which extension was used to make the request.
   <td> The project&#039;s display name.</td>
 </tr>
 <tr>
+  <td> description </td>
+  <td> The project&#039;s description.</td>
+</tr>
+<tr>
   <td> mediaCount </td>
   <td> The number of different medias that have been uploaded to the project.</td>
 </tr>
@@ -203,6 +207,7 @@ depends on which extension was used to make the request.
   {
     "id": 22570,
     "name": "My Project Title",
+    "description": "My Project Description",
     "mediaCount": 2,
     "created": "2010-08-13T18:47:39+00:00",
     "updated": "2010-08-19T21:47:00+00:00",
@@ -215,6 +220,7 @@ depends on which extension was used to make the request.
   {
     "id": 10495,
     "name": "Another Project Title",
+    "description": "Another Project Description",
     "mediaCount": 4,
     "created": "2010-08-13T18:47:39+00:00",
     "updated": "2010-08-19T21:47:00+00:00",
@@ -236,6 +242,7 @@ depends on which extension was used to make the request.
   &lt;project&gt;
     &lt;id&gt;22570&lt;/id&gt;
     &lt;name&gt;My Project Title&lt;/name&gt;
+    &lt;description&gt;My Project Description&lt;/description&gt;
     &lt;mediaCount&gt;2&lt;/mediaCount&gt;
     &lt;created&gt;2010-08-13T18:47:39+00:00&lt;/created&gt;
     &lt;updated&gt;2010-08-19T21:47:00+00:00&lt;/updated&gt;
@@ -248,6 +255,7 @@ depends on which extension was used to make the request.
   &lt;project&gt;
     &lt;id&gt;10495&lt;/id&gt;
     &lt;name&gt;Another Project Title&lt;/name&gt;
+    &lt;description&gt;Another Project Description&lt;/description&gt;
     &lt;mediaCount&gt;4&lt;/mediaCount&gt;
     &lt;created&gt;2010-08-13T18:47:39+00:00&lt;/created&gt;
     &lt;updated&gt;2010-08-19T21:47:00+00:00&lt;/updated&gt;
@@ -291,6 +299,7 @@ Field | Description
 ------|---------------------------
 id    | A unique numeric identifier for the project within the system.
 name  | The project&#039;s title or display name.
+description  | The project&#039;s description.
 mediaCount | The number of media in the project.
 created | The date that the project was originally created.
 updated | The date that the project was last changed.
@@ -322,6 +331,7 @@ updated   | The date when the media was last changed.
 {
   &quot;id&quot;: 22570,
     &quot;name&quot;: &quot;My Project Title&quot;,
+    &quot;description&quot;: &quot;My Project Description&quot;,
     &quot;mediaCount&quot;: 2,
     &quot;created&quot;: &quot;2010-08-13T18:47:39+00:00&quot;,
     &quot;updated&quot;: &quot;2010-08-19T21:47:00+00:00&quot;,
@@ -370,6 +380,7 @@ updated   | The date when the media was last changed.
 &lt;project&gt;
   &lt;id&gt;22570&lt;/id&gt;
   &lt;name&gt;My Project Title&lt;/name&gt;
+  &lt;description&gt;My Project Description&lt;/description&gt;
   &lt;mediaCount&gt;2&lt;/mediaCount&gt;
   &lt;created&gt;2010-08-13T18:47:39+00:00&lt;/created&gt;
   &lt;updated&gt;2010-08-19T21:47:00+00:00&lt;/updated&gt;
@@ -453,6 +464,7 @@ Field | Description
 ------|---------------
 id        | A numeric identifier that uniquely identifies the project to the system.  You can use this field to obtain more information about the project using the other API methods.
 name      | The name of the newly created project.
+description      | The description of the newly created project.
 mediaCount | The number of media in the project.
 created    | The date that the project was originally created.
 updated    | The date that the project was last changed.
@@ -473,6 +485,7 @@ publicId | If the project is public, this field contains a string representing t
 {
   &quot;id&quot;: 1,
     &quot;name&quot;: &quot;My New Project&quot;,
+    &quot;description&quot;: &quot;My Project Description&quot;,
     &quot;mediaCount&quot;: 0,
     &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
     &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
@@ -493,6 +506,7 @@ publicId | If the project is public, this field contains a string representing t
   &lt;project&gt;
     &lt;id&gt;1&lt;/id&gt;
     &lt;name&gt;My New Project&lt;/name&gt;
+    &lt;description&gt;My New Project Description&lt;/description&gt;
     &lt;mediaCount&gt;0&lt;/mediaCount&gt;
     &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
     &lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
@@ -536,6 +550,7 @@ Field   | Description
 --------|----------------
 id         | A numeric identifier that uniquely identifies the project to the system.  You can use this field to obtain more information about the project using the other API methods.
 name       | The name of the project.
+description       | A description of the project.
 mediaCount | The number of media in the project.
 created    | The date that the project was originally created.
 updated    | The date that the project was last changed.
@@ -552,6 +567,7 @@ publicId | If the project is public, this field contains a string representing t
 {
   &quot;id&quot;: 1,
     &quot;name&quot;: &quot;Updated Project Name&quot;,
+    &quot;description&quot;: &quot;Updated Project Description&quot;,
     &quot;mediaCount&quot;: 5,
     &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
     &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
@@ -570,6 +586,7 @@ publicId | If the project is public, this field contains a string representing t
 &lt;project&gt;
 &lt;id&gt;1&lt;/id&gt;
 &lt;name&gt;Updated Project Name&lt;/name&gt;
+&lt;description&gt;Updated Project Description&lt;/description&gt;
 &lt;mediaCount&gt;5&lt;/mediaCount&gt;
 &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
 &lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
@@ -611,6 +628,7 @@ Field   | Description
 --------|------------------
 id         | A numeric identifier that uniquely identifies the project to the system.  You can use this field to obtain more information about the project using the other API methods.
 name       | The name of the project.
+description       | A description of the project.
 mediaCount | The number of media in the project.
 created    | The date that the project was originally created.
 updated    | The date that the project was last changed.
@@ -628,6 +646,7 @@ publicId | If the project is public, this field contains a string representing t
 {
   &quot;id&quot;: 1,
     &quot;name&quot;: &quot;Project Name&quot;,
+    &quot;description&quot;: &quot;Project Description&quot;,
     &quot;mediaCount&quot;: 5,
     &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
     &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
@@ -646,6 +665,7 @@ publicId | If the project is public, this field contains a string representing t
 &lt;project&gt;
   &lt;id&gt;1&lt;/id&gt;
   &lt;name&gt;Project Name&lt;/name&gt;
+  &lt;description&gt;Project Description&lt;/description&gt;
   &lt;mediaCount&gt;5&lt;/mediaCount&gt;
   &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
   &lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
@@ -697,16 +717,17 @@ The body of the response will contain an object representing the *new copy* of t
 
 Field   | Description
 --------|-------------------
-id         | A numeric identifier that uniquely identifies the project to the system.  You can use this field to obtain more information about the project using the other API methods.
-name       | The name of the project.
-mediaCount | The number of media in the project.
-created    | The date that the project was originally created.
-updated    | The date that the project was last changed.
-hashedId   | A private hashed id, uniquely identifying the project within the system.  Used for playlists and RSS feeds.
-anonymousCanUpload | A boolean indicating whether or not anonymous uploads are enabled for the project.
-anonymousCanDownload | A boolean indicating whether or not anonymous downloads are enabled for this project.
-public | A boolean indicating whether the project is available for public (anonymous) viewing.
-publicId | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
+id                    | A numeric identifier that uniquely identifies the project to the system. You can use this field to obtain more information about the project using the other API methods.
+name                  | The name of the project.
+description           | A description of the project.
+mediaCount            | The number of media in the project.
+created               | The date that the project was originally created.
+updated               | The date that the project was last changed.
+hashedId              | A private hashed id, uniquely identifying the project within the system. Used for playlists and RSS feeds.
+anonymousCanUpload    | A boolean indicating whether or not anonymous uploads are enabled for the project.
+anonymousCanDownload  | A boolean indicating whether or not anonymous downloads are enabled for this project.
+public                | A boolean indicating whether the project is available for public (anonymous) viewing.
+publicId              | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
 
 
 #### Example JSON Response
@@ -718,6 +739,7 @@ publicId | If the project is public, this field contains a string representing t
 {
   &quot;id&quot;: 3,
     &quot;name&quot;: &quot;Project Name&quot;,
+    &quot;description&quot;: &quot;Project Description&quot;,
     &quot;mediaCount&quot;: 5,
     &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
     &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
@@ -737,6 +759,7 @@ publicId | If the project is public, this field contains a string representing t
 &lt;project&gt;
   &lt;id&gt;3&lt;/id&gt;
   &lt;name&gt;Project Name&lt;/name&gt;
+  &lt;desciption&gt;Project Description&lt;/description&gt;
   &lt;mediaCount&gt;5&lt;/mediaCount&gt;
   &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
   &lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
