@@ -38,11 +38,11 @@ but with the caveat that it won't work in IE7 and below (it won't break
 anything, it just doesn't work). If you aren't too concerned with outdated 
 browsers, this is the recommended way to access the player API.
 
-Put the following just before the `</body>` tag:
+Put the following anywhere in the HTML document:
 
 <pre><code class="language-markup">&lt;script src="//fast.wistia.com/static/iframe-api-v1.js"&gt;&lt;/script&gt; </code></pre>
 
-{{ "It must come after any iframe embeds on the page, so it <strong>cannot</strong> be added inside the <span class='code'>&lt;head&gt;</span> tag." | note }}
+{{ "The iframe-api script can go anywhere on your page. Once it has run, all Wistia iframes on the page will have the `wistiaApi` property." | note }}
 
 Now you can access the API by getting the `wistiaApi` property from the iframe element.
 You can assign an ID to each wistia iframe so you can get an easy handle to it.
@@ -96,6 +96,7 @@ duration()              | Returns the length of the video in seconds
 height()                | Gets the current height of the embed (the video plus any plugins above or below).
 height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.
 name()                  | Returns the name of the video
+hashedId()              | Returns the hashedId of the video
 pause()                 | This causes the video player to pause the video if it is currently playing.
 play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.
 ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.
