@@ -93,10 +93,10 @@ Method                  | Description
 ------                  | -----------
 bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", and "timechange".
 duration()              | Returns the length of the video in seconds
+hashedId()              | Returns the hashedId of the video
 height()                | Gets the current height of the embed (the video plus any plugins above or below).
 height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.
 name()                  | Returns the name of the video
-hashedId()              | Returns the hashedId of the video
 pause()                 | This causes the video player to pause the video if it is currently playing.
 play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.
 ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.
