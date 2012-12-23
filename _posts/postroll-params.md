@@ -35,14 +35,15 @@ Wistia.plugin.postRoll(wistiaEmbed, {
 
 ### Postroll Options
 
- Option Name | Type   | Description                                             
- ----------- | ----   | --------------------------------------------------------
- image       | string | The image src for the call to action.                    
- link        | string | The destination URL when you click the postroll.         
- raw         | string | The raw HTML for the call to action.                     
- style       | object | The styles to be applied to the root postroll element.   
- text        | string | The text for the call to action.                         
- version     | string | The version of the post roll to use. Must be "v1".       
+ Option Name        | Type    | Description
+ -----------        | ----    | --------------------------------------------------------
+ backgroundOpacity  | float   | A decimal between 0 and 1 to set the overall opacity of the background. Default is 0.91.
+ image              | string  | The image src for the call to action.
+ link               | string  | The destination URL when you click the postroll.
+ raw                | string  | The raw HTML for the call to action.
+ style              | object  | The styles to be applied to the root postroll element.
+ text               | string  | The text for the call to action.
+ version            | string  | The version of the post roll to use. Must be "v1".
 
 The link param can be used with either text or image calls to action. If a raw param 
 is given, it will be used instead of text/image/link.
