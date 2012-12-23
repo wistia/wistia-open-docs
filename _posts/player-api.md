@@ -91,7 +91,7 @@ wistiaJQuery(document).bind("wistia-popover-close", function() {
 
 Method                  | Description
 ------                  | -----------
-bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", and "timechange".
+bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", "secondchange", and "timechange".
 duration()              | Returns the length of the video in seconds
 hashedId()              | Returns the hashedId of the video
 height()                | Gets the current height of the embed (the video plus any plugins above or below).
@@ -151,15 +151,17 @@ In this example, let's assume that we want to fire a Javascript function when th
 
 <pre><code class="language-javascript">
 <script type="text/javascript">
-wistiaEmbed.bind("timechange", function (t) {
-  if(t > 60 && t < 62) {
+wistiaEmbed.bind("secondchange", function (s) {
+  if(s === 60) {
     // Insert code to be executed here
   }
 });
 </script>
 </code></pre>
 
-The bind function monitors the state of the video in an event loop. Every 500 milliseconds, it checks to see if the video's time position has changed. If it has, it runs your function with the current time (t) as the only argument.
+The bind function monitors the state of the video in an event loop. Every 300 milliseconds, it checks to see if the video's time position has changed. If it has, it runs your function with the current second (s) as the only argument.
+
+The "secondchange" will only run once per second while the video is playing. If you need more fine-grained control, try binding to the "timechange" event instead.
 
 ---
 
@@ -230,6 +232,19 @@ See more about how it works on the [Selective Autoplay Demo Page](http://wistia.
 ### Alert on play just once
 
 With the bind method, every time "play" is triggered, your function will be executed. But sometimes a user will scroll back to the beginning and hit Play again. If you want to avoid your function being executed again, you need to unbind it.
+
+Our library contains a special unbinding pattern for convenience. In the callback function, just return `this.unbind`.
+
+<pre><code class="language-javascript">
+<script type="text/javascript">
+wistiaEmbed.bind("play", function() {
+  alert("Played the first time!");
+  return this.unbind;
+});
+</script>
+</code></pre>
+
+If you are performing asynchronous operations or need more control over unbinding, you can use the `unbind` method as shown below.
 
 <pre><code class="language-javascript">
 <script type="text/javascript">
