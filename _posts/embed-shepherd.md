@@ -27,7 +27,7 @@ The Embed Shepherd immediately sets up a global variable called `wistiaEmbeds` i
 There are also some convenience functions included, as detailed in the sections below.
 
 
-## Accessing each embed
+## Accessing each active embed
 
 The `wistiaEmbeds` variable is based on a normal Javascript Array. As such, you can loop over the embeds, each of which has methods as defined in the [Player API](/player-api).
 
@@ -49,11 +49,13 @@ wistiaEmbeds.each(function(video) {
 </code></pre>
 
 
-## Capturing newly embedded videos
+## Access each active embed and all FUTURE embeds
 
-The "initembed" event lets you immediately get a handle on any Wistia embeds that are injected after the Embed Shephered is included on the page.
+The `each` method will let you loop over embeds that exist at the time of execution. But it will miss any embeds that are injected later.
 
-<pre><code class="language-javascript">wistiaEmbeds.bind("initembed", function(video) {
+If you want to perform initialization logic for each video, including those that are injected after the Embed Shepherd is first executed, then the `onFind` method will help you out.
+
+<pre><code class="language-javascript">wistiaEmbeds.onFind(function(video) {
   function onFirstPlay() {
     console.log("I played " + video.name());
     video.unbind("play", onFirstPlay);
