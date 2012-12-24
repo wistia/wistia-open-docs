@@ -40,11 +40,10 @@ Often you want to assign separate bindings to each video, so it can be useful to
 
 <pre><code class="language-javascript">
 wistiaEmbeds.each(function(video) {
-  function onFirstPlay() {
+  video.bind("play", function() {
     console.log("I played " + video.name());
-    video.unbind("play", onFirstPlay);
-  }
-  video.bind("play", onFirstPlay);
+    return this.unbind;
+  });
 });
 </code></pre>
 
@@ -56,11 +55,10 @@ The `each` method will let you loop over embeds that exist at the time of execut
 If you want to perform initialization logic for each video, including those that are injected after the Embed Shepherd is first executed, then the `onFind` method will help you out.
 
 <pre><code class="language-javascript">wistiaEmbeds.onFind(function(video) {
-  function onFirstPlay() {
+  video.bind("play", function() {
     console.log("I played " + video.name());
-    video.unbind("play", onFirstPlay);
-  }
-  video.bind("play", onFirstPlay);
+    return this.unbind;
+  });
 });</code></pre>
 
 
@@ -77,10 +75,10 @@ wistiaEmbeds.bind("end", function(video) {
 
 You can unbind too:
 
-<pre><code class="language-javascript">function onFirstVideoPlay(video) {
+<pre><code class="language-javascript">
+wistiaEmbeds.bind("play", function() {
   console.log("I played one of these videos first. It was this one: " + video.name());
-  wistiaEmbeds.unbind("play", onFirstVideoPlay);
-}
-wistiaEmbeds.bind("play", onFirstVideoPlay);</code></pre>
+  return this.unbind;
+});</code></pre>
 
 
