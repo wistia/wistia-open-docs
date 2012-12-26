@@ -78,13 +78,17 @@ This is the full list of providers we currently integrate with:
 
 ## Email Clients That Support Dynamic Links
 
-The following is a table that includes the email clients we have encountered that support dynamic links, and the merge tags needed to take advantage of them.
+The following is a table that includes the email clients we have encountered 
+that support dynamic links, and the merge tags needed to take advantage of them. 
+Some of them are not included in the product itself - directions for using them are
+given in the following section.
 
 Provider  |  URL Email Merge Tag
 ----------|----------------------
 AWeber    |  `{!email}`
 Blue Hornet  |  `%%to_email%%`
 Campaign Monitor | `[email]`
+ClearWebb | `$email`
 Constant Contact | `$SUBSCRIBER.EMAIL$`
 Emailvision  |  `[EMV FIELD]EMAIL[EMV /FIELD]`
 Emma  | Not Available
