@@ -1,7 +1,8 @@
 ---
-title: Randor Customization
-description: Ready to start customizing your Wistia videos? Learn more with the next video in the Randor series!
+title: Wistia Basics - Customization
+description: Ready to start customizing your Wistia videos? Learn more with this video episode from the Wistia Basics series!
 layout: post
+post_intro: <p><em>Customizing Your Wistia Embeds</em> details how to control the Wistia player that appears on your website.</p>
 ---
 
 <style type="text/css">
@@ -27,7 +28,7 @@ wistiaEmbed = Wistia.embed("01a1d9f97c", {
 });
 Wistia.plugin.postRoll(wistiaEmbed, {
     version: "v1",
-    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_basics\">Wistia Basics</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_promoting\">Promoting Videos</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_analytics\">Understanding Analytics</a><br>\n</div>",
+    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia_basics\">Wistia Basics</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-promoting\">Promoting Videos</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-analytics\">Understanding Analytics</a><br>\n</div>",
     style: {
     backgroundColor: "#141314",
     color: "#ffffff",
@@ -49,7 +50,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 </div>
 
 <div class="randor_links">
-<p style="width:271px;"><em>Customizing Your Wistia Embeds</em> details how to control the Wistia player that appears on your website.<br />
+<p><em>Wistia Basics - Customization</em> chapter links</p>
 <ul>
 <li><a class="chap_link" id="first_chap" href="#" onclick="wistiaEmbed.time(0).play(); return false;">Part I</a></li>
 <li><a class="chap_link" id="second_chap" href="#" onclick="wistiaEmbed.time(113).play(); return false;">Part II</a></li>
@@ -75,7 +76,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 The next video in the series is **"Promoting Your Video"**.  It covers all the tools Wistia has for making your video available to your viewers, and increasing views. 
 
-Watch it right now: [Promoting Your Video]({{ '/randor-promoting' | post_url }}).
+Watch it right now: [Promoting Your Video]({{ '/wistia-basics-promoting' | post_url }}).
 
 <script>
   var url = window.location.href.toString();

@@ -1,7 +1,8 @@
 ---
-title: Randor Basics
+title: Wistia Basics - Getting Started
 description: OK, so you've got your new Wistia account set up. Now what? Watch this quick video to get a solid foundation set up!
 layout: post
+post_intro: <p><em>Wistia Basics</em> features uploading, embedding, analytics, and account settings with Wistia.</p>
 ---
 
 <style>
@@ -28,7 +29,7 @@ wistiaEmbed = Wistia.embed("8a5e87899d", {
 });
 Wistia.plugin.postRoll(wistiaEmbed, {
     version: "v1",
-    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_customization\">Video Customization</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_promoting\">Promoting Videos</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_analytics\">Understanding Analytics</a><br>\n</div>",
+    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-customization\">Video Customization</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-promoting\">Promoting Videos</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-analytics\">Understanding Analytics</a><br>\n</div>",
     style: {
     backgroundColor: "#141314",
     color: "#ffffff",
@@ -50,7 +51,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 </div>
 
 <div class="randor_links" style="margin: 0 auto;">
-  <p><em>Wistia Basics</em> features uploading, embedding, analytics, and account settings with Wistia.</p>
+  <p><em>Wistia Basics - Getting Started</em> chapter links</p>
   <ul>
     <li><a class="chap_link" id="first_chap" href="#" onclick="wistiaEmbed.time(0).play(); return false;">Uploading a video</a></li>
     <li><a class="chap_link" id="second_chap" href="#" onclick="wistiaEmbed.time(96).play(); return false;">Embedding on your site</a></li>
@@ -75,12 +76,12 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 **Embedding**
 
-* *(2:10)* To see that video on customization, head here: [Customizing Your Embed]( {{ '/randor_customization' | post_url }})
+* *(2:10)* To see that video on customization, head here: [Customizing Your Embed]( {{ '/wistia-basics-customization' | post_url }})
 * *(2:20)* In this example, I used a Wordpress blog, but there are lots of different site types and platforms you can embed Wistia videos into.  See our [list of tested sites]({{ '/integration' | post_url }}).
 
 **Stats Intro**
 
-* *(3:20)* For more on Wistia Analytics, head here: [Understanding Analytics]({{ '/randor_analytics' | post_url }}).
+* *(3:20)* For more on Wistia Analytics, head here: [Understanding Analytics]({{ '/wistia-basics-analytics' | post_url }}).
 
 **Account Settings**
 
@@ -92,7 +93,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 The next video in the series is **"Customizing Your Embed"**.  From colors, to controls, to interactivity, the SuperEmbed builder gives you ultimate video customizing power.
 
-Watch it right now: [Customizing Your Embed]({{ '/randor-customization' | post_url }}).
+Watch it right now: [Customizing Your Embed]({{ '/wistia-basics-customization' | post_url }}).
 
 <script>
   var url = window.location.href.toString();

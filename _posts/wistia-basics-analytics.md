@@ -1,7 +1,8 @@
 ---
-title: Randor Analytics
+title: Wistia Basics - Analytics
 layout: post
-description: This video series covers all the basics of Wistia's analytics features!
+description: This episode of our Wistia Basics series covers the starting blocks of Wistia's analytics features!
+post_intro: <p><em>Understanding Analytics</em> is about Wistia's bread-and-butter - the powerful analytics provided for embedded video plays.</p>
 ---
 
 <style type="text/css">
@@ -28,7 +29,7 @@ wistiaEmbed = Wistia.embed("f13ff05fc3", {
 
 Wistia.plugin.postRoll(wistiaEmbed, {
     version: "v1",
-    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_basics\">Wistia Basics</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_customizing\">Customizing Your Embed</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_promoting\">Promoting Your Video</a><br>\n</div>\n",
+    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-getting-started\">Wistia Basics</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-customizing\">Customizing Your Embed</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-promoting\">Promoting Your Video</a><br>\n</div>\n",
     style: {
     backgroundColor: "#141314",
     color: "#ffffff",
@@ -51,7 +52,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 </div>
 
 <div class="randor_links">
-<p style="width:325px;"><em>Understanding Analytics</em> is all about Wistia's bread-and-butter: the powerful analytics provided for embedded video plays.</p>
+<p><em>Wistia Basics - Analytics</em> chapter links</p>
 <ul>
 <li><a class="chap_link" id="first_chap" href="#" onclick="wistiaEmbed.time(0).play(); return false;">Part I</a></li>
 <li><a class="chap_link" id="second_chap" href="#" onclick="wistiaEmbed.time(120).play(); return false;">Part II</a></li>
@@ -72,7 +73,10 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 ## Ready for More?
 
-This is (for now) the last video in the series!  You can head back, and check out our [Wistia Basics]({{ '/randor-basics' | post_url }}) video, or [Customizing Your Embed]({{ '/randor-customization' | post_url }}) or [Promoting Your Video]({{ '/randor-promoting' | post_url }}).
+This is (for now) the last video in the series!  You can head back, and check 
+out our [Getting Started]({{ '/wistia-basics-getting-started' | post_url }}) 
+video [Customizing Your Embed]({{ '/wistia-basics-customization' | post_url }})
+or [Promoting Your Video]({{ '/wistia-basics-promoting' | post_url }}).
 
 What other Wistia training videos would you like to see?
 

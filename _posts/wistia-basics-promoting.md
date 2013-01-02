@@ -1,7 +1,8 @@
 ---
-title: Randor Promoting
+title: Wistia Basics - Promoting
 layout: post
 description: Wistia makes it super easy to promote your video to the world. From email marketing to social sharing, we've got it all covered.
+post_intro: <p><em>Promoting Your Video</em> covers the tools that ensure your video content gets the attention it deserves.</p>
 ---
 
 <style type="text/css">
@@ -27,7 +28,7 @@ wistiaEmbed = Wistia.embed("07bb07bab1", {
 });
 Wistia.plugin.postRoll(wistiaEmbed, {
     version: "v1",
-    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_basics\">Wistia Basics</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_customization\">Customizing Your Embed</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/randor_analytics\">Understanding Analytics</a><br>\n</div>\n",
+    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-getting-started\">Wistia Basics</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-customization\">Customizing Your Embed</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-analytics\">Understanding Analytics</a><br>\n</div>\n",
     style: {
     backgroundColor: "#141314",
     color: "#ffffff",
@@ -49,7 +50,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 </div>
 
 <div class="randor_links" >
-<p style="width:205px;"><em>Promoting Your Video</em> covers the tools that ensure your video content gets the attention it deserves.</p>
+<p><em>Wistia Basics - Promoting</em> chapter links</p>
 <ul>
 <li><a class="chap_link" id="first_chap" href="#" onclick="wistiaEmbed.time(0).play(); return false;">Email Marketing</a></li>
 <li><a class="chap_link" id="second_chap" href="#" onclick="wistiaEmbed.time(166).play(); return false;">Video SEO</a></li>
@@ -84,7 +85,7 @@ Wistia.plugin.socialbar(wistiaEmbed, {
 
 The next video in the series is **"Understanding Wistia Analytics"**.  It covers interacting with your video analytics, and also details a few real-world examples of making better video through analytics.
 
-Watch it right now: [Understanding Wistia Analytics]({{ '/randor-analytics' | post_url }}).
+Watch it right now: [Understanding Wistia Analytics]({{ '/wistia-basics-analytics' | post_url }}).
 
 <script>
 var url = window.location.href.toString();
