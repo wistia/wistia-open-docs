@@ -11,6 +11,8 @@ CMD="/usr/local/bin/compass watch"
 start() {
   ebegin "Starting compass"
   start-stop-daemon --start \
+    --make-pidfile \
+    --background \
     --chdir "${APP_ROOT}" \
     --user "${USER}" \
     --pidfile "${PID}" \
