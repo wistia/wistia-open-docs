@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+APP_ROOT=/opt/apps/wistia-doc
+PID=/var/run/wistia-doc/compass.pid
+USER=wistia
+CMD="/usr/local/bin/compass watch"
+
+start() {
+  ebegin "Starting compass"
+  start-stop-daemon --start \
+    --chdir "${APP_ROOT}" \
+    --user "${USER}" \
+    --pidfile "${PID}" \
+    --exec $CMD
+  eend $?
+}
+
+stop() {
+  ebegin "Stopping compass"
+  start-stop-daemon --stop \
+    --chdir "${APP_ROOT}" \
+    --user "${USER}" \
+    --pidfile "${PID}"
+  eend $?
+}
