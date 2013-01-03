@@ -2,7 +2,7 @@
 title: Wistia Basics
 description: Wistia Basics is our fun and informative video series, introducing you to the basics of Wistia. Join Chris and Jeff as they walk you through all there is to know about the Wistia application!
 layout: post
-post_intro: <p>We know this web video stuff can be confusing!  That's why we put together a video series to help.</p> <p>Not only will it answer some basic questions about how web video works, it will also guide you through Wistia.  You'll be off to the races in no time!</p>
+post_intro: <p>We want Wistia to be useful for anyone, from experienced web video pros to first-time folks. That's why we put together a video series to help get everyone on the same page.</p> <p>Not only will it answer some basic questions about how web video works, it will also guide you through Wistia.  You'll be off to the races in no time!</p>
 ---
 
 ## Getting Started
