@@ -6,11 +6,14 @@
 APP_ROOT=/opt/apps/wistia-doc
 PID=/var/run/wistia-doc/jekyll.pid
 USER=wistia
-CMD="bundle exec jekyll --auto"
+CMD="bundle"
+CMD_OPTS="exec jekyll --auto"
 
 start() {
   ebegin "Downing the potion for Jekyll"
   start-stop-daemon --start \
+    --make-pidfile \
+    --background \
     --chdir "${APP_ROOT}" \
     --user "${USER}" \
     --pidfile "${PID}" \
