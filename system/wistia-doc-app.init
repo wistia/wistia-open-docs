@@ -4,15 +4,15 @@
 # $Header: $
 
 APP_ROOT=/opt/apps/wistia-doc
-PID=/var/run/wistia-doc/app.pid
+PID=/var/run/wistia-doc/wistia-doc-app.pid
 USER=wistia
-CMD="ruby app"
+CMD="/usr/bin/ruby19 /usr/local/bin/shotgun the_app.rb"
 
 start() {
   ebegin "Shotgun the app!"
   start-stop-daemon --start \
     --make-pidfile \
-    --background \ 
+    --background \
     --chdir "${APP_ROOT}" \
     --user "${USER}" \
     --pidfile "${PID}" \
