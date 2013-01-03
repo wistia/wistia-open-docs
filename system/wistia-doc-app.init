@@ -11,6 +11,8 @@ CMD="ruby app"
 start() {
   ebegin "Shotgun the app!"
   start-stop-daemon --start \
+    --make-pidfile \
+    --background \ 
     --chdir "${APP_ROOT}" \
     --user "${USER}" \
     --pidfile "${PID}" \
