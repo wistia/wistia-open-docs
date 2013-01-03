@@ -1,0 +1,4 @@
+check process wistia-doc-app with pidfile /var/run/wistia-doc/wistia-doc-app.pid
+   start program  "/etc/init.d/wistia-doc-app start"
+   stop program  "/etc/init.d/wistia-doc-app stop"
+   if 5 restarts within 5 cycles then timeout

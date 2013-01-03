@@ -1,0 +1,4 @@
+check process elasticsearch with pidfile /var/run/wistia-doc/elasticsearch.pid
+   start program  "/etc/init.d/elasticsearch start"
+   stop program  "/etc/init.d/elasticsearch stop"
+   if 5 restarts within 5 cycles then timeout

@@ -1,0 +1,4 @@
+check process compass with pidfile /var/run/wistia-doc/compass.pid
+   start program  "/etc/init.d/compass start"
+   stop program  "/etc/init.d/compass stop"
+   if 5 restarts within 5 cycles then timeout

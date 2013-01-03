@@ -1,0 +1,4 @@
+check process jekyll with pidfile /var/run/wistia-doc/jekyll.pid
+   start program  "/etc/init.d/jekyll start"
+   stop program  "/etc/init.d/jekyll stop"
+   if 5 restarts within 5 cycles then timeout
