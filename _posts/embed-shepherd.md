@@ -5,7 +5,7 @@ api: true
 category: For Developers
 description: Get easy access to all the Wistia embeds on a page.
 footer: 'for_developers'
-post_intro: <p>If you're integrating with Wistia, you might not know where to start. How do you find all the Wistia embeds on the page? Can I bind to iframes and popovers? What if they're injected asynchronously?</p><p>The Embed Shepherd script provides a global list of all the Wistia embeds on the page, along with convenient functions to bind to all of them.</p>
+post_intro: <p>Looking for simple, programmatic access to all the Wistia embeds on a page? Want to be notified anytime someone plays any Wistia video on your website?</p><p>The Embed Shepherd script provides a global list of all the Wistia embeds on the page, along with convenient functions to bind to all of them.</p>
 ---
 
 
@@ -24,11 +24,6 @@ The script can be included asynchronously, but the `wistiaEmbeds` variable will 
 
 The Embed Shepherd immediately sets up a global variable called `wistiaEmbeds` in the `window` scope. `wistiaEmbeds` is an array containing all active Wistia embed handles on the page. If an embed code is hidden or removed from the page, the corresponding handle will be removed. Similarly, when a new embed is injected into the page--whether iframe, API, SEO, or popover--it will be available in `wistiaEmbeds`.
 
-There are also some convenience functions included, as detailed in the sections below.
-
-
-## Accessing each active embed
-
 The `wistiaEmbeds` variable is based on a normal Javascript Array. As such, you can loop over the embeds, each of which has methods as defined in the [Player API](/player-api).
 
 <pre><code class="language-javascript">console.log("List of Wistia embeds on the page, by name:");
@@ -36,30 +31,7 @@ for (var i = 0; i < wistiaEmbeds.length; i++) {
   console.log(wistiaEmbeds[i].name());
 }</code></pre>
 
-Often you want to assign separate bindings to each video, so it can be useful to have functional scope. For that, we provide an `each` method.
-
-<pre><code class="language-javascript">
-wistiaEmbeds.each(function(video) {
-  video.bind("play", function() {
-    console.log("I played " + video.name());
-    return this.unbind;
-  });
-});
-</code></pre>
-
-
-## Access each active embed and all FUTURE embeds
-
-The `each` method will let you loop over embeds that exist at the time of execution. But it will miss any embeds that are injected later.
-
-If you want to perform initialization logic for each video, including those that are injected after the Embed Shepherd is first executed, then the `onFind` method will help you out.
-
-<pre><code class="language-javascript">wistiaEmbeds.onFind(function(video) {
-  video.bind("play", function() {
-    console.log("I played " + video.name());
-    return this.unbind;
-  });
-});</code></pre>
+Often times this is not what you want to do though, because it will only loop over the embeds that exist at the time of execution. Instead, take a look below at the `bind` and `onFind` methods.
 
 
 ## Binding to all embeds on a page
@@ -80,5 +52,18 @@ wistiaEmbeds.bind("play", function() {
   console.log("I played one of these videos first. It was this one: " + video.name());
   return this.unbind;
 });</code></pre>
+
+
+## Access each active embed and all FUTURE embeds
+
+If you want to perform initialization logic for each video, including those that are injected after the Embed Shepherd is first executed, then the `onFind` method will help you out.
+
+<pre><code class="language-javascript">wistiaEmbeds.onFind(function(video) {
+  video.bind("play", function() {
+    console.log("I played " + video.name());
+    return this.unbind;
+  });
+});</code></pre>
+
 
 
