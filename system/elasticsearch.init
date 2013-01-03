@@ -6,15 +6,20 @@
 APP_ROOT=/opt/apps/wistia-doc
 PID=/var/run/wistia-doc/elasticsearch.pid
 USER=wistia
-CMD="./elasticsearch"
+CMD="elasticsearch"
+CMD_OPTS="-f"
 
 start() {
   ebegin "Starting elasticsearch"
+  PATH="${PATH}:/opt/elasticsearch-0.19.9/bin"
+  cd $APP_ROOT
   start-stop-daemon --start \
+    --make-pidfile \
+    --background \
     --chdir "${APP_ROOT}" \
     --user "${USER}" \
     --pidfile "${PID}" \
-    --exec $CMD
+    --exec $CMD -- $CMD_OPTS
   eend $?
 }
 
