@@ -15,22 +15,6 @@ post_intro: <p>Video SEO is the act of proactively submitting your content, thro
 
 {% embedly http://home.wistia.com/medias/38bcf1939d, height: 371, videoHeight: 371 %}
 
-<script>
-var url = window.location.href.toString();
-var playInterval;
-if (url.indexOf('hf') != -1)
-{
-    playInterval = setInterval(autoPlay, 100);
-}
-function autoPlay()
-{
-    try{
-    wistiaEmbed.play();
-    clearInterval(playInterval);
-    } catch (e) {}
-}
-</script>
-
 ----
 
 ## Getting Set Up
