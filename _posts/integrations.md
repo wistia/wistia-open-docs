@@ -23,7 +23,9 @@ We have some other information on using Wistia and Wordpress, including styling 
 
 The [Media:Wistia Drupal Module](http://drupal.org/project/media_wistia) makes embedding both videos and playlists easy using either Wistia URLs or embed codes. 
 
-This was updated by dev-god [TravisCarden](http://drupal.org/user/236758), thanks Travis!
+This was updated by dev-god [Travis Carden](http://drupal.org/user/236758), thanks Travis!
+
+[Read more on using Wistia and Drupal]({{ '/drupal' | post_url }}).
 
 <div class="clear"></div>
 
