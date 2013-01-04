@@ -45,3 +45,8 @@ can require additional work to determine.
 
 {% post_image hashed_id: '1f11e08d675267808209beb3648417255004d677', class: 'post_image center' %}
 
+## Drupal and Video SEO
+
+The awesome folks at [s1L.org](http://s1l.org) have put together a 
+[guide to using Drupal and Wistia for SEO](http://s1l.org/guide-rich-video-snippets-drupal-sites-using-wistia)
+that is a great read!
