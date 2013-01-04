@@ -25,8 +25,12 @@ module Jekyll
 
       print 'Indexing posts... '
 
+      exclude_from_search = site.config['exclude_from_search']
+
       # get all the posts
-      all_posts = site.posts.select{ |post| post.data['category'] != "no_index"}.map { |post| hash_for_post(post) }
+      all_posts = site.posts.
+              select{ |post| post.data['category'] != exclude_from_search }.
+              map { |post| hash_for_post(post) }
 
       Tire.index 'posts' do
 
