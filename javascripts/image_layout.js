@@ -18,8 +18,7 @@ $(document).ready(function() {
 
       function offsetFinder() {
         if ($p.length) {
-          var totalHeight = heightFinder($p);
-          var offset_diff = Math.round(($img.outerHeight(true) - totalHeight) / 2);
+          var offset_diff = Math.round(($img.outerHeight(true) - heightFinder($p)) / 2);
           if (offset_diff > 0 ) {
             $p.css("top", offset_diff) && $p.nextUntil(":not(p, ul, a, span)").each ( function() {
               if (!$(this).is('div')) {
@@ -41,5 +40,6 @@ $(document).ready(function() {
 
   fixFloatedImages();
   $(window).resize(fixFloatedImages());
+  $("img").load(fixFloatedImages);
 
 });
