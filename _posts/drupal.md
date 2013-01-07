@@ -11,15 +11,15 @@ Drupal is a very popular CMS among the business and serious blogger community.
 There are some good resources floating around on using Wistia & Drupal, here is a 
 solid "best of".
 
-{{ "The guides below are for Drupal 6. Drupal 7 support is unconfirmed at this time" | note }}
+{{ "The guides below are for Drupal 6. Drupal 7 support is unconfirmed at this time." | note }}
 
-## Using the Media:Wistia module
+## Using the Media: Wistia module
 
-The first option is using the [Media:Wistia Module](http://drupal.org/project/media_wistia),
-which has been developed by [Evan Donavan](http://drupal.org/user/168664) and 
+The first option is using the [Media: Wistia Module](http://drupal.org/project/media_wistia),
+which was developed by [Evan Donavan](http://drupal.org/user/168664) and 
 [Travis Carden](http://drupal.org/user/236758).
 
-The Media:Wistia module allows embedding videos in standalone CCK fields. It also enables
+The Media: Wistia module allows for embedding videos in CCK fields. It also enables
 [playlist]({{ '/playlists' | post_url }}) embedding with Drupal.
 
 {% post_image hashed_id: 'bc75e39badfb3dff6380bdfe64e74299c7085b8e', class: 'post_image center' %}
@@ -34,9 +34,9 @@ The Media:Wistia module allows embedding videos in standalone CCK fields. It als
 
 ## Using the Video Filter Module
 
-[Video Filter](http://drupal.org/project/video_filter) is a pretty standard Drupal media 
-module that has extended Wistia support. Once installed, you can embed Wistia 
-videos in posts using the syntax:
+[Video Filter](http://drupal.org/project/video_filter) is a Drupal media 
+module that has extended Wistia support. Once installed and enabled on a given 
+input format, you can embed Wistia videos in posts using the syntax:
 
     [video:http://subdomain.wistia.com/medias/hashed_id ratio:640x360 width: 640]
 
