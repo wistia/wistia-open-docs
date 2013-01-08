@@ -40,8 +40,8 @@ input format, you can embed Wistia videos in posts using the syntax:
 
     [video:http://subdomain.wistia.com/medias/hashed_id ratio:640x360 width: 640]
 
-The drawback to using the `video_filter` is you must include the `ratio` token, which
-can require additional work to determine.
+The drawback to using `video_filter` is you must include the `ratio attribute` 
+in the token, which can require additional work to determine.
 
 {% post_image hashed_id: '1f11e08d675267808209beb3648417255004d677', class: 'post_image center' %}
 
