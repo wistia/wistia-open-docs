@@ -31,6 +31,8 @@ videoHeight()                   | Returns the height of the video.
 videoHeight(h)                  | Sets the height of the video. The height of the entire embed will change to compensate.
 videoWidth()                    | Returns the width of the video.
 videoWidth(w)                   | Sets the width the of the video. The width of the entire embed will change to compensate.
+volume()                        | Get the volume of the current video in the playlist.
+volume(v)                       | Sets the volume of the playlist. This will carry over between videos in the playlist.
 width()                         | Returns the width of the entire embed.
 width(w)                        | Sets the width of the entire embed.
 
