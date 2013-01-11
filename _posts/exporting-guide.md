@@ -77,6 +77,16 @@ If you are exporting out of After Effects for upload to Wistia, use *h.264 quick
 
 ---
 
+## Garageband
+
+To export your video + audio track/score from Garageband, start by clicking on the Share option and selecting "Export movie to disk."
+
+You will then be prompted with a dropdown menu for Video Settings. Select "Expert Setting" and click the export button (this will let you customize the video for optimal uploading into Wistia). The video will begin to export, and another menu will then pop up on your screen. Here, make sure you select "Movie to MPEG-4" under the Export menu and "Default Settings" under the Use menu. After this, click on the "Options" button to the right to enter some custom quality settings. Here's a screenshot of our recommended settings:
+
+{% post_image hashed_id: '29ce51ada909d468e784451e7cbe81b779814502', class: 'align-center', width: 580 %}
+
+Your video will be saved to your computer as an mp4 file that you can easily upload into your Wistia account.
+
 ## iMovie
 
 To export your iMovie video project, select the project you wish to export from the iMovie Project Library and choose Share &gt; Export Movie.
