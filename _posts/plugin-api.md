@@ -160,8 +160,8 @@ dimensions to the total width and height.
 
 For example, I might have a 640x272 video. The iframe embed code would look like this:
 
-    &lt;iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"&gt;&lt;/iframe&gt;
+    <iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"></iframe>
 
 But if I add the socialbar, which is 26px high in this case and appears below the video, the iframe height is 298.
 
-    &lt;iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;plugin%5Bsocialbar-v1%5D=%7B%22buttons%22%3A%22embed-twitter-facebook%22%7D&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="298"&gt;&lt;/iframe&gt;
+    <iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;plugin%5Bsocialbar-v1%5D=%7B%22buttons%22%3A%22embed-twitter-facebook%22%7D&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="298"></iframe>
