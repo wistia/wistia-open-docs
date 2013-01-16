@@ -1,0 +1,168 @@
+---
+title: Wistia Plugin API
+layout: post
+category: Embedding
+description: Have some cool javascript that you want to use with a bunch of videos? The Plugin API lets you create a simple script package that works with any Wistia embed code.
+post_intro: <p>The Plugin API provides a light framework for script loading and initialization on a video, as well as some convenient properties for positioning DOM elements.</p><p>It works with all embed types, including iframes, which means you can even use plugins in systems that don't allow script tags.</p>
+---
+
+
+## The Components of a Wistia Plugin
+
+A Wistia plugin has two basic pieces. First, the embed code needs to define the plugin script and options. Second, the plugin script needs to initialize using the Wistia.plugin function.
+
+
+### Defining plugins in an embed code
+
+For learning purposes, I'll be demonstrating with an API embed code type. I've removed the HTML portion and left only the script, since that's what we care about.
+
+First, here's an embed code that references one of Wistia's internal plugins, "requireEmail-v1".
+
+<pre><code class="language-javascript">
+wistiaEmbed = Wistia.embed("hashedId", {
+  version: "v1",
+  videoWidth: 640,
+  videoHeight: 360,
+  volumeControl: true,
+  controlsVisibleOnLoad: true,
+  plugin: {
+    "requireEmail-v1": {
+      topText: "Please enter your email\n to view this video.",
+      style: {
+        backgroundColor: "#303030"
+      }
+    }
+  }
+});
+</code></pre>
+
+Third Party plugins can use the exact same syntax, but they must add a src attribute.
+
+<pre><code class="language-javascript">
+wistiaEmbed = Wistia.embed("hashedId", {
+  version: "v1",
+  videoWidth: 640,
+  videoHeight: 360,
+  volumeControl: true,
+  controlsVisibleOnLoad: true,
+  plugin: {
+    "my-plugin-name": {
+      customOption: true,
+      src: "http://myscriptdomain.com/my-plugin-name.js"
+    }
+  }
+});
+</code></pre>
+
+The script file is executed asynchronously. And this is where the second part of Wistia plugins comes in...
+
+
+### Register and Initialize Your Plugin
+
+<pre><code class="language-javascript">
+Wistia.plugin("my-plugin-name", function(video, options) {
+  video.bind("play", function() {
+    if (options.customOption) {
+      console.log("Do some cool stuff.");
+    } else {
+      console.log("Do something completely different.");
+    }
+  });
+});
+</code></pre>
+
+That's it! By calling Wistia.plugin("my-plugin-name", myFunction), you're doing a few things:
+
+1. It caches the function so subsequent plugins don't need to load the script multiple times.
+2. It places the function in the Wistia.plugin namespace, callable like Wistia.plugin["my-plugin-name"](video, options).
+3. It immediately executes the function with the originating video handle and plugin options as arguments.
+
+
+## Using plugins with an iframe embed
+
+Wistia iframe embeds take the exact same JSON parameters as an API embed, but they must be properly URL-encoded.
+
+For example, here's the plugin parameters for the API embed above, but translated to be appended on an iframe src attribute.
+
+    &amp;plugin[my-plugin-name]=%7BcustomOption%3Atrue%2Csrc%3A%22http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js%22%7D
+
+
+## Using the Plugin Grid
+
+Wistia videos are embedded in a DOM framework called the grid, which provides some handy shortcuts to DOM elements around the video.
+
+Here is a list of all the available handles:
+
+Handle          | Description
+------          | -----------
+above           | Relatively positioned above the video. Full width of embed.
+below           | Relatively positioned below the video. Full width of embed.
+top             | Absolutely positioned above the video. Width of video, anchored in the upper left of video.
+right           | Absolutely positioned to the right of the video. Height of the video, anchored in the upper right of the video.
+bottom          | Absolutely positioned below the video. Width of the video, anchored in the lower left of the video.
+left            | Absolutely positioned to the left of the video. Height of the video, anchored in the upper left of the video.
+top_inside      | Absolutely positioned over the video. Width of the video, anchored in the upper left of the video.
+right_inside    | Absolutely positioned over the video. Height of the video, anchored in the upper right of the video.
+bottom_inside   | Absolutely positioned over the video. Width of the video, anchored in the lower left of the video.
+left_inside     | Absolutely positioned over the video. Height of the video, anchored in the upper left of the video.
+
+
+### Use the grid to place an element over the video
+
+For example, if I wanted to to overlay an HTML element in the upper right of the video, offset by 10px, I could use:
+
+<pre><code class="language-javascript">
+var myElem = document.createElement("div");
+myElem.style.position = "absolute";
+myElem.style.top = "10px";
+myElem.style.right = "10px";
+myElem.innerHTML = "This is some text in the upper right of the video.";
+video.grid.right_inside.appendChild(myElem);
+</code></pre>
+
+Or if you're using a framework like jQuery:
+
+<pre><code class="language-javascript">
+var $myElem = $("<div>This is some text in the upper right of the video.</div>").css({
+  position: "absolute",
+  top: 10,
+  right: 10
+});
+$(video.grid.right_inside).append($myElem);
+</code></pre>
+
+
+### Use the grid to place an element beside the video.
+
+You can use the grid to put elements outside the video too. This is a good idea because, as long 
+your DOM elements are a fixed width, they will worked correctly with our responsive solution, 
+[Video Foam](http://wistia.github.com/demobin/video-foam/).
+
+Here's an example of adding a plugin to the right of the video.
+
+<pre><code class="language-javascript">
+var myElem = document.createElement("div");
+myElem.innerHTML = "And this will appear outside the video, to the right.";
+myElem.style.width = "250px;"
+video.grid.right.appendChild(myElem);
+video.fit();
+</code></pre>
+
+Note the `fit()` method, which will cause the video to change its width and height such that all 
+the plugins fit within the container.
+
+Because fitting can cause an incorrect aspect ratio, it's recommended that DOM elements outside 
+the video have fixed dimensions. Then, when the embed code is created, you can simply add these 
+dimensions to the total width and height.
+
+For example, I might have a 640x272 video. The iframe embed code would look like this:
+
+<pre>
+&amp;lt;iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"&amp;gt;&amp;lt;/iframe&amp;gt;
+</pre>
+
+But if I add the socialbar, which is 26px high in this case and appears below the video, the iframe height is 298.
+
+<pre>
+&lt;iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;plugin%5Bsocialbar-v1%5D=%7B%22buttons%22%3A%22embed-twitter-facebook%22%7D&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="298"&gt;&lt;/iframe&gt;
+</pre>
