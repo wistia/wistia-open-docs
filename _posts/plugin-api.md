@@ -71,10 +71,10 @@ Wistia.plugin("my-plugin-name", function(video, options) {
 });
 </code></pre>
 
-That's it! By calling Wistia.plugin("my-plugin-name", myFunction), you're doing a few things:
+That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're doing a few things:
 
-1. It caches the function so subsequent plugins don't need to load the script multiple times.
-2. It places the function in the Wistia.plugin namespace, callable like Wistia.plugin["my-plugin-name"](video, options).
+1. It caches the function so, if multiple videos on the page use the same script, we don't need to download it twice.
+2. It places the function in the Wistia.plugin namespace, callable like `Wistia.plugin["my-plugin-name"](video, options)`.
 3. It immediately executes the function with the originating video handle and plugin options as arguments.
 
 
@@ -84,7 +84,7 @@ Wistia iframe embeds take the exact same JSON parameters as an API embed, but th
 
 For example, here's the plugin parameters for the API embed above, but translated to be appended on an iframe src attribute.
 
-    &amp;plugin[my-plugin-name]=%7BcustomOption%3Atrue%2Csrc%3A%22http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js%22%7D
+    &plugin[my-plugin-name]=%7BcustomOption%3Atrue%2Csrc%3A%22http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js%22%7D
 
 
 ## Using the Plugin Grid
@@ -158,7 +158,7 @@ dimensions to the total width and height.
 For example, I might have a 640x272 video. The iframe embed code would look like this:
 
 <pre>
-&amp;lt;iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"&amp;gt;&amp;lt;/iframe&amp;gt;
+&lt;iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"&gt;&lt;/iframe&gt;
 </pre>
 
 But if I add the socialbar, which is 26px high in this case and appears below the video, the iframe height is 298.
