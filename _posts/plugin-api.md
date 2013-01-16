@@ -57,7 +57,7 @@ wistiaEmbed = Wistia.embed("hashedId", {
 The script file is executed asynchronously. And this is where the second part of Wistia plugins comes in...
 
 
-### Register and Initialize Your Plugin
+### Initialize Your Plugin
 
 <pre><code class="language-javascript">
 Wistia.plugin("my-plugin-name", function(video, options) {
@@ -76,6 +76,9 @@ That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're doin
 1. It caches the function so, if multiple videos on the page use the same script, we don't need to download it twice.
 2. It places the function in the Wistia.plugin namespace, callable like `Wistia.plugin["my-plugin-name"](video, options)`.
 3. It immediately executes the function with the originating video handle and plugin options as arguments.
+
+The `video` argument is a handle to the [Player API](/player-api), which means you can now do anything that the normal 
+javascript API can do.
 
 
 ## Using plugins with an iframe embed
