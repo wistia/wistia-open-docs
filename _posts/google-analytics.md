@@ -11,7 +11,7 @@ footer: 'for_intermediates'
 
 Make sure you have installed the [Google Analytics tracking scripts](https://support.google.com/analytics/bin/answer.py?hl=en&answer=1008080). These are necessary for any custom tracking we do below.
 
-## Step 1: Modify Your Wistia Embed Codes
+## Modify Your Wistia Embed Codes
 
 To make this work, we will be adding a 'binding event' to your Wistia embeds.  Not to worry, no rocket science here, just a small change that will notify Google Analytics when the video has finished.  You'll need to use the "API" version of your Wistia embed code, which is available in the "Advanced Video Types" section of your [SuperEmbed builder]({{ '/embed_screen' | post_url }}).
 
@@ -34,9 +34,67 @@ wistiaEmbed.bind("end", function () {
 
 In the code snippet example above, you should update the 'My Sample Video Title' with the title of your video.
 
-{{ "If you are using Google Analytics for more than one video on a page, you should update the <code>wistiaEmbed</code> variable in both the code above AND in your embed code." | note }}
+### Using Google Analytics with Multiple Embeds on a Single Page
 
-## Step 2: Track viewing in Google Analytics Dashboard
+By default, each Wistia video embed is assigned the variable `wistiaEmbed`.
+IF you are using Google Analytics (or any Player API functionality) and have multiple
+embeds on a single page, you must re-name the `wistiaEmbed` variable (so the javascript
+has a specific embed to point to).
+
+Let's run through a quick example of re-naming the `wistiaEmbed` to `secondEmbed`
+
+**Default**
+<pre><code class="language-javascript">
+&lt;div id="wistia_5c913cd4fb" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+wistiaEmbed = Wistia.embed("5c913cd4fb", {
+  version: "v1",
+  videoWidth: 640,
+  videoHeight: 360,
+  playButton: false,
+  controlsVisibleOnLoad: true,
+  playerColor: "F36F36"
+});
+&lt;/script&gt;
+</code></pre>
+
+**Updated**
+<pre><code class="language-javascript">
+&lt;div id="wistia_5c913cd4fb" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+secondEmbed = Wistia.embed("5c913cd4fb", {
+  version: "v1",
+  videoWidth: 640,
+  videoHeight: 360,
+  playButton: false,
+  controlsVisibleOnLoad: true,
+  playerColor: "F36F36"
+});
+&lt;/script&gt;
+</code></pre>
+
+This means we also need to update the Google Analytics snippet (note the references
+to `secondEmbed` rather than `wistiaEmbed`):
+
+<pre><code class="language-javascript">
+<script type="text/javascript">
+function gaFunc() {
+  _gaq.push(['_trackEvent', 'Video','Play', 'My Sample Video Title']);
+  secondEmbed.unbind("play", gaFunc);
+}
+
+secondEmbed.bind("play", gaFunc);
+
+secondEmbed.bind("end", function () {
+  _gaq.push(['_trackEvent', 'Video','Complete', 'My Sample Video Title']);
+});
+</script>
+</code></pre>
+
+
+## Track viewing in Google Analytics Dashboard
 
 Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Google Analytics Dashboard.
 
