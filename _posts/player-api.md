@@ -91,7 +91,7 @@ wistiaJQuery(document).bind("wistia-popover-close", function() {
 
 Method                  | Description
 ------                  | -----------
-bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", "secondchange", and "timechange".
+bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", "secondchange", "timechange", and "seek".
 duration()              | Returns the length of the video in seconds
 hashedId()              | Returns the hashedId of the video
 height()                | Gets the current height of the embed (the video plus any plugins above or below).
