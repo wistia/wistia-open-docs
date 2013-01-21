@@ -63,7 +63,7 @@ Option Name     | Type    | Description
 autoAdvance     | boolean | When true, automatically embed the next video when the current video ends. Default is true.
 container       | string  | The container ID where the playlist will be embedded. Defaults to "wistia_{hashed_id}".
 loop            | boolean | When true, the playlist will begin again from the start when the last video ends. Default is false.
-media\_\{si}\_\{vi} | object  | Specify embedding options for a specific video by index as specified in the [Player API](/player-api.html). si and vi should each be a number. 
+media\_\{si}\_\{vi} | object  | Specify embedding options for a specific video by index as specified in the [Player API]({{ '/player-api' | post_url }}). sectionIndex and videoIndex represent the indices for the video in the Project.
 startVideo      | integer | Designates which video (in the given section) to start the playlist with. Defaults to 0.
 startSection    | integer | Designates which section to start with. Defaults to 0.
 theme           | string  | The playlist's theme. Current acceptable values are "trim", "steam", "tango", or "bare". For API embeds, this needs to correspond with the script included on the page.
