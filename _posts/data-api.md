@@ -12,11 +12,13 @@ post_intro: <p><a href="http://wistia.com">Wistia</a> is a video hosting solutio
 Before delving into the specifics of using the API,
 there are some general concepts that you should be aware of:
 
-#### Generate an API Key
+#### Generate an API Password
 
-Wistia API access is available for *paid plans* and *trials* only at this time.
-Generate an API key from the *API* option on the Account Dashboard.
-The user name is always "api".
+Generate an API password for your account from the *API* area in your Account Dashboard.
+
+**Note:** The user name is always "api".
+
+{% post_image hashed_id: '655da9c9b7addebc9d935a02a987d9332bd5f3c1', class: 'center' %}
 
 #### Authentication
 
@@ -49,6 +51,7 @@ HTTP header will be set with a number of seconds to wait before trying again.
 
 We will introduce API changes when necessary/possible,
 and update the version number (i.e. *v1*) when a **breaking change** is made.
+
 Stay tuned to the [dev-forum](dev-forum.wistia.com) for updates on the API.
 
 
@@ -56,8 +59,9 @@ Stay tuned to the [dev-forum](dev-forum.wistia.com) for updates on the API.
 
 To make your Wistia experience even more awesome, here are some resources just for you:
 
-[ Wistia-API Ruby Gem ]( https://github.com/wistia/wistia-api )</a> - selected best gem ever by Jim Bancroft<br/>
-[ Wistia-API PHP Class ]( https://github.com/stephenreid/wistia-api )</a> - created by Stephen Reid
+[ Wistia-API Ruby Gem ]( https://github.com/wistia/wistia-api ) - selected *best gem ever* by Jim Bancroft
+
+[ Wistia-API PHP Class ]( https://github.com/stephenreid/wistia-api ) - created by Stephen Reid
 
 
 ## Projects
