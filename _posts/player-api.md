@@ -126,9 +126,9 @@ To get you making video magic as fast as possible, here are some examples of com
 In this example, you want the video to skip ahead a certain amount of time when the viewer presses 'play'. This utilizes the `bind on play` functionality built into the API.
 
 <pre><code class="language-javascript">
-<div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
-<script>
+&lt;div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
+&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
+&lt;script&gt;
 wistiaEmbed = Wistia.embed("29b0fbf547", {
   version: "v1",
   videoWidth: 640,
