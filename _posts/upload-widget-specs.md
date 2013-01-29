@@ -51,44 +51,47 @@ This event gets triggered continuously as the file gets uploaded.  The only extr
 
 This event gets triggered after the file has been successfully uploaded.  It receives an object describing the newly created media:
 
- Field                   | Description                                                                                                                                                                                                                             
- -----                   | -----------                                                                                                                                                                                                                             
- **id**                  | A unique numeric identifier for the media within the system.                                                                                                                                                                            
- **name**                | The display name of the media.                                                                                                                                                                                                          
- **type**                | A string representing what type of media this is.  Valid values are "Video", "Image", "Audio", "Swf", "MicrosoftOfficeDocument", "PdfDocument", or "UnknownType".                                                                       
- **section** (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).                                                                                                             
- **thumbnail**           | An object representing the thumbnail for this media.  The attributes are URL, width, and height.                                                                                                                                        
- **duration** (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted. 
- **created**             | The date when the media was originally uploaded.                                                                                                                                                                                        
- **updated**             | The date when the media was last changed.                                                                                                                                                                                               
+Field | Description
+------|--------------
+hashed_id | A unique string identifier for the media in the system, also useful for [templating embed codes]({{ '/embed-api' | post_url }})
+name  | The display name of the media.
+section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).                                                                                                             
+thumbnail | An object representing the thumbnail for this media.  The attributes are URL, width, and height.                                                                                                                                        
+duration (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted. 
+created | The date when the media was originally uploaded.
+updated | The date when the media was last changed.
 
 ### uploadComplete
 
-This event gets triggered after the entire upload process has finished, whether or not an error occurred.  It does not receive any additional arguments.
+This event gets triggered after the entire upload process has finished, whether
+or not an error occurred.  It does not receive any additional arguments.
 
 ### fileQueueError
 
-An error occurred while the user was selecting the file.  The handler receives an object describing the error:
+An error occurred while the user was selecting the file.
+The handler receives an object describing the error:
 
  Field       | Description                                                                                                                                  
  -----       | -----------                                                                                                                                  
- **code**    | A string indicating what type of error occurred.  Possible values include: "FILE_TOO_BIG_ERROR", "EMPTY_FILE_ERROR", and "FILE_QUEUE_ERROR". 
- **message** | A more user-friendly description of the error.                                                                                               
- **file**    | An object describing the file that the user tried to select, if available.                                                                   
+ code    | A string indicating what type of error occurred.  Possible values include: *FILE_TOO_BIG_ERROR*, *EMPTY_FILE_ERROR*, and *FILE_QUEUE_ERROR*. 
+ message | A more user-friendly description of the error.                                                                                               
+ file    | An object describing the file that the user tried to select, if available.                                                                   
 
 ### uploadError
 
 An error occurred while transferring the file to our servers.  The handler receives an object describing the error:
 
- Field       | Description                                                                                                                                                                   
- -----       | -----------                                                                                                                                                                   
- **code**    | A string indicating what type of error occurred.  Possible values include: "FILE_CANCELLED", "IO_ERROR", "HTTP_ERROR", "UPLOAD_FAILED", "UPLOAD_STOPPED", and "UPLOAD_ERROR". 
- **message** | A more user-friendly description of the error.                                                                                                                                
- **file**    | An object describing the file that the user tried to upload, if available.                                                                                                    
+ Field       | Description                                                                                                                                  
+ -----       | -----------                                                                                                                                  
+ code    | A string indicating what type of error occurred.  Possible values include: *FILE_CANCELLED*, *IO_ERROR*, *HTTP_ERROR*, *UPLOAD_FAILED*, *UPLOAD_STOPPED*, and *UPLOAD_ERROR*. 
+ message | A more user-friendly description of the error.                                                                                               
+ file    | An object describing the file that the user tried to select, if available.                                                                   
 
 ### postUploadFailure
 
-The file was transferred to our servers correctly, but an error occurred during the JSONP call that tells the main Wistia application about the new file.  The handler receives a string whose possible values are "error" or "timeout".
+The file was transferred to our servers correctly, but an error occurred 
+during the JSONP call that tells the main Wistia application about the new file.  
+The handler receives a string whose possible values are *error* or *timeout*.
 
 ## Example
 
