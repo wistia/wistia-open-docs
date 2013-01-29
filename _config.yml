@@ -11,8 +11,6 @@ embedly:
   playerColor: "688AAD" # $accent_blue from screen.sass
   width: "660"
   height: "413"
-  videoWidth: "660"
-  videoHeight: "413"
   playButton: true
   embedType: "seo"
   controlsVisibleOnLoad: false
