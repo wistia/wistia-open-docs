@@ -26,14 +26,25 @@ soothed by images that clearly illustrate the issue.
 ### Emphasis
 
 If emphasizing something in the app, use *italics*.
-Ex: "Open the *Media Actions* menu, and select *Embed*"
+
+**Ex**: "Open the *Media Actions* menu, and select *Embed*"
 
 If emphasizing a key concept, or technical jargon, use `code` blocks
-Ex: "If you'd like your embed to be responsive, make sure to add `videoFoam: true`"
+
+**Ex**: "If you'd like your embed to be responsive, make sure to add `videoFoam: true`"
+
+### Icons
+
+We use [font-awesome](http://fortawesome.github.com/Font-Awesome/), to add icons
+to text. It's awesome, I would recommend doing it, can make things clearer.
+
+When referring to buttons and menus a lot, try adding CSS to the text to look more
+like the menu - this can also help the customer/reader decipher the actions needed.
 
 ### Links
 
 Links provide as much context behind what is about to be opened as possible.
+
 Err on the side of including the link [into the sentence](#) as much as possible.
 
 Internal links use the `post_url` syntax:
@@ -53,18 +64,24 @@ code tags, which makes switching to something else later much easier.
 This means all code is wrapped in `pre` and `code` tags, with the class on the 
 `code` tag being `language-xxxxx` representing the language in the code block.
 
-Follow "prism" rules ( http://prismjs.com/ ) for actual code blocks:
+Follow Prism rules for actual code blocks:
   * Uses &lt;pre&gt; tags, with &lt;code&gt; inside with class `language-nameoflanguage`
   * languages: ruby, javascript, vim (for terminal actions), markdown (html)
   * for single line of code, use language `vim` or `markdown`
 
-**Example:**
+**Example**:
 
-    &lt;pre&gt;&lt;code class="language-javascript"&gt;
-      &lt;script&gt;
+    <pre><code class="language-javascript">
+      <script>
         var language = "javascript";
-      &lt;/script&gt;
-    &lt;/code&gt;&lt;/pre&gt;
+      </script>
+    </code></pre>
+
+**Troubleshooting**:
+
+Sometimes Prism executes too slow for our awesomely fast embeds, and if you include
+an embed in your Prism block, it can end up rendering.  Replace your brackets `<` with
+the HTML-escaped versions (`&lt;` and `&gt;`, respectively).
 
 ## Images
 
@@ -76,6 +93,10 @@ correlated on the area of the doc.
 After upload, use the Bakery Hashed ID with the Liquid embed tag we created:
 
     {% post_image: 'BAKERY-ID', class: 'BLAH', width: 'BLAH' %}
+
+### CSS Styling
+Images are all given the class `post_image`. They can be floated to the left or right
+using the `float-direction` class syntax. If they will be full-width, use class `center`.
 
 ### Screenshots
 Where possible, avoid using lots of goofy arrows or other functionality that doesn't
