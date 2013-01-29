@@ -23,6 +23,20 @@ soothed by images that clearly illustrate the issue.
 
 ## Text
 
+### post_intro YAML
+
+There is a `post_intro` YAML item.  Wrap your text in paragraph tags (1 or more)
+and it will be styled to look all cool and intro-y.
+
+### Headers
+
+`h1` are reserved for post titles. 
+Major sections should use `h2` - these will be brought into the post nav as well.
+Complicated posts like APIs could make use of `h3`, but these will look the same in
+appearance with `h2`.
+
+No need to get more complicated than that broseph!
+
 ### Emphasis
 
 If emphasizing something in the app, use *italics*.
