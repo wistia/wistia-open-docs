@@ -35,12 +35,6 @@ task :pre_jekyll do
   })
   puts "done."
 
-  print "  Rendering Markdown Static Pages ... "
-  system(%{
-    cd _static_pages &&
-    for f in *.md; do [ -e $f ] && perl Markdown.pl --html4tags $f > ../${f%.md}.html; done
-  })
-  puts "done."
 
   puts "    All done."
 
