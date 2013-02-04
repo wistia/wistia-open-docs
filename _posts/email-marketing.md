@@ -103,6 +103,7 @@ Vertical Response  |  `{EMAIL_ADDRESS}`
 ExactTarget  |  `%%Email Address%%`
 Convio Luminate | `[[S1:primary_email]]`
 Streamsend | `{`{`{email_address}`}`}`
+SendGrid | [see more](#email_merge_tags_with_sendgrid)
 
 ---
 
@@ -176,3 +177,26 @@ This data can also be exported to a spreadsheet as well using Wistia's [Stats Ex
 
 By having a true read on individual viewer engagement, you will know who is interested and who is not based on how each viewer watched your content and how much time they spent doing so.  This information allows you to score (rank) your leads, target future follow-up with pin-point precision, and calculate the return on investment of your campaigns.
 
+## Email Merge Tags With SendGrid
+
+Thanks to some research from our friend Steven Tell of [SpudFlower](http://spudflower.com/),
+here's how to use dynamic merge tags with [SendGrid](http://sendgrid.com):
+
+* Add a column into your Recipient List with the unique value (in this case, email address)
+* You can use the name of that column as part of the link
+
+So if your recipient list looked like this:
+
+NAME | EMAIL_ADDRESS | REFERRAL_ID
+-----|---------------|------------
+Jayson | support@sendgrid.com | 12345
+
+You can now write a link like:
+
+    <a href="www.website.com?wemail=[EMAIL_ADDRESS]">
+
+And that would be dynamically replaced to:
+
+    <a href="www.website.com?wemail=support@sendgrid.com">
+
+Pretty neat! Thanks also to Jayson at SendGrid support!
