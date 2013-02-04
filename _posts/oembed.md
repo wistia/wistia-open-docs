@@ -100,7 +100,52 @@ popoverHeight | integer | Only applicable to "popover" embed type. The requested
 popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
 ssl | boolean | Determines whether the embed code should use https. Defaults to false.
 
-If given a width, height, maxwidth, or maxheight parameter (or any combination of those), the other dimensions in the resulting embed code may change so that the video's aspect ratio is preserved.
+If given a `width`, `height`, `maxwidth`, or `maxheight` parameter (or any combination of those),
+the other dimensions in the resulting embed code may change so that the video's 
+aspect ratio is preserved.
+
+{{ "These parameters are attached to the Wistia media URL, and not the oEmbed call. So they must be URL-encoded to travel with the Wistia URL." | note }}
+
+### Example
+
+In this example, we'll request an `API` embed code type, with the javascript handle `oEmbedVideo`:
+
+First, the media URL we'll request:
+
+    http://home.wistia.com/medias/e4a27b971d
+
+Next, we'll add the parameters for our request:
+
+    http://home.wistia.com/medias/e4a27b971d?embedType=api&handle=oEmbedVideo
+
+We'll URL-encode this request:
+
+    http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo
+
+And now use the oEmbed endpoint:
+
+<pre><code class="language-vim">
+curl "http://fast.wistia.com/oembed?url=http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"
+</code></pre>
+
+This returns:
+
+<pre><code class="language-markup">
+{
+  "version":"1.0",
+  "type":"video",
+  "html":"<div id=\"wistia_e4a27b971d\" class=\"wistia_embed\" style=\"width:640px;height:360px;\" data-video-width=\"640\" data-video-height=\"360\">&nbsp;</div>\n<script charset=\"ISO-8859-1\" src=\"http://fast.wistia.com/static/concat/E-v1.js\"></script>\n<script>\noEmbedVideo = Wistia.embed(\"e4a27b971d\", {\n  version: \"v1\",\n  videoWidth: 640,\n  videoHeight: 360\n});\n</script>",
+  "width":640,
+  "height":360,
+  "provider_name":"Wistia, Inc.",
+  "provider_url":"http://wistia.com",
+  "title":"Brendan - Make It Clap",
+  "thumbnail_url":"http://embed.wistia.com/deliveries/2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg?image_crop_resized=640x360",
+  "thumbnail_width":640,
+  "thumbnail_height":360,
+  "duration":16.43
+}
+</code></pre>
 
 ---
 
