@@ -17,8 +17,8 @@ may still require processing (as is the case for uploads in general).
 **There's a Gem For That**
 
 To make using the Upload API even easier, we 
-[created a gem for it](https://github.com/wistia/wistia-uploader), just for you!
-Well, it's for us too, but it's also for you!
+[created a Ruby gem for it](https://github.com/wistia/wistia-uploader), just for you!
+Even if you're not a Ruby developer, you can use this as a command line tool for uploading to Wistia.
 
 ## Authentication
 
@@ -36,41 +36,44 @@ The *file* parameter must be multipart-form encoded into the request body.
 
 <div><table>
   <tr>
-    <th>Parameter</th><th> Description </th>
+    <th>Parameter</th>
+    <th>Description</th>
   </tr>
   <tr>
-    <td> api_password </td>
+    <td>api_password</td>
     <td> 
-    <b>Required</b>. A 40 character hex string. This parameter can be found on
-    the API page in your Account Dashboard.
+      <b>Required</b>.
+      A 40 character hex string. This parameter can be found on the API page 
+      in your Account Dashboard.
     </td>
   </tr>
   <tr>
-    <td> contact_id </td>
+    <td>file</td>
     <td> 
-    A Wistia contact id, an integer value.
+      <b>Required</b>.
+      The media file, multipart-form encoded into the request body.
     </td>
   </tr>
   <tr>
-    <td> project_id </td>
+    <td>project_id</td>
     <td> 
-    The hashed id of the project to upload media into. If omitted, a new
-    project will be created and uploaded to. The naming convention used for
-    such projects is <i>Uploads_YYYY-MM-DD</i>.
+      The hashed id of the project to upload media into. If omitted, a new
+      project will be created and uploaded to. The naming convention used for
+      such projects is <i>Uploads_YYYY-MM-DD</i>.
     </td>
   </tr>
   <tr>
-    <td> name </td>
+    <td>name</td>
     <td> 
-    A display name to use for the media in Wistia. If omitted, the filename
-    will be used instead.
+      A display name to use for the media in Wistia. If omitted, the filename
+      will be used instead.
     </td>
   </tr>
   <tr>
-    <td> file </td>
+    <td>contact_id</td>
     <td> 
-    <b>Required</b>. The media file, multipart-form encoded into the request
-    body.
+      A Wistia contact id, an integer value. If omitted, it will default to the
+      contact_id of the account's owner.
     </td>
   </tr>
 </table></div>
@@ -85,7 +88,7 @@ body will contain a JSON object
   * **HTTP 401** *[text/html]* Authorization error. Check your api_password.
 
 
-### Example response (http 200, success)
+### Example response
 
 <pre><code class="language-json">
 {
