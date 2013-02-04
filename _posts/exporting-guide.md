@@ -3,7 +3,7 @@ title: Exporting from Video Editors
 layout: post
 category: Getting Set Up
 description: Get the skinny on using specific software to export video for uploading to Wistia.
-post_intro: <p>We know just enough to be dangerous about most video export software. Here's our tips and tricks to using them.</p><p>Looking for a guide to optimal export <em>settings</em>? You should also see our <a href="/doc/export-settings">export settings</a> page.</p>
+post_intro: <p>We know just enough to be dangerous about most video export software. Here's our tips and tricks to using them.</p><p>Looking for a guide to optimal export <em>settings</em>? You should also see our <a href="/doc/export-settings">export settings</a> page.</p><p>If you're looking for free video transcoding software, we recommend <a href="#handbrake">Handbrake</a>.</p>
 ---
 
 ## Final Cut Pro
@@ -114,3 +114,21 @@ To easily export a video from QuickTime Pro, open the movie you wish to export a
 {% post_image hashed_id: 'e2ea358871e38d394195c6a207cdd648b1296914', width: 320, class: 'float_right' %}
 
 To export a screencast from ScreenFlow, open the screen recording you wish to export and choose File &gt; Export. From the Preset pop-up menu, choose Web - High (Best Quality). For the dimensions, make it scale by 100% so that your viewers will be able to see the details of your screen as clearly as possible. Choose a filename and location, and click Export. Your video will be saved to your computer as a MOV file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
+
+---
+
+## Handbrake
+
+Handbrake is a great free solution for smoothing out problems with weird video files. To export a video for Wistia from Handbrake, click "Source" in the top right corner and select the file that you'd like to convert. Some of the fields will auto-populate. We recommend making sure that:
+
+* The "Video Codec" on the video tab is set to "H.264 (x264)"
+
+* The "Video Quality" uses "Average Bitrate" and is set to around 3000kbps, or whatever the maximum bitrate of your video is if it's lower. Also, you can check off "2-pass encoding."
+
+* On the "Audio" tab, use the "AAC (CoreAudio)" codec and set the bitrate to at least 128 kbps, or the maximum bitrate for the audio track in your video.
+
+* In the top right, click "Picture Settings" and make sure the aspect ratio is correct.
+
+Then, click "Start" at the top right and your video will begin encoding to the Destination folder you chose!
+
+{% post_image hashed_id: 'f0a6babc82c298496ded58eb218dfc1d5eab0ba4', class: 'center' %}
