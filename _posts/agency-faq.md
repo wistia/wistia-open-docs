@@ -3,7 +3,7 @@ layout: post
 title: Agency Introduction
 description: Learn how our Agency Plans work.
 category: Agency
-post_intro: <p>Over the years agencies of all sizes, shapes, and colors - video production agencies, digital marketing firms, public relations firms, ad agencies, web development shops, social media consultants, SEO houses - have asked us to help them use Wistia to better manage their interaction and collaboration with their clients, and to enable or extent their delivery of retainer-based managed services around video content.</p><p><em>In a nutshell, they said they wanted to bundle Wistia in with their services.</em></p><p><strong>The Wistia Agency Plan is our answer.</strong></p>
+post_intro: <p>Over the years, agencies of all sizes, shapes, and colors - video production agencies, digital marketing firms, public relations firms, ad agencies, web development shops, social media consultants, SEO houses - have asked us to help them use Wistia to better manage their interaction and collaboration with their clients, and to enable or extend their delivery of retainer-based managed services around video content.</p><p><em>In a nutshell, they said they wanted to bundle Wistia in with their services.</em></p><p><strong>The Wistia Agency Plan is our answer.</strong></p>
 ---
 
 ## You’re an agency if

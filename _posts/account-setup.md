@@ -30,11 +30,11 @@ From the *Account Dashboard*, choose <span class="faux_button">Upload your logo<
 
 ---
 
-## Filtering out Internal Stats
+## Filtering Out Internal Stats
 
 {% post_image hashed_id: 'c3b7767bf8523160c7ded97ff69ea4bf260b5ce1', width: 320, class: 'float_right' %}
 
-You can filter out your views based on IP, and those of the other testers you might have looking at your Wistia videos before launch.
+You can filter out your own views, and those of the other testers you might have looking at your Wistia videos before launch, based on IP.
 
 In the Account Dashboard, click the *Embed Settings* option - this contains an IP filtering section where you can enter comma-separated IP addresses.
 
@@ -47,11 +47,11 @@ In the Account Dashboard, click the *Embed Settings* option - this contains an I
 ---
 
 ## Change the Subdomain (URL) of your Wistia Account
-To change your Wistia account URL, you must be logged in as the account owner. Choose the <span class="faux_button">Settings</span> on the *Account Dashboard*.  A dialog box like the one shown below will appear.
+To change your Wistia account URL, you must be logged in as the account owner. Click <span class="faux_button">Settings</span> on the *Account Dashboard*.  A dialog box like the one shown below will appear.
 
 {% post_image hashed_id: 'f7cccd88af9bfe8ac2ab39061bfebbae29fcd93e', width: 660, class: 'center' %}
 
-In the section labeled "Address" you will see a text box showing the current URL of your Wistia account (in the case of the above picture, http://ben.wistia.com).  Simply type the name you wish to use in the text box (only letters, numbers, and hyphens) and press <span class="faux_button">Save settings</span> at the bottom. 
+In the section labeled "Address", you will see a text box showing the current URL of your Wistia account (in the case of the above picture, http://ben.wistia.com).  Simply type the name you wish to use instead in the text box (only letters, numbers, and hyphens) and press <span class="faux_button">Save settings</span> at the bottom. 
 
 {{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
 
@@ -62,16 +62,16 @@ If you have your own domain name, re-naming your Wistia account is no problem.
 
 <ul>
 <li>First, you will need to select a subdomain for your account (ie. videos./yourdomain/.com).</li>
-<li>Then, have the CNAME point for that domain point to: **app.wistia.com**</li>
+<li>Then, have the CNAME for that subdomain point to: **app.wistia.com**</li>
 </ul>
 
 Once that is set up, the CNAME gets propagated (which can take a couple hours, so grab some coffee or a good book). To test if it is complete: open the *Settings* area in your *Account Dashboard*, change the "Address" to CNAME, and enter your new hostname.
 
-Once you save, everything should be switched over for you, and you are now rocking custom a URL!
+Once you save, everything should be switched over for you, and you are now rocking a custom URL!
 
 {{ "Any links previously shared or videos embedded from your account will still operate as normal." | note }}
 
-{{ "CNAME'ing your domain won't change the name in the embed codes. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos.  This choice was made because video loading effect it would have - essentially our focus is on your video loading fast." | note }}
+{{ "CNAMEing your domain won't change the name in the embed codes. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos.  This choice was made because of effect it would have on video loading - essentially, our focus is on your video loading fast." | note }}
 
 ---
 
@@ -81,7 +81,7 @@ Once you save, everything should be switched over for you, and you are now rocki
 
 To see account limits, you must be logged in as the account owner. Select the <span class="faux_button">Usage</span> option from your Account Dashboard. This will show you how much bandwidth and storage you have used, along with your current account limits.
 
-Along the right hand side of the Account Dashboard page, you will see usage and limit information within the panel labeled "Current Subscription". 
+Along the right-hand side of the Account Dashboard page, you will see usage and limit information within the panel labeled "Current Subscription". 
 
 <div class="clear"></div>
 

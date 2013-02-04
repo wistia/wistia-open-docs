@@ -9,7 +9,7 @@ description: When sharing videos privately within Wistia, you can set up email a
 
 ## What are email alerts? ##
 
-Email alerts are automated emails sent to Wistia managers (and in limited cases other users) which alert them to particular events which have occurred in their Wistia account.  Alerts can be received for the following events:
+Email alerts are automated emails sent to Wistia managers (and, in limited cases, other users) that alert them to particular events that have occurred in their Wistia account.  Alerts can be received for the following events:
 
 *  **New media** - Alert manager when media is uploaded or copied into a project
 *  **New comment** - Alert manager when new comments are made

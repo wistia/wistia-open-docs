@@ -14,6 +14,6 @@ For example, if you have a video located at http://myaccount.wistia.com/medias/1
 	
 <pre><code class="language-vim">http://myaccount.wistia.com/medias/123?start=90</code></pre>
 
-**Note:** This only works for videos within your Wistia account. To seek into embedded videos, use the JavaScript player API.
+**Note:** This only works for videos within your Wistia account. To seek into embedded videos, use the [JavaScript player API](http://wistia.com/doc/player-api).
 
 ---
