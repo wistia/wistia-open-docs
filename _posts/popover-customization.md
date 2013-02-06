@@ -7,6 +7,39 @@ footer: 'for_developers'
 post_intro: <p>Wistia's popover (lightbox) implementation utilizes <a href='http://http://fancybox.net/'>Fancybox</a>, a plug-in for jQuery. The Fancybox API gives access to all kinds of custom effects and settings that Wistia users can access. Here are a few of our favorites that we've helped customers implement.</p>
 ---
 
+## Using a custom thumbnail OR other website image
+
+Sometimes you want to use a custom graphical element (that may be already built
+into your site) to launch your popover. No problemo!
+
+First, here is the original embed code, straight from the Wistia embed generator:
+
+<pre data-line="3"><code class="language-markup">
+<a href="http://fast.wistia.net/embed/iframe/sb22fqki3j?autoPlay=true&controlsVisibleOnLoad=true&playButton=false&playerColor=F36F36&popover=true&version=v1&videoHeight=360&videoWidth=640" class="wistia-popover[height=360,playerColor=F36F36,width=640]">
+
+<img src="http://embed.wistia.com/deliveries/34d01c07ff2da906b092c8ba1c75b0c345006340.jpg?image_play_button=false&image_play_button_color=F36F36e0&image_crop_resized=150x84" alt="" />
+
+</a>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script>
+</code></pre>
+
+The `<img>` tag is what we will be altering here. We already have a new custom image
+picked out:
+
+    <img src="http://wistia.com/doc/custom-image-for-example-purposes.jpg" />
+
+Now, we're going to insert that tag into the popover embed, and we're done!
+
+<pre data-line="3"><code class="language-markup">
+<a href="http://fast.wistia.net/embed/iframe/sb22fqki3j?autoPlay=true&controlsVisibleOnLoad=true&playButton=false&playerColor=F36F36&popover=true&version=v1&videoHeight=360&videoWidth=640" class="wistia-popover[height=360,playerColor=F36F36,width=640]">
+
+<img src="http://wistia.com/doc/custom-image-for-example-purposes.jpg" />
+
+</a>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script>
+</code></pre>
+
+
 ## Adding a Border Around Your Video in a Popover
 
 If you're shooting video with light-colored backgrounds, a border can add definition to the video. <a id="a141167104_videoPopup" href="//app.wistia.com/embed/medias/4e21ff57d7.html?width=640&height=290&autoplay=false&playbutton=true&controls_visible=false&end_video_behavior=default">See an example of this effect</a><script type="text/javascript" src="//static.wistia.com/popover/popover.js"></script><script type="text/javascript">Wistia.requireFancyBoxAssets(function() {Wistia.fancyBoxJQuery("#a141167104_videoPopup").fancybox({type: "iframe",width: 640,height: 290,});});</script>.
