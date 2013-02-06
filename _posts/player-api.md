@@ -147,7 +147,9 @@ wistiaEmbed.bind('play', function() {
 
 ### Trigger an event at a specific time
 
-In this example, let's assume that we want to fire a Javascript function when the viewer gets 60 seconds into the video. In order to accomplish this, we only need the bind method from the API.  The Javascript code can be seen below:
+In this example, let's assume that we want to fire a Javascript function when 
+the viewer gets 60 seconds into the video. In order to accomplish this, we only
+need the bind method from the API.  The Javascript code can be seen below:
 
 <pre><code class="language-javascript">
 <script type="text/javascript">
@@ -159,9 +161,23 @@ wistiaEmbed.bind("secondchange", function (s) {
 </script>
 </code></pre>
 
-The bind function monitors the state of the video in an event loop. Every 300 milliseconds, it checks to see if the video's time position has changed. If it has, it runs your function with the current second (s) as the only argument.
+The bind function monitors the state of the video in an event loop. Every 300 
+milliseconds, it checks to see if the video's time position has changed. 
+If it has, it runs your function with the current second (s) as the only argument.
 
-The "secondchange" will only run once per second while the video is playing. If you need more fine-grained control, try binding to the "timechange" event instead.
+The "secondchange" will only run once per second while the video is playing. 
+If you need more fine-grained control, try binding to the "timechange" event instead.
+
+---
+
+### A/B testing videos against each other
+
+Using an API embed code as a template, we can switch out hashed ID's for multiple
+videos easily. Comparing the viewer analytics in the background will tell you 
+which video reigned supreme!
+
+Check out the [A/B Testing Demo](http://wistia.github.com/demobin/ab-testing-tool/)
+for more on how this will work.
 
 ---
 
@@ -169,7 +185,8 @@ The "secondchange" will only run once per second while the video is playing. If 
 
 Using the `.time()` method from the Player API, you can add chapters quickly and easily.
 
-Check out the [Chaptering Demo](http://wistia.github.com/demobin/chaptering/) for more on how this works.
+Check out the [Chaptering Demo](http://wistia.github.com/demobin/chaptering/) 
+for more on how this works.
 
 ---
 
