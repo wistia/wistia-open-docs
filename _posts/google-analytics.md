@@ -14,7 +14,7 @@ Make sure you have installed the [Google Analytics tracking scripts](https://sup
 ## Modify Your Wistia Embed Codes
 
 Integrating with Google Analytics is actually extremely simple thanks to the 
-[Embed Shepherd](/embed-shepherd).
+[Embed Shepherd]({{ '/embed-shepherd' | post_url }}).
 All you need to do is paste this little snippet of code anywhere on your website, preferably
 right before the </body> tag.
 
@@ -46,7 +46,7 @@ We only fire each of these events once per video per page load (that's what the
 over again, we'll only send one play event to Google. Pretty cool.
 
 You can extend what we've done here to pipe many more events to Google
-Analytics if you like. Take a look at the [Player API](/player-api) to see
+Analytics if you like. Take a look at the [Player API]({{ '/player-api' | post_url }}) to see
 what's possible.
 
 
