@@ -37,6 +37,18 @@ just put it in there and you'll be good to go!
 </script>
 </code></pre>
 
+This code fires a 'Play' event to Google Analytics whenever a video on your 
+website is played. It also fires a 'Complete' event when a viewer reaches the 
+end of a video. 
+
+We only fire each of these events once per video per page load (that's what the
+`return this.unbind` is for). So if a viewer plays and pauses a video over and
+over again, we'll only send one play event to Google. Pretty cool.
+
+You can extend what we've done here to pipe many more events to Google
+Analytics if you like. Take a look at the [Player API](/player-api) to see
+what's possible.
+
 
 ## Track viewing in Google Analytics Dashboard
 
