@@ -48,7 +48,7 @@ wistiaEmbeds.bind("end", function(video) {
 You can unbind too:
 
 <pre><code class="language-javascript">
-wistiaEmbeds.bind("play", function() {
+wistiaEmbeds.bind("play", function(video) {
   console.log("I played one of these videos first. It was this one: " + video.name());
   return this.unbind;
 });</code></pre>
