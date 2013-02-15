@@ -13,7 +13,7 @@ post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles 
 <div class="post_image" style="margin: 0 20px; float:right; border:none;"><img src="http://embed.wistia.com/deliveries/3a67076d7972f84eebc61d1eb890300e6850e9c3.png" alt="tweetie" /></div>
 
 Twitter is, frankly, the bee's knees. We've developed a bunch of cool functionality
-around Twitter, which we expand in the [Twitter Doc page]({ '/twitter' | post_url }).
+around Twitter, which we expand in the [Twitter Doc page]({{ '/twitter' | post_url }}).
 
 ## Facebook
 
