@@ -8,6 +8,13 @@ post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles 
 
 {% embedly http://home.wistia.com/medias/d4df1638dd %}
 
+## Twitter
+
+<div class="post_image" style="margin: 0 20px; float:right; border:none;"><img src="http://embed.wistia.com/deliveries/3a67076d7972f84eebc61d1eb890300e6850e9c3.png" alt="tweetie" /></div>
+
+Twitter is, frankly, the bee's knees. We've developed a bunch of cool functionality
+around Twitter, which we expand in the [Twitter Doc page]({ '/twitter' | post_url }).
+
 ## Facebook
 
 <div class="post_image" style="margin: 0 20px; float:right;border:none;"><img src="http://embed.wistia.com/deliveries/d135791934d06deb1e7e5d5894e71a12019ecad4.png" alt="facebook_logo_small" /></div>
@@ -44,15 +51,6 @@ Add these to the <span class="code">&lt;head&gt;</span> of your external website
 
 You're good to go!
 
-## Twitter
 
-<div class="post_image" style="margin: 0 20px; float:right; border:none;"><img src="http://embed.wistia.com/deliveries/3a67076d7972f84eebc61d1eb890300e6850e9c3.png" alt="tweetie" /></div>
-
-Adding your video to a tweet is easy:
-
-*  In your account, open up the video you'd like to embed.
-*  Under the Media Actions menu, select “Share by Link”.
-*  Copy the share link, paste it into your tweet editor and click “tweet”.
-*  The re-tweeting shall commence :)
 
 
