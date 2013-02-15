@@ -34,9 +34,13 @@ From the *Account Dashboard*, choose <span class="faux_button">Upload your logo<
 
 {% post_image hashed_id: 'c3b7767bf8523160c7ded97ff69ea4bf260b5ce1', width: 320, class: 'float_right' %}
 
-You can filter out your own views, and those of the other testers you might have looking at your Wistia videos before launch, based on IP.
+You can filter out your own views, and those of the other testers you might 
+have looking at your Wistia videos before launch, based on IP.
 
-In the Account Dashboard, click the *Embed Settings* option - this contains an IP filtering section where you can enter comma-separated IP addresses.
+In the Account Dashboard, click the *Embed Settings* option - this contains an 
+IP filtering section where you can enter comma-separated IP addresses.
+
+At this time, we do not support wildcards - only the full IP address.
 
 
 {{ "The IP Filtering tool is only available on the Account Dashboard, so you will need owner-level permissions to access it." | note }}
