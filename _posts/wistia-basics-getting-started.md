@@ -24,12 +24,12 @@ wistiaEmbed = Wistia.embed("8a5e87899d", {
       people: [
         {
           screenName: "csavage",
-          start: 3,
-          end: 8
+          start: 2,
+          end: 13
         },
         {
           screenName: "jeffvincent",
-          start: 9,
+          start: 2,
           end: 13
         }
       ],
