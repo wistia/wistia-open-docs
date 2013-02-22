@@ -4,11 +4,11 @@ description: OK, so you've got your new Wistia account set up. Now what? Watch t
 layout: post
 post_intro: <p><em>Wistia Basics</em> features uploading, embedding, analytics, and account settings with Wistia.</p>
 ---
-<script src="http://fast.wistia.com/labs/twitter-follows/wistia-follows.js"></script>
 
 <div id="the_video" class="video_embed">
 <div id="wistia_8a5e87899d" class="wistia_embed" style="width:660px;height:371px;" data-video-width="660" data-video-height="371"><object id="wistia_8a5e87899d_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:371px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2013-01-16"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="bgcolor" value="#000000"><param name="wmode" value="opaque"><param name="flashvars" value="customColor=4991C4&amp;hdUrl%5Bext%5D=flv&amp;hdUrl%5Bheight%5D=720&amp;hdUrl%5Btype%5D=hdflv&amp;hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F069f7c6a0b3c0795545842e44cf2db3e5e6ae434.bin&amp;hdUrl%5Bwidth%5D=1280&amp;mediaDuration=352.0&amp;stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feb487cf9f940e322e1c06b5206a295f39d512abe.jpg%3Fimage_crop_resized%3D660x371&amp;unbufferedSeek=true&amp;videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F2a99521d828ccab526c4f9940379ad6c250206ed.bin"><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2013-01-16" allowfullscreen="true" allowscriptaccess="always" bgcolor="#000000" flashvars="customColor=4991C4&amp;hdUrl%5Bext%5D=flv&amp;hdUrl%5Bheight%5D=720&amp;hdUrl%5Btype%5D=hdflv&amp;hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F069f7c6a0b3c0795545842e44cf2db3e5e6ae434.bin&amp;hdUrl%5Bwidth%5D=1280&amp;mediaDuration=352.0&amp;stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feb487cf9f940e322e1c06b5206a295f39d512abe.jpg%3Fimage_crop_resized%3D660x371&amp;unbufferedSeek=true&amp;videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F2a99521d828ccab526c4f9940379ad6c250206ed.bin" name="wistia_8a5e87899d_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></object></div>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script src="http://fast.wistia.com/labs/twitter-follows/wistia-follows.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("8a5e87899d", {
   version: "v1",
