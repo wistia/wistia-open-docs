@@ -5,46 +5,44 @@ layout: post
 post_intro: <p><em>Wistia Basics</em> features uploading, embedding, analytics, and account settings with Wistia.</p>
 ---
 
-<style>
-  a.call_to_action {
-    color: white !important;
-  }
-
-  a.call_to_action:hover {
-    text-decoration: none !important;
-    color: yellow !important;
-  }
-</style>
-
 <div id="the_video" class="video_embed">
-<div id="wistia_8a5e87899d" class="wistia_embed" style="width:660px;height:371px;" data-video-width="660" data-video-height="371"><object id="wistia_8a5e87899d_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:371px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01"></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="bgcolor" value="#000000"></param><param name="wmode" value="opaque"></param><param name="flashvars" value="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F069f7c6a0b3c0795545842e44cf2db3e5e6ae434.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=352.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feb487cf9f940e322e1c06b5206a295f39d512abe.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F2a99521d828ccab526c4f9940379ad6c250206ed.bin"></param><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-06-01" allowfullscreen="true" allowscriptaccess="always" bgcolor=#000000 flashvars="controlsVisibleOnLoad=true&customColor=4991C4&hdUrl%5Bheight%5D=720&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F069f7c6a0b3c0795545842e44cf2db3e5e6ae434.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=352.0&stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feb487cf9f940e322e1c06b5206a295f39d512abe.jpg%3Fimage_crop_resized%3D660x371&unbufferedSeek=true&videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F2a99521d828ccab526c4f9940379ad6c250206ed.bin" name="wistia_8a5e87899d_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></embed></object></div>
+<div id="wistia_8a5e87899d" class="wistia_embed" style="width:660px;height:371px;" data-video-width="660" data-video-height="371"><object id="wistia_8a5e87899d_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:371px;position:relative;width:660px;"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2013-01-16"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="bgcolor" value="#000000"><param name="wmode" value="opaque"><param name="flashvars" value="customColor=4991C4&amp;hdUrl%5Bext%5D=flv&amp;hdUrl%5Bheight%5D=720&amp;hdUrl%5Btype%5D=hdflv&amp;hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F069f7c6a0b3c0795545842e44cf2db3e5e6ae434.bin&amp;hdUrl%5Bwidth%5D=1280&amp;mediaDuration=352.0&amp;stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feb487cf9f940e322e1c06b5206a295f39d512abe.jpg%3Fimage_crop_resized%3D660x371&amp;unbufferedSeek=true&amp;videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F2a99521d828ccab526c4f9940379ad6c250206ed.bin"><embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2013-01-16" allowfullscreen="true" allowscriptaccess="always" bgcolor="#000000" flashvars="customColor=4991C4&amp;hdUrl%5Bext%5D=flv&amp;hdUrl%5Bheight%5D=720&amp;hdUrl%5Btype%5D=hdflv&amp;hdUrl%5Burl%5D=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F069f7c6a0b3c0795545842e44cf2db3e5e6ae434.bin&amp;hdUrl%5Bwidth%5D=1280&amp;mediaDuration=352.0&amp;stillUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2Feb487cf9f940e322e1c06b5206a295f39d512abe.jpg%3Fimage_crop_resized%3D660x371&amp;unbufferedSeek=true&amp;videoUrl=http%3A%2F%2Fembed.wistia.com%2Fdeliveries%2F2a99521d828ccab526c4f9940379ad6c250206ed.bin" name="wistia_8a5e87899d_html" style="display:block;height:100%;position:relative;width:100%;" type="application/x-shockwave-flash" wmode="opaque"></object></div>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("8a5e87899d", {
   version: "v1",
   videoWidth: 660,
   videoHeight: 371,
-  controlsVisibleOnLoad: false,
-  playerColor: "4991C4"
-});
-Wistia.plugin.postRoll(wistiaEmbed, {
-    version: "v1",
-    raw: "<style type=\"text/css\">\n#container {\ncolor: white;\ntext-align: center;\n}\n\na.call_to_action {\ntext-decoration: none;\ncolor: white;\n}\n\na.call_to_action:hover {\ncolor: yellow;\n}\n\n</style>\n\n<div id=\"container\">\n<strong>Other Wistia Videos:</strong><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-customization\">Video Customization</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-promoting\">Promoting Videos</a><br>\n<a class=\"call_to_action\" href=\"http://wistia.com/doc/wistia-basics-analytics\">Understanding Analytics</a><br>\n</div>",
-    style: {
-    backgroundColor: "#141314",
-    color: "#ffffff",
-    fontSize: "36px",
-    fontFamily: "Gill Sans, Helvetica, Arial, sans-serif",
-    textAlign: "left"
+  playerColor: "4991C4",
+  plugin: {
+    wistiafollows: {
+      postRoll: {
+        screenName: "wistia",
+        showScreenName: true
+      },
+      people: [
+        {
+          screenName: "csavage",
+          start: 3,
+          end: 8
+        },
+        {
+          screenName: "jeffvincent",
+          start: 9,
+          end: 13
+        }
+      ],
+      recap: [
+        {
+          screenName: "csavage"
+        },
+        {
+          screenName: "jeffvincent"
+        }
+      ],
+      src: "http://fast.wistia.com/labs/twitter-follows/wistia-follows.js"
     }
-});
-Wistia.plugin.socialbar(wistiaEmbed, {
-    version: "v1",
-    buttons: "embed-twitter-facebook",
-    logo: true,
-    tweetText: "Wistia Basics",
-    badgeUrl: "http://wistia.com",
-    badgeImage: "http://static.wistia.com/images/badges/wistia_100x96_black.png"
+  }
 });
 </script>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/embed/medias/8a5e87899d/metadata.js"></script>
