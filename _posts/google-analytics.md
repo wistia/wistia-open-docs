@@ -16,7 +16,7 @@ Make sure you have installed the [Google Analytics tracking scripts](https://sup
 Integrating with Google Analytics is actually extremely simple thanks to the 
 [Embed Shepherd]({{ '/embed-shepherd' | post_url }}).
 All you need to do is paste this little snippet of code anywhere on your website,
-preferably right before the `body` tag.
+preferably right before the `&lt;/body&gt;` tag.
 
 You'll need to add this to every page that contains a video you want to track.
 Or better yet, if you have a layout file or a footer that's shared across pages, 
