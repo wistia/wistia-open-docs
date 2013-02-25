@@ -27,19 +27,19 @@ To center your video in Wordpress, you will first use an outer div with the styl
 <pre><code class='language-markup'>
 <div id="the_video" style="text-align: center;">
 
-  <div id="wistia_5af2188e71" style="width:640px;height:360px;display: inline-block; *display: inline; margin: 0 auto; vertical-align: top;  zoom: 1;" data-video-width="640" data-video-height="360">
-    <object id="wistia_5af2188e71_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:100%;position:relative;width:100%;">
-    <param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-02-08"></param><param name="allowfullscreen" value="true"></param>
-    <param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param>
-    <param name="flashvars" value="videoUrl=http://embed.wistia.com/deliveries/008ea72d13517143c0e738b91aca90aa9a17ab98.bin&&hdUrl=http://embed.wistia.com/deliveries/39aacc9a8f142e920273ed35d62dbc6fefd04acd.bin&stillUrl=http://embed.wistia.com/deliveries/44f16ff951e71f077d458933fd68ec02a35bd23d.bin"></param>
-    <embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-02-08" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" wmode="opaque" flashvars="videoUrl=http://embed.wistia.com/deliveries/008ea72d13517143c0e738b91aca90aa9a17ab98.bin&hdUrl=http://embed.wistia.com/deliveries/39aacc9a8f142e920273ed35d62dbc6fefd04acd.bin&stillUrl=http://embed.wistia.com/deliveries/44f16ff951e71f077d458933fd68ec02a35bd23d.bin" style="display:block;height:100%;position:relative;width:100%;"></embed></object></div>
-    <script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"></script>
-    <script>/*<![CDATA[*/
+  &lt;div id="wistia_5af2188e71" style="width:640px;height:360px;display: inline-block; *display: inline; margin: 0 auto; vertical-align: top;  zoom: 1;" data-video-width="640" data-video-height="360"&gt;
+    &lt;object id="wistia_5af2188e71_seo" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="display:block;height:100%;position:relative;width:100%;"&gt;
+    &lt;param name="movie" value="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-02-08"&gt;&lt;/param&gt;&lt;param name="allowfullscreen" value="true"&gt;&lt;/param&gt;
+    &lt;param name="allowscriptaccess" value="always"&gt;&lt;/param&gt;&lt;param name="wmode" value="opaque"&gt;&lt;/param&gt;
+    &lt;param name="flashvars" value="videoUrl=http://embed.wistia.com/deliveries/008ea72d13517143c0e738b91aca90aa9a17ab98.bin&&hdUrl=http://embed.wistia.com/deliveries/39aacc9a8f142e920273ed35d62dbc6fefd04acd.bin&stillUrl=http://embed.wistia.com/deliveries/44f16ff951e71f077d458933fd68ec02a35bd23d.bin"&gt;&lt;/param&gt;
+    &lt;embed src="http://embed.wistia.com/flash/embed_player_v2.0.swf?2012-02-08" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" wmode="opaque" flashvars="videoUrl=http://embed.wistia.com/deliveries/008ea72d13517143c0e738b91aca90aa9a17ab98.bin&hdUrl=http://embed.wistia.com/deliveries/39aacc9a8f142e920273ed35d62dbc6fefd04acd.bin&stillUrl=http://embed.wistia.com/deliveries/44f16ff951e71f077d458933fd68ec02a35bd23d.bin" style="display:block;height:100%;position:relative;width:100%;"&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;
+    &lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"&gt;&lt;/script&gt;
+    &lt;script&gt;/*&lt;![CDATA[*/
       wistiaEmbed = Wistia.embed("5af2188e71", {
       videoWidth: "640",
       videoHeight: "360",
       controlsVisibleOnLoad: true
-    });/*]]*/</script>
+    });/*]]*/&lt;/script&gt;
 
 </div>
 </code></pre>
