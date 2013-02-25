@@ -47,11 +47,7 @@ To center your video in Wordpress, you will first use an outer div with the styl
 
 ## Using Wistia Video SEO with Wordpress
 
-If you are looking to use your Wordpress page with Wistia's Video SEO tool, you will need to update your Robots.txt file.  For more on Video SEO and the Robots.txt file, check out our [Video SEO primer]({{ '/video-seo#setup' | post_url }}).
-
-To update your Robots.txt file in Wordpress, you will need a special plug-in called 'KB Robots.txt'.  [Read more about the plug-in](http://adambrown.info/b/widgets/kb-robots-txt) and download it for your Wordpress site on their [plug-in page](http://wordpress.org/extend/plugins/kb-robotstxt).
-
-{% post_image hashed_id: 'ec5f981b2a57494d9ea5bd09fcb3b26a280c8663', width: 320, class: 'float_right' %}
-
-Once the plug-in is installed, you should have a new *Options* menu, and a *KB Robots.txt* admin page.  This page should give you an editable box to add your Wistia Video SEO 'Robots.txt' line. You will obtain that line from the [Video SEO]({{ '/video-seo' | post_url }}) area of your account.
-
+The best way to use Video SEO, Wistia embeds, and Wordpress together is by installing
+the awesome [Yoast plugin](http://yoast.com/wordpress/video-seo/). Joost, the one
+man wrecking crew behind Yoast, has put together a really valuable and easy-to-use
+workflow that also includes Wistia support (awesome!!).
