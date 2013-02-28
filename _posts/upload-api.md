@@ -78,7 +78,7 @@ The *file* parameter must be multipart-form encoded into the request body.
   </tr>
 </table></div>
 
-## Response format
+## Response Format
 
 For successful uploads, the Upload API will respond with an HTTP-200 and the
 body will contain a JSON object 
@@ -88,7 +88,7 @@ body will contain a JSON object
   * **HTTP 401** *[text/html]* Authorization error. Check your api_password.
 
 
-### Example response
+### Example Response
 
 <pre><code class="language-json">
 {
@@ -118,7 +118,7 @@ Uploading a media file with cURL:
 $ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/
 </code></pre>
 
-## Ruby code
+## Ruby Code
 
 All media uploaded via https://upload.wistia.com must be transferred as
 multipart-form encoded data inside the body of an HTTP-POST. This can be
@@ -128,7 +128,7 @@ Installation:
 
 <pre><code class="language-vim">$ gem install multipart-post</code></pre>
 
-### Example code:
+### Example Code
 <pre><code class="language-ruby">
 require 'net/http'
 require 'net/http/post/multipart'
