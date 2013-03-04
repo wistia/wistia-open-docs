@@ -126,7 +126,7 @@ To see what this looks like, check this <a href="http://fast.wistia.com/embed/if
 You'd like to send viewers a URL that they can open, and the popover will automatically display.
 
 <pre><code class='language-javascript'>
-$(document).ready( function() {
+wistiaJQuery(document).ready( function() {
   var url = window.location.href.toString();
   if ( url.indexOf('launch-the-popover') != -1 )
   {
