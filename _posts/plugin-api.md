@@ -77,7 +77,7 @@ That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're doin
 2. It places the function in the Wistia.plugin namespace, callable like `Wistia.plugin["my-plugin-name"](video, options)`.
 3. It immediately executes the function with the originating video handle and plugin options as arguments.
 
-The `video` argument is a handle to the [Player API](/player-api), which means you can now do anything that the normal 
+The `video` argument is a handle to the [Player API](player-api), which means you can now do anything that the normal 
 javascript API can do.
 
 
