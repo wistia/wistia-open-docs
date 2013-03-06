@@ -312,7 +312,7 @@ anonymousCanUpload | A boolean indicating whether or not anonymous uploads are e
 anonymousCanDownload | A boolean indicating whether or not anonymous downloads are enabled for this project.
 public | A boolean indicating whether the project is available for public (anonymous) viewing.
 publicId | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
-media | A JSON array containing a list of JSON objects representing the media in the project.  See the table below for a description of the fields in each media entry.
+medias | An array containing a list of objects representing the media in the project.  See the table below for a description of the fields in each media entry.
 
 Each entry in the media array for a project has the following fields:
 
@@ -344,7 +344,7 @@ updated   | The date when the media was last changed.
     &quot;anonymousCanDownload&quot;: false,
     &quot;public&quot;: false,
     &quot;publicId&quot;: &quot;4bD&quot;,
-    &quot;media&quot;: [
+    &quot;medias&quot;: [
     {
       &quot;id&quot;: 181279,
       &quot;name&quot;: &quot;Introducing the Slimlist&quot;,
