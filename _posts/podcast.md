@@ -4,6 +4,9 @@ layout: post
 category: Public Sharing
 description: Have a podcast or video RSS that you want to share with the world? You can easily set this up with a few steps using Wistia Playlists.
 post_intro: <p>Video Podcasting is one of the best ways to get consistently scheduled content out to your viewers.  iTunes has made finding and subscribing to video podcasts easy.  With Wistia's Project and Playlist functionality, you can create an RSS feed that will automatically update with the Video Title, Content, Thumbnail, and Description of each new video you add to the Project.</p><p>In this tutorial, we'll see how to use Wistia's Playlist functionality to an RSS feed and setup an iTunes podcast.</p>
+
+<i><b>Note: Since the videos will be delivered via the iTunes native player, analytics will not accrue for Wistia videos that are watched via a podcast.</b></i>
+
 footer: 'for_intermediates'
 ---
 
