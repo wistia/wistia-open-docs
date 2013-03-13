@@ -161,11 +161,11 @@ wistiaEmbed.bind("secondchange", function (s) {
 </script>
 </code></pre>
 
-The bind function monitors the state of the video in an event loop. Every 300 
-milliseconds, it checks to see if the video's time position has changed. 
+The bind function monitors the state of the video in an event loop. Every 300
+milliseconds, it checks to see if the video's time position has changed.
 If it has, it runs your function with the current second (s) as the only argument.
 
-The "secondchange" will only run once per second while the video is playing. 
+The "secondchange" will only run once per second while the video is playing.
 If you need more fine-grained control, try binding to the "timechange" event instead.
 
 ---
@@ -173,7 +173,7 @@ If you need more fine-grained control, try binding to the "timechange" event ins
 ### A/B testing videos against each other
 
 Using an API embed code as a template, we can switch out hashed ID's for multiple
-videos easily. Comparing the viewer analytics in the background will tell you 
+videos easily. Comparing the viewer analytics in the background will tell you
 which video reigned supreme!
 
 Check out the [A/B Testing Demo](http://wistia.github.com/demobin/ab-testing-tool/)
@@ -181,26 +181,35 @@ for more on how this will work.
 
 ---
 
+
 ### Add Chaptering Links to your Embedded Video
 
 Using the `.time()` method from the Player API, you can add chapters quickly and easily.
 
-Check out the [Chaptering Demo](http://wistia.github.com/demobin/chaptering/) 
+Check out the [Chaptering Demo](http://wistia.github.com/demobin/chaptering/)
 for more on how this works.
 
 ---
 
-### Alert when the video ends
+### Take Action When the Video Ends
+
+Using the built-in bindings, you can "listen" for events like video end, and
+take action.
+
+In the example below, we send an alert AND redirect the viewer on video end.
+Redirecting a viewer after the video is over isn't something we recommend -
+unless you have given them a heads up it is going to happen, it can be a very
+jarring experience.
 
 <pre><code class="language-javascript">
 <script type="text/javascript">
 wistiaEmbed.bind("end", function () {
   alert("Hello world!");
+  window.location.href == "http://newUrl.com";
 });
 </script>
 </code></pre>
 
----
 
 ### Return the Email from Turnstile
 
