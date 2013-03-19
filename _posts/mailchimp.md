@@ -40,7 +40,7 @@ In the Email Marketing window, choose "MailChimp" from the Email provider drop-d
 
 After getting the thumbnail and link settings working the way you'd like, copy the "Video Merge Tag" code, and paste it into the body of your MailChimp email.
 
-**Tip:** I normally send myself a test, to make sure everything is working correctly.
+**Tip:** I normally send myself a test, to make sure everything is working correctly. Careful, though, if you're viewing the video when you're logged in it won't pass through the e-mail quite right (your login will override it).
 
 ## Start Tracking Viewing!
 
