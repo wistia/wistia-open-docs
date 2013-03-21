@@ -1,3 +1,6 @@
+require 'rspec/core/rake_task'
+
+
 # HT: http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
 desc "Pre Jekyll rendering stuff"
 task :pre_jekyll do
@@ -60,6 +63,14 @@ task :nuclear_update => [:update_from_git, :build]
 desc "Updates from origin/master. DONT DO THIS LOCALLY!!!!!"
 task :update_from_git do
   `git fetch && git reset --hard origin/master`
+end
+
+desc "run specs"
+RSpec::Core::RakeTask.new(:spec)
+
+desc "Run RSpec tests!"
+task :rspec do
+  Rake::Task[:spec].execute
 end
 
 # add a title to a post like np title="Blah this is my title"
