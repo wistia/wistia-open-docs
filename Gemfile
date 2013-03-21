@@ -15,3 +15,7 @@ gem "sinatra", "~> 1.3.3"
 gem "shotgun", "~> 0.9"
 gem "tire", "~> 0.4.2"
 
+group :test do
+  gem "rspec", "~> 2.13.0"
+  gem "rack-test", "~> 0.6.2"
+end
