@@ -80,6 +80,7 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 
 * Basecamp
 * Blogger
+* Confluence (use the iframe src URL)
 * DecalCMS
 * [Facebook]({{ '/social-sharing' | post_url }})
 * Google Sites
