@@ -1,43 +1,117 @@
 <style type='text/css'>
 @font-face {
-  font-family: "helveticaneue45";
-  src: url("http://www.wistia.com/fonts/helveticaneue45.eot");
-  src: url("http://www.wistia.com/fonts/helveticaneue45.eot?#iefix") format("embedded-opentype"), url("http://www.wistia.com/fonts/helveticaneue45.woff") format("woff"), url("http://www.wistia.com/fonts/helveticaneue45.ttf") format("truetype"), url("http://www.wistia.com/fonts/helveticaneue45.svg#helveticaneue45") format("svg");
+  font-family: "Avenir";
+  src: url("/fonts/avenir/avenir-45.eot?#iefix");
+  src: url("/fonts/avenir/avenir-45.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-45.woff") format("woff"), url("/fonts/avenir/avenir-45.ttf") format("truetype"), url("/fonts/avenir/avenir-45.svg#avenir-45") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/avenir/avenir-85.eot?#iefix");
+  src: url("/fonts/avenir/avenir-85.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-85.woff") format("woff"), url("/fonts/avenir/avenir-85.ttf") format("truetype"), url("/fonts/avenir/avenir-85.svg#avenir-85") format("svg");
+  font-weight: 700; }
+
+@font-face {
+  font-family: "wistia-icons";
+  src: url("/fonts/wistia-icons.eot");
+  src: url("/fonts/wistia-icons.eot?#iefix") format("embedded-opentype"), url("/fonts/wistia-icons.svg#wistia-icons") format("svg"), url("/fonts/wistia-icons.woff") format("woff"), url("/fonts/wistia-icons.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
-#footer {
+#wistiacom_footer {
   position: relative;
-  background: url("http://www.wistia.com/images/elements/footer_gradient.png") repeat-x;
-  height: 80px;
-  text-align: center; }
-  #footer ul.nav-list {
-    margin-top: 0px;
-    padding-top: 30px;
-    white-space: nowrap;
-    list-style-type: none;
-    padding-left: 0px; }
-  #footer li {
-    display: inline;
-    font-family: "helveticaneue45", Helvetica, Arial, sans-serif;
-    padding-left: 13px;
-    padding-right: 8px;
-    font-size: 14px;
-    border-left: 1px solid #bbbbbb; }
-  #footer li:first-child {
-    border: 0; }
-  #footer a {
-    text-decoration: none;
-    color: #aaaaaa;
-    padding: 10px 0px; }
-
-#footer:hover a {
-  color: #777777; }
-#footer:hover a:hover {
-  color: #222222; }
+  background-color: #0e7ac4;
+  height: 250px;
+  text-align: left;
+  z-index: 100; }
+  #wistiacom_footer .container {
+    z-index: 100;
+    height: 140px;
+    margin: 0 auto;
+    width: 960px;
+    position: relative; }
+    #wistiacom_footer .container ul {
+      margin-top: 0px;
+      white-space: nowrap;
+      list-style-type: none;
+      padding-left: 0px; }
+    #wistiacom_footer .container li, #wistiacom_footer .container p {
+      font-family: "Avenir", "Futura", Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 28px;
+      -webkit-font-smoothing: antialiased; }
+    #wistiacom_footer .container h3 {
+      color: #3ea9f5;
+      font-family: "Avenir", "Futura", Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      -webkit-font-smoothing: antialiased; }
+    #wistiacom_footer .container a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 0px; }
+    #wistiacom_footer .container a:hover {
+      text-decoration: underline; }
+    #wistiacom_footer .container .links {
+      display: inline-block;
+      *display: inline;
+      vertical-align: top;
+      zoom: 1;
+      width: 200px;
+      height: 200px;
+      margin-top: 30px; }
+      #wistiacom_footer .container .links.blog {
+        border-left: 1px solid #3ea9f5;
+        border-right: 1px solid #3ea9f5;
+        height: 118px;
+        margin-top: 77px;
+        padding: 0px 60px;
+        width: 150px; }
+        #wistiacom_footer .container .links.blog p {
+          line-height: 20px;
+          margin-top: 5px; }
+        #wistiacom_footer .container .links.blog h3 {
+          margin-top: -32px; }
+      #wistiacom_footer .container .links.social {
+        height: 100px;
+        width: 40px;
+        margin-top: 77px; }
+        #wistiacom_footer .container .links.social .icon {
+          display: block;
+          padding: 19px 0px 0px 48px;
+          font-family: "wistia-icons";
+          font-size: 28px;
+          font-style: normal;
+          speak: none;
+          font-weight: normal;
+          -webkit-font-smoothing: antialiased; }
+        #wistiacom_footer .container .links.social .icon-twitter {
+          color: #3ea9f5; }
+          #wistiacom_footer .container .links.social .icon-twitter:hover {
+            color: white;
+            text-decoration: none; }
+          #wistiacom_footer .container .links.social .icon-twitter:before {
+            content: "\e009"; }
+        #wistiacom_footer .container .links.social .icon-facebook {
+          color: #3ea9f5; }
+          #wistiacom_footer .container .links.social .icon-facebook:hover {
+            color: white;
+            text-decoration: none; }
+          #wistiacom_footer .container .links.social .icon-facebook:before {
+            content: "\e00a"; }
 </style>
-<div id='footer'>
-<ul class='nav-list'>
+<div id='wistiacom_footer'>
+<div class='container'>
+<div class='product links'>
+<h3>Product</h3>
+<ul>
+<li>
+<a href='http://wistia.com/product'>Features</a>
+</li>
 <li>
 <a href='http://wistia.com/doc/developers'>Developers</a>
 </li>
@@ -45,22 +119,54 @@
 <a href='http://wistia.com/doc/'>Documentation</a>
 </li>
 <li>
-<a href='http://wistia.com/privacy' target='_blank'>Privacy Policy</a>
+<a href='http://wistia.com/pricing/agency'>Agency Plan</a>
 </li>
+</ul>
+</div>
+<div class='company links'>
+<h3>Company</h3>
+<ul>
 <li>
 <a href='http://wistia.com/about/yearbook'>Team</a>
 </li>
 <li>
-<a href='http://50grove.wistia.com' target='_blank'>50 Grove</a>
+<a href='http://wistia.com/privacy' target='_blank'>Privacy Policy</a>
 </li>
 <li>
-<a href='http://wistia.theresumator.com/apply/' target='blank'>Jobs</a>
+<a href='http://wistia.com/about/contact'>Help & Support</a>
 </li>
 <li>
-<a href='http://twitter.com/wistia' target='_blank'>@wistia</a>
+<a href='http://wistia.theresumator.com/apply/'>Jobs</a>
+</li>
+</ul>
+</div>
+<div class='community links'>
+<h3>Community</h3>
+<ul>
+<li>
+<a href='http://wistia.com/learning'>The Learning Center</a>
 </li>
 <li>
 <a href='http://wistia.com/content/megaplex'>The Megaplex</a>
 </li>
+<li>
+<a href='http://wistia.com/blog' target='_blank'>Blog</a>
+</li>
+<li>
+<a href='http://50grove.wistia.com' target='_blank'>Video Producers</a>
+</li>
 </ul>
+</div>
+<div class='blog links'>
+<h3>Blog: March 5</h3>
+<a href='http://wistia.com/blog/getting-started-video-testimonials/'>
+<img src='http://wistia.com/images/elements/skeletor/thumbnail.jpg'>
+<p>Getting Started with Video Testimonials</p>
+</a>
+</div>
+<div class='social links'>
+<a class='icon icon-twitter' href='http://www.twitter.com/wistia' target='_blank'></a>
+<a class='icon icon-facebook' href='http://www.facebook.com/wistia' target='_blank'></a>
+</div>
+</div>
 </div>
