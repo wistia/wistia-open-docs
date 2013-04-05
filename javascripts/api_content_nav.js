@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // getting that nav bar set right //
   (function right_nav() {
-    var h_arr = $('h2,h3'),
+    var h_arr = $('h2,h3').not('#wistiacom_footer h3'),
       h1 = $('.post_title > h1'),
       nav_box_ul = $('ul#page_nav'),
       post_content_nav = $('#post_content_nav');
