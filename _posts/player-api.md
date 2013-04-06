@@ -118,6 +118,8 @@ width(w)                | Sets the width of the embed. The video will be resized
 
 ## Player API Events
 
+Use these events when working with the `bind` and `unbind` methods.
+
 Name          | Arguments               | Description
 ----          | ---------               | -----------
 conversion    | type, value             | Fired when an email is entered in Turnstile.
