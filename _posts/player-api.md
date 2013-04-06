@@ -139,6 +139,7 @@ wistiaEmbed = Wistia.embed("29b0fbf547", {
 wistiaEmbed.bind('play', function() {
   // use the .time() method to jump ahead 10 seconds
   wistiaEmbed.time(10);
+  return this.unbind;
 });
 </script>
 </code></pre>
