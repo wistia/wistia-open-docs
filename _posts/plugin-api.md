@@ -83,11 +83,11 @@ javascript API can do.
 
 ## Using plugins with an iframe embed
 
-Wistia iframe embeds take the exact same JSON parameters as an API embed, but they must be properly URL-encoded.
+Wistia iframe embeds take the exact same JSON parameters as an API embed, but they must be properly URL-encoded using a bracket syntax.
 
 For example, here's the plugin parameters for the API embed above, but translated to be appended on an iframe src attribute.
 
-    &plugin[my-plugin-name]=%7BcustomOption%3Atrue%2Csrc%3A%22http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js%22%7D
+    plugin%5Bmy-plugin-name%5D%5BcustomOption%5D=true&plugin%5Bmy-plugin-name%5D%5Bsrc%5D=http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js
 
 
 ## Using the Plugin Grid
@@ -138,10 +138,10 @@ $(video.grid.right_inside).append($myElem);
 ### Use the grid to place an element beside the video.
 
 You can use the grid to put elements outside the video too. This is a good idea because, as long 
-your DOM elements are a fixed width, they will worked correctly with our responsive solution, 
+your DOM elements are a fixed width, they will work correctly with our responsive solution, 
 [Video Foam](http://wistia.github.com/demobin/video-foam/).
 
-Here's an example of adding a plugin to the right of the video.
+Here's an example that adds a plugin to the right of the video.
 
 <pre><code class="language-javascript">
 var myElem = document.createElement("div");
