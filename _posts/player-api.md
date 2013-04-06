@@ -91,8 +91,9 @@ wistiaJQuery(document).bind("wistia-popover-close", function() {
 
 Method                  | Description
 ------                  | -----------
-bind(event, function)   | This lets you execute a function when a video event occurs. Possible values for "event" are: "play", "pause", "end", "conversion", "secondchange", "timechange", "volumechange", and "seek".
+bind(event, function)   | This lets you execute a function when a video event occurs. `event` expects a string. Refer to the _Player API Events_ section below to see possible values.
 duration()              | Returns the length of the video in seconds
+email(email)            | Associates the email string with this view of the video.
 hashedId()              | Returns the hashedId of the video
 height()                | Gets the current height of the embed (the video plus any plugins above or below).
 height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.
@@ -100,7 +101,7 @@ name()                  | Returns the name of the video
 pause()                 | This causes the video player to pause the video if it is currently playing.
 play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.
 ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.
-setEmail(email)         | Associates the email string with this view of the video.
+remove()                | Removes the video from the page and cancels any asynchronous operations.
 state()                 | This returns the current state of the video player: "unknown" (a.k.a not started), "ended", "playing", "paused".
 time()                  | This returns the viewer's current position in the video (in seconds).
 time(t)                 | This causes the video player to seek to time specified by the ''t'' parameter (in seconds).
@@ -113,6 +114,22 @@ volume()                | Returns the current volume level. Value between 0 and 
 volume(level)           | Sets the current volume level. 'level' is a decimal value between 0 and 1.
 width()                 | Gets the current width of the embed (the video plus any plugins on the left and right).
 width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.
+
+
+## Player API Events
+
+Name          | Arguments               | Description
+____          | _________               | ___________
+conversion    | type, value             | Fired when an email is entered in Turnstile.
+end           |                         | Fired when the video's state changes from anything to "ended".
+heightchange  | height                  | Fired when the height of the embed code changes.
+pause         |                         | Fired when the video's state changes from anything to "paused".
+play          |                         | Fired when the video's state changes from anything to "playing".
+secondchange  | second                  | Fired once each time the second of the video changes.
+seek          | currentTime, lastTime   | Fired when the difference between the current time and last time is greater than 1.5 seconds.
+timechange    | time                    | Fired when the video's time changes. Runs on a timeout once every 300ms.
+volumechange  | volume                  | Fired when the video's volume changes.
+widthchange   | width                   | Fired when the width of the embed code changes.
 
 
 ---
@@ -224,7 +241,7 @@ wistiaEmbed.bind("conversion", function(type, val) {
 </script>
 </code></pre>
 
-At this time, the "type" of conversion is always 'pre-roll-email', and the "val" is the viewers email address.
+At this time, the `type` of conversion can be "pre-roll-email", "mid-roll-email", or "post-roll-email", and the `val` is the viewers email address.
 
 ---
 
@@ -240,9 +257,9 @@ wistiaEmbed = Wistia.embed("tlb0v41zjd", {
   videoHeight: 360,
   volumeControl: true,
   controlsVisibleOnLoad: true,
-  playerColor: "688AAD"
+  playerColor: "688AAD",
+  volume: 0
 });
-wistiaEmbed.volume(0);
 &lt;/script&gt;
 </code></pre>
 
