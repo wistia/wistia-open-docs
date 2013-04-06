@@ -119,7 +119,7 @@ width(w)                | Sets the width of the embed. The video will be resized
 ## Player API Events
 
 Name          | Arguments               | Description
-____          | _________               | ___________
+----          | ---------               | -----------
 conversion    | type, value             | Fired when an email is entered in Turnstile.
 end           |                         | Fired when the video's state changes from anything to "ended".
 heightchange  | height                  | Fired when the height of the embed code changes.
