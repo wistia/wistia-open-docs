@@ -11,9 +11,12 @@ describe "Content" do
 
   it "should have valid yaml" do
     @posts.each do |post|
-      if !YAML.load(post)
-        puts post
-        return "didn't have valid YAML"
+      begin
+        YAML.load(post)
+      rescue Psych::SyntaxError => e
+        pp e
+        pp post
+        raise "Post syntax is not valid"
       end
     end
   end
