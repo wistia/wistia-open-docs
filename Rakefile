@@ -76,7 +76,6 @@ end
 # add a title to a post like np title="Blah this is my title"
 desc "Create a new post"
 task :np do
-  require 'date'
 
   title = ENV["title"] || "new-post"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
@@ -97,6 +96,8 @@ task :np do
       post.puts "---"
     end
   end
+
+  system "mvim #{path}"
 
   exit 1
 
