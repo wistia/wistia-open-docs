@@ -1,55 +1,101 @@
 $(document).ready(function() {
 
-  // getting that nav bar set right //
-  (function right_nav() {
-    var h2 = $('h2').not('#wistiacom_footer h3'),
-      h1 = $('.post_title > h1'),
-      nav_box_ul = $('ul#page_nav');
+  $.browser_escape_characters = function(span) {
+    return span.html(span.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+  };
 
-    // funk to make text useful as links
-    var text_to_id = function(text) {
-      return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
-    };
+  $.text_to_id = function(text) {
+    return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
+  };
 
-    // if there is h2s on the page, we should create the nav box on the page
-    if (h2.length) {
-      h1.attr('id', text_to_id(h1.text()));
-      nav_box_ul.append('<li class="title_list_item"><a href="#' + h1.attr('id') + '">' + h1.text() + '</a></li>');
+  $.section_title_to_nav_title = function(text) {
+    if ((/\:\s/).test(text)) {
+      text = text.split(/\:\s/)[1];
     }
-    // if no nav box, then hide it entirely and re-center main post //
-    else {
-      $post_container = $('#post_container');
-      nav_box_ul.hide();
-      $post_width = $post_container.width();
-      $('#container').css("width", $post_width);
-      $('#post_container').css("left", 0);
-    }
+    return text;
+  };
 
-    h2.each( function() {
-      $this = $(this);
-      $text = $(this).text();
+  var navBar = {
+    main_title: $('.post_title > h1'),
+    nav_box_ul: $('ul#page_nav'),
+    titles_for_nav: null,
 
-      // add the subtopic anchors before the h2
-      $this.attr('id', text_to_id($this.text())).prepend('<a class="subtopic_anchor" href="#' + $this.attr('id') + '">#</a>');
+    init: function() {
+      this.titles_for_nav = this.titles_for_nav();
+      this.build_nav_box();
+      $('li.header_link:first').css('border', 'none');
+    },
 
-      nav_box_ul.append('<li><a href="#' + $this.attr('id') + '">' + $text + '</a></li>');
+    build_nav_box: function() {
+      if (this.titles_for_nav.length) {
+        this.main_title.attr('id', $.text_to_id(this.main_title.text()));
+        this.append_titles_to_nav_box();
+        this.space_the_topics_title();
+      }
+      else {
+        this.nav_box_ul.hide();
+        post_width = $('#post_container').width();
+        $('#container').css("width", post_width);
+        $('#post_container').css("left", 0);
+      }
 
-    });
+      $('#page_nav').onePageNav({ changeHash: true });
+    },
 
-    $('#page_nav').onePageNav({ changeHash: true });
+    append_titles_to_nav_box: function() {
+      navBar.nav_box_ul
+        .append('<li class="title_list_item"><a href="#' + 
+          this.main_title.attr('id') + '">' + this.main_title.text() + '</a></li>');
 
+      var i;
+      for (i = 0; i < navBar.titles_for_nav.length; i++) {
+        var $this = $(navBar.titles_for_nav[i]);
+        var $text = $this.text();
+        var $id_text = $.text_to_id($text);
 
-    // get the spacing on the title bar set right
-    function space_the_topics_title() {
+        $this
+          .attr('id', $id_text)
+          .prepend('<a class="subtopic_anchor" href="#' + 
+            $id_text + '">#</a>');
+
+        navBar.append_list_elem_to_nav_box($this, $text, $id_text);
+      }
+    },
+
+    append_list_elem_to_nav_box: function(elem, link_text, id_text) {
+      if (window.api) {
+        if (elem.is('h3')) {
+          navBar.nav_box_ul
+            .append('<li class="sub_link"><a href="#' + id_text +
+              '">' + $.section_title_to_nav_title(link_text) + '</a></li>');
+        } else {
+          navBar.nav_box_ul
+            .append('<li class="header_link"><a href="#' + id_text + '">' +
+              link_text + '</a></li>');
+        }
+      } else {
+        navBar.nav_box_ul
+          .append('<li><a href="#' + id_text + '">' + link_text + '</a></li>');
+      }
+    },
+
+    titles_for_nav: function() {
+      if (window.api) {
+        return $('h2,h3').not('#wistiacom_footer h3');
+      } else {
+        return $('h2');
+      }
+    },
+
+    space_the_topics_title: function() {
       var $topics_title_box = $('#page_nav li:first-child'),
-        $title_a = $topics_title_box.find('a');
+      $title_a = $topics_title_box.find('a');
 
       $title_a.css('top', ($topics_title_box.height() - $title_a.height())/2);
     }
+  };
 
-    space_the_topics_title();
-
-  })();
+  navBar.init();
 
   // for the embed screen tomfoolery //
   if ($('.embed_type_image').length) {
@@ -60,29 +106,18 @@ $(document).ready(function() {
     if ($this.outerHeight() < $prev_elem_height ) {
       $this.css('height', $prev_elem_height );
     }
-
     });
-  };
-
-  // for <pre> code snippets //
-  function browser_escape_characters(span) {
-    span.html(span.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'))
   };
 
   if ($('span.code').length) {
     $('span.code').each( function() {
-      $this = $(this);
-
-      browser_escape_characters($this);
+      $.browser_escape_characters($(this));
     });
   };
 
   if ($('pre').length) {
     $('pre').find('code.language-markup').each( function() {
-      $this = $(this);
-
-      browser_escape_characters($this);
+      $.browser_escape_characters($(this));
     });
   };
-
 });

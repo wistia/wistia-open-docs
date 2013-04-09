@@ -23,7 +23,16 @@ type: post
       {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
     {% endif %}
 
-{% if page.api == true %} {% include api_js.html %} {% else %} {% include post_js.html %} {% endif %}
 %script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/jquery.nav' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/image_layout' | javascript_url }}" }
+
+{% if page.api == true %}
+{% include toplink.html %}
+:javascript
+  var api = true;
+{% else %}
+:javascript
+  var api = false;
+{% endif %} 
+{% include post_js.html %}

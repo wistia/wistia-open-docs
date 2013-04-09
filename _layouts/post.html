@@ -27,7 +27,21 @@ type: post
     {% endif %}
   </div>
 </div>
-{% if page.api == true %} {% include api_js.html %} {% else %} {% include post_js.html %} {% endif %}
 <script src="{{ '/javascripts/jquery.scrollTo' | javascript_url }}"></script>
 <script src="{{ '/javascripts/jquery.nav' | javascript_url }}"></script>
 <script src="{{ '/javascripts/image_layout' | javascript_url }}"></script>
+{% if page.api == true %}
+{% include toplink.html %}
+<script type='text/javascript'>
+  //<![CDATA[
+    var api = true;
+  //]]>
+</script>
+{% else %}
+<script type='text/javascript'>
+  //<![CDATA[
+    var api = false;
+  //]]>
+</script>
+{% endif %}
+{% include post_js.html %}
