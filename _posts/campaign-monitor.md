@@ -5,7 +5,7 @@ description: We love Campaign Monitor. Lucky for us, adding a Wistia video to an
 category: Public Sharing
 ---
 
-{% post_image hashed_id: 'dfc00817495ec1fc99716cbf8478203617e0f03d', width: 160, class: 'float_right intro_image' %}
+{% post_image hashed_id: '53bf14a1c11bf428cfcec9dbebc40dee17823e76', width: 190, class: 'float_right intro_image' %}
 
 Campaign Monitor is great email marketing software.  Their interface is elegant and easy to use, the team is top-notch and they have great taste in music.
 
