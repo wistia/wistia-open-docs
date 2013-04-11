@@ -91,7 +91,7 @@ Campaign Monitor | `[email]`
 ClearWebb | `$email`
 Constant Contact | `$SUBSCRIBER.EMAIL$`
 Emailvision  |  `[EMV FIELD]EMAIL[EMV /FIELD]`
-Emma  | Not Available
+Emma  | `[[email]]`
 GetResponse  |  `[email]`
 Hubspot  | {`{ contact.email }`}
 iContact  |  `[email]`
