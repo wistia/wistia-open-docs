@@ -51,7 +51,7 @@ end
 
 
 desc "Build the site"
-task :build => [:pre_jekyll, :spec] do
+task :build => :pre_jekyll do
   system "bundle exec jekyll"
 end
 
