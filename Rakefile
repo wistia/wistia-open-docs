@@ -45,13 +45,13 @@ end
 
 
 desc "Launch preview environment"
-task :preview => :pre_jekyll do
+task :preview => [:pre_jekyll, :spec] do
   system "foreman start"
 end
 
 
 desc "Build the site"
-task :build => :pre_jekyll do
+task :build => [:pre_jekyll, :spec] do
   system "bundle exec jekyll"
 end
 
@@ -69,9 +69,7 @@ desc "run specs"
 RSpec::Core::RakeTask.new(:spec)
 
 desc "Run RSpec tests!"
-task :rspec do
-  Rake::Task[:spec].execute
-end
+task :default => :spec
 
 # add a title to a post like np title="Blah this is my title"
 desc "Create a new post"

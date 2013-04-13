@@ -1,4 +1,6 @@
 require_relative 'spec_helper'
+require 'yaml'
+require 'psych'
 
 describe "Content" do
 
