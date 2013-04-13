@@ -14,8 +14,10 @@ gem "sass", "~> 3.2"
 gem "sinatra", "~> 1.3.3"
 gem "shotgun", "~> 0.9"
 gem "tire", "~> 0.4.2"
+gem "rb-fsevent", "~> 0.9.1"
 
 group :test do
   gem "rspec", "~> 2.13.0"
   gem "rack-test", "~> 0.6.2"
+  gem "psych", "~> 1.3.4"
 end
