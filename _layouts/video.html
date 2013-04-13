@@ -1,0 +1,72 @@
+---
+layout: base
+---
+<div class='video_wrapper'>
+  <div id='local-header-container'>
+    <div class='cf' id='local-header'>
+      <div class='doc_nav'>
+        {% include doc_nav.html %}
+      </div>
+    </div>
+  </div>
+  <div id='video-container'>
+    <div class='cf' id='video'>
+      <div id="wistia_{{ page.video_hashed_id }}" class="wistia_embed" style="width:960px;height:540px;" data-video-width="960" data-video-height="540">&nbsp;</div>
+      <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+      <script>
+      wistiaEmbed = Wistia.embed("{{ page.video_hashed_id }}", {
+      version: "v1",
+      videoWidth: 960,
+      videoHeight: 540,
+      playerColor: "81b7db",
+      videoFoam: true
+      });
+      </script>
+    </div>
+  </div>
+  <div class='video-info-container'>
+    <div class='video-info cf'>
+      <h2 class='title'>
+        {{ page.title }}
+      </h2>
+      <div class='description'>
+        {{ page.post_intro }}
+      </div>
+    </div>
+  </div>
+  <div class='video-info-container'>
+    <div class='video-info cf'>
+      <h2 class='title'>Show Notes</h2>
+      <div class='description'>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
+<script type='text/javascript'>
+  //<![CDATA[
+    $('.chapter_link').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('#video-container').offset().top
+      }, 500);
+    });
+  //]]>
+</script>
+<script type='text/javascript'>
+  //<![CDATA[
+    var url = window.location.href.toString();
+    var playInterval;
+    if (url.indexOf('hf') != -1 || url.indexOf('hm') != -1)
+    {
+      playInterval = setInterval(autoPlay, 100);
+    }
+    function autoPlay()
+    {
+      try{
+        wistiaEmbed.play();
+        clearInterval(playInterval);
+      } catch (e) {}
+    }
+  //]]>
+</script>

@@ -1,0 +1,132 @@
+.video_wrapper
+  margin: 0 auto
+  max-width: 960px
+  position: relative
+
+#local-header-container
+  margin: 0
+  padding: 0
+  text-align: center
+  #local-header
+    text-align: left
+    max-width: 960px
+    margin: 0 auto
+    background-color: white
+    padding: 19px 0px 27px 0px
+
+.doc_nav
+  position: relative
+  height: 45px
+  #doc_nav
+    position: absolute
+    padding-top: 0
+    right: 0
+    #doc_nav_container 
+      position: absolute
+      right: 0
+      ul
+        width: 640px
+        li#nav_search_box
+          right: 0
+
+.light-bulb
+  float: left
+  margin-top: 13px
+  a
+    display: inline-block
+    height: 77px
+    width: 58px
+    &:hover, &.hovered
+      background-position: 0 -79px
+
+.video-title
+  margin-top: 20px
+  padding: 0px 20px
+  position: relative
+
+.video-carousel
+  float: right
+  width: 560px
+
+#video-container
+  background: #f7f6f4
+  background: -moz-linear-gradient(top, #f7f6f4 60%, #e5e4e3 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #f7f6f4), color-stop(100%, #e5e4e3))
+  background: -webkit-linear-gradient(top, #f7f6f4 60%, #e5e4e3 100%)
+  background: -o-linear-gradient(top, #f7f6f4 60%, #e5e4e3 100%)
+  background: -ms-linear-gradient(top, #f7f6f4 60%, #e5e4e3 100%)
+  background: linear-gradient(to bottom, #f7f6f4 60%, #e5e4e3 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f6f4', endColorstr='#e5e4e3',GradientType=0 )
+  overflow-y: visible
+  text-align: center
+  #video
+    overflow-y: visible
+    margin: 0 auto
+    position: relative
+    iframe
+      z-index: 1
+      position: relative
+    .next
+      height: 100%
+      background: transparent no-repeat url(/learning/images/next.png) 130px center
+      position: absolute
+      right: 0
+      top: 0
+      text-decoration: none
+      width: 200px
+      filter: alpha(opacity = 30)
+      opacity: 0.3
+    .next:hover
+      filter: alpha(opacity = 100)
+      opacity: 1
+    .previous
+      height: 100%
+      background: transparent no-repeat url(/learning/images/previous.png) 30px center
+      position: absolute
+      left: 0
+      top: 0
+      text-decoration: none
+      width: 200px
+      filter: alpha(opacity = 30)
+      opacity: 0.3
+    .previous:hover
+      filter: alpha(opacity = 100)
+      opacity: 1
+
+.video-info-container
+  background-color: #eee
+  margin: 20px 0
+  padding: 30px 0
+  text-align: center
+  a
+    color: #8d8d8d
+    text-decoration: underline
+    &:hover
+      color: #666
+  h3
+    font-size: 22px
+    margin: 15px 0
+    a
+      color: #333
+  ul
+    text-align: left
+    li
+      margin: 10px 0
+  .video-info
+    margin: 0 auto
+    font-size: 16px
+    color: #646059
+    font-weight: 100
+  .description
+    color: #777
+    line-height: 150%
+    margin: 20px auto
+    width: 50%
+    em
+      font-weight: 300
+  .title
+    color: #333
+    font-size: 38px
+    font-weight: 600
+    line-height: 120%
+    padding-top: 10px

@@ -12,6 +12,7 @@
 ////////////////////////////////////
 
 @import font-awesome
+@import video
 
 /////////////// vars ///////////////
 
@@ -117,6 +118,7 @@ body
   background-color: white
   color: $text_color
   +anti-alias
+  text-align: left
   a
     color: $accent_blue
     text-decoration: none
@@ -159,11 +161,11 @@ pre
   background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
 %container
-  width: 960px
   margin: 0 auto
 
 #container
   @extend %container
+  width: 960px
 
 #post_container
   position: relative
@@ -180,12 +182,13 @@ pre
   width: $post_width
   margin: $padding auto
   background-color: white
+  text-align: left
   h3
+    border-bottom: 1px solid #DDD
+    color: $text_color
     font-size: 22px
     margin-bottom: 10px
     margin-left: 0
-    color: $text_color
-    border-bottom: 1px solid #DDD
     padding-bottom: 5px
 
 .quickstart
@@ -213,16 +216,17 @@ pre
       img
         opacity: 0.7
       h3
-        padding: 5px 0
         background-color: #DDD
-        position: relative
+        color: $text_color
+        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
+        font-size: 14px !important
+        font-style: normal
         left: -1px
+        padding: 5px 0
+        position: relative
+        text-align: center
         top: -27px
         width: 152px
-        color: $text_color
-        font-size: 14px !important
-        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
-        font-style: normal
 
 .category_list
   margin-bottom: $padding
