@@ -1,10 +1,10 @@
 ---
-title: Wistia Basics - "Understanding Analytics"
+title: Understanding Analytics
 layout: video
 category: Wistia Basics
 type: post
 description: This episode of our Wistia Basics series covers the starting blocks of Wistia's analytics features!
-post_intro: Understanding Analytics is all about Wistia's bread-and-butter - the powerful analytics provided for embedded video plays.
+post_intro: <em>Understanding Analytics</em> is all about Wistia's bread-and-butter - the powerful analytics provided for embedded video plays.
 video_hashed_id: f13ff05fc3
 ---
 

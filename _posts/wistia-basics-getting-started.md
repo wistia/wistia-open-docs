@@ -1,5 +1,5 @@
 ---
-title: Wistia Basics - Getting Started
+title: Getting Started
 category: Wistia Basics
 description: OK, so you've got your new Wistia account set up. Now what? Watch this quick video to get a solid foundation set up!
 layout: video

@@ -1,5 +1,5 @@
 ---
-title: Wistia Basics - Customizing Your Video Embeds
+title: Customizing Your Video Embeds
 category: Wistia Basics
 description: Ready to start customizing your Wistia videos? Learn more with this video episode from the Wistia Basics series!
 layout: video
