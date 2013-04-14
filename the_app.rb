@@ -108,3 +108,7 @@ end
 get "/agency" do
   send_file(File.join(File.dirname(__FILE__), '_site', 'agency.html'))
 end
+
+get "/wistia-basics" do
+  send_file(File.join(File.dirname(__FILE__), '_site', 'wistia-basics.html'))
+end

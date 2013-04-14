@@ -1,3 +1,9 @@
+=col
+  display: inline-block
+  *display: inline
+  vertical-align: top
+  zoom: 1
+
 .video_wrapper
   margin: 0 auto
   max-width: 960px
@@ -33,9 +39,9 @@
   float: left
   margin-top: 13px
   a
-    display: inline-block
     height: 77px
     width: 58px
+    +col
     &:hover, &.hovered
       background-position: 0 -79px
 
@@ -130,3 +136,137 @@
     font-weight: 600
     line-height: 120%
     padding-top: 10px
+
+
+// main Wistia Basics page
+
+#wistia-basics-header
+  background-color: white
+  margin: 30px 0
+  position: relative
+  ul
+    text-align: center
+    li
+      +col 
+  .project-title
+    margin-right: 90px
+  .project-description
+    color: #646059
+    line-height: 140%
+    text-align: left
+    width: 55%
+
+#media-tiles-container
+  background-color: #EEE
+  margin: 30px 0 40px
+  padding: 40px 0
+  position: relative
+  text-align: center
+
+  #media-tiles 
+    text-align: left
+    width: 100%
+    h1
+      font-size: 54px
+      text-align: center
+
+    .media-tile-container 
+      text-align: center
+      width: 100%
+
+      .row
+        margin: 20px 0
+
+      .media-tile
+        background-color: #fff
+        color: #6a6a6a
+        height: 365px
+        margin: 0 30px
+        vertical-align: top
+        width: 260px
+        +box-shadow(rgba(0,0,0,.05), 0, 0, 10px)
+        +col
+        a 
+          position: relative
+          display: block
+        img 
+          margin: 0 auto
+          display: block
+        em
+          font-weight: 200
+        .new_tag 
+          position: absolute
+          top: 12px
+          left: -14px
+          z-index: 10
+        .title 
+          text-align: left
+          padding: 16px 28px 10px 28px
+          font-size: 31px
+          background-color: #fff
+          font-weight: 100
+          a 
+            color: #6a6a6a
+            text-decoration: none
+
+        .description 
+          text-align: left
+          padding: 0px 28px 23px 28px
+          background-color: #fff
+          font-size: 14px
+          line-height: 140%
+          font-weight: 100
+          p 
+            margin: 0
+
+        .info 
+          display: none
+          height: 70px
+          text-align: left
+          padding: 0px 28px 23px 28px
+          background-color: #fff
+          font-size: 14px
+          line-height: 21px
+          font-weight: 100
+          overflow: hidden
+
+          .info-title 
+            text-transform: uppercase
+            font-size: 13px
+            letter-spacing: 1.5px
+            padding: 10px 0px
+
+          .info-val 
+            color: #555
+            font-size: 36px
+            font-weight: 700
+            a 
+              text-decoration: none
+
+          .time 
+            float: left
+          .comments 
+            float: right
+
+.thumbnail_color
+  position: relative
+  cursor: pointer
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0 
+    right: 0
+    background: none
+    -moz-transition: background .3s linear
+    -webkit-transition: background .3s linear
+    -ms-transition: background .3s linear
+    -o-transition: background .3s linear
+    transition: background .3s linear
+
+.media-tile:hover
+  .thumbnail_color:before
+    background: rgba(#81b7db, 0.5)
+    content: url("/images/large_play_button.png")

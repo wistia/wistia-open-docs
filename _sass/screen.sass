@@ -80,16 +80,16 @@ $directions: (left, right)
     margin: 0
     padding: 0
     vertical-align: top
-    +inline-block
+    +col
   p
     font-size: 14px
     margin-left: $padding
 
-=inline-block
+=col
   display: inline-block
-  /* For IE 7 */
-  zoom: 1
   *display: inline
+  vertical-align: top
+  zoom: 1
 
 =transition
   +transition-property
@@ -170,7 +170,7 @@ pre
 #post_container
   position: relative
   left: $fixed_column_width + 20
-  +inline-block
+  +col
 
 /////// doc home only ///////
 
@@ -199,7 +199,7 @@ pre
     position: relative
     margin-right: 12px
     border: 1px solid #DDD
-    +inline-block
+    +col
     &:last-child
       margin-right: 0
     a
@@ -259,7 +259,7 @@ pre
   position: absolute
   right: 0
   max-width: 350px
-  +inline-block
+  +col
 
 
 //////// post header /////////////
@@ -279,7 +279,7 @@ pre
       li
         position: absolute
         color: $text_color
-        +inline-block
+        +col
         a 
           color: $accent_blue
           text-decoration: underline
@@ -305,7 +305,7 @@ pre
   background-color: white
   clear: both
   padding-bottom: $padding
-  +inline-block
+  +col
 
 .post_title
   margin: $padding 0
@@ -406,7 +406,7 @@ code
   background: transparent url(http://embed.wistia.com/deliveries/c4728e279c91c74605f00f6c2629a646ed3905af.png) no-repeat
   padding-left: 33px
   height: 10px
-  +inline-block
+  +col
 
 .help_bubble
   background: transparent url(http://fast.wistia.com/images/zebra/elements/questionhelp_dark.png) no-repeat
@@ -414,7 +414,7 @@ code
   height: 28px
   position: relative
   top: 8px
-  +inline-block
+  +col
 
 .seo_faq
   margin-left: 0
@@ -426,7 +426,7 @@ code
   p
     width: 70%
     margin-top: 0
-    +inline-block
+    +col
     &:last-child
       margin-bottom: 0
 
@@ -662,7 +662,7 @@ table
   position: fixed
   width: $fixed_column_width
   vertical-align: top
-  +inline-block
+  +col
   ul
     list-style-type: none
   li
@@ -871,11 +871,7 @@ table
 .cf 
   *zoom: 1
 
-=col
-  display: inline-block
-  *display: inline
-  vertical-align: top
-  zoom: 1
+
 
 //////////// devHQ //////////////////
 
@@ -927,6 +923,8 @@ $bracket_yellow: #F9D164
 
 .content_container
   @extend %container
+  width: $total_width
+
     
 
 .devhq_header
