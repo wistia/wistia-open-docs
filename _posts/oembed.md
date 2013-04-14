@@ -25,7 +25,8 @@ It's likely we'll add more URLs to this list in the future.
 
 ## The Regex
 
-If you're looking to automatically detect Wistia URLs and run them against our endpoint, we recommend using this regular expression:
+If you're looking to automatically detect Wistia URLs and run them against 
+our endpoint, we recommend using this regular expression:
 
 <pre><code class='language-vim'>
 /https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/
@@ -41,7 +42,9 @@ http(s)://*wi.st/medias/*
 http(s)://*wi.st/embed/*
 </code></pre>
 
-Note, it's likely we'll add support for more URLs in the future so feel free to use a more general regular expression so you don't miss out on future enhancements! Perhaps this:
+Note, it's likely we'll add support for more URLs in the future so feel free 
+to use a more general regular expression so you don't miss out on future 
+enhancements! Perhaps this:
 
 <pre><code class="language-vim">
 /https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/
@@ -51,7 +54,8 @@ Note, it's likely we'll add support for more URLs in the future so feel free to 
 
 ## An Example
 
-Get the embed code and some information for a video at ''http://home.wistia.com/medias/e4a27b971d'' in JSON format:
+Get the embed code and some information for a video at 
+`http://home.wistia.com/medias/e4a27b971d` in JSON format:
 
 <pre><code class="language-vim">
 curl "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/e4a27b971d"
@@ -77,7 +81,8 @@ This returns:
 
 If you're looking for XML instead of JSON, use: `http://fast.wistia.com/oembed.xml`
 
-For all the fine details about the options supported, see the official [oEmbed spec](http://oembed.com).
+For all the fine details about the options supported, see the official 
+[oEmbed spec](http://oembed.com).
 
 ---
 
@@ -85,9 +90,11 @@ For all the fine details about the options supported, see the official [oEmbed s
 
 Our endpoint supports all the options detailed at oembed.com.
 
-The required url parameter that's passed in supports all the options detailed in the [Player API]({{ '/player-api' | post_url }}).
+The required url parameter that's passed in supports all the options detailed 
+in the [Player API]({{ '/player-api' | post_url }}).
 
-We also accept some additional parameters that can change the output of the embed code:
+We also accept some additional parameters that can change the output of the 
+embed code:
 
 Name | Type  | Description
 -----|-------|------------
@@ -100,15 +107,16 @@ popoverHeight | integer | Only applicable to "popover" embed type. The requested
 popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
 ssl | boolean | Determines whether the embed code should use https. Defaults to false.
 
-If given a `width`, `height`, `maxwidth`, or `maxheight` parameter (or any combination of those),
-the other dimensions in the resulting embed code may change so that the video's 
-aspect ratio is preserved.
+If given a `width`, `height`, `maxwidth`, or `maxheight` parameter 
+(or any combination of those), the other dimensions in the resulting embed 
+code may change so that the video's aspect ratio is preserved.
 
-{{ "These parameters are attached to the Wistia media URL, and not the oEmbed call. So they must be URL-encoded to travel with the Wistia URL." | note }}
+{{ "These parameters are attached to the Wistia media URL, and not the oEmbed call. So they must be URL-encoded to travel with the Wistia URL." | note }} 
 
 ### Example
 
-In this example, we'll request an `API` embed code type, with the javascript handle `oEmbedVideo`:
+In this example, we'll request an `API` embed code type, with the javascript 
+handle `oEmbedVideo`:
 
 First, the media URL we'll request:
 
@@ -149,23 +157,84 @@ This returns:
 
 ---
 
+## Using JSONP
+
+[JSONP](http://en.wikipedia.org/wiki/JSONP) is a javascript technique used to
+get information from a server that is not the same origin as your current
+domain. This means they can avoid cross-domain security issues.
+
+In this example, we'll write some javascript to pull data for our video
+against the oEmbed endpoint, utilizing JSONP. Then, we'll manipulate the data
+returned to embed the thumbnail image.
+
+Given the oEmbed `base URL`, your `account URL`, and a `media hashed id`, we can 
+use the jQuery `getJSON` function to call against the oEmbed endpoint to return
+the video data. 
+
+Note this function also takes a callback function as a parameter. We'll set up
+that callback function next.
+
+<pre><code class="language-javascript">
+var baseUrl = "http://fast.wistia.com/oembed/?url=";
+var accountUrl = escape("http://home.wistia.com/medias/");
+var mediaHashedId = "01a1d9f97c";
+
+function getThumbnailUrl(hashedId, callback) {
+  $.getJSON(baseUrl + accountUrl + hashedId + "&format=json&callback=?", function(data) {
+    callback(data);
+  });
+}
+</code></pre>
+
+This function will return a JSON data object, and pass it to our callback
+function, which will parse the JSON and return the thumbnail URL. Let's write
+that callback function now:
+
+<pre><code class="language-javascript">
+function parseJSON(json) {
+  return json.thumbnail_url;
+};
+</code></pre>
+
+Finally, we'll setup something to call these functions for our `media hashed id`:
+
+<pre><code class="language-javascript">
+getThumbnailUrl(mediaHashedId, parseJSON);
+</code></pre>
+
+---
+
 ## Working With The Thumbnail
 
-Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a direct link to the thumbnail image asset. If your implementation involves using the thumbnail image (i.e. building your own 'popover' embeds, displaying your own play button, etc.) you should use this thumbnail image, which by default has no Wistia play button overlaid on it.
+Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a 
+direct link to the thumbnail image asset. If your implementation involves using 
+the thumbnail image (i.e. building your own 'popover' embeds, displaying your 
+own play button, etc.) you should use this thumbnail image, which by default 
+has no Wistia play button overlaid on it.
 
-See our [working with Wistia images]({{ '/working-with-images' | post_url }}) guide for more info!
+See our [working with Wistia images]({{ '/working-with-images' | post_url }}) 
+guide for more info!
 
 ---
 
 ## Troubleshooting
 
-  1. If an invalid URL (one that doesn't match our regular expression above) is given, the endpoint will return <span class="code">404 Not Found</span>.
-  2. If an unparseable URL is given in the url param, the endpoint will return <span class="code">404 Not Found</span>.
-  3. If a media is found but has no available embed code, the endpoint will return <span class="code">501 Not Implemented</span>. Video, Image, Audio, and Document files all currently implement oembeds.
-  4. If a playlist is found but has no videos, the endpoint will return <span class="code">501 Not Implemented</span>.
+  1. If an invalid URL (one that doesn't match our regular expression above) 
+    is given, the endpoint will return <span class="code">404 Not Found</span>.
+  2. If an unparseable URL is given in the url param, the endpoint will return 
+    <span class="code">404 Not Found</span>.
+  3. If a media is found but has no available embed code, the endpoint will 
+    return <span class="code">501 Not Implemented</span>. Video, Image, Audio, 
+    and Document files all currently implement oembeds.
+  4. If a playlist is found but has no videos, the endpoint will return 
+    <span class="code">501 Not Implemented</span>.
 
 ---
 
 ## Make Your Life Easier
 
-If you're contemplating doing an oEmbed implementation with Wistia (or any oEmbed provider for that matter), we strongly recommend checking out [Embedly](http://embed.ly). By integrating with them you'll have immediate access to over 100 oEmbed providers. They also have great documentation and ready-made libraries for every popular language, plus they're just nice guys!
+If you're contemplating doing an oEmbed implementation with Wistia (or any 
+oEmbed provider for that matter), we strongly recommend checking out 
+[Embedly](http://embed.ly). By integrating with them you'll have immediate 
+access to over 100 oEmbed providers. They also have great documentation and 
+ready-made libraries for every popular language, plus they're just nice guys!
