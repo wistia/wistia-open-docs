@@ -6,9 +6,13 @@ desc "Pre Jekyll rendering stuff"
 task :pre_jekyll do
   puts "Doing pre-Jekyll schtuffs ..."
 
-  puts "  Compiling the compass ... "
-  system "compass compile"
-  puts "  done."
+  print "  Removing the current stylesheet ... "
+  system %{ rm stylesheets/screen.css }
+  puts "done."
+
+  print "  Compass Compiling ... "
+  system %{ compass compile }
+  puts "done."
 
   print "  Getting the Official Wistia Header/Footer ... "
   system %{
@@ -38,9 +42,7 @@ task :pre_jekyll do
   })
   puts "done."
 
-
   puts "    All done."
-
 end
 
 
