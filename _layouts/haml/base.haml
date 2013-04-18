@@ -21,6 +21,7 @@
     
   %body{ class: "{{ page.type }}_layout" }
     {% include header.html %}
+    {% unless page.no_nav %}{% include doc_nav.html %}{% endunless %}
 
     #container{ class: "{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" }
       {{ content }}

@@ -1,6 +1,7 @@
 \---
 layout: base
 title: Wistia Basics
+category: Wistia Basics
 \---
 
 #wistia-basics-header
@@ -16,45 +17,48 @@ title: Wistia Basics
 
 #media-tiles-container
   #media-tiles.cf
-    .media-tile-container
-      .row
-        .media-tile
-          %a{ :href => "{{ '/wistia-basics-getting-started' | post_url }}" }
-            %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/58118331a969734ccb61e1b10dd8ca0a234cb274.jpg?image_resize=260", :data => {:video_hashed_id => "8a5e87899d"} }
+    .row
+      .media-tile
+        %a{ :href => "{{ '/wistia-basics-getting-started' | post_url }}" }
+          %div.thumbnail_color
+            %img{ :src => "http://embed.wistia.com/deliveries/58118331a969734ccb61e1b10dd8ca0a234cb274.jpg", :data => {:video_hashed_id => "8a5e87899d"} }
+        .info
           .title
-            %a{ :href => "{{ '/wistia-basics-getting-started | post_url }}" }
+            %a{ :href => "{{ '/wistia-basics-getting-started' | post_url }}" }
               Getting Started
           .description 
             %em Wistia Basics
             features uploading, embedding, analytics, and account settings
             with Wistia.
 
-        .media-tile
-          %a{ :href => "{{ '/wistia-basics-customization' | post_url }}" }
-            %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/630f8bc02b20a2fe598a9884ad2dbb7de9beba96.jpg?image_resize=260", :data => {:video_hashed_id => "01a1d9f97c"} }
+      .media-tile.second_column
+        %a{ :href => "{{ '/wistia-basics-customization' | post_url }}" }
+          %div.thumbnail_color
+            %img{ :src => "http://embed.wistia.com/deliveries/630f8bc02b20a2fe598a9884ad2dbb7de9beba96.jpg", :data => {:video_hashed_id => "01a1d9f97c"} }
+        .info
           .title
             %a{ :href => "{{ '/wistia-basics-customization' | post_url }}" }
               Customizing Your Video Embeds
           .description 
             %em Customizing Your Wistia Embeds
             details how to control the Wistia player that appears on your website.
-      .row
-        .media-tile
-          %a{ :href => "{{ '/wistia-basics-promoting' | post_url }}" }
-            %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/62be4701bd3abcaa83b8b5a81ce768b8135f97fd.jpg?image_resize=260", :data => {:video_hashed_id => "07bb07bab1"} }
+    .row
+      .media-tile
+        %a{ :href => "{{ '/wistia-basics-promoting' | post_url }}" }
+          %div.thumbnail_color
+            %img{ :src => "http://embed.wistia.com/deliveries/62be4701bd3abcaa83b8b5a81ce768b8135f97fd.jpg", :data => {:video_hashed_id => "07bb07bab1"} }
+        .info
           .title
             %a{ :href => "{{ '/wistia-basics-promoting' | post_url }}" }
               Promoting &amp; Sharing Content
           .description 
             %em Promoting Your video
             covers the tools that ensure your video content gets the attention it deserves.
-        .media-tile
-          %a{ :href => "{{ '/wistia-basics-analytics' | post_url }}" }
-            %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/070c4f1525e01da1d6dca42d814fd3f81894b744.jpg?image_resize=260", :data => {:video_hashed_id => "f13ff05fc3"} }
+      .media-tile.second_column
+        %a{ :href => "{{ '/wistia-basics-analytics' | post_url }}" }
+          %div.thumbnail_color
+            %img{ :src => "http://embed.wistia.com/deliveries/070c4f1525e01da1d6dca42d814fd3f81894b744.jpg", :data => {:video_hashed_id => "f13ff05fc3"} }
+        .info
           .title
             %a{ :href => "{{ '/wistia-basics-analytics' | post_url }}" }
               Understanding Analytics
