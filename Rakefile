@@ -10,7 +10,7 @@ task :pre_jekyll do
   system %{ rm stylesheets/screen.css }
   puts "done."
 
-  print "  Compass Compiling ... "
+  print "  Compass Compiling ... \n"
   system %{ compass compile }
   puts "done."
 
