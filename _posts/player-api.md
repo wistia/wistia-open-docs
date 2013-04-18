@@ -123,7 +123,7 @@ Use these events when working with the `bind` and `unbind` methods.
 
 Name          | Arguments               | Description
 ----          | ---------               | -----------
-conversion    | type, value             | Fired when an email is entered in Turnstile.
+conversion    | type, value             | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. Value will be the email entered. There may be more types and values in the future, so watch out!
 end           |                         | Fired when the video's state changes from anything to "ended".
 heightchange  | height                  | Fired when the height of the embed code changes.
 pause         |                         | Fired when the video's state changes from anything to "paused".
