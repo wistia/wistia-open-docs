@@ -556,20 +556,20 @@ code { background-color: #eceef1; color: #646059; font-size: 14px; margin: 15px 
 .post_callout_boxes p:last-child, .note p:last-child, .faq p:last-child, .tip p:last-child, .expert_tip p:last-child { margin-bottom: 0; }
 
 .note { padding: 30px; background-color: rgba(255, 255, 0, 0.3); margin: 30px 0; clear: both; }
-.note h4 { color: #40aaef; font-size: 24px; font-weight: bold; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.note h4 { color: #40aaef; font-size: 16px; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 .note p { font-size: 14px; margin-left: 30px; }
 
 .faq { padding: 30px; background-color: rgba(255, 255, 0, 0.3); margin: 30px 0; clear: both; }
-.faq h4 { color: #40aaef; font-size: 24px; font-weight: bold; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.faq h4 { color: #40aaef; font-size: 16px; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 .faq p { font-size: 14px; margin-left: 30px; }
 .faq p { margin: 15px 0 0; }
 
 .tip { padding: 30px; background-color: rgba(192, 219, 235, 0.3); margin: 30px 0; clear: both; }
-.tip h4 { color: #40aaef; font-size: 24px; font-weight: bold; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.tip h4 { color: #40aaef; font-size: 16px; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 .tip p { font-size: 14px; margin-left: 30px; }
 
 .expert_tip { position: relative; overflow: hidden; padding: 30px; background-color: rgba(192, 219, 235, 0.3); margin: 30px 0; clear: both; }
-.expert_tip h4 { color: #40aaef; font-size: 24px; font-weight: bold; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.expert_tip h4 { color: #40aaef; font-size: 16px; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 .expert_tip p { font-size: 14px; margin-left: 30px; }
 .expert_tip h3 { padding-top: 0; }
 .expert_tip img { position: absolute; top: -5px; right: -45px; -webkit-border-radius: 75px; -moz-border-radius: 75px; -ms-border-radius: 75px; -o-border-radius: 75px; border-radius: 75px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
@@ -618,7 +618,7 @@ table tr td pre { margin: 0; padding: 0; }
 .randor_links ul li { margin-bottom: 10px; }
 
 .exporting_guide_box { padding: 30px; background-color: rgba(192, 219, 235, 0.3); margin: 30px 0; clear: both; }
-.exporting_guide_box h4 { color: #40aaef; font-size: 24px; font-weight: bold; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.exporting_guide_box h4 { color: #40aaef; font-size: 16px; margin: 0; padding: 0; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 .exporting_guide_box p { font-size: 14px; margin-left: 30px; }
 .exporting_guide_box h3 { margin: 0; }
 .exporting_guide_box p { margin: 0 0 15px 30px; color: #b0aca6; }
