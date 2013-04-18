@@ -1,47 +1,51 @@
-<div id='doc_nav'>
-  <div id='doc_nav_container'>
-    <ul>
-      {% if page.type != 'post' %}
-      <li id='breadcrumbs'>
-        <a href="{{ '/' | post_url }}" style='padding-left: 0;'>
-          <i class='icon-home icon-large'></i>
-        </a>
-        <span class='breadcrumb_post_title'>
-          &gt;
-          {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
-        </span>
-      </li>
-      {% else %}
-      <li id='breadcrumbs'>
-        {% if page.category != 'no_index' %}
-        <a href="{{ '/' | post_url }}">
-          <i class='icon-home icon-large'></i>
-        </a>
-        <span class='breadcrumb_post_title'>
-          &gt;
-          {% if page.api %}
-          <a href="{{ '/developers' | post_url }}">Developers</a>
-          {% else %}
-          <a href='{{ page.category | category_url }}'>{{ page.category }}</a>
-          {% endif %}
-        </span>
+<div class='doc_nav_container'>
+  <div class='content_container'>
+    <div class='doc_nav'>
+      <ul>
+        {% if page.type != 'post' %}
+        <li id='breadcrumbs'>
+          <a href="{{ '/' | post_url }}" style='padding-left: 0;'>
+            <i class='icon-home icon-large'></i>
+          </a>
+          <span class='breadcrumb_post_title'>
+            &gt;
+            {% if page.type %}
+            {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
+            {% else %}
+            {{ page.title }}
+            {% endif %}
+          </span>
+        </li>
         {% else %}
-        <a href="{{ '/' | post_url }}">
-          <i class='icon-home icon-large'></i>
-        </a>
+        <li id='breadcrumbs'>
+          {% if page.category != 'no_index' %}
+          <a href="{{ '/' | post_url }}">
+            <i class='icon-home icon-large'></i>
+          </a>
+          <span class='breadcrumb_post_title'>
+            &gt;
+            {% if page.api %}
+            <a href="{{ '/developers' | post_url }}">Developers</a>
+            {% else %}
+            <a href='{{ page.category | category_url }}'>{{ page.category }}</a>
+            {% endif %}
+          </span>
+          {% else %}
+          <a href="{{ '/' | post_url }}">
+            <i class='icon-home icon-large'></i>
+          </a>
+          {% endif %}
+          <span class='breadcrumb_post_title'>
+            &gt;
+            {{ page.title }}
+          </span>
+        </li>
         {% endif %}
-        <span class='breadcrumb_post_title'>
-          &gt;
-          {{ page.title }}
-        </span>
-      </li>
-      {% endif %}
-      <li id='nav_search_box'>
-        <div class='search_bar nav_bar'>
-          <input class='nav_bar' id='search_text' placeholder='Search our docs' type='text' />
+        <li class='search_bar' id='nav_search_box'>
+          <input id='search_text' placeholder='Search our docs' type='text' />
           <button id='search_button'>Search</button>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
