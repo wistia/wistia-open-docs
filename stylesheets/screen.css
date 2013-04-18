@@ -829,4 +829,4 @@ table tr td pre { margin: 0; padding: 0; }
 .thumbnail_color { position: relative; cursor: pointer; }
 .thumbnail_color:before { content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: none; -moz-transition: background 0.3s linear; -webkit-transition: background 0.3s linear; -ms-transition: background 0.3s linear; -o-transition: background 0.3s linear; transition: background 0.3s linear; }
 
-.media-tile:hover .thumbnail_color:before { content: url("/images/play-button.png"); left: 134px; top: 80px; }
+.media-tile:hover .thumbnail_color:before { content: url("/doc/images/play-button.png"); left: 134px; top: 80px; }
