@@ -13,24 +13,21 @@ layout: base
       version: "v1",
       videoWidth: 960,
       videoHeight: 540,
-      playerColor: "81b7db",
+      playerColor: "40aaef",
       videoFoam: true
       });
       </script>
 
   .video-info-container
-    .video-info.cf
-      %h2.title
-        {{ page.title }}
-      .description
-        {{ page.post_intro }}
+    %h1.title
+      {{ page.title }}
+    .description
+      {{ page.post_intro }}
 
-  .video-info-container
-    .video-info.cf
-      %h2.title Show Notes
-
-      .description
-        {{ content }}
+    %h2.title
+      Show Notes
+    .description
+      {{ content }}
 
 :javascript
   $('.chapter_link').on('click', function(e) {

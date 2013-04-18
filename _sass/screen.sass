@@ -17,7 +17,7 @@
 
 $header_color: #000000
 $header_blue: #C0DBEB
-$accent_blue: #688AAD
+$accent_blue: #40aaef
 $background_gray: #F7F6F4
 $background_blue: rgba($header_blue, .3)
 $green: #8DC63F
@@ -283,18 +283,18 @@ pre
     ul li
       color: $text_color
       +col
-      a 
-        color: #cbd0d6
     li a i[class^="icon-"]
       text-align: left
       width: 1em
     li#breadcrumbs
-      color: #cbd0d6
+      color: #6b6760
       line-height: 23px
-      width: 340px
+      width: 460px
       +ellipsis
       +letterpress(.3, white)
       +anti-alias
+      a
+        color: #6b6760
     .search_bar
       font-family: $fonts
       margin: 0
@@ -700,7 +700,6 @@ table
     a
       padding: 0 0 20px $padding/2
       position: relative
-      font-family: Times, serif
       font-style: italic
       font-size: 26px
       color: $header_color
@@ -771,7 +770,7 @@ table
 
 .category
   width: $post_width
-  padding: $padding 0
+  padding: $padding 0 $padding*2
   background-color: white
   h2
     margin-bottom: $padding/2
@@ -1170,43 +1169,60 @@ $bracket_yellow: #F9D164
       opacity: 1
 
 .video-info-container
-  background-color: #eee
+  background-color: white
   margin: 20px 0
   padding: 30px 0
-  text-align: center
   a
     color: #8d8d8d
     text-decoration: underline
     &:hover
       color: #666
-  h3
-    font-size: 22px
-    margin: 15px 0
-    a
-      color: #333
   ul
     text-align: left
     li
       margin: 10px 0
-  .video-info
-    margin: 0 auto
-    font-size: 16px
-    color: #646059
-    font-weight: 100
-  .description
-    color: #777
-    line-height: 150%
-    margin: 20px auto
-    width: 50%
-    em
-      font-weight: 300
   .title
     color: #333
-    font-size: 38px
-    font-weight: 600
+    font:
+      size: 34px
+      style: normal
+      weight: 600
     line-height: 120%
-    padding-top: 10px
+  h2.title
+    border-top: 1px solid #cbd0d6
+    font-size: 26px
+    padding-top: 30px
 
+  .description
+    color: #646059
+    line-height: 180%
+    margin: 20px 0 30px
+    width: 70%
+    a
+      color: $accent_blue
+      text-decoration: none
+    ul li
+      margin-left: 1.5em
+      a
+        font-weight: 300
+        font-style: italic
+        color: #646059
+        &:hover
+          color: $accent_blue
+      i[class^="icon-"]
+        color: transparent
+        position: absolute
+        left: -0.25em
+      &:hover
+        a:first-child, i
+          color: $accent_blue
+    h2
+      font-size: 18px
+      margin: 15px 0
+      border: none
+      a
+        color: #333
+        text-decoration: underline
 
 // main Wistia Basics page
 
@@ -1312,5 +1328,6 @@ $bracket_yellow: #F9D164
 
 .media-tile:hover
   .thumbnail_color:before
-    background: rgba(#81b7db, 0.5)
-    content: url("/images/large_play_button.png")
+    content: url("/images/play-button.png")
+    left: 134px
+    top: 80px

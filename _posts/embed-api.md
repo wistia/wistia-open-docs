@@ -2,6 +2,7 @@
 title: Embed API
 layout: post
 api: true
+special_category_link: developers
 category: For Developers
 description: Learn how to construct an embed code starting with just the video ID!
 footer: 'for_developers'

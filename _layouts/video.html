@@ -11,28 +11,24 @@ layout: base
       version: "v1",
       videoWidth: 960,
       videoHeight: 540,
-      playerColor: "81b7db",
+      playerColor: "40AAEF",
       videoFoam: true
       });
       </script>
     </div>
   </div>
   <div class='video-info-container'>
-    <div class='video-info cf'>
-      <h2 class='title'>
-        {{ page.title }}
-      </h2>
-      <div class='description'>
-        {{ page.post_intro }}
-      </div>
+    <h1 class='title'>
+      {{ page.title }}
+    </h1>
+    <div class='description'>
+      {{ page.post_intro }}
     </div>
-  </div>
-  <div class='video-info-container'>
-    <div class='video-info cf'>
-      <h2 class='title'>Show Notes</h2>
-      <div class='description'>
-        {{ content }}
-      </div>
+    <h2 class='title'>
+      Show Notes
+    </h2>
+    <div class='description'>
+      {{ content }}
     </div>
   </div>
 </div>

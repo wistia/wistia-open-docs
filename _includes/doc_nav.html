@@ -24,8 +24,13 @@
           </a>
           <span class='breadcrumb_post_title'>
             &gt;
-            {% if page.api %}
+            {% if page.special_category_link %}
+            {% case page.special_category_link %}
+            {% when "developers" %}
             <a href="{{ '/developers' | post_url }}">Developers</a>
+            {% when "Wistia Basics" %}
+            <a href="{{ '/wistia-basics' | post_url }}">Wistia Basics</a>
+            {% endcase %}
             {% else %}
             <a href='{{ page.category | category_url }}'>{{ page.category }}</a>
             {% endif %}

@@ -2,6 +2,7 @@
 title: Embed Shepherd
 layout: post
 api: true
+special_category_link: developers
 category: For Developers
 description: Get easy access to all the Wistia embeds on a page.
 footer: 'for_developers'

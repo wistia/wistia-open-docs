@@ -1,6 +1,7 @@
 ---
 layout: post
 api: true
+special_category_link: developers
 category: For Developers
 title: Stats API
 description: Learn how to access your stats via our API.
