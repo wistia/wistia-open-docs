@@ -16,7 +16,7 @@
 
         {% else %}
         %li#breadcrumbs
-          {% if page.category != 'no_index' %}
+          {% if page.category && page.category != 'no_index' %}
           %a{ href: "{{ '/' | post_url }}" }
             %i.icon-home.icon-large
           %span.breadcrumb_post_title

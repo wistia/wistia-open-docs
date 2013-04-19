@@ -18,7 +18,7 @@
         </li>
         {% else %}
         <li id='breadcrumbs'>
-          {% if page.category != 'no_index' %}
+          {% if page.category && page.category != 'no_index' %}
           <a href="{{ '/' | post_url }}">
             <i class='icon-home icon-large'></i>
           </a>
