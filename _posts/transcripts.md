@@ -6,9 +6,9 @@ description:
   Interactive Transcripts and closed captioning makes content easier for 
   viewers to digest, and has awesome SEO benefits.
 post_intro: 
-  Transcripts and Captions make it easy for viewers to digest the content of 
+  <p>Transcripts and Captions make it easy for viewers to digest the content of 
   your video. We've found them especially useful for longer form and educational
-  content, but for accessibility purposes they are critical as well.
+  content, but for accessibility purposes they are critical as well.</p>
 ---
 
 It's like the two brothers of accessibility and general awesomeness: **Wistia 

@@ -3,7 +3,10 @@ title: Embedding Video on Your Website
 layout: post
 category: Embedding
 description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
-post_intro: Putting video on your website is the best way to get your message across. The act of putting a video on your website is called **embedding**, and in this guide we'll show you how to get it done right.
+post_intro: 
+  <p>Putting video on your website is the best way to get your message across. 
+  The act of putting a video on your website is called <strong>embedding</strong>,
+  and in this guide we'll show you how to get it done right.</p>
 ---
 
 {% embedly http://home.wistia.com/medias/5c913cd4fb, height: 371, videoHeight: 371 %}

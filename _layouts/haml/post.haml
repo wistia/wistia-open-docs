@@ -14,7 +14,7 @@ type: post
     .post_content
       {% if page.post_intro %}
       .post_intro
-        {{ page.post_intro | md_to_html }}
+        {{ page.post_intro }}
       {% endif %}
       {{ content }}
     {% if page.api != true %}
