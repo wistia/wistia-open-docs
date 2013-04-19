@@ -18,7 +18,7 @@ describe "Doc App" do
   it "should respond to search" do
     get '/search/media'
     parsed_body = JSON.parse(last_response.body)
-    parsed_body["results"].length.should > 0
+    parsed_body["results"].length.should > 0 # if this fails, try `rake build`
     parsed_body["results"][0]["title"].should_not be ""
     parsed_body["results"][0]["title"].should == "Guide to Using Media in Wistia"
   end
