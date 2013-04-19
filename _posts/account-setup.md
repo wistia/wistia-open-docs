@@ -1,5 +1,4 @@
 ---
-
 title: Account Setup
 layout: post
 category: Getting Set Up
