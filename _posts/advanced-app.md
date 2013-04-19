@@ -22,3 +22,14 @@ the 1 minute and 30 second mark, you'd link to the URL:
 <pre><code class="language-vim">http://myaccount.wistia.com/medias/123?start=90</code></pre>
 
 {{ "This only works for videos within your Wistia account. To seek into embedded videos, use the <a href='http://wistia.com/doc/player-api'>JavaScript player API</a>." | note }}
+
+## Force Playback in HTML5
+
+If you'd like to test how your video is playing in HTML5, you can add the 
+`html5=true` query string parameter to your media URL.
+
+For example:
+
+<pre><code class="language-vim">
+http://myaccount.wistia.com/medias/12345?html5=true
+</code></pre>
