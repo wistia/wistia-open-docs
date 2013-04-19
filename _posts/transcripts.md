@@ -23,6 +23,10 @@ makes them powerful for SEO purposes.
 
 Let's jump in to creating and using your captions and transcripts.
 
+## Video Overview
+
+{% embedly http://home.wistia.com/medias/pqmkpbr89t, width: 660, videoWidth: 660, height: 371, videoHeight: 371 %}
+
 ## Select Your Video
 
 {% post_image hashed_id: '6cd1849af804ba034c02a86dbc7dc1e68ff102bb', class: 'center' %}
@@ -79,3 +83,13 @@ need to update your SRT file, you can do that easily by selecting the
 after your transcription is complete.
 
 {{ "Make sure to keep the timing in line! If you update the content of your video, the timing may have changed. Make sure to note that in your SRT file!" | note }}
+
+<script>
+wistiaEmbed = Wistia.embed("pqmkpbr89t", {
+  plugin: {
+    "captions-v1": {
+      onByDefault: false
+    }
+  }
+});
+</script>
