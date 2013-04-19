@@ -5,8 +5,8 @@ description:
   Create sweet functionality for videos being watched 
   within the Wistia app.
 post_intro: 
-  <p>If you want to customize the experience your viewers have when watching 
-  videos inside your Wistia account, start here.</p>
+  If you want to customize the experience your viewers have when watching 
+  videos inside your Wistia account, start here.
 footer: 'for_developers'
 ---
 
