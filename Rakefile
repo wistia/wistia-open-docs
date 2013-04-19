@@ -45,18 +45,15 @@ task :pre_jekyll do
   puts "    All done."
 end
 
-
 desc "Launch preview environment"
 task :preview => [:pre_jekyll, :spec] do
   system "foreman start"
 end
 
-
 desc "Build the site"
 task :build => :pre_jekyll do
   system "bundle exec jekyll"
 end
-
 
 # note: this is only for production, be careful it will erase your shit
 desc "Auto-update the doc. DONT DO THIS LOCALLY!!!!!!"
