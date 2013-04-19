@@ -1,4 +1,5 @@
 require_relative 'spec_helper'
+require 'json'
 
 describe "Doc App" do
   
