@@ -1,4 +1,5 @@
 require_relative '../_config'
+require 'redcloth'
 
 module Jekyll
   module MarkdownFilter
