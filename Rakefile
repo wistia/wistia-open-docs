@@ -23,21 +23,21 @@ task :pre_jekyll do
 
   print "  Rendering Haml includes ... "
   system(%{
-    cd _includes/haml && 
+    cd _includes/haml &&
     for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
   })
   puts "done."
 
   print "  Rendering Haml layouts ... "
   system(%{
-    cd _layouts/haml && 
+    cd _layouts/haml &&
     for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
   })
   puts "done."
 
   print "  Rendering Haml static pages ... "
   system(%{
-    cd _static_pages && 
+    cd _static_pages &&
     for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
   })
   puts "done."
