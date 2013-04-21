@@ -103,7 +103,7 @@ pause()                 | This causes the video player to pause the video if it 
 play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.
 ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.
 remove()                | Removes the video from the page and cancels any asynchronous operations.
-state()                 | This returns the current state of the video player: "unknown" (a.k.a not started), "ended", "playing", "paused".
+state()                 | This returns the current state of the video player: "beforeplay", "ended", "playing", "paused".
 time()                  | This returns the viewer's current position in the video (in seconds).
 time(t)                 | This causes the video player to seek to time specified by the ''t'' parameter (in seconds).
 unbind(event, function) | Lets you remove a previously binded function from an event. If function is not specified, all bindings for the event will be removed.
