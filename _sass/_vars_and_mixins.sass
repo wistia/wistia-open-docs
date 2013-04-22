@@ -12,6 +12,9 @@ $title_color: #333
 $padding: 30px
 $border_color: $background_gray - 30
 
+$skeletor_green: #56be8e
+$skeletor_orange: rgba(#faa928, .4)
+
 $note_color: yellow
 
 $for_intermediates: #8aad68
@@ -20,6 +23,11 @@ $for_developers: #f0818b
 $post_width: 660px
 $total_width: 960px
 $fixed_column_width: 280px
+
+$large-screen: 1600px
+$medium-screen: 960px
+$small-screen: 650px
+
 
 $prefixes: ("-webkit-","-moz-", "-o-", "")
 $directions: (left, right)
@@ -43,6 +51,17 @@ $fonts: 'Avenir', Futura, Helvetica, sans-serif
   font: 0px/0 a
   text-shadow: none
   color: transparent
+
+=breakpoint($point)
+  @if $point == large-screen
+    @media (max-width: $large-screen)
+      @content
+  @if $point == medium-screen
+    @media (max-width: $medium-screen)
+      @content
+  @if $point == small-screen
+    @media (max-width: $small-screen)
+      @content
 
 =outline-border
   border: 2px solid $border_color

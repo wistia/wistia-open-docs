@@ -4,219 +4,295 @@ title: Main
 type: main
 no_nav: true
 ---
-<div id='home_logo'></div>
-<div class='search_bar'>
-  <input id='search_text' placeholder='search the docs' type='text' />
-  <button id='search_button'>Search!</button>
+<div class='home_header'>
+  <div class='content_container'>
+    <div id='home_logo'></div>
+    <div class='search_bar'>
+      <input id='search_text' placeholder='what are you looking for?' type='text' />
+      <button id='search_button'>Search!</button>
+    </div>
+  </div>
 </div>
-<div id='articles_list'>
-  {% include quickstart.html %}
-  <ul>
-    <li class='category_list'>
-      <h3>
-        <a href="{{ 'getting-set-up' | category_url }}">Getting Set Up</a>
-      </h3>
-      <ul class='post_list'>
-        <li>
-          <a href="{{ '/account-setup' | post_url }}">Account Setup</a>
-          <span class='hint'>Customize your account to make it your own.</span>
-        </li>
-        <li>
-          <a href="{{ '/viewer-rec' | post_url }}">What Viewers Need to Watch Wistia Video</a>
-          <span class='hint'>
-            What your audience needs to view Wistia video
-            <br />
-            (hint: not much).
-          </span>
-        </li>
-        <li>
-          <a href="{{ '/export-settings' | post_url }}">Optimal Export Settings</a>
-          <span class='hint'>Recommended export settings to help your videos look their best.</span>
-        </li>
-        <li>
-          <a href="{{ '/exporting-guide' | post_url }}">Exporting From Video Editors</a>
-          <span class='hint'>Guides for exporting video from editing software (i.e. Final Cut).</span>
-        </li>
-        <li>
-          <a href="{{ '/projects' | post_url }}">Guide to Projects in Wistia</a>
-          <span class='hint'>How to use projects, and actions you can take in them.</span>
-        </li>
-        <li>
-          <a href="{{ '/media' | post_url }}">Guide to Using Media in Wistia</a>
-          <span class='hint'>A guide to actions you can take with media in your account.</span>
-        </li>
-        <li>
-          <a href="{{ '/security' | post_url }}">Wistia Video Security</a>
-          <span class='hint'>
-            We want to keep you (and your videos) safe.
-            <br />
-            Info on our approach to security.
-          </span>
-        </li>
-      </ul>
-    </li>
-    <li class='category_list'>
-      <h3>
-        <a href="{{ 'embedding' | category_url }}">Embedding</a>
-      </h3>
-      <ul class='post_list'>
-        <li>
-          <a href="{{ '/embedding' | post_url }}">Embedding Video on Your Website</a>
-          <span class='hint'>The crash course on adding video to your website using Wistia.</span>
-        </li>
-        <li>
-          <a href="{{ '/embed-screen' | post_url }}">Using the SuperEmbed Screen</a>
-          <span class='hint'>Learn how to customize your video player experience for viewers.</span>
-        </li>
-        <li>
-          <a href="{{ '/playlists' | post_url }}">Video Playlists</a>
-          <span class='hint'>A guide to using multi-video players (playlists).</span>
-        </li>
-        <li>
-          <a href="{{ '/social-sharing' | post_url }}">Social Sharing</a>
-          <span class='hint'>Adding your content to social media like Facebook and Twitter.</span>
-        </li>
-        <li>
-          <a href="{{ '/domain-restrictions' | post_url }}">Domain Restrictions</a>
-          <span class='hint'>Restrict the domains where your embedded content will work.</span>
-        </li>
-        <li>
-          <a href="{{ '/transcripts' | post_url }}">Interactive Transcripts and Captions</a>
-          <span class='hint'>How to order and embed transcripts and closed captioning with your videos.</span>
-        </li>
-      </ul>
-    </li>
-    <li class='category_list'>
-      <h3>
-        <a href="{{ 'private-sharing' | category_url }}">Private Sharing</a>
-      </h3>
-      <ul class='post_list'>
-        <li>
-          <a href="{{ '/private-sharing' | post_url }}">Sharing Video Privately</a>
-          <span class='hint'>Securely share your content with a group you control.</span>
-        </li>
-        <li>
-          <a href="{{ '/contacts' | post_url }}">Contact Management</a>
-          <span class='hint'>How to manage the folks you give private access to.</span>
-        </li>
-        <li>
-          <a href="{{ '/permissions' | post_url }}">Permission Types in Wistia</a>
-          <span class='hint'>
-            Learn how specific permissions can be given to
-            <br />
-            different contacts.
-          </span>
-        </li>
-        <li>
-          <a href="{{ '/alerts' | post_url }}">Tracking Alerts</a>
-          <span class='hint'>Get email alerts regarding contact activity.</span>
-        </li>
-      </ul>
-    </li>
-    <li class='category_list'>
-      <h3>
-        <a href="{{ 'analytics' | category_url }}">Analytics</a>
-      </h3>
-      <ul class='post_list'>
-        <li>
-          <a href="{{ '/embedded-video-analytics' | post_url }}">Analytics for Embedded Video</a>
-          <span class='hint'>
-            All the info on gathering, using, and deciphering the stats for videos
-            on your website.
-          </span>
-        </li>
-        <li>
-          <a href="{{ '/private-analytics' | post_url }}">Analytics for Private Video</a>
-          <span class='hint'>Learn how to private users are tracked in Wistia.</span>
-        </li>
-        <li>
-          <a href="{{ '/identity-tagging' | post_url }}">Identity Tagging</a>
-          <span class='hint'>The methods to apply Wistia email tracking to viewers.</span>
-        </li>
-      </ul>
-    </li>
-    <li class='category_list'>
-      <h3>
-        <a href="{{ 'integrations' | category_url }}">Integrations</a>
-      </h3>
-      <ul class='post_list'>
-        <li>
-          <a href="{{ '/integrations' | post_url }}">Integrations Index</a>
-          <span class='hint'>All Wistia 3rd Party Integrations in one place. Quite the party!</span>
-        </li>
-        <li>
-          <a href="{{ '/drupal' | post_url }}">Drupal</a>
-          <span class='hint'>Notes on the Drupal modules for extending Wistia support.</span>
-        </li>
-        <li>
-          <a href="{{ '/wordpress' | post_url }}">Wordpress</a>
-          <span class='hint'>Tips on using Wordpress and Wistia together.</span>
-        </li>
-        <li>
-          <a href="{{ '/google-analytics' | post_url }}">Google Analytics</a>
-          <span class='hint'>Pass useful stats from embedded video into Google Analytics.</span>
-        </li>
-        <li>
-          <a href="{{ '/joomla' | post_url }}">Joomla</a>
-          <span class='hint'>Tips on embedding your videos into Joomla.</span>
-        </li>
-      </ul>
-    </li>
-    <li class='category_list'>
-      <h3>
-        <a href="{{ 'public-sharing' | category_url }}">Public Sharing</a>
-      </h3>
-      <ul class='post_list'>
-        <li>
-          <a href="{{ '/email-marketing' | post_url }}">Email Marketing</a>
-          <span class='hint'>How to create email merge tags for tracking email recipients.</span>
-        </li>
-        <li>
-          <a href="{{ '/video-seo' | post_url }}">Video SEO</a>
-          <span class='hint'>Using video to drive better search engine ranking for your site.</span>
-        </li>
-        <li>
-          <a href="{{ '/podcast' | post_url }}">RSS/Podcasts</a>
-          <span class='hint'>Create an RSS feed or podcast from a Wistia project.</span>
-        </li>
-        <li>
-          <a href="{{ '/replaceable-video' | post_url }}">Replaceable Video</a>
-          <span class='hint'>With Wistia, dynamically replace your content and it will update everywhere.</span>
-        </li>
-      </ul>
-    </li>
-    <li class='category_list developers'>
-      <h3>
-        <a href="{{ '/developers' | post_url }}">For Developers</a>
-      </h3>
-      <ul class='post_list'>
-        <li>
-          <a href="{{ '/player-api' | post_url }}">The Player API</a>
-        </li>
-        <li>
-          <a href="{{ '/data-api' | post_url }}">The Data API</a>
-        </li>
-        <li>
-          <a href="{{ '/playlist-api' | post_url }}">Playlist API</a>
-        </li>
-        <li>
-          <a href="{{ '/construct-an-embed-code' | post_url }}">Constructing Embed Codes</a>
-        </li>
-        <li>
-          <a href="{{ '/oembed' | post_url }}">oEmbed</a>
-        </li>
-        <li>
-          <a href="{{ '/popover-customization' | post_url }}">Popover Style Customization</a>
-        </li>
-        <li>
-          <a href="{{ '/player-id-tag' | post_url }}">Embed Code ID Tagging</a>
-        </li>
-        <li>
-          <a href="{{ '/upload-widget-specs' | post_url }}">Upload Widgets</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
+<div class='home_body'>
+  <div class='most_popular'>
+    <div class='content_container'>
+      <div class='articles_list'>
+        <h3>Most Popular</h3>
+        <div class='col'>
+          <ul class='post_list'>
+            <li>
+              <a href="{{ '/wistia-basics' | post_url }}">
+                Wistia Basics Video Series
+              </a>
+            </li>
+            <li>
+              <a href="{{ '/account-setup' | post_url }}">Account Setup</a>
+            </li>
+            <li>
+              <a href="{{ '/upload-video' | post_url }}">Uploading Video</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col'>
+          <ul class='post_list'>
+            <li>
+              <a href="{{ '/embedding' | post_url }}">Embedding Your Video</a>
+            </li>
+            <li>
+              <a href="{{ '/embedded-video-analytics' | post_url }}">
+                Wistia Analytics
+              </a>
+            </li>
+            <li>
+              <a href="{{ '/developers' | post_url }}">For Developers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='content_container'>
+    <div class='all_articles_wrapper'>
+      <div class='col'>
+        <div class='articles_list'>
+          <ul>
+            <li class='category_list'>
+              <h3>
+                <a href="{{ 'getting-set-up' | category_url }}">
+                  Getting Set Up
+                </a>
+              </h3>
+              <ul class='post_list'>
+                <li>
+                  <a href="{{ '/account-setup' | post_url }}">
+                    Account Setup
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/viewer-rec' | post_url }}">
+                    What Viewers Need to Watch Wistia Video
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/export-settings' | post_url }}">
+                    Optimal Export Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/exporting-guide' | post_url }}">
+                    Exporting From Video Editors
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/projects' | post_url }}">
+                    Guide to Projects in Wistia
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/media' | post_url }}">
+                    Guide to Using Media in Wistia
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/security' | post_url }}">
+                    Wistia Video Security
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class='category_list'>
+              <h3>
+                <a href="{{ 'embedding' | category_url }}">
+                  Embedding
+                </a>
+              </h3>
+              <ul class='post_list'>
+                <li>
+                  <a href="{{ '/embedding' | post_url }}">
+                    Embedding Video on Your Website
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/embed-screen' | post_url }}">
+                    Using the SuperEmbed Screen
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/playlists' | post_url }}">
+                    Video Playlists
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/social-sharing' | post_url }}">
+                    Social Sharing
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/domain-restrictions' | post_url }}">
+                    Domain Restrictions
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/transcripts' | post_url }}">
+                    Interactive Transcripts and Captions
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class='category_list last'>
+              <h3>
+                <a href="{{ 'private-sharing' | category_url }}">
+                  Private Sharing
+                </a>
+              </h3>
+              <ul class='post_list'>
+                <li>
+                  <a href="{{ '/private-sharing' | post_url }}">
+                    Sharing Video Privately
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/contacts' | post_url }}">
+                    Contact Management
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/permissions' | post_url }}">
+                    Permission Types in Wistia
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/alerts' | post_url }}">
+                    Tracking Alerts
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class='col'>
+        <div class='articles_list'>
+          <ul>
+            <li class='category_list'>
+              <h3>
+                <a href="{{ 'analytics' | category_url }}">Analytics</a>
+              </h3>
+              <ul class='post_list'>
+                <li>
+                  <a href="{{ '/embedded-video-analytics' | post_url }}">
+                    Analytics for Embedded Video
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/private-analytics' | post_url }}">
+                    Analytics for Private Video
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/identity-tagging' | post_url }}">
+                    Identity Tagging
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class='category_list'>
+              <h3>
+                <a href="{{ 'integrations' | category_url }}">
+                  Integrations
+                </a>
+              </h3>
+              <ul class='post_list'>
+                <li>
+                  <a href="{{ '/integrations' | post_url }}">
+                    Integrations Index
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/drupal' | post_url }}">Drupal</a>
+                </li>
+                <li>
+                  <a href="{{ '/wordpress' | post_url }}">Wordpress</a>
+                </li>
+                <li>
+                  <a href="{{ '/google-analytics' | post_url }}">
+                    Google Analytics
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/joomla' | post_url }}">Joomla</a>
+                </li>
+              </ul>
+            </li>
+            <li class='category_list'>
+              <h3>
+                <a href="{{ 'public-sharing' | category_url }}">
+                  Public Sharing
+                </a>
+              </h3>
+              <ul class='post_list'>
+                <li>
+                  <a href="{{ '/email-marketing' | post_url }}">
+                    Email Marketing
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/video-seo' | post_url }}">Video SEO</a>
+                </li>
+                <li>
+                  <a href="{{ '/podcast' | post_url }}">RSS/Podcasts</a>
+                </li>
+                <li>
+                  <a href="{{ '/replaceable-video' | post_url }}">
+                    Replaceable Video
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class='category_list developers last'>
+              <h3>
+                <a href="{{ '/developers' | post_url }}">For Developers</a>
+              </h3>
+              <ul class='post_list'>
+                <li>
+                  <a href="{{ '/player-api' | post_url }}">The Player API</a>
+                </li>
+                <li>
+                  <a href="{{ '/data-api' | post_url }}">The Data API</a>
+                </li>
+                <li>
+                  <a href="{{ '/playlist-api' | post_url }}">Playlist API</a>
+                </li>
+                <li>
+                  <a href="{{ '/construct-an-embed-code' | post_url }}">
+                    Constructing Embed Codes
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/oembed' | post_url }}">oEmbed</a>
+                </li>
+                <li>
+                  <a href="{{ '/popover-customization' | post_url }}">
+                    Popover Style Customization
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/player-id-tag' | post_url }}">
+                    Embed Code ID Tagging
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ '/upload-widget-specs' | post_url }}">
+                    Upload Widgets
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script type='text/javascript'>
   //<![CDATA[

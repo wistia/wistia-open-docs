@@ -63,107 +63,112 @@ pre
   height: 187px
   background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
+////////// container /////////
+
 %container
   margin: 0 auto
+  position: relative
 
-#container
+.content_container
   @extend %container
-  width: 960px
+  max-width: $total_width + $padding
+  padding: 0 $padding
+
 
 #post_container
   position: relative
   left: $fixed_column_width + 20
   +col
 
+.category_layout, .search_layout
+  #container
+    position: relative
+    background: white
+    width: $post_width
+    padding: 0 $padding
+
+.main_layout
+  #container
+    position: relative
+
 /////// doc home only ///////
 
-#container_home
-  @extend #container
-  width: 720px
+.home_header
+  padding: $padding*2 0 80px
 
-#articles_list
-  width: $post_width
-  margin: $padding auto
-  background-color: white
+.home_body
+  background-color: #eee
+
+.most_popular
+  border-top: 4px solid $accent_gray
+  border-bottom: 4px solid $accent_gray
+  background-color: $skeletor_green
+  padding: $padding 0
+  .articles_list
+    padding: 0
+    margin: 0 auto
+    width: $post_width
+    +breakpoint(medium-screen)
+      width: 90%
+    h3
+      border-color: white
+      color: white
+      font-size: 30px
+    a
+      color: white
+      font-size: 18px
+      &:hover
+        color: white
+        text-decoration: underline
+
+.all_articles_wrapper
+  padding: $padding 0 $padding*2
+  .col
+    padding: 0 40px
+    +breakpoint(large-screen)
+      width: 40%
+    +breakpoint(medium-screen)
+      width: 90%
+    +col
+
+.articles_list
+  margin: $padding auto 0
   text-align: left
   h3
-    border-bottom: 1px solid #DDD
-    color: $text_color
-    font-size: 22px
-    margin-bottom: 10px
+    border-bottom: 2px solid $accent_gray
+    font-size: 26px
+    margin-bottom: $padding/2
     margin-left: 0
     padding-bottom: 5px
 
-.quickstart
-  position: relative
-  margin-bottom: $padding
-  text-align: center
-  li
-    position: relative
-    margin-right: 12px
-    border: 1px solid #DDD
-    +col
-    &:last-child
-      margin-right: 0
-    a
-      width: 150px
-      height: 150px
-      display: block
-      text-decoration: none
-      text-align: center
-      &:hover
-        h3
-          background-color: #DDD - 20
-        img
-          opacity: 1
-      img
-        opacity: 0.7
-      h3
-        background-color: #DDD
-        color: $text_color
-        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
-        font-size: 14px !important
-        font-style: normal
-        left: -1px
-        padding: 5px 0
-        position: relative
-        text-align: center
-        top: -27px
-        width: 152px
-
 .category_list
-  margin-bottom: $padding
-  h3 a
-    font-size: 22px
+  margin-bottom: 40px
+  h3
+    &:hover
+      border-bottom: $text_color
+    a
+      color: $text_color
+      margin-bottom: 10px
+      padding-bottom: 5px
+  &.last
+    margin-bottom: 0
+
+.post_list 
+  margin-left: 1.3em
+  li
     margin-bottom: 10px
-    color: $text_color
-    padding-bottom: 5px
+    a
+      color: lighten($text_color, 20%)
+      font-size: 16px
+      &:hover
+        color: $text_color
 
 .developers
+  background-color: $skeletor_orange
   padding: $padding/3
-  margin-left: -10.5px
-  margin-top: -$padding/2
-  background-color: $background_blue
-
-.post_list li
-  margin-bottom: 10px
-  position: relative
-  a
-    font-size: 14px
-    +link-hover
-  span
-    font-size: 14px
-
-.hint
-  margin-left: $padding
-  color: $hint_color
-  visibility: hidden
-  font-style: italic
-  position: absolute
-  right: 0
-  max-width: 350px
-  +col
-
+  margin: $padding/2 0 0 -10.5px
+  h3
+    border-color: lighten($text_color, 20%)
 
 //////// post header /////////////
 
@@ -175,8 +180,6 @@ pre
   font:
     family: $fonts
     size: 15px
-  .content_container
-    position: relative
   .doc_nav
     ul li
       color: $text_color
@@ -648,20 +651,7 @@ table
   padding: 10px
   font-weight: bold
 
-/////// utility pages ( categories, search, blah )//////
 
-.category_layout, .search_layout
-  #container
-    position: relative
-    background: white
-    width: $post_width
-    padding: 0 $padding
-
-.main_layout
-  #container
-    position: relative
-    background: white
-    width: 700px
 
 /////// categories ////////
 
@@ -819,12 +809,6 @@ $bracket_yellow: #F9D164
   position: relative
   width: 100%
   overflow: hidden
-
-.content_container
-  @extend %container
-  width: $total_width
-
-    
 
 .devhq_header
   margin-bottom: 140px
