@@ -1,5 +1,5 @@
 
-doc: bundle exec jekyll --auto 
+doc: jekyll build --watch
 compass: compass watch
 search: ./elasticsearch 
 app: ./app 
