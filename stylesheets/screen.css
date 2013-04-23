@@ -498,16 +498,15 @@ pre { overflow-x: scroll; padding: 15px 30px; margin: 15px 0; }
 .most_popular .articles_list a { color: white; font-size: 18px; }
 .most_popular .articles_list a:hover { color: white; text-decoration: underline; }
 
-.all_articles_wrapper { padding: 30px 0 60px; }
-.all_articles_wrapper .col { padding: 0 40px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.all_articles_wrapper { padding: 30px 0 60px; text-align: center; }
+.all_articles_wrapper .col { margin: 0 5px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 @media (max-width: 1600px) { .all_articles_wrapper .col { width: 40%; } }
 @media (max-width: 960px) { .all_articles_wrapper .col { width: 90%; } }
 
 .articles_list { margin: 30px auto 0; text-align: left; }
 .articles_list h3 { border-bottom: 2px solid #cbd0d6; font-size: 26px; margin-bottom: 15px; margin-left: 0; padding-bottom: 5px; }
 
-.category_list { margin-bottom: 40px; }
-.category_list h3:hover { border-bottom: #646059; }
+.category_list { background-color: white; margin-bottom: 10px; padding: 20px; }
 .category_list h3 a { color: #646059; margin-bottom: 10px; padding-bottom: 5px; }
 .category_list.last { margin-bottom: 0; }
 
@@ -515,9 +514,6 @@ pre { overflow-x: scroll; padding: 15px 30px; margin: 15px 0; }
 .post_list li { margin-bottom: 10px; }
 .post_list li a { color: #98938b; font-size: 16px; }
 .post_list li a:hover { color: #646059; }
-
-.developers { background-color: rgba(250, 169, 40, 0.4); padding: 10px; margin: 15px 0 0 -10.5px; }
-.developers h3 { border-color: #98938b; }
 
 .doc_nav_container { padding: 10px 0; background: #eceef1; margin-bottom: 50px; position: relative; font-family: "Avenir", Futura, Helvetica, sans-serif; font-size: 15px; }
 .doc_nav_container .doc_nav ul li { color: #646059; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }

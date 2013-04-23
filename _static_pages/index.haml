@@ -18,24 +18,21 @@ no_nav: true
     .content_container
       .articles_list
         %h3 Most Popular
-        .col 
-          %ul.post_list
-            %li
-              %a{ href: "{{ '/wistia-basics' | post_url }}" } 
-                Wistia Basics Video Series
-            %li
-              %a{ href: "{{ '/account-setup' | post_url }}" } Account Setup
-            %li
-              %a{ href: "{{ '/upload-video' | post_url }}" } Uploading Video
-        .col
-          %ul.post_list
-            %li
-              %a{ href: "{{ '/embedding' | post_url }}" } Embedding Your Video
-            %li
-              %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } 
-                Wistia Analytics
-            %li
-              %a{ href: "{{ '/developers' | post_url }}" } For Developers
+        %ul.post_list
+          %li
+            %a{ href: "{{ '/wistia-basics' | post_url }}" } 
+              Wistia Basics Video Series
+          %li
+            %a{ href: "{{ '/account-setup' | post_url }}" } Account Setup
+          %li
+            %a{ href: "{{ '/upload-video' | post_url }}" } Uploading Video
+          %li
+            %a{ href: "{{ '/embedding' | post_url }}" } Embedding Your Video
+          %li
+            %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } 
+              Wistia Analytics
+          %li
+            %a{ href: "{{ '/developers' | post_url }}" } For Developers
   .content_container
     .all_articles_wrapper
       .col

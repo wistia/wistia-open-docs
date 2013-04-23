@@ -123,8 +123,9 @@ pre
 
 .all_articles_wrapper
   padding: $padding 0 $padding*2
+  text-align: center
   .col
-    padding: 0 40px
+    margin: 0 5px
     +breakpoint(large-screen)
       width: 40%
     +breakpoint(medium-screen)
@@ -142,14 +143,13 @@ pre
     padding-bottom: 5px
 
 .category_list
-  margin-bottom: 40px
-  h3
-    &:hover
-      border-bottom: $text_color
-    a
-      color: $text_color
-      margin-bottom: 10px
-      padding-bottom: 5px
+  background-color: white
+  margin-bottom: 10px
+  padding: 20px
+  h3 a
+    color: $text_color
+    margin-bottom: 10px
+    padding-bottom: 5px
   &.last
     margin-bottom: 0
 
@@ -162,13 +162,6 @@ pre
       font-size: 16px
       &:hover
         color: $text_color
-
-.developers
-  background-color: $skeletor_orange
-  padding: $padding/3
-  margin: $padding/2 0 0 -10.5px
-  h3
-    border-color: lighten($text_color, 20%)
 
 //////// post header /////////////
 
