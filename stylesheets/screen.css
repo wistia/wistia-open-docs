@@ -652,13 +652,13 @@ table tr td pre { margin: 0; padding: 0; }
 
 .api #post_content_nav { position: absolute; }
 
-#post_content_nav { background-color: white; padding-top: 10px; position: fixed; width: 280px; vertical-align: top; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+#post_content_nav { background-color: white; padding-top: 10px; position: fixed; width: 280px; vertical-align: top; font-family: "Avenir", Futura, Helvetica, sans-serif; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 #post_content_nav ul { list-style-type: none; }
 #post_content_nav li a { display: block; padding: 15px; color: #646059; font-size: 15px; text-decoration: none; }
 #post_content_nav li a:hover { color: #28241d; }
 #post_content_nav li:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 #post_content_nav .title_list_item { padding: 0; border-bottom: 1px solid #333333; }
-#post_content_nav .title_list_item a { padding: 0 0 20px 15px; position: relative; font-style: italic; font-size: 20px; }
+#post_content_nav .title_list_item a { padding: 0 0 20px 15px; position: relative; font-size: 20px; }
 #post_content_nav .title_list_item.current li { background: none; }
 #post_content_nav .title_list_item.current a, #post_content_nav .title_list_item.current a:hover { padding: 0 0 20px 15px; background: none; color: #333333; }
 #post_content_nav .current > a { background-color: rgba(192, 219, 235, 0.3); padding: 15px; }
