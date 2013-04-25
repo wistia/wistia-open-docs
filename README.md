@@ -107,6 +107,14 @@ Pretty much none, just:
 
     git push origin master
 
+### Box Problems
+
+Restart Elasticsearch
+  
+    rc-status
+    /etc/init.d/elasticsearch stop
+    /etc/init.d/elasticsearch start
+
 To-Do
 -----
 

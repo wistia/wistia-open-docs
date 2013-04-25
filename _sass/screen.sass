@@ -14,13 +14,16 @@
 @import font-awesome
 @import vars_and_mixins
 
+
+
+
+
+
 //////// main styles /////////
 
 body
-  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
-  background-color: white
+  font-family: $body-text-fonts
   color: $text_color
-  +anti-alias
   text-align: left
   a
     color: $accent_blue
@@ -46,16 +49,51 @@ pre
   padding: $padding/2 $padding
   margin: $padding/2 0
 
-////////// header ///////////
 
 
 
-//////// content ////////////
 
-.home
-  text-align: center
-  height: 200px
-  padding: $padding/2 0
+
+
+
+////////// container /////////
+
+
+%container
+  margin: 0 auto
+  position: relative
+
+.content_container
+  @extend %container
+  max-width: $total_width + $padding
+  padding: 0 $padding
+
+#post_container
+  position: relative
+  left: $fixed_column_width + 20
+  +col
+
+.category_layout, .search_layout
+  #container
+    position: relative
+    background: white
+    width: $post_width
+    padding: 0 $padding
+
+.main_layout
+  #container
+    position: relative
+
+
+
+
+
+
+
+
+
+/////// doc home only ///////
+
 
 #home_logo
   margin: 0 auto
@@ -63,107 +101,93 @@ pre
   height: 187px
   background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
-%container
-  margin: 0 auto
+.home_header
+  padding: $padding*2 0 80px
 
-#container
-  @extend %container
-  width: 960px
+.home_body
+  background-color: #eee
 
-#post_container
-  position: relative
-  left: $fixed_column_width + 20
-  +col
+.most_popular_wrapper
+  border-top: 4px solid $accent_gray
+  border-bottom: 4px solid $accent_gray
+  background-color: $skeletor_green
+  padding: $padding 0
+  +breakpoint(medium-screen)
+    padding-left: $padding*2
+  .post_list
+    margin-left: 3em
+  .articles_list
+    padding: 0
+    margin: 0
+    border-left: 2px solid white
+    vertical-align: bottom !important
+    +col
+    +breakpoint(medium-screen)
+      width: 90%
+      border: none
+      .post_list
+        margin: 0
+    a
+      color: white
+      font-size: 18px
+      &:hover
+        color: white
+        text-decoration: underline
+  .most_popular_body
+    width: 60%
+    margin: 0 auto
+  .most_popular_title
+    max-width: 45%
+    +col
+    +breakpoint(medium-screen)
+      max-width: 100%
+      margin-bottom: $padding
+    h1
+      color: white
+      font-size: 60px
 
-/////// doc home only ///////
+.all_articles_wrapper
+  padding: $padding 0 $padding*2
+  text-align: center
+  .col
+    margin: 0 5px
+    +breakpoint(large-screen)
+      width: 40%
+    +breakpoint(medium-screen)
+      width: 90%
+    +col
 
-#container_home
-  @extend #container
-  width: 720px
-
-#articles_list
-  width: $post_width
-  margin: $padding auto
-  background-color: white
+.articles_list
+  margin: $padding auto 0
   text-align: left
   h3
-    border-bottom: 1px solid #DDD
-    color: $text_color
-    font-size: 22px
-    margin-bottom: 10px
+    border-bottom: 2px solid $accent_gray
+    font-size: 26px
+    margin-bottom: $padding/2
     margin-left: 0
     padding-bottom: 5px
 
-.quickstart
-  position: relative
-  margin-bottom: $padding
-  text-align: center
-  li
-    position: relative
-    margin-right: 12px
-    border: 1px solid #DDD
-    +col
-    &:last-child
-      margin-right: 0
-    a
-      width: 150px
-      height: 150px
-      display: block
-      text-decoration: none
-      text-align: center
-      &:hover
-        h3
-          background-color: #DDD - 20
-        img
-          opacity: 1
-      img
-        opacity: 0.7
-      h3
-        background-color: #DDD
-        color: $text_color
-        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
-        font-size: 14px !important
-        font-style: normal
-        left: -1px
-        padding: 5px 0
-        position: relative
-        text-align: center
-        top: -27px
-        width: 152px
-
 .category_list
-  margin-bottom: $padding
-  h3 a
-    font-size: 22px
-    margin-bottom: 10px
-    color: $text_color
-    padding-bottom: 5px
-
-.developers
-  padding: $padding/3
-  margin-left: -10.5px
-  margin-top: -$padding/2
-  background-color: $background_blue
-
-.post_list li
+  background-color: white
   margin-bottom: 10px
-  position: relative
-  a
-    font-size: 14px
-    +link-hover
-  span
-    font-size: 14px
+  padding: 20px
+  h3 a
+    color: $text_color
+    margin-bottom: 10px
+    padding-bottom: 5px
+  &.last
+    margin-bottom: 0
 
-.hint
-  margin-left: $padding
-  color: $hint_color
-  visibility: hidden
-  font-style: italic
-  position: absolute
-  right: 0
-  max-width: 350px
-  +col
-
+.post_list 
+  margin-left: 1.3em
+  font-family: $title-fonts
+  li
+    margin-bottom: 10px
+    a
+      color: lighten($text_color, 20%)
+      font-size: 16px
+      &:hover
+        color: $text_color
 
 //////// post header /////////////
 
@@ -173,10 +197,8 @@ pre
   margin-bottom: 50px
   position: relative
   font:
-    family: $fonts
+    family: $body-text-fonts
     size: 15px
-  .content_container
-    position: relative
   .doc_nav
     ul li
       color: $text_color
@@ -194,7 +216,7 @@ pre
       a
         color: #6b6760
     .search_bar
-      font-family: $fonts
+      font-family: $title-fonts
       margin: 0
       position: absolute
       right: 0
@@ -648,20 +670,7 @@ table
   padding: 10px
   font-weight: bold
 
-/////// utility pages ( categories, search, blah )//////
 
-.category_layout, .search_layout
-  #container
-    position: relative
-    background: white
-    width: $post_width
-    padding: 0 $padding
-
-.main_layout
-  #container
-    position: relative
-    background: white
-    width: 700px
 
 /////// categories ////////
 
@@ -819,12 +828,6 @@ $bracket_yellow: #F9D164
   position: relative
   width: 100%
   overflow: hidden
-
-.content_container
-  @extend %container
-  width: $total_width
-
-    
 
 .devhq_header
   margin-bottom: 140px
@@ -1074,7 +1077,7 @@ $bracket_yellow: #F9D164
   background-color: white
   margin: 30px 0
   position: relative
-  font-family: $fonts
+  font-family: $title-fonts
   ul
     text-align: center
   .project-title
@@ -1108,7 +1111,7 @@ $bracket_yellow: #F9D164
 
     .media-tile
       background-color: white
-      font-family: $fonts
+      font-family: $title-fonts
       height: 415px
       margin: 0 30px
       vertical-align: top
