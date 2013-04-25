@@ -2,28 +2,30 @@
 layout: base
 type: post
 ---
-<div id='post_content_nav'>
-  <ul id='page_nav'></ul>
-</div>
-<div id='post_container'>
-  <div id='post'>
-    <a href='#top' id='top-link'>to the tippy &uarr;</a>
-    <div class='post_title'>
-      <h1>{{ page.title }}</h1>
-    </div>
-    <div class='post_content'>
-      {% if page.post_intro %}
-      <div class='post_intro'>
-        {{ page.post_intro }}
+<div class='content_container'>
+  <div id='post_content_nav'>
+    <ul id='page_nav'></ul>
+  </div>
+  <div id='post_container'>
+    <div id='post'>
+      <a href='#top' id='top-link'>to the tippy &uarr;</a>
+      <div class='post_title'>
+        <h1>{{ page.title }}</h1>
+      </div>
+      <div class='post_content'>
+        {% if page.post_intro %}
+        <div class='post_intro'>
+          {{ page.post_intro }}
+        </div>
+        {% endif %}
+        {{ content }}
+      </div>
+      {% if page.api != true %}
+      <div class='post_footer'>
+        {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
       </div>
       {% endif %}
-      {{ content }}
     </div>
-    {% if page.api != true %}
-    <div class='post_footer'>
-      {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
-    </div>
-    {% endif %}
   </div>
 </div>
 <script src="{{ '/javascripts/jquery.scrollTo' | javascript_url }}"></script>

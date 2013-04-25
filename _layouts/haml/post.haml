@@ -3,24 +3,25 @@ layout: base
 type: post
 \---
 
-#post_content_nav
-  %ul#page_nav
+.content_container
+  #post_content_nav
+    %ul#page_nav
 
-#post_container
-  #post
-    %a{ href: "#top", id: "top-link" } to the tippy &uarr;
-    .post_title
-      %h1 {{ page.title }}
-    .post_content
-      {% if page.post_intro %}
-      .post_intro
-        {{ page.post_intro }}
+  #post_container
+    #post
+      %a{ href: "#top", id: "top-link" } to the tippy &uarr;
+      .post_title
+        %h1 {{ page.title }}
+      .post_content
+        {% if page.post_intro %}
+        .post_intro
+          {{ page.post_intro }}
+        {% endif %}
+        {{ content }}
+      {% if page.api != true %}
+      .post_footer
+        {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
       {% endif %}
-      {{ content }}
-    {% if page.api != true %}
-    .post_footer
-      {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
-    {% endif %}
 
 %script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/jquery.nav' | javascript_url }}" }
