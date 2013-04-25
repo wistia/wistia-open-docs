@@ -52,7 +52,7 @@ end
 
 desc "Build the site"
 task :build => :pre_jekyll do
-  system "bundle exec jekyll"
+  system "bundle exec jekyll build"
 end
 
 # note: this is only for production, be careful it will erase your shit
