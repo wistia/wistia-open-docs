@@ -34,9 +34,8 @@ $(document).ready(function() {
       }
       else {
         this.nav_box_ul.hide();
-        post_width = $('#post_container').width();
-        $('#container').css("width", post_width);
-        $('#post_container').css("left", 0);
+        $('#container').css("text-align", "center");
+        $('#post_container').css("left", "0");
       }
 
       $('#page_nav').onePageNav({ changeHash: true });

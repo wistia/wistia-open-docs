@@ -477,7 +477,7 @@ pre { overflow-x: scroll; padding: 15px 30px; margin: 15px 0; }
 
 .content_container { max-width: 990px; padding: 0 30px; }
 
-#post_container { position: relative; left: 300px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+#post_container { position: relative; left: 300px; text-align: left; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 
 .category_layout #container, .search_layout #container { position: relative; background: white; width: 660px; padding: 0 30px; }
 
