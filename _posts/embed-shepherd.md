@@ -16,7 +16,21 @@ post_intro: <p>Looking for simple, programmatic access to all the Wistia embeds 
 
 You can include that snippet anywhere on your page. Once it has run, any existing or future Wistia embeds will be included in the global array `window.wistiaEmbeds`.
 
-The script can be included asynchronously, but the `wistiaEmbeds` variable will not exist until execution is complete.
+If you'd like, you can load the script asynchronously like so. Once Embed
+Shepherd loads, it will execute the `wistiaEmbedShepherdReady` function if it
+exists. Wrap whatever you need to do in this function and you can be assured
+that `window.wistiaEmbeds` is available! Check it out:
+
+<pre>
+<code class="language-javascript">
+&lt;script>
+  window.wistiaEmbedShepherdReady = function(){
+    console.log("The Shepherd is ready!");
+  }
+&lt;/script>
+&lt;script src="http://fast.wistia.com/static/embed_shepherd-v1.js" async>&lt;/script>
+</code>
+</pre>
 
 {{ "The Embed Shepherd automatically includes the iframe-api on the page. You do not need to include it separately to access iframe embeds or popovers." | note }}
 
