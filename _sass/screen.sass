@@ -78,8 +78,8 @@ pre
   #container
     position: relative
     background: white
-    width: $post_width
-    padding: 0 $padding
+  #utilities_container
+    text-align: center
 
 .main_layout
   #container
@@ -171,7 +171,7 @@ pre
 .category_list
   background-color: white
   margin-bottom: 10px
-  padding: 20px
+  padding: 20px 0
   h3 a
     color: $text_color
     margin-bottom: 10px
@@ -710,17 +710,21 @@ table
 #results
   @extend #post
   min-height: 350px
+  text-align: left
 .results_header
   border-bottom: 1px solid
   margin: $padding 0
 .result
   margin: $padding 0 $padding
+  font-family: $title-fonts
   h2
     margin: 0
   a
     font-size: 24px
     +link-hover
   p
+    color: #AAA
+    line-height: 150%
     margin-top: $padding/2
     width: 550px
 .no_result

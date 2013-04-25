@@ -479,7 +479,8 @@ pre { overflow-x: scroll; padding: 15px 30px; margin: 15px 0; }
 
 #post_container { position: relative; left: 300px; text-align: left; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 
-.category_layout #container, .search_layout #container { position: relative; background: white; width: 660px; padding: 0 30px; }
+.category_layout #container, .search_layout #container { position: relative; background: white; }
+.category_layout #utilities_container, .search_layout #utilities_container { text-align: center; }
 
 .main_layout #container { position: relative; }
 
@@ -510,7 +511,7 @@ pre { overflow-x: scroll; padding: 15px 30px; margin: 15px 0; }
 .articles_list { margin: 30px auto 0; text-align: left; }
 .articles_list h3 { border-bottom: 2px solid #cbd0d6; font-size: 26px; margin-bottom: 15px; margin-left: 0; padding-bottom: 5px; }
 
-.category_list { background-color: white; margin-bottom: 10px; padding: 20px; }
+.category_list { background-color: white; margin-bottom: 10px; padding: 20px 0; }
 .category_list h3 a { color: #646059; margin-bottom: 10px; padding-bottom: 5px; }
 .category_list.last { margin-bottom: 0; }
 
@@ -682,15 +683,15 @@ table tr td pre { margin: 0; padding: 0; }
 .search_bar input { width: 84%; font-size: 14px; border: 1px solid #bbbbbb; padding: 5px 10px; }
 .search_bar button { font-size: 14px; position: relative; vertical-align: top; background: #eeeeee; border: 1px solid #bbbbbb; font-style: italic; padding: 5px 10px; }
 
-#results { min-height: 350px; }
+#results { min-height: 350px; text-align: left; }
 
 .results_header { border-bottom: 1px solid; margin: 30px 0; }
 
-.result { margin: 30px 0 30px; }
+.result { margin: 30px 0 30px; font-family: "Avenir", Futura, Helvetica, sans-serif; }
 .result h2 { margin: 0; }
 .result a { font-size: 24px; }
 .result a:hover { color: #228cd1; }
-.result p { margin-top: 15px; width: 550px; }
+.result p { color: #aaaaaa; line-height: 150%; margin-top: 15px; width: 550px; }
 
 .no_result p { line-height: 200%; }
 .no_result .query { color: #333333; }
