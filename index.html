@@ -14,11 +14,15 @@ no_nav: true
   </div>
 </div>
 <div class='home_body'>
-  <div class='most_popular'>
+  <div class='most_popular_wrapper'>
     <div class='content_container'>
-      <div class='articles_list'>
-        <h3>Most Popular</h3>
-        <div class='col'>
+      <div class='most_popular_body'>
+        <div class='most_popular_title'>
+          <h1>
+            The Greatest Hits
+          </h1>
+        </div>
+        <div class='articles_list'>
           <ul class='post_list'>
             <li>
               <a href="{{ '/wistia-basics' | post_url }}">
@@ -31,10 +35,6 @@ no_nav: true
             <li>
               <a href="{{ '/upload-video' | post_url }}">Uploading Video</a>
             </li>
-          </ul>
-        </div>
-        <div class='col'>
-          <ul class='post_list'>
             <li>
               <a href="{{ '/embedding' | post_url }}">Embedding Your Video</a>
             </li>

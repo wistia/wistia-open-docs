@@ -14,13 +14,16 @@
 @import font-awesome
 @import vars_and_mixins
 
+
+
+
+
+
 //////// main styles /////////
 
 body
-  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif
-  background-color: white
+  font-family: $body-text-fonts
   color: $text_color
-  +anti-alias
   text-align: left
   a
     color: $accent_blue
@@ -46,24 +49,15 @@ pre
   padding: $padding/2 $padding
   margin: $padding/2 0
 
-////////// header ///////////
 
 
 
-//////// content ////////////
 
-.home
-  text-align: center
-  height: 200px
-  padding: $padding/2 0
 
-#home_logo
-  margin: 0 auto
-  width: 673px
-  height: 187px
-  background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
+
 
 ////////// container /////////
+
 
 %container
   margin: 0 auto
@@ -73,7 +67,6 @@ pre
   @extend %container
   max-width: $total_width + $padding
   padding: 0 $padding
-
 
 #post_container
   position: relative
@@ -91,7 +84,22 @@ pre
   #container
     position: relative
 
+
+
+
+
+
+
+
+
 /////// doc home only ///////
+
+
+#home_logo
+  margin: 0 auto
+  width: 673px
+  height: 187px
+  background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
 
 .home_header
   padding: $padding*2 0 80px
@@ -99,27 +107,44 @@ pre
 .home_body
   background-color: #eee
 
-.most_popular
+.most_popular_wrapper
   border-top: 4px solid $accent_gray
   border-bottom: 4px solid $accent_gray
   background-color: $skeletor_green
   padding: $padding 0
+  +breakpoint(medium-screen)
+    padding-left: $padding*2
+  .post_list
+    margin-left: 3em
   .articles_list
     padding: 0
-    margin: 0 auto
-    width: $post_width
+    margin: 0
+    border-left: 2px solid white
+    vertical-align: bottom !important
+    +col
     +breakpoint(medium-screen)
       width: 90%
-    h3
-      border-color: white
-      color: white
-      font-size: 30px
+      border: none
+      .post_list
+        margin: 0
     a
       color: white
       font-size: 18px
       &:hover
         color: white
         text-decoration: underline
+  .most_popular_body
+    width: 60%
+    margin: 0 auto
+  .most_popular_title
+    max-width: 45%
+    +col
+    +breakpoint(medium-screen)
+      max-width: 100%
+      margin-bottom: $padding
+    h1
+      color: white
+      font-size: 60px
 
 .all_articles_wrapper
   padding: $padding 0 $padding*2
@@ -155,6 +180,7 @@ pre
 
 .post_list 
   margin-left: 1.3em
+  font-family: $title-fonts
   li
     margin-bottom: 10px
     a
@@ -171,7 +197,7 @@ pre
   margin-bottom: 50px
   position: relative
   font:
-    family: $fonts
+    family: $body-text-fonts
     size: 15px
   .doc_nav
     ul li
@@ -190,7 +216,7 @@ pre
       a
         color: #6b6760
     .search_bar
-      font-family: $fonts
+      font-family: $title-fonts
       margin: 0
       position: absolute
       right: 0
@@ -1051,7 +1077,7 @@ $bracket_yellow: #F9D164
   background-color: white
   margin: 30px 0
   position: relative
-  font-family: $fonts
+  font-family: $title-fonts
   ul
     text-align: center
   .project-title
@@ -1085,7 +1111,7 @@ $bracket_yellow: #F9D164
 
     .media-tile
       background-color: white
-      font-family: $fonts
+      font-family: $title-fonts
       height: 415px
       margin: 0 30px
       vertical-align: top

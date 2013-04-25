@@ -32,8 +32,8 @@ $small-screen: 650px
 $prefixes: ("-webkit-","-moz-", "-o-", "")
 $directions: (left, right)
 
-$fonts: 'Avenir', Futura, Helvetica, sans-serif
-
+$title-fonts: 'Avenir', Futura, Helvetica, sans-serif
+$body-text-fonts: 'HelveticaNeue', Helvetica, Arial, sans-serif
 
 //////////// mixins ///////////////
 
@@ -109,8 +109,5 @@ $fonts: 'Avenir', Futura, Helvetica, sans-serif
 
 %header_fonts
   color: $title_color
-  font:
-    family: $fonts
-    style: italic
+  font-family: $title-fonts
   +anti-alias
-
