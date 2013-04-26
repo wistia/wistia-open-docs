@@ -2014,7 +2014,7 @@ averagePercentWatched         | This is an integer between 0 and 100.  It shows 
 
 #### The Request
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/events.json?event_key=abc123</code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/account.json</code></pre>
 
 #### The Response
 
