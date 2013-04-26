@@ -2010,7 +2010,7 @@ averagePercentWatched         | This is an integer between 0 and 100.  It shows 
 
 ---
 
-## Account API
+## Account
 
 #### The Request
 
@@ -2024,6 +2024,69 @@ id    | Numeric id of the account
 name  | Account name
 url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
+---
+
+## Captions
+
+### Create
+
+This method is for replacing the captions on a video using an attached SRT file.
+
+#### The Request
+
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+
+Parameter | Description
+----------|------------
+caption_file | A SRT caption file attached to the request as an http multipart upload.
+
+#### The Response
+
+If successful, this method will respond with an empty HTTP 200 OK.
+
+
+### Read
+
+This method will return the captions for a video in SRT format.
+
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+
+This method takes no parameters.
+
+#### The Response
+
+The response will be the captions of the video in SRT format.
+
+If there are no captions available, or if an invalid media-id is used, the
+response will be an empty 404.
+
+
+### Update
+
+This method is for replacing the captions on a video via a string parameter.
+
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+
+Parameter | Description
+----------|------------
+caption_file | The contents of a SRT caption file attached as a normal HTTP parameter.
+
+#### The Response
+
+If successful, this method will respond with an empty HTTP 200 OK.
+
+
+### Delete
+
+This method is for removing the captions file from a video altogether.
+
+<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+
+This method takes no parameters.
+
+#### The Response
+
+If successful, the response will be an empty HTTP 200 OK.
 
 ---
 
