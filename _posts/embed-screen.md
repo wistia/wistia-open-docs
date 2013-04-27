@@ -32,9 +32,9 @@ without it getting in the way of what's most important (it's the content!).
 Change the color, pick the controls you want your viewers to see, and set the 
 start and end behavior of your video.
 
-### Why is there no HD button?
+**No HD button?**
 
-Fantastic question! We approach the HD streaming aspect of video a bit 
+You got it, no HD button. We approach the HD streaming aspect of video a bit 
 differently than most. We use a system we call "Auto HD" that reads what your 
 streaming capabilities are when you load the player, then we'll serve you a 
 version that streams best for you in terms of quality and playback smoothness. 
