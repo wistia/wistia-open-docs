@@ -41,7 +41,7 @@ no_nav: true
       .col
         .articles_list
           %ul
-            %li.category_list
+            %li.category_card
               %h3 
                 %a{ href: "{{ 'getting-set-up' | category_url }}" } 
                   Getting Set Up
@@ -68,7 +68,7 @@ no_nav: true
                   %a{ href: "{{ '/security' | post_url }}" } 
                     Wistia Video Security
 
-            %li.category_list
+            %li.category_card
               %h3 
                 %a{ href: "{{ 'embedding' | category_url }}" } 
                   Embedding
@@ -92,7 +92,7 @@ no_nav: true
                   %a{ href: "{{ '/transcripts' | post_url }}" } 
                     Interactive Transcripts and Captions
 
-            %li.category_list.last
+            %li.category_card.last
               %h3 
                 %a{ href: "{{ 'private-sharing' | category_url }}" } 
                   Private Sharing
@@ -113,7 +113,7 @@ no_nav: true
       .col
         .articles_list
           %ul
-            %li.category_list
+            %li.category_card
               %h3 
                 %a{ href: "{{ 'analytics' | category_url }}" } Analytics
               %ul.post_list
@@ -127,7 +127,7 @@ no_nav: true
                   %a{ href: "{{ '/identity-tagging' | post_url }}" } 
                     Identity Tagging
 
-            %li.category_list
+            %li.category_card
               %h3 
                 %a{ href: "{{ 'integrations' | category_url }}" } 
                   Integrations
@@ -145,7 +145,7 @@ no_nav: true
                 %li
                   %a{ href: "{{ '/joomla' | post_url }}" } Joomla
 
-            %li.category_list
+            %li.category_card
               %h3 
                 %a{ href: "{{ 'public-sharing' | category_url }}" } 
                   Public Sharing
@@ -161,7 +161,7 @@ no_nav: true
                   %a{ href: "{{ '/replaceable-video' | post_url }}" }
                     Replaceable Video
 
-            %li.category_list.developers.last
+            %li.category_card.developers.last
               %h3 
                 %a{ href: "{{ '/developers' | post_url }}" } For Developers
               %ul.post_list
