@@ -686,6 +686,8 @@ table tr td pre { margin: 0; padding: 0; }
 
 #results { min-height: 350px; text-align: left; }
 
+.suggested-title { margin-bottom: 30px; font-size: 24px; }
+
 .results_header { border-bottom: 1px solid; margin: 30px 0; }
 
 .result { margin: 30px 0 30px; font-family: "Avenir", Futura, Helvetica, sans-serif; }
