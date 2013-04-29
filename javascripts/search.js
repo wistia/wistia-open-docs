@@ -9,17 +9,17 @@ Search = (function() {
     this.header = this.buildHeader();
     this.getSearchResults(this.query, function(data) {
       var result, _i, _len, _ref;
-      _this.result_html = "";
+      _this.resultHTML = "";
       if (data.results.length) {
         _ref = data.results;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           result = _ref[_i];
-          _this.result_html += _this.convertJSONtoHTML(result);
+          _this.resultHTML += _this.convertJSONtoHTML(result);
         }
       } else if (_this.query != null) {
-        _this.result_html = _this.noResultsStr(_this.query);
+        _this.resultHTML = _this.noResultsStr(_this.query);
       } else {
-        _this.result_html = _this.suggestedSearchesStr();
+        _this.resultHTML = _this.suggestedSearchesStr();
       }
       return _this.renderResults();
     });
@@ -30,7 +30,7 @@ Search = (function() {
   };
 
   Search.prototype.getSearchResults = function(query, callback) {
-    return $.getJSON("" + basepath + "/search/" + query + "?format=json&callback=?", callback(data));
+    return $.getJSON("" + basepath + "/search/" + query + "?format=json&callback=?", callback);
   };
 
   Search.prototype.stringify = function(str) {
@@ -38,11 +38,11 @@ Search = (function() {
   };
 
   Search.prototype.noResultsStr = function(query) {
-    return "<div class='no_result'>\n  <p>We couldn't find any results for your query, <span class='query'>" + (this.stringify(query)) + "</span>.\n  <p>Please try another search or head back to the <a href='/'>Documentation Main page</a>.</p>\n</div>";
+    return "<div class='no_result'>\n  <p>We couldn't find any results for your query, <span class='query'>" + (this.stringify(query)) + "</span>.\n  <p>Please try another search, or head back to the <a href='/'>Documentation Main page</a>.</p>\n</div>";
   };
 
   Search.prototype.suggestedSearchesStr = function() {
-    return "<h2 class='suggested-title'>Need some suggestions?</h2>\n<div class='result'>\n  <h2><a href='" + basepath + "/media'>Guide to Using Media in Wistia</a></h2> \n  <p class='description'>From changing the title, to embedding it on your \n  website or blog, learn all the functionality for uploaded media here.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/projects'>Guide to Using Projects in Wistia</a></h2> \n  <p class='description'>Projects are where you store, organize, and access \n  media. Projects are the building blocks for Wistia organization.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/wistia-basics'>Wistia Basics Video Series</a></h2> \n  <p class='description'>If you are getting started, or just need a little \n  refresher, the Wistia Basics series is just what you need. Join Chris and \n  Jeff as they take you through the key features and workflows of Wistia, \n  to make sure you get the most out of your account.</p>\n</div>";
+    return "<h2 class='suggested-title'>Here are some of our favorites:</h2>\n<div class='result'>\n  <h2><a href='" + basepath + "/media'>Guide to Using Media in Wistia</a></h2> \n  <p class='description'>From changing the title, to embedding it on your \n  website or blog, learn all the functionality for uploaded media here.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/projects'>Guide to Using Projects in Wistia</a></h2> \n  <p class='description'>Projects are where you store, organize, and access \n  media. Projects are the building blocks for Wistia organization.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/wistia-basics'>Wistia Basics Video Series</a></h2> \n  <p class='description'>If you are getting started, or just need a little \n  refresher, the Wistia Basics series is just what you need. Join Chris and \n  Jeff as they take you through the key features and workflows of Wistia, \n  to make sure you get the most out of your account.</p>\n</div>";
   };
 
   Search.prototype.convertJSONtoHTML = function(json) {
@@ -62,7 +62,7 @@ Search = (function() {
   };
 
   Search.prototype.renderResults = function() {
-    return $('#results').append(this.header).append(this.result_html);
+    return $('#results').append(this.header).append(this.resultHTML);
   };
 
   return Search;

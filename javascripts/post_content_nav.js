@@ -11,9 +11,9 @@ NavBar = (function() {
     $('li.header_link:first').css('border', 'none');
   }
 
-  NavBar.prototype.build_nav_box = function() {
+  NavBar.prototype.buildNavBox = function() {
     if (this.titlesForNav.length) {
-      this.mainTitle.attr('id', $.text_to_id(this.mainTitle.text()));
+      this.mainTitle.attr('id', $.textToID(this.mainTitle.text()));
       this.appendTitlestoNavBox();
       this.spaceTheTopicsTitle();
     } else {
@@ -26,30 +26,45 @@ NavBar = (function() {
     });
   };
 
-  NavBar.prototype.append_titles_to_nav_box = function() {
+  NavBar.prototype.appendTitlestoNavBox = function() {
     var $idText, $text, title, _i, _len, _ref, _results;
-    this.navBoxUl.append('<li class="title_list_item"><a href="#' + this.mainTitle.attr('id') + '">' + this.mainTitle.text() + '</a></li>');
+    this.navBoxUl.append("<li class=\"title_list_item\"><a href=\"#" + (this.mainTitle.attr('id')) + "\">" + (this.mainTitle.text()) + "</a></li>");
     _ref = this.titlesForNav;
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       title = _ref[_i];
       $text = $(title).text();
       $idText = $.textToID($text);
-      $(title).attr('id', $idText).prepend('<a class="subtopic_anchor" href="#' + $idText + '">#</a>');
+      $(title).attr('id', $idText).prepend("<a class=\"subtopic_anchor\" href=\"#" + $idText + "\">#</a>");
       _results.push(this.appendListElemtoNavBox($(title), $text, $idText));
     }
     return _results;
   };
 
   NavBar.prototype.appendListElemtoNavBox = function(elem, linkText, idText) {
+    var linkSettings;
+    linkSettings = this.linkSettings(elem, linkText);
+    return this.navBoxUl.append("<li class=\"" + linkSettings.klass + "\"><a href=\"#" + idText + "\">" + linkSettings.linkText + "</a></li>");
+  };
+
+  NavBar.prototype.linkSettings = function(elem, linkText) {
     if (window.api) {
       if (elem.is('h3')) {
-        return this.navBoxUl.append('<li class="sub_link"><a href="#' + idText + '">' + $.sectionTitletoNavTitle(linkText) + '</a></li>');
+        return {
+          klass: "sub_link",
+          linkText: $.sectionTitletoNavTitle(linkText)
+        };
       } else {
-        return this.navBoxUl.append('<li class="header_link"><a href="#' + idText + '">' + linkText + '</a></li>');
+        return {
+          klass: "header_link",
+          linkText: linkText
+        };
       }
     } else {
-      return this.navBoxUl.append('<li><a href="#' + idText + '">' + linkText + '</a></li>');
+      return {
+        klass: "",
+        linkText: linkText
+      };
     }
   };
 

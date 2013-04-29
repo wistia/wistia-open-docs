@@ -6,9 +6,9 @@ class NavBar
     @buildNavBox()
     $('li.header_link:first').css('border', 'none')
 
-  build_nav_box: ->
+  buildNavBox: ->
     if @titlesForNav.length
-      @mainTitle.attr 'id', $.text_to_id(@mainTitle.text())
+      @mainTitle.attr 'id', $.textToID(@mainTitle.text())
       @appendTitlestoNavBox()
       @spaceTheTopicsTitle()
     else
@@ -18,10 +18,12 @@ class NavBar
 
     $('#page_nav').onePageNav(changeHash: true)
 
-  append_titles_to_nav_box: ->
+  appendTitlestoNavBox: ->
     @navBoxUl
-      .append('<li class="title_list_item"><a href="#' +
-        @mainTitle.attr('id') + '">' + @mainTitle.text() + '</a></li>')
+      .append(
+        """
+        <li class="title_list_item"><a href="##{@mainTitle.attr('id')}">#{@mainTitle.text()}</a></li>
+        """)
 
     for title in @titlesForNav
       $text = $(title).text()
@@ -29,24 +31,28 @@ class NavBar
 
       $(title)
         .attr('id', $idText)
-        .prepend('<a class="subtopic_anchor" href="#' +
-          $idText + '">#</a>')
+        .prepend(
+          """
+          <a class="subtopic_anchor" href="##{$idText}">#</a>
+          """)
 
       @appendListElemtoNavBox $(title), $text, $idText
 
   appendListElemtoNavBox: (elem, linkText, idText) ->
+    linkSettings = @linkSettings(elem, linkText)
+    @navBoxUl.append(
+      """
+      <li class="#{linkSettings.klass}"><a href="##{idText}">#{linkSettings.linkText}</a></li>
+      """)
+
+  linkSettings: (elem, linkText) ->
     if window.api
       if elem.is 'h3'
-        @navBoxUl
-          .append('<li class="sub_link"><a href="#' + idText +
-            '">' + $.sectionTitletoNavTitle(linkText) + '</a></li>')
+        { klass: "sub_link", linkText: $.sectionTitletoNavTitle(linkText) }
       else
-        @navBoxUl
-          .append('<li class="header_link"><a href="#' + idText + '">' +
-            linkText + '</a></li>')
+        { klass: "header_link", linkText: linkText }
     else
-      @navBoxUl
-        .append('<li><a href="#' + idText + '">' + linkText + '</a></li>')
+      { klass: "", linkText: linkText }
 
   titlesForNav: ->
     if window.api
@@ -57,7 +63,6 @@ class NavBar
   spaceTheTopicsTitle: ->
     $topicsTitleBox = $('#page_nav li:first-child')
     $titleLink = $topicsTitleBox.find('a')
-
     $titleLink.css 'top', ($topicsTitleBox.height() - $titleLink.height())/2
 
 $.browserEscapeCharacters = (span) ->

@@ -3,14 +3,14 @@ class Search
     @query = @getQuery()
     @header = @buildHeader()
     @getSearchResults @query, (data) =>
-      @result_html = ""
+      @resultHTML = ""
       if data.results.length
         for result in data.results
-          @result_html += @convertJSONtoHTML result
+          @resultHTML += @convertJSONtoHTML result
       else if @query?
-        @result_html = @noResultsStr(@query)
+        @resultHTML = @noResultsStr(@query)
       else
-        @result_html = @suggestedSearchesStr()
+        @resultHTML = @suggestedSearchesStr()
 
       @renderResults()
 
@@ -18,8 +18,7 @@ class Search
     (window.location.href.split('?')[1] || "").split('=')[1]
     
   getSearchResults: (query, callback) ->
-    $.getJSON "#{basepath}/search/#{query}?format=json&callback=?",
-      callback(data)
+    $.getJSON "#{basepath}/search/#{query}?format=json&callback=?", callback
 
   stringify: (str) ->
     str.replace(/_/g, ' ')
@@ -28,13 +27,13 @@ class Search
     """
     <div class='no_result'>
       <p>We couldn't find any results for your query, <span class='query'>#{@stringify query}</span>.
-      <p>Please try another search or head back to the <a href='/'>Documentation Main page</a>.</p>
+      <p>Please try another search, or head back to the <a href='/'>Documentation Main page</a>.</p>
     </div>
     """
 
   suggestedSearchesStr: ->
     """
-    <h2 class='suggested-title'>Need some suggestions?</h2>
+    <h2 class='suggested-title'>Here are some of our favorites:</h2>
     <div class='result'>
       <h2><a href='#{basepath}/media'>Guide to Using Media in Wistia</a></h2> 
       <p class='description'>From changing the title, to embedding it on your 
@@ -78,7 +77,7 @@ class Search
     return "#{html_start_str}#{resultHeaderText}#{html_end_str}"
 
   renderResults: ->
-    $('#results').append(@header).append(@result_html)
+    $('#results').append(@header).append(@resultHTML)
 
 $ ->
   docSearch = new Search()
