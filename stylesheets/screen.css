@@ -694,7 +694,7 @@ table tr td pre { margin: 0; padding: 0; }
 .result a:hover { color: #228cd1; }
 .result p { color: #999999; font-size: 18px; line-height: 150%; margin-top: 15px; width: 75%; }
 
-.no_result p { line-height: 200%; }
+.no_result p { font-size: 18px; line-height: 200%; }
 .no_result .query { color: #333333; }
 
 .description { color: #aaaaaa; }
