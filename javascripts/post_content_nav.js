@@ -4,20 +4,20 @@ var NavBar;
 NavBar = (function() {
 
   function NavBar() {
-    this.main_title = $('.post_title > h1');
-    this.nav_box_ul = $('ul#page_nav');
-    this.titles_for_nav = this.titles_for_nav();
-    this.build_nav_box();
+    this.mainTitle = $('.post_title > h1');
+    this.navBoxUl = $('ul#page_nav');
+    this.titlesForNav = this.titlesForNav();
+    this.buildNavBox();
     $('li.header_link:first').css('border', 'none');
   }
 
   NavBar.prototype.build_nav_box = function() {
-    if (this.titles_for_nav.length) {
-      this.main_title.attr('id', $.text_to_id(this.main_title.text()));
-      this.append_titles_to_nav_box();
-      this.space_the_topics_title();
+    if (this.titlesForNav.length) {
+      this.mainTitle.attr('id', $.text_to_id(this.mainTitle.text()));
+      this.appendTitlestoNavBox();
+      this.spaceTheTopicsTitle();
     } else {
-      this.nav_box_ul.hide();
+      this.navBoxUl.hide();
       $('#container').css("text-align", "center");
       $('#post_container').css("left", "0");
     }
@@ -27,33 +27,33 @@ NavBar = (function() {
   };
 
   NavBar.prototype.append_titles_to_nav_box = function() {
-    var $id_text, $text, title, _i, _len, _ref, _results;
-    this.nav_box_ul.append('<li class="title_list_item"><a href="#' + this.main_title.attr('id') + '">' + this.main_title.text() + '</a></li>');
-    _ref = this.titles_for_nav;
+    var $idText, $text, title, _i, _len, _ref, _results;
+    this.navBoxUl.append('<li class="title_list_item"><a href="#' + this.mainTitle.attr('id') + '">' + this.mainTitle.text() + '</a></li>');
+    _ref = this.titlesForNav;
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       title = _ref[_i];
       $text = $(title).text();
-      $id_text = $.text_to_id($text);
-      $(title).attr('id', $id_text).prepend('<a class="subtopic_anchor" href="#' + $id_text + '">#</a>');
-      _results.push(this.append_list_elem_to_nav_box($(title), $text, $id_text));
+      $idText = $.textToID($text);
+      $(title).attr('id', $idText).prepend('<a class="subtopic_anchor" href="#' + $idText + '">#</a>');
+      _results.push(this.appendListElemtoNavBox($(title), $text, $idText));
     }
     return _results;
   };
 
-  NavBar.prototype.append_list_elem_to_nav_box = function(elem, link_text, id_text) {
+  NavBar.prototype.appendListElemtoNavBox = function(elem, linkText, idText) {
     if (window.api) {
       if (elem.is('h3')) {
-        return this.nav_box_ul.append('<li class="sub_link"><a href="#' + id_text + '">' + $.section_title_to_nav_title(link_text) + '</a></li>');
+        return this.navBoxUl.append('<li class="sub_link"><a href="#' + idText + '">' + $.sectionTitletoNavTitle(linkText) + '</a></li>');
       } else {
-        return this.nav_box_ul.append('<li class="header_link"><a href="#' + id_text + '">' + link_text + '</a></li>');
+        return this.navBoxUl.append('<li class="header_link"><a href="#' + idText + '">' + linkText + '</a></li>');
       }
     } else {
-      return this.nav_box_ul.append('<li><a href="#' + id_text + '">' + link_text + '</a></li>');
+      return this.navBoxUl.append('<li><a href="#' + idText + '">' + linkText + '</a></li>');
     }
   };
 
-  NavBar.prototype.titles_for_nav = function() {
+  NavBar.prototype.titlesForNav = function() {
     if (window.api) {
       return $('h2,h3').not('#wistiacom_footer h3');
     } else {
@@ -61,26 +61,26 @@ NavBar = (function() {
     }
   };
 
-  NavBar.prototype.space_the_topics_title = function() {
-    var $title_a, $topics_title_box;
-    $topics_title_box = $('#page_nav li:first-child');
-    $title_a = $topics_title_box.find('a');
-    return $title_a.css('top', ($topics_title_box.height() - $title_a.height()) / 2);
+  NavBar.prototype.spaceTheTopicsTitle = function() {
+    var $titleLink, $topicsTitleBox;
+    $topicsTitleBox = $('#page_nav li:first-child');
+    $titleLink = $topicsTitleBox.find('a');
+    return $titleLink.css('top', ($topicsTitleBox.height() - $titleLink.height()) / 2);
   };
 
   return NavBar;
 
 })();
 
-$.browser_escape_characters = function(span) {
+$.browserEscapeCharacters = function(span) {
   return span.html(span.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'));
 };
 
-$.text_to_id = function(text) {
+$.textToID = function(text) {
   return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
 };
 
-$.section_title_to_nav_title = function(text) {
+$.sectionTitletoNavTitle = function(text) {
   if (/\:\s/.test(text)) {
     text = text.split(/\:\s/)[1];
   }
@@ -91,12 +91,12 @@ $(function() {
   window.navBar = new NavBar;
   if ($('span.code').length) {
     $('span.code').each(function() {
-      return $.browser_escape_characters($(this));
+      return $.browserEscapeCharacters($(this));
     });
   }
   if ($('pre').length) {
     return $('pre').find('code.language-markup').each(function() {
-      return $.browser_escape_characters($(this));
+      return $.browserEscapeCharacters($(this));
     });
   }
 });

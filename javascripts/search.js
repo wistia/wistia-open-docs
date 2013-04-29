@@ -5,32 +5,32 @@ Search = (function() {
 
   function Search() {
     var _this = this;
-    this.query = (window.location.href.split('?')[1] || "").split('=')[1];
+    this.query = this.getQuery();
     this.header = this.buildHeader();
     this.getSearchResults(this.query, function(data) {
-      var result, resultsJSON, _i, _len;
+      var result, _i, _len, _ref;
       _this.result_html = "";
       if (data.results.length) {
-        resultsJSON = data.results;
-        for (_i = 0, _len = resultsJSON.length; _i < _len; _i++) {
-          result = resultsJSON[_i];
+        _ref = data.results;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          result = _ref[_i];
           _this.result_html += _this.convertJSONtoHTML(result);
         }
       } else if (_this.query != null) {
-        console.log("noResultsStr");
         _this.result_html = _this.noResultsStr(_this.query);
       } else {
-        console.log("suggestedSearchesStr");
         _this.result_html = _this.suggestedSearchesStr();
       }
       return _this.renderResults();
     });
   }
 
+  Search.prototype.getQuery = function() {
+    return (window.location.href.split('?')[1] || "").split('=')[1];
+  };
+
   Search.prototype.getSearchResults = function(query, callback) {
-    return $.getJSON("" + basepath + "/search/" + query + "?format=json&amp;callback=?", function(data) {
-      return callback(data);
-    });
+    return $.getJSON("" + basepath + "/search/" + query + "?format=json&callback=?", callback(data));
   };
 
   Search.prototype.stringify = function(str) {
@@ -62,7 +62,6 @@ Search = (function() {
   };
 
   Search.prototype.renderResults = function() {
-    console.log("renderResults", this.result_html);
     return $('#results').append(this.header).append(this.result_html);
   };
 

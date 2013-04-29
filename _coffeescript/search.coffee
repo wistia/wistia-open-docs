@@ -1,25 +1,25 @@
 class Search
   constructor: ->
-    @query = (window.location.href.split('?')[1] || "").split('=')[1]
+    @query = @getQuery()
     @header = @buildHeader()
     @getSearchResults @query, (data) =>
       @result_html = ""
       if data.results.length
-        resultsJSON = data.results
-        for result in resultsJSON
+        for result in data.results
           @result_html += @convertJSONtoHTML result
       else if @query?
-        console.log "noResultsStr"
         @result_html = @noResultsStr(@query)
       else
-        console.log "suggestedSearchesStr"
         @result_html = @suggestedSearchesStr()
 
       @renderResults()
 
+  getQuery: ->
+    (window.location.href.split('?')[1] || "").split('=')[1]
+    
   getSearchResults: (query, callback) ->
-    $.getJSON "#{basepath}/search/#{query}?format=json&amp;callback=?", (data) ->
-      callback data
+    $.getJSON "#{basepath}/search/#{query}?format=json&callback=?",
+      callback(data)
 
   stringify: (str) ->
     str.replace(/_/g, ' ')
@@ -78,7 +78,6 @@ class Search
     return "#{html_start_str}#{resultHeaderText}#{html_end_str}"
 
   renderResults: ->
-    console.log "renderResults", @result_html
     $('#results').append(@header).append(@result_html)
 
 $ ->
