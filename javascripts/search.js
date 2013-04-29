@@ -3,12 +3,11 @@ var Search;
 
 Search = (function() {
 
-  function Search(query) {
+  function Search() {
     var _this = this;
-    this.query = query;
+    this.query = (window.location.href.split('?')[1] || "").split('=')[1];
     this.header = this.buildHeader();
-    this.noResultsStr = "<div class='no_result'>\n  <p>We couldn't find any results for your query, <span class='query'>" + (this.stringify(this.query)) + "</span>.\n  <p>Please try another search or head back to the <a href='/'>Documentation Main page</a>.</p>\n</div>";
-    this.results = this.getSearchResults(this.query, function(data) {
+    this.getSearchResults(this.query, function(data) {
       var result, resultsJSON, _i, _len;
       _this.result_html = "";
       if (data.results.length) {
@@ -17,8 +16,12 @@ Search = (function() {
           result = resultsJSON[_i];
           _this.result_html += _this.convertJSONtoHTML(result);
         }
+      } else if (_this.query != null) {
+        console.log("noResultsStr");
+        _this.result_html = _this.noResultsStr(_this.query);
       } else {
-        _this.result_html = _this.noResultsStr;
+        console.log("suggestedSearchesStr");
+        _this.result_html = _this.suggestedSearchesStr();
       }
       return _this.renderResults();
     });
@@ -34,6 +37,14 @@ Search = (function() {
     return str.replace(/_/g, ' ');
   };
 
+  Search.prototype.noResultsStr = function(query) {
+    return "<div class='no_result'>\n  <p>We couldn't find any results for your query, <span class='query'>" + (this.stringify(query)) + "</span>.\n  <p>Please try another search or head back to the <a href='/'>Documentation Main page</a>.</p>\n</div>";
+  };
+
+  Search.prototype.suggestedSearchesStr = function() {
+    return "<h2 class='suggested-title'>Need some suggestions?</h2>\n<div class='result'>\n  <h2><a href='" + basepath + "/media'>Guide to Using Media in Wistia</a></h2> \n  <p class='description'>From changing the title, to embedding it on your \n  website or blog, learn all the functionality for uploaded media here.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/projects'>Guide to Using Projects in Wistia</a></h2> \n  <p class='description'>Projects are where you store, organize, and access \n  media. Projects are the building blocks for Wistia organization.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/wistia-basics'>Wistia Basics Video Series</a></h2> \n  <p class='description'>If you are getting started, or just need a little \n  refresher, the Wistia Basics series is just what you need. Join Chris and \n  Jeff as they take you through the key features and workflows of Wistia, \n  to make sure you get the most out of your account.</p>\n</div>";
+  };
+
   Search.prototype.convertJSONtoHTML = function(json) {
     var description, title, url;
     title = json.title;
@@ -43,19 +54,16 @@ Search = (function() {
   };
 
   Search.prototype.buildHeader = function() {
-    var html_end_str, html_start_str, result;
+    var html_end_str, html_start_str, resultHeaderText;
     html_start_str = "<div class='results_header'><h1>";
     html_end_str = "</h1></div>";
-    result = this.query ? "Results for " + (this.stringify(this.query)) : "enter a search to begin";
-    return "" + html_start_str + result + html_end_str;
+    resultHeaderText = (this.query != null) && this.query.length > 0 ? "Results for " + (this.stringify(this.query)) : "Enter a search to begin";
+    return "" + html_start_str + resultHeaderText + html_end_str;
   };
 
   Search.prototype.renderResults = function() {
-    if (this.result_html) {
-      return $('#results').append(this.header).append(this.result_html);
-    } else {
-      return $('#results').append(this.header);
-    }
+    console.log("renderResults", this.result_html);
+    return $('#results').append(this.header).append(this.result_html);
   };
 
   return Search;
@@ -63,7 +71,6 @@ Search = (function() {
 })();
 
 $(function() {
-  var docSearch, query;
-  query = (window.location.href.split('?')[1] || "").split('=')[1];
-  return docSearch = new Search(query);
+  var docSearch;
+  return docSearch = new Search();
 });
