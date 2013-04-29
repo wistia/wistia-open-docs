@@ -24,7 +24,7 @@ To set up the connection, first open your [Account Dashboard]({{ '/account-setup
 
 Find the *Setup and Email Provider* option.
 
-{{ "In order to access the Integrations area, you will need to be logged in as the Owner of the account. | note }}
+{{ "In order to access the Integrations area, you will need to be logged in as the Owner of the account." | note }}
 
 {% post_image hashed_id: "1a41347bfeb5390f3ed666167b39b751e565fe2b", class: 'center' %}
 
