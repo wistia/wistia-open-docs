@@ -92,7 +92,9 @@ in your account for you to access, as well as an option to connect it with
 lists in your favorite e-mail marketing platform (like MailChimp, Pardot, 
 Emma and more).
 
-<!--- Remember to add that link to the new turnstile page! -->
+For those folks who would like some more info on setting up these Turnstile 
+integrations, head over to the [Turnstile doc page]({{ '/turnstile' | post_url }}) 
+to get all the details on that.
 
 ---
 
