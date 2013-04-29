@@ -13,20 +13,20 @@ NavBar = (function() {
 
   NavBar.prototype.buildNavBox = function() {
     if (this.titlesForNav.length) {
-      this.mainTitle.attr('id', $.textToID(this.mainTitle.text()));
-      this.appendTitlestoNavBox();
+      this.mainTitle.attr('id', $.textToId(this.mainTitle.text()));
+      this.appendTitlesToNavBox();
       this.spaceTheTopicsTitle();
     } else {
       this.navBoxUl.hide();
       $('#container').css("text-align", "center");
-      $('#post_container').css("left", "0");
+      $('#post_container').css("left", 0);
     }
     return $('#page_nav').onePageNav({
       changeHash: true
     });
   };
 
-  NavBar.prototype.appendTitlestoNavBox = function() {
+  NavBar.prototype.appendTitlesToNavBox = function() {
     var $idText, $text, title, _i, _len, _ref, _results;
     this.navBoxUl.append("<li class=\"title_list_item\"><a href=\"#" + (this.mainTitle.attr('id')) + "\">" + (this.mainTitle.text()) + "</a></li>");
     _ref = this.titlesForNav;
@@ -34,14 +34,14 @@ NavBar = (function() {
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       title = _ref[_i];
       $text = $(title).text();
-      $idText = $.textToID($text);
+      $idText = $.textToId($text);
       $(title).attr('id', $idText).prepend("<a class=\"subtopic_anchor\" href=\"#" + $idText + "\">#</a>");
-      _results.push(this.appendListElemtoNavBox($(title), $text, $idText));
+      _results.push(this.appendListElemToNavBox($(title), $text, $idText));
     }
     return _results;
   };
 
-  NavBar.prototype.appendListElemtoNavBox = function(elem, linkText, idText) {
+  NavBar.prototype.appendListElemToNavBox = function(elem, linkText, idText) {
     var linkSettings;
     linkSettings = this.linkSettings(elem, linkText);
     return this.navBoxUl.append("<li class=\"" + linkSettings.klass + "\"><a href=\"#" + idText + "\">" + linkSettings.linkText + "</a></li>");
@@ -52,7 +52,7 @@ NavBar = (function() {
       if (elem.is('h3')) {
         return {
           klass: "sub_link",
-          linkText: $.sectionTitletoNavTitle(linkText)
+          linkText: $.sectionTitleToNavTitle(linkText)
         };
       } else {
         return {
@@ -91,11 +91,11 @@ $.browserEscapeCharacters = function(span) {
   return span.html(span.html().replace(/</g, '&lt;').replace(/>/g, '&gt;'));
 };
 
-$.textToID = function(text) {
+$.textToId = function(text) {
   return text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_');
 };
 
-$.sectionTitletoNavTitle = function(text) {
+$.sectionTitleToNavTitle = function(text) {
   if (/\:\s/.test(text)) {
     text = text.split(/\:\s/)[1];
   }

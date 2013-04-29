@@ -3,14 +3,14 @@ class Search
     @query = @getQuery()
     @header = @buildHeader()
     @getSearchResults @query, (data) =>
-      @resultHTML = ""
+      @resultHtml = ""
       if data.results.length
         for result in data.results
-          @resultHTML += @convertJSONtoHTML result
+          @resultHtml += @convertJsonToHtml result
       else if @query?
-        @resultHTML = @noResultsStr(@query)
+        @resultHtml = @noResultsStr(@query)
       else
-        @resultHTML = @suggestedSearchesStr()
+        @resultHtml = @suggestedSearchesStr()
 
       @renderResults()
 
@@ -53,15 +53,11 @@ class Search
     </div>
     """
 
-  convertJSONtoHTML: (json) ->
-    title = json.title
-    description = json.description
-    url = json.url
-
+  convertJsonToHtml: (json) ->
     """
     <div class='result'>
-      <h2><a href='#{basepath}#{url}'>#{title}</a></h2> 
-      <p class='description'>#{description}</p>
+      <h2><a href='#{basepath}#{json.url}'>#{json.title}</a></h2> 
+      <p class='description'>#{json.description}</p>
     </div>
     """
 
@@ -77,7 +73,7 @@ class Search
     return "#{html_start_str}#{resultHeaderText}#{html_end_str}"
 
   renderResults: ->
-    $('#results').append(@header).append(@resultHTML)
+    $('#results').append(@header).append(@resultHtml)
 
 $ ->
   docSearch = new Search()

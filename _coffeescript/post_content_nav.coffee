@@ -8,47 +8,44 @@ class NavBar
 
   buildNavBox: ->
     if @titlesForNav.length
-      @mainTitle.attr 'id', $.textToID(@mainTitle.text())
-      @appendTitlestoNavBox()
+      @mainTitle.attr 'id', $.textToId(@mainTitle.text())
+      @appendTitlesToNavBox()
       @spaceTheTopicsTitle()
     else
       @navBoxUl.hide()
       $('#container').css("text-align", "center")
-      $('#post_container').css("left", "0")
+      $('#post_container').css("left", 0)
 
     $('#page_nav').onePageNav(changeHash: true)
 
-  appendTitlestoNavBox: ->
+  appendTitlesToNavBox: ->
     @navBoxUl
-      .append(
-        """
+      .append """
         <li class="title_list_item"><a href="##{@mainTitle.attr('id')}">#{@mainTitle.text()}</a></li>
-        """)
+        """
 
     for title in @titlesForNav
       $text = $(title).text()
-      $idText = $.textToID($text)
+      $idText = $.textToId($text)
 
       $(title)
         .attr('id', $idText)
-        .prepend(
-          """
+        .prepend """
           <a class="subtopic_anchor" href="##{$idText}">#</a>
-          """)
+          """
 
-      @appendListElemtoNavBox $(title), $text, $idText
+      @appendListElemToNavBox $(title), $text, $idText
 
-  appendListElemtoNavBox: (elem, linkText, idText) ->
+  appendListElemToNavBox: (elem, linkText, idText) ->
     linkSettings = @linkSettings(elem, linkText)
-    @navBoxUl.append(
-      """
+    @navBoxUl.append """
       <li class="#{linkSettings.klass}"><a href="##{idText}">#{linkSettings.linkText}</a></li>
-      """)
+      """
 
   linkSettings: (elem, linkText) ->
     if window.api
       if elem.is 'h3'
-        { klass: "sub_link", linkText: $.sectionTitletoNavTitle(linkText) }
+        { klass: "sub_link", linkText: $.sectionTitleToNavTitle(linkText) }
       else
         { klass: "header_link", linkText: linkText }
     else
@@ -68,10 +65,10 @@ class NavBar
 $.browserEscapeCharacters = (span) ->
   span.html span.html().replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
-$.textToID = (text) ->
+$.textToId = (text) ->
   text.toLowerCase().replace(/[^\s0-9a-z]/g, '').replace(/\s/g, '_')
 
-$.sectionTitletoNavTitle = (text) ->
+$.sectionTitleToNavTitle = (text) ->
   if (/\:\s/).test(text)
     text = text.split(/\:\s/)[1]
   text

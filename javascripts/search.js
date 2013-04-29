@@ -9,17 +9,17 @@ Search = (function() {
     this.header = this.buildHeader();
     this.getSearchResults(this.query, function(data) {
       var result, _i, _len, _ref;
-      _this.resultHTML = "";
+      _this.resultHtml = "";
       if (data.results.length) {
         _ref = data.results;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           result = _ref[_i];
-          _this.resultHTML += _this.convertJSONtoHTML(result);
+          _this.resultHtml += _this.convertJsonToHtml(result);
         }
       } else if (_this.query != null) {
-        _this.resultHTML = _this.noResultsStr(_this.query);
+        _this.resultHtml = _this.noResultsStr(_this.query);
       } else {
-        _this.resultHTML = _this.suggestedSearchesStr();
+        _this.resultHtml = _this.suggestedSearchesStr();
       }
       return _this.renderResults();
     });
@@ -45,12 +45,8 @@ Search = (function() {
     return "<h2 class='suggested-title'>Here are some of our favorites:</h2>\n<div class='result'>\n  <h2><a href='" + basepath + "/media'>Guide to Using Media in Wistia</a></h2> \n  <p class='description'>From changing the title, to embedding it on your \n  website or blog, learn all the functionality for uploaded media here.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/projects'>Guide to Using Projects in Wistia</a></h2> \n  <p class='description'>Projects are where you store, organize, and access \n  media. Projects are the building blocks for Wistia organization.</p>\n</div>\n<div class='result'>\n  <h2><a href='" + basepath + "/wistia-basics'>Wistia Basics Video Series</a></h2> \n  <p class='description'>If you are getting started, or just need a little \n  refresher, the Wistia Basics series is just what you need. Join Chris and \n  Jeff as they take you through the key features and workflows of Wistia, \n  to make sure you get the most out of your account.</p>\n</div>";
   };
 
-  Search.prototype.convertJSONtoHTML = function(json) {
-    var description, title, url;
-    title = json.title;
-    description = json.description;
-    url = json.url;
-    return "<div class='result'>\n  <h2><a href='" + basepath + url + "'>" + title + "</a></h2> \n  <p class='description'>" + description + "</p>\n</div>";
+  Search.prototype.convertJsonToHtml = function(json) {
+    return "<div class='result'>\n  <h2><a href='" + basepath + json.url + "'>" + json.title + "</a></h2> \n  <p class='description'>" + json.description + "</p>\n</div>";
   };
 
   Search.prototype.buildHeader = function() {
@@ -62,7 +58,7 @@ Search = (function() {
   };
 
   Search.prototype.renderResults = function() {
-    return $('#results').append(this.header).append(this.resultHTML);
+    return $('#results').append(this.header).append(this.resultHtml);
   };
 
   return Search;
