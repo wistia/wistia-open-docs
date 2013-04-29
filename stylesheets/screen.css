@@ -686,15 +686,17 @@ table tr td pre { margin: 0; padding: 0; }
 
 #results { min-height: 350px; text-align: left; }
 
+.suggested-title { margin-bottom: 30px; font-size: 24px; }
+
 .results_header { border-bottom: 1px solid; margin: 30px 0; }
 
 .result { margin: 30px 0 30px; font-family: "Avenir", Futura, Helvetica, sans-serif; }
 .result h2 { margin: 0; }
-.result a { font-size: 24px; }
+.result a { font-size: 26px; }
 .result a:hover { color: #228cd1; }
-.result p { color: #aaaaaa; line-height: 150%; margin-top: 15px; width: 550px; }
+.result p { color: #999999; font-size: 18px; line-height: 150%; margin-top: 15px; width: 75%; }
 
-.no_result p { line-height: 200%; }
+.no_result p { font-size: 18px; line-height: 200%; }
 .no_result .query { color: #333333; }
 
 .description { color: #aaaaaa; }
