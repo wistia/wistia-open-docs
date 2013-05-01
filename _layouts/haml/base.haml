@@ -35,4 +35,7 @@
     %script{ src: "{{ '/javascripts/voronoi' | javascript_url }}" }
     {% endif %}
     %script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }
-    %script{ src: "{{ '/javascripts/simplex' | javascript_url }}" }
+
+    %script{ src: "//wistia.com/javascripts/simplex.js" }
+    :javascript
+      var simplex = new Simplex();
