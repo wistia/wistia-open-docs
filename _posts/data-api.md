@@ -2063,13 +2063,14 @@ response will be an empty 404.
 
 ### Update
 
-This method is for replacing the captions on a video via a string parameter.
+This method is for replacing the captions on a video. If the captions for a
+video don't already exist, this method will return an empty 404.
 
 <pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
 
 Parameter | Description
 ----------|------------
-caption_file | The contents of a SRT caption file attached as a normal HTTP parameter.
+caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
 
 #### The Response
 
