@@ -2030,8 +2030,7 @@ url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
 ### Create
 
-This method is for adding captions to a video. If captions already exist for
-this video, this method will respond with a 400.
+This method is for adding captions to a video.
 
 #### The Request
 
@@ -2045,7 +2044,10 @@ language | An optional parameter that denotes which language this file represent
 #### The Response
 
 If successful, this method will respond with an empty HTTP 200 OK.
+
 If the media in question is not found, the response will be HTTP 404 Not Found.
+
+If captions already exist for this video, the response will be HTTP 400 Bad Request.
 
 
 ### Read
@@ -2101,8 +2103,7 @@ If an invalid media-id is used, the response will be an empty 404.
 
 ### Update
 
-This method is for replacing the captions on a video. If the captions for a
-video don't already exist, this method will return an empty 404.
+This method is for replacing the captions on a video.
 
 <pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
 
@@ -2114,6 +2115,10 @@ caption_file | Either an attached SRT file or a string parameter with the conten
 #### The Response
 
 If successful, this method will respond with an empty HTTP 200 OK.
+
+If the specified video does not exist, this method will return an empty 404.
+
+If there are no captions for the video, this method will return an empty 404.
 
 
 ### Delete
@@ -2129,6 +2134,8 @@ language | An optional parameter that denotes which language of captions to dele
 #### The Response
 
 If successful, the response will be an empty HTTP 200 OK.
+
+If the language parameter is present and there are no captions for the specified language, the response will be an empty HTTP 404 Not Found.
 
 ---
 
