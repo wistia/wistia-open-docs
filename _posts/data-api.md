@@ -2030,7 +2030,8 @@ url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
 ### Create
 
-This method is for replacing the captions on a video using an attached SRT file.
+This method is for adding captions to a video. If captions already exist for
+this video, this method will respond with a 400.
 
 #### The Request
 
@@ -2038,11 +2039,13 @@ This method is for replacing the captions on a video using an attached SRT file.
 
 Parameter | Description
 ----------|------------
-caption_file | A SRT caption file attached to the request as an http multipart upload.
+caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
+language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to ISO-639-2. If left unspecified, the language code will be set to 'eng' by default.
 
 #### The Response
 
 If successful, this method will respond with an empty HTTP 200 OK.
+If the media in question is not found, the response will be HTTP 404 Not Found.
 
 
 ### Read
@@ -2055,7 +2058,42 @@ This method takes no parameters.
 
 #### The Response
 
-The response will be the captions of the video in SRT format.
+The response will be an array of JSON objects with the following properties:
+
+Field | Description
+------|------------
+language | A 3 character language code as specified by ISO-639-2.
+captions | The text of the captions for the specified language in SRT format.
+
+##### Example JSON Response
+
+<pre><code class="language-json">
+[
+  {
+    &quot;language&quot;: 'eng',
+    &quot;captions&quot;: 'English SRT file contents here'
+  },
+  {
+    &quot;language&quot;: 'tlh',
+    &quot;captions&quot;: 'Klingon SRT file contents here'
+  }
+]
+</code></pre>
+
+##### Example XML Response
+
+<pre><code class="language-xml">
+&lt;caption-files&gt;
+  &lt;caption-file&gt;
+    &lt;language&gt;eng&lt;/language&gt;
+    &lt;captions&gt;English SRT file contents here&lt;/captions&gt;
+  &lt;/caption-file&gt;
+  &lt;caption-file&gt;
+    &lt;language&gt;tlh&lt;/language&gt;
+    &lt;captions&gt;Klingon SRT file contents here&lt;/captions&gt;
+  &lt;/caption-file&gt;
+&lt;/caption-files&gt;
+</code></pre>
 
 If there are no captions available, or if an invalid media-id is used, the
 response will be an empty 404.
