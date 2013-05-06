@@ -2040,7 +2040,7 @@ this video, this method will respond with a 400.
 Parameter | Description
 ----------|------------
 caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
-language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to ISO-639-2. If left unspecified, the language code will be set to 'eng' by default.
+language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
 
 #### The Response
 
@@ -2062,7 +2062,7 @@ The response will be an array of JSON objects with the following properties:
 
 Field | Description
 ------|------------
-language | A 3 character language code as specified by ISO-639-2.
+language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 captions | The text of the captions for the specified language in SRT format.
 
 ##### Example JSON Response
@@ -2095,8 +2095,8 @@ captions | The text of the captions for the specified language in SRT format.
 &lt;/caption-files&gt;
 </code></pre>
 
-If there are no captions available, or if an invalid media-id is used, the
-response will be an empty 404.
+If there are no captions available, the response will be an empty array in the case of JSON or an empty document in the case of XML.
+If an invalid media-id is used, the response will be an empty 404.
 
 
 ### Update
@@ -2108,6 +2108,7 @@ video don't already exist, this method will return an empty 404.
 
 Parameter | Description
 ----------|------------
+language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
 caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
 
 #### The Response
@@ -2121,7 +2122,9 @@ This method is for removing the captions file from a video altogether.
 
 <pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
 
-This method takes no parameters.
+Parameter | Description
+----------|------------
+language | An optional parameter that denotes which language of captions to delete. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). **If left unspecified, ALL captions will be deleted.**
 
 #### The Response
 
