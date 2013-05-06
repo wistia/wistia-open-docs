@@ -38,6 +38,13 @@ Development
     git clone
     bundle install
 
+
+### Installing and starting elasticsearch
+
+    brew install elasticsearch
+    elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+    rake build
+
 ### How to Add/Update Content
 
 Update markdown files in `_posts` directory. Based on markdown syntax by 

@@ -9,11 +9,18 @@ footer: 'for_developers'
 post_intro: "<p>The Upload API is the best way to programmatically get new videos and files into your Wistia account.</p><p>If you are looking to have site visitors upload content (something like <em>user generated content</em>) you should also check out <a href='/doc/upload-widget-specs'>Upload Widgets</a>.</p>"
 ---
 
-Simply supply the required parameters and **POST** your media file to
-**https://upload.wistia.com/** as multipart-form encoded data.
+To upload a file from your computer, supply the required parameters and
+**POST** your media file to **https://upload.wistia.com/** as multipart-form
+encoded data.
 
-Media uploaded in this manner will be immediately visible in your account, but
-may still require processing (as is the case for uploads in general).
+Uploaded media will be visible immediately in your account, but may require
+processing (as is the case for uploads in general).
+
+To import a file from a web or FTP server, supply the required parameters as a
+standard form-url encoded **POST** to **https://upload.wistia.com/**.
+
+Imported media will always require some processing time, which varies depending
+on the file size and connection speed.
 
 **There's a Gem For That**
 
@@ -51,10 +58,17 @@ The *file* parameter must be multipart-form encoded into the request body.
   <tr>
     <td>file</td>
     <td> 
-      <b>Required</b>.
+      <b>Required unless `url` is specified</b>.
       The media file, multipart-form encoded into the request body.
     </td>
   </tr>
+  <tr>
+      <td>url</td>
+      <td>
+        <b>Required unless `file` is specified</b>.
+        The web or FTP location of the media file to import.
+      </td>
+    </tr>
   <tr>
     <td>project_id</td>
     <td> 
@@ -112,11 +126,16 @@ body will contain a JSON object
 
 This data structure may change in future releases.
 
-## Example
+## Examples
 
 Uploading a media file with cURL:
 <pre><code class='language-markup'>
 $ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/
+</code></pre>
+
+Importing a media file with cURL:
+<pre><code class='language-markup'>
+$ curl -i -d "api_password=&lt;YOUR_API_PASSWORD&gt;&amp;url=&lt;REMOTE_FILE_PATH&gt;" https://upload.wistia.com/
 </code></pre>
 
 ## Ruby Code
