@@ -2050,9 +2050,9 @@ If the media in question is not found, the response will be HTTP 404 Not Found.
 If captions already exist for this video, the response will be HTTP 400 Bad Request.
 
 
-### Read
+### Index
 
-This method will return the captions for a video in SRT format.
+This method will return all the captions for a video in SRT format.
 
 <pre><code class="language-markup">GET https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
 
@@ -2098,6 +2098,50 @@ captions | The text of the captions for the specified language in SRT format.
 </code></pre>
 
 If there are no captions available, the response will be an empty array in the case of JSON or an empty document in the case of XML.
+
+If an invalid media-id is used, the response will be an empty 404.
+
+
+### Show
+
+This method will return the captions for a specific language for a video in SRT format.
+
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/<media-id>/captions/<language-code></code></pre>
+
+This method takes no parameters.
+
+#### The Response
+
+The response will be a JSON object with the following properties:
+
+Field | Description
+------|------------
+language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+captions | The text of the captions for the specified language in SRT format.
+
+##### Example JSON Response
+
+<pre><code class="language-json">
+{
+  &quot;language&quot;: 'eng',
+  &quot;captions&quot;: 'English SRT file contents here'
+},
+{
+  &quot;language&quot;: 'tlh',
+  &quot;captions&quot;: 'Klingon SRT file contents here'
+}
+</code></pre>
+
+##### Example XML Response
+
+<pre><code class="language-xml">
+&lt;caption-file&gt;
+  &lt;language&gt;eng&lt;/language&gt;
+  &lt;captions&gt;English SRT file contents here&lt;/captions&gt;
+&lt;/caption-file&gt;
+</code></pre>
+
+If the specified captions don't exist, the response will be an empty 404.
 
 If an invalid media-id is used, the response will be an empty 404.
 
