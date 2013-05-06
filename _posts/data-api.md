@@ -2098,6 +2098,7 @@ captions | The text of the captions for the specified language in SRT format.
 </code></pre>
 
 If there are no captions available, the response will be an empty array in the case of JSON or an empty document in the case of XML.
+
 If an invalid media-id is used, the response will be an empty 404.
 
 
@@ -2129,7 +2130,7 @@ This method is for removing the captions file from a video altogether.
 
 Parameter | Description
 ----------|------------
-language | An optional parameter that denotes which language of captions to delete. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). **If left unspecified, ALL captions will be deleted.**
+language | An optional parameter that denotes which language of captions to delete. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
 
 #### The Response
 
