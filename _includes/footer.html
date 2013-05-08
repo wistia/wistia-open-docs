@@ -22,90 +22,138 @@
 #wistiacom_footer {
   position: relative;
   background-color: #0e7ac4;
-  height: 250px;
-  text-align: left;
+  text-align: center;
   z-index: 100; }
-  #wistiacom_footer .container {
+  #wistiacom_footer .footer_container {
     z-index: 100;
     margin: 0 auto;
-    width: 960px;
-    position: relative; }
-    #wistiacom_footer .container ul {
+    max-width: 1080px;
+    height: 100%;
+    position: relative;
+    padding: 40px 20px 60px; }
+    #wistiacom_footer .footer_container .footer_sections {
+      list-style-type: none;
+      margin: 0;
+      text-align: center;
+      padding-left: 0;
+      margin-top: 30px;
+      position: relative;
+      display: inline-block;
+      *display: inline;
+      vertical-align: top;
+      zoom: 1; }
+      @media (max-width: 960px) {
+        #wistiacom_footer .footer_container .footer_sections {
+          display: block; } }
+    #wistiacom_footer .footer_container .links ul {
       margin-top: 0px;
       white-space: nowrap;
       list-style-type: none;
       padding-left: 0px; }
-    #wistiacom_footer .container li, #wistiacom_footer .container p {
+    #wistiacom_footer .footer_container li, #wistiacom_footer .footer_container p {
       font-family: "Avenir", "Futura", Helvetica, sans-serif;
       font-size: 15px;
       font-weight: 400;
       line-height: 28px;
       -webkit-font-smoothing: antialiased; }
-    #wistiacom_footer .container h3 {
+      @media (max-width: 650px) {
+        #wistiacom_footer .footer_container li, #wistiacom_footer .footer_container p {
+          font-size: 18px; } }
+    #wistiacom_footer .footer_container h3 {
       color: #3ea9f5;
       font-family: "Avenir", "Futura", Helvetica, sans-serif;
       font-size: 15px;
       font-weight: 700;
       letter-spacing: 1px;
+      margin-top: 0;
       text-transform: uppercase;
-      -webkit-font-smoothing: antialiased; }
-    #wistiacom_footer .container a {
+      -webkit-font-smoothing: antialiased;
+      white-space: nowrap; }
+      @media (max-width: 650px) {
+        #wistiacom_footer .footer_container h3 {
+          font-size: 20px;
+          font-weight: 400; } }
+    #wistiacom_footer .footer_container a {
       text-decoration: none;
       color: white;
       padding: 10px 0px; }
-    #wistiacom_footer .container a:hover {
-      text-decoration: underline; }
-    #wistiacom_footer .container .links {
+      #wistiacom_footer .footer_container a:hover {
+        text-decoration: underline; }
+    #wistiacom_footer .footer_container .links {
       display: inline-block;
       *display: inline;
       vertical-align: top;
       zoom: 1;
       width: 200px;
-      height: 200px;
-      margin-top: 30px; }
-      #wistiacom_footer .container .links.blog {
-        border-left: 1px solid #3ea9f5;
-        border-right: 1px solid #3ea9f5;
-        height: 118px;
-        margin-top: 77px;
+      text-align: left; }
+      @media (max-width: 650px) {
+        #wistiacom_footer .footer_container .links {
+          text-align: center; }
+          #wistiacom_footer .footer_container .links.product, #wistiacom_footer .footer_container .links.community, #wistiacom_footer .footer_container .links.company, #wistiacom_footer .footer_container .links.blog, #wistiacom_footer .footer_container .links.social {
+            display: block;
+            margin: 0 auto 25px; }
+            #wistiacom_footer .footer_container .links.product h3, #wistiacom_footer .footer_container .links.community h3, #wistiacom_footer .footer_container .links.company h3, #wistiacom_footer .footer_container .links.blog h3, #wistiacom_footer .footer_container .links.social h3 {
+              margin: 0; }
+          #wistiacom_footer .footer_container .links.blog, #wistiacom_footer .footer_container .links.social {
+            width: 200px; } }
+      #wistiacom_footer .footer_container .links.blog {
         padding: 0px 60px;
         width: 150px; }
-        #wistiacom_footer .container .links.blog p {
+        #wistiacom_footer .footer_container .links.blog:before, #wistiacom_footer .footer_container .links.blog:after {
+          content: "";
+          position: absolute;
+          background-color: #3ea9f5;
+          width: 1px;
+          height: 120px;
+          top: 40px; }
+        #wistiacom_footer .footer_container .links.blog:before {
+          left: 0px; }
+        #wistiacom_footer .footer_container .links.blog:after {
+          right: 100px; }
+        @media (max-width: 960px) {
+          #wistiacom_footer .footer_container .links.blog:before, #wistiacom_footer .footer_container .links.blog:after {
+            background-color: transparent; } }
+        #wistiacom_footer .footer_container .links.blog p {
           line-height: 20px;
           margin-top: 5px; }
-        #wistiacom_footer .container .links.blog h3 {
-          margin-top: -32px; }
-      #wistiacom_footer .container .links.social {
-        height: 100px;
+      #wistiacom_footer .footer_container .links.social {
         width: 40px;
-        margin-top: 77px; }
-        #wistiacom_footer .container .links.social .icon {
+        margin-top: 50px;
+        margin-left: 50px; }
+        @media (max-width: 650px) {
+          #wistiacom_footer .footer_container .links.social {
+            width: 200px;
+            margin: 0 auto; } }
+        #wistiacom_footer .footer_container .links.social .icon {
           display: block;
-          padding: 19px 0px 0px 48px;
           font-family: "wistiacom-icons";
           font-size: 28px;
           font-style: normal;
           speak: none;
           font-weight: normal;
           -webkit-font-smoothing: antialiased; }
-        #wistiacom_footer .container .links.social .icon-twitter {
+        #wistiacom_footer .footer_container .links.social .icon-twitter, #wistiacom_footer .footer_container .links.social .icon-facebook {
           color: #3ea9f5; }
-          #wistiacom_footer .container .links.social .icon-twitter:hover {
+          #wistiacom_footer .footer_container .links.social .icon-twitter:hover, #wistiacom_footer .footer_container .links.social .icon-facebook:hover {
             color: white;
             text-decoration: none; }
-          #wistiacom_footer .container .links.social .icon-twitter:before {
-            content: "\e007"; }
-        #wistiacom_footer .container .links.social .icon-facebook {
-          color: #3ea9f5; }
-          #wistiacom_footer .container .links.social .icon-facebook:hover {
-            color: white;
-            text-decoration: none; }
-          #wistiacom_footer .container .links.social .icon-facebook:before {
-            content: "\e008"; }
+        #wistiacom_footer .footer_container .links.social .icon-twitter:before {
+          content: "\e007"; }
+        #wistiacom_footer .footer_container .links.social .icon-facebook:before {
+          content: "\e008"; }
+        @media (max-width: 650px) {
+          #wistiacom_footer .footer_container .links.social {
+            width: auto; }
+            #wistiacom_footer .footer_container .links.social .icon {
+              display: inline-block;
+              *display: inline;
+              vertical-align: top;
+              zoom: 1; } }
 </style>
 <div id='wistiacom_footer'>
-<div class='container'>
-<div class='product links'>
+<div class='footer_container'>
+<ul class='footer_sections'>
+<li class='product links'>
 <h3>Product</h3>
 <ul>
 <li>
@@ -121,8 +169,8 @@
 <a href='http://wistia.com/pricing/agency'>Agency Plan</a>
 </li>
 </ul>
-</div>
-<div class='company links'>
+</li>
+<li class='company links'>
 <h3>Company</h3>
 <ul>
 <li>
@@ -138,8 +186,8 @@
 <a href='http://wistia.theresumator.com/apply/'>Jobs</a>
 </li>
 </ul>
-</div>
-<div class='community links'>
+</li>
+<li class='community links'>
 <h3>Community</h3>
 <ul>
 <li>
@@ -155,17 +203,20 @@
 <a href='http://50grove.wistia.com' target='_blank'>Video Producers</a>
 </li>
 </ul>
-</div>
-<div class='blog links'>
+</li>
+</ul>
+<ul class='footer_sections'>
+<li class='blog links'>
 <h3>Blog: April 22</h3>
 <a href='http://wistia.com/blog/labstock-the-wistia-labs-hackathon/'>
 <img src='http://wistia.com/images/elements/skeletor/thumbnail.jpg?20130503'>
 <p>Labstock: The Wistia Labs Hackathon</p>
 </a>
-</div>
-<div class='social links'>
+</li>
+<li class='social links'>
 <a class='icon icon-twitter' href='http://www.twitter.com/wistia' target='_blank'></a>
 <a class='icon icon-facebook' href='http://www.facebook.com/wistia' target='_blank'></a>
-</div>
+</li>
+</ul>
 </div>
 </div>
