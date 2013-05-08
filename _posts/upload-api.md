@@ -9,6 +9,8 @@ footer: 'for_developers'
 post_intro: "<p>The Upload API is the best way to programmatically get new videos and files into your Wistia account.</p><p>If you are looking to have site visitors upload content (something like <em>user generated content</em>) you should also check out <a href='/doc/upload-widget-specs'>Upload Widgets</a>.</p>"
 ---
 
+## Uploading to Wistia
+
 To upload a file from your computer, supply the required parameters and
 **POST** your media file to **https://upload.wistia.com/** as multipart-form
 encoded data.
@@ -16,13 +18,15 @@ encoded data.
 Uploaded media will be visible immediately in your account, but may require
 processing (as is the case for uploads in general).
 
+## Importing Web/FTP Content to Wistia
+
 To import a file from a web or FTP server, supply the required parameters as a
 standard form-url encoded **POST** to **https://upload.wistia.com/**.
 
 Imported media will always require some processing time, which varies depending
 on the file size and connection speed.
 
-**There's a Gem For That**
+## There's a Gem For That
 
 To make using the Upload API even easier, we 
 [created a Ruby gem for it](https://github.com/wistia/wistia-uploader), just for you!
