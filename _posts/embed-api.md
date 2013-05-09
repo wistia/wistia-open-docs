@@ -27,29 +27,26 @@ Ok, for this example we'll be using a hashed_id of `'abcde12345'`. Just substitu
 
 First, build the base URL:
 
-<pre><code class="language-markup">
-http://fast.wistia.com/embed/iframe/abcde12345
-</code></pre>
+<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345</code>
 
 Next, customize the video parameters:
 
-<pre><code class="language-markup">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false</code></pre>
+<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false</code>
 
 Then, add plugin parameters. Plugins have parameters in their own 
 namespace, using bracket notation:
 
-<pre><code class="language-markup">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin[socialbar][version]=v1&plugin[socialbar][buttons]=embed-twitter-facebook</code></pre>
+<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin[socialbar][version]=v1&plugin[socialbar][buttons]=embed-twitter-facebook</code>
 
 It's usually good practice to URL encode both keys and values:
 
-<pre><code class="language-markup">
-http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook</code></pre>
+<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook</code>
 
 Finally we drop this src into an iframe, where we also specify the width and height. Note that the width and height should be the size of the entire embed (the video plus the plugins).
 
-<pre><code class="language-markup">
-&lt;iframe src="http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="387"&gt;&lt;/iframe&gt;
-</code></pre>
+{% codeblock thumbnail.html %}
+<iframe src="http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="387"></iframe>
+{% endcodeblock %}
 
 
 ### Building a JavaScript API embed code
@@ -59,61 +56,61 @@ than using an iframe).  In this case we do the following:
 
 First, add a container to the page, and make sure it has a unique ID attribute:
 
-<pre><code class="language-markup">
-&lt;div id="wistia_abcde12345" style="height:387px;width:640px" data-video-width="640" data-video-height="360"&gt;
+{% codeblock thumbnail.html %}
+<div id="wistia_abcde12345" style="height:387px;width:640px" data-video-width="640" data-video-height="360">
   this is displayed if javascript is disabled
-&lt;/div&gt;
-</code></pre>
+</div>
+{% endcodeblock %}
 
 
 Next, including all the required external scripts:
 
-<pre><code class="language-markup">
-&lt;script src="http://fast.wistia.com/static/E-v1.js"&gt;&lt;/script&gt;
-&lt;script src="http://fast.wistia.com/static/concat/E-v1-gridify,socialbar-v1.js"&gt;&lt;/script&gt;
-</code></pre>
+{% codeblock playlist_api.js %}
+<script src="http://fast.wistia.com/static/E-v1.js"></script>
+<script src="http://fast.wistia.com/static/concat/E-v1-gridify,socialbar-v1.js"></script>
+{% endcodeblock %}
 
 Now initialize the embed and pass in the video parameters:
 
-<pre><code class="language-markup">
-&lt;script&gt;
+{% codeblock playlist_api.js %}
+<script>
 wistiaEmbed = Wistia.embed("abcde12345", {
   playerColor: "ff0000",
   fullscreenButton: false,
   container: "wistia_abcde12345"
 });
-&lt;/script&gt;
-</code></pre>
+</script>
+{% endcodeblock %}
 
 
 Also initialize the socialbar plugin:
 
-<pre><code class="language-markup">
-&lt;script&gt;
+{% codeblock playlist_api.js %}
+<script>
 Wistia.plugin.socialbar(wistiaEmbed, {
   version: "v1",
   buttons: "embed-twitter-facebook"
 });
-&lt;/script&gt;
-</code></pre>
+</script>
+{% endcodeblock %}
 
 
 Now that you've finished your API embed, you can access the [JavaScript API]({{ '/player-api' | post_url }}) and 
 do cool stuff!
 
-<pre><code class="language-markup">
-&lt;script&gt;
+{% codeblock playlist_api.js %}
+<script>
 wistiaEmbed.bind("end", function() {
   alert("The video has ended!");
 });
 wistiaEmbed.bind("timechange", function(t) {
-  if (t &gt; 25 && !highlightedCallToAction) {
+  if (t > 25 && !highlightedCallToAction) {
     highlightCallToAction();
   }
 });
 wistiaEmbed.volume(.5);
-&lt;/script&gt;
-</code></pre>
+</script>
+{% endcodeblock %}
 
 
 ### Building an SEO embed code
@@ -124,8 +121,6 @@ Google's video search is a bit antiquated in that it can't properly detect video
 (which is our preferred method of embedding video). They only recognize the `<object><embed>` style embed codes.
 
 The good news is you can easily use our <a href="{{ '/oembed' | post_url }}">oEmbed endpoint</a> to generate an SEO embed for you.
-
-
 
 
 ---
@@ -152,37 +147,33 @@ It's likely we'll add more URLs to this list in the future.
 
 If you're looking to automatically detect Wistia URLs and run them against our endpoint, we recommend using this regular expression:
 
-<pre><code class='language-vim'>
-/https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/
-</code></pre>
+<code class="full_width">/https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/</code>
 
 
 Or if you don't speak regex, here's what we're matching:
 
-<pre><code class="language-vim">
+{% codeblock thumbnail.html %}
 http(s)://*wistia.com/medias/*
 http(s)://*wistia.com/embed/*
 http(s)://*wi.st/medias/*
 http(s)://*wi.st/embed/*
-</code></pre>
+{% endcodeblock %}
 
-Note, it's likely we'll add support for more URLs in the future so feel free to use a more general regular expression so you don't miss out on future enhancements! Perhaps this:
+Note, it's likely we'll add support for more URLs in the future so feel free to 
+use a more general regular expression so you don't miss out on future 
+enhancements! Perhaps this:
 
-<pre><code class="language-vim">
-/https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/
-</code></pre>
+<code class="full_width">/https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/</code>
 
 ### An Example
 
 Get the embed code and some information for a video at ''http://home.wistia.com/medias/e4a27b971d'' in JSON format:
 
-<pre><code class="language-vim">
-curl "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/e4a27b971d"
-</code></pre>
+<code class="full_width">curl "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/e4a27b971d"</code>
 
 This returns:
 
-<pre><code class="language-markup">
+{% codeblock return.json %}
 {
   "version":"1.0",
   "type":"video",
@@ -196,7 +187,7 @@ This returns:
   "thumbnail_width":100,
   "thumbnail_height":60
 }
-</code></pre>
+{% endcodeblock %}
 
 If you're looking for XML instead of JSON, use: `http://fast.wistia.com/oembed.xml`
 
@@ -238,38 +229,46 @@ See our [working with Wistia images]({{ '/working-with-images' | post_url }}) gu
 
 ### Make Your Life Easier
 
-If you're contemplating doing an oEmbed implementation with Wistia (or any oEmbed provider for that matter), we strongly recommend checking out [Embedly](http://embed.ly). By integrating with them you'll have immediate access to over 100 oEmbed providers. They also have great documentation and ready-made libraries for every popular language, plus they're just nice guys!
+If you're contemplating doing an oEmbed implementation with Wistia (or any 
+oEmbed provider for that matter), we strongly recommend checking out 
+[Embedly](http://embed.ly). By integrating with them you'll have immediate 
+access to over 100 oEmbed providers. They also have great documentation and 
+ready-made libraries for every popular language, plus they're just nice guys!
 
 ---
 
 ## Embedding Options
 
-When building an embed code, it is possible to pass along embedding options which customize the appearance/behavior of your embed.  In our example embed **''Wistia.embed("bfc34aa023", { ... options ... });''** there are two arguments: the media's hashed ID, and a set of embedding options. 
+When building an embed code, it is possible to pass along embedding options 
+which customize the appearance/behavior of your embed.  In our example embed 
+**''Wistia.embed("bfc34aa023", { ... options ... });''** there are two 
+arguments: the media's hashed ID, and a set of embedding options. 
 
-Embedding options can be used with all embed code types to update the video quality, interactive experience, and controls available to viewers.
+Embedding options can be used with all embed code types to update the video 
+quality, interactive experience, and controls available to viewers.
 
 Here's how use of embedding options works for API and SEO embed codes:
 
-<pre><code class='language-javascript'>
+{% codeblock playlist_api.js %}
 <div id="my_container"></div>
 var wistiaEmbed = Wistia.embed("bfc34aa023", {
   platformPreference: "html5",
   autoPlay: true,
   container: "my_container"
 });
-</code></pre>
+{% endcodeblock %}
 
 For iframe embed codes, these must be added to the *iframe src* using `&embeddingOption=value`, like so:
 
-<pre data-line="2-5"><code class='language-javascript'>
-&lt;iframe src="http://fast.wistia.com/embed/iframe/2cf8fbb2c0?
+{% codeblock thumbnail.html %}
+<iframe src="http://fast.wistia.com/embed/iframe/2cf8fbb2c0?
   controlsVisibleOnLoad=true
   &version=v1
   &videoHeight=360&videoWidth=640
   &volumeControl=true" 
-  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"&gt;
-&lt;/iframe&gt;
-</code></pre>
+  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360">
+</iframe>
+{% endcodeblock %}
 
 Here is a list of available options:
 

@@ -41,23 +41,36 @@ width(w)                        | Sets the width of the entire embed.
 
 The Playlist API can only currently be accessed from an 'API' Playlist embed. It includes a variable **''wistiaPlaylist''** to make it easy.
 
-<pre><code class='language-javascript'>var wistiaPlaylist = Wistia.playlist("abcde12345", { ... options ... });</code></pre>
+{% codeblock playlist_api.js %}
+var wistiaPlaylist = Wistia.playlist("abcde12345", { ... options ... });
+{% endcodeblock %}
 
-In this instance, you can reference the playlist object using the <span class="code">wistiaPlaylist</span> variable. If you have multiple playlists on your page, you should update this variable to something specific to this playlist.
+In this instance, you can reference the playlist object using the `wistiaPlaylist`
+variable. If you have multiple playlists on your page, you should update this 
+variable to something specific to this playlist.
 
-As an example, if the following JS code is executed, the email address "max@wistia.com" will be tracked for all the videos in the playlist.
+As an example, if the following JS code is executed, the email address 
+"max@wistia.com" will be tracked for all the videos in the playlist.
 
-<pre><code class='language-javascript'>wistiaPlaylist.setEmail("max@wistia.com")</code></pre>
+{% codeblock playlist_api.js %}
+wistiaPlaylist.setEmail("max@wistia.com")
+{% endcodeblock %}
 
 Or if I wanted to pause the current video:
 
-<pre><code class='language-javascript'>wistiaPlaylist.currentVideo().pause()</code></pre>
+{% codeblock playlist_api.js %}
+wistiaPlaylist.currentVideo().pause()
+{% endcodeblock %}
 
-If you are having trouble using the Player API, or just want to show off what you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
+If you are having trouble using the Player API, or just want to show off what 
+you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
 
 ## Embedding Options
 
-In our example embed <span class="code">Wistia.playlist("abcde12345", { ... options ... });</span> there are two arguments: the playlist's <span class="code">hashed ID</span>, and a set of <span class="code">embedding options</span>. Here is a list of available options:
+In our example embed `>Wistia.playlist("abcde12345", { ... options ... });`
+there are two arguments: the playlist's `hashed ID`, and a set of `embedding options`.
+
+Here is a list of available options:
 
 Option Name     | Type    | Description
 -----------     | ----    | -----------
@@ -73,7 +86,8 @@ videoOptions    | object  | Specify embedding options for each video as specifie
 
 # Playlist events
 
-By default, all the standard player API events are available at the playlist level too. But we also have some playlist-specific events to let you do cool stuff on a per-video basis.
+By default, all the standard player API events are available at the playlist 
+level too. But we also have some playlist-specific events to let you do cool stuff on a per-video basis.
 
 Event Name    | Arguments                       | Description
 ----------    | ---------                       | -----------
@@ -86,18 +100,21 @@ timechange    | sectionIndex, videoIndex, time  | Fired multiple times per secon
 
 To control a specific video with the [Player API](/player-api.html), you'll probably want to use "afterembed". Here's a quick example.
 
-<pre><code class='language-javascript'>wistiaPlaylist.bind("afterembed", function(sectionIndex, videoIndex) {
+{% codeblock playlist_api.js %}
+wistiaPlaylist.bind("afterembed", function(sectionIndex, videoIndex) {
   if (sectionIndex === 1 && videoIndex === 4) {
     // This video was way louder than the others, so let's lower the volume to start.
     wistiaPlaylist.currentVideo().volume(0.2);
   }
-});</code></pre>
+});
+{% endcodeblock %}
 
 ## Playlist API Examples
 
 ### Use a Link to Start a Specific Video or Playlist Section
 
-Using the <span class="code">play(sectionIndex, videoIndex)</span> method, you can build a link that will start a specific Section or Video for you.
+Using the `play(sectionIndex, videoIndex)` method, you can build a link that 
+will start a specific Section or Video for you.
 
 Check out how to get it done in the [Demobin](http://wistia.github.com/demobin/playlist-control-links/).
 
@@ -105,6 +122,7 @@ Check out how to get it done in the [Demobin](http://wistia.github.com/demobin/p
 
 ### Load a random video on page load
 
-You can load a random video from your playlist on page load, and then play a random video after each video ends, using a the playlistData methods, and a bind on "end".
+You can load a random video from your playlist on page load, and then play a 
+random video after each video ends, using a the playlistData methods, and a bind on "end".
 
 Check out how it works in the [Demobin](http://wistia.github.com/demobin/random-playlist-video/).

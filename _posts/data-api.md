@@ -17,7 +17,7 @@ there are some general concepts that you should be aware of:
 
 Generate an API password for your account from the *API* area in your Account Dashboard.
 
-**Note:** The user name is always "api".
+**Note:** The user name is always `api`.
 
 {% post_image hashed_id: '655da9c9b7addebc9d935a02a987d9332bd5f3c1', class: 'center' %}
 
@@ -30,7 +30,7 @@ The API uses **HTTP Basic authentication** to authorize access to the informatio
 
 The request examples retrieve the data in **JSON** format.
 If you would like the data in **XML** format, 
-change the extension of the request from “json” to “xml” (no quotes).
+change the extension of the request from `json` to `xml`.
 
 #### PUT and DELETE
 
@@ -39,7 +39,7 @@ Some HTTP clients are limited to sending GET and POST requests
 You will notice, however, that many of the API calls only respond to 
 **PUT** or **DELETE** requests.  In order to trigger these calls from a client that does not support 
 **PUT** or **DELETE**, use a POST request and add a parameter named “\_method” (no quotes) with 
-a value of either “put” or “delete” (again, no quotes).
+a value of either `put` or `delete`.
 
 #### Rate Limit
 
@@ -81,11 +81,11 @@ The username and password for your account.
 
 In order to tell Wistia that you want a list of all projects, send the following request:
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/projects.json</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/projects.json</code>
 
 #### Sorting
 
-You can get the results back sorted by the name, mediaCount, created, or updated fields. 
+You can get the results back sorted by the name, `mediaCount`, created, or updated fields. 
 In order to specify how you want the results to be sorted, append one or both of the following query parameters to the request 
 URL:
 
@@ -113,7 +113,7 @@ URL:
 For example, if you want to sort your results in descending order by the date each project was created, your request 
 URL would look something like this:
 
-<pre><code class="language-markup">https://api.wistia.com/v1/projects.json?sort_by=created&amp;sort_direction=0</code></pre>
+<code class="full_width">https://api.wistia.com/v1/projects.json?sort_by=created&amp;sort_direction=0</code>
 
 #### Paging
 
@@ -144,7 +144,7 @@ If you want to get your results back 10 projects at a time,
 starting on the second page of results, then your request 
 URL should look something like this:
 
-<pre><code class="language-markup">https://api.wistia.com/v1/projects.json?page=2&amp;per_page=10</code></pre>
+<code class="full_width">https://api.wistia.com/v1/projects.json?page=2&amp;per_page=10</code>
 
 #### The Response
 
@@ -161,11 +161,11 @@ depends on which extension was used to make the request.
 </tr>
 <tr>
   <td> name </td>
-  <td> The project&#039;s display name.</td>
+  <td> The project's display name.</td>
 </tr>
 <tr>
   <td> description </td>
-  <td> The project&#039;s description.</td>
+  <td> The project's description.</td>
 </tr>
 <tr>
   <td> mediaCount </td>
@@ -207,71 +207,71 @@ depends on which extension was used to make the request.
 #### Example JSON Response
 
 
-<pre><code class="language-json">
-[
-  {
-    "id": 22570,
-    "name": "My Project Title",
-    "description": "My Project Description",
-    "mediaCount": 2,
-    "created": "2010-08-13T18:47:39+00:00",
-    "updated": "2010-08-19T21:47:00+00:00",
-    "hashedId": "4d23503f70",
-    "anonymousCanUpload": false,
-    "anonymousCanDownload": false,
-    "public": false,
-    "publicId": "4bD"
-  },
-  {
-    "id": 10495,
-    "name": "Another Project Title",
-    "description": "Another Project Description",
-    "mediaCount": 4,
-    "created": "2010-08-13T18:47:39+00:00",
-    "updated": "2010-08-19T21:47:00+00:00",
-    "hashedId": "4d23503f70",
-    "anonymousCanUpload": false,
-    "anonymousCanDownload": false,
-    "public": false,
-    "publicId": "3dF"
-  }
-]    
-</code></pre>
+{% codeblock json_example_response.json %}
+  [
+    {
+      "id": 22570,
+      "name": "My Project Title",
+      "description": "My Project Description",
+      "mediaCount": 2,
+      "created": "2010-08-13T18:47:39+00:00",
+      "updated": "2010-08-19T21:47:00+00:00",
+      "hashedId": "4d23503f70",
+      "anonymousCanUpload": false,
+      "anonymousCanDownload": false,
+      "public": false,
+      "publicId": "4bD"
+    },
+    {
+      "id": 10495,
+      "name": "Another Project Title",
+      "description": "Another Project Description",
+      "mediaCount": 4,
+      "created": "2010-08-13T18:47:39+00:00",
+      "updated": "2010-08-19T21:47:00+00:00",
+      "hashedId": "4d23503f70",
+      "anonymousCanUpload": false,
+      "anonymousCanDownload": false,
+      "public": false,
+      "publicId": "3dF"
+    }
+  ]
+{% endcodeblock %}
 
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;projects&gt;
-  &lt;project&gt;
-    &lt;id&gt;22570&lt;/id&gt;
-    &lt;name&gt;My Project Title&lt;/name&gt;
-    &lt;description&gt;My Project Description&lt;/description&gt;
-    &lt;mediaCount&gt;2&lt;/mediaCount&gt;
-    &lt;created&gt;2010-08-13T18:47:39+00:00&lt;/created&gt;
-    &lt;updated&gt;2010-08-19T21:47:00+00:00&lt;/updated&gt;
-    &lt;hashedId&gt;4d23503f70&lt;/hashedId&gt;
-    &lt;anonymousCanUpload&gt;false&lt;/anonymousCanUpload&gt;
-    &lt;anonymousCanDownload&gt;false&lt;/anonymousCanDownload&gt;
-    &lt;public&gt;false&lt;/public&gt;
-    &lt;publicId&gt;4bD&lt;/publicId&gt;
-  &lt;/project&gt;
-  &lt;project&gt;
-    &lt;id&gt;10495&lt;/id&gt;
-    &lt;name&gt;Another Project Title&lt;/name&gt;
-    &lt;description&gt;Another Project Description&lt;/description&gt;
-    &lt;mediaCount&gt;4&lt;/mediaCount&gt;
-    &lt;created&gt;2010-08-13T18:47:39+00:00&lt;/created&gt;
-    &lt;updated&gt;2010-08-19T21:47:00+00:00&lt;/updated&gt;
-    &lt;hashedId&gt;4d23503f70&lt;/hashedId&gt;
-    &lt;anonymousCanUpload&gt;false&lt;/anonymousCanUpload&gt;
-    &lt;anonymousCanDownload&gt;false&lt;/anonymousCanDownload&gt;
-    &lt;public&gt;false&lt;/public&gt;
-    &lt;publicId&gt;3dF&lt;/publicId&gt;
-  &lt;/project&gt;
-&lt;/projects&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<projects>
+  <project>
+    <id>22570</id>
+    <name>My Project Title</name>
+    <description>My Project Description</description>
+    <mediaCount>2</mediaCount>
+    <created>2010-08-13T18:47:39+00:00</created>
+    <updated>2010-08-19T21:47:00+00:00</updated>
+    <hashedId>4d23503f70</hashedId>
+    <anonymousCanUpload>false</anonymousCanUpload>
+    <anonymousCanDownload>false</anonymousCanDownload>
+    <public>false</public>
+    <publicId>4bD</publicId>
+  </project>
+  <project>
+    <id>10495</id>
+    <name>Another Project Title</name>
+    <description>Another Project Description</description>
+    <mediaCount>4</mediaCount>
+    <created>2010-08-13T18:47:39+00:00</created>
+    <updated>2010-08-19T21:47:00+00:00</updated>
+    <hashedId>4d23503f70</hashedId>
+    <anonymousCanUpload>false</anonymousCanUpload>
+    <anonymousCanDownload>false</anonymousCanDownload>
+    <public>false</public>
+    <publicId>3dF</publicId>
+  </project>
+</projects>
+{% endcodeblock %}
 
 ---
 
@@ -290,7 +290,7 @@ In order to tell Wistia that you want a list of all the media for a specific pro
 HTTP **GET** request to the 
 following URL:
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>.json</code>
 
 #### The Response
 
@@ -303,8 +303,8 @@ about the requested project, including a list of the media in that project.  The
 Field | Description
 ------|---------------------------
 id    | A unique numeric identifier for the project within the system.
-name  | The project&#039;s title or display name.
-description  | The project&#039;s description.
+name  | The project's title or display name.
+description  | The project's description.
 mediaCount | The number of media in the project.
 created | The date that the project was originally created.
 updated | The date that the project was last changed.
@@ -332,99 +332,99 @@ updated   | The date when the media was last changed.
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 22570,
-    &quot;name&quot;: &quot;My Project Title&quot;,
-    &quot;description&quot;: &quot;My Project Description&quot;,
-    &quot;mediaCount&quot;: 2,
-    &quot;created&quot;: &quot;2010-08-13T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-19T21:47:00+00:00&quot;,
-    &quot;hashedId&quot;: &quot;4d23503f70&quot;,
-    &quot;anonymousCanUpload&quot;: false,
-    &quot;anonymousCanDownload&quot;: false,
-    &quot;public&quot;: false,
-    &quot;publicId&quot;: &quot;4bD&quot;,
-    &quot;medias&quot;: [
+  "id": 22570,
+    "name": "My Project Title",
+    "description": "My Project Description",
+    "mediaCount": 2,
+    "created": "2010-08-13T18:47:39+00:00",
+    "updated": "2010-08-19T21:47:00+00:00",
+    "hashedId": "4d23503f70",
+    "anonymousCanUpload": false,
+    "anonymousCanDownload": false,
+    "public": false,
+    "publicId": "4bD",
+    "medias": [
     {
-      &quot;id&quot;: 181279,
-      &quot;name&quot;: &quot;Introducing the Slimlist&quot;,
-      &quot;thumbnail&quot;: {
-        &quot;url&quot;: &quot;http://www.wistia.com/path/to/thumbnail1.png&quot;,
-        &quot;width&quot;: 100,
-        &quot;height&quot;: 60
+      "id": 181279,
+      "name": "Introducing the Slimlist",
+      "thumbnail": {
+        "url": "http://www.wistia.com/path/to/thumbnail1.png",
+        "width": 100,
+        "height": 60
       },
-      &quot;type&quot;: &quot;Video&quot;,
-      &quot;duration&quot;: 74,
-      &quot;created&quot;: &quot;2010-08-14T18:47:39+00:00&quot;,
-      &quot;updated&quot;: &quot;2010-08-20T21:47:00+00:00&quot;
+      "type": "Video",
+      "duration": 74,
+      "created": "2010-08-14T18:47:39+00:00",
+      "updated": "2010-08-20T21:47:00+00:00"
     },
     {
-      &quot;id&quot;: 181182,
-      &quot;name&quot;: &quot;Due Date&quot;,
-      &quot;section&quot;: &quot;Trailers&quot;,
-      &quot;thumbnail&quot;: {
-        &quot;url&quot;: &quot;http://www.wistia.com/path/to/thumbnail2.png&quot;,
-        &quot;width&quot;: 100,
-        &quot;height&quot;: 60
+      "id": 181182,
+      "name": "Due Date",
+      "section": "Trailers",
+      "thumbnail": {
+        "url": "http://www.wistia.com/path/to/thumbnail2.png",
+        "width": 100,
+        "height": 60
       },
-      &quot;type&quot;: &quot;Video&quot;,
-      &quot;duration&quot;: 126,
-      &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-      &quot;updated&quot;: &quot;2010-08-21T21:47:00+00:00&quot;
+      "type": "Video",
+      "duration": 126,
+      "created": "2010-08-15T18:47:39+00:00",
+      "updated": "2010-08-21T21:47:00+00:00"
     }
   ]
 }
-</code></pre>
+{% endcodeblock %}
 
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;project&gt;
-  &lt;id&gt;22570&lt;/id&gt;
-  &lt;name&gt;My Project Title&lt;/name&gt;
-  &lt;description&gt;My Project Description&lt;/description&gt;
-  &lt;mediaCount&gt;2&lt;/mediaCount&gt;
-  &lt;created&gt;2010-08-13T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-19T21:47:00+00:00&lt;/updated&gt;
-  &lt;hashedId&gt;4d23503f70&lt;/hashedId&gt;
-  &lt;anonymousCanUpload&gt;false&lt;/anonymousCanUpload&gt;
-  &lt;anonymousCanDownload&gt;false&lt;/anonymousCanDownload&gt;
-  &lt;public&gt;false&lt;/public&gt;
-  &lt;publicId&gt;4bD&lt;/publicId&gt;
-  &lt;medias&gt;
-  &lt;media&gt;
-  &lt;id&gt;181279&lt;/id&gt;
-  &lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-  &lt;thumbnail&gt;
-  &lt;url&gt;http://www.wistia.com/path/to/thumbnail1.png&lt;/url&gt;
-  &lt;width&gt;100&lt;/width&gt;
-  &lt;height&gt;60&lt;/height&gt;
-  &lt;/thumbnail&gt;
-  &lt;type&gt;Video&lt;/type&gt;
-  &lt;duration&gt;74&lt;/duration&gt;
-  &lt;created&gt;2010-08-14T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-20T21:47:00+00:00&lt;/updated&gt;
-  &lt;/media&gt;
-  &lt;media&gt;
-  &lt;id&gt;181182&lt;/id&gt;
-  &lt;name&gt;Due Date&lt;/name&gt;
-  &lt;section&gt;Trailers&lt;/section&gt;
-  &lt;thumbnail&gt;
-  &lt;url&gt;http://www.wistia.com/path/to/thumbnail2.png&lt;/url&gt;
-  &lt;width&gt;100&lt;/width&gt;
-  &lt;height&gt;60&lt;/height&gt;
-  &lt;/thumbnail&gt;
-  &lt;type&gt;Video&lt;/type&gt;
-  &lt;duration&gt;126&lt;/duration&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-21T21:47:00+00:00&lt;/updated&gt;
-  &lt;/media&gt;
-  &lt;/medias&gt;
-&lt;/project&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<project>
+  <id>22570</id>
+  <name>My Project Title</name>
+  <description>My Project Description</description>
+  <mediaCount>2</mediaCount>
+  <created>2010-08-13T18:47:39+00:00</created>
+  <updated>2010-08-19T21:47:00+00:00</updated>
+  <hashedId>4d23503f70</hashedId>
+  <anonymousCanUpload>false</anonymousCanUpload>
+  <anonymousCanDownload>false</anonymousCanDownload>
+  <public>false</public>
+  <publicId>4bD</publicId>
+  <medias>
+  <media>
+  <id>181279</id>
+  <name>Introducing the Slimlist</name>
+  <thumbnail>
+  <url>http://www.wistia.com/path/to/thumbnail1.png</url>
+  <width>100</width>
+  <height>60</height>
+  </thumbnail>
+  <type>Video</type>
+  <duration>74</duration>
+  <created>2010-08-14T18:47:39+00:00</created>
+  <updated>2010-08-20T21:47:00+00:00</updated>
+  </media>
+  <media>
+  <id>181182</id>
+  <name>Due Date</name>
+  <section>Trailers</section>
+  <thumbnail>
+  <url>http://www.wistia.com/path/to/thumbnail2.png</url>
+  <width>100</width>
+  <height>60</height>
+  </thumbnail>
+  <type>Video</type>
+  <duration>126</duration>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-21T21:47:00+00:00</updated>
+  </media>
+  </medias>
+</project>
+{% endcodeblock %}
 
 
 ---
@@ -435,7 +435,7 @@ Using the API, you can create a new project in your account.
 
 #### The Request
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/projects.json</code></pre>
+<code class="full_width">POST https://api.wistia.com/v1/projects.json</code>
 
 #### Parameters
 
@@ -486,42 +486,42 @@ publicId | If the project is public, this field contains a string representing t
 **Location:** https://api.wistia.com/v1/projects/1.json
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;My New Project&quot;,
-    &quot;description&quot;: &quot;My Project Description&quot;,
-    &quot;mediaCount&quot;: 0,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;hashedId&quot;: &quot;4d23503f70&quot;,
-    &quot;anonymousCanUpload&quot;: false,
-    &quot;anonymousCanDownload&quot;: false,
-    &quot;public&quot;: false,
-    &quot;publicId&quot;: &quot;4bD&quot;
+  "id": 1,
+    "name": "My New Project",
+    "description": "My Project Description",
+    "mediaCount": 0,
+    "created": "2010-08-15T18:47:39+00:00",
+    "updated": "2010-08-15T18:47:39+00:00",
+    "hashedId": "4d23503f70",
+    "anonymousCanUpload": false,
+    "anonymousCanDownload": false,
+    "public": false,
+    "publicId": "4bD"
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/1.xml
 
-<pre><code class="language-xml">
-  &lt;project&gt;
-    &lt;id&gt;1&lt;/id&gt;
-    &lt;name&gt;My New Project&lt;/name&gt;
-    &lt;description&gt;My New Project Description&lt;/description&gt;
-    &lt;mediaCount&gt;0&lt;/mediaCount&gt;
-    &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-    &lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
-    &lt;hashedId&gt;4d23503f70&lt;/hashedId&gt;
-    &lt;anonymousCanUpload&gt;false&lt;/anonymousCanUpload&gt;
-    &lt;anonymousCanDownload&gt;false&lt;/anonymousCanDownload&gt;
-    &lt;public&gt;false&lt;/public&gt;
-    &lt;publicId&gt;4bD&lt;/publicId&gt;
-  &lt;/project&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+  <project>
+    <id>1</id>
+    <name>My New Project</name>
+    <description>My New Project Description</description>
+    <mediaCount>0</mediaCount>
+    <created>2010-08-15T18:47:39+00:00</created>
+    <updated>2010-08-15T18:47:39+00:00</updated>
+    <hashedId>4d23503f70</hashedId>
+    <anonymousCanUpload>false</anonymousCanUpload>
+    <anonymousCanDownload>false</anonymousCanDownload>
+    <public>false</public>
+    <publicId>4bD</publicId>
+  </project>
+{% endcodeblock %}
 
 ---
 
@@ -532,9 +532,9 @@ Currently, the only attribute that you can update is the project name.
 
 #### The Request
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code></pre>
+<code class="full_width">PUT https://api.wistia.com/v1/projects/<project-id>.json</code>
 
-Make sure you replace *&lt;project-id&gt;* with the hashed ID of the project that you want to update.
+Make sure you replace `<project-id>` with the hashed ID of the project that you want to update.
 
 #### The Parameters
 
@@ -542,7 +542,7 @@ Here are the valid parameters for this action:
 
 Parameter Name | Description
 ---------------|---------------
-name     | The project&#039;s new name.
+name     | The project's new name.
 anonymousCanUpload | A flag indicating whether or not anonymous users may upload files to this project.  Set to “1” to enable and “0” to disable.
 anonymousCanDownload | A flag indicating whether or not anonymous users may download files from this project.  Set to “1” to enable and “0” to disable.
 public | A flag indicating whether or not the project is enabled for public access.  Set to “1” to enable and “0” to disable.
@@ -567,42 +567,40 @@ publicId | If the project is public, this field contains a string representing t
 
 #### Example JSON Response
 
-
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Updated Project Name&quot;,
-    &quot;description&quot;: &quot;Updated Project Description&quot;,
-    &quot;mediaCount&quot;: 5,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;hashedId&quot;: &quot;4d23503f70&quot;,
-    &quot;anonymousCanUpload&quot;: false,
-    &quot;anonymousCanDownload&quot;: false,
-    &quot;public&quot;: false,
-    &quot;publicId&quot;: &quot;4bD&quot;
+  "id": 1,
+    "name": "Updated Project Name",
+    "description": "Updated Project Description",
+    "mediaCount": 5,
+    "created": "2010-08-15T18:47:39+00:00",
+    "updated": "2010-08-15T18:47:39+00:00",
+    "hashedId": "4d23503f70",
+    "anonymousCanUpload": false,
+    "anonymousCanDownload": false,
+    "public": false,
+    "publicId": "4bD"
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;project&gt;
-&lt;id&gt;1&lt;/id&gt;
-&lt;name&gt;Updated Project Name&lt;/name&gt;
-&lt;description&gt;Updated Project Description&lt;/description&gt;
-&lt;mediaCount&gt;5&lt;/mediaCount&gt;
-&lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-&lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
-&lt;hashedId&gt;4d23503f70&lt;/hashedId&gt;
-&lt;anonymousCanUpload&gt;false&lt;/anonymousCanUpload&gt;
-&lt;anonymousCanDownload&gt;false&lt;/anonymousCanDownload&gt;
-&lt;public&gt;false&lt;/public&gt;
-&lt;publicId&gt;4bD&lt;/publicId&gt;
-&lt;/project&gt;
-</code></pre>
-
+{% codeblock example_xml_response.xml %}
+<project>
+  <id>1</id>
+  <name>Updated Project Name</name>
+  <description>Updated Project Description</description>
+  <mediaCount>5</mediaCount>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-15T18:47:39+00:00</updated>
+  <hashedId>4d23503f70</hashedId>
+  <anonymousCanUpload>false</anonymousCanUpload>
+  <anonymousCanDownload>false</anonymousCanDownload>
+  <public>false</public>
+  <publicId>4bD</publicId>
+</project>
+{% endcodeblock %}
 
 
 ---
@@ -613,9 +611,9 @@ The Wistia data API allows you to delete a project.
 
 #### The Request
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code></pre>
+<code class="full_width">DELETE https://api.wistia.com/v1/projects/<project-id>.json</code>
 
-Make sure you replace *&lt;project-id&gt;* with the hashed ID of the project that you want to delete.
+Make sure you replace *<project-id>* with the hashed ID of the project that you want to delete.
 
 #### The Parameters
 
@@ -647,40 +645,40 @@ publicId | If the project is public, this field contains a string representing t
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Project Name&quot;,
-    &quot;description&quot;: &quot;Project Description&quot;,
-    &quot;mediaCount&quot;: 5,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;hashedId&quot;: &quot;4d23503f70&quot;,
-    &quot;anonymousCanUpload&quot;: false,
-    &quot;anonymousCanDownload&quot;: false,
-    &quot;public&quot;: false,
-    &quot;publicId&quot;: &quot;4bD&quot;
+  "id": 1,
+  "name": "Project Name",
+  "description": "Project Description",
+  "mediaCount": 5,
+  "created": "2010-08-15T18:47:39+00:00",
+  "updated": "2010-08-15T18:47:39+00:00",
+  "hashedId": "4d23503f70",
+  "anonymousCanUpload": false,
+  "anonymousCanDownload": false,
+  "public": false,
+  "publicId": "4bD"
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class='language-xml'>
-&lt;project&gt;
-  &lt;id&gt;1&lt;/id&gt;
-  &lt;name&gt;Project Name&lt;/name&gt;
-  &lt;description&gt;Project Description&lt;/description&gt;
-  &lt;mediaCount&gt;5&lt;/mediaCount&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
-  &lt;hashedId&gt;4d23503f70&lt;/hashedId&gt;
-  &lt;anonymousCanUpload&gt;false&lt;/anonymousCanUpload&gt;
-  &lt;anonymousCanDownload&gt;false&lt;/anonymousCanDownload&gt;
-  &lt;public&gt;false&lt;/public&gt;
-  &lt;publicId&gt;4bD&lt;/publicId&gt;
-&lt;/project&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<project>
+  <id>1</id>
+  <name>Project Name</name>
+  <description>Project Description</description>
+  <mediaCount>5</mediaCount>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-15T18:47:39+00:00</updated>
+  <hashedId>4d23503f70</hashedId>
+  <anonymousCanUpload>false</anonymousCanUpload>
+  <anonymousCanDownload>false</anonymousCanDownload>
+  <public>false</public>
+  <publicId>4bD</publicId>
+</project>
+{% endcodeblock %}
 
 ---
 
@@ -697,14 +695,17 @@ including all of its media, sidebar elements, and sections.
 #### The Request
 
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json</code></pre>
+<code class="full_width">POST https://api.wistia.com/v1/projects/<project-id>/copy.json</code>
 
-Make sure you replace *&lt;project-id&gt;* with the hashed ID of the project that you want to copy.
+Make sure you replace `<project-id>` with the hashed ID of the project that you want to copy.
 
 
 #### Parameters
 
-You can specify the owner of the new project by passing an optional parameter.  The person you specify must be a manager in the account.  If you omit this parameter, or if you specify an email address for someone that&#039;s not a manager, the project owner defaults to the account owner.
+You can specify the owner of the new project by passing an optional parameter.  
+The person you specify must be a manager in the account.  If you omit this 
+parameter, or if you specify an email address for someone that's not a manager, 
+the project owner defaults to the account owner.
 
 Parameter Name   | Description
 -----------------|----------------
@@ -740,41 +741,42 @@ publicId              | If the project is public, this field contains a string r
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/3.json
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 3,
-    &quot;name&quot;: &quot;Project Name&quot;,
-    &quot;description&quot;: &quot;Project Description&quot;,
-    &quot;mediaCount&quot;: 5,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;hashedId&quot;: &quot;4d23503f70&quot;,
-    &quot;anonymousCanUpload&quot;: false,
-    &quot;anonymousCanDownload&quot;: false,
-    &quot;public&quot;: false,
-    &quot;publicId&quot;: &quot;4bD&quot;
-}</code></pre>
+  "id": 3,
+  "name": "Project Name",
+  "description": "Project Description",
+  "mediaCount": 5,
+  "created": "2010-08-15T18:47:39+00:00",
+  "updated": "2010-08-15T18:47:39+00:00",
+  "hashedId": "4d23503f70",
+  "anonymousCanUpload": false,
+  "anonymousCanDownload": false,
+  "public": false,
+  "publicId": "4bD"
+}
+{% endcodeblock %}
 
 #### Example XML Response
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/3.xml
 
-<pre><code class="language-xml">
-&lt;project&gt;
-  &lt;id&gt;3&lt;/id&gt;
-  &lt;name&gt;Project Name&lt;/name&gt;
-  &lt;desciption&gt;Project Description&lt;/description&gt;
-  &lt;mediaCount&gt;5&lt;/mediaCount&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-15T18:47:39+00:00&lt;/updated&gt;
-  &lt;hashedId&gt;4d23503f70&lt;/hashedId&gt;
-  &lt;anonymousCanUpload&gt;false&lt;/anonymousCanUpload&gt;
-  &lt;anonymousCanDownload&gt;false&lt;/anonymousCanDownload&gt;
-  &lt;public&gt;false&lt;/public&gt;
-  &lt;publicId&gt;4bD&lt;/publicId&gt;
-&lt;/project&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<project>
+  <id>3</id>
+  <name>Project Name</name>
+  <desciption>Project Description</description>
+  <mediaCount>5</mediaCount>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-15T18:47:39+00:00</updated>
+  <hashedId>4d23503f70</hashedId>
+  <anonymousCanUpload>false</anonymousCanUpload>
+  <anonymousCanDownload>false</anonymousCanDownload>
+  <public>false</public>
+  <publicId>4bD</publicId>
+</project>
+{% endcodeblock %}
 
 ---
 
@@ -785,14 +787,13 @@ A sharing is an object that links either a contact or a contact group to a proje
 ### Project Sharings: List
 
 The Wistia data API allows you to see a list of sharings on a project.
-A sharing is an object that links either a contact or a contact group to a project, including information about the contacts&#039; permissions to that project.
+A sharing is an object that links either a contact or a contact group to a project, including information about the contacts#039; permissions to that project.
 
 #### The Request
 
+<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>/sharings.json</code>
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code></pre>
-
-Make sure you replace *&lt;project-id&gt;* with the hashed ID of the project for which you would like to see sharings.
+Make sure you replace `<project-id>` with the hashed ID of the project for which you would like to see sharings.
 
 #### The Parameters
 
@@ -820,13 +821,12 @@ Field     | Description
 ----------|---------------
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: &#039;Contact&#039; or &#039;ContactGroup&#039;.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it&#039;s a ContactGroup, this field will be omitted.
+type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
+email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 #### Example JSON Response
 
-
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 [
   {
     "id": 14,
@@ -862,48 +862,48 @@ email (optional) | If this object refers to a Contact, this field will be presen
     }
   }
 ]
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-XML">
-&lt;sharings&gt;
-  &lt;sharing&gt;
-    &lt;id&gt;14&lt;/id&gt;
-    &lt;isAdmin&gt;true&lt;/isAdmin&gt;
-    &lt;canShare&gt;true&lt;/canShare&gt;
-    &lt;canDownload&gt;true&lt;/canDownload&gt;
-    &lt;canUpload&gt;true&lt;/canUpload&gt;
-    &lt;share&gt;
-      &lt;id&gt;3&lt;/id&gt;
-      &lt;name&gt;Jim&lt;/name&gt;
-      &lt;type&gt;Contact&lt;/type&gt;
-      &lt;email&gt;jim@wistia.com&lt;/email&gt;
-    &lt;/share&gt;
-    &lt;project&gt;
-      &lt;id&gt;13&lt;/id&gt;
-      &lt;name&gt;My Project&lt;/name&gt;
-    &lt;/project&gt;
-  &lt;/sharing&gt;
-  &lt;sharing&gt;
-    &lt;id&gt;15&lt;/id&gt;
-    &lt;isAdmin&gt;false&lt;/isAdmin&gt;
-    &lt;canShare&gt;true&lt;/canShare&gt;
-    &lt;canDownload&gt;true&lt;/canDownload&gt;
-    &lt;canUpload&gt;false&lt;/canUpload&gt;
-    &lt;share&gt;
-      &lt;id&gt;3&lt;/id&gt;
-      &lt;name&gt;Sales&lt;/name&gt;
-      &lt;type&gt;ContactGroup&lt;/type&gt;
-    &lt;/share&gt;
-    &lt;project&gt;
-      &lt;id&gt;13&lt;/id&gt;
-      &lt;name&gt;My Project&lt;/name&gt;
-    &lt;/project&gt;
-  &lt;/sharing&gt;
-&lt;/sharings&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<sharings>
+  <sharing>
+    <id>14</id>
+    <isAdmin>true</isAdmin>
+    <canShare>true</canShare>
+    <canDownload>true</canDownload>
+    <canUpload>true</canUpload>
+    <share>
+      <id>3</id>
+      <name>Jim</name>
+      <type>Contact</type>
+      <email>jim@wistia.com</email>
+    </share>
+    <project>
+      <id>13</id>
+      <name>My Project</name>
+    </project>
+  </sharing>
+  <sharing>
+    <id>15</id>
+    <isAdmin>false</isAdmin>
+    <canShare>true</canShare>
+    <canDownload>true</canDownload>
+    <canUpload>false</canUpload>
+    <share>
+      <id>3</id>
+      <name>Sales</name>
+      <type>ContactGroup</type>
+    </share>
+    <project>
+      <id>13</id>
+      <name>My Project</name>
+    </project>
+  </sharing>
+</sharings>
+{% endcodeblock %}
 
 ---
 
@@ -913,16 +913,19 @@ The Wistia data API allows you to see the details of a particular sharing on a p
 
 #### The Request
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;.json</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
 
-Make sure you replace *&lt;project-id&gt;* with the hashed ID of the project for which you would like to see sharings, and replace *&lt;sharing-id&gt;* with the ID of the specific sharing object that you want to see.
+Make sure you replace `<project-id>` with the hashed ID of the project for 
+which you would like to see sharings, and replace *<sharing-id>* with the ID 
+of the specific sharing object that you want to see.
 
 #### The Paramters
 This method does not accept any other parameters.
 
 #### The Response
 
-The server responds with HTTP status **200 OK** and the response body contains the requested sharing on the project.
+The server responds with HTTP status **200 OK** and the response body contains 
+the requested sharing on the project.
 
 
 Field    | Description
@@ -941,54 +944,53 @@ Field     | Description
 ----------|---------------
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: &#039;Contact&#039; or &#039;ContactGroup&#039;.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it&#039;s a ContactGroup, this field will be omitted.
+type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
+email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 #### Example JSON Response
 
-
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 14,
-    &quot;isAdmin&quot;: true,
-    &quot;canShare&quot;: true,
-    &quot;canDownload&quot;: true,
-    &quot;canUpload&quot;: true,
-    &quot;share&quot;: {
-      &quot;id&quot;: 3,
-      &quot;name&quot;: &quot;Jim&quot;,
-      &quot;type&quot;: &quot;Contact&quot;,
-      &quot;email&quot;: &quot;jim@wistia.com&quot;
+  "id": 14,
+    "isAdmin": true,
+    "canShare": true,
+    "canDownload": true,
+    "canUpload": true,
+    "share": {
+      "id": 3,
+      "name": "Jim",
+      "type": "Contact",
+      "email": "jim@wistia.com"
     },
-    &quot;project&quot;: {
-      &quot;id&quot;: 13,
-      &quot;name&quot;: &quot;My Project&quot;
+    "project": {
+      "id": 13,
+      "name": "My Project"
     }
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;sharing&gt;
-  &lt;id&gt;14&lt;/id&gt;
-  &lt;isAdmin&gt;true&lt;/isAdmin&gt;
-  &lt;canShare&gt;true&lt;/canShare&gt;
-  &lt;canDownload&gt;true&lt;/canDownload&gt;
-  &lt;canUpload&gt;true&lt;/canUpload&gt;
-  &lt;share&gt;
-    &lt;id&gt;3&lt;/id&gt;
-    &lt;name&gt;Jim&lt;/name&gt;
-    &lt;type&gt;Contact&lt;/type&gt;
-    &lt;email&gt;jim@wistia.com&lt;/email&gt;
-  &lt;/share&gt;
-  &lt;project&gt;
-    &lt;id&gt;13&lt;/id&gt;
-    &lt;name&gt;My Project&lt;/name&gt;
-  &lt;/project&gt;
-&lt;/sharing&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<sharing>
+  <id>14</id>
+  <isAdmin>true</isAdmin>
+  <canShare>true</canShare>
+  <canDownload>true</canDownload>
+  <canUpload>true</canUpload>
+  <share>
+    <id>3</id>
+    <name>Jim</name>
+    <type>Contact</type>
+    <email>jim@wistia.com</email>
+  </share>
+  <project>
+    <id>13</id>
+    <name>My Project</name>
+  </project>
+</sharing>
+{% endcodeblock %}
 
 ---
 
@@ -999,12 +1001,16 @@ Conceptually, you do this by creating a new sharing object for a project.
 
 #### The Request
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code></pre>
+<code class="full_width">POST https://api.wistia.com/v1/projects/<project-id>/sharings.json</code>
 
-Make sure you replace **&lt;project-id&gt;** with the hashed ID of the project that you want to share.
+Make sure you replace `<project-id>` with the hashed ID of the project that 
+you want to share.
 
-This method can accept several parameters to customize the way that the sharing happens.
-The only required parameter is **with**, which specifies the email address of the person with whom you want to share the project.
+This method can accept several parameters to customize the way that the sharing 
+happens.
+
+The only required parameter is **with**, which specifies the email address of 
+the person with whom you want to share the project.
 
 Parameter   | Description
 ------------|-------------------
@@ -1029,41 +1035,47 @@ they already have a username/password.
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/13/sharings/16.json
 
-<pre><code class="language-json">{ &quot;project&quot;: &quot;http://myaccount.wistia.com/projects/13&quot; }</code></pre>
+{% codeblock example_json_response.json %}{ "project": "http://myaccount.wistia.com/projects/13" }{% endcodeblock %}
 
-Here&#039;s an example of what the response body might look like if the user is not yet activated:
+Here's an example of what the response body might look like if the user is not 
+yet activated:
 
-<pre><code class="language-json">{ &quot;activation&quot;: &quot;http://myaccount.wistia.com/my_activation_link&quot; }</code></pre>
+{% codeblock example_json_response.json %}{ "activation": "http://myaccount.wistia.com/my_activation_link" }{% endcodeblock %}
 
 #### Example XML Response
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/13/sharings/16.xml
 
-<pre><code class="language-xml">&lt;url&gt;
-&lt;project&gt;http://myaccount.wistia.com/projects/13&lt;/project&gt;
-&lt;/url&gt;</code></pre>
+{% codeblock example_xml_response.xml %}
+<url>
+  <project>http://myaccount.wistia.com/projects/13</project>
+</url>
+{% endcodeblock %}
 
-Here&#039;s an example of what the response body might look like if the user is not yet activated:
+Here's an example of what the response body might look like if the user is not 
+yet activated:
 
-<pre><code class="language-xml">&lt;url&gt;
-&lt;activation&gt;http://myaccount.wistia.com/my_activation_link&lt;/activation&gt;
-&lt;/url&gt;</code></pre>
+{% codeblock example_xml_response.xml %}
+<url>
+  <activation>http://myaccount.wistia.com/my_activation_link</activation>
+</url>
+{% endcodeblock %}
 
 ---
 
 ### Project Sharings: Update the Sharing on a Project
 
-The Wistia data API allows you to 
-update a sharing on a project.  Currently, the only attributes that you can update are **can_share**, 
-**can_download**, **can_upload**, and **is_admin**.
+The Wistia data API allows you to update a sharing on a project.  Currently, 
+the only attributes that you can update are **can_share**, **can_download**, 
+**can_upload**, and **is_admin**.
 
 #### The Request
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;.json</code></pre>
+<code class="full_width">PUT https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
 
-Make sure you replace *&lt;project-id&gt;* with the hashed ID of the project that you want, 
-and replace *&lt;sharing-id&gt;* with the ID of the sharing that you want to update.
+Make sure you replace `<project-id>` with the hashed ID of the project that you want, 
+and replace `<sharing-id>` with the ID of the sharing that you want to update.
 
 Parameter Name    | Description
 ------------------|-----------------
@@ -1072,11 +1084,13 @@ canDownload (optional) | “1” to allow the user or group to download media fr
 canUpload (optional)   | “1” to allow the user or group to upload media to the project, “0” to disable this functionality.
 isAdmin (optional)     | “1” to give this user admin rights to the project, “0” to take away admin rights.
 
-Notice that every parameter for this action is optional.  Omitting a parameter from the request will leave that attribute alone.
+Notice that every parameter for this action is optional.  Omitting a parameter 
+from the request will leave that attribute alone.
 
 #### The Response
 
-If the update is successful, the server will send a response with something similar to the following:
+If the update is successful, the server will send a response with something 
+similar to the following:
 
 
 Field  | Description
@@ -1095,82 +1109,84 @@ Field    | Description
 ---------|-----------------
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: &#039;Contact&#039; or &#039;ContactGroup&#039;.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it&#039;s a ContactGroup, this field will be omitted.
+type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
+email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
- &quot;id&quot;: 14,
-   &quot;isAdmin&quot;: true,
-   &quot;canShare&quot;: true,
-   &quot;canDownload&quot;: true,
-   &quot;canUpload&quot;: true,
-   &quot;share&quot;: {
-     &quot;id&quot;: 3,
-     &quot;name&quot;: &quot;Jim&quot;,
-     &quot;type&quot;: &quot;Contact&quot;,
-     &quot;email&quot;: &quot;jim@wistia.com&quot;
-   },
-   &quot;project&quot;: {
-     &quot;id&quot;: 13,
-     &quot;name&quot;: &quot;My Project&quot;
-   }
+ "id": 14,
+ "isAdmin": true,
+ "canShare": true,
+ "canDownload": true,
+ "canUpload": true,
+ "share": {
+   "id": 3,
+   "name": "Jim",
+   "type": "Contact",
+   "email": "jim@wistia.com"
+ },
+ "project": {
+   "id": 13,
+   "name": "My Project"
+ }
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;sharing&gt;
-  &lt;id&gt;14&lt;/id&gt;
-  &lt;isAdmin&gt;true&lt;/isAdmin&gt;
-  &lt;canShare&gt;true&lt;/canShare&gt;
-  &lt;canDownload&gt;true&lt;/canDownload&gt;
-  &lt;canUpload&gt;true&lt;/canUpload&gt;
-  &lt;share&gt;
-    &lt;id&gt;3&lt;/id&gt;
-    &lt;name&gt;Jim&lt;/name&gt;
-    &lt;type&gt;Contact&lt;/type&gt;
-    &lt;email&gt;jim@wistia.com&lt;/email&gt;
-  &lt;/share&gt;
-  &lt;project&gt;
-    &lt;id&gt;13&lt;/id&gt;
-    &lt;name&gt;My Project&lt;/name&gt;
-  &lt;/project&gt;
-&lt;/sharing&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<sharing>
+  <id>14</id>
+  <isAdmin>true</isAdmin>
+  <canShare>true</canShare>
+  <canDownload>true</canDownload>
+  <canUpload>true</canUpload>
+  <share>
+    <id>3</id>
+    <name>Jim</name>
+    <type>Contact</type>
+    <email>jim@wistia.com</email>
+  </share>
+  <project>
+    <id>13</id>
+    <name>My Project</name>
+  </project>
+</sharing>
+{% endcodeblock %}
 
 #### Errors
 
-While we know your code is literally flawless, late nights and too much Jolt can cause errors.
+While we know your code is literally flawless, late nights and too much Jolt 
+can cause errors.
 
-If the request would cause the system to get into an invalid or inconsistent state, the update operation will fail. Errors will look like the following:
+If the request would cause the system to get into an invalid or inconsistent 
+state, the update operation will fail. Errors will look like the following:
 
 #### Example JSON Error Response
 
 **Status:** 400 Bad Request
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 [
-&quot;Groups may not be project admins.&quot;, &quot;Only account managers may be project admins.&quot; 
+"Groups may not be project admins.", "Only account managers may be project admins." 
 ]
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Error Response
 
 **Status:** 400 Bad Request
 
-<pre><code class="language-xml">
-&lt;errors&gt;
-  &lt;error&gt;Groups may not be project admins.&lt;/error&gt;
-  &lt;error&gt;Only account managers may be project admins.&lt;/error&gt;
-&lt;/errors&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<errors>
+  <error>Groups may not be project admins.</error>
+  <error>Only account managers may be project admins.</error>
+</errors>
+{% endcodeblock %}
 
 ---
 
@@ -1180,20 +1196,22 @@ The Wistia data API allows you to delete a sharing on a project.
 
 #### Request
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;.json</code></pre>
+<code class="full_width">DELETE https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
 
-Make sure you replace *&lt;project-id&gt;* with the hashed ID of 
-the project that you want, and replace *&lt;sharing-id&gt;* with the 
+Make sure you replace `<project-id>` with the hashed ID of 
+the project that you want, and replace `<sharing-id>` with the 
 ID of the sharing you want to delete.
 
 #### Parameters
+
 This action does not take any parameters.
 
 #### Response
 
 If the sharing is deleted successfully, the server will respond with 
 HTTP status **200 OK** to let you know that it worked.
-The body of the response will contain an object representing the sharing that was just deleted.
+The body of the response will contain an object representing the sharing that 
+was just deleted.
 
 
 Field     | Description
@@ -1212,55 +1230,55 @@ Field      | Description
 -----------|--------------
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: &#039;Contact&#039; or &#039;ContactGroup&#039;.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it&#039;s a ContactGroup, this field will be omitted.
+type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
+email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 14,
-    &quot;isAdmin&quot;: true,
-    &quot;canShare&quot;: true,
-    &quot;canDownload&quot;: true,
-    &quot;canUpload&quot;: true,
-    &quot;share&quot;: {
-      &quot;id&quot;: 3,
-      &quot;name&quot;: &quot;Jim&quot;,
-      &quot;type&quot;: &quot;Contact&quot;,
-      &quot;email&quot;: &quot;jim@wistia.com&quot;
-    },
-    &quot;project&quot;: {
-      &quot;id&quot;: 13,
-      &quot;name&quot;: &quot;My Project&quot;
-    }
+  "id": 14,
+  "isAdmin": true,
+  "canShare": true,
+  "canDownload": true,
+  "canUpload": true,
+  "share": {
+    "id": 3,
+    "name": "Jim",
+    "type": "Contact",
+    "email": "jim@wistia.com"
+  },
+  "project": {
+    "id": 13,
+    "name": "My Project"
+  }
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;sharing&gt;
-  &lt;id&gt;14&lt;/id&gt;
-  &lt;isAdmin&gt;true&lt;/isAdmin&gt;
-  &lt;canShare&gt;true&lt;/canShare&gt;
-  &lt;canDownload&gt;true&lt;/canDownload&gt;
-  &lt;canUpload&gt;true&lt;/canUpload&gt;
-  &lt;share&gt;
-    &lt;id&gt;3&lt;/id&gt;
-    &lt;name&gt;Jim&lt;/name&gt;
-    &lt;type&gt;Contact&lt;/type&gt;
-    &lt;email&gt;jim@wistia.com&lt;/email&gt;
-  &lt;/share&gt;
-  &lt;project&gt;
-    &lt;id&gt;13&lt;/id&gt;
-    &lt;name&gt;My Project&lt;/name&gt;
-  &lt;/project&gt;
-&lt;/sharing&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<sharing>
+  <id>14</id>
+  <isAdmin>true</isAdmin>
+  <canShare>true</canShare>
+  <canDownload>true</canDownload>
+  <canUpload>true</canUpload>
+  <share>
+    <id>3</id>
+    <name>Jim</name>
+    <type>Contact</type>
+    <email>jim@wistia.com</email>
+  </share>
+  <project>
+    <id>13</id>
+    <name>My Project</name>
+  </project>
+</sharing>
+{% endcodeblock %}
 
 ---
 
@@ -1274,7 +1292,7 @@ Using the Wistia data API, you can obtain a list of all the media in your accoun
 
 The format of the request should be something like this:
 
-<pre><code class="language-markup">https://api.wistia.com/v1/medias.json</code></pre>
+<code class="full_width">https://api.wistia.com/v1/medias.json</code>
 
 #### Parameters
 
@@ -1288,24 +1306,30 @@ Parameter | Description
 sort_by | The name of the field to sort by.  Valid values are name, created, or updated.  Any other value will cause the results to be sorted by id, which is the default.
 sort_direction (optional, defaults to 1) | This field specifies the direction of the sort.  Valid values are 1 or 0, which specify ascending or descending order, respectively.
 
-For example, if you want to sort your results in descending order by the date each media was created (i.e. when it was first uploaded to Wistia), your request URL would look something like this:
+For example, if you want to sort your results in descending order by the date 
+each media was created (i.e. when it was first uploaded to Wistia), your request 
+URL would look something like this:
 
-<pre><code class="language-markup">https://api.wistia.com/v1/medias.json?sort_by=created&amp;sort_direction=0</code></pre>
+<code class="full_width">https://api.wistia.com/v1/medias.json?sort_by=created&amp;sort_direction=0</code>
 
-**Paging**<br/>
-You can get your results back in chunks using the paging feature.  In order to set the page size and/or the number of pages that you want to see, use the following query parameters:
+**Paging**
+
+You can get your results back in chunks using the paging feature.  In order to 
+set the page size and/or the number of pages that you want to see, use the 
+following query parameters:
 
 Parameter | Description
 ----------|--------------
 page (optional, defaults to 1) | Specifies which page of the results you want to see.  Note that this parameter starts at 1, as opposed to 0.
 per_page (optional, defaults to 100) | This parameter lets you set how many results you want to get back in each request.  In order to mitigate long-running requests to the API, the maximum value of this parameter is 100.
 
-For example, if you want to get your results back 10 media at a time, starting on the second page of results, 
-then your request URL should look something like this:
+For example, if you want to get your results back 10 media at a time, starting 
+on the second page of results, then your request URL should look something like this:
 
-<pre><code class="language-markup">https://api.wistia.com/v1/medias.json?page=2&amp;per_page=10</code></pre>
+<code class="full_width">https://api.wistia.com/v1/medias.json?page=2&amp;per_page=10</code>
 
-**Filtering**<br/>
+**Filtering**
+
 You can filter the results by project or type of media.  Similar to sorting, filters are specified by appending query 
 parameters to the end of the URL used to 
 access the API.  The following table lists the parameters 
@@ -1339,7 +1363,7 @@ created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
 embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/construct-an-embed-code' | post_url }}">Embedding API</a>.
-description         | A description for the media which usually appears near the top of the sidebar on the media&#039;s page.
+description         | A description for the media which usually appears near the top of the sidebar on the media's page.
 hashed_id           | A unique alphanumeric identifier for this media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
 
 Each asset object in the assets array has the following properties:
@@ -1349,173 +1373,173 @@ Field        | Description
 url               | A direct-access URL to the content of the asset.
 width (optional)  | The width of this specific asset, if applicable.
 height (optional) | The height of this specific asset, if applicable.
-fileSize          | The size of the asset file that&#039;s referenced by url, measured in bytes.
-contentType       | The asset&#039;s content type.
+fileSize          | The size of the asset file that's referenced by url, measured in bytes.
+contentType       | The asset's content type.
 type              | The internal type of the asset, describing how the asset should be used.  Valid values are “OriginalFile”, “FlashVideoFile”, “Mp4VideoFile”, “IPhoneVideoFile”, “StillImageFile”, “SwfFile”, “Mp3AudioFile”, and “LargeImageFile”.
 
 #### Example JSON Response
 
 
-<pre><code class="language-json">
-&lt;medias&gt;
-  &lt;media&gt;
-  &lt;id&gt;181279&lt;/id&gt;
-  &lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-  &lt;project&gt;
-  &lt;id&gt;22570&lt;/id&gt;
-  &lt;name&gt;Slimlist for Website&lt;/name&gt;
-  &lt;/project&gt;
-  &lt;type&gt;Video&lt;/type&gt;
-  &lt;section&gt;Trailers&lt;/section&gt;
-  &lt;progress&gt;1.0&lt;/progress&gt;
-  &lt;thumbnail&gt;
-    &lt;url&gt;http://www.wistia.com/path/to/thumbnail2.png&lt;/url&gt;
-    &lt;width&gt;100&lt;/width&gt;
-    &lt;height&gt;60&lt;/height&gt;
-  &lt;/thumbnail&gt;
-  &lt;duration&gt;126&lt;/duration&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-21T21:47:00+00:00&lt;/updated&gt;
-  &lt;assets&gt;
-    &lt;asset&gt;
-      &lt;url&gt;http://www.wistia.com/path/to/original-file.bin&lt;/url&gt;
-      &lt;width&gt;640&lt;/width&gt;
-      &lt;height&gt;272&lt;/height&gt;
-      &lt;fileSize&gt;12345678&lt;/fileSize&gt;
-      &lt;contentType&gt;video/quicktime&lt;/contentType&gt;
-      &lt;type&gt;Original&lt;/type&gt;
-    &lt;/asset&gt;
-    &lt;asset&gt;
-      &lt;url&gt;http://www.wistia.com/path/to/mp4-version.bin&lt;/url&gt;
-      &lt;width&gt;640&lt;/width&gt;
-      &lt;height&gt;272&lt;/height&gt;
-      &lt;fileSize&gt;12123456&lt;/fileSize&gt;
-      &lt;contentType&gt;video/mp4&lt;/contentType&gt;
-      &lt;type&gt;Mp4Video&lt;/type&gt;
-    &lt;/asset&gt;
-    &lt;asset&gt;
-      &lt;url&gt;http://www.wistia.com/path/to/still-image.bin&lt;/url&gt;
-      &lt;width&gt;640&lt;/width&gt;
-      &lt;height&gt;272&lt;/height&gt;
-      &lt;fileSize&gt;92008&lt;/fileSize&gt;
-      &lt;contentType&gt;image/jpeg&lt;/contentType&gt;
-      &lt;type&gt;StillImageFile&lt;/type&gt;
-    &lt;/asset&gt;
-  &lt;/assets&gt;
-  &lt;embedCode&gt;&lt;object id='wistia_1' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
-  width='640' height='360'&gt;&lt;param name='allowfullscreen' value='true'
-  /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;param name='wmode'
-  value='opaque' /&gt;&lt;param name='flashvars' value='videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.bin&amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&amp;playButtonVisible=true&amp;controlsVisibleOnLoad=false&amp;unbufferedSeek=true&amp;autoLoad=false&amp;autoPlay=false&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=jim-development_1&amp;mediaID=jim-development_1&amp;mediaDuration=6.51'
-  /&gt;&lt;param name='movie' value='http://brendan.unraw.net/flash/embed_player_v1.1.swf'
-  /&gt;&lt;embed src='http://brendan.unraw.net/flash/embed_player_v1.1.swf'
+{% codeblock example_json_response.json %}
+<medias>
+  <media>
+  <id>181279</id>
+  <name>Introducing the Slimlist</name>
+  <project>
+  <id>22570</id>
+  <name>Slimlist for Website</name>
+  </project>
+  <type>Video</type>
+  <section>Trailers</section>
+  <progress>1.0</progress>
+  <thumbnail>
+    <url>http://www.wistia.com/path/to/thumbnail2.png</url>
+    <width>100</width>
+    <height>60</height>
+  </thumbnail>
+  <duration>126</duration>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-21T21:47:00+00:00</updated>
+  <assets>
+    <asset>
+      <url>http://www.wistia.com/path/to/original-file.bin</url>
+      <width>640</width>
+      <height>272</height>
+      <fileSize>12345678</fileSize>
+      <contentType>video/quicktime</contentType>
+      <type>Original</type>
+    </asset>
+    <asset>
+      <url>http://www.wistia.com/path/to/mp4-version.bin</url>
+      <width>640</width>
+      <height>272</height>
+      <fileSize>12123456</fileSize>
+      <contentType>video/mp4</contentType>
+      <type>Mp4Video</type>
+    </asset>
+    <asset>
+      <url>http://www.wistia.com/path/to/still-image.bin</url>
+      <width>640</width>
+      <height>272</height>
+      <fileSize>92008</fileSize>
+      <contentType>image/jpeg</contentType>
+      <type>StillImageFile</type>
+    </asset>
+  </assets>
+  <embedCode><object id='wistia_1' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
+  width='640' height='360'><param name='allowfullscreen' value='true'
+  /><param name='allowscriptaccess' value='always' /><param name='wmode'
+  value='opaque' /><param name='flashvars' value='videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;playButtonVisible=trueamp;controlsVisibleOnLoad=falseamp;unbufferedSeek=trueamp;autoLoad=falseamp;autoPlay=falseamp;embedServiceURL=http://distillery.wistia.com/xamp;accountKey=jim-development_1amp;mediaID=jim-development_1amp;mediaDuration=6.51'
+  /><param name='movie' value='http://brendan.unraw.net/flash/embed_player_v1.1.swf'
+  /><embed src='http://brendan.unraw.net/flash/embed_player_v1.1.swf'
   name='wistia_1' type='application/x-shockwave-flash' width='640' height='360'
-  allowfullscreen='true' allowscriptaccess='always' wmode='opaque' flashvars='videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.bin&amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&amp;playButtonVisible=true&amp;controlsVisibleOnLoad=false&amp;unbufferedSeek=true&amp;autoLoad=false&amp;autoPlay=false&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=jim-development_1&amp;mediaID=jim-development_1&amp;mediaDuration=6.51'&gt;&lt;/embed&gt;&lt;/object&gt;&lt;script
-  src='http://brendan.unraw.net/embeds/v.js'&gt;&lt;/script&gt;&lt;script&gt;if(!navigator.mimeTypes['application/x-shockwave-flash'])Wistia.VideoEmbed('wistia_1','640','360',{videoUrl:'http://brendan.unraw.net/deliveries/5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin',stillUrl:'http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin',distilleryUrl:'http://distillery.wistia.com/x',accountKey:'jim-development_1',mediaId:'jim-development_1',mediaDuration:6.51})&lt;/script&gt;&lt;/embedCode&gt;
-  &lt;description&gt;Test Description&lt;/description&gt;
-  &lt;hashed_id&gt;abc123&lt;/hashed_id&gt;
-  &lt;/media&gt;
-&lt;/medias&gt;
-</code></pre>
+  allowfullscreen='true' allowscriptaccess='always' wmode='opaque' flashvars='videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;playButtonVisible=trueamp;controlsVisibleOnLoad=falseamp;unbufferedSeek=trueamp;autoLoad=falseamp;autoPlay=falseamp;embedServiceURL=http://distillery.wistia.com/xamp;accountKey=jim-development_1amp;mediaID=jim-development_1amp;mediaDuration=6.51'></embed></object><script
+  src='http://brendan.unraw.net/embeds/v.js'></script><script>if(!navigator.mimeTypes['application/x-shockwave-flash'])Wistia.VideoEmbed('wistia_1','640','360',{videoUrl:'http://brendan.unraw.net/deliveries/5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin',stillUrl:'http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin',distilleryUrl:'http://distillery.wistia.com/x',accountKey:'jim-development_1',mediaId:'jim-development_1',mediaDuration:6.51})</script></embedCode>
+  <description>Test Description</description>
+  <hashed_id>abc123</hashed_id>
+  </media>
+</medias>
+{% endcodeblock %}
 
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;medias&gt;
-&lt;media&gt;
-&lt;id&gt;181279&lt;/id&gt;
-&lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-&lt;project&gt;
-&lt;id&gt;22570&lt;/id&gt;
-&lt;name&gt;Slimlist for Website&lt;/name&gt;
-&lt;/project&gt;
-&lt;type&gt;Video&lt;/type&gt;
-&lt;section&gt;Trailers&lt;/section&gt;
-&lt;progress&gt;1.0&lt;/progress&gt;
-&lt;thumbnail&gt;
-&lt;url&gt;http://www.wistia.com/path/to/thumbnail2.png&lt;/url&gt;
-&lt;width&gt;100&lt;/width&gt;
-&lt;height&gt;60&lt;/height&gt;
-&lt;/thumbnail&gt;
-&lt;duration&gt;126&lt;/duration&gt;
-&lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-&lt;updated&gt;2010-08-21T21:47:00+00:00&lt;/updated&gt;
-&lt;assets&gt;
-&lt;asset&gt;
-&lt;url&gt;http://www.wistia.com/path/to/original-file.bin&lt;/url&gt;
-&lt;width&gt;640&lt;/width&gt;
-&lt;height&gt;272&lt;/height&gt;
-&lt;fileSize&gt;12345678&lt;/fileSize&gt;
-&lt;contentType&gt;video/quicktime&lt;/contentType&gt;
-&lt;type&gt;Original&lt;/type&gt;
-&lt;/asset&gt;
-&lt;asset&gt;
-&lt;url&gt;http://www.wistia.com/path/to/mp4-version.bin&lt;/url&gt;
-&lt;width&gt;640&lt;/width&gt;
-&lt;height&gt;272&lt;/height&gt;
-&lt;fileSize&gt;12123456&lt;/fileSize&gt;
-&lt;contentType&gt;video/mp4&lt;/contentType&gt;
-&lt;type&gt;Mp4Video&lt;/type&gt;
-&lt;/asset&gt;
-&lt;asset&gt;
-&lt;url&gt;http://www.wistia.com/path/to/still-image.bin&lt;/url&gt;
-&lt;width&gt;640&lt;/width&gt;
-&lt;height&gt;272&lt;/height&gt;
-&lt;fileSize&gt;92008&lt;/fileSize&gt;
-&lt;contentType&gt;image/jpeg&lt;/contentType&gt;
-&lt;type&gt;StillImageFile&lt;/type&gt;
-&lt;/asset&gt;
-&lt;/assets&gt;
-&lt;embedCode&gt;&amp;lt;object id=&#039;wistia_1&#039; classid=&#039;
-clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&#039; width=&#039;640&#039;
-height=&#039;360&#039;&amp;gt;&amp;lt;param name=&#039;allowfullscreen&#039;
-value=&#039;true&#039; /&amp;gt;&amp;lt;param name=&#039;
-allowscriptaccess&#039; value=&#039;always&#039; /&amp;gt;&amp;
-lt;param name=&#039;wmode&#039; value=&#039;opaque&#039; /&amp;gt;&amp;
-lt;param name=&#039;flashvars&#039; value=&#039;
+{% codeblock example_xml_response.xml %}
+<medias>
+<media>
+<id>181279</id>
+<name>Introducing the Slimlist</name>
+<project>
+<id>22570</id>
+<name>Slimlist for Website</name>
+</project>
+<type>Video</type>
+<section>Trailers</section>
+<progress>1.0</progress>
+<thumbnail>
+<url>http://www.wistia.com/path/to/thumbnail2.png</url>
+<width>100</width>
+<height>60</height>
+</thumbnail>
+<duration>126</duration>
+<created>2010-08-15T18:47:39+00:00</created>
+<updated>2010-08-21T21:47:00+00:00</updated>
+<assets>
+<asset>
+<url>http://www.wistia.com/path/to/original-file.bin</url>
+<width>640</width>
+<height>272</height>
+<fileSize>12345678</fileSize>
+<contentType>video/quicktime</contentType>
+<type>Original</type>
+</asset>
+<asset>
+<url>http://www.wistia.com/path/to/mp4-version.bin</url>
+<width>640</width>
+<height>272</height>
+<fileSize>12123456</fileSize>
+<contentType>video/mp4</contentType>
+<type>Mp4Video</type>
+</asset>
+<asset>
+<url>http://www.wistia.com/path/to/still-image.bin</url>
+<width>640</width>
+<height>272</height>
+<fileSize>92008</fileSize>
+<contentType>image/jpeg</contentType>
+<type>StillImageFile</type>
+</asset>
+</assets>
+<embedCode>amp;<object id=#039;wistia_1#039; classid=#039;
+clsid:D27CDB6E-AE6D-11cf-96B8-444553540000#039; width=#039;640#039;
+height=#039;360#039;amp;>amp;<param name=#039;allowfullscreen#039;
+value=#039;true#039; /amp;>amp;<param name=#039;
+allowscriptaccess#039; value=#039;always#039; /amp;>amp;
+<param name=#039;wmode#039; value=#039;opaque#039; /amp;>amp;
+<param name=#039;flashvars#039; value=#039;
 videoUrl=http://brendan.unraw.net/deliveries/
-57c6fbdfa4c236ce5a84abaf4363568355a2f059.bin&amp;amp;
+57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;amp;
 stillUrl=http://brendan.unraw.net/deliveries/
-b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&amp;amp;
-playButtonVisible=true&amp;amp;controlsVisibleOnLoad=false&amp;amp;
-unbufferedSeek=true&amp;amp;autoLoad=false&amp;amp;autoPlay=false&amp;amp;
-embedServiceURL=http://distillery.wistia.com/x&amp;
-accountKey=jim-development_1&amp;amp;mediaID=jim-development_1&amp;
-mediaDuration=6.51&#039; /&amp;gt;&amp;lt;param name=&#039;movie&#039;
-value=&#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf&#039;
-/&amp;gt;&amp;lt;embed src=&#039;http://brendan.unraw.net/flash/
-embed_player_v1.1.swf&#039; name=&#039;wistia_1&#039; type=&#039;
-application/x-shockwave-flash&#039; width=&#039;640&#039; 
-height=&#039;360&#039; allowfullscreen=&#039;true&#039; 
-allowscriptaccess=&#039;always&#039; wmode=&#039;opaque&#039; 
-flashvars=&#039;videoUrl=http://brendan.unraw.net/deliveries/
-57c6fbdfa4c236ce5a84abaf4363568355a2f059.bin&amp;
+b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;amp;
+playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;amp;
+unbufferedSeek=trueamp;amp;autoLoad=falseamp;amp;autoPlay=falseamp;amp;
+embedServiceURL=http://distillery.wistia.com/xamp;
+accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;
+mediaDuration=6.51#039; /amp;>amp;<param name=#039;movie#039;
+value=#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf#039;
+/amp;>amp;<embed src=#039;http://brendan.unraw.net/flash/
+embed_player_v1.1.swf#039; name=#039;wistia_1#039; type=#039;
+application/x-shockwave-flash#039; width=#039;640#039; 
+height=#039;360#039; allowfullscreen=#039;true#039; 
+allowscriptaccess=#039;always#039; wmode=#039;opaque#039; 
+flashvars=#039;videoUrl=http://brendan.unraw.net/deliveries/
+57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;
 stillUrl=http://brendan.unraw.net/deliveries/
-b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&amp;
-playButtonVisible=true&amp;amp;controlsVisibleOnLoad=false&amp;
-unbufferedSeek=true&amp;
-autoLoad=false&amp;amp;autoPlay=false&amp;
-embedServiceURL=http://distillery.wistia.com/x&amp;
-accountKey=jim-development_1&amp;amp;mediaID=jim-development_1&amp;
-mediaDuration=6.51&#039;&amp;gt;&amp;lt;/embed&amp;gt;&amp;
-lt;/object&amp;gt;&amp;lt;script src=&#039;
-http://brendan.unraw.net/embeds/v.js&#039;&amp;gt;&amp;lt;/script&amp;
-gt;&amp;lt;script&amp;gt;if(!navigator.mimeTypes[&#039;
-application/x-shockwave-flash&#039;])Wistia.VideoEmbed(&#039;wistia_1&#039;
-,&#039;640&#039;,&#039;360&#039;,{videoUrl:&#039;
+b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;
+playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;
+unbufferedSeek=trueamp;
+autoLoad=falseamp;amp;autoPlay=falseamp;
+embedServiceURL=http://distillery.wistia.com/xamp;
+accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;
+mediaDuration=6.51#039;amp;>amp;</embedamp;>amp;
+</objectamp;>amp;<script src=#039;
+http://brendan.unraw.net/embeds/v.js#039;amp;>amp;</scriptamp;
+>amp;<scriptamp;>if(!navigator.mimeTypes[#039;
+application/x-shockwave-flash#039;])Wistia.VideoEmbed(#039;wistia_1#039;
+,#039;640#039;,#039;360#039;,{videoUrl:#039;
 http://brendan.unraw.net/deliveries/
-5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin&#039;,stillUrl:&#039;
+5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin#039;,stillUrl:#039;
 http://brendan.unraw.net/deliveries/
-b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&#039;
-,distilleryUrl:&#039;http://distillery.wistia.com/x&#039;,accountKey:&#039;
-jim-development_1&#039;,mediaId:&#039;jim-development_1&#039;
-,mediaDuration:6.51})&amp;lt;/script&amp;gt;&lt;/embedCode&gt;
-&lt;description&gt;Test Description&lt;/description&gt;
-&lt;hashed_id&gt;abc123&lt;/hashed_id&gt;
-&lt;/media&gt;
-&lt;/medias&gt;
-</code></pre>
+b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin#039;
+,distilleryUrl:#039;http://distillery.wistia.com/x#039;,accountKey:#039;
+jim-development_1#039;,mediaId:#039;jim-development_1#039;
+,mediaDuration:6.51})amp;</scriptamp;></embedCode>
+<description>Test Description</description>
+<hashed_id>abc123</hashed_id>
+</media>
+</medias>
+{% endcodeblock %}
 
 
 ---
@@ -1537,9 +1561,9 @@ In order to tell Wistia that you want information about a specific piece of medi
 send an HTTP GET request to 
 the following URL:
 
-<pre><code class="language-markup">https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code></pre>
+<code class="full_width">https://api.wistia.com/v1/medias/<media-id>.json</code>
 
-Make sure you replace *&lt;media-id&gt;* with the hashed ID of the media that you want.
+Make sure you replace `<media-id>` with the hashed ID of the media that you want.
 
 #### Response
 
@@ -1561,7 +1585,7 @@ created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
 embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/construct-an-embed-code' | post_url }}">Embedding API</a>.
-description         | A description for the media which usually appears near the top of the sidebar on the media&#039;s page.
+description         | A description for the media which usually appears near the top of the sidebar on the media's page.
 hashed_id           | A unique alphanumeric identifier for this media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
 
 
@@ -1573,112 +1597,113 @@ Field     |  Description
 url               | A direct-access URL to the content of the asset. These URLs end in a .bin extension (for binary).
 width (optional)  | The width of this specific asset, if applicable.
 height (optional) | The height of this specific asset, if applicable.
-fileSize          | The size of the asset file that&#039;s referenced by url, measured in bytes.
-contentType       | The asset&#039;s content type.
+fileSize          | The size of the asset file that's referenced by url, measured in bytes.
+contentType       | The asset's content type.
 type              | The internal type of the asset, describing how the asset should be used.  Valid values are “OriginalFile”, “FlashVideoFile”, “Mp4VideoFile”, “IPhoneVideoFile”, “StillImageFile”, “SwfFile”, “Mp3AudioFile”, and “LargeImageFile”.
 
 
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 181279,
-    &quot;name&quot;: &quot;Introducing the Slimlist&quot;,
-    &quot;type&quot;: &quot;Video&quot;,
-    &quot;section&quot;: &quot;Trailers&quot;,
-    &quot;progress&quot;: 1.0
-      &quot;thumbnail&quot;: {
-        &quot;url&quot;: &quot;http://www.wistia.com/path/to/thumbnail2.png&quot;,
-        &quot;width&quot;: 100,
-        &quot;height&quot;: 60
+  "id": 181279,
+    "name": "Introducing the Slimlist",
+    "type": "Video",
+    "section": "Trailers",
+    "progress": 1.0
+      "thumbnail": {
+        "url": "http://www.wistia.com/path/to/thumbnail2.png",
+        "width": 100,
+        "height": 60
       },
-    &quot;duration&quot;: 126,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-21T21:47:00+00:00&quot;,
-    &quot;assets&quot;: [
+    "duration": 126,
+    "created": "2010-08-15T18:47:39+00:00",
+    "updated": "2010-08-21T21:47:00+00:00",
+    "assets": [
     {
-      &quot;url&quot;: &quot;http://www.wistia.com/path/to/original-file.bin&quot;,
-      &quot;width&quot;: 640,
-      &quot;height&quot;: 272,
-      &quot;fileSize&quot;: 12345678,
-      &quot;contentType&quot;: &quot;video/quicktime&quot;,
-      &quot;type&quot;: &quot;Original&quot;
+      "url": "http://www.wistia.com/path/to/original-file.bin",
+      "width": 640,
+      "height": 272,
+      "fileSize": 12345678,
+      "contentType": "video/quicktime",
+      "type": "Original"
     },
     {
-      &quot;url&quot;: &quot;http://www.wistia.com/path/to/mp4-version.bin&quot;,
-      &quot;width&quot;: 640,
-      &quot;height&quot;: 272,
-      &quot;fileSize&quot;: 12123456,
-      &quot;contentType&quot;: &quot;video/mp4&quot;,
-      &quot;type&quot;: &quot;Mp4Video&quot;
+      "url": "http://www.wistia.com/path/to/mp4-version.bin",
+      "width": 640,
+      "height": 272,
+      "fileSize": 12123456,
+      "contentType": "video/mp4",
+      "type": "Mp4Video"
     },
     {
-      &quot;url&quot;: &quot;http://www.wistia.com/path/to/still-image.bin&quot;,
-      &quot;width&quot;: 640,
-      &quot;height&quot;: 272,
-      &quot;fileSize&quot;: 92008,
-      &quot;contentType&quot;: &quot;image/jpeg&quot;,
-      &quot;type&quot;: &quot;StillImageFile&quot;
+      "url": "http://www.wistia.com/path/to/still-image.bin",
+      "width": 640,
+      "height": 272,
+      "fileSize": 92008,
+      "contentType": "image/jpeg",
+      "type": "StillImageFile"
     }
   ],
-    &quot;embedCode&quot;: &quot;&lt;object width=&quot;640&quot; height=&quot;272&quot; id=&quot;wistia_181279&quot; classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://embed.wistia.com/flash/embed_player_v1.1.swf&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;wmode&quot; value=&quot;opaque&quot;/&gt;&lt;param name=&quot;flashvars&quot; value=&quot;videoUrl=http://embed.wistia.com/deliveries/
-      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin&amp;stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&amp;unbufferedSeek=false&amp;controlsVisibleOnLoad=false&amp;autoPlay=false&amp;endVideoBehavior=default&amp;playButtonVisible=true&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=wistia-production_97&amp;mediaID=wistia-production_181279&amp;mediaDuration=74.4&quot;/&gt;&lt;embed src=&quot;http://embed.wistia.com/flash/embed_player_v1.1.swf&quot; width=&quot;640&quot; height=&quot;272&quot; name=&quot;wistia_181279&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; wmode=&quot;opaque&quot; flashvars=&quot;videoUrl=http://embed.wistia.com/deliveries/
-      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin&amp;stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&amp;unbufferedSeek=false&amp;controlsVisibleOnLoad=false&amp;autoPlay=false&amp;endVideoBehavior=default&amp;playButtonVisible=true&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=wistia-production_97&amp;mediaID=wistia-production_181279&amp;mediaDuration=74.4&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;script src=&quot;http://embed.wistia.com/embeds/v.js&quot; charset=&quot;ISO-8859-1&quot;&gt;&lt;/script&gt;&lt;script&gt;if(!navigator.mimeTypes[&#039;application/x-shockwave-flash&#039;])Wistia.VideoEmbed(&#039;wistia_181279&#039;,640,272,{videoUrl:&#039;http://embed.wistia.com/deliveries/
-      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin&#039;,stillUrl:&#039;http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&#039;,distilleryUrl:&#039;http://distillery.wistia.com/x&#039;,accountKey:&#039;wistia-production_97&#039;,mediaId:&#039;wistia-production_181279&#039;,mediaDuration:74.4})&lt;/script&gt;&quot;,
-    description: &quot;Test Description&quot;,
-    hashed_id: &quot;abc123&quot;
+    "embedCode": "<object width="640" height="272" id="wistia_181279" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v1.1.swf"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="wmode" value="opaque"/><param name="flashvars" value="videoUrl=http://embed.wistia.com/deliveries/
+      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin&amp;stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&amp;unbufferedSeek=false&amp;controlsVisibleOnLoad=false&amp;autoPlay=false&amp;endVideoBehavior=default&amp;playButtonVisible=true&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=wistia-production_97&amp;mediaID=wistia-production_181279&amp;mediaDuration=74.4"/><embed src="http://embed.wistia.com/flash/embed_player_v1.1.swf" width="640" height="272" name="wistia_181279" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" wmode="opaque" flashvars="videoUrl=http://embed.wistia.com/deliveries/
+      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin&amp;stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&amp;unbufferedSeek=false&amp;controlsVisibleOnLoad=false&amp;autoPlay=false&amp;endVideoBehavior=default&amp;playButtonVisible=true&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=wistia-production_97&amp;mediaID=wistia-production_181279&amp;mediaDuration=74.4"></embed></object><script src="http://embed.wistia.com/embeds/v.js" charset="ISO-8859-1"></script><script>if(!navigator.mimeTypes['application/x-shockwave-flash'])Wistia.VideoEmbed('wistia_181279',640,272,{videoUrl:'http://embed.wistia.com/deliveries/
+      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin',stillUrl:'http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin',distilleryUrl:'http://distillery.wistia.com/x',accountKey:'wistia-production_97',mediaId:'wistia-production_181279',mediaDuration:74.4})</script>",
+    description: "Test Description",
+    hashed_id: "abc123"
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;media&gt;
-  &lt;id&gt;181279&lt;/id&gt;
-  &lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-  &lt;type&gt;Video&lt;/type&gt;
-  &lt;section&gt;Trailers&lt;/section&gt;
-  &lt;progress&gt;1.0&lt;/progress&gt;
-  &lt;thumbnail&gt;
-    &lt;url&gt;http://www.wistia.com/path/to/thumbnail2.png&lt;/url&gt;
-    &lt;width&gt;100&lt;/width&gt;
-    &lt;height&gt;60&lt;/height&gt;
-  &lt;/thumbnail&gt;
-  &lt;duration&gt;126&lt;/duration&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-21T21:47:00+00:00&lt;/updated&gt;
-  &lt;assets&gt;
-    &lt;asset&gt;
-      &lt;url&gt;http://www.wistia.com/path/to/original-file.bin&lt;/url&gt;
-      &lt;width&gt;640&lt;/width&gt;
-      &lt;height&gt;272&lt;/height&gt;
-      &lt;fileSize&gt;12345678&lt;/fileSize&gt;
-      &lt;contentType&gt;video/quicktime&lt;/contentType&gt;
-      &lt;type&gt;Original&lt;/type&gt;
-    &lt;/asset&gt;
-    &lt;asset&gt;
-      &lt;url&gt;http://www.wistia.com/path/to/mp4-version.bin&lt;/url&gt;
-      &lt;width&gt;640&lt;/width&gt;
-      &lt;height&gt;272&lt;/height&gt;
-      &lt;fileSize&gt;12123456&lt;/fileSize&gt;
-      &lt;contentType&gt;video/mp4&lt;/contentType&gt;
-      &lt;type&gt;Mp4Video&lt;/type&gt;
-    &lt;/asset&gt;
-    &lt;asset&gt;
-      &lt;url&gt;http://www.wistia.com/path/to/still-image.bin&lt;/url&gt;
-      &lt;width&gt;640&lt;/width&gt;
-      &lt;height&gt;272&lt;/height&gt;
-      &lt;fileSize&gt;92008&lt;/fileSize&gt;
-      &lt;contentType&gt;image/jpeg&lt;/contentType&gt;
-      &lt;type&gt;StillImageFile&lt;/type&gt;
-    &lt;/asset&gt;
-  &lt;/assets&gt;
-  &lt;embedCode&gt;&amp;lt;object id=&#039;wistia_181279&#039; classid=&#039;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&#039; width=&#039;640&#039; height=&#039;360&#039;&amp;gt;&amp;lt;param name=&#039;allowfullscreen&#039; value=&#039;true&#039; /&amp;gt;&amp;lt;param name=&#039;allowscriptaccess&#039; value=&#039;always&#039; /&amp;gt;&amp;lt;param name=&#039;wmode&#039; value=&#039;opaque&#039; /&amp;gt;&amp;lt;param name=&#039;flashvars&#039; value=&#039;videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.bin&amp;amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&amp;amp;playButtonVisible=true&amp;amp;controlsVisibleOnLoad=false&amp;amp;unbufferedSeek=true&amp;amp;autoLoad=false&amp;amp;autoPlay=false&amp;amp;embedServiceURL=http://distillery.wistia.com/x&amp;amp;accountKey=jim-development_1&amp;amp;mediaID=jim-development_1&amp;amp;mediaDuration=6.51&#039; /&amp;gt;&amp;lt;param name=&#039;movie&#039; value=&#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf&#039; /&amp;gt;&amp;lt;embed src=&#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf&#039; name=&#039;wistia_1&#039; type=&#039;application/x-shockwave-flash&#039; width=&#039;640&#039; height=&#039;360&#039; allowfullscreen=&#039;true&#039; allowscriptaccess=&#039;always&#039; wmode=&#039;opaque&#039; flashvars=&#039;videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.bin&amp;amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&amp;amp;playButtonVisible=true&amp;amp;controlsVisibleOnLoad=false&amp;amp;unbufferedSeek=true&amp;amp;autoLoad=false&amp;amp;autoPlay=false&amp;amp;embedServiceURL=http://distillery.wistia.com/x&amp;amp;accountKey=jim-development_1&amp;amp;mediaID=jim-development_1&amp;amp;mediaDuration=6.51&#039;&amp;gt;&amp;lt;/embed&amp;gt;&amp;lt;/object&amp;gt;&amp;lt;script src=&#039;http://brendan.unraw.net/embeds/v.js&#039;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;if(!navigator.mimeTypes[&#039;application/x-shockwave-flash&#039;])Wistia.VideoEmbed(&#039;wistia_1&#039;,&#039;640&#039;,&#039;360&#039;,{videoUrl:&#039;http://brendan.unraw.net/deliveries/5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin&#039;,stillUrl:&#039;http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin&#039;,distilleryUrl:&#039;http://distillery.wistia.com/x&#039;,accountKey:&#039;jim-development_1&#039;,mediaId:&#039;jim-development_1&#039;,mediaDuration:6.51})&amp;lt;/script&amp;gt;&lt;/embedCode&gt;
-  &lt;description&gt;Test Description&lt;/description&gt;
-  &lt;hashed_id&gt;abc123&lt;/hashed_id&gt;
-&lt;/media&gt;</code></pre>
+{% codeblock example_xml_response.xml %}
+<media>
+  <id>181279</id>
+  <name>Introducing the Slimlist</name>
+  <type>Video</type>
+  <section>Trailers</section>
+  <progress>1.0</progress>
+  <thumbnail>
+    <url>http://www.wistia.com/path/to/thumbnail2.png</url>
+    <width>100</width>
+    <height>60</height>
+  </thumbnail>
+  <duration>126</duration>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-21T21:47:00+00:00</updated>
+  <assets>
+    <asset>
+      <url>http://www.wistia.com/path/to/original-file.bin</url>
+      <width>640</width>
+      <height>272</height>
+      <fileSize>12345678</fileSize>
+      <contentType>video/quicktime</contentType>
+      <type>Original</type>
+    </asset>
+    <asset>
+      <url>http://www.wistia.com/path/to/mp4-version.bin</url>
+      <width>640</width>
+      <height>272</height>
+      <fileSize>12123456</fileSize>
+      <contentType>video/mp4</contentType>
+      <type>Mp4Video</type>
+    </asset>
+    <asset>
+      <url>http://www.wistia.com/path/to/still-image.bin</url>
+      <width>640</width>
+      <height>272</height>
+      <fileSize>92008</fileSize>
+      <contentType>image/jpeg</contentType>
+      <type>StillImageFile</type>
+    </asset>
+  </assets>
+  <embedCode>amp;<object id=#039;wistia_181279#039; classid=#039;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000#039; width=#039;640#039; height=#039;360#039;amp;>amp;<param name=#039;allowfullscreen#039; value=#039;true#039; /amp;>amp;<param name=#039;allowscriptaccess#039; value=#039;always#039; /amp;>amp;<param name=#039;wmode#039; value=#039;opaque#039; /amp;>amp;<param name=#039;flashvars#039; value=#039;videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;amp;playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;amp;unbufferedSeek=trueamp;amp;autoLoad=falseamp;amp;autoPlay=falseamp;amp;embedServiceURL=http://distillery.wistia.com/xamp;amp;accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;amp;mediaDuration=6.51#039; /amp;>amp;<param name=#039;movie#039; value=#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf#039; /amp;>amp;<embed src=#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf#039; name=#039;wistia_1#039; type=#039;application/x-shockwave-flash#039; width=#039;640#039; height=#039;360#039; allowfullscreen=#039;true#039; allowscriptaccess=#039;always#039; wmode=#039;opaque#039; flashvars=#039;videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;amp;playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;amp;unbufferedSeek=trueamp;amp;autoLoad=falseamp;amp;autoPlay=falseamp;amp;embedServiceURL=http://distillery.wistia.com/xamp;amp;accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;amp;mediaDuration=6.51#039;amp;>amp;</embedamp;>amp;</objectamp;>amp;<script src=#039;http://brendan.unraw.net/embeds/v.js#039;amp;>amp;</scriptamp;>amp;<scriptamp;>if(!navigator.mimeTypes[#039;application/x-shockwave-flash#039;])Wistia.VideoEmbed(#039;wistia_1#039;,#039;640#039;,#039;360#039;,{videoUrl:#039;http://brendan.unraw.net/deliveries/5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin#039;,stillUrl:#039;http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin#039;,distilleryUrl:#039;http://distillery.wistia.com/x#039;,accountKey:#039;jim-development_1#039;,mediaId:#039;jim-development_1#039;,mediaDuration:6.51})amp;</scriptamp;></embedCode>
+  <description>Test Description</description>
+  <hashed_id>abc123</hashed_id>
+</media>
+{% endcodeblock %}
 
 
 
@@ -1691,15 +1716,15 @@ The Wistia data API allows you to update a piece of media.
 
 #### The Request
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code></pre>
+<code class="full_width">PUT https://api.wistia.com/v1/medias/<media-id>.json</code>
 
-Make sure you replace *&lt;media-id&gt;* with the hashed ID of the media that you want to update.
+Make sure you replace `<media-id>` with the hashed ID of the media that you want to update.
 
 
 Parameter Name      |  Description
 --------------------|-------------------------
-name               | The media&#039;s new name.
-new_still_media_id | The numeric ID of an image within the system that will replace the still that&#039;s displayed before the player starts playing.  If this parameter is present while updating a non-video media, or if it specifies a non-image type media, then the call will fail with an error.
+name               | The media's new name.
+new_still_media_id | The numeric ID of an image within the system that will replace the still that's displayed before the player starts playing.  If this parameter is present while updating a non-video media, or if it specifies a non-image type media, then the call will fail with an error.
 description        | A new description to display next to the media within Wistia.
 
 
@@ -1724,44 +1749,44 @@ updated             | The date when the media was last changed.
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 181279,
-    &quot;name&quot;: &quot;Introducing the Slimlist&quot;,
-    &quot;type&quot;: &quot;Video&quot;,
-    &quot;section&quot;: &quot;Trailers&quot;,
-    &quot;progress&quot;: 1.0,
-    &quot;thumbnail&quot;: {
-      &quot;url&quot;: &quot;http://www.wistia.com/path/to/thumbnail2.png&quot;,
-      &quot;width&quot;: 100,
-      &quot;height&quot;: 60
-    },
-    &quot;duration&quot;: 126,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-21T21:47:00+00:00&quot;
+  "id": 181279,
+  "name": "Introducing the Slimlist",
+  "type": "Video",
+  "section": "Trailers",
+  "progress": 1.0,
+  "thumbnail": {
+    "url": "http://www.wistia.com/path/to/thumbnail2.png",
+    "width": 100,
+    "height": 60
+  },
+  "duration": 126,
+  "created": "2010-08-15T18:47:39+00:00",
+  "updated": "2010-08-21T21:47:00+00:00"
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-json">
-&lt;media&gt;
-  &lt;id&gt;181279&lt;/id&gt;
-  &lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-  &lt;type&gt;Video&lt;/type&gt;
-  &lt;section&gt;Trailers&lt;/section&gt;
-  &lt;progress&gt;1.0&lt;/progress&gt;
-  &lt;thumbnail&gt;
-    &lt;url&gt;http://www.wistia.com/path/to/thumbnail2.png&lt;/url&gt;
-    &lt;width&gt;100&lt;/width&gt;
-    &lt;height&gt;60&lt;/height&gt;
-  &lt;/thumbnail&gt;
-  &lt;duration&gt;126&lt;/duration&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-21T21:47:00+00:00&lt;/updated
-&lt;/media&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<media>
+  <id>181279</id>
+  <name>Introducing the Slimlist</name>
+  <type>Video</type>
+  <section>Trailers</section>
+  <progress>1.0</progress>
+  <thumbnail>
+    <url>http://www.wistia.com/path/to/thumbnail2.png</url>
+    <width>100</width>
+    <height>60</height>
+  </thumbnail>
+  <duration>126</duration>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-21T21:47:00+00:00</updated
+</media>
+{% endcodeblock %}
 
 ---
 
@@ -1771,16 +1796,16 @@ The Wistia data API allows you to delete a piece of media.
 
 #### The Request
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code></pre>
+<code class="full_width">DELETE https://api.wistia.com/v1/medias/<media-id>.json</code>
 
-Make sure you replace *&lt;media-id&gt;*
-with the hashed ID of the media that you want to delete.  This action does not take any parameters.
+Make sure you replace `<media-id>` with the hashed ID of the media that you want 
+to delete.  This action does not take any parameters.
 
 #### The Response
 
-If the media is deleted successfully, the server will respond with 
-HTTP status **200 OK** 
-to let you know that it worked.  The body of the response will contain an object representing the piece of media that was just deleted.
+If the media is deleted successfully, the server will respond with HTTP status 
+**200 OK** to let you know that it worked.  The body of the response will 
+contain an object representing the piece of media that was just deleted.
 
 
 Field    |  Description
@@ -1800,45 +1825,45 @@ updated             | The date when the media was last changed.
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 181279,
-    &quot;name&quot;: &quot;Introducing the Slimlist&quot;,
-    &quot;type&quot;: &quot;Video&quot;,
-    &quot;section&quot;: &quot;Trailers&quot;,
-    &quot;progress&quot;: 1.0,
-    &quot;thumbnail&quot;: {
-      &quot;url&quot;: &quot;http://www.wistia.com/path/to/thumbnail2.png&quot;,
-      &quot;width&quot;: 100,
-      &quot;height&quot;: 60
-    },
-    &quot;duration&quot;: 126,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-21T21:47:00+00:00&quot;
+  "id": 181279,
+  "name": "Introducing the Slimlist",
+  "type": "Video",
+  "section": "Trailers",
+  "progress": 1.0,
+  "thumbnail": {
+    "url": "http://www.wistia.com/path/to/thumbnail2.png",
+    "width": 100,
+    "height": 60
+  },
+  "duration": 126,
+  "created": "2010-08-15T18:47:39+00:00",
+  "updated": "2010-08-21T21:47:00+00:00"
 }
-</code></pre>
+{% endcodeblock %}
 
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;media&gt;
-  &lt;id&gt;181279&lt;/id&gt;
-  &lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-  &lt;type&gt;Video&lt;/type&gt;
-  &lt;section&gt;Trailers&lt;/section&gt;
-  &lt;progress&gt;1.0&lt;/progress&gt;
-  &lt;thumbnail&gt;
-    &lt;url&gt;http://www.wistia.com/path/to/thumbnail2.png&lt;/url&gt;
-    &lt;width&gt;100&lt;/width&gt;
-    &lt;height&gt;60&lt;/height&gt;
-  &lt;/thumbnail&gt;
-  &lt;duration&gt;126&lt;/duration&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-21T21:47:00+00:00&lt;/updated
-&lt;/media&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<media>
+  <id>181279</id>
+  <name>Introducing the Slimlist</name>
+  <type>Video</type>
+  <section>Trailers</section>
+  <progress>1.0</progress>
+  <thumbnail>
+    <url>http://www.wistia.com/path/to/thumbnail2.png</url>
+    <width>100</width>
+    <height>60</height>
+  </thumbnail>
+  <duration>126</duration>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-21T21:47:00+00:00</updated
+</media>
+{% endcodeblock %}
 
 ---
 
@@ -1849,16 +1874,16 @@ The Wistia data API allows you to copy a piece of media.
 
 #### The Request
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/copy.json</code></pre>
+<code class="full_width">POST https://api.wistia.com/v1/medias/<media-id>/copy.json</code>
 
-Make sure you replace *&lt;media-id&gt;* with the hashed ID of the media that you want to copy.
+Make sure you replace `<media-id>` with the hashed ID of the media that you want to copy.
 
 #### Parameters
 
 Parameter     |  Description
 --------------|----------------
-project_id (optional) | The ID of the project where you want the new copy placed.  If this value is invalid or omitted, defaults to the source media&#039;s current project.
-owner (optional)      | An email address specifying the owner of the new media.  If this value is invalid or omitted, defaults to the source media&#039;s current owner.
+project_id (optional) | The ID of the project where you want the new copy placed.  If this value is invalid or omitted, defaults to the source media's current project.
+owner (optional)      | An email address specifying the owner of the new media.  If this value is invalid or omitted, defaults to the source media's current owner.
 
 #### The Response
 
@@ -1888,23 +1913,23 @@ updated             | The date when the media was last changed.
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/medias/3.json
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 3,
-    &quot;name&quot;: &quot;Introducing the Slimlist&quot;,
-    &quot;type&quot;: &quot;Video&quot;,
-    &quot;section&quot;: &quot;Trailers&quot;,
-    &quot;progress&quot;: 1.0,
-    &quot;thumbnail&quot;: {
-      &quot;url&quot;: &quot;http://www.wistia.com/path/to/thumbnail2.png&quot;,
-      &quot;width&quot;: 100,
-      &quot;height&quot;: 60
+  "id": 3,
+    "name": "Introducing the Slimlist",
+    "type": "Video",
+    "section": "Trailers",
+    "progress": 1.0,
+    "thumbnail": {
+      "url": "http://www.wistia.com/path/to/thumbnail2.png",
+      "width": 100,
+      "height": 60
     },
-    &quot;duration&quot;: 126,
-    &quot;created&quot;: &quot;2010-08-15T18:47:39+00:00&quot;,
-    &quot;updated&quot;: &quot;2010-08-21T21:47:00+00:00&quot;
+    "duration": 126,
+    "created": "2010-08-15T18:47:39+00:00",
+    "updated": "2010-08-21T21:47:00+00:00"
 }
-</code></pre>
+{% endcodeblock %}
 
 
 #### Example XML Response
@@ -1912,23 +1937,23 @@ updated             | The date when the media was last changed.
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/medias/3.xml
 
-<pre><code class="language-xml">
-&lt;media&gt;
-  &lt;id&gt;3&lt;/id&gt;
-  &lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-  &lt;type&gt;Video&lt;/type&gt;
-  &lt;section&gt;Trailers&lt;/section&gt;
-  &lt;progress&gt;1.0&lt;/progress&gt;
-  &lt;thumbnail&gt;
-    &lt;url&gt;http://www.wistia.com/path/to/thumbnail2.png&lt;/url&gt;
-    &lt;width&gt;100&lt;/width&gt;
-    &lt;height&gt;60&lt;/height&gt;
-  &lt;/thumbnail&gt;
-  &lt;duration&gt;126&lt;/duration&gt;
-  &lt;created&gt;2010-08-15T18:47:39+00:00&lt;/created&gt;
-  &lt;updated&gt;2010-08-21T21:47:00+00:00&lt;/updated
-&lt;/media&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<media>
+  <id>3</id>
+  <name>Introducing the Slimlist</name>
+  <type>Video</type>
+  <section>Trailers</section>
+  <progress>1.0</progress>
+  <thumbnail>
+    <url>http://www.wistia.com/path/to/thumbnail2.png</url>
+    <width>100</width>
+    <height>60</height>
+  </thumbnail>
+  <duration>126</duration>
+  <created>2010-08-15T18:47:39+00:00</created>
+  <updated>2010-08-21T21:47:00+00:00</updated
+</media>
+{% endcodeblock %}
 
 ---
 
@@ -1946,9 +1971,9 @@ will contain an error message (in either XML or JSON format).
 
 #### The Request
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/stats.json</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/medias/<media-id>/stats.json</code>
 
-Make sure you replace *&lt;media-id&gt;* with the 
+Make sure you replace *<media-id>* with the 
 hashed ID of the video for which you would like to retrieve statistics.  There are no parameters for this action.
 
 
@@ -1977,36 +2002,36 @@ averagePercentWatched         | This is an integer between 0 and 100.  It shows 
 #### Example JSON Response
 
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;id&quot;: 181279,
-    &quot;name&quot;: &quot;Introducing the Slimlist&quot;,
-    &quot;stats&quot;: {
-      &quot;pageLoads&quot;: 96,
-      &quot;visitors&quot;: 52,
-      &quot;percentOfVisitorsClickingPlay&quot;: 42,
-      &quot;plays&quot;: 43,
-      &quot;averagePercentWatched&quot;: 74
+  "id": 181279,
+    "name": "Introducing the Slimlist",
+    "stats": {
+      "pageLoads": 96,
+      "visitors": 52,
+      "percentOfVisitorsClickingPlay": 42,
+      "plays": 43,
+      "averagePercentWatched": 74
     }
 }
-</code></pre>
+{% endcodeblock %}
 
 #### Example XML Response
 
 
-<pre><code class="language-xml">
-&lt;media&gt;
-  &lt;id&gt;181279&lt;/id&gt;
-  &lt;name&gt;Introducing the Slimlist&lt;/name&gt;
-  &lt;stats&gt;
-  &lt;pageLoads&gt;96&lt;/pageLoads&gt;
-  &lt;visitors&gt;52&lt;/visitors&gt;
-  &lt;percentOfVisitorsClickingPlay&gt;42&lt;/percentOfVisitorsClickingPlay&gt;
-  &lt;plays&gt;43&lt;/plays&gt;
-  &lt;averagePercentWatched&gt;74&lt;/averagePercentWatched&gt;
-  &lt;/stats&gt;
-&lt;/media&gt;
-</code></pre>
+{% codeblock example_xml_response.xml %}
+<media>
+  <id>181279</id>
+  <name>Introducing the Slimlist</name>
+  <stats>
+  <pageLoads>96</pageLoads>
+  <visitors>52</visitors>
+  <percentOfVisitorsClickingPlay>42</percentOfVisitorsClickingPlay>
+  <plays>43</plays>
+  <averagePercentWatched>74</averagePercentWatched>
+  </stats>
+</media>
+{% endcodeblock %}
 
 ---
 
@@ -2014,7 +2039,7 @@ averagePercentWatched         | This is an integer between 0 and 100.  It shows 
 
 #### The Request
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/account.json</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/account.json</code>
 
 #### The Response
 
@@ -2027,21 +2052,21 @@ Url | Account's main Wistia URL
 
 ---
 
-## Asset URLs - Tips &amp; Tricks
+## Asset URLs - Tips & Tricks
 
 ### Modifying File Extensions
 
 Asset URLs in Wistia take this form:
 
-<pre><code class="language-markup">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.bin</code></pre>
+<code class="full_width">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.bin</code>
 
 The .bin extension at the URL is for binary. 
-Certain ornery clients (iTunes, ahem) won&#039;t accept URLs that don&#039;t end in an extension that&#039;s familiar to them. 
-In this case, you can drop the .bin, add a slash, and append whatever filename and extension you like – you&#039;ll still get the 
+Certain ornery clients (iTunes, ahem) won't accept URLs that don't end in an extension that's familiar to them. 
+In this case, you can drop the .bin, add a slash, and append whatever filename and extension you like – you'll still get the 
 underlying asset. So, say the URL above is an mp4 file and we _really_ 
-want that in the URL. Here&#039;s what we&#039;d have:
+want that in the URL. Here's what we'd have:
 
-<pre><code class="language-markup">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf/my-file.mp4</code></pre>
+<code class="full_width">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf/my-file.mp4</code>
 
 ### Resizing Images
 
