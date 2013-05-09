@@ -20,7 +20,7 @@ For learning purposes, I'll be demonstrating with an API embed code type. I've r
 
 First, here's an embed code that references one of Wistia's internal plugins, "requireEmail-v1".
 
-<pre><code class="language-javascript">
+{% codeblock plugin_api.js %}
 wistiaEmbed = Wistia.embed("hashedId", {
   version: "v1",
   videoWidth: 640,
@@ -36,11 +36,12 @@ wistiaEmbed = Wistia.embed("hashedId", {
     }
   }
 });
-</code></pre>
+{% endcodeblock %}
+
 
 Third Party plugins can use the exact same syntax, but they must add a src attribute.
 
-<pre><code class="language-javascript">
+{% codeblock plugin_api.js %}
 wistiaEmbed = Wistia.embed("hashedId", {
   version: "v1",
   videoWidth: 640,
@@ -54,14 +55,14 @@ wistiaEmbed = Wistia.embed("hashedId", {
     }
   }
 });
-</code></pre>
+{% endcodeblock %}
 
 The script file is executed asynchronously. And this is where the second part of Wistia plugins comes in...
 
 
 ### Initialize Your Plugin
 
-<pre><code class="language-javascript">
+{% codeblock plugin_api.js %}
 Wistia.plugin("my-plugin-name", function(video, options) {
   video.bind("play", function() {
     if (options.customOption) {
@@ -71,7 +72,7 @@ Wistia.plugin("my-plugin-name", function(video, options) {
     }
   });
 });
-</code></pre>
+{% endcodeblock %}
 
 That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're doing a few things:
 
@@ -85,16 +86,19 @@ javascript API can do.
 
 ## Using plugins with an iframe embed
 
-Wistia iframe embeds take the exact same JSON parameters as an API embed, but they must be properly URL-encoded using a bracket syntax.
+Wistia iframe embeds take the exact same JSON parameters as an API embed, but 
+they must be properly URL-encoded using a bracket syntax.
 
-For example, here's the plugin parameters for the API embed above, but translated to be appended on an iframe src attribute.
+For example, here's the plugin parameters for the API embed above, but 
+translated to be appended on an iframe src attribute.
 
-    plugin%5Bmy-plugin-name%5D%5BcustomOption%5D=true&plugin%5Bmy-plugin-name%5D%5Bsrc%5D=http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js
+<code class="full_width">plugin%5Bmy-plugin-name%5D%5BcustomOption%5D=true&plugin%5Bmy-plugin-name%5D%5Bsrc%5D=http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js</code>
 
 
 ## Using the Plugin Grid
 
-Wistia videos are embedded in a DOM framework called the grid, which provides some handy shortcuts to DOM elements around the video.
+Wistia videos are embedded in a DOM framework called the grid, which provides 
+some handy shortcuts to DOM elements around the video.
 
 Here is a list of all the available handles:
 
@@ -116,25 +120,25 @@ left_inside     | Absolutely positioned over the video. Height of the video, anc
 
 For example, if I wanted to to overlay an HTML element in the upper right of the video, offset by 10px, I could use:
 
-<pre><code class="language-javascript">
+{% codeblock plugin_api.js %}
 var myElem = document.createElement("div");
 myElem.style.position = "absolute";
 myElem.style.top = "10px";
 myElem.style.right = "10px";
 myElem.innerHTML = "This is some text in the upper right of the video.";
 video.grid.right_inside.appendChild(myElem);
-</code></pre>
+{% endcodeblock %}
 
 Or if you're using a framework like jQuery:
 
-<pre><code class="language-javascript">
+{% codeblock plugin_api.js %}
 var $myElem = $("<div>This is some text in the upper right of the video.</div>").css({
   position: "absolute",
   top: 10,
   right: 10
 });
 $(video.grid.right_inside).append($myElem);
-</code></pre>
+{% endcodeblock %}
 
 
 ### Use the grid to place an element beside the video.
@@ -145,13 +149,13 @@ your DOM elements are a fixed width, they will work correctly with our responsiv
 
 Here's an example that adds a plugin to the right of the video.
 
-<pre><code class="language-javascript">
+{% codeblock plugin_api.js %}
 var myElem = document.createElement("div");
 myElem.innerHTML = "And this will appear outside the video, to the right.";
 myElem.style.width = "250px;"
 video.grid.right.appendChild(myElem);
 video.fit();
-</code></pre>
+{% endcodeblock %}
 
 Note the `fit()` method, which will cause the video to change its width and height such that all 
 the plugins fit within the container.
@@ -162,8 +166,12 @@ dimensions to the total width and height.
 
 For example, I might have a 640x272 video. The iframe embed code would look like this:
 
-    <iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"></iframe>
+{% codeblock thumbnail.html %}
+<iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"></iframe>
+{% endcodeblock %}
 
 But if I add the socialbar, which is 26px high in this case and appears below the video, the iframe height is 298.
 
-    <iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;plugin%5Bsocialbar-v1%5D=%7B%22buttons%22%3A%22embed-twitter-facebook%22%7D&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="298"></iframe>
+{% codeblock thumbnail.html %}
+<iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;plugin%5Bsocialbar-v1%5D=%7B%22buttons%22%3A%22embed-twitter-facebook%22%7D&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="298"></iframe>
+{% endcodeblock %}

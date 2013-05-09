@@ -1,0 +1,144 @@
+
+$color-gray01: #f5f7fa
+$color-gray03: #eceef1
+$color-gray04: #f7f6f4
+
+$font-mono: monospace
+$font-default: $title-fonts
+$color-main: white
+
+$pre-bg: $color-gray04
+$pre-border: $color-gray03
+
+code, pre
+  background: $pre-bg
+  border: 1px solid $pre-border
+  font-family: $font-mono
+
+code
+  color: $text_color
+  font-size: 14px
+  margin: $padding/2 $padding
+  padding: $padding/5
+  margin: 0
+
+pre
+  font-size: 1 / 0.9em
+  line-height: 1.5
+  margin: $padding/2 0
+  padding: 5px 15px
+  overflow-x: auto
+  code
+    background: none
+    border: none
+    padding: 0
+    margin: 0
+
+.full_width
+  margin-left: -$padding
+  display: block
+  white-space: nowrap
+  overflow-x: auto
+  padding: $padding/2 $padding
+  width: 100%
+
+.highlight
+  padding: $padding/2
+  table 
+    margin-bottom: 0
+    td
+      background-color: transparent
+      border: none
+      &.gutter
+        padding: 0
+        color: #CCC
+    tr
+      &:hover
+        td 
+          background-color: transparent
+
+
+figure.code
+  background: $pre-bg
+  border: 1px solid $pre-border
+  margin-top: 10px
+  padding: 0
+  figcaption
+    display: none
+    font-family: $title-fonts
+    font-size: 0.9em
+    position: relative
+    padding: $padding/2
+    border-bottom: 1px solid $pre-border
+    span
+      color: #009999
+      font-size: 16px
+      display: block
+      &:empty
+        display: none
+    a
+      position: absolute
+      top: 5px
+      right: 0
+  code, pre
+    background: none
+    border: none
+    padding: 0
+    margin: 0
+  .highlight
+    overflow-x: auto
+  .line-numbers
+    border-right: 1px solid $pre-border
+    font-family: $font-mono
+    padding-right: 15px
+    text-align: right
+  table
+    border: none
+    text-align: left
+    margin-top: 0
+    td
+      text-align: left
+  td.code
+    width: 100%
+    padding-left: 15px
+    overflow-x: auto
+
+.entry-content .gist
+  background: $pre-bg
+  color: $color-gray01
+  padding: 30px 15px 5px
+  margin-top: 10px
+  border: 1px solid $pre-border
+  position: relative
+  overflow: hidden
+  +border-radius(5px)
+  .gist-file
+    margin: 0
+    .gist-data
+      background: none
+      border: none
+      pre
+        font: 0.9em $font-mono
+        line-height: 1.5
+    .gist-meta
+      font: 300 0.9em $font-default
+      line-height: 1.5
+      margin: 0 -16px -6px
+      padding: 5px 15px
+      +background(linear-gradient(top, $pre-bg, $pre-border))
+      a
+        color: $color-main
+        &:first-of-type
+          position: absolute
+          top: 5px
+          right: 15px
+          z-index: 1
+        &:nth-of-type(2)
+          position: absolute
+          top: 0
+          left: 0
+          padding: 5px 15px
+          width: 100%
+          +background(linear-gradient(top, $pre-border, $pre-bg))
+
+@import github_colors

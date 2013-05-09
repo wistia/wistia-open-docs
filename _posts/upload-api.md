@@ -39,7 +39,7 @@ Even if you're not a Ruby developer, you can use this as a command line tool for
 
 ## The Request
 
-<pre><code class="language-vim">POST https://upload.wistia.com/</code></pre>
+<code class="full_width">POST https://upload.wistia.com</code>
 
 All parameters (with the exception of *file*) may be encoded into the request
 body or included as part of the query string.
@@ -109,7 +109,7 @@ body will contain a JSON object
 
 ### Example Response
 
-<pre><code class="language-json">
+{% codeblock upload_response.json %}
 {
   "id"=>2208087, 
   "name"=>"dramatic_squirrel.mp4", 
@@ -126,21 +126,19 @@ body will contain a JSON object
     "height"=>60
   }
 }
-</code></pre>
+{% endcodeblock %}
 
 This data structure may change in future releases.
 
 ## Examples
 
 Uploading a media file with cURL:
-<pre><code class='language-markup'>
-$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/
-</code></pre>
+
+<code class="full_width">$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/</code>
 
 Importing a media file with cURL:
-<pre><code class='language-markup'>
-$ curl -i -d "api_password=&lt;YOUR_API_PASSWORD&gt;&amp;url=&lt;REMOTE_FILE_PATH&gt;" https://upload.wistia.com/
-</code></pre>
+
+<code class="full_width">$ curl -i -d "api_password=&lt;YOUR_API_PASSWORD&gt;&amp;url=&lt;REMOTE_FILE_PATH&gt;" https://upload.wistia.com/</code>
 
 ## Ruby Code
 
@@ -150,10 +148,11 @@ achieved in Ruby quite simply using the 'multipart-post' gem.
 
 Installation:
 
-<pre><code class="language-vim">$ gem install multipart-post</code></pre>
+<code class="full_width">$ gem install multipart-post</code>
 
 ### Example Code
-<pre><code class="language-ruby">
+
+{% codeblock upload_ruby_gem.rb %}
 require 'net/http'
 require 'net/http/post/multipart'
 
@@ -165,12 +164,12 @@ def post_video_to_wistia(name, path_to_video)
 
   # Construct the request.
   request = Net::HTTP::Post::Multipart.new uri.request_uri, {
-    'api_password' =&gt; '&lt;API_PASSWORD&gt;',
-    'contact_id'   =&gt; '&lt;CONTACT_ID&gt;', # Optional.
-    'project_id'   =&gt; '&lt;PROJECT_ID&gt;', # Optional.
-    'name'         =&gt; '&lt;MEDIA_NAME&gt;', # Optional.
+    'api_password' => '<API_PASSWORD>',
+    'contact_id'   => '<CONTACT_ID>', # Optional.
+    'project_id'   => '<PROJECT_ID>', # Optional.
+    'name'         => '<MEDIA_NAME>', # Optional.
 
-    'file' =&gt; UploadIO.new(
+    'file' => UploadIO.new(
                 File.open(path_to_video),
                 'application/octet-stream',
                 File.basename(path_to_video)
@@ -182,7 +181,7 @@ def post_video_to_wistia(name, path_to_video)
 
   return response
 end
-</code></pre>
+{% endcodeblock %}
 
 ## Upload Via FTP
 

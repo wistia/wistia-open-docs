@@ -28,27 +28,23 @@ It's likely we'll add more URLs to this list in the future.
 If you're looking to automatically detect Wistia URLs and run them against 
 our endpoint, we recommend using this regular expression:
 
-<pre><code class='language-vim'>
-/https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/
-</code></pre>
+<code class="full_width">/https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/</code>
 
 
 Or if you don't speak regex, here's what we're matching:
 
-<pre><code class="language-vim">
+{% codeblock thumbnail.html %}
 http(s)://*wistia.com/medias/*
 http(s)://*wistia.com/embed/*
 http(s)://*wi.st/medias/*
 http(s)://*wi.st/embed/*
-</code></pre>
+{% endcodeblock %}
 
 Note, it's likely we'll add support for more URLs in the future so feel free 
 to use a more general regular expression so you don't miss out on future 
 enhancements! Perhaps this:
 
-<pre><code class="language-vim">
-/https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/
-</code></pre>
+<code class="full_width">/https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/</code>
 
 ---
 
@@ -57,13 +53,11 @@ enhancements! Perhaps this:
 Get the embed code and some information for a video at 
 `http://home.wistia.com/medias/e4a27b971d` in JSON format:
 
-<pre><code class="language-vim">
-curl "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/e4a27b971d"
-</code></pre>
+<code class="full_width">curl "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/e4a27b971d"</code>
 
 This returns:
 
-<pre><code class="language-markup">
+{% codeblock return.json %}
 {
   "version":"1.0",
   "type":"video",
@@ -77,7 +71,7 @@ This returns:
   "thumbnail_width":100,
   "thumbnail_height":60
 }
-</code></pre>
+{% endcodeblock %}
 
 If you're looking for XML instead of JSON, use: `http://fast.wistia.com/oembed.xml`
 
@@ -132,13 +126,11 @@ We'll URL-encode this request:
 
 And now use the oEmbed endpoint:
 
-<pre><code class="language-vim">
-curl "http://fast.wistia.com/oembed?url=http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"
-</code></pre>
+<code class="full_width">curl "http://fast.wistia.com/oembed?url=http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"</code>
 
 This returns:
 
-<pre><code class="language-markup">
+{% codeblock return.json %}
 {
   "version":"1.0",
   "type":"video",
@@ -153,7 +145,7 @@ This returns:
   "thumbnail_height":360,
   "duration":16.43
 }
-</code></pre>
+{% endcodeblock %}
 
 ---
 
@@ -174,7 +166,7 @@ the video data.
 Note this function also takes a callback function as a parameter. We'll set up
 that callback function next.
 
-<pre><code class="language-javascript">
+{% codeblock playlist_api.js %}
 var baseUrl = "http://fast.wistia.com/oembed/?url=";
 var accountUrl = escape("http://home.wistia.com/medias/");
 var mediaHashedId = "01a1d9f97c";
@@ -184,23 +176,21 @@ function getThumbnailUrl(hashedId, callback) {
     callback(data);
   });
 }
-</code></pre>
+{% endcodeblock %}
 
 This function will return a JSON data object, and pass it to our callback
 function, which will parse the JSON and return the thumbnail URL. Let's write
 that callback function now:
 
-<pre><code class="language-javascript">
+{% codeblock playlist_api.js %}
 function parseJSON(json) {
   return json.thumbnail_url;
 };
-</code></pre>
+{% endcodeblock %}
 
 Finally, we'll setup something to call these functions for our `media hashed id`:
 
-<pre><code class="language-javascript">
-getThumbnailUrl(mediaHashedId, parseJSON);
-</code></pre>
+<code class="full_width">getThumbnailUrl(mediaHashedId, parseJSON);</code>
 
 ---
 
@@ -220,14 +210,14 @@ guide for more info!
 ## Troubleshooting
 
   1. If an invalid URL (one that doesn't match our regular expression above) 
-    is given, the endpoint will return <span class="code">404 Not Found</span>.
+    is given, the endpoint will return `404 Not Found`.
   2. If an unparseable URL is given in the url param, the endpoint will return 
-    <span class="code">404 Not Found</span>.
+    `404 Not Found`.
   3. If a media is found but has no available embed code, the endpoint will 
-    return <span class="code">501 Not Implemented</span>. Video, Image, Audio, 
+    return `501 Not Implemented`. Video, Image, Audio, 
     and Document files all currently implement oembeds.
   4. If a playlist is found but has no videos, the endpoint will return 
-    <span class="code">501 Not Implemented</span>.
+    `501 Not Implemented`.
 
 ---
 

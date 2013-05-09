@@ -21,9 +21,7 @@ been played! Or, celebrate when you reach a certain landmark.
 In order to tell Wistia that you want stats for your account, issue a **GET** 
 request to the following URL:
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/account.json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/account.json</code>
 
 #### The Response
 
@@ -37,13 +35,13 @@ hours_watched | The total amount of time spent watching all of the videos in thi
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock wistia.json %}
   {
     &quot;load_count&quot;: 1000,
     &quot;play_count&quot;: 400,
     &quot;hours_watched&quot;: 21.9
   }
-</code></pre>
+{% endcodeblock %}
 
 ### Account: By Date
 
@@ -55,9 +53,7 @@ of date -- you'll still have to figure those out for yourself. Neeeerd.
 In order to tell Wistia that you want account-wide stats for a particular date range, 
 issue a **GET** request to the following URL:
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=[start date]&end_date=[end date]
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=[start date]&end_date=[end date]</code>
 
 #### Parameters
 
@@ -84,7 +80,7 @@ hours_watched | The total amount of time spent watching videos in this account o
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json.json %}
 [
   {
     &quot;date&quot;: &quot;2012-10-09&quot;,
@@ -99,7 +95,7 @@ hours_watched | The total amount of time spent watching videos in this account o
     &quot;hours_watched&quot;: 12.4
   }
 ]
-</code></pre>
+{% endcodeblock %}
 
 ## Project
 
@@ -113,9 +109,7 @@ particular project. We know you like it when we let you get specific.
 In order to retrieve stats for a project, issue a **GET** request to the following URL
 (you can find the Project ID in the URL for that project):
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/projects/[project-id].json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/projects/[project-id].json</code>
 
 #### The Response
 
@@ -132,14 +126,14 @@ number_of_videos | The total number of videos in this project.
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json.json %}
 {
   &quot;load_count&quot;: 5498,
   &quot;play_count&quot;: 3942,
   &quot;hours_watched&quot;: 59.8,
   &quot;number_of_videos&quot;: 8,
 }
-</code></pre>
+{% endcodeblock %}
 
 ### Project: By Date
 
@@ -150,9 +144,7 @@ You can use the stats API to get information about a project for a specific date
 In order to get stats for a project during a range of dates, issue a **GET** request 
 to the following URL:
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/projects/[project-id]/by_date.json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/projects/[project-id]/by_date.json</code>
 
 #### Parameters
 
@@ -176,7 +168,7 @@ hours_watched | The total amount of time spent watching all of videos in the pro
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 [
   {
     &quot;date&quot;: '2012-11-20',
@@ -191,7 +183,7 @@ hours_watched | The total amount of time spent watching all of videos in the pro
     &quot;hours_watched&quot;: 32.4
   },
 ]
-</code></pre>
+{% endcodeblock %}
 
 ## Media
 
@@ -208,9 +200,7 @@ print those now.
 In order to get stats for a video, issue a **GET** request to the following URL (you
  can find the Media ID in the URL for that media):
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/medias/[media-id].json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/medias/[media-id].json</code>
 
 #### The Response
 
@@ -227,7 +217,7 @@ visitors | The total number of unique people that have loaded this video.
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
   &quot;load_count&quot;: 100,
   &quot;play_count&quot;: 80,
@@ -236,15 +226,13 @@ visitors | The total number of unique people that have loaded this video.
   &quot;engagement&quot;: 0.89,
   &quot;visitors&quot;: 94
 }
-</code></pre>
+{% endcodeblock %}
 
 ### Media: By Date
 
 #### The Request
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/medias/[media-id]/by_date.json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/medias/[media-id]/by_date.json</code>
 
 #### Parameters
 
@@ -269,7 +257,7 @@ hours_watched | The total time spent watching this video on the given day.
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 [
   {
     &quot;date&quot;: '2012-10-21',
@@ -284,7 +272,7 @@ hours_watched | The total time spent watching this video on the given day.
     &quot;hours_watched&quot;: 26.9
   }
 ]
-</code></pre>
+{% endcodeblock %}
 
 ### Media: Engagement
 
@@ -293,9 +281,7 @@ graphs at the top of the stats page for any video in Wistia.
 
 #### The Request
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/medias/[media-id]/engagement.json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/medias/[media-id]/engagement.json</code>
 
 #### Parameters
 
@@ -315,12 +301,12 @@ with each item representing more than 1 second of playback.
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
-  &quot;engagement&quot;: 0.75,
-  &quot;engagement_data&quot;: [ 154, 152, 152, 151, 148, ... ]
+  "engagement": 0.75,
+  "engagement_data": [ 154, 152, 152, 151, 148, ... ]
 }
-</code></pre>
+{% endcodeblock %}
 
 ## Visitors
 
@@ -330,9 +316,7 @@ This method allows you to retrieve a list of visitors that have watched videos i
 
 #### The Request
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/visitors.json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/visitors.json</code>
 
 #### Parameters
 
@@ -364,7 +348,7 @@ visitor_identity | An object with 2 fields (name and email) that represents and 
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 [
   {
     "visitor_key": "E4E7613B5C24CB0F1F7C0A1E4E874635E752263E",
@@ -385,7 +369,7 @@ visitor_identity | An object with 2 fields (name and email) that represents and 
     "visitor_identity": { "name": "John Doe", "email": "john@example.com" }
   }
 ]
-</code></pre>
+{% endcodeblock %}
 
 ### Visitors: Show
 
@@ -393,9 +377,7 @@ This method allows you to retrieve the information for a single visitor.
 
 #### The Request
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/visitors/[visitor-key].json`
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/visitors/[visitor-key].json</code>
 
 #### Parameters
 
@@ -421,7 +403,7 @@ visitor_identity | An object with 2 fields (name and email) that represents any 
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
   "visitor_key": "E4E7613B5C24CB0F1F7C0A1E4E874635E752263E",
   "created_at": "2012-12-12T01:51:36Z",
@@ -431,7 +413,7 @@ visitor_identity | An object with 2 fields (name and email) that represents any 
   "play_count": 2,
   "visitor_identity": { "name": "Jim", "email": "jim@example.com" }
 }
-</code></pre>
+{% endcodeblock %}
 
 ## Events
 
@@ -441,9 +423,7 @@ This method allows you to retrieve a list of events (viewing sessions) from your
 
 #### The Request
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/events.json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/events.json</code>
 
 #### Parameters
 
@@ -484,7 +464,7 @@ iframe_heatmap_url | The URL of an HTML page that will render the heatmap for th
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 [
   {
     "received_at": "2012-12-12T03:25:50Z",
@@ -543,7 +523,7 @@ iframe_heatmap_url | The URL of an HTML page that will render the heatmap for th
     }
   }
 ]
-</code></pre>
+{% endcodeblock %}
 
 ### Events: Show
 
@@ -551,9 +531,7 @@ This method gives you the information about a single event from your account.
 
 #### The Request
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/events/[event-key].json
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/events/[event-key].json</code>
 
 #### Parameters
 
@@ -569,7 +547,7 @@ Events: List method.
 
 **Status:** 200 OK
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 {
   "received_at": "2012-12-12T03:25:50Z",
   "ip": "3.6.101.20",
@@ -598,22 +576,20 @@ Events: List method.
     "type": "StillImageFile"
   }
 }
-</code></pre>
+{% endcodeblock %}
 
 ### Events: Heatmap
 
 You can get the heatmap for any event by constructing the following URL:
 
-<pre><code class="language-vim">
-GET https://api.wistia.com/v1/stats/events/[event-key]/iframe.html?public_token=[public_token]
-</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/stats/events/[event-key]/iframe.html?public_token=[public_token]</code>
 
-Replace the **&lt;event-key&gt;** token with the event_key that indicates which 
-heatmap you would like to see. You can get the **&lt;event-key&gt;** value from 
+Replace the `<event-key>` token with the event_key that indicates which 
+heatmap you would like to see. You can get the `<event-key>` value from 
 other parts of this API or from the Wistia player itself.
 
-Make sure you also provide your account's **&lt;public_token&gt;** as a parameter. You 
-can find your **&lt;public_token&gt;** by clicking on **API** in your Account Dashboard.
+Make sure you also provide your account's `<public_token>` as a parameter. You 
+can find your `<public_token>` by clicking on **API** in your Account Dashboard.
 
 This URL is meant to be used as the target of an iframe which can then be used 
 to render the heatmap within your own pages.
@@ -624,7 +600,7 @@ Here is an example heatmap embedded right into this page:
 
 Here is the code that we used to embed the heatmap:
 
-<pre><code class="language-markup">
+{% codeblock heatmap_example.html %}
 &lt;iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="100%" style="border: solid 2px black;"&gt;&lt;/iframe&gt;
-</code></pre>
+{% endcodeblock %}
 

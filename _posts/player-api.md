@@ -21,15 +21,15 @@ If you are also looking to construct embed codes, refer to [constructing an embe
 
 The *API* version of the Wistia embed codes includes a variable `wistiaEmbed` to make this easy.
 
-<pre><code class="language-javascript">
-var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });
-</code></pre>
+<code class="full_width">var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });</code>
 
-You can reference the video object using the **''wistiaEmbed''** variable.  If you have multiple videos on your page, you should update this variable to something specific to this video.
+You can reference the video object using the `wistiaEmbed` variable.  If you 
+have multiple videos on your page, you should update this variable to something 
+specific to this video.
 
 As an example, if the following JS code is executed, the video will start to play:
 
-<pre><code class="language-javascript">wistiaEmbed.play();</code></pre>
+<code class="full_width">wistiaEmbed.play();</code>
 
 ### Using iframes and the Player API
 
@@ -41,7 +41,9 @@ browsers, this is the recommended way to access the player API.
 
 Put the following anywhere in the HTML document:
 
-<pre><code class="language-markup">&lt;script src="//fast.wistia.com/static/iframe-api-v1.js"&gt;&lt;/script&gt; </code></pre>
+{% codeblock wistia_js.js %}
+<script src="//fast.wistia.com/static/iframe-api-v1.js"></script>
+{% endcodeblock %}
 
 {{ "The iframe-api script can go anywhere on your page. Once it has run, all Wistia iframes on the page will have the `wistiaApi` property." | note }}
 
@@ -49,44 +51,44 @@ Now you can access the API by getting the `wistiaApi` property from the iframe e
 You can assign an ID to each wistia iframe so you can get an easy handle to it.
 Take a look:
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 wistiaEmbed = document.getElementById("my_iframe").wistiaApi;
 wistiaEmbed.bind("end", function() {
   alert("The video ended!");
 });
 wistiaEmbed.time(30).play();
-</code></pre>
+{% endcodeblock %}
 
 or in jQuery:
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 wistiaEmbed = jQuery("#my_iframe")[0].wistiaApi;
 wistiaEmbed.bind("end", function() {
   alert("The video ended!");
 });
 wistiaEmbed.time(30).play();
-</code></pre>
+{% endcodeblock %}
 
 ### Using Popovers and the Player API
 
 Wistia Popovers are just iframes that are injected into the page. If you include the `iframe API` script as detailed above, you can bind to a special jQuery event to get at it. Note, you'll need to use `wistiaJQuery` (it's included in our popover code) to catch the `wistia-popover` event.
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
   iframe.wistiaApi.time(30).play();
   iframe.wistiaApi.bind("end", function() {
     alert("The video ended!");
   });
 });
-</code></pre>
+{% endcodeblock %}
 
 You can also capture an event when a Wistia popover is closed.
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 wistiaJQuery(document).bind("wistia-popover-close", function() {
   alert("A Wistia video was closed!");
 });
-</code></pre>
+{% endcodeblock %}
 
 ## Player API Methods
 
@@ -145,10 +147,10 @@ To get you making video magic as fast as possible, here are some examples of com
 
 In this example, you want the video to skip ahead a certain amount of time when the viewer presses 'play'. This utilizes the `bind on play` functionality built into the API.
 
-<pre><code class="language-javascript">
-&lt;div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
-&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+{% codeblock wistia_js.js %}
+<div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
 wistiaEmbed = Wistia.embed("29b0fbf547", {
   version: "v1",
   videoWidth: 640,
@@ -162,7 +164,7 @@ wistiaEmbed.bind('play', function() {
   return this.unbind;
 });
 </script>
-</code></pre>
+{% endcodeblock %}
 
 ---
 
@@ -172,7 +174,7 @@ In this example, let's assume that we want to fire a Javascript function when
 the viewer gets 60 seconds into the video. In order to accomplish this, we only
 need the bind method from the API.  The Javascript code can be seen below:
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 <script type="text/javascript">
 wistiaEmbed.bind("secondchange", function (s) {
   if(s === 60) {
@@ -180,14 +182,14 @@ wistiaEmbed.bind("secondchange", function (s) {
   }
 });
 </script>
-</code></pre>
+{% endcodeblock %}
 
 The bind function monitors the state of the video in an event loop. Every 300
 milliseconds, it checks to see if the video's time position has changed.
 If it has, it runs your function with the current second (s) as the only argument.
 
-The "secondchange" will only run once per second while the video is playing.
-If you need more fine-grained control, try binding to the "timechange" event instead.
+The `secondchange` will only run once per second while the video is playing.
+If you need more fine-grained control, try binding to the `timechange` event instead.
 
 ---
 
@@ -222,27 +224,27 @@ Redirecting a viewer after the video is over isn't something we recommend -
 unless you have given them a heads up it is going to happen, it can be a very
 jarring experience.
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 <script type="text/javascript">
 wistiaEmbed.bind("end", function () {
   alert("Hello world!");
   window.location.href == "http://newUrl.com";
 });
 </script>
-</code></pre>
+{% endcodeblock %}
 
 
 ### Return the Email from Turnstile
 
 With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require your viewers to enter an email address to view video content on your webpage.  Using the "conversion" event, you can trigger actions based on the email being entered - including passing that email on to another service!
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 <script type="text/javascript">
 wistiaEmbed.bind("conversion", function(type, val) {
   // function to be executed
 });
 </script>
-</code></pre>
+{% endcodeblock %}
 
 At this time, the `type` of conversion can be "pre-roll-email", "mid-roll-email", or "post-roll-email", and the `val` is the viewers email address.
 
@@ -250,10 +252,10 @@ At this time, the `type` of conversion can be "pre-roll-email", "mid-roll-email"
 
 ### Mute the Video on Load
 
-<pre><code class="language-javascript">
-&lt;div id="wistia_tlb0v41zjd" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
-&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+{% codeblock wistia_js.js %}
+<div id="wistia_tlb0v41zjd" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
 wistiaEmbed = Wistia.embed("tlb0v41zjd", {
   version: "v1",
   videoWidth: 640,
@@ -263,8 +265,8 @@ wistiaEmbed = Wistia.embed("tlb0v41zjd", {
   playerColor: "688AAD",
   volume: 0
 });
-&lt;/script&gt;
-</code></pre>
+</script>
+{% endcodeblock %}
 
 ---
 
@@ -282,18 +284,18 @@ With the bind method, every time "play" is triggered, your function will be exec
 
 Our library contains a special unbinding pattern for convenience. In the callback function, just return `this.unbind`.
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 <script type="text/javascript">
 wistiaEmbed.bind("play", function() {
   alert("Played the first time!");
   return this.unbind;
 });
 </script>
-</code></pre>
+{% endcodeblock %}
 
 If you are performing asynchronous operations or need more control over unbinding, you can use the `unbind` method as shown below.
 
-<pre><code class="language-javascript">
+{% codeblock wistia_js.js %}
 <script type="text/javascript">
 function playFunc() {
   alert("Played the first time!");
@@ -302,7 +304,7 @@ function playFunc() {
 
 wistiaEmbed.bind("play", playFunc);
 </script>
-</code></pre>
+{% endcodeblock %}
 
 ---
 ### Add Custom Pre-Roll to Your Videos
@@ -331,9 +333,7 @@ That being said, there are (potentially) some instances where HTML5 only is advi
 
 So a full HTML5 player embed code would look like this:
 
-<pre><code class='language-markup'>
-&lt;iframe src="http://fast.wistia.net/embed/medias/e71f9baf4d?platformPreference=html5" width="960" height="450" frameborder="0"&gt;&lt;/iframe&gt;
-</code></pre>
+<code class="full_width">&lt;iframe src="http://fast.wistia.net/embed/medias/e71f9baf4d?platformPreference=html5" width="960" height="450" frameborder="0"&gt;&lt;/iframe&gt;</code>
 
 HTML5 player instances are still controllable through the normal Player API methods.
 
@@ -345,13 +345,11 @@ If you are embedding a Wistia video on a website with a white background, the na
 
 So a finished iframe embed code would look something like this:
 
-<pre><code class="language-markup">
+{% codeblock iframe_example.html %}
 <iframe src="http://fast.wistia.com/embed/iframe/e4a27b971d?
 controlsVisibleOnLoad=true&playerColor=688AAD&version=v1
 &videoHeight=360&videoWidth=640&wmode=transparent" 
 allowtransparency="true" frameborder="0" scrolling="no" 
 class="wistia_embed" name="wistia_embed" width="640"
 height="360"></iframe>
-</code></pre>
-
-
+{% endcodeblock %}

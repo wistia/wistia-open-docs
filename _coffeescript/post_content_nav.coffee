@@ -75,11 +75,3 @@ $.sectionTitleToNavTitle = (text) ->
 
 $ ->
   window.navBar = new NavBar
-
-  if $('span.code').length
-    $('span.code').each ->
-      $.browserEscapeCharacters $(this)
-
-  if $('pre').length
-    $('pre').find('code.language-markup').each ->
-      $.browserEscapeCharacters $(this)

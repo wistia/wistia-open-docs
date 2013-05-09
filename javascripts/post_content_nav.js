@@ -103,15 +103,5 @@ $.sectionTitleToNavTitle = function(text) {
 };
 
 $(function() {
-  window.navBar = new NavBar;
-  if ($('span.code').length) {
-    $('span.code').each(function() {
-      return $.browserEscapeCharacters($(this));
-    });
-  }
-  if ($('pre').length) {
-    return $('pre').find('code.language-markup').each(function() {
-      return $.browserEscapeCharacters($(this));
-    });
-  }
+  return window.navBar = new NavBar;
 });

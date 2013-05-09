@@ -11,30 +11,39 @@ footer: 'for_developers'
 
 The snippet should take the following form:
 
-<pre><code class='language-markup'>
+{% codeblock upload_widget.html %}
 <div id="wistia-upload-widget" style="width: 500px; height: 75px;"></div>
 <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
 <script>
 var widget1 = new wistia.UploadWidget({ divId: 'wistia-upload-widget', publicProjectId: '4bD' });
 </script>
-</code></pre>
+{% endcodeblock %}
 
+Use your project's `public ID` as the `publicProjectId` parameter on the last 
+line (in this instance, `4bD`).
 
-Use your project's public ID as the <span class="code">publicProjectId</span> parameter on the last line (in this instance, **4bD**).
+**Note:** In order for the upload widget to work for a project, that project 
+must have anonymous uploads enabled (i.e. **anonymousCanUpload** must be true).
 
-**Note:** In order for the upload widget to work for a project, that project must have anonymous uploads enabled (i.e. **anonymousCanUpload** must be true).
-
-The upload widget should load into the area defined by the <span class="code">&lt;div&gt;</span> tag.  You can change the dimensions of this tag and it will make a best effort to fit within the bounds of that div.
+The upload widget should load into the area defined by the `&lt;div&gt;` tag.  
+You can change the dimensions of this tag and it will make a best effort to fit 
+within the bounds of that div.
 
 ## JavaScript Event Callbacks
 
-You may optionally specify JavaScript callbacks to get called whenever various events happen in the widget.  In order to do so, pass an extra 'callbacks' parameter in the options hash passed to the upload widget initialization code.
+You may optionally specify JavaScript callbacks to get called whenever various 
+events happen in the widget.  In order to do so, pass an extra 'callbacks' 
+parameter in the options hash passed to the upload widget initialization code.
 
-The callbacks object should be a plain old JavaScript hash where the keys signify callback names and the values are the functions you want called when each event happens.  See the example at the bottom of this page.
+The callbacks object should be a plain old JavaScript hash where the keys 
+signify callback names and the values are the functions you want called when 
+each event happens.  See the example at the bottom of this page.
 
 ### fileQueued
 
-This event gets triggered after the user has selected a file to upload from the file selection dialog.  The callback function gets an object describing the selected file.  Here are the fields in the file object:
+This event gets triggered after the user has selected a file to upload from the 
+file selection dialog.  The callback function gets an object describing the 
+selected file.  Here are the fields in the file object:
 
  Field                | Description                          
  -----                | -----------                          
@@ -45,11 +54,13 @@ This event gets triggered after the user has selected a file to upload from the 
 
 ### uploadProgress
 
-This event gets triggered continuously as the file gets uploaded.  The only extra parameter is the total number of bytes that have been loaded.
+This event gets triggered continuously as the file gets uploaded.  The only 
+extra parameter is the total number of bytes that have been loaded.
 
 ### uploadSuccess
 
-This event gets triggered after the file has been successfully uploaded.  It receives an object describing the newly created media:
+This event gets triggered after the file has been successfully uploaded.  It 
+receives an object describing the newly created media:
 
 Field | Description
 ------|--------------
@@ -95,63 +106,62 @@ The handler receives a string whose possible values are *error* or *timeout*.
 
 ## Example
 
-<pre><code class="language-markup">
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;title&gt;Tester&lt;/title&gt;
-    &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;div id="wistia-upload-widget" style="width: 500px; height: 75px;"&gt;&lt;/div&gt;
-    &lt;div id="wistia-upload-widget-2" style="width: 500px; height: 75px;"&gt;&lt;/div&gt;
-    &lt;div id="wistia-upload-widget-3" style="width: 500px; height: 75px;"&gt;&lt;/div&gt;
-    &lt;script src="http://static.wistia.com/javascripts/upload_widget.js"&gt;&lt;/script&gt;
-    &lt;div id="output"&gt;&lt;p&gt;Output:&lt;/p&gt;&lt;/div&gt;
-    &lt;script&gt;
-</code><code class="language-javascript">
+{% codeblock upload_widget_example.js %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    <title>Tester</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    </head>
+    <body>
+    <div id="wistia-upload-widget" style="width: 500px; height: 75px;"></div>
+    <div id="wistia-upload-widget-2" style="width: 500px; height: 75px;"></div>
+    <div id="wistia-upload-widget-3" style="width: 500px; height: 75px;"></div>
+    <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
+    <div id="output"><p>Output:</p></div>
+    <script>
       var progressMessages = 0;
       var cb = {
         'initializationComplete': function() {
-          $('#output').append(&lt;p&gt;initializationComplete&lt;/p&gt;);
+          $('#output').append(<p>initializationComplete</p>);
         },
 
         'initializationError': function(error) {
-          $('#output').append(&lt;p&gt;initializationError: ' + error + &lt;/p&gt;);
+          $('#output').append(<p>initializationError: ' + error + </p>);
         },
 
         'fileQueued': function(file) {
-          $('#output').append(&lt;p&gt;fileQueued: ' + file.name + &lt;/p&gt;);
+          $('#output').append(<p>fileQueued: ' + file.name + </p>);
         },
 
         'uploadProgress': function() {
           progressMessages += 1;
 
           if ($('#output .progress').size() == 0) {
-            $('#output').append(&lt;p&gt;uploadProgress: &lt;span class="progress"&gt;1&lt;/span&gt;&lt;/p&gt;);
+            $('#output').append(<p>uploadProgress: <span class="progress">1</span></p>);
           } else {
             $('#output span.progress').html(progressMessages.toString());
           }
         },
 
         'uploadSuccess': function(jsonFile) {
-          $('#output').append(&lt;p&gt;uploadSuccess&lt;/p&gt;);
+          $('#output').append(<p>uploadSuccess</p>);
         },
 
         'uploadComplete': function() {
-          $('#output').append(&lt;p&gt;uploadComplete&lt;/p&gt;);
+          $('#output').append(<p>uploadComplete</p>);
         },
 
         'postUploadFailure': function(error) {
-          $('#output').append(&lt;p&gt;postUploadFailure: ' + error + &lt;/p&gt;);
+          $('#output').append(<p>postUploadFailure: ' + error + </p>);
         },
 
         'fileQueueError': function(error) {
-          $('#output').append(&lt;p&gt;fileQueueError: ' + error.code + &lt;/p&gt;);
+          $('#output').append(<p>fileQueueError: ' + error.code + </p>);
         },
 
         'uploadError': function(error) {
-          $('#output').append(&lt;p&gt;uploadError: ' + error.code + &lt;/p&gt;);
+          $('#output').append(<p>uploadError: ' + error.code + </p>);
         }
       };
 
@@ -161,45 +171,45 @@ The handler receives a string whose possible values are *error* or *timeout*.
       var progressMessages2 = 0;
       var cb2 = {
         'initializationComplete': function() {
-          $('#output').append(&lt;p&gt;initializationComplete2&lt;/p&gt;);
+          $('#output').append(<p>initializationComplete2</p>);
         },
 
         'initializationError': function(error) {
-          $('#output').append(&lt;p&gt;initializationError2: ' + error + &lt;/p&gt;);
+          $('#output').append(<p>initializationError2: ' + error + </p>);
         },
 
         'fileQueued': function(file) {
-          $('#output').append(&lt;p&gt;fileQueued2: ' + file.name + &lt;/p&gt;);
+          $('#output').append(<p>fileQueued2: ' + file.name + </p>);
         },
 
         'uploadProgress': function() {
           progressMessages2 += 1;
 
           if ($('#output .progress2').size() == 0) {
-            $('#output').append(&lt;p&gt;uploadProgress2: &lt;span class="progress2"&gt;1&lt;/span&gt;&lt;/p&gt;);
+            $('#output').append(<p>uploadProgress2: <span class="progress2">1</span></p>);
           } else {
             $('#output span.progress2').html(progressMessages2.toString());
           }
         },
 
         'uploadSuccess': function(jsonFile) {
-          $('#output').append(&lt;p&gt;uploadSuccess2&lt;/p&gt;);
+          $('#output').append(<p>uploadSuccess2</p>);
         },
 
         'uploadComplete': function() {
-          $('#output').append(&lt;p&gt;uploadComplete2&lt;/p&gt;);
+          $('#output').append(<p>uploadComplete2</p>);
         },
 
         'postUploadFailure': function(error) {
-          $('#output').append(&lt;p&gt;postUploadFailure2: ' + error + &lt;/p&gt;);
+          $('#output').append(<p>postUploadFailure2: ' + error + </p>);
         },
 
         'fileQueueError': function(error) {
-          $('#output').append(&lt;p&gt;fileQueueError2: ' + error.code + &lt;/p&gt;);
+          $('#output').append(<p>fileQueueError2: ' + error.code + </p>);
         },
 
         'uploadError': function(error) {
-          $('#output').append(&lt;p&gt;uploadError2: ' + error.code + &lt;/p&gt;);
+          $('#output').append(<p>uploadError2: ' + error.code + </p>);
         }
       };
 
@@ -209,50 +219,50 @@ The handler receives a string whose possible values are *error* or *timeout*.
       var progressMessages3 = 0;
       var cb3 = {
         'initializationComplete': function() {
-          $('#output').append(&lt;p&gt;initializationComplete3&lt;/p&gt;);
+          $('#output').append(<p>initializationComplete3</p>);
         },
 
         'initializationError': function(error) {
-          $('#output').append(&lt;p&gt;initializationError3: ' + error + &lt;/p&gt;);
+          $('#output').append(<p>initializationError3: ' + error + </p>);
         },
 
         'fileQueued': function(file) {
-          $('#output').append(&lt;p&gt;fileQueued3: ' + file.name + &lt;/p&gt;);
+          $('#output').append(<p>fileQueued3: ' + file.name + </p>);
         },
 
         'uploadProgress': function() {
           progressMessages2 += 1;
 
           if ($('#output .progress3').size() == 0) {
-            $('#output').append(&lt;p&gt;uploadProgress3: &lt;span class="progress3"&gt;1&lt;/span&gt;&lt;/p&gt;);
+            $('#output').append(<p>uploadProgress3: <span class="progress3">1</span></p>);
           } else {
             $('#output span.progress3').html(progressMessages2.toString());
           }
         },
 
         'uploadSuccess': function(jsonFile) {
-          $('#output').append('&lt;p&gt;uploadSuccess3&lt;/p&gt;');
+          $('#output').append('<p>uploadSuccess3</p>');
         },
 
         'uploadComplete': function() {
-          $('#output').append('&lt;p&gt;uploadComplete3&lt;/p&gt;');
+          $('#output').append('<p>uploadComplete3</p>');
         },
 
         'postUploadFailure': function(error) {
-          $('#output').append('&lt;p&gt;postUploadFailure3: ' + error + &lt;/p&gt;');
+          $('#output').append('<p>postUploadFailure3: ' + error + </p>');
         },
 
         'fileQueueError': function(error) {
-          $('#output').append('&lt;p&gt;fileQueueError3: ' + error.code + &lt;/p&gt;');
+          $('#output').append('<p>fileQueueError3: ' + error.code + </p>');
         },
 
         'uploadError': function(error) {
-          $('#output').append('&lt;p&gt;uploadError3: ' + error.code + &lt;/p&gt;');
+          $('#output').append('<p>uploadError3: ' + error.code + </p>');
         }
       };
 
       var widget3 = new wistia.UploadWidget({ divId: 'wistia-upload-widget-3', publicProjectId: '8j3', callbacks: cb3 });
-    &lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+    </script>
+    </body>
+</html>
+{% endcodeblock %}
