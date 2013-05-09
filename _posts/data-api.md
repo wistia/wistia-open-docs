@@ -2028,7 +2028,12 @@ url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
 ## Captions
 
-### Create
+The Captions API allows you to manage the captions for a video.
+
+**Currently you can only have 1 set of captions for each video. Support for
+multiple captions in different languages will be added later.**
+
+### Captions: Create
 
 This method is for adding captions to a video.
 
@@ -2050,7 +2055,7 @@ If the media in question is not found, the response will be HTTP 404 Not Found.
 If captions already exist for this video, the response will be HTTP 400 Bad Request.
 
 
-### Index
+### Captions: Index
 
 This method will return all the captions for a video in SRT format.
 
@@ -2102,7 +2107,7 @@ If there are no captions available, the response will be an empty array in the c
 If an invalid media-id is used, the response will be an empty 404.
 
 
-### Show
+### Captions: Show
 
 This method will return the captions for a specific language for a video in SRT format.
 
@@ -2146,7 +2151,7 @@ If the specified captions don't exist, the response will be an empty 404.
 If an invalid media-id is used, the response will be an empty 404.
 
 
-### Update
+### Captions: Update
 
 This method is for replacing the captions on a video.
 
@@ -2166,7 +2171,7 @@ If the specified video does not exist, this method will return an empty 404.
 If there are no captions for the video, this method will return an empty 404.
 
 
-### Delete
+### Captions: Delete
 
 This method is for removing the captions file from a video altogether.
 
