@@ -81,6 +81,14 @@ defaults:
 * embedType: "seo"
 * controlsVisibleOnLoad: false
 
+### How to Add/Update Embedded Code 
+
+For single line code, use the `<code>` block with class "full_width".
+
+For inline code, just wrap in backticks.
+
+For involved code blocks, use the [codeblock plugin](https://raw.github.com/freerobby/blog/master/source/_posts/2013-01-26-remove-merged-branches-from-git.markdown) syntax.
+
 ### How to Add/Update Links
 
 Links also use a custom filter, so we can control the root path:
@@ -125,7 +133,6 @@ Restart Elasticsearch
 To-Do
 -----
 
-* Investigate adding Coffeescript support
 * Update the floating nav for API layouts
 
 Contact
