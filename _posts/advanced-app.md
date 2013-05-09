@@ -19,7 +19,7 @@ For example, if you have a video located at
 `http://myaccount.wistia.com/medias/123` and you want it to start playing at 
 the 1 minute and 30 second mark, you'd link to the URL:
 	
-<pre><code class="language-vim">http://myaccount.wistia.com/medias/123?start=90</code></pre>
+<code class="full_width">http://myaccount.wistia.com/medias/123?start=90</code>
 
 {{ "This only works for videos within your Wistia account. To seek into embedded videos, use the <a href='http://wistia.com/doc/player-api'>JavaScript player API</a>." | note }}
 
@@ -30,6 +30,4 @@ If you'd like to test how your video is playing in HTML5, you can add the
 
 For example:
 
-<pre><code class="language-vim">
-http://myaccount.wistia.com/medias/12345?html5=true
-</code></pre>
+<code class="full_width">http://myaccount.wistia.com/medias/12345?html5=true</code>

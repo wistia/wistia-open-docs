@@ -11,9 +11,10 @@ footer: 'for_developers'
 
 The custom query string URL approach produces a link like this: 
 
-<pre><code class="language-markup">http://your-video-URL.com?wemail=example@mail.com</code></pre>
+<code class="full_width">http://your-video-URL.com?wemail=example@mail.com</code>
 
-If you have access to the user's email address (through log-in or form submittal, etc.) you can replace the <span class="code">example@mail.com</span> string with this information.
+If you have access to the user's email address (through log-in or form submittal, 
+etc.) you can replace the `example@mail.com` string with this information.
 
 {{ "The URL on the page where the video is embedded (and played from) must have the custom query string." | note }}
 
@@ -21,15 +22,17 @@ If you have access to the user's email address (through log-in or form submittal
 
 ## Function with trackEmail Embed option
 
-The new Wistia API embeds includes an option to track the viewer's email when they watch the video.  This process is predicated on there being a variable available on the client-side for tracking emails (ie. after they log in, their user info is tracked in a cookie).
+The new Wistia API embeds includes an option to track the viewer's email when 
+they watch the video.  This process is predicated on there being a variable 
+available on the client-side for tracking emails (ie. after they log in, their 
+user info is tracked in a cookie).
 
 {{ "You will need to use the 'API' version of the embed code to utilize this feature" | note }}
 
 Inside the embed code, you will see a snippet that appears like this:
 
-<pre><code class="language-markup">
+{% codeblock playlist_api.js %}
 <script type="text/javascript"> 
-</code><code class='language-javascript'>
   var wistiaEmbed = Wistia.embed("bfc34aa023", {
     platformPreference: "html5",
     autoPlay: true,
@@ -37,13 +40,12 @@ Inside the embed code, you will see a snippet that appears like this:
     container: "my_container"
   });
 </script>
-</code></pre>
+{% endcodeblock %}
 
-We will be adding the <span class="code">trackEmail</span> embed option:
+We will be adding the `trackEmail` embed option:
 	
-<pre><code class="language-markup">
+{% codeblock playlist_api.js %}
 <script type="text/javascript"> 
-</code><code class='language-javascript'>
   var wistiaEmbed = Wistia.embed("bfc34aa023", {
     platformPreference: "html5",
     autoPlay: true,
@@ -52,8 +54,10 @@ We will be adding the <span class="code">trackEmail</span> embed option:
     trackEmail: "userEmail"
   });
 </script>
-</code></pre>
+{% endcodeblock %}
 
 
-The variables for Wistia video hashed ID (<span class="code">bfc34aa023</span>) and email address (<span class="code">UserEmail</span>) need to be updated to reflect your embedded video ID and the variable of your identifiable user information.
+The variables for Wistia video hashed ID (`bfc34aa023`) and email address 
+(`UserEmail`) need to be updated to reflect your embedded video ID and the 
+variable of your identifiable user information.
 

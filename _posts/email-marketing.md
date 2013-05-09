@@ -21,33 +21,51 @@ Note: we created specific documentation for our most popular merge tag options, 
 
 ### Select Your Video
 
-First, pick the video from your account you want to embed in an email.  You'll need to embed it on your landing page (if you're planning to use one) and also create an email embed.
+First, pick the video from your account you want to embed in an email.  You'll 
+need to embed it on your landing page (if you're planning to use one) and also 
+create an email embed.
 
-Start by embedding the video on the landing page you'll be using (if you're having it point to your Wistia Media Page, you're all set).  Follow the embedding steps if you have any trouble: [Embedding Your Video]({{ '/embedding' | post_url }}).
+Start by embedding the video on the landing page you'll be using (if you're 
+having it point to your Wistia Media Page, you're all set).  Follow the embedding 
+steps if you have any trouble: [Embedding Your Video]({{ '/embedding' | post_url }}).
 
 {% post_image hashed_id: 'd129371996ba14ee95adaf0fc17ce5b3bbf2f31d', class: 'center' %}
 
-Next, select "Email Marketing" from under the Media Actions drop-down menu.
+Next, select `Email Marketing` from under the Media Actions drop-down menu.
 
 ---
 
 ### Select Your Email Marketing Provider
 
-Next, select your provider from the drop-down list.  We've got a whole list of the best in the biz, like [Constant Contact](http://constantcontact.com), [MailChimp](http://mailchimp.com), [Campaign Monitor](http://www.campaignmonitor.com), and [MadMimi](http://madmimi.com).
+Next, select your provider from the drop-down list.  We've got a whole list of 
+the best in the biz, like [Constant Contact](http://constantcontact.com), 
+[MailChimp](http://mailchimp.com), [Campaign Monitor](http://www.campaignmonitor.com), 
+and [MadMimi](http://madmimi.com).
 
-After you choose your email marketing provider, you can customize the settings for your campaign.
+After you choose your email marketing provider, you can customize the settings 
+for your campaign.
 
 {% post_image hashed_id: '43a348de097029eb4e1b4040f0407e4095939a11', class: 'center' %}
 
-Thumbnail width refers to the size of the thumbnail image in your email.  Do you want it to dominate the email? Or should it be playing 3rd fiddle?  450px is our standard width, but you can change it as you see fit.
+Thumbnail width refers to the size of the thumbnail image in your email.  Do 
+you want it to dominate the email? Or should it be playing 3rd fiddle?  450px 
+is our standard width, but you can change it as you see fit.
 
-Link to means where people will end up after clicking the thumbnail image.  By default, it's a public link to the media in your Wistia account. But if you want to set up a landing page instead, just change the link here.  One thing to note is that wherever this points, the video HAS to be embedded on that page in order to track the stats correctly.
+Link to means where people will end up after clicking the thumbnail image.  
+By default, it's a public link to the media in your Wistia account. But if you 
+want to set up a landing page instead, just change the link here.  One thing to 
+note is that wherever this points, the video HAS to be embedded on that page in 
+order to track the stats correctly.
 
 ---
 
 ### Create the Campaign
 
-Once you've got your settings dialed in, copy the "video merge tag", and paste it into the HTML editor for your email provider.  Voila! The thumbnail image will appear, attached to a link to your video.  And in the background, we'll be collecting stats on which email addresses viewed your videos (available in the Public Stats area of your account).
+Once you've got your settings dialed in, copy the "video merge tag", and paste 
+it into the HTML editor for your email provider.  Voila! The thumbnail image 
+will appear, attached to a link to your video.  And in the background, we'll be 
+collecting stats on which email addresses viewed your videos (available in the 
+Public Stats area of your account).
 
 {% post_image hashed_id: '44087ef2759f48e1b04d72cac7ba90e058f0f388', class: 'center' %}
 
@@ -111,7 +129,10 @@ SendGrid | [see more](#email_merge_tags_with_sendgrid)
 
 ### Step 1: Upload and embed the video
 
-As mentioned above, the video that you wish people to view needs to be viewable at a publicly accessible web page.  To do this, you will need to upload your video to your Wistia account and then embed it on a page on your website.  For instructions on how to do that see the following Quickstart articles:
+As mentioned above, the video that you wish people to view needs to be viewable 
+at a publicly accessible web page.  To do this, you will need to upload your 
+video to your Wistia account and then embed it on a page on your website.  For 
+instructions on how to do that see the following Quickstart articles:
 
 * [How to upload]({{ '/upload-video' | post_url }})
 * [How to embed]({{ '/embedding' | post_url }})
@@ -120,62 +141,89 @@ As mentioned above, the video that you wish people to view needs to be viewable 
 
 ### Step 2: Construct the dynamic link
 
-The way that Wistia is able to attach views of your video on your website to individual email addresses is through the use of a special hyper-link called a dynamic link.  It is called a dynamic link because it uses the mail merge capabilities of your email marketing provider to create an personalized URL for every person in your mailing list.  The dynamic link created here is what will be input into your email marketing tool to create the link that your users will click on to view your video.
+The way that Wistia is able to attach views of your video on your website to 
+individual email addresses is through the use of a special hyper-link called a 
+dynamic link. It is called a dynamic link because it uses the mail merge 
+capabilities of your email marketing provider to create an personalized URL for 
+every person in your mailing list. The dynamic link created here is what will 
+be input into your email marketing tool to create the link that your users will 
+click on to view your video.
 
-First, start with the URL of the page where you embedded your video.  As an example, let's say your video was embedded on the following page:
+First, start with the URL of the page where you embedded your video.  As an 
+example, let's say your video was embedded on the following page:
 
-<pre><code class="language-markup">http://wistia.com/solutions/video_marketing</code></pre>
+<code class="full_width">http://wistia.com/solutions/video_marketing</code>
 
-Next, we add a [query string parameter](http://en.wikipedia.org/wiki/Query_string.html) to this URL where the user's email will be passed.  The query string parameter to add here is: <span class="code">?wemail=</span>
+Next, we add a [query string parameter](http://en.wikipedia.org/wiki/Query_string.html) 
+to this URL where the user's email will be passed.  The query string parameter 
+to add here is: `?wemail=`
 
 Which gives a resulting URL of:
 
-<pre><code class="language-markup">http://wistia.com/solutions/video_marketing?wemail=</code></pre>
+`http://wistia.com/solutions/video_marketing?wemail=`
 
 If the URL where your video was embedded already contains a query string, i.e.:
 
-<pre><code class="language-markup">http://wistia.com/solutions/video_marketing?test=true</code></pre>
+`http://wistia.com/solutions/video_marketing?test=true`
 
-then simply add an ampersand before the <span class="code">wemail=</span>:
+then simply add an ampersand before the `wemail=`:
 
-<pre><code class="language-markup">http://wistia.com/solutions/video_marketing?test=true&wemail=</code></pre>
+`http://wistia.com/solutions/video_marketing?test=true&wemail=`
 
 ---
 
 ### Step 3: Finish and use the dynamic link
 
-The final step to finish the dynamic link is to add the email merge tag from your email marketing tool.  A merge tag is a special character that your email marketing client uses to personalize your email for each individual recipient.
+The final step to finish the dynamic link is to add the email merge tag from 
+your email marketing tool.  A merge tag is a special character that your email 
+marketing client uses to personalize your email for each individual recipient.
 
 It is necessary to find out:
 
 1.  Whether your email marketing tool supports dynamic links (i.e. merging user data into URLs)
 2.  What the URL email merge tag is for your email marketing tool
 
-We have compiled a [growing list]({{ '/email-marketing#email_clients_that_support_dynamic_links' | post_url }}) of email marketing tools and created a table to show whether they support dynamic links and if so what the URL email merge tag is for that tool.
+We have compiled a [growing list]({{ '/email-marketing#email_clients_that_support_dynamic_links' | post_url }}) 
+of email marketing tools and created a table to show whether they support 
+dynamic links and if so what the URL email merge tag is for that tool.
 
-Let's assume, for an example, that we are using Mail Chimp as our email marketing tool.  Mail Chimp does support dynamic links and the URL email merge tag is: <span class="code">*|URL:EMAIL|*</span>
+Let's assume, for an example, that we are using Mail Chimp as our email 
+marketing tool.  Mail Chimp does support dynamic links and the URL email 
+merge tag is: `*|URL:EMAIL|*`
 
-To complete the dynamic link, we simply append this URL email merge tag to the end of the link created in Step #2.  The result is:
+To complete the dynamic link, we simply append this URL email merge tag to the 
+end of the link created in Step #2.  The result is:
 
-<pre><code class="language-markup">http://wistia.com/solutions/video_marketing?test=true&wemail=*|URL:EMAIL|*</code></pre>
+`http://wistia.com/solutions/video_marketing?test=true&wemail=*|URL:EMAIL|*`
 
 This is the link that can be used in your email marketing campaign.  Your finished link in HTML might look something like the following:
 
-<pre><code class="language-markup">&lt;a href="http://wistia.com/solutions/video_marketing?test=true&wemail=*|URL:EMAIL|*"&gt;See our short 30 second video!&lt;/a&gt;</code></pre>
+`&lt;a href="http://wistia.com/solutions/video_marketing?test=true&wemail=*|URL:EMAIL|*"&gt;See our short 30 second video!&lt;/a&gt;`
 
 ---
 
 ### Results
 
-When someone clicks the dynamic link in your email campaign, they will be taken to the page on your site containing the embedded video.  Wistia will capture the user's email address and will associate it with that person's viewing of video on your website.
+When someone clicks the dynamic link in your email campaign, they will be taken 
+to the page on your site containing the embedded video.  Wistia will capture 
+the user's email address and will associate it with that person's viewing of 
+video on your website.
 
-When you view the statistics for your video you will see analytics for each person who clicked through from your email campaign as shown in the following example:
+When you view the statistics for your video you will see analytics for each 
+person who clicked through from your email campaign as shown in the following 
+example:
 
 {% post_image hashed_id: '96221f9edb1dab5794bdca3c634426dfb1d48189', class: 'center' %}
 
-This data can also be exported to a spreadsheet as well using Wistia's [Stats Export feature]({{ '/stats-api' | post_url }}) to help you more easily sort through large data sets.
+This data can also be exported to a spreadsheet as well using Wistia's 
+[Stats Export feature]({{ '/stats-api' | post_url }}) to help you more easily 
+sort through large data sets.
 
-By having a true read on individual viewer engagement, you will know who is interested and who is not based on how each viewer watched your content and how much time they spent doing so.  This information allows you to score (rank) your leads, target future follow-up with pin-point precision, and calculate the return on investment of your campaigns.
+By having a true read on individual viewer engagement, you will know who is 
+interested and who is not based on how each viewer watched your content and 
+how much time they spent doing so.  This information allows you to score (rank) 
+your leads, target future follow-up with pin-point precision, and calculate the 
+return on investment of your campaigns.
 
 ## Email Merge Tags With SendGrid
 
@@ -193,10 +241,10 @@ Jayson | support@sendgrid.com | 12345
 
 You can now write a link like:
 
-    <a href="www.website.com?wemail=[EMAIL_ADDRESS]">
+`<a href="www.website.com?wemail=[EMAIL_ADDRESS]">`
 
 And that would be dynamically replaced to:
 
-    <a href="www.website.com?wemail=support@sendgrid.com">
+`<a href="www.website.com?wemail=support@sendgrid.com">`
 
 Pretty neat! Thanks also to Jayson at SendGrid support!

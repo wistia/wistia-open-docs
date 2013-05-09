@@ -22,7 +22,7 @@ You'll need to add this to every page that contains a video you want to track.
 Or better yet, if you have a layout file or a footer that's shared across pages, 
 just put it in there and you'll be good to go!
 
-<pre><code class="language-javascript">
+{% codeblock playlist_api.js %}
 <script src="http://fast.wistia.com/static/embed_shepherd-v1.js"></script>
 <script>
   wistiaEmbeds.onFind(function(video){
@@ -35,7 +35,7 @@ just put it in there and you'll be good to go!
     });
   });
 </script>
-</code></pre>
+{% endcodeblock %}
 
 This code fires a 'Play' event to Google Analytics whenever a video on your 
 website is played. It also fires a 'Complete' event when a viewer reaches the 

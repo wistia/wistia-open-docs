@@ -38,7 +38,7 @@ The Media: Wistia module allows for embedding videos in CCK fields. It also enab
 module that has extended Wistia support. Once installed and enabled on a given 
 input format, you can embed Wistia videos in posts using the syntax:
 
-    [video:http://subdomain.wistia.com/medias/hashed_id ratio:640x360 width: 640]
+<code class="full_width">[video:http://subdomain.wistia.com/medias/hashed_id ratio:640x360 width: 640]</code>
 
 The drawback to using `video_filter` is you must include the `ratio attribute` 
 in the token, which can require additional work to determine.

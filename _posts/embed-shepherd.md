@@ -12,73 +12,88 @@ post_intro: <p>Looking for simple, programmatic access to all the Wistia embeds 
 
 ## Including the Embed Shepherd
 
-<pre><code class="language-html">&lt;script src="http://fast.wistia.com/static/embed_shepherd-v1.js"&gt;&lt;/script&gt;</code></pre>
+{% codeblock thumbnail.html %}
+<script src="http://fast.wistia.com/static/embed_shepherd-v1.js"></script>
+{% endcodeblock %}
 
-You can include that snippet anywhere on your page. Once it has run, any existing or future Wistia embeds will be included in the global array `window.wistiaEmbeds`.
+You can include that snippet anywhere on your page. Once it has run, any existing 
+or future Wistia embeds will be included in the global array `window.wistiaEmbeds`.
 
 If you'd like, you can load the script asynchronously like so. Once Embed
 Shepherd loads, it will execute the `wistiaEmbedShepherdReady` function if it
 exists. Wrap whatever you need to do in this function and you can be assured
 that `window.wistiaEmbeds` is available! Check it out:
 
-<pre>
-<code class="language-javascript">
-&lt;script>
+{% codeblock playlist_api.js %}
+<script>
   window.wistiaEmbedShepherdReady = function(){
     console.log("The Shepherd is ready!");
   }
-&lt;/script>
-&lt;script src="http://fast.wistia.com/static/embed_shepherd-v1.js" async>&lt;/script>
-</code>
-</pre>
+</script>
+<script src="http://fast.wistia.com/static/embed_shepherd-v1.js" async></script>
+{% endcodeblock %}
 
 {{ "The Embed Shepherd automatically includes the iframe-api on the page. You do not need to include it separately to access iframe embeds or popovers." | note }}
 
 
 ## The wistiaEmbeds variable
 
-The Embed Shepherd immediately sets up a global variable called `wistiaEmbeds` in the `window` scope. `wistiaEmbeds` is an array containing all active Wistia embed handles on the page. If an embed code is hidden or removed from the page, the corresponding handle will be removed. Similarly, when a new embed is injected into the page--whether iframe, API, SEO, or popover--it will be available in `wistiaEmbeds`.
+The Embed Shepherd immediately sets up a global variable called `wistiaEmbeds` 
+in the `window` scope. `wistiaEmbeds` is an array containing all active Wistia 
+embed handles on the page. If an embed code is hidden or removed from the page, 
+the corresponding handle will be removed. Similarly, when a new embed is injected 
+into the page--whether iframe, API, SEO, or popover--it will be available in `wistiaEmbeds`.
 
-The `wistiaEmbeds` variable is based on a normal Javascript Array. As such, you can loop over the embeds, each of which has methods as defined in the [Player API](/player-api).
+The `wistiaEmbeds` variable is based on a normal Javascript Array. As such, 
+you can loop over the embeds, each of which has methods as defined in the 
+[Player API](/player-api).
 
-<pre><code class="language-javascript">console.log("List of Wistia embeds on the page, by name:");
+{% codeblock playlist_api.js %}
+console.log("List of Wistia embeds on the page, by name:");
 for (var i = 0; i < wistiaEmbeds.length; i++) {
   console.log(wistiaEmbeds[i].name());
-}</code></pre>
+}
+{% endcodeblock %}
 
-Often times this is not what you want to do though, because it will only loop over the embeds that exist at the time of execution. Instead, take a look below at the `bind` and `onFind` methods.
-
+Often times this is not what you want to do though, because it will only loop 
+over the embeds that exist at the time of execution. Instead, take a look 
+below at the `bind` and `onFind` methods.
 
 ## Binding to all embeds on a page
 
-You might want to capture events such as "play" or "end" for any video on the page. The `wistiaEmbeds` variable provides a `bind` method to do just that.
+You might want to capture events such as "play" or "end" for any video on the 
+page. The `wistiaEmbeds` variable provides a `bind` method to do just that.
 
-<pre><code class="language-javascript">wistiaEmbeds.bind("play", function(video) {
+{% codeblock playlist_api.js %}
+wistiaEmbeds.bind("play", function(video) {
   console.log("I played a video: " + video.name() + " (" + video.hashedId() + ")");
 });
 wistiaEmbeds.bind("end", function(video) {
   console.log("A video ended: " + video.name() + " (" + video.hashedId() + ")");
-});</code></pre>
+});
+{% endcodeblock %}
 
 You can unbind too:
 
-<pre><code class="language-javascript">
+{% codeblock playlist_api.js %}
 wistiaEmbeds.bind("play", function(video) {
   console.log("I played one of these videos first. It was this one: " + video.name());
   return this.unbind;
-});</code></pre>
+});
+{% endcodeblock %}
 
 
 ## Access each active embed and all FUTURE embeds
 
-If you want to perform initialization logic for each video, including those that are injected after the Embed Shepherd is first executed, then the `onFind` method will help you out.
+If you want to perform initialization logic for each video, including those 
+that are injected after the Embed Shepherd is first executed, then the `onFind` 
+method will help you out.
 
-<pre><code class="language-javascript">wistiaEmbeds.onFind(function(video) {
+{% codeblock playlist_api.js %}
+wistiaEmbeds.onFind(function(video) {
   video.bind("play", function() {
     console.log("I played " + video.name());
     return this.unbind;
   });
-});</code></pre>
-
-
-
+});
+{% endcodeblock %}

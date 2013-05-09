@@ -36,31 +36,31 @@ This image shows the three potential methods:
 
 ### Media ID Approach
 
-<pre><code class="language-json">
+{% codeblock return.json %}
 {exp:channel:entries channel="wistia_demo"}
   &lt;h1&gt;Passing Wistia ID&lt;/h1&gt;
   &lt;iframe src="http://fast.wistia.com/embed/iframe/{embed_id}?controlsVisibleOnLoad=true&version=v1" /&gt;
 {/exp:channel:entries}
-</code></pre>
+{% endcodeblock %}
 
 This approach takes the Media ID and adds it to the iframe template.
 
 ### Antenna Plugin Method
 
-<pre><code class="language-json">
+{% codeblock return.json %}
 {exp:channel:entries channel="wistia_demo"}
   {exp:antenna url='{antenna_method}' max_width="640" max_height="360" cache_minutes="120" wmode="transparent|opaque|window"}
     &lt;h2&gt;{video_title}&lt;/h2&gt;
     {embed_code}
   {/exp:antenna}
 {/exp:channel:entries}
-</code></pre>
+{% endcodeblock %}
 
 ### Embed Code Approach
 
-<pre><code class="language-json">
+{% codeblock return.json %}
 {exp:channel:entries channel="wistia_demo"}
   &lt;h1&gt;Copy/Paste the Embed Code&lt;/h1&gt;
   {full_embed}
 {/exp:channel:entries}
-</code></pre>
+{% endcodeblock %}
