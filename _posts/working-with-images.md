@@ -2,7 +2,7 @@
 layout: post
 title: Working With Images
 description: All the ways you can manipulate images returned by Wistia APIs.
-category: for_developers
+category: For Developers
 ---
 
 <div class="post_intro">
