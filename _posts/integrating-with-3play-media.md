@@ -15,10 +15,10 @@ Wistia will let you order and embed transcripts from in your account, but if you
 
 That's it! Here's an example:
 
-<pre><code class="language-javascript">
-&lt;div id="wistia_e9daad32af" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
-&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+{% codeblock integrating_with_3play.js %}
+<div id="wistia_e9daad32af" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
 wistiaEmbed = Wistia.embed("e9daad32af", {
   version: "v1",
   videoWidth: 640,
@@ -27,13 +27,13 @@ wistiaEmbed = Wistia.embed("e9daad32af", {
   playerColor: "aae3d8",
   uuid: "my_custom_uuid" // this can be whatever you want
 });
-&lt;/script&gt;
+</script>
 
-&lt;!-- Begin 3Play Media Embed
+<!-- Begin 3Play Media Embed
  By use of this code snippet, I agree to the 3Play Media Terms and Conditions
- found at http://www.3playmedia.com/account-terms/ and http://p3.3playmedia.com/p3.js --&gt;
-&lt;div id="transcript1"&gt;&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
+ found at http://www.3playmedia.com/account-terms/ and http://p3.3playmedia.com/p3.js -->
+<div id="transcript1"></div>
+<script type="text/javascript">
 // replace "{USE_YOUR_VIDEO_OBJECT_ID}" with the player ID from your video embed.
 // set player_type to the player type you are using.
 window.p3_async_init = function(){
@@ -55,10 +55,10 @@ P3.init({
 }
 },"QFw8XoMxO_MfSx5HgIUNDY0qaXtqyzmo");
 }
-&lt;/script&gt;
-&lt;script type="text/javascript" src="http://p3.3playmedia.com/p3.js"&gt;&lt;/script&gt;
-&lt;!-- End 3Play Media Embed --&gt;
-</code></pre>
+</script>
+<script type="text/javascript" src="http://p3.3playmedia.com/p3.js"></script>
+<!-- End 3Play Media Embed -->
+{% endcodeblock %}
 
 
 <div id="wistia_e9daad32af" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
@@ -90,10 +90,10 @@ Wistia does not currently have a way to add captions to your video. But you can 
 
 Note that the overlay option currently puts the captions over our player controls, so you should make sure overlay is set to false.
 
-<pre><code class="language-javascript">
-&lt;div id="wistia_e9daad32af_1" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
-&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+{% codeblock integrating_with_3play_captions.js %}
+<div id="wistia_e9daad32af_1" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
 wistiaEmbed = Wistia.embed("e9daad32af", {
   version: "v1",
   container: "wistia_e9daad32af_1",
@@ -103,13 +103,13 @@ wistiaEmbed = Wistia.embed("e9daad32af", {
   playerColor: "aae3d8",
   uuid: "my_custom_uuid_for_captions" // this can be whatever you want
 });
-&lt;/script&gt;
+</script>
 
-&lt;!-- Begin 3Play Media Embed
+<!-- Begin 3Play Media Embed
  By use of this code snippet, I agree to the 3Play Media Terms and Conditions
- found at http://www.3playmedia.com/account-terms/ and http://p3.3playmedia.com/p3.js --&gt;
-&lt;div id="captions1"&gt;&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
+ found at http://www.3playmedia.com/account-terms/ and http://p3.3playmedia.com/p3.js -->
+<div id="captions1"></div>
+<script type="text/javascript">
 // replace "{USE_YOUR_VIDEO_OBJECT_ID}" with the player ID from your video embed.
 // set player_type to the player type you are using.
 window.p3_async_init = function(){
@@ -129,10 +129,10 @@ P3.init({
 }
 },"QFw8XoMxO_MfSx5HgIUNDY0qaXtqyzmo");
 }
-&lt;/script&gt;
-&lt;script type="text/javascript" src="http://p3.3playmedia.com/p3.js"&gt;&lt;/script&gt;
-&lt;!-- End 3Play Media Embed --&gt;
-</code></pre>
+</script>
+<script type="text/javascript" src="http://p3.3playmedia.com/p3.js"></script>
+<!-- End 3Play Media Embed -->
+{% endcodeblock %}
 
 <div id="wistia_e9daad32af_1" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
@@ -196,15 +196,15 @@ The embedding process is similar to above, except it uses `"wistia_iframe"` as t
 For the video object ID, you must set an ID attribute on the iframe, and make sure
 the 3play javascript targets that ID. Check out this example:
 
-<pre><code class="language-javascript">
-&lt;iframe src="http://fast.wistia.com/embed/iframe/e9daad32af?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" id="my_custom_uuid" class="wistia_embed" name="my_custom_uuid" width="640" height="360"&gt;&lt;/iframe&gt;
-&lt;script src="http://fast.wistia.com/static/iframe-api-v1.js"&gt;&lt;/script&gt;
+{% codeblock integrating_with_3play_iframes.js %}
+<iframe src="http://fast.wistia.com/embed/iframe/e9daad32af?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" id="my_custom_uuid" class="wistia_embed" name="my_custom_uuid" width="640" height="360"></iframe>
+<script src="http://fast.wistia.com/static/iframe-api-v1.js"></script>
 
-&lt;!-- Begin 3Play Media Embed
+<!-- Begin 3Play Media Embed
  By use of this code snippet, I agree to the 3Play Media Terms and Conditions
- found at http://www.3playmedia.com/account-terms/ and http://p3.3playmedia.com/p3.js --&gt;
-&lt;div id="transcript1"&gt;&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
+ found at http://www.3playmedia.com/account-terms/ and http://p3.3playmedia.com/p3.js -->
+<div id="transcript1"></div>
+<script type="text/javascript">
 // replace "{USE_YOUR_VIDEO_OBJECT_ID}" with the player ID from your video embed.
 // set player_type to the player type you are using.
 window.p3_async_init = function(){
@@ -226,7 +226,7 @@ P3.init({
 }
 },"QFw8XoMxO_MfSx5HgIUNDY0qaXtqyzmo");
 }
-&lt;/script&gt;
-&lt;script type="text/javascript" src="http://p3.3playmedia.com/p3.js"&gt;&lt;/script&gt;
-&lt;!-- End 3Play Media Embed --&gt;
-</code></pre>
+</script>
+<script type="text/javascript" src="http://p3.3playmedia.com/p3.js"></script>
+<!-- End 3Play Media Embed -->
+{% endcodeblock %}

@@ -30,7 +30,7 @@ Note that, for <span class="code">onloadCollapse</span> to work, <span class="co
 
 ## iframe Example
 
-<pre><code class="language-markup">
+{% codeblock transcript-params.html %}
 <iframe src="http://fast.wistia.com/embed/iframe/abcde12345
   ?videoWidth=640&videoHeight=360&plugin[transcript][version]=v2
   &plugin[transcript][position]=below&plugin[transcript][height]=300
@@ -38,14 +38,14 @@ Note that, for <span class="code">onloadCollapse</span> to work, <span class="co
   allowtransparency="true" frameborder="0" scrolling="no" 
   class="wistia_embed" name="wistia_embed" width="640" height="560">
 </iframe>
-</code></pre>
+{% endcodeblock %}
 
 ## API Embed Example
 
-<pre><code class="language-markup">
-&lt;div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
-&lt;script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+{% codeblock transcript-params.html %}
+<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script>
   wistiaEmbed = Wistia.embed("abcde12345", {
     version: "v1",
     videoWidth: 640,
@@ -59,5 +59,5 @@ Note that, for <span class="code">onloadCollapse</span> to work, <span class="co
     height: 300,
     canDownload: true
   });
-&lt;/script&gt;
-</code></pre>
+</script>
+{% endcodeblock %}

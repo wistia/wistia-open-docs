@@ -43,7 +43,7 @@ style option, you can override the default sizing.
 
 ## Iframe Example
 
-<pre><code class="language-markup">
+{% codeblock turnstile-params.html %}
 <iframe src="http://fast.wistia.com/embed/iframe/abcde12345
   ?videoWidth=640&videoHeight=360&plugin[requireEmail][version]=v1
   &plugin[requireEmail][topText]=Please enter your email below.
@@ -52,15 +52,15 @@ style option, you can override the default sizing.
   allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" 
   name="wistia_embed" width="640" height="360">
 </iframe>
-</code></pre>
+{% endcodeblock %}
 
 ## API Embed Example
 
-<pre><code class="language-javascript">
-&lt;div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360"&gt;&nbsp;&lt;/div&gt;
-&lt;script src="http://fast.wistia.com/static/E-v1.js"&gt;&lt;/script&gt;
-&lt;script src="http://fast.wistia.com/static/concat/E-v1-gridify,requireEmail-v1.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+{% codeblock turnstile-params.html %}
+<div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
+<script src="http://fast.wistia.com/static/E-v1.js"></script>
+<script src="http://fast.wistia.com/static/concat/E-v1-gridify,requireEmail-v1.js"></script>
+<script>
   wistiaEmbed = Wistia.embed("abcde12345", {
     videoWidth: 640,
     videoHeight: 360
@@ -74,6 +74,5 @@ style option, you can override the default sizing.
       color: "#eeffee"
     }
   });
-&lt;/script&gt;
-</code></pre>
-
+</script>
+{% endcodeblock %}

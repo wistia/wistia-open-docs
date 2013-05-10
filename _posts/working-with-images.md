@@ -31,11 +31,11 @@ When using the oEmbed endpoint, part of the JSON returned is the `thumbnail_url`
 
 First, we'll make the oEmbed request:
 
-<pre><code class="language-markup">http://fast.wistia.com/oembed?url=http%3A//home.wistia.com/medias/e4a27b971d</code></pre>
+<code class="full_width">http://fast.wistia.com/oembed?url=http%3A//home.wistia.com/medias/e4a27b971d</code>
 
 The JSON returned:
 
-<pre><code class="language-json">
+{% codeblock working-with-images.json %}
 {
   "version":"1.0",
   "type":"video",
@@ -50,20 +50,20 @@ The JSON returned:
   "thumbnail_height":360,
   "duration":16.43
 }
-</code></pre>
+{% endcodeblock %}
 
 Parse out that `thumbnail_url`!
 
-<pre><code class="language-javascript">
+{% codeblock playlist_api.js %}
 thumbnail_url = json_object.thumbnail_url
 => "http://embed.wistia.com/deliveries/2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg?image_crop_resized=640x360"
-</code></pre>
+{% endcodeblock %}
 
 That thumbnail includes `?image_crop_resized=640x360` by default. You desperately want to resize it to be 450 pixels wide. No problem! We'll use the `image_resize` parameter:
 
-<pre><code class="language-javascript">
+{% codeblock playlist_api.js %}
 thumbnail_url = json_object.thumbnail_url + '&' + 'image_resize=450'
-</code></pre>
+{% endcodeblock %}
 
 We could have also "chopped off" the existing `image_crop_resized` parameter first, and then appended the `image_resize` using a `?` instead of an ampersand.
 
@@ -71,7 +71,7 @@ We could have also "chopped off" the existing `image_crop_resized` parameter fir
 
 When making a request against the [Data API]({{ '/data-api' | post_url }}), the media assets includes a still image (the thumbnail!).
 
-<pre><code class="language-vim">
+{% codeblock ruby_gem.rb %}
 m = Wistia::Media.first
 m.assets.select{ |a| a.attributes["type"] == "StillImageFile" }.first
 => #<Wistia::Media::Asset:0x007fa67caced68 @attributes={
@@ -81,14 +81,14 @@ m.assets.select{ |a| a.attributes["type"] == "StillImageFile" }.first
   }, @prefix_options={}, @persisted=false>
 url = _.url
 => "http://embed.wistia.com/deliveries/b300126144f62ba2942ec4a4f29e949a47e16f12.bin"
-</code></pre>
+{% endcodeblock %}
 
 You can then apply the same geometry strings to the thumbnail URL - I would recommend updating the extension as well.
 
-<pre><code class="language-vim">
+{% codeblock ruby_gem.rb %}
 name  = url.chomp(File.extname(url)) + ".jpg?image_crop_resized=640x360"
 => "http://embed.wistia.com/deliveries/b300126144f62ba2942ec4a4f29e949a47e16f12.jpg?image_crop_resized=640x360"
-</code></pre>
+{% endcodeblock %}
 
 Pretty fun, right?
 

@@ -52,18 +52,18 @@ Our links use <span class="code">target="\_blank"</span> to pop open a new windo
 
 ### Iframe Example
 
-<pre><code class='language-markup'>
+{% codeblock postRoll-params.html %}
 <iframe src="http://fast.wistia.com/embed/iframe/abcde12345?videoWidth=640&videoHeight=360
 &plugin[postRoll][version]=v1&plugin[postRoll][text]=You made it to the end of my video! Now check out my product.
 &plugin[postRoll][link]=http://myawesomeproduct.com/awesome
 &plugin[postRoll][style][background]=#404040
 &plugin[postRoll][style][color]=#ffffff"
  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
-</code></pre>
+{% endcodeblock %}
 
 ### API Embed Example
 
-<pre><code class="language-markup">
+{% codeblock postRoll-api-embed.html %}
 <div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
 <script src="http://fast.wistia.com/static/E-v1.js"></script>
 <script src="http://fast.wistia.com/static/concat/E-v1-gridify,postRoll-v1.js"></script>
@@ -82,4 +82,4 @@ style: {
 }
 });
 </script>
-</code></pre>
+{% endcodeblock %}

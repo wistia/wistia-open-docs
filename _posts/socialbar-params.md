@@ -59,7 +59,7 @@ Button order can be changed. Possible buttons are:
 
 ## iframe Embed Example
 
-<pre><code class="language-markup">
+{% codeblock socialbar-params.html %}
 <iframe src="http://fast.wistia.com/embed/iframe/abcde12345
 ?videoWidth=640&videoHeight=360&plugin[socialbar][version]=v1
 &plugin[socialbar][buttons]=embed-twitter-facebook&plugin[socialbar][pageUrl]=
@@ -67,11 +67,11 @@ http://wistia.com&pageTitle=The best in online video hosting."
 allowtransparency="true" frameborder="0" scrolling="no" 
 class="wistia_embed" name="wistia_embed" width="640" height="387">
 </iframe>
-</code></pre>
+{% endcodeblock %}
 
 ## API Embed Example
 
-<pre><code class="language-markup">
+{% codeblock socialbar-params.html %}
 <div id="wistia_abcde12345" style="width:640px;height;387px;" data-video-width="640" data-video-height="360">&nbsp;</div>
 <script src="http://fast.wistia.com/static/E-v1.js"></script>
 <script src="http://fast.wistia.com/static/concat/E-v1-gridify,socialbar-v1.js"></script>
@@ -87,4 +87,4 @@ class="wistia_embed" name="wistia_embed" width="640" height="387">
     pageTitle: "The best in online video hosting."
   });
 </script>
-</code></pre>
+{% endcodeblock %}
