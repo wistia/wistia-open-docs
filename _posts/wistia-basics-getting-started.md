@@ -78,7 +78,7 @@ wistiaEmbed = Wistia.embed("8a5e87899d", {
           screenName: "jeffvincent"
         }
       ],
-      src: "http://fast.wistia.com/labs/twitter-follows/wistia-follows.js"
+      src: "http://fast.wistia.net/labs/twitter-follows/wistia-follows.js"
     }
   }
 });

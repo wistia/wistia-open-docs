@@ -6,8 +6,8 @@ footer: 'for_developers'
 ---
 
 <div id="wistia_4d8229898d" style="width:660px;height:371px;" data-video-width="660" data-video-height="371">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"></script>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1-gridify%2CrequireEmail-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1-gridify%2CrequireEmail-v1.js"></script>
 
 <script>/*<![CDATA[*/
 wistiaEmbed = Wistia.embed("4d8229898d", {
@@ -44,7 +44,7 @@ style option, you can override the default sizing.
 ## Iframe Example
 
 {% codeblock turnstile-params.html %}
-<iframe src="http://fast.wistia.com/embed/iframe/abcde12345
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345
   ?videoWidth=640&videoHeight=360&plugin[requireEmail][version]=v1
   &plugin[requireEmail][topText]=Please enter your email below.
   &plugin[requireEmail][bottomText]=We may use this email to contact you about the product, but we won't be too pushy.
@@ -58,8 +58,8 @@ style option, you can override the default sizing.
 
 {% codeblock turnstile-params.html %}
 <div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script src="http://fast.wistia.com/static/E-v1.js"></script>
-<script src="http://fast.wistia.com/static/concat/E-v1-gridify,requireEmail-v1.js"></script>
+<script src="http://fast.wistia.net/static/E-v1.js"></script>
+<script src="http://fast.wistia.net/static/concat/E-v1-gridify,requireEmail-v1.js"></script>
 <script>
   wistiaEmbed = Wistia.embed("abcde12345", {
     videoWidth: 640,

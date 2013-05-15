@@ -32,14 +32,14 @@ Well then, you're in luck! To get the full power of SuperEmbeds, you can just ge
 Head to the SuperEmbed builder for your video, customize it, then copy the embed code. It will look something like this:
 
 <pre><code class="language-markup">
-<iframe src="http://fast.wistia.com/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+<iframe src="http://fast.wistia.net/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
 </code></pre>
 
 Now, grab the URL from the <code>src</code> parameter of your embed code.
 In this example the URL is:
 
 <pre><code class="language-markup">
-http://fast.wistia.com/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640
+http://fast.wistia.net/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640
 </code></pre>
 
 Copy this URL, it's what you'll use in the next step.

@@ -9,8 +9,8 @@ footer: 'for_developers'
 
 <div class="video_embed">
 <div id="wistia_4d8229898d" style="width:660px;height:371px;" data-video-width="660" data-video-height="371">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/E-v1.js"></script>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1-gridify%2CpostRoll-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1-gridify%2CpostRoll-v1.js"></script>
 
 <script>/*<![CDATA[*/
 wistiaEmbed = Wistia.embed("4d8229898d", {
@@ -53,7 +53,7 @@ Our links use <span class="code">target="\_blank"</span> to pop open a new windo
 ### Iframe Example
 
 {% codeblock postRoll-params.html %}
-<iframe src="http://fast.wistia.com/embed/iframe/abcde12345?videoWidth=640&videoHeight=360
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?videoWidth=640&videoHeight=360
 &plugin[postRoll][version]=v1&plugin[postRoll][text]=You made it to the end of my video! Now check out my product.
 &plugin[postRoll][link]=http://myawesomeproduct.com/awesome
 &plugin[postRoll][style][background]=#404040
@@ -65,8 +65,8 @@ Our links use <span class="code">target="\_blank"</span> to pop open a new windo
 
 {% codeblock postRoll-api-embed.html %}
 <div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script src="http://fast.wistia.com/static/E-v1.js"></script>
-<script src="http://fast.wistia.com/static/concat/E-v1-gridify,postRoll-v1.js"></script>
+<script src="http://fast.wistia.net/static/E-v1.js"></script>
+<script src="http://fast.wistia.net/static/concat/E-v1-gridify,postRoll-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("abcde12345", {
 videoWidth: 640,

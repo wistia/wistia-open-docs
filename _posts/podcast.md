@@ -27,12 +27,12 @@ The second step is to find the RSS feed for your Playlist.  Inside of the Projec
 The "Embed Playlist" screen includes the embed code for your Playlist.  Copy all of this code and paste it into a text editor (like Text Edit, vi, etc).  At the beginning of the embed code madness, there is a snippet that starts "src='http://fast.wistia ...'".  This url is the portion you will need for creating a podcast/RSS feed. The gist of what it will look like appears below.
 
 <pre><code class="language-markup">
-http://fast.wistia.com/embed/playlists/c67fec401f?version=v1&theme=trim&videoOptions%5BcontrolsVisibleOnLoad%5D=true&videoOptions%5BautoPlay%5D=true&videoOptions%5BvideoWidth%5D=640&videoOptions%5BvideoHeight%5D=360&media_0_0%5BautoPlay%5D=false
+http://fast.wistia.net/embed/playlists/c67fec401f?version=v1&theme=trim&videoOptions%5BcontrolsVisibleOnLoad%5D=true&videoOptions%5BautoPlay%5D=true&videoOptions%5BvideoWidth%5D=640&videoOptions%5BvideoHeight%5D=360&media_0_0%5BautoPlay%5D=false
 </code></pre>
 
 Now, we'll remove everything after the question mark '?':
 
-<pre><code class="language-markup">http://fast.wistia.com/embed/playlists/c67fec401f</code></pre>
+<pre><code class="language-markup">http://fast.wistia.net/embed/playlists/c67fec401f</code></pre>
 
 Now, we need to make two final changes, changing the subdomain and add the '.rss' extension:
 

@@ -23,7 +23,7 @@ Or better yet, if you have a layout file or a footer that's shared across pages,
 just put it in there and you'll be good to go!
 
 {% codeblock playlist_api.js %}
-<script src="http://fast.wistia.com/static/embed_shepherd-v1.js"></script>
+<script src="http://fast.wistia.net/static/embed_shepherd-v1.js"></script>
 <script>
   wistiaEmbeds.onFind(function(video){
     video.bind("play", function(){

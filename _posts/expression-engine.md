@@ -39,7 +39,7 @@ This image shows the three potential methods:
 {% codeblock return.json %}
 {exp:channel:entries channel="wistia_demo"}
   &lt;h1&gt;Passing Wistia ID&lt;/h1&gt;
-  &lt;iframe src="http://fast.wistia.com/embed/iframe/{embed_id}?controlsVisibleOnLoad=true&version=v1" /&gt;
+  &lt;iframe src="http://fast.wistia.net/embed/iframe/{embed_id}?controlsVisibleOnLoad=true&version=v1" /&gt;
 {/exp:channel:entries}
 {% endcodeblock %}
 

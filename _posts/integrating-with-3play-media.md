@@ -17,7 +17,7 @@ That's it! Here's an example:
 
 {% codeblock integrating_with_3play.js %}
 <div id="wistia_e9daad32af" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("e9daad32af", {
   version: "v1",
@@ -62,7 +62,7 @@ P3.init({
 
 
 <div id="wistia_e9daad32af" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("e9daad32af", {
   version: "v1",
@@ -92,7 +92,7 @@ Note that the overlay option currently puts the captions over our player control
 
 {% codeblock integrating_with_3play_captions.js %}
 <div id="wistia_e9daad32af_1" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("e9daad32af", {
   version: "v1",
@@ -135,7 +135,7 @@ P3.init({
 {% endcodeblock %}
 
 <div id="wistia_e9daad32af_1" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("e9daad32af", {
   version: "v1",
@@ -197,8 +197,8 @@ For the video object ID, you must set an ID attribute on the iframe, and make su
 the 3play javascript targets that ID. Check out this example:
 
 {% codeblock integrating_with_3play_iframes.js %}
-<iframe src="http://fast.wistia.com/embed/iframe/e9daad32af?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" id="my_custom_uuid" class="wistia_embed" name="my_custom_uuid" width="640" height="360"></iframe>
-<script src="http://fast.wistia.com/static/iframe-api-v1.js"></script>
+<iframe src="http://fast.wistia.net/embed/iframe/e9daad32af?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" id="my_custom_uuid" class="wistia_embed" name="my_custom_uuid" width="640" height="360"></iframe>
+<script src="http://fast.wistia.net/static/iframe-api-v1.js"></script>
 
 <!-- Begin 3Play Media Embed
  By use of this code snippet, I agree to the 3Play Media Terms and Conditions

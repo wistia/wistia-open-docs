@@ -31,7 +31,7 @@ When using the oEmbed endpoint, part of the JSON returned is the `thumbnail_url`
 
 First, we'll make the oEmbed request:
 
-<code class="full_width">http://fast.wistia.com/oembed?url=http%3A//home.wistia.com/medias/e4a27b971d</code>
+<code class="full_width">http://fast.wistia.net/oembed?url=http%3A//home.wistia.com/medias/e4a27b971d</code>
 
 The JSON returned:
 
@@ -39,7 +39,7 @@ The JSON returned:
 {
   "version":"1.0",
   "type":"video",
-  "html":"<iframe src=\"http://fast.wistia.com/embed/iframe/e4a27b971d?version=v1&videoHeight=360&videoWidth=640\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" width=\"640\" height=\"360\"></iframe>",
+  "html":"<iframe src=\"http://fast.wistia.net/embed/iframe/e4a27b971d?version=v1&videoHeight=360&videoWidth=640\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" width=\"640\" height=\"360\"></iframe>",
   "width":640,
   "height":360,
   "provider_name":"Wistia, Inc.",

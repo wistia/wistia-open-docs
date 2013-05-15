@@ -9,7 +9,7 @@ footer: 'for_developers'
 ## Transcript Example:
 
 <div class="video_embed">
-  <iframe src="http://fast.wistia.com/embed/iframe/e9daad32af?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=371&videoWidth=660&plugin%5Btranscript%5D%5Bversion%5D=v2" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="660" height="571"></iframe>
+  <iframe src="http://fast.wistia.net/embed/iframe/e9daad32af?controlsVisibleOnLoad=true&playerColor=aae3d8&version=v1&videoHeight=371&videoWidth=660&plugin%5Btranscript%5D%5Bversion%5D=v2" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="660" height="571"></iframe>
 </div>
 
 ## Transcript Options
@@ -31,7 +31,7 @@ Note that, for <span class="code">onloadCollapse</span> to work, <span class="co
 ## iframe Example
 
 {% codeblock transcript-params.html %}
-<iframe src="http://fast.wistia.com/embed/iframe/abcde12345
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345
   ?videoWidth=640&videoHeight=360&plugin[transcript][version]=v2
   &plugin[transcript][position]=below&plugin[transcript][height]=300
   &plugin[transcript][canDownload]=true" 
@@ -44,7 +44,7 @@ Note that, for <span class="code">onloadCollapse</span> to work, <span class="co
 
 {% codeblock transcript-params.html %}
 <div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
 <script>
   wistiaEmbed = Wistia.embed("abcde12345", {
     version: "v1",

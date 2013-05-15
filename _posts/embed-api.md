@@ -27,25 +27,25 @@ Ok, for this example we'll be using a hashed_id of `'abcde12345'`. Just substitu
 
 First, build the base URL:
 
-<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345</code>
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345</code>
 
 Next, customize the video parameters:
 
-<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false</code>
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false</code>
 
 Then, add plugin parameters. Plugins have parameters in their own 
 namespace, using bracket notation:
 
-<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin[socialbar][version]=v1&plugin[socialbar][buttons]=embed-twitter-facebook</code>
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin[socialbar][version]=v1&plugin[socialbar][buttons]=embed-twitter-facebook</code>
 
 It's usually good practice to URL encode both keys and values:
 
-<code class="full_width">http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook</code>
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook</code>
 
 Finally we drop this src into an iframe, where we also specify the width and height. Note that the width and height should be the size of the entire embed (the video plus the plugins).
 
 {% codeblock thumbnail.html %}
-<iframe src="http://fast.wistia.com/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="387"></iframe>
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="387"></iframe>
 {% endcodeblock %}
 
 
@@ -66,8 +66,8 @@ First, add a container to the page, and make sure it has a unique ID attribute:
 Next, including all the required external scripts:
 
 {% codeblock playlist_api.js %}
-<script src="http://fast.wistia.com/static/E-v1.js"></script>
-<script src="http://fast.wistia.com/static/concat/E-v1-gridify,socialbar-v1.js"></script>
+<script src="http://fast.wistia.net/static/E-v1.js"></script>
+<script src="http://fast.wistia.net/static/concat/E-v1-gridify,socialbar-v1.js"></script>
 {% endcodeblock %}
 
 Now initialize the embed and pass in the video parameters:
@@ -131,14 +131,14 @@ The good news is you can easily use our <a href="{{ '/oembed' | post_url }}">oEm
 
 ### The Endpoint
 
-Our oEmbed endpoint is: `http://fast.wistia.com/oembed`
+Our oEmbed endpoint is: `http://fast.wistia.net/oembed`
 
 Currently, our oEmbed endpoint recognizes two URL formats:
 
 Type | Example URL
 -----|-------------
-iframe embed code URLs | http://fast.wistia.com/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
-iframed playlist URLs | http://fast.wistia.com/embed/playlists/fbe3880a4e?theme=trime&version=v1&videoOptions%5BvideoHeight%5D=360&videoOptions%5BvideoWidth%5D=640
+iframe embed code URLs | http://fast.wistia.net/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
+iframed playlist URLs | http://fast.wistia.net/embed/playlists/fbe3880a4e?theme=trime&version=v1&videoOptions%5BvideoHeight%5D=360&videoOptions%5BvideoWidth%5D=640
 Public media URLs | http://home.wistia.com/medias/e4a27b971d
 
 It's likely we'll add more URLs to this list in the future.
@@ -169,7 +169,7 @@ enhancements! Perhaps this:
 
 Get the embed code and some information for a video at ''http://home.wistia.com/medias/e4a27b971d'' in JSON format:
 
-<code class="full_width">curl "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/e4a27b971d"</code>
+<code class="full_width">curl "http://fast.wistia.net/oembed?url=http://home.wistia.com/medias/e4a27b971d"</code>
 
 This returns:
 
@@ -177,7 +177,7 @@ This returns:
 {
   "version":"1.0",
   "type":"video",
-  "html":"&lt;iframe src=\"http://fast.wistia.com/embed/iframe/e4a27b971d?version=v1&videoHeight=360&videoWidth=640\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" width=\"640\" height=\"360\"&gt;&lt;/iframe&gt;",
+  "html":"&lt;iframe src=\"http://fast.wistia.net/embed/iframe/e4a27b971d?version=v1&videoHeight=360&videoWidth=640\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" width=\"640\" height=\"360\"&gt;&lt;/iframe&gt;",
   "width":640,
   "height":360,
   "provider_name":"Wistia, Inc.",
@@ -189,7 +189,7 @@ This returns:
 }
 {% endcodeblock %}
 
-If you're looking for XML instead of JSON, use: `http://fast.wistia.com/oembed.xml`
+If you're looking for XML instead of JSON, use: `http://fast.wistia.net/oembed.xml`
 
 For all the fine details about the options supported, see the official [oEmbed spec](http://oembed.com).
 
@@ -261,7 +261,7 @@ var wistiaEmbed = Wistia.embed("bfc34aa023", {
 For iframe embed codes, these must be added to the *iframe src* using `&embeddingOption=value`, like so:
 
 {% codeblock thumbnail.html %}
-<iframe src="http://fast.wistia.com/embed/iframe/2cf8fbb2c0?
+<iframe src="http://fast.wistia.net/embed/iframe/2cf8fbb2c0?
   controlsVisibleOnLoad=true
   &version=v1
   &videoHeight=360&videoWidth=640

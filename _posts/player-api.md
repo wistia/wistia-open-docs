@@ -42,7 +42,7 @@ browsers, this is the recommended way to access the player API.
 Put the following anywhere in the HTML document:
 
 {% codeblock wistia_js.js %}
-<script src="//fast.wistia.com/static/iframe-api-v1.js"></script>
+<script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
 {% endcodeblock %}
 
 {{ "The iframe-api script can go anywhere on your page. Once it has run, all Wistia iframes on the page will have the `wistiaApi` property." | note }}
@@ -149,7 +149,7 @@ In this example, you want the video to skip ahead a certain amount of time when 
 
 {% codeblock wistia_js.js %}
 <div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("29b0fbf547", {
   version: "v1",
@@ -254,7 +254,7 @@ At this time, the `type` of conversion can be "pre-roll-email", "mid-roll-email"
 
 {% codeblock wistia_js.js %}
 <div id="wistia_tlb0v41zjd" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("tlb0v41zjd", {
   version: "v1",
@@ -346,7 +346,7 @@ If you are embedding a Wistia video on a website with a white background, the na
 So a finished iframe embed code would look something like this:
 
 {% codeblock iframe_example.html %}
-<iframe src="http://fast.wistia.com/embed/iframe/e4a27b971d?
+<iframe src="http://fast.wistia.net/embed/iframe/e4a27b971d?
 controlsVisibleOnLoad=true&playerColor=688AAD&version=v1
 &videoHeight=360&videoWidth=640&wmode=transparent" 
 allowtransparency="true" frameborder="0" scrolling="no" 

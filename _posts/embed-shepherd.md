@@ -13,7 +13,7 @@ post_intro: <p>Looking for simple, programmatic access to all the Wistia embeds 
 ## Including the Embed Shepherd
 
 {% codeblock thumbnail.html %}
-<script src="http://fast.wistia.com/static/embed_shepherd-v1.js"></script>
+<script src="http://fast.wistia.net/static/embed_shepherd-v1.js"></script>
 {% endcodeblock %}
 
 You can include that snippet anywhere on your page. Once it has run, any existing 
@@ -30,7 +30,7 @@ that `window.wistiaEmbeds` is available! Check it out:
     console.log("The Shepherd is ready!");
   }
 </script>
-<script src="http://fast.wistia.com/static/embed_shepherd-v1.js" async></script>
+<script src="http://fast.wistia.net/static/embed_shepherd-v1.js" async></script>
 {% endcodeblock %}
 
 {{ "The Embed Shepherd automatically includes the iframe-api on the page. You do not need to include it separately to access iframe embeds or popovers." | note }}
