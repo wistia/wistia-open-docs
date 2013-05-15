@@ -123,45 +123,45 @@ The handler receives a string whose possible values are *error* or *timeout*.
       var progressMessages = 0;
       var cb = {
         'initializationComplete': function() {
-          $('#output').append(<p>initializationComplete</p>);
+          $('#output').append('<p>initializationComplete</p>');
         },
 
         'initializationError': function(error) {
-          $('#output').append(<p>initializationError: ' + error + </p>);
+          $('#output').append('<p>initializationError: ' + error + '</p>');
         },
 
         'fileQueued': function(file) {
-          $('#output').append(<p>fileQueued: ' + file.name + </p>);
+          $('#output').append('<p>fileQueued: ' + file.name + </p>');
         },
 
         'uploadProgress': function() {
           progressMessages += 1;
 
           if ($('#output .progress').size() == 0) {
-            $('#output').append(<p>uploadProgress: <span class="progress">1</span></p>);
+            $('#output').append('<p>uploadProgress: <span class="progress">1</span></p>');
           } else {
             $('#output span.progress').html(progressMessages.toString());
           }
         },
 
         'uploadSuccess': function(jsonFile) {
-          $('#output').append(<p>uploadSuccess</p>);
+          $('#output').append('<p>uploadSuccess</p>');
         },
 
         'uploadComplete': function() {
-          $('#output').append(<p>uploadComplete</p>);
+          $('#output').append('<p>uploadComplete</p>');
         },
 
         'postUploadFailure': function(error) {
-          $('#output').append(<p>postUploadFailure: ' + error + </p>);
+          $('#output').append('<p>postUploadFailure: ' + error + '</p>');
         },
 
         'fileQueueError': function(error) {
-          $('#output').append(<p>fileQueueError: ' + error.code + </p>);
+          $('#output').append('<p>fileQueueError: ' + error.code + '</p>');
         },
 
         'uploadError': function(error) {
-          $('#output').append(<p>uploadError: ' + error.code + </p>);
+          $('#output').append('<p>uploadError: ' + error.code + '</p>');
         }
       };
 
@@ -171,45 +171,45 @@ The handler receives a string whose possible values are *error* or *timeout*.
       var progressMessages2 = 0;
       var cb2 = {
         'initializationComplete': function() {
-          $('#output').append(<p>initializationComplete2</p>);
+          $('#output').append('<p>initializationComplete2</p>');
         },
 
         'initializationError': function(error) {
-          $('#output').append(<p>initializationError2: ' + error + </p>);
+          $('#output').append('<p>initializationError2: ' + error + '</p>');
         },
 
         'fileQueued': function(file) {
-          $('#output').append(<p>fileQueued2: ' + file.name + </p>);
+          $('#output').append('<p>fileQueued2: ' + file.name + '</p>');
         },
 
         'uploadProgress': function() {
           progressMessages2 += 1;
 
           if ($('#output .progress2').size() == 0) {
-            $('#output').append(<p>uploadProgress2: <span class="progress2">1</span></p>);
+            $('#output').append('<p>uploadProgress2: <span class="progress2">1</span></p>');
           } else {
             $('#output span.progress2').html(progressMessages2.toString());
           }
         },
 
         'uploadSuccess': function(jsonFile) {
-          $('#output').append(<p>uploadSuccess2</p>);
+          $('#output').append('<p>uploadSuccess2</p>');
         },
 
         'uploadComplete': function() {
-          $('#output').append(<p>uploadComplete2</p>);
+          $('#output').append('<p>uploadComplete2</p>');
         },
 
         'postUploadFailure': function(error) {
-          $('#output').append(<p>postUploadFailure2: ' + error + </p>);
+          $('#output').append('<p>postUploadFailure2: ' + error + '</p>');
         },
 
         'fileQueueError': function(error) {
-          $('#output').append(<p>fileQueueError2: ' + error.code + </p>);
+          $('#output').append('<p>fileQueueError2: ' + error.code + '</p>');
         },
 
         'uploadError': function(error) {
-          $('#output').append(<p>uploadError2: ' + error.code + </p>);
+          $('#output').append('<p>uploadError2: ' + error.code + '</p>');
         }
       };
 
@@ -219,22 +219,22 @@ The handler receives a string whose possible values are *error* or *timeout*.
       var progressMessages3 = 0;
       var cb3 = {
         'initializationComplete': function() {
-          $('#output').append(<p>initializationComplete3</p>);
+          $('#output').append('<p>initializationComplete3</p>');
         },
 
         'initializationError': function(error) {
-          $('#output').append(<p>initializationError3: ' + error + </p>);
+          $('#output').append('<p>initializationError3: ' + error + '</p>');
         },
 
         'fileQueued': function(file) {
-          $('#output').append(<p>fileQueued3: ' + file.name + </p>);
+          $('#output').append('<p>fileQueued3: ' + file.name + '</p>');
         },
 
         'uploadProgress': function() {
           progressMessages2 += 1;
 
           if ($('#output .progress3').size() == 0) {
-            $('#output').append(<p>uploadProgress3: <span class="progress3">1</span></p>);
+            $('#output').append('<p>uploadProgress3: <span class="progress3">1</span></p>');
           } else {
             $('#output span.progress3').html(progressMessages2.toString());
           }
@@ -249,15 +249,15 @@ The handler receives a string whose possible values are *error* or *timeout*.
         },
 
         'postUploadFailure': function(error) {
-          $('#output').append('<p>postUploadFailure3: ' + error + </p>');
+          $('#output').append('<p>postUploadFailure3: ' + error + '</p>');
         },
 
         'fileQueueError': function(error) {
-          $('#output').append('<p>fileQueueError3: ' + error.code + </p>');
+          $('#output').append('<p>fileQueueError3: ' + error.code + '</p>');
         },
 
         'uploadError': function(error) {
-          $('#output').append('<p>uploadError3: ' + error.code + </p>');
+          $('#output').append('<p>uploadError3: ' + error.code + '</p>');
         }
       };
 
