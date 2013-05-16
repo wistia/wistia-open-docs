@@ -45,7 +45,7 @@ Put the following anywhere in the HTML document:
 <script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
 {% endcodeblock %}
 
-{{ "The iframe-api script can go anywhere on your page. Once it has run, all Wistia iframes on the page will have the `wistiaApi` property." | note }}
+{{ "The iframe-api script should be placed after all the iframe embeds on your page (ie near the bottom). Once it has run, all Wistia iframes on the page will have the `wistiaApi` property." | note }}
 
 Now you can access the API by getting the `wistiaApi` property from the iframe element.
 You can assign an ID to each wistia iframe so you can get an easy handle to it.
