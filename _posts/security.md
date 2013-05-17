@@ -25,7 +25,7 @@ We're continually taking steps to make your videos as secure as possible:
 
 2. Activation links that require the user to set up a password are only good for one use - they cannot be passed along.
 
-3. Our [domain restriction](/domain-restrictions) feature ensures your video can only be played on specific domains.
+3. Our [domain restriction](/doc/domain-restrictions) feature ensures your video can only be played on specific domains.
 
 With that said, **it is not possible to guarantee your videos will remain secure**. Video download tools are never more than a Google search away, and malicious viewers can find a way to download any content they can view.
 
