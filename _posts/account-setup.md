@@ -65,7 +65,7 @@ A dialog box like the one shown below will appear.
 
 In the section labeled "Address", you will see a text box showing the current
 URL of your Wistia account (in the case of the above picture,
-`http://ben.wistia.com`).  Simply type the name you wish to use instead in the
+`http://jeff.wistia.com`).  Simply type the name you wish to use instead in the
 text box (only letters, numbers, and hyphens) and press
 <span class="faux_button">Save settings</span> at the bottom.
 
