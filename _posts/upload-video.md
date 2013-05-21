@@ -4,7 +4,7 @@ layout: post
 description: Learn how uploading with Wistia works.
 ---
 
-{% embedly http://home.wistia.com/medias/dbeb843c6e, height: 371, videoHeight: 371 %}
+{% embedly http://home.wistia.com/medias/s1dmqzh5ua, height: 371, videoHeight: 371 %}
 
 ----
 
