@@ -63,7 +63,7 @@ wistiaEmbed = Wistia.embed("07bb07bab1", {
           screenName: "ruedlinger"
         }
       ],
-      src: "http://fast.wistia.net/labs/twitter-follows/wistia-follows.js"
+      src: "http://fast.wistia.com/labs/twitter-follows/wistia-follows.js"
     }
   }
 });
