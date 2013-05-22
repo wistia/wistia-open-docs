@@ -42,6 +42,7 @@ video_hashed_id: 07bb07bab1
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(390).play(); return false;"><i class="icon-play"></i>(6:30)</a> That was a totally unnecessary edit - the idea was to illustrate how to update the title on a video.
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(420).play(); return false;"><i class="icon-play"></i>(7:00)</a> You ALWAYS want to use a description when sharing a video on Facebook.  We pass along the description to Facebook, and they use it as the content for your post.
 
+<script src="http://fast.wistia.com/labs/twitter-follows/wistia-follows.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("07bb07bab1", {
   version: "v1",

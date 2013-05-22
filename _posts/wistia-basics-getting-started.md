@@ -49,6 +49,7 @@ video_hashed_id: 8a5e87899d
 
 
 
+<script src="http://fast.wistia.com/labs/twitter-follows/wistia-follows.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("8a5e87899d", {
   version: "v1",
