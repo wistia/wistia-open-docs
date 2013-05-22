@@ -822,7 +822,7 @@ Field     | Description
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
 type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
+email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 #### Example JSON Response
 
@@ -945,7 +945,7 @@ Field     | Description
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
 type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
+email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 #### Example JSON Response
 
@@ -1110,7 +1110,7 @@ Field    | Description
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
 type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
+email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 
 #### Example JSON Response
@@ -1231,7 +1231,7 @@ Field      | Description
 id               | A unique numeric identifier for the Contact or ContactGroup.
 name             | The display name of this Contact or ContactGroup.
 type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email (optional) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
+email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 
 #### Example JSON Response
@@ -1355,10 +1355,11 @@ id                  | A unique numeric identifier for the media within the syste
 name                | The display name of the media.
 project             | An object representing information about the project in which the media resides.  It has 2 fields: the numeric id of the project, and the name of the project.
 type                | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-progress (optional) | After a file has been uploaded to Wistia, it needs to be processed before it is available for online viewing.  This field is a floating point value between 0 and 1 that indicates the progress of that processing.
-section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
+status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
+progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
+section  <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
 thumbnail           | An object representing the thumbnail for this media.  The attributes are URL, width, and height.
-duration (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
+duration  <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
 created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
@@ -1371,8 +1372,8 @@ Each asset object in the assets array has the following properties:
 Field        | Description
 -------------|-----------------
 url               | A direct-access URL to the content of the asset.
-width (optional)  | The width of this specific asset, if applicable.
-height (optional) | The height of this specific asset, if applicable.
+width  <br>(if available)  | The width of this specific asset, if applicable.
+height  <br>(if available) | The height of this specific asset, if applicable.
 fileSize          | The size of the asset file that's referenced by url, measured in bytes.
 contentType       | The asset's content type.
 type              | The internal type of the asset, describing how the asset should be used.  Valid values are “OriginalFile”, “FlashVideoFile”, “Mp4VideoFile”, “IPhoneVideoFile”, “StillImageFile”, “SwfFile”, “Mp3AudioFile”, and “LargeImageFile”.
@@ -1391,6 +1392,7 @@ type              | The internal type of the asset, describing how the asset sho
   </project>
   <type>Video</type>
   <section>Trailers</section>
+  <status>ready</status>
   <progress>1.0</progress>
   <thumbnail>
     <url>http://www.wistia.com/path/to/thumbnail2.png</url>
@@ -1456,6 +1458,7 @@ type              | The internal type of the asset, describing how the asset sho
 </project>
 <type>Video</type>
 <section>Trailers</section>
+<status>ready</status>
 <progress>1.0</progress>
 <thumbnail>
 <url>http://www.wistia.com/path/to/thumbnail2.png</url>
@@ -1577,10 +1580,11 @@ Field      |  Description
 id                  | A unique numeric identifier for the media within the system.
 name                | The display name of the media.
 type                | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default). 
-progress (optional) | After a file has been uploaded to Wistia, it needs to be processed before it is available for online viewing.  This field is a floating point value between 0 and 1 that indicates the progress of that processing.
+section <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default). 
+status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
+progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
 thumbnail           | An object representing the thumbnail for this media.  The attributes are URL, width, and height.
-duration (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
+duration <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
 created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
@@ -1611,6 +1615,7 @@ type              | The internal type of the asset, describing how the asset sho
     "name": "Introducing the Slimlist",
     "type": "Video",
     "section": "Trailers",
+    "status": "ready",
     "progress": 1.0
       "thumbnail": {
         "url": "http://www.wistia.com/path/to/thumbnail2.png",
@@ -1664,6 +1669,7 @@ type              | The internal type of the asset, describing how the asset sho
   <name>Introducing the Slimlist</name>
   <type>Video</type>
   <section>Trailers</section>
+  <status>ready</status>
   <progress>1.0</progress>
   <thumbnail>
     <url>http://www.wistia.com/path/to/thumbnail2.png</url>
@@ -1738,10 +1744,11 @@ Field  |  Description
 id                  | A unique numeric identifier for the media within the system.
 name                | The display name of the media.
 type                | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
-progress (optional) | After a file has been uploaded to Wistia, it needs to be processed before it is available for online viewing.  This field is a floating point value between 0 and 1 that indicates the progress of that processing.
+section <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
+status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
+progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
 thumbnail           | An object representing the thumbnail for this media.  The attributes are url, width, and height.
-duration (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
+duration <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
 created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 
@@ -1755,6 +1762,7 @@ updated             | The date when the media was last changed.
   "name": "Introducing the Slimlist",
   "type": "Video",
   "section": "Trailers",
+  "status": "ready",
   "progress": 1.0,
   "thumbnail": {
     "url": "http://www.wistia.com/path/to/thumbnail2.png",
@@ -1776,6 +1784,7 @@ updated             | The date when the media was last changed.
   <name>Introducing the Slimlist</name>
   <type>Video</type>
   <section>Trailers</section>
+  <status>ready</status>
   <progress>1.0</progress>
   <thumbnail>
     <url>http://www.wistia.com/path/to/thumbnail2.png</url>
@@ -1813,10 +1822,11 @@ Field    |  Description
 id                  | A unique numeric identifier for the media within the system.
 name                | The display name of the media.
 type                | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
-progress (optional) | After a file has been uploaded to Wistia, it needs to be processed before it is available for online viewing.  This field is a floating point value between 0 and 1 that indicates the progress of that processing.
+section  <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
+status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
+progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
 thumbnail           | An object representing the thumbnail for this media.  The attributes are url, width, and height.
-duration (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
+duration  <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
 created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 
@@ -1831,6 +1841,7 @@ updated             | The date when the media was last changed.
   "name": "Introducing the Slimlist",
   "type": "Video",
   "section": "Trailers",
+  "status": "ready",
   "progress": 1.0,
   "thumbnail": {
     "url": "http://www.wistia.com/path/to/thumbnail2.png",
@@ -1853,6 +1864,7 @@ updated             | The date when the media was last changed.
   <name>Introducing the Slimlist</name>
   <type>Video</type>
   <section>Trailers</section>
+  <status>ready</status>
   <progress>1.0</progress>
   <thumbnail>
     <url>http://www.wistia.com/path/to/thumbnail2.png</url>
@@ -1900,10 +1912,11 @@ Field     |  Description
 id                  | A unique numeric identifier for the media within the system.
 name                | The display name of the media.
 type                | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
-progress (optional) | After a file has been uploaded to Wistia, it needs to be processed before it is available for online viewing.  This field is a floating point value between 0 and 1 that indicates the progress of that processing.
+section  <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
+status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
+progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
 thumbnail           | An object representing the thumbnail for this media.  The attributes are url, width, and height.
-duration (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
+duration  <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
 created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 
@@ -1919,6 +1932,7 @@ updated             | The date when the media was last changed.
     "name": "Introducing the Slimlist",
     "type": "Video",
     "section": "Trailers",
+    "status": "ready",
     "progress": 1.0,
     "thumbnail": {
       "url": "http://www.wistia.com/path/to/thumbnail2.png",
@@ -1943,6 +1957,7 @@ updated             | The date when the media was last changed.
   <name>Introducing the Slimlist</name>
   <type>Video</type>
   <section>Trailers</section>
+  <status>ready</status>
   <progress>1.0</progress>
   <thumbnail>
     <url>http://www.wistia.com/path/to/thumbnail2.png</url>
