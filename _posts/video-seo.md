@@ -3,7 +3,7 @@ title: Video SEO
 layout: post
 category: Public Sharing
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
-post_intro: <p>Video SEO is the act of proactively submitting your content, through what’s called a “Video Sitemap", so that it’s easier for Google and other search engines to find it.</p><p>Once your video sitemap is submitted your videos can:</p><ul><li>Appear inline in universal search results</li><li>Send people directly to your website when clicked on in search results</li><li>Boost overall placement for your page</li><li>Appear in video specific search results, like http://video.google.com</li></ul>
+post_intro: <p>Video SEO is the act of proactively submitting your content and providing on-page markup, through what’s called a “Video Sitemap", so that it’s easier for Google and other search engines to find it.</p><p>Once your video sitemap is submitted and you're using SEO style embeds your videos can:</p><ul><li>Appear inline in universal search results</li><li>Send people directly to your website when clicked on in search results</li><li>Boost overall placement for your page</li><li>Appear in video specific search results, like http://video.google.com</li></ul>
 ---
 
 <div class="expert_tip video_seo">
@@ -96,14 +96,19 @@ take up to a week to complete this step.
 
 ## Embed Video Using the SEO Embed Type
 
-After your robots.txt file is verified, you will 'unlock' the *SEO* embed code
-type, which you'll need to use to make sure videos are picked up in search
-results.
+Even if you don't setup the video sitemap entry, you'll still be able to access
+our SEO type embeds, which have lots of SEO benefit on their own by making use
+of Schema.org meta tags (you'll see these manifest themselves in the SEO embed
+as `meta itemprop` tags). These grab the content you've filled out for the
+video title, decription, etc. and translate that into nice meta content for
+spiders to crawl (it's not as icky as it sounds).
 
-Open the video you'd like to embed, and select *&lt;/&gt; Embed* from the
-<span class="action_menu">Media Actions</span> menu. For more information on
-embedding, review the [embedding a video]({{ '/embedding' | post_url }}) guide.
+To get one of these for your video, open the video you'd like to embed, and 
+select *&lt;/&gt; Embed* from the <span class="action_menu">Media Actions</span>
+menu. For more information on embedding, review the 
+[embedding a video]({{ '/embedding' | post_url }}) guide.
 
+{{ "There are some SuperEmbed features that aren't compatible with SEO embeds, like the Email Capture feature" | note }}
 
 ## Making a video sitemap entry
 
@@ -124,9 +129,6 @@ After you have embedded a video on your website, go to your video's media page
 *Add to SEO sitemap*.
 
 {{ "The Video SEO functionality will only work with SEO embeds!" | note }}
-
-In order to have the SEO embed type available for your embeds, you need to
-have a Video SEO sitemap created and verified.
 
 This will then bring up a dialog box where you can enter the relevant
 information about your video (like tags, description).
@@ -177,7 +179,7 @@ This will take you to the video SEO dashboard where you can:
 
 In the end, the goal is to get your content to rank higher in search engines
 like Google.  Telling search engines about your content through Wistia's Video
-SEO feature allows your pages to:
+SEO features allows your pages to:
 
 * Rank higher in basic search results based on the presence and relevance of
   your video content.
