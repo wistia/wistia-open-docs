@@ -1382,6 +1382,61 @@ type              | The internal type of the asset, describing how the asset sho
 
 
 {% codeblock example_json_response.json %}
+[{
+  "id": 181279,
+    "name": "Introducing the Slimlist",
+    "type": "Video",
+    "section": "Trailers",
+    "status": "ready",
+    "progress": 1.0
+      "thumbnail": {
+        "url": "http://www.wistia.com/path/to/thumbnail2.png",
+        "width": 100,
+        "height": 60
+      },
+    "duration": 126,
+    "created": "2010-08-15T18:47:39+00:00",
+    "updated": "2010-08-21T21:47:00+00:00",
+    "assets": [
+    {
+      "url": "http://www.wistia.com/path/to/original-file.bin",
+      "width": 640,
+      "height": 272,
+      "fileSize": 12345678,
+      "contentType": "video/quicktime",
+      "type": "Original"
+    },
+    {
+      "url": "http://www.wistia.com/path/to/mp4-version.bin",
+      "width": 640,
+      "height": 272,
+      "fileSize": 12123456,
+      "contentType": "video/mp4",
+      "type": "Mp4Video"
+    },
+    {
+      "url": "http://www.wistia.com/path/to/still-image.bin",
+      "width": 640,
+      "height": 272,
+      "fileSize": 92008,
+      "contentType": "image/jpeg",
+      "type": "StillImageFile"
+    }
+  ],
+    "embedCode": "<object width="640" height="272" id="wistia_181279" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="movie" value="http://embed.wistia.com/flash/embed_player_v1.1.swf"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="wmode" value="opaque"/><param name="flashvars" value="videoUrl=http://embed.wistia.com/deliveries/
+      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin&amp;stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&amp;unbufferedSeek=false&amp;controlsVisibleOnLoad=false&amp;autoPlay=false&amp;endVideoBehavior=default&amp;playButtonVisible=true&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=wistia-production_97&amp;mediaID=wistia-production_181279&amp;mediaDuration=74.4"/><embed src="http://embed.wistia.com/flash/embed_player_v1.1.swf" width="640" height="272" name="wistia_181279" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" wmode="opaque" flashvars="videoUrl=http://embed.wistia.com/deliveries/
+      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin&amp;stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&amp;unbufferedSeek=false&amp;controlsVisibleOnLoad=false&amp;autoPlay=false&amp;endVideoBehavior=default&amp;playButtonVisible=true&amp;embedServiceURL=http://distillery.wistia.com/x&amp;accountKey=wistia-production_97&amp;mediaID=wistia-production_181279&amp;mediaDuration=74.4"></embed></object><script src="http://embed.wistia.com/embeds/v.js" charset="ISO-8859-1"></script><script>if(!navigator.mimeTypes['application/x-shockwave-flash'])Wistia.VideoEmbed('wistia_181279',640,272,{videoUrl:'http://embed.wistia.com/deliveries/
+      14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin',stillUrl:'http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin',distilleryUrl:'http://distillery.wistia.com/x',accountKey:'wistia-production_97',mediaId:'wistia-production_181279',mediaDuration:74.4})</script>",
+    description: "Test Description",
+    hashed_id: "abc123"
+}]
+{% endcodeblock %}
+
+
+#### Example XML Response
+
+
+{% codeblock example_xml_response.xml %}
 <medias>
   <media>
   <id>181279</id>
@@ -1440,107 +1495,6 @@ type              | The internal type of the asset, describing how the asset sho
   <description>Test Description</description>
   <hashed_id>abc123</hashed_id>
   </media>
-</medias>
-{% endcodeblock %}
-
-
-#### Example XML Response
-
-
-{% codeblock example_xml_response.xml %}
-<medias>
-<media>
-<id>181279</id>
-<name>Introducing the Slimlist</name>
-<project>
-<id>22570</id>
-<name>Slimlist for Website</name>
-</project>
-<type>Video</type>
-<section>Trailers</section>
-<status>ready</status>
-<progress>1.0</progress>
-<thumbnail>
-<url>http://www.wistia.com/path/to/thumbnail2.png</url>
-<width>100</width>
-<height>60</height>
-</thumbnail>
-<duration>126</duration>
-<created>2010-08-15T18:47:39+00:00</created>
-<updated>2010-08-21T21:47:00+00:00</updated>
-<assets>
-<asset>
-<url>http://www.wistia.com/path/to/original-file.bin</url>
-<width>640</width>
-<height>272</height>
-<fileSize>12345678</fileSize>
-<contentType>video/quicktime</contentType>
-<type>Original</type>
-</asset>
-<asset>
-<url>http://www.wistia.com/path/to/mp4-version.bin</url>
-<width>640</width>
-<height>272</height>
-<fileSize>12123456</fileSize>
-<contentType>video/mp4</contentType>
-<type>Mp4Video</type>
-</asset>
-<asset>
-<url>http://www.wistia.com/path/to/still-image.bin</url>
-<width>640</width>
-<height>272</height>
-<fileSize>92008</fileSize>
-<contentType>image/jpeg</contentType>
-<type>StillImageFile</type>
-</asset>
-</assets>
-<embedCode>amp;<object id=#039;wistia_1#039; classid=#039;
-clsid:D27CDB6E-AE6D-11cf-96B8-444553540000#039; width=#039;640#039;
-height=#039;360#039;amp;>amp;<param name=#039;allowfullscreen#039;
-value=#039;true#039; /amp;>amp;<param name=#039;
-allowscriptaccess#039; value=#039;always#039; /amp;>amp;
-<param name=#039;wmode#039; value=#039;opaque#039; /amp;>amp;
-<param name=#039;flashvars#039; value=#039;
-videoUrl=http://brendan.unraw.net/deliveries/
-57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;amp;
-stillUrl=http://brendan.unraw.net/deliveries/
-b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;amp;
-playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;amp;
-unbufferedSeek=trueamp;amp;autoLoad=falseamp;amp;autoPlay=falseamp;amp;
-embedServiceURL=http://distillery.wistia.com/xamp;
-accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;
-mediaDuration=6.51#039; /amp;>amp;<param name=#039;movie#039;
-value=#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf#039;
-/amp;>amp;<embed src=#039;http://brendan.unraw.net/flash/
-embed_player_v1.1.swf#039; name=#039;wistia_1#039; type=#039;
-application/x-shockwave-flash#039; width=#039;640#039; 
-height=#039;360#039; allowfullscreen=#039;true#039; 
-allowscriptaccess=#039;always#039; wmode=#039;opaque#039; 
-flashvars=#039;videoUrl=http://brendan.unraw.net/deliveries/
-57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;
-stillUrl=http://brendan.unraw.net/deliveries/
-b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;
-playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;
-unbufferedSeek=trueamp;
-autoLoad=falseamp;amp;autoPlay=falseamp;
-embedServiceURL=http://distillery.wistia.com/xamp;
-accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;
-mediaDuration=6.51#039;amp;>amp;</embedamp;>amp;
-</objectamp;>amp;<script src=#039;
-http://brendan.unraw.net/embeds/v.js#039;amp;>amp;</scriptamp;
->amp;<scriptamp;>if(!navigator.mimeTypes[#039;
-application/x-shockwave-flash#039;])Wistia.VideoEmbed(#039;wistia_1#039;
-,#039;640#039;,#039;360#039;,{videoUrl:#039;
-http://brendan.unraw.net/deliveries/
-5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin#039;,stillUrl:#039;
-http://brendan.unraw.net/deliveries/
-b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin#039;
-,distilleryUrl:#039;http://distillery.wistia.com/x#039;,accountKey:#039;
-jim-development_1#039;,mediaId:#039;jim-development_1#039;
-,mediaDuration:6.51})amp;</scriptamp;></embedCode>
-<description>Test Description</description>
-<hashed_id>abc123</hashed_id>
-</media>
 </medias>
 {% endcodeblock %}
 
