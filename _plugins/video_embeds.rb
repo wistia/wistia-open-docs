@@ -1,29 +1,74 @@
+require 'net/https'
+require 'uri'
+require 'json'
 
 ## for use on the page like: <div class="video_embed">{% wistia_embed 9dc0fc7d3a, 600, 400, #636155 %}</div> ##
 
 module Jekyll
 
   class WistiaEmbed < Liquid::Tag
-    @@width = 640
-    @@height = 360
-    @@player_color = #636155
+
+    BASE_URL = "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/"
 
     def initialize(tag_name, params, tokens)
       super
       args = split_params(params)
-      @@hashed_id = args[0]
+      @hashed_id = args[0]
+
+      puts "!" * 20
+      puts @hashed_id
+      puts "!" * 20
+
       if args.length > 1
-        @@width = args[1] if args.length > 1
-        @@height = args[2] if args.length > 2
-        @@player_color = args[3] if args.length > 3
+        @config = {
+          videoWidth: args[1]
+        }
+      else
+        @config = {}
       end
+      @config[:videoHeight] = args[2] if args.length > 2
+      @config[:playerColor] = sanitize_color(args[3]) if args.length > 3
     end
 
     def render(context)
-      %(<iframe src="http://fast.wistia.com/embed/iframe/#{@@hashed_id}?
-      controlsVisibleOnLoad=true&playerColor=#{ sanitize_color(@@player_color) }version=v1&videoHeight=#{@@height}&videoWidth=#{@@width}&volumeControl=true" 
-      allowtransparency="true" frameborder="0" scrolling="no" 
-      class="wistia_embed" name="wistia_embed" width="#{@@width}" height="#{@@height}"></iframe>)
+      default_params = context.registers[:site].config['wistia_embed_settings']
+      @config = default_params.merge(@config || {})
+
+      url = BASE_URL + @hashed_id + query_param_str(@config)
+      embed_url = URI.parse url
+
+      puts "!" * 20
+      puts url
+      puts "!" * 20
+
+      json_rep = JSON.parse resolve(embed_url)
+
+      "<div class='video_embed'>#{json_rep['html']}</div>"
+    end
+
+    private
+
+    def resolve(uri)
+      response = Net::HTTP.get_response(uri)
+
+      unless response['location'].nil? and response['Location'].nil?
+        resolve URI.parse(response['location']) or
+                URI.parse(response['Location'])
+      else
+        response.body
+      end
+    end
+
+    def query_param_str(params)
+      param_arr = []
+      params.each_with_index do |(key, value), index|
+        if index == 0
+          param_arr << "%3F#{key}%3D#{value}"
+        else
+          param_arr << "%26#{key}%3D#{value}"
+        end
+      end
+      param_arr.join
     end
 
     def split_params(params)
