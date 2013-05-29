@@ -2,7 +2,7 @@ require 'net/https'
 require 'uri'
 require 'json'
 
-## for use on the page like: <div class="video_embed">{% wistia_embed 9dc0fc7d3a, 600, 400, #636155 %}</div> ##
+## for use on the page like: {% wistia_embed 9dc0fc7d3a, 600, 400, #636155 %}
 
 module Jekyll
 
@@ -14,10 +14,6 @@ module Jekyll
       super
       args = split_params(params)
       @hashed_id = args[0]
-
-      puts "!" * 20
-      puts @hashed_id
-      puts "!" * 20
 
       if args.length > 1
         @config = {
@@ -36,11 +32,6 @@ module Jekyll
 
       url = BASE_URL + @hashed_id + query_param_str(@config)
       embed_url = URI.parse url
-
-      puts "!" * 20
-      puts url
-      puts "!" * 20
-
       json_rep = JSON.parse resolve(embed_url)
 
       "<div class='video_embed'>#{json_rep['html']}</div>"
