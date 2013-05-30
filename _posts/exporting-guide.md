@@ -26,7 +26,7 @@ easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 Here's a quick guide from Chris on exporting in FCP using Quicktime conversion:
 
-{% embedly http://home.wistia.com/medias/kwj96ld3tc, width: 660, height: 371, videoWidth: 660, videoHeight: 371 %}
+{% wistia_embed hashed_id: kwj96ld3tc, videoWidth: 660, videoHeight: 371 %}
 
 ### Using Compressor as a standalone application
 
