@@ -66,9 +66,9 @@ Images have their own Jekyll 'tag':
 
 ### How to Add/Update Videos
 
-Videos are generated using the embedly plugin (oEmbed):
+Videos are generated using an oEmbed plugin:
 
-    {% embedly http://home.wistia.com/medias/AAAAAAA %}
+    {% wistia_embed hashed_id: AAAAAAA, videoWidth: 660, videoHeight: 400 %}
 
 defaults: 
 
