@@ -12,25 +12,14 @@ module Jekyll
 
     def initialize(tag_name, params, tokens)
       super
-      args = split_params(params)
-      @hashed_id = args[0]
-
-      if args.length > 1
-        @config = {
-          videoWidth: args[1]
-        }
-      else
-        @config = {}
-      end
-      @config[:videoHeight] = args[2] if args.length > 2
-      @config[:playerColor] = sanitize_color(args[3]) if args.length > 3
+      @config = split_params(params)
     end
 
     def render(context)
       default_params = context.registers[:site].config['wistia_embed_settings']
-      @config = default_params.merge(@config || {})
+      @config = default_params.merge(@config)
 
-      url = BASE_URL + @hashed_id + query_param_str(@config)
+      url = BASE_URL + @config["hashed_id"] + query_param_str(@config)
       embed_url = URI.parse url
       json_rep = JSON.parse resolve(embed_url)
 
@@ -53,17 +42,24 @@ module Jekyll
     def query_param_str(params)
       param_arr = []
       params.each_with_index do |(key, value), index|
-        if index == 0
-          param_arr << "%3F#{key}%3D#{value}"
-        else
-          param_arr << "%26#{key}%3D#{value}"
+        unless key == "hashed_id"
+          if index == 0
+            param_arr << "%3F#{key}%3D#{value}"
+          else
+            param_arr << "%26#{key}%3D#{value}"
+          end
         end
       end
       param_arr.join
     end
 
     def split_params(params)
-      params.split(",").map(&:strip)
+      args = params.split(",").map(&:strip)
+      args.inject({}) do |result, arg|
+        key, value = arg.split /:/
+        result[key.strip] = value.strip
+        result
+      end
     end
 
     def sanitize_color(color)
