@@ -2,7 +2,10 @@ require 'net/https'
 require 'uri'
 require 'json'
 
-## for use on the page like: {% wistia_embed 9dc0fc7d3a, 600, 400, #636155 %}
+#
+# for use on the page like: 
+# {% wistia_embed hashed_id: 9dc0fc7d3a, videoWidth: 600, videoHeight: 400, playerColor: #636155 %}
+#
 
 module Jekyll
 
@@ -61,16 +64,6 @@ module Jekyll
         result
       end
     end
-
-    def sanitize_color(color)
-      if color.include? '#'
-        clean_color = color.split('#')[1]
-        return clean_color
-      else
-        return color
-      end
-    end
-
   end
 end
 
