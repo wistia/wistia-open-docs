@@ -6,7 +6,7 @@ description: Want to get social with your Wistia videos? We make it simple to sh
 post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles like Facebook and Twitter can be used to spread a business message effectively, especially if delivered in an easy to consume and share way.  The best way to do that is with video - it's perfect for social media attention spans, so it tends to 'travel' better than blocks of text.</p><p>Now that you've got your video uploaded to Wistia, how do you share it and track the performance on Social Media sites?  This tutorial will help.  The two services we're focused on here are Facebook and Twitter.</p>
 ---
 
-{% embedly http://home.wistia.com/medias/430tdjcty4 %}
+{% wistia_embed hashed_id: 430tdjcty4 %}
 
 ## Twitter
 

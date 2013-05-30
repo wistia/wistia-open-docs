@@ -6,7 +6,7 @@ post_intro: <div class="post_image float_right intro_image"><img src="http://emb
 description: Wistia makes it easy to privately share your videos with people. Invite people via email, require a password, and track how they watch in a secure environment.
 ---
 
-{% embedly http://home.wistia.com/medias/75edd60835 %}
+{% wistia_embed hashed_id: 75edd60835 %}
 
 ----
 

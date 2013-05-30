@@ -9,7 +9,7 @@ post_intro:
   and in this guide we'll show you how to get it done right.</p>
 ---
 
-{% embedly http://home.wistia.com/medias/5c913cd4fb, height: 371, videoHeight: 371 %}
+{% wistia_embed hashed_id: 5c913cd4fb, videoHeight: 371 %}
 
 ## Upload Your Video
 
