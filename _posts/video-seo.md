@@ -17,7 +17,7 @@ post_intro: <p>Video SEO is the act of proactively submitting your content and p
 
 ## Video Walkthrough
 
-{% embedly http://home.wistia.com/medias/38bcf1939d, height: 371, videoHeight: 371 %}
+{% wistia_embed hashed_id: 38bcf1939d, videoHeight: 371 %}
 
 ----
 
@@ -253,4 +253,4 @@ Google has reported any errors in indexing.
 **Yes!** Our Video SEO expert, Ben, got up-close with the camera to talk about
 how Video SEO can create benefits for your business:
 
-{% embedly http://home.wistia.com/medias/b96bdea4c2, height: 310, videoHeight: 310 %}
+{% wistia_embed hashed_id: b96bdea4c2, videoHeight: 310 %}

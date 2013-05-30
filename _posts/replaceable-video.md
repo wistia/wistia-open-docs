@@ -5,7 +5,7 @@ description: There's nothing worse than embedding your new video in your site, a
 category: Public Sharing
 ---
 
-{% embedly http://home.wistia.com/medias/59ad3f2dc4, height: 371, videoHeight: 371 %}
+{% wistia_embed hashed_id: 59ad3f2dc4, videoHeight: 371 %}
 
 Just like Ben says in the video, we all make mistakes.  If you've embedded a video, and now you need to update it in a hurry, the **Replace Video** tool is a quick and easy way to get it done.  As a bonus, you won't lose stats already created for the original video.
 

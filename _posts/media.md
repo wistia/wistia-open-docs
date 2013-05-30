@@ -28,7 +28,7 @@ To edit the title, hover over it with your mouse, and click the <span class="edi
 
 ## Change the Thumbnail
 
-{% embedly http://home.wistia.com/medias/05f95d19ea %}
+{% wistia_embed hashed_id: 05f95d19ea %}
 
 When you upload your video, Wistia will automatically select the frame closest to the center as the thumbnail. Sometimes, this can produce some pretty funny results. Want to change the thumbnail to a different frame, or upload one of your own?
 

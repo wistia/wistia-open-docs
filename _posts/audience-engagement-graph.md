@@ -5,7 +5,7 @@ description: Learn more about the engagement graph, a representation of how your
 category: Analytics
 ---
 
-{% embedly http://home.wistia.com/medias/8326f15cea, height: 495, videoHeight: 495 %}
+{% wistia_embed hashed_id: 8326f15cea %}
 
 ----
 

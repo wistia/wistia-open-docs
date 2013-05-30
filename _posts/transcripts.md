@@ -25,7 +25,7 @@ Let's jump in to creating and using your captions and transcripts.
 
 ## Video Overview
 
-{% embedly http://home.wistia.com/medias/pqmkpbr89t, width: 660, videoWidth: 660, height: 371, videoHeight: 371 %}
+{% wistia_embed hashed_id: pqmkpbr89t, videoWidth: 660, videoHeight: 371 %}
 
 ## Select Your Video
 

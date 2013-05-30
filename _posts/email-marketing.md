@@ -7,7 +7,7 @@ post_intro: <img class="post_image intro_image float_right" src="http://embed.wi
 footer: 'for_intermediates'
 ---
 
-{% embedly http://home.wistia.com/medias/027bb4b325 %}
+{% wistia_embed hashed_id: 027bb4b325 %}
 
 {{ "The 'path' to the email marketing dialogue has been updated (it has been split out from the 'embed' dialogue).  See the image below for reference (look for the 'Email Marketing' option under the Media Actions menu. Updated screencast to come <i class='icon-bolt'></i>" | note }}
 

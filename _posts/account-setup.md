@@ -6,7 +6,7 @@ description: Questions about admin type stuff? Account Dashboards? Billing state
 footer: 'for_intermediates'
 ---
 
-{% embedly http://home.wistia.com/medias/b0778cb217 %}
+{% wistia_embed hashed_id: b0778cb217 %}
 
 ---
 
