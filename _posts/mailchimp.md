@@ -54,3 +54,31 @@ The great part about MailChimp and Wistia together is that the merge tag has you
 
 {{ "If you would like to keep the email campaign separate from the other embedded viewings of the video, set up a separate project specifically for the email version of the video." | tip }}
 
+## Style Tips
+
+### Center Your MC Embed
+
+Something we want to do frequently, but isn't always straight-forward, is *centering
+our thumbnail in a MailChimp campaign*. Here's the skinny:
+
+* Copy out your MailChimp merge tag - and take special note of the `width` (you
+  might have it set up as the default, `450px`)
+* Select the `html` editing mode in MailChimp - I always get my campaign
+  totally laid out with a placeholder for the thumbnail image - then I go back
+  and add it.
+* Before I paste in the merge tag, I create a `<div>` tag to wrap it in, like
+  this:
+
+{% codeblock mailchimp_merge_tag.html %}
+<div style="width: 450px; margin: 0 auto;">
+  *|WISTIA:[$vid=w18s9azjov,$max_width=450,$watch_url=http://jeff.wistia.com/medias/w18s9azjov,$title=N,$border=N,$trim_border=N,$play_button_color=636155e0]|*
+</div>
+{% endcodeblock %}
+
+Note, I set the following styles on the div:
+
+* `width` is set to the width of your merge tag.
+* `margin` is set to `0` (vertically) and `auto` (horizontally). This will
+  center the thumbnail.
+
+Give this a shot with your next MailChimp merge tag embed!
