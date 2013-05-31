@@ -5,3 +5,4 @@ Gemfile.lock
 elasticsearch.log
 _config.local.rb
 .pygments-cache/
+.tddium*
