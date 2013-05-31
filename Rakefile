@@ -46,7 +46,7 @@ task :pre_jekyll do
 end
 
 desc "Launch preview environment"
-task :preview => [:pre_jekyll, :spec] do
+task :preview => :pre_jekyll do
   system "foreman start"
 end
 
