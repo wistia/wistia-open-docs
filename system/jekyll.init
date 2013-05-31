@@ -7,7 +7,7 @@ APP_ROOT=/opt/apps/wistia-doc
 PID=/var/run/wistia-doc/jekyll.pid
 USER=wistia
 CMD="bundle"
-CMD_OPTS="exec jekyll --auto"
+CMD_OPTS="exec jekyll build --watch"
 
 start() {
   ebegin "Downing the potion for Jekyll"
