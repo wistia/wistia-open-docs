@@ -1,0 +1,4 @@
+:tddium:
+  :hooks:
+    :worker: bundle exec jekyll build
+    :pre: elasticsearch
