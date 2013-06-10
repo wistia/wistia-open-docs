@@ -19,17 +19,27 @@
     margin: 0 auto;
     position: relative;
     padding: 0 15px; }
+    @media (max-width: 680px) {
+      .wistiacom_header .head_container {
+        text-align: center;
+        padding: 0; } }
   .wistiacom_header .header_logo {
     text-align: left;
     height: 40px;
     left: 0;
     width: 220px;
-    margin: 35px 0;
+    margin: 35px 0 15px;
     position: relative;
     display: inline-block;
     *display: inline;
     vertical-align: top;
     zoom: 1; }
+    @media (max-width: 780px) {
+      .wistiacom_header .header_logo {
+        display: block; } }
+    @media (max-width: 680px) {
+      .wistiacom_header .header_logo {
+        margin: 25px auto 15px; } }
     .wistiacom_header .header_logo a {
       position: absolute;
       width: 220px;
@@ -51,9 +61,10 @@
     @media (max-width: 960px) {
       .wistiacom_header .nav {
         left: 5%; } }
-    @media (max-width: 650px) {
+    @media (max-width: 780px) {
       .wistiacom_header .nav {
-        left: 0; } }
+        left: 0;
+        text-align: center; } }
     .wistiacom_header .nav ul {
       display: inline-block;
       *display: inline;
@@ -68,6 +79,9 @@
       @media (max-width: 1080px) {
         .wistiacom_header .nav ul.second {
           margin-left: 20px; } }
+      @media (max-width: 680px) {
+        .wistiacom_header .nav ul.second {
+          margin: 0; } }
       .wistiacom_header .nav ul li {
         display: inline-block;
         *display: inline;
@@ -82,7 +96,7 @@
         @media (max-width: 1080px) {
           .wistiacom_header .nav ul li {
             width: 100px; } }
-        @media (max-width: 650px) {
+        @media (max-width: 780px) {
           .wistiacom_header .nav ul li {
             border: none; } }
         .wistiacom_header .nav ul li.features, .wistiacom_header .nav ul li.pricing, .wistiacom_header .nav ul li.learning {
@@ -118,14 +132,14 @@
             color: #0e7ac4; }
         @media (max-width: 960px) {
           .wistiacom_header .nav ul li.features, .wistiacom_header .nav ul li.pricing, .wistiacom_header .nav ul li.learning, .wistiacom_header .nav ul li.signup, .wistiacom_header .nav ul li.login {
-            border-color: transparent; }
+            border: none; }
             .wistiacom_header .nav ul li.features:hover, .wistiacom_header .nav ul li.pricing:hover, .wistiacom_header .nav ul li.learning:hover, .wistiacom_header .nav ul li.signup:hover, .wistiacom_header .nav ul li.login:hover {
-              border-color: transparent; } }
-        @media (max-width: 650px) {
+              border: none; } }
+        @media (max-width: 780px) {
           .wistiacom_header .nav ul li.features, .wistiacom_header .nav ul li.pricing, .wistiacom_header .nav ul li.learning, .wistiacom_header .nav ul li.signup, .wistiacom_header .nav ul li.login {
-            border-color: transparent; }
+            border: none; }
             .wistiacom_header .nav ul li.features:hover, .wistiacom_header .nav ul li.pricing:hover, .wistiacom_header .nav ul li.learning:hover, .wistiacom_header .nav ul li.signup:hover, .wistiacom_header .nav ul li.login:hover {
-              border-color: transparent; } }
+              border: none; } }
       .wistiacom_header .nav ul a {
         display: block;
         padding: 46px 0px;
@@ -141,7 +155,7 @@
         @media (max-width: 1080px) {
           .wistiacom_header .nav ul a {
             font-size: 14px; } }
-        @media (max-width: 650px) {
+        @media (max-width: 780px) {
           .wistiacom_header .nav ul a {
             padding: 20px 0; } }
 </style>
