@@ -172,19 +172,17 @@ var accountUrl = escape("http://home.wistia.com/medias/");
 var mediaHashedId = "01a1d9f97c";
 
 function getThumbnailUrl(hashedId, callback) {
-  $.getJSON(baseUrl + accountUrl + hashedId + "&format=json&callback=?", function(data) {
-    callback(data);
-  });
+  $.getJSON(baseUrl + accountUrl + hashedId + "&format=json&callback=?", callback);
 }
 {% endcodeblock %}
 
 This function will return a JSON data object, and pass it to our callback
-function, which will parse the JSON and return the thumbnail URL. Let's write
+function, which will parse the JSON and log the thumbnail URL. Let's write
 that callback function now:
 
 {% codeblock playlist_api.js %}
 function parseJSON(json) {
-  return json.thumbnail_url;
+  console.log(json.thumbnail_url);
 };
 {% endcodeblock %}
 
@@ -210,14 +208,17 @@ guide for more info!
 ## Troubleshooting
 
   1. If an invalid URL (one that doesn't match our regular expression above) 
-    is given, the endpoint will return `404 Not Found`.
+     is given, the endpoint will return `404 Not Found`.
   2. If an unparseable URL is given in the url param, the endpoint will return 
-    `404 Not Found`.
-  3. If a media is found but has no available embed code, the endpoint will 
-    return `501 Not Implemented`. Video, Image, Audio, 
-    and Document files all currently implement oembeds.
-  4. If a playlist is found but has no videos, the endpoint will return 
-    `501 Not Implemented`.
+     `404 Not Found`.
+  3. If a media is found, but failed to process, the endpoint will return 
+     `404 Not Found`.
+  4. If a media is found but has no available embed code, the endpoint will 
+     return `501 Not Implemented`. Video, Image, Audio, and Document files all
+     currently implement oembeds. This will also occur if the video is not
+     finished processing.
+  5. If a playlist is found but has no videos, the endpoint will return 
+     `501 Not Implemented`.
 
 ---
 
