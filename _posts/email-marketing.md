@@ -10,8 +10,6 @@ footer: 'for_intermediates'
 
 {% wistia_embed hashed_id: a2kxmpew6y %}
 
-{{ "The 'path' to the email marketing dialogue has been updated (it has been split out from the 'embed' dialogue).  See the image below for reference (look for the 'Email Marketing' option under the Media Actions menu. Updated screencast to come <i class='icon-bolt'></i>" | note }}
-
 ----
 
 ## Using Wistia Email Marketing Integration
