@@ -15,11 +15,6 @@
 @import vars_and_mixins
 @import syntax
 
-
-
-
-
-
 //////// main styles /////////
 
 body
@@ -57,6 +52,10 @@ em
   @extend %container
   max-width: $total_width + $padding
   padding: 0 $padding
+  +breakpoint(large-screen)
+    min-width: 972px
+  +breakpoint(medium-screen)
+    min-width: auto
 
 #post_container
   position: relative
@@ -848,6 +847,8 @@ $bracket_yellow: #F9D164
         size: 22px
       min-width: 260px
       position: absolute
+  +breakpoint(small-screen)
+    margin-bottom: 60px
 
 .one_tile
   cursor: pointer
@@ -907,6 +908,25 @@ $bracket_yellow: #F9D164
         line-height: 140%
         padding: 0 20px
         width: 240px
+    +breakpoint(medium-screen)
+      display: block
+      width: 80%
+      padding: 0
+      margin: 0 auto
+      border: none
+      .api_garden_square, 
+      .api_garden_square:first-child,
+      .api_garden_square:last-child
+        +col
+        padding: 20px 0
+        height: auto
+        margin: 0
+    +breakpoint(small-screen)
+      .api_garden_square, 
+      .api_garden_square:first-child,
+      .api_garden_square:last-child
+        display: block
+
 
 .sick_wrapper
   cursor: pointer
@@ -935,6 +955,8 @@ $bracket_yellow: #F9D164
   background: $dev_bg_blue
   display: block
   height: 200px
+  +breakpoint(small-screen)
+    height: auto
   .content_container
     padding-left: 20px
     position: relative
@@ -946,6 +968,11 @@ $bracket_yellow: #F9D164
         margin: 0 55px
         text-align: center
         width: 200px
+    +breakpoint(medium-screen)
+      ul li
+        margin: 0 20px
+    +breakpoint(small-screen)
+      text-align: center
   h2
     @extend %link
     color: white
@@ -978,6 +1005,9 @@ $bracket_yellow: #F9D164
     +transition-duration(.25s)
     &.visible
       color: white
+    +breakpoint(small-screen)
+      &.visible
+        color: transparent
 
 .devhq_footer_arrow
   @extend %arrow-down

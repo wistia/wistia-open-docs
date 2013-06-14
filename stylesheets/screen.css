@@ -553,6 +553,8 @@ em { font-style: italic; }
 .content_container { margin: 0 auto; position: relative; }
 
 .content_container { max-width: 990px; padding: 0 30px; }
+@media (max-width: 1080px) { .content_container { min-width: 972px; } }
+@media (max-width: 960px) { .content_container { min-width: auto; } }
 
 #post_container { position: relative; left: 300px; text-align: left; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 
@@ -806,6 +808,7 @@ table tr td pre { margin: 0; padding: 0; }
 .devhq_header .tiled_wall { position: relative; height: 320px; width: 104%; }
 .devhq_header .subheader { position: relative; height: 60px; width: 100%; }
 .devhq_header .subheader #devhq_subtitle { font-family: "Andale Mono", sans-serif; font-size: 22px; min-width: 260px; position: absolute; }
+@media (max-width: 650px) { .devhq_header { margin-bottom: 60px; } }
 
 .one_tile { cursor: pointer; position: absolute; letter-spacing: -10px; font-family: "ocr-b-std", Courier; font-size: 52px; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -o-transition-duration: 0.25s; transition-duration: 0.25s; -webkit-user-select: none; -moz-user-select: none; user-select: none; width: 87px; }
 
@@ -830,6 +833,9 @@ table tr td pre { margin: 0; padding: 0; }
 .api_button_garden .column .api_garden_square.last-child { border-bottom: none; margin-bottom: -100px; }
 .api_button_garden .column .api_garden_square:first-child { margin-top: -80px; }
 .api_button_garden .column .api_garden_square p { color: #1353a2; font-size: 15px; line-height: 140%; padding: 0 20px; width: 240px; }
+@media (max-width: 960px) { .api_button_garden .column { display: block; width: 80%; padding: 0; margin: 0 auto; border: none; }
+  .api_button_garden .column .api_garden_square, .api_button_garden .column .api_garden_square:first-child, .api_button_garden .column .api_garden_square:last-child { display: inline-block; *display: inline; vertical-align: top; zoom: 1; padding: 20px 0; height: auto; margin: 0; } }
+@media (max-width: 650px) { .api_button_garden .column .api_garden_square, .api_button_garden .column .api_garden_square:first-child, .api_button_garden .column .api_garden_square:last-child { display: block; } }
 
 .sick_wrapper { cursor: pointer; color: white; position: absolute; letter-spacing: -10px; font-family: "ocr-b-std"; font-size: 52px; -webkit-user-select: none; -moz-user-select: none; user-select: none; width: 360px; }
 .sick_wrapper .lefty, .sick_wrapper .righty, .sick_wrapper .middly { display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
@@ -837,15 +843,19 @@ table tr td pre { margin: 0; padding: 0; }
 .sick_wrapper .righty { margin-left: -4px; }
 
 .devhq_footer { background: #1353a2; display: block; height: 200px; }
+@media (max-width: 650px) { .devhq_footer { height: auto; } }
 .devhq_footer .content_container { padding-left: 20px; position: relative; top: 15px; }
 .devhq_footer .content_container ul { margin-top: 35px; }
 .devhq_footer .content_container ul li { display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin: 0 55px; text-align: center; width: 200px; }
+@media (max-width: 960px) { .devhq_footer .content_container ul li { margin: 0 20px; } }
+@media (max-width: 650px) { .devhq_footer .content_container { text-align: center; } }
 .devhq_footer h2 { color: white; cursor: auto; font-size: 18px; font-style: normal; font-weight: normal; padding-left: 0; position: relative; text-align: center; }
 .devhq_footer a { border-bottom: 1px solid white; font-family: Gill Sans, Arial, sans-serif; font-size: 26px; font-weight: 100; letter-spacing: 1px; color: white; position: relative; }
 .devhq_footer a:after { background-position: 0 -21px; }
 .devhq_footer a:hover:after { background-position: 0 0; }
 .devhq_footer p { color: transparent; line-height: 140%; margin-top: 10px; text-align: center; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -o-transition-duration: 0.25s; transition-duration: 0.25s; }
 .devhq_footer p.visible { color: white; }
+@media (max-width: 650px) { .devhq_footer p.visible { color: transparent; } }
 
 .devhq_footer_arrow { margin: 0 auto; }
 
