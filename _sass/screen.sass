@@ -141,12 +141,12 @@ em
   padding: $padding 0 $padding*2
   text-align: center
   .col
+    +col
     margin: 0 5px
-    +breakpoint(large-screen)
-      width: 40%
+    width: 40%
+    max-width: 400px
     +breakpoint(medium-screen)
       width: 90%
-    +col
 
 .articles_list
   margin: $padding auto 0
@@ -166,6 +166,12 @@ em
     color: $text_color
     margin-bottom: 10px
     padding-bottom: 5px
+  p
+    color: lighten($text_color, 20%)
+    font-size: 16px
+  &.developers
+    i
+      color: yellow
   &.last
     margin-bottom: 0
 
@@ -627,7 +633,7 @@ table
   .sub_link
     margin-left: $padding
     a
-      font-size: 14px
+      font-size: 15px
       padding: 2px 0
       line-height: 130%
 
