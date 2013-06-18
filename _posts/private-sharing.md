@@ -111,8 +111,6 @@ We'll start with a quick review of the Share dialog box.
 
 Enter the emails of the people you'd like to invite in the “Enter email addresses to add users” box. Assign the permissions you'd like them to have for this project. You can give them manager permissions for that particular project, allow them to upload, download original files, share with others, and provide them access to stats for all videos in that project.
 
-You can also choose whether the user needs a password to access the content. If you choose to require a password (more secure), the user will be prompted to create a password when they click on the link in the email. In the future, the user will be required to enter their email and password in order to gain access to the content that has been shared with them. If no password is required, the user will be taken directly to the project upon clicking the link.
-
 You can also customize the wording of the email message that will be sent to the people you are inviting. 
 
 ### The Invitation Email
