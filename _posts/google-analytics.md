@@ -11,6 +11,8 @@ footer: 'for_intermediates'
 
 Make sure you have installed the [Google Analytics tracking scripts](https://support.google.com/analytics/bin/answer.py?hl=en&answer=1008080). These are necessary for any custom tracking we do below.
 
+If you'd like to save yourself a little time and effort, have a look at our [Google Analytics Lab](http://wistia.com/labs/google-analytics/). It's designed to make adding the Google Analytics intrgration to your Wistia embeds super easy. All you need to do is setup the aforementioned Google Analytics tracking scripts, grab an embed and head over to the lab to configure it.
+
 ## Modify Your Wistia Embed Codes
 
 Integrating with Google Analytics is actually extremely simple thanks to the 
