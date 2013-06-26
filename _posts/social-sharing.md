@@ -11,42 +11,62 @@ post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles 
 ## Twitter
 
 Twitter is, frankly, the bee's knees. We've developed a bunch of cool functionality
-around Twitter, which we expand in the [Twitter Doc page]({{ '/twitter' | post_url }}).
+around Twitter, like our Twitter Follow Lab and Sharing to Twitter functionality. 
+Read more about that and more on the [Twitter Integration page]({{ '/twitter' | post_url }}).
 
 ## Facebook
 
 Facebook embeds show up right in your news feed.  Your followers can click to play the video in the feed, or click through the link to watch the video in your Wistia account.
 
-To embed your video into Facebook:
+{% post_image hashed_id: '9326ce283fa05001610a85440a19531ad3230c7e', class: 'center' %}
 
-*  In your account, open up the video you'd like to embed.
-*  Select "Add Description" under the <span class="action_menu">Media Actions</span> menu.  This description will be showing up in the Facebook news feed.
-*  Back under the <span class="action_menu">Media Actions</span> menu, select “share by link”.
-*  Copy the share link, paste it into your Facebook status box and click “share”.
-*  Your friends will be able to see the video in their News Feed, and even play it within the Feed - how neat is that!?
+First, open the media in your account and make sure it has a description! If it
+doesn't currently have a description, hover under the title and select *Add a
+Description* to get started.
 
-{% post_image hashed_id: '27e43f133e7e090c2d698413ccadf2df1451ecb1', class: 'center' %}
+{% post_image hashed_id: '4d24a3ea198b830c5127036e63c2ebbd09e55958', class: 'center' %}
 
-### How it looks
+Select *Share* under the <span class="action_menu">Video Actions</span> menu.
 
-{% post_image hashed_id: '1901fdc9b3c4eb617604817f88beb5028c72ae92', class: 'center' %}
+{% post_image hashed_id: '1683bf04ea26b9a6e036eac654e8bf837afecdd5', class: 'center' %}
+
+In the Share Modal, copy the URL provided and open your Facebook account.
+
+{% post_image hashed_id: '60b1fe32117e941651662d9c226fcc8765b9a7d6', class: 'center' %}
+
+Enter the URL in Facebook's *Status Update*. The video thumbnail and
+description will be pulled in and ready to share!
+
+{% post_image hashed_id: 'b6ac0cffb05da0566bff1f37c25f147f72c3f024', class: 'center' %}
+
+Once you share the update, viewers can watch the video inline in the Facebook
+news feed.
 
 ## Posting to Facebook from your website
 
-Maybe you want to post to Facebook, but you want it to point back to your website?  If so, you can use the OpenGraph tags we produce for 'public' videos to accomplish this. Facebook uses the OpenGraph tags to specify which media/content from the website should be posted.
+{{ "Be aware, this is technical territory!" | note }}
 
-To do this, first embed the video on your website.  Next, make the Project your video is contained in a "Public" project, and add a description (as detailed in the video above).
+Maybe you want to post to Facebook, but you want it to point back to your website?
+If so, you can use the OpenGraph tags we produce for 'public' videos to accomplish 
+this. Facebook uses the OpenGraph tags to specify which media/content from the 
+website should be posted.
+
+To do this, first embed the video on your website.  Make sure your Project is
+*unlocked*, and add a description (descriptions are covered in the video above).
 
 View the source on the media page, and look for all of the tags of the form
 
-<span class="code">&lt;meta content="..." property='og:xxxxxx'&gt;</span> (there should be ~8 of these tags)
+<code class="full_width">&lt;meta content="..." property='og:xxxxxx'&gt;</code>
+(there should be ~8 of these tags)
 
-These are the OpenGraph tags we have created for your video! You will need to change the og:url tag to be the URL of the page where you have embedded the video (and are putting the OpenGraph tags).
+Here's a screenshot:
 
-Add these to the <span class="code">&lt;head&gt;</span> of your external website, and then share the URL of that page on Facebook.
+{% post_image hashed_id: 'df4112d8d14f431d235cc4d4d8033a3fc528dbd1', class: 'center' %}
+
+These are the OpenGraph tags we have created for your video. You will need to 
+change the og:url tag to be the URL of the page where you have embedded the 
+video (and are putting the OpenGraph tags).
+
+Add these to the `head` of your website, and then share the URL of that page on Facebook.
 
 You're good to go!
-
-
-
-

@@ -32,7 +32,7 @@ From the upload dialogue box, choose the file to upload from your computer.
 Once a file has been chosen, you will see the progress of the file uploading
 as in the image below.
 
-{% post_image hashed_id: '804697cd6143ac58ff53770f178bb6a764ba6e30', class: 'center'%}
+{% post_image hashed_id: '69498e53ff4f696cc3810229c2bfd88375bcd10d', class: 'center'%}
 
 If you are having trouble with uploads completing, please try our
 [simple uploader]({{ '/simple-uploader' | post_url }}). Most upload troubles
