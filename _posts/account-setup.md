@@ -12,7 +12,7 @@ footer: 'for_intermediates'
 
 ## Open Your Account Dashboard
 
-{% post_image hashed_id: 'b9c54623ae5c7aef464dc3802ec54122f6a29ea9', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'b9c54623ae5c7aef464dc3802ec54122f6a29ea9', width: 600, class: 'center' %}
 
 Most of the important Wistia settings for your Account are housed in the
 *Account Dashboard*. Many of the tips below require you to open the Account
@@ -22,7 +22,7 @@ First, you will need to be logged in as the Account Owner. Find the *Account*
 drop-down menu in the upper-right hand corner of your account. Next, select the
 *Account Dashboard* option.
 
-{% post_image hashed_id: '86e27462ccb1bdcbeb169dbfbdf5eaa30056475c', width: 660, class: 'center' %}
+{% post_image hashed_id: '86e27462ccb1bdcbeb169dbfbdf5eaa30056475c', width: 600, class: 'center' %}
 
 ---
 
@@ -32,13 +32,13 @@ From the *Account Dashboard*, choose
 that will guide you through the process of uploading and displaying your company
 logo in your Wistia account.
 
-{% post_image hashed_id: '4ea0e2a40e66c31af1d275deafd1cfbfa91ae9f4', width: 660, class: 'center' %}
+{% post_image hashed_id: '4ea0e2a40e66c31af1d275deafd1cfbfa91ae9f4', width: 600, class: 'center' %}
 
 ---
 
 ## Filtering Out Internal Stats
 
-{% post_image hashed_id: 'c3b7767bf8523160c7ded97ff69ea4bf260b5ce1', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'c3b7767bf8523160c7ded97ff69ea4bf260b5ce1', width: 600, class: 'center' %}
 
 You can filter out your own views, and those of the other testers you might
 have looking at your Wistia videos before launch, based on IP.
@@ -61,7 +61,7 @@ To change your Wistia account URL, you must be logged in as the account owner.
 Click <span class="faux_button">Settings</span> on the *Account Dashboard*.
 A dialog box like the one shown below will appear.
 
-{% post_image hashed_id: 'f7cccd88af9bfe8ac2ab39061bfebbae29fcd93e', width: 660, class: 'center' %}
+{% post_image hashed_id: 'f7cccd88af9bfe8ac2ab39061bfebbae29fcd93e', width: 600, class: 'center' %}
 
 In the section labeled "Address", you will see a text box showing the current
 URL of your Wistia account (in the case of the above picture,
@@ -96,7 +96,7 @@ rocking a custom URL!
 
 ## Monthly Usage
 
-{% post_image hashed_id: 'e9d0506033f5d35682bfe1f741f3dc2099467de9', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'e9d0506033f5d35682bfe1f741f3dc2099467de9', width: 600, class: 'center' %}
 
 To see account limits, you must be logged in as the account owner. Select
 the <span class="faux_button">Usage</span> option from your Account Dashboard.
@@ -116,7 +116,7 @@ To see billing statements, you must be logged in as the account owner.
 Click the  "Billing statements" button on your Account Dashboard.  This will
 bring up a dialog box showing a list of all the receipts for your transactions.
 
-{% post_image hashed_id: 'ab90b75617a960e658aa84c3eb8e17a8e8f0d70f', width: 660, class: 'center' %}
+{% post_image hashed_id: 'ab90b75617a960e658aa84c3eb8e17a8e8f0d70f', width: 600, class: 'center' %}
 
 
 ---
@@ -128,4 +128,4 @@ email address into the text box and click <span class="faux_button">Add</span>.
 
 To remove existing managers, click <span class="faux_button">Remove</span>.
 
-{% post_image hashed_id: '1ac3c146ef56721d5e8718229243ba6c66158cf3', width: 660, class: 'center' %}
+{% post_image hashed_id: '1ac3c146ef56721d5e8718229243ba6c66158cf3', width: 600, class: 'center' %}

@@ -9,7 +9,7 @@ exclude_from_search: 'no_index'
 # let's embed some video you guys!
 wistia_embed_settings:
   playerColor: "40aaef" # $accent_blue from screen.sass
-  videoWidth: "660"
+  videoWidth: "600"
   playButton: true
   embedType: "seo"
   controlsVisibleOnLoad: false

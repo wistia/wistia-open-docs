@@ -28,10 +28,6 @@
     {% include footer.html %}
     <!-- scripts and such -->
     {% include addons_js.html %}
-    {% if page.developers != true %}
-    <script src="{{ '/javascripts/d3.v2.min' | javascript_url }}"></script>
-    <script src="{{ '/javascripts/voronoi' | javascript_url }}"></script>
-    {% endif %}
     <script src="{{ '/javascripts/search_text' | javascript_url }}"></script>
     <script src='//wistia.com/javascripts/simplex.js'></script>
     <script type='text/javascript'>

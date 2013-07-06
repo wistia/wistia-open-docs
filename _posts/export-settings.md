@@ -49,6 +49,7 @@ The largest resolution we create is 720p, or *1280px by 720px*.  If you upload a
 
 We recommend uploading video at 1280px wide because it is the most efficient approach - your original files won't be taking up extra space in your account, and your uploading/processing times will be as speedy as possible as well.
 
+----
 ## How Wistia Does HD
 
 Because the way we do HD is a little different than more, it bears mentioning.
@@ -59,6 +60,7 @@ Auto-HD takes over when the viewer 'full screens' the video.  At the larger size
 
 {{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, and we have created a Retina-friendly version for the iPad 3." | note }}
 
+----
 ## Formats Wistia Supports
 
 Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in an MP4 or MOV format*. 
@@ -73,12 +75,14 @@ Documents | PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
 Images | JPG, PNG, GIF, TIFF, BMP, DCM
 
 
+----
 ## A Note on File Sizes
 
 The standard Wistia upload function supports files up to **2 Gigabytes** in size. It is possible to upload larger files using the [Simple Uploader]({{ '/simple-uploader' | post_url }}), but this is not recommended. Wistia transcodes all video before it can be shared, so that your viewers have the best playback experience possible. Part of the transcoding process is compressing the video using an efficient codec like FLV and MP4. As a result, the quality of your original upload matters only up to a certain point.
 
 **We recommend adhering to 1280px wide and 3 - 5,000kbps as the max settings for upload, as it will reduce the likeliness of upload errors**. If you find yourself with a short video (under 2 hours) that is larger than 2GB, it's likely something has gone wrong or a compression step was missed.
 
+----
 ## Exporting Guides
 
 Looking for help exporting from software like Final Cut Pro, Screenflow, or Camtasia? Head over to our [exporting guides]({{ '/exporting-guide' | post_url }}).

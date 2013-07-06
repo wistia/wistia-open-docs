@@ -9,11 +9,12 @@ post_intro:
   and in this guide we'll show you how to get it done right.</p>
 ---
 
-{% wistia_embed hashed_id: 5c913cd4fb, videoHeight: 371 %}
+{% wistia_embed hashed_id: 5c913cd4fb, videoHeight: 338 %}
 
+----
 ## Upload Your Video
 
-{% post_image hashed_id: '5695b32b1de5048682ee2cbc2fe2aec94f70c771', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '5695b32b1de5048682ee2cbc2fe2aec94f70c771', width: 600, class: 'center' %}
 
 Before you can embed your video, you need to upload it to your account. Haven't 
 done that yet? Check out our [guide to uploading]({{ '/upload-video' | post_url }})
@@ -27,7 +28,7 @@ wraps up, your video is ready to be embedded onto your site.
 
 ## Generate the Embed Code
 
-{% post_image hashed_id: '62f01c7e318746526f5bfafeda82ad96807db9a4', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '62f01c7e318746526f5bfafeda82ad96807db9a4', width: 600, class: 'center' %}
 
 
 **Embed codes** are snippets of code pasted on your web page that are useful
@@ -37,7 +38,7 @@ start by selecting the *&lt;/&gt; Embed* option under the
 
 <div class='clear'></div>
 
-{% post_image hashed_id: 'edda8e48e886fbfc42a8a6b6d0264fbbe160afd6', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'edda8e48e886fbfc42a8a6b6d0264fbbe160afd6', width: 600, class: 'center' %}
 
 The Embed option will take you to the [Wistia Embed Screen]({{ '/embed-screen' | post_url }}).
 This is where you can make some basic changes to the look and feel of your
@@ -45,7 +46,7 @@ video presentation.
 
 <div class='clear'></div>
 
-{% post_image hashed_id: 'fbe53b9002062e623f346aaaf7c850d33b0cd5dc', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'fbe53b9002062e623f346aaaf7c850d33b0cd5dc', width: 600, class: 'center' %}
 
 See our [complete guide to the embed screen]({{ '/embed-screen' | post_url }})
 for more info.  Once you have all the settings set the way you would like them,

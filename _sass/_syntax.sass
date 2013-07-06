@@ -7,20 +7,20 @@ $font-mono: monospace
 $font-default: $title-fonts
 $color-main: white
 
-$pre-bg: $color-gray04
-$pre-border: $color-gray03
+$pre-bg: $gray1
+$pre-border: $gray2
 
 code, pre
   background: $pre-bg
   border: 1px solid $pre-border
   font-family: $font-mono
+  font-weight: 500
 
 code
   color: $text_color
   font-size: 14px
-  margin: $padding/2 $padding
-  padding: $padding/5
-  margin: 0
+  margin: 4px
+  padding: 7px
 
 pre
   font-size: 1 / 0.9em
@@ -35,12 +35,10 @@ pre
     margin: 0
 
 .full_width
-  margin-left: -$padding
   display: block
   white-space: nowrap
   overflow-x: auto
   padding: $padding/2 $padding
-  width: 100%
 
 .highlight
   padding: $padding/2
@@ -85,6 +83,7 @@ figure.code
     border: none
     padding: 0
     margin: 0
+    font-weight: 500
   .highlight
     overflow-x: auto
   .line-numbers

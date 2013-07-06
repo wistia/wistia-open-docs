@@ -25,7 +25,7 @@ type: post
 
 %script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/jquery.nav' | javascript_url }}" }
-%script{ src: "{{ '/javascripts/image_layout' | javascript_url }}" }
+
 
 {% if page.api == true %}
 {% include toplink.html %}
@@ -36,3 +36,29 @@ type: post
   var api = false;
 {% endif %} 
 {% include post_js.html %}
+
+:javascript
+
+  $(window).scroll(function(){
+    var scroll = $(document).scrollTop();
+    var docHeight = $(document).height();
+    var navHeight = $('#page_nav').height();
+    var footerHeight = 286;
+    var bottomPadding = 55;
+    var yPosition = scroll + navHeight;
+    var pageHeight = docHeight - footerHeight - bottomPadding - 25;
+
+    if(scroll >= 250 && yPosition < pageHeight){
+      $('#post_content_nav').addClass('fixedPosition');
+      $('#post_content_nav').removeClass('bottomPadding');
+      console.log("position is " + scroll);
+    } else if(yPosition >= pageHeight){
+      $('#post_content_nav').removeClass('fixedPosition');
+      $('#post_content_nav').addClass('bottomPadding');
+      console.log("y position is " + yPosition + " and page height is " + pageHeight);
+    } else {
+      $('#post_content_nav').removeClass('fixedPosition');
+      $('#post_content_nav').removeClass('bottomPadding');
+      console.log("position is " + scroll);
+    };
+  });

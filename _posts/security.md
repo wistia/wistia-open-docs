@@ -5,7 +5,6 @@ description: Wistia provides multiple levels of security for your videos. Learn 
 category: Getting Set Up
 ---
 
-{% post_image hashed_id: '3901c73197360c575b74624d854f4cc57e252e22', width: 200, class: 'intro_image float_right' %}
 
 We know that keeping your data **safe, available,
 and backed up** is critical when trusting a service provider with your data. We don't
@@ -17,7 +16,7 @@ focus on what you do best – running your business.
 
 From catastrophe planning to low level encryption of credentials, Wistia's focus on security allows your business to have peace of mind that your content is being protected. Work with confidence, Wistia has you covered.
 
----
+
 
 We're continually taking steps to make your videos as secure as possible:
 

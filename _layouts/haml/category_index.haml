@@ -3,16 +3,20 @@ layout: utilities
 type: category
 \---
 
-.category
-  %h1.category_title
-    %span{ style: 'color: #6B6760;' } Categories &gt;
-    {{ page.title }}
-  %ul.posts_list
-    {% for post in site.categories[page.category] %}
-    %h2
-      %a{ href: "{{ post.url | post_url }}" } 
-        {{ post.title }}
-    {% endfor %}
+#doc
+  #container
+    .section.top
+      %h1.capitalize
+        {{ page.title }}
+    .section.last
+      %ul.posts_list
+        {% for post in site.categories[page.category] %}
+        %h2.category_title
+          %a{ href: "{{ post.url | post_url }}" } 
+            .icomoon.icomoon-article
+            {{ post.title }}
+          %p {{ post.description }}
+        {% endfor %}
 
 
 

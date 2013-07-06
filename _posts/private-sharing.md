@@ -2,7 +2,7 @@
 title: Sharing Video Privately
 layout: post
 category: Private Sharing
-post_intro: <div class="post_image float_right intro_image"><img src="http://embed.wistia.com/deliveries/40ebc2c0ffbe573a22b04a255d3971fa8896b986.png" alt="privateshare_guide" /></div><p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.</p><p>With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
+post_intro: <p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.</p><p>With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
 description: Wistia makes it easy to privately share your videos with people. Invite people via email, require a password, and track how they watch in a secure environment.
 ---
 
@@ -34,11 +34,11 @@ Enter the email addresses of contacts you would like to share this project priva
 
 ## Privately share video by link
 
-{% post_image hashed_id: '5f693f7bb68f4e19a64d27bd796ed2fd4aaa6cc5', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '5f693f7bb68f4e19a64d27bd796ed2fd4aaa6cc5', width: 320 %}
 
 This is the best sharing method to use if you want to:
 <ul style="margin-top: 5px;"><li><i>Send out a single link from your own email account to a group people to allow them to view your video.</i></li>
-<br>
+
 <li><i>Track how people watch your video, but are less concerned about associating viewing with a viewer's email address.</i></li></ul>
  
 Once you have uploaded your videos to your project, from within the project hover over the "Project Actions" menu and choose the "Sharing and Privacy" option.
@@ -105,7 +105,7 @@ When you invite new viewers into your account to privately view video, they will
 
 ### The Share Dialog Box
 
-{% post_image hashed_id: '52ceeb3b8914f9fc0695bbf5de808f09da1242eb', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '52ceeb3b8914f9fc0695bbf5de808f09da1242eb', width: 300, class: 'float_right' %}
 
 We'll start with a quick review of the Share dialog box.
 

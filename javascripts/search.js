@@ -2,11 +2,9 @@
 var Search;
 
 Search = (function() {
-
   function Search() {
     var _this = this;
     this.query = this.getQuery();
-    this.header = this.buildHeader();
     this.getSearchResults(this.query, function(data) {
       var result, _i, _len, _ref;
       _this.resultHtml = "";
@@ -23,6 +21,7 @@ Search = (function() {
       }
       return _this.renderResults();
     });
+    this.header = this.buildHeader();
   }
 
   Search.prototype.getQuery = function() {
@@ -46,14 +45,15 @@ Search = (function() {
   };
 
   Search.prototype.convertJsonToHtml = function(json) {
-    return "<div class='result'>\n  <h2><a href='" + basepath + json.url + "'>" + json.title + "</a></h2> \n  <p class='description'>" + json.description + "</p>\n</div>";
+    return "<div class='result'> \n <h2> <div class='icomoon icomoon-article'></div> <a href='" + basepath + json.url + "'>" + json.title + "</a></h2> \n  <p class='description'>" + json.description + "</p>\n</div>";
   };
 
   Search.prototype.buildHeader = function() {
     var html_end_str, html_start_str, resultHeaderText;
+    var numResults = $('.result').length;
     html_start_str = "<div class='results_header'><h1>";
     html_end_str = "</h1></div>";
-    resultHeaderText = (this.query != null) && this.query.length > 0 ? "Results for " + (this.stringify(this.query)) : "Enter a search to begin";
+    resultHeaderText = (this.query != null) && this.query.length > 0 ? numResults + " results found for " + (this.stringify(this.query)) : "Enter a search to begin";
     return "" + html_start_str + resultHeaderText + html_end_str;
   };
 

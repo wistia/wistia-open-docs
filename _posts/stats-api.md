@@ -596,7 +596,7 @@ to render the heatmap within your own pages.
 
 Here is an example heatmap embedded right into this page:
 
-<iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="100%" style="border: solid 2px black;"></iframe>
+<iframe src="https://api.wistia.com/v1/stats/events/1355283144880f0.12204939918592572/iframe.html?public_token=p5j1mnpakv" height="70" width="100%"></iframe>
 
 Here is the code that we used to embed the heatmap:
 

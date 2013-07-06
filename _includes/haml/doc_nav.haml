@@ -1,13 +1,13 @@
 .doc_nav_container
-  .content_container
+  .content_container.nav
     .doc_nav
       %ul
         {% if page.type != 'post' %}
         %li#breadcrumbs
           %a{ style: 'padding-left: 0;', href: "{{ '/' | post_url }}" }
-            %i.icon-home.icon-large
+            Documentation
           %span.breadcrumb_post_title
-            &gt;
+            %img{:src => "/images/greaterThan.png"}
             {% if page.type %}
             {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
             {% else %}
@@ -18,9 +18,9 @@
         %li#breadcrumbs
           {% if page.category && page.category != 'no_index' %}
           %a{ href: "{{ '/' | post_url }}" }
-            %i.icon-home.icon-large
+            Documentation
           %span.breadcrumb_post_title
-            &gt;
+            %img{:src => "/images/greaterThan.png"}
             {% if page.special_category_link %}
             {% case page.special_category_link %}
             {% when "developers" %}
@@ -33,12 +33,38 @@
             {% endif %}
           {% else %}
           %a{ href: "{{ '/' | post_url }}" }
-            %i.icon-home.icon-large
+            Documentation
           {% endif %}
           %span.breadcrumb_post_title
-            &gt;
+            %img{:src => "/images/greaterThan.png"}
             {{ page.title }}
         {% endif %}
         %li#nav_search_box.search_bar
-          %input#search_text{ type: "text", placeholder: "Search our docs" }
-          %button#search_button Search
+          %input#search_text{ type: "text", value: "Search our docs", class: "example" }
+          %button#search_button
+
+
+:javascript
+
+  $(document).ready(function(){
+    console.log("working");
+    $('#search_text').focus(function() {
+      console.log("focused");
+      var $search = $(this);
+      if ($search.val() == 'Search our docs'){
+        console.log("equals");
+        console.log($search[0]);
+        $search.val('');
+        $search.removeClass('example');
+      }
+    });
+
+    $('#search_text').blur(function() {
+      console.log("blur");
+      var $search = $(this);
+      if ($.trim($search.val()) == ''){
+        $search.val('Search our docs');
+        $search.addClass('example');
+      }
+    });
+  });
