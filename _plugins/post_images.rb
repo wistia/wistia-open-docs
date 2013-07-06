@@ -5,7 +5,7 @@ module Jekyll
   ## for use on the page like: {% post_image hashed_id: 'delivery_id_of_image', width: 640, height: 400 %} ##
   class PostImage < Liquid::Tag
 
-    MAX_WIDTH = 660
+    MAX_WIDTH = 600
 
     def initialize(tag_name, text, tokens)
       @params = eval "{#{text}}"

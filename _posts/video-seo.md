@@ -1,5 +1,5 @@
 ---
-title: Video SEO 
+title: Video SEO
 layout: post
 category: Public Sharing
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
@@ -253,4 +253,4 @@ Google has reported any errors in indexing.
 **Yes!** Our Video SEO expert, Ben, got up-close with the camera to talk about
 how Video SEO can create benefits for your business:
 
-{% wistia_embed hashed_id: b96bdea4c2, videoHeight: 310 %}
+{% wistia_embed hashed_id: b96bdea4c2, videoHeight: 282 %}

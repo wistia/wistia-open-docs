@@ -7,6 +7,7 @@ description: Get the skinny on using specific software to export video for uploa
 post_intro: <p>We know just enough to be dangerous about most video export software. Here's our tips and tricks to using them.</p><p>Looking for a guide to optimal export <em>settings</em>? You should also see our <a href="/doc/export-settings">export settings</a> page.</p><p>If you're looking for free video transcoding software, we recommend <a href="#handbrake">Handbrake</a>.</p>
 ---
 
+----
 ## Final Cut Pro
 
 There are three ways to export video for use on Wistia from Final Cut Pro: 
@@ -27,7 +28,7 @@ easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 Here's a quick guide from Chris on exporting in FCP using Quicktime conversion:
 
-{% wistia_embed hashed_id: kwj96ld3tc, videoWidth: 660, videoHeight: 371 %}
+{% wistia_embed hashed_id: kwj96ld3tc, videoWidth: 600, videoHeight: 337 %}
 
 ### Using Compressor as a standalone application
 
@@ -125,7 +126,7 @@ To encode a QuickTime movie using Compressor for playback on Wistia, you must cr
 
 ## Final Cut X
 
-{% post_image hashed_id: '9462a250be482463bfc2f6015279b6642e66f643', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '9462a250be482463bfc2f6015279b6642e66f643', width: 600, class: 'center' %}
 
 Exporting from Final Cut X is similar to iMovie export.  To reach the Export Menu, 
 select `Export` from under the `Share` drop-down menu.
@@ -171,6 +172,7 @@ Click on the *Options* button to the right to enter some custom quality settings
 Your video will be saved to your computer as an mp4 file that you can easily 
 upload into your Wistia account.
 
+----
 ## iMovie
 
 To export your iMovie video project, select the project you wish to export from 
@@ -193,7 +195,7 @@ your computer as an M4V file which you can then easily [upload]({{ '/upload-vide
 
 ## QuickTime Pro
 
-{% post_image hashed_id: '42d2696efddb067ca8e238212444c6c19eff923a', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '42d2696efddb067ca8e238212444c6c19eff923a', width: 600, class: 'center' %}
 
 To easily export a video from QuickTime Pro, open the movie you wish to export
 and choose *File &gt; Export*. In the Export pop-up menu, select `Movie to QuickTime Movie`,
@@ -203,7 +205,7 @@ which exports your video as a MOV file. Choose Default Settings from the Use pop
 
 ## ScreenFlow
 
-{% post_image hashed_id: 'e2ea358871e38d394195c6a207cdd648b1296914', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'e2ea358871e38d394195c6a207cdd648b1296914', width: 600, class: 'center' %}
 
 To export a screencast from ScreenFlow, open the screen recording you wish to 
 export and choose *File &gt; Export*. From the Preset pop-up menu, choose 
