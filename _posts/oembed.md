@@ -11,7 +11,7 @@ footer: 'for_developers'
 
 Our oEmbed endpoint is: `http://fast.wistia.com/oembed`
 
-Currently, our oEmbed endpoint recognizes two URL formats:
+Currently, our oEmbed endpoint recognizes three URL formats:
 
 Type | Example URL
 -----|-------------
