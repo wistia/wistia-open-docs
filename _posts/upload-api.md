@@ -28,9 +28,10 @@ on the file size and connection speed.
 
 ## There's a Gem For That
 
-To make using the Upload API even easier, we 
-[created a Ruby gem for it](https://github.com/wistia/wistia-uploader), just for you!
-Even if you're not a Ruby developer, you can use this as a command line tool for uploading to Wistia.
+To make using the Upload API even easier, we created a [Ruby
+gem](https://github.com/wistia/wistia-uploader) that lets you use it via the
+command line! Even if you're not a Ruby developer, you can use this command line
+tool for uploading to Wistia.
 
 ## Authentication
 
