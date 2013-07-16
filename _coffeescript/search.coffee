@@ -27,7 +27,7 @@ class Search
     """
     <div class='no_result'>
       <p>We couldn't find any results for your query, <span class='query'>#{@stringify query}</span>.
-      <p>Please try another search, or head back to the <a href='/'>Documentation Main page</a>.</p>
+      <p>Please try another search, or head back to the <a href='http://wistia.com/doc'>Documentation Main page</a>.</p>
     </div>
     """
 

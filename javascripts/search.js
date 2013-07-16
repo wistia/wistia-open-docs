@@ -38,7 +38,7 @@ Search = (function() {
   };
 
   Search.prototype.noResultsStr = function(query) {
-    return "<div class='no_result'>\n  <p>We couldn't find any results for your query, <span class='query'>" + (this.stringify(query)) + "</span>.\n  <p>Please try another search, or head back to the <a href='/'>Documentation Main page</a>.</p>\n</div>";
+    return "<div class='no_result'>\n  <p>We couldn't find any results for your query, <span class='query'>" + (this.stringify(query)) + "</span>.\n  <p>Please try another search, or head back to the <a href='http://wistia.com/doc'>Documentation Main page</a>.</p>\n</div>";
   };
 
   Search.prototype.suggestedSearchesStr = function() {
