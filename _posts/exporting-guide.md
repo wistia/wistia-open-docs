@@ -1,6 +1,7 @@
 ---
 title: Exporting from Video Editors
 layout: post
+api: true
 category: Getting Set Up
 description: Get the skinny on using specific software to export video for uploading to Wistia.
 post_intro: <p>We know just enough to be dangerous about most video export software. Here's our tips and tricks to using them.</p><p>Looking for a guide to optimal export <em>settings</em>? You should also see our <a href="/doc/export-settings">export settings</a> page.</p><p>If you're looking for free video transcoding software, we recommend <a href="#handbrake">Handbrake</a>.</p>
@@ -234,3 +235,24 @@ Then, click "Start" at the top right and your video will begin encoding to the
 Destination folder you chose!
 
 {% post_image hashed_id: 'f0a6babc82c298496ded58eb218dfc1d5eab0ba4', class: 'center' %}
+
+---
+
+## GoToMeeting
+
+Getting high-quality video out of GoToMeeting (or GoToWebinar / GoToTraining)
+is tricky tricky, but luckily our friend Kyle from HubSpot has come to the
+rescue with a great workflow to convert your GoToMeeting to *WMV format*.
+
+{% post_image hashed_id: '4a96c6faef3058addf78bdffbfa5cad0204cb2e9', class: 'right', width: 320 %}
+
+Start by opening your GoToMeeting *Preferences* (screenshot is for Windows, as
+the Mac version doesn't convert to WMV).
+
+{% post_image hashed_id: 'c503b74b25048612defae000902ebc577c716f4d', class: 'center' %}
+
+In the *Recording* preference category, select *convert to Windows Media Player
+file*.
+
+And that is it! Your WMV will encode at much higher quality after being
+uploaded to Wistia than the default G2M4 video.
