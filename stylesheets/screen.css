@@ -462,12 +462,12 @@ h1, h2, h3, h4, .seo_faq { color: #161d25; font-family: "Avenir", Futura, Helvet
 
 code, pre { background: #eceef1; border: 1px solid #cbd0d6; font-family: monospace; font-weight: 500; }
 
-code { color: #161d25; font-size: 14px; margin: 4px; padding: 7px; }
+code { color: #161d25; font-size: 14px; padding: 7px; }
 
 pre { font-size: 1/0.9em; line-height: 1.5; margin: 35px 0; padding: 5px 15px; overflow-x: auto; }
 pre code { background: none; border: none; padding: 0; margin: 0; }
 
-.full_width { display: block; white-space: nowrap; overflow-x: auto; padding: 35px 70px; }
+.full_width { display: block; white-space: nowrap; overflow-x: auto; padding: 35px 20px; }
 
 .highlight { padding: 35px; }
 .highlight table { margin-bottom: 0; }
