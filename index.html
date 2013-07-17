@@ -263,6 +263,7 @@ no_nav: true
     </div>
   </div>
 </div>
+<script src="{{ '/javascripts/homepage' | javascript_url }}"></script>
 <script type='text/javascript'>
   //<![CDATA[
     var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false );
@@ -279,24 +280,5 @@ no_nav: true
         });
       });
     };
-    
-    $(document).ready(function(){
-      $('#searchField').focus(function() {
-        var $search = $(this);
-        if ($search.val() == 'What are you looking for?'){
-          console.log($search[0]);
-          $search.val('');
-          $search.removeClass('example');
-        }
-      });
-    
-      $('#searchField').blur(function() {
-        var $search = $(this);
-        if ($.trim($search.val()) == ''){
-          $search.val('What are you looking for?');
-          $search.addClass('example');
-        }
-      });
-    });
   //]]>
 </script>

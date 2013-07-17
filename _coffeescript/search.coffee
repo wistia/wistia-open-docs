@@ -66,7 +66,7 @@ class Search
     html_end_str = "</h1></div>"
 
     resultHeaderText = if @query? and @query.length > 0
-      "#{@query.length} results found for #{@stringify @query}"
+        "#{@query.length} results found for #{@stringify @query}"
       else
         "Enter a search to begin"
 
