@@ -3,20 +3,16 @@ layout: utilities
 type: category
 \---
 
-#doc
-  #container
-    .section.top
-      %h1.capitalize
-        {{ page.title }}
-    .section.last
-      %ul.posts_list
-        {% for post in site.categories[page.category] %}
+.category_container
+  .section.top
+    %h1
+      {{ page.title }}
+  .section.last
+    %ul.posts_list
+      {% for post in site.categories[page.category] %}
+      %li
         %h2.category_title
           %a{ href: "{{ post.url | post_url }}" } 
-            .icomoon.icomoon-article
             {{ post.title }}
-          %p {{ post.description }}
-        {% endfor %}
-
-
-
+        %p {{ post.description }}
+      {% endfor %}

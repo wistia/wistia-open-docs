@@ -656,39 +656,36 @@ em { font-style: italic; }
 
 .main_layout #container { position: relative; }
 
+.home_container .viewAll, .category_container .viewAll { text-transform: uppercase; font-size: 14px; font-weight: 600; color: #cbd0d6; text-decoration: none; letter-spacing: 1px; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+
 #home_logo { margin: 0 auto; width: 673px; height: 187px; background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat; }
 
 .home_header { padding: 140px 0 80px; }
 
 .home_body { background-color: #eeeeee; padding-bottom: 40px; }
 
-.home_container { border-top: 6px solid #3ea9f5; background-color: white; max-width: 848px; padding: 46px 80px 0 72px; margin: -6px auto 60px; }
-.home_container h1 { font-size: 22px; font-weight: 700; }
-.home_container h2 { font-size: 18px; margin-bottom: 33px; font-weight: 600; }
-.home_container h2 a { color: #161d25; }
-.home_container h2 a:hover { color: #3ea9f5; text-decoration: none; }
-.home_container h2 a:hover .icomoon-article { color: #3ea9f5; }
-.home_container ul { list-style-image: url("http://wistia.com/doc/images/bullet.png"); color: #161d25; padding-left: 20px; margin-bottom: 35px; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
-.home_container ul.posts_list { padding-left: 0px; }
-.home_container li { font-size: 16px; line-height: 25px; margin-bottom: 7px; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
-.home_container li a { color: #161d25; }
-.home_container .upperCaseLink { text-transform: uppercase; font-size: 14px; font-weight: 600; color: #cbd0d6; text-decoration: none; letter-spacing: 1px; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
-.home_container .capitalize { text-transform: capitalize; }
-.home_container .section { border-bottom: 1px solid #cbd0d6; padding-top: 25px; padding-bottom: 18px; }
-.home_container .section.top { padding-top: 0px; padding-bottom: 25px; }
-.home_container .section.last { border-bottom: 0px solid #cbd0d6; }
-.home_container .column { display: inline-block; *display: inline; vertical-align: top; zoom: 1; position: relative; }
-.home_container .secondRow { height: 342px; margin-top: 6px; }
-.home_container .left { width: 225px; padding-right: 75px; }
-.home_container .middle { width: 225px; padding-right: 75px; }
-.home_container .right { width: 225px; }
-.home_container .columnBig { display: inline-block; *display: inline; vertical-align: top; zoom: 1; width: 544px; }
-.home_container .icomoon-article { padding-right: 0px; color: #cbd0d6; }
-.home_container .icomoon-article:before { content: "\e001"; }
-.home_container .icomoon { display: inline; font-family: "wistiacom-icons"; font-size: 23px; font-style: normal; speak: none; font-weight: normal; -webkit-font-smoothing: antialiased; position: relative; top: 1px; }
-.home_container .viewAll { height: 18px; padding-top: 1px; position: absolute; bottom: 20px; }
-.home_container .viewAll:hover { background-position-y: -18px; color: #3ea9f5; }
-.home_container .viewAll:hover .icomoon-article { color: #3ea9f5; }
+.home_container, .category_container { border-top: 6px solid #3ea9f5; background-color: white; max-width: 848px; padding: 46px 80px 0 72px; margin: -6px auto 60px; }
+.home_container h1, .category_container h1 { font-size: 22px; font-weight: 700; text-transform: capitalize; }
+.home_container h2, .category_container h2 { font-size: 18px; margin-bottom: 33px; font-weight: 600; }
+.home_container h2 a, .category_container h2 a { color: #161d25; }
+.home_container h2 a:hover, .category_container h2 a:hover { color: #3ea9f5; text-decoration: none; }
+.home_container ul, .category_container ul { list-style-image: url("http://wistia.com/doc/images/bullet.png"); color: #161d25; padding-left: 20px; margin-bottom: 35px; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+.home_container ul.posts_list, .category_container ul.posts_list { padding-left: 0px; }
+.home_container li, .category_container li { font-size: 16px; line-height: 25px; margin-bottom: 7px; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+.home_container li a, .category_container li a { color: #161d25; }
+.home_container .section, .category_container .section { border-bottom: 1px solid #cbd0d6; padding-top: 25px; padding-bottom: 18px; }
+.home_container .section.top, .category_container .section.top { padding-top: 0px; padding-bottom: 25px; }
+.home_container .section.last, .category_container .section.last { border-bottom: 0px solid #cbd0d6; }
+.home_container .column, .category_container .column { display: inline-block; *display: inline; vertical-align: top; zoom: 1; position: relative; }
+.home_container .secondRow, .category_container .secondRow { height: 342px; margin-top: 6px; }
+.home_container .left, .category_container .left { width: 225px; padding-right: 75px; }
+.home_container .middle, .category_container .middle { width: 225px; padding-right: 75px; }
+.home_container .right, .category_container .right { width: 225px; }
+.home_container .columnBig, .category_container .columnBig { display: inline-block; *display: inline; vertical-align: top; zoom: 1; width: 544px; }
+.home_container .viewAll, .category_container .viewAll { height: 18px; padding-top: 1px; padding-left: 10px; left: 15px; position: absolute; bottom: 20px; }
+.home_container .viewAll:before, .category_container .viewAll:before { content: "\e001"; font-family: "wistiacom-icons"; font-size: 23px; font-style: normal; speak: none; font-weight: normal; -webkit-font-smoothing: antialiased; position: absolute; top: -6px; left: -20px; }
+.home_container .viewAll:hover, .category_container .viewAll:hover { color: #3ea9f5; }
+.home_container .viewAll:hover:before, .category_container .viewAll:hover:before { color: #3ea9f5; }
 
 .all_articles_wrapper { padding: 70px 0 140px; text-align: center; }
 .all_articles_wrapper .col { display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin: 0 5px; width: 40%; max-width: 400px; }
@@ -876,11 +873,16 @@ table tr td pre { margin: 0; padding: 0; }
 
 #top-link { color: white; display: none; position: fixed; right: 40px; bottom: 40px; text-decoration: none; background: rgba(158, 167, 177, 0.6); padding: 14px; font-weight: 800; font-family: "Avenir", Futura, Helvetica, sans-serif; font-size: 14px; text-transform: uppercase; -webkit-font-smoothing: antialiased; }
 
-.content_container #doc { padding-bottom: 0px; }
-.content_container #doc #container { padding-left: 0px; margin-left: 0px; margin-right: 0px; }
-.content_container #doc #container .section ul .category_title { margin-bottom: 0px; padding: 0px 0px; }
-.content_container #doc #container .section ul .category_title .icomoon-article { padding-right: 7px; }
-.content_container #doc #container .section ul p { font-size: 16px; line-height: 31px; font-weight: 400; -webkit-font-smoothing: antialiased; margin-left: 36px; width: 600px; margin-top: 15px; margin-bottom: 48px; }
+.category_container { padding: 46px 0; }
+.category_container .section { padding-top: 25px; padding-bottom: 20px; }
+.category_container .section h1 { text-transform: capitalize; font-size: 22px; -webkit-font-smoothing: antialiased; letter-spacing: 0px; text-align: left; font-weight: 700; }
+.category_container .section ul { text-align: left; list-style-type: none; list-style-image: none; }
+.category_container .section ul .category_title { position: relative; margin-bottom: 0px; padding: 0px 0px; }
+.category_container .section ul .category_title a { padding-left: 35px; }
+.category_container .section ul .category_title a:before { content: "\e001"; color: #cbd0d6; font-family: "wistiacom-icons"; font-size: 23px; font-style: normal; speak: none; font-weight: normal; -webkit-font-smoothing: antialiased; position: absolute; left: 0; top: -4px; }
+.category_container .section ul .category_title a:hover { color: #3ea9f5; }
+.category_container .section ul .category_title a:hover:before { color: #3ea9f5; }
+.category_container .section ul p { -webkit-font-smoothing: antialiased; padding-left: 35px; font-size: 16px; line-height: 31px; font-weight: 400; width: 600px; margin-top: 15px; margin-bottom: 48px; }
 
 .search_bar { margin: 70px auto; text-align: center; position: relative; width: 600px; left: 600px; }
 .search_bar input { width: 84%; font-size: 14px; border: 1px solid #bbbbbb; padding: 5px 10px; }

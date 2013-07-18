@@ -107,6 +107,15 @@ em
 
 /////// doc home only ///////
 
+%upperCaseLink
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: 600
+  color: $gray2
+  text-decoration: none
+  letter-spacing: 1px
+  font-family: $fonts
+  -webkit-font-smoothing: antialiased
 
 #home_logo
   margin: 0 auto
@@ -130,6 +139,7 @@ em
   h1
     font-size: 22px
     font-weight: 700
+    text-transform: capitalize
   h2
     font-size: 18px
     margin-bottom: 33px
@@ -139,8 +149,6 @@ em
       &:hover
         color: $light_blue
         text-decoration: none
-        .icomoon-article
-          color: $light_blue
   ul
     list-style-image: url('http://wistia.com/doc/images/bullet.png')
     color: $gray6
@@ -158,18 +166,6 @@ em
     -webkit-font-smoothing: antialiased
     a
       color: $gray6
-
-  .upperCaseLink
-    text-transform: uppercase
-    font-size: 14px
-    font-weight: 600
-    color: $gray2
-    text-decoration: none
-    letter-spacing: 1px
-    font-family: $fonts
-    -webkit-font-smoothing: antialiased
-  .capitalize
-    text-transform: capitalize
   .section
     border-bottom: 1px solid $gray2
     padding-top: 25px
@@ -196,30 +192,29 @@ em
   .columnBig
     +col
     width: 544px
-  .icomoon-article
-    padding-right: 0px
-    color: $gray2
-    &:before
-      content: "\e001"
-  .icomoon
-    display: inline
-    font-family: 'wistiacom-icons'
-    font-size: 23px
-    font-style: normal
-    speak: none
-    font-weight: normal
-    -webkit-font-smoothing: antialiased
-    position: relative
-    top: 1px
+
   .viewAll
+    @extend %upperCaseLink
     height: 18px
     padding-top: 1px
+    padding-left: 10px
+    left: 15px
     position: absolute
     bottom: 20px
+    &:before
+      content: "\e001"
+      font-family: 'wistiacom-icons'
+      font-size: 23px
+      font-style: normal
+      speak: none
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      position: absolute
+      top: -6px
+      left: -20px
     &:hover
-      background-position-y: -18px
       color: $light_blue
-      .icomoon-article
+      &:before
         color: $light_blue
 
 .all_articles_wrapper
@@ -872,29 +867,58 @@ table
 
 /////// categories ////////
 
-.content_container
-  #doc
-    padding-bottom: 0px
-    #container
-      padding-left: 0px
-      margin-left: 0px
-      margin-right: 0px
-      .section
-        ul
-          .category_title
-            margin-bottom: 0px
-            padding: 0px 0px
-            .icomoon-article
-              padding-right: 7px
-          p
-            font-size: 16px
-            line-height: 31px
-            font-weight: 400
-            +anti-alias
-            margin-left: 36px
-            width: 600px
-            margin-top: 15px
-            margin-bottom: 48px
+.category_container
+  @extend .home_container
+  padding: 46px 0
+  .section
+    padding-top: 25px
+    padding-bottom: 20px
+    h1
+      text-transform: capitalize
+      font-size: 22px
+      -webkit-font-smoothing: antialiased
+      letter-spacing: 0px
+      text-align: left
+      font-weight: 700
+    ul
+      text-align: left
+      list-style-type: none
+      list-style-image: none
+
+      .category_title
+        position: relative
+        margin-bottom: 0px
+        padding: 0px 0px
+        a
+          padding-left: 35px
+          
+        a
+          &:before
+            content: "\e001"
+            color: $gray2
+            font-family: 'wistiacom-icons'
+            font-size: 23px
+            font-style: normal
+            speak: none
+            font-weight: normal
+            -webkit-font-smoothing: antialiased
+            position: absolute
+            left: 0
+            top: -4px
+          &:hover
+            color: $light_blue
+            &:before
+              color: $light_blue
+          
+      p
+        +anti-alias
+        padding-left: 35px
+        font-size: 16px
+        line-height: 31px
+        font-weight: 400
+        width: 600px
+        margin-top: 15px
+        margin-bottom: 48px
 
 
 ////////// SEARCH ////////////
