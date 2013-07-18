@@ -8,7 +8,7 @@
             Documentation
           </a>
           <span class='breadcrumb_post_title'>
-            <img src='/images/greaterThan.png' />
+            <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {% if page.type %}
             {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
             {% else %}
@@ -23,7 +23,7 @@
             Documentation
           </a>
           <span class='breadcrumb_post_title'>
-            <img src='/images/greaterThan.png' />
+            <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {% if page.special_category_link %}
             {% case page.special_category_link %}
             {% when "developers" %}
@@ -41,7 +41,7 @@
           </a>
           {% endif %}
           <span class='breadcrumb_post_title'>
-            <img src='/images/greaterThan.png' />
+            <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {{ page.title }}
           </span>
         </li>

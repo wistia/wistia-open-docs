@@ -15,6 +15,10 @@ module Jekyll
       "#{$config.basepath}#{input}.js"
     end
 
+    def image_url(input)
+      "#{$config.basepath}#{input}"
+    end
+
     def category_url(cat)
       cat_dir = @context.registers[:site].config['category_dir']
       post_url("#{cat_dir}/#{CategoryIndex.normalize_name(cat)}")

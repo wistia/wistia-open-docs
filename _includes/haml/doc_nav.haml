@@ -7,7 +7,7 @@
           %a{ style: 'padding-left: 0;', href: "{{ '/' | post_url }}" }
             Documentation
           %span.breadcrumb_post_title
-            %img{:src => "/images/greaterThan.png"}
+            %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {% if page.type %}
             {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
             {% else %}
@@ -20,7 +20,7 @@
           %a{ href: "{{ '/' | post_url }}" }
             Documentation
           %span.breadcrumb_post_title
-            %img{:src => "/images/greaterThan.png"}
+            %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {% if page.special_category_link %}
             {% case page.special_category_link %}
             {% when "developers" %}
@@ -36,7 +36,7 @@
             Documentation
           {% endif %}
           %span.breadcrumb_post_title
-            %img{:src => "/images/greaterThan.png"}
+            %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {{ page.title }}
         {% endif %}
         %li#nav_search_box.search_bar
