@@ -458,6 +458,28 @@ ul.icons li .icon-large:before, ul.icons li .icon-large:before { /* 1.5 increase
 
 .icon-user-md:before { content: "\f200"; }
 
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-35.eot?#iefix"); src: url("/fonts/avenir/avenir-35.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-35.woff") format("woff"), url("/fonts/avenir/avenir-35.ttf") format("truetype"), url("/fonts/avenir/avenir-35.svg#Avenir-35") format("svg"); font-weight: 200; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-35-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-35-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-35-oblique.woff") format("woff"), url("/fonts/avenir/avenir-35-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-35-oblique.svg#avenir-35-oblique") format("svg"); font-style: italic; font-weight: 200; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-45.eot?#iefix"); src: url("/fonts/avenir/avenir-45.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-45.woff") format("woff"), url("/fonts/avenir/avenir-45.ttf") format("truetype"), url("/fonts/avenir/avenir-45.svg#avenir-45") format("svg"); font-weight: 400; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-45-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-45-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-45-oblique.woff") format("woff"), url("/fonts/avenir/avenir-45-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-45-oblique.svg#avenir-45-oblique") format("svg"); font-style: italic; font-weight: 400; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-55.eot?#iefix"); src: url("/fonts/avenir/avenir-55.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-55.woff") format("woff"), url("/fonts/avenir/avenir-55.ttf") format("truetype"), url("/fonts/avenir/avenir-55.svg#avenir-55") format("svg"); font-weight: 500; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-55-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-55-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-55-oblique.woff") format("woff"), url("/fonts/avenir/avenir-55-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-55-oblique.svg#avenir-55-oblique") format("svg"); font-style: italic; font-weight: 500; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-65.eot?#iefix"); src: url("/fonts/avenir/avenir-65.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-65.woff") format("woff"), url("/fonts/avenir/avenir-65.ttf") format("truetype"), url("/fonts/avenir/avenir-65.svg#avenir-65") format("svg"); font-weight: 600; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-65-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-65-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-65-oblique.woff") format("woff"), url("/fonts/avenir/avenir-65-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-65-oblique.svg#avenir-65-oblique") format("svg"); font-style: italic; font-weight: 600; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-85.eot?#iefix"); src: url("/fonts/avenir/avenir-85.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-85.woff") format("woff"), url("/fonts/avenir/avenir-85.ttf") format("truetype"), url("/fonts/avenir/avenir-85.svg#avenir-85") format("svg"); font-weight: 700; }
+
+@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-85-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-85-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-85-oblique.woff") format("woff"), url("/fonts/avenir/avenir-85-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-85-oblique.svg#avenir-85-oblique") format("svg"); font-style: italic; font-weight: 700; }
+
+@font-face { font-family: "wistiacom-icons"; src: url("/fonts/wistiacom-icons.eot?#iefix"); src: url("/fonts/wistiacom-icons.eot?#iefix") format("eot"), url("/fonts/wistiacom-icons.woff") format("woff"), url("/fonts/wistiacom-icons.ttf") format("truetype"), url("/fonts/wistiacom-icons.svg#wistiacom-icons") format("svg"); }
+
 h1, h2, h3, h4, .seo_faq { color: #161d25; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
 
 code, pre { background: #eceef1; border: 1px solid #cbd0d6; font-family: monospace; font-weight: 500; }
@@ -538,28 +560,6 @@ figure.code .ss, .gist-highlight .ss { color: #990073; }
 figure.code .bp, .gist-highlight .bp { color: #999999; }
 figure.code .vc, figure.code .vg, figure.code .vi, .gist-highlight .vc, .gist-highlight .vg, .gist-highlight .vi { color: teal; }
 figure.code .il, .gist-highlight .il { color: #009999; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-35.eot?#iefix"); src: url("/fonts/avenir/avenir-35.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-35.woff") format("woff"), url("/fonts/avenir/avenir-35.ttf") format("truetype"), url("/fonts/avenir/avenir-35.svg#Avenir-35") format("svg"); font-weight: 200; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-35-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-35-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-35-oblique.woff") format("woff"), url("/fonts/avenir/avenir-35-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-35-oblique.svg#avenir-35-oblique") format("svg"); font-style: italic; font-weight: 200; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-45.eot?#iefix"); src: url("/fonts/avenir/avenir-45.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-45.woff") format("woff"), url("/fonts/avenir/avenir-45.ttf") format("truetype"), url("/fonts/avenir/avenir-45.svg#avenir-45") format("svg"); font-weight: 400; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-45-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-45-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-45-oblique.woff") format("woff"), url("/fonts/avenir/avenir-45-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-45-oblique.svg#avenir-45-oblique") format("svg"); font-style: italic; font-weight: 400; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-55.eot?#iefix"); src: url("/fonts/avenir/avenir-55.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-55.woff") format("woff"), url("/fonts/avenir/avenir-55.ttf") format("truetype"), url("/fonts/avenir/avenir-55.svg#avenir-55") format("svg"); font-weight: 500; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-55-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-55-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-55-oblique.woff") format("woff"), url("/fonts/avenir/avenir-55-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-55-oblique.svg#avenir-55-oblique") format("svg"); font-style: italic; font-weight: 500; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-65.eot?#iefix"); src: url("/fonts/avenir/avenir-65.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-65.woff") format("woff"), url("/fonts/avenir/avenir-65.ttf") format("truetype"), url("/fonts/avenir/avenir-65.svg#avenir-65") format("svg"); font-weight: 600; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-65-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-65-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-65-oblique.woff") format("woff"), url("/fonts/avenir/avenir-65-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-65-oblique.svg#avenir-65-oblique") format("svg"); font-style: italic; font-weight: 600; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-85.eot?#iefix"); src: url("/fonts/avenir/avenir-85.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-85.woff") format("woff"), url("/fonts/avenir/avenir-85.ttf") format("truetype"), url("/fonts/avenir/avenir-85.svg#avenir-85") format("svg"); font-weight: 700; }
-
-@font-face { font-family: "Avenir"; src: url("/fonts/avenir/avenir-85-oblique.eot?#iefix"); src: url("/fonts/avenir/avenir-85-oblique.eot?#iefix") format("eot"), url("/fonts/avenir/avenir-85-oblique.woff") format("woff"), url("/fonts/avenir/avenir-85-oblique.ttf") format("truetype"), url("/fonts/avenir/avenir-85-oblique.svg#avenir-85-oblique") format("svg"); font-style: italic; font-weight: 700; }
-
-@font-face { font-family: "wistiacom-icons"; src: url("/fonts/wistiacom-icons.eot?#iefix"); src: url("/fonts/wistiacom-icons.eot?#iefix") format("eot"), url("/fonts/wistiacom-icons.woff") format("woff"), url("/fonts/wistiacom-icons.ttf") format("truetype"), url("/fonts/wistiacom-icons.svg#wistiacom-icons") format("svg"); }
 
 body { font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; color: #161d25; text-align: left; }
 body a { color: #161d25; text-decoration: none; }
