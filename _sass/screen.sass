@@ -77,6 +77,15 @@ em
   &.nav
     border-top: 0px solid white
 
+.devhq_container
+  @extend %container
+  max-width: 960px + $padding
+  padding: 0 $padding
+  +breakpoint(large-screen)
+    min-width: 972px
+  +breakpoint(medium-screen)
+    min-width: auto
+
 #post_container
   position: relative
   left: $fixed_column_width + 20
@@ -93,13 +102,6 @@ em
 .main_layout
   #container
     position: relative
-
-
-
-
-
-
-
 
 
 /////// doc home only ///////
@@ -947,34 +949,6 @@ table
     .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
       fill: #fff
 
-/////////// new clearfix ////////
-
-/* http://nicolasgallagher.com/micro-clearfix-hack/
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before, .cf:after
-  content: " " /* 1 */
-  display: table /* 2 */
-
-.cf:after
-  clear: both
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf 
-  *zoom: 1
-
-
-
 //////////// devHQ //////////////////
 
 
@@ -1016,7 +990,7 @@ $bracket_yellow: #F9D164
   height: 0 
   border-left: 20px solid transparent
   border-right: 20px solid transparent
-  border-top: 20px solid white
+  border-top: 20px solid $background_gray
 
 #container.devhq
   position: relative
@@ -1152,17 +1126,20 @@ $bracket_yellow: #F9D164
   height: 200px
   +breakpoint(small-screen)
     height: auto
-  .content_container
-    padding-left: 20px
+  .devhq_container
     position: relative
     top: 15px
     ul
-      margin-top: 35px
+      margin: 35px auto 0
+      width: 80%
+      text-align: center
       li
         +col
-        margin: 0 55px
+        margin: 0 20px
         text-align: center
         width: 200px
+        a:hover
+          text-decoration: none
     +breakpoint(medium-screen)
       ul li
         margin: 0 20px

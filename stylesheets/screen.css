@@ -577,7 +577,7 @@ strong { font-weight: 700; letter-spacing: 0px; -webkit-font-smoothing: antialia
 
 em { font-style: italic; }
 
-.content_container { margin: 0 auto; position: relative; }
+.content_container, .devhq_container { margin: 0 auto; position: relative; }
 
 #container { background-color: #eceef1; border-top: 6px solid #cbd0d6; }
 
@@ -585,6 +585,10 @@ em { font-style: italic; }
 @media (max-width: 1080px) { .content_container { min-width: 972px; } }
 @media (max-width: 960px) { .content_container { min-width: auto; } }
 .content_container.nav { border-top: 0px solid white; }
+
+.devhq_container { max-width: 1030px; padding: 0 70px; }
+@media (max-width: 1080px) { .devhq_container { min-width: 972px; } }
+@media (max-width: 960px) { .devhq_container { min-width: auto; } }
 
 #post_container { position: relative; left: 242px; text-align: left; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 
@@ -837,21 +841,12 @@ table tr td pre { margin: 0; padding: 0; }
 .activated #beegee path { fill: #40aaef; stroke: #bbbbbb; stroke-width: 1; }
 .activated #beegee .q0, .activated #beegee .q1, .activated #beegee .q2, .activated #beegee .q3, .activated #beegee .q4, .activated #beegee .q5, .activated #beegee .q6, .activated #beegee .q7, .activated #beegee .q8, .activated #beegee .q9 { fill: white; }
 
-/* http://nicolasgallagher.com/micro-clearfix-hack/ */
-/* For modern browsers 1. The space content is one way to avoid an Opera bug when the contenteditable attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that are clearfixed. 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
-.cf:before, .cf:after { content: " "; display: table; }
-
-.cf:after { clear: both; }
-
-/* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
-.cf { *zoom: 1; }
-
 .api_button_garden .column .api_garden_square a, .devhq_footer h2 { color: #1353a2; cursor: pointer; display: block; font-family: Gill Sans, Arial, sans-serif; font-size: 32px; font-weight: 100; letter-spacing: 1px; padding: 0.4em 0; padding-left: 20px; text-transform: uppercase; }
 
 .api_button_garden .column .api_garden_square a:after { content: " "; background: transparent url(http://embed.wistia.com/deliveries/05cd0b1fdee8d76d7005440159c50b9e60737a34.png) no-repeat; background-position: 0 0; width: 21px; height: 21px; position: absolute; margin: 0.15em 0.5em; }
 .api_button_garden .column .api_garden_square a:hover:after { content: " "; background-position: 0 -21px; }
 
-.devhq_footer_arrow { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid white; }
+.devhq_footer_arrow { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #eceef1; }
 
 #container.devhq { position: relative; width: 100%; overflow: hidden; }
 
@@ -895,11 +890,12 @@ table tr td pre { margin: 0; padding: 0; }
 
 .devhq_footer { background: #1353a2; display: block; height: 200px; }
 @media (max-width: 650px) { .devhq_footer { height: auto; } }
-.devhq_footer .content_container { padding-left: 20px; position: relative; top: 15px; }
-.devhq_footer .content_container ul { margin-top: 35px; }
-.devhq_footer .content_container ul li { display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin: 0 55px; text-align: center; width: 200px; }
-@media (max-width: 960px) { .devhq_footer .content_container ul li { margin: 0 20px; } }
-@media (max-width: 650px) { .devhq_footer .content_container { text-align: center; } }
+.devhq_footer .devhq_container { position: relative; top: 15px; }
+.devhq_footer .devhq_container ul { margin: 35px auto 0; width: 80%; text-align: center; }
+.devhq_footer .devhq_container ul li { display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin: 0 20px; text-align: center; width: 200px; }
+.devhq_footer .devhq_container ul li a:hover { text-decoration: none; }
+@media (max-width: 960px) { .devhq_footer .devhq_container ul li { margin: 0 20px; } }
+@media (max-width: 650px) { .devhq_footer .devhq_container { text-align: center; } }
 .devhq_footer h2 { color: white; cursor: auto; font-size: 18px; font-style: normal; font-weight: normal; padding-left: 0; position: relative; text-align: center; }
 .devhq_footer a { border-bottom: 1px solid white; font-family: Gill Sans, Arial, sans-serif; font-size: 26px; font-weight: 100; letter-spacing: 1px; color: white; position: relative; }
 .devhq_footer a:after { background-position: 0 -21px; }
