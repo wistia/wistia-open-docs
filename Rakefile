@@ -6,10 +6,6 @@ desc "Pre Jekyll rendering stuff"
 task :pre_jekyll do
   puts "Doing pre-Jekyll schtuffs ..."
 
-  print "  Removing the current stylesheet ... "
-  system %{ rm stylesheets/screen.css }
-  puts "done."
-
   print "  Compass Compiling ... \n"
   system %{ compass compile }
   puts "done."
