@@ -1,0 +1,233 @@
+
+$dev_bg_blue: #1353a2
+$devhq_accent_blue: #69D0E6
+$dotted_border: 1px dotted $dev_bg_blue
+$dim_bracket: #2c5ca7 
+$bracket_red: #F8654E
+$bracket_yellow: #F9D164
+
+%link
+  color: $dev_bg_blue
+  cursor: pointer
+  display: block
+  font:
+    family: Gill Sans, Arial, sans-serif
+    size: 32px
+    weight: 100
+  letter-spacing: 1px
+  padding: .4em 0
+  padding-left: 20px
+  text-transform: uppercase
+
+%with_sprite
+  &:after
+    content: ' '
+    background: transparent url(http://embed.wistia.com/deliveries/05cd0b1fdee8d76d7005440159c50b9e60737a34.png) no-repeat
+    background-position: 0 0
+    width: 21px
+    height: 21px
+    position: absolute
+    margin: .15em .5em
+  &:hover:after
+    content: ' '
+    background-position: 0 -21px
+
+%arrow-down
+  width: 0 
+  height: 0 
+  border-left: 20px solid transparent
+  border-right: 20px solid transparent
+  border-top: 20px solid $background_gray
+
+#container.devhq
+  position: relative
+  width: 100%
+  overflow: hidden
+
+.devhq_header
+  margin-bottom: 140px
+  margin-left: -25px
+  background: $dev_bg_blue
+  overflow: hidden
+  .tiled_wall
+    position: relative
+    height: 320px
+    width: 104%
+  .subheader
+    position: relative
+    height: 60px
+    width: 100%
+    #devhq_subtitle
+      font:
+        family: "Andale Mono", sans-serif
+        size: 22px
+      min-width: 260px
+      position: absolute
+  +breakpoint(small-screen)
+    margin-bottom: 60px
+
+.one_tile
+  cursor: pointer
+  position: absolute
+  letter-spacing: -10px
+  font:
+    family: "ocr-b-std", Courier
+    size: 52px
+  +transition-duration(.25s)
+  +user-select(none)
+  width: 87px
+// not a tasty Asian buffet, but a forwardslash that is dimmed
+.dimSlash
+  color: $dim_bracket
+.bracket_default
+  color: $dim_bracket
+  &:hover
+    color: white
+.bracket_blue
+  color: $devhq_accent_blue
+.bracket_yellow
+  color: $bracket_yellow
+.bracket_red
+  color: $bracket_red
+
+.devhq_accent_blue
+  color: $devhq_accent_blue
+
+.api_button_garden
+  margin-left: 10px
+  margin-bottom: 150px
+  .column
+    border-right: $dotted_border
+    padding: 0 20px
+    text-align: left
+    width: 30%
+    +col
+    &.last-child
+      border: none
+      padding-right: 0
+    &:first-child
+      padding-left: 0
+    .api_garden_square
+      height: 190px
+      margin-bottom: 25px
+      &.last-child
+        border-bottom: none
+        margin-bottom: -100px
+      &:first-child
+        margin-top: -80px
+      a 
+        @extend %link
+        @extend %with_sprite
+      p
+        color: $dev_bg_blue
+        font-size: 15px
+        line-height: 140%
+        padding: 0 20px
+        width: 240px
+    +breakpoint(medium-screen)
+      display: block
+      width: 80%
+      padding: 0
+      margin: 0 auto
+      border: none
+      .api_garden_square, 
+      .api_garden_square:first-child,
+      .api_garden_square:last-child
+        +col
+        padding: 20px 0
+        height: auto
+        margin: 0
+    +breakpoint(small-screen)
+      .api_garden_square, 
+      .api_garden_square:first-child,
+      .api_garden_square:last-child
+        display: block
+
+
+.sick_wrapper
+  cursor: pointer
+  color: white
+  position: absolute
+  letter-spacing: -10px
+  font:
+    family: "ocr-b-std"
+    size: 52px
+  +user-select(none)
+  width: 360px
+  .lefty, .righty, .middly
+    +col
+  .middly
+    font:
+      family: "Andale Mono", Courier New, sans-serif
+      size: 25px
+    letter-spacing: 0px
+    padding-bottom: 4px
+    padding-left: 10px
+    position: relative
+  .righty
+    margin-left: -4px
+
+.devhq_footer
+  background: $dev_bg_blue
+  display: block
+  height: 200px
+  +breakpoint(small-screen)
+    height: auto
+  .devhq_container
+    position: relative
+    top: 15px
+    ul
+      margin: 35px auto 0
+      width: 80%
+      text-align: center
+      li
+        +col
+        margin: 0 20px
+        text-align: center
+        width: 200px
+        a:hover
+          text-decoration: none
+    +breakpoint(medium-screen)
+      ul li
+        margin: 0 20px
+    +breakpoint(small-screen)
+      text-align: center
+  h2
+    @extend %link
+    color: white
+    cursor: auto
+    font:
+      size: 18px
+      style: normal
+      weight: normal
+    padding-left: 0
+    position: relative
+    text-align: center
+  a
+    border-bottom: 1px solid white
+    font:
+      family: Gill Sans, Arial, sans-serif
+      size: 26px
+      weight: 100
+    letter-spacing: 1px
+    color: white
+    position: relative
+    &:after
+      background-position: 0 -21px
+    &:hover:after
+      background-position: 0 0
+  p
+    color: transparent
+    line-height: 140%
+    margin-top: 10px
+    text-align: center
+    +transition-duration(.25s)
+    &.visible
+      color: white
+    +breakpoint(small-screen)
+      &.visible
+        color: transparent
+
+.devhq_footer_arrow
+  @extend %arrow-down
+  margin: 0 auto
