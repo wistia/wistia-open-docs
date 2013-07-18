@@ -40,31 +40,5 @@
             {{ page.title }}
         {% endif %}
         %li#nav_search_box.search_bar
-          %input#search_text{ type: "text", value: "Search our docs", class: "example" }
+          %input#searchField.nav-search{ type: "text", value: "Search our docs", class: "example" }
           %button#search_button
-
-
-:javascript
-
-  $(document).ready(function(){
-    console.log("working");
-    $('#search_text').focus(function() {
-      console.log("focused");
-      var $search = $(this);
-      if ($search.val() == 'Search our docs'){
-        console.log("equals");
-        console.log($search[0]);
-        $search.val('');
-        $search.removeClass('example');
-      }
-    });
-
-    $('#search_text').blur(function() {
-      console.log("blur");
-      var $search = $(this);
-      if ($.trim($search.val()) == ''){
-        $search.val('Search our docs');
-        $search.addClass('example');
-      }
-    });
-  });

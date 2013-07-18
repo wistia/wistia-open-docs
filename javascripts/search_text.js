@@ -21,7 +21,7 @@
   $('#searchField').focus(function() {
     var $search;
     $search = $(this);
-    if ($search.val() === 'What are you looking for?') {
+    if ($search.val() === 'What are you looking for?' || $search.val() === 'Search our docs') {
       $search.val('');
       return $search.removeClass('example');
     }
@@ -30,8 +30,11 @@
   $('#searchField').blur(function() {
     var $search;
     $search = $(this);
-    if ($.trim($search.val()) === '') {
+    if ($.trim($search.val()) === '' && $search.hasClass('homepage-search')) {
       $search.val('What are you looking for?');
+      return $search.addClass('example');
+    } else if ($.trim($search.val()) === '' && $search.hasClass('nav-search')) {
+      $search.val('Search our docs');
       return $search.addClass('example');
     }
   });

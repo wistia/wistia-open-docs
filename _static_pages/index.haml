@@ -23,7 +23,7 @@ no_nav: true
             %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } Wistia Analytics
       #search.columnBig.firstRow
         %h2 Search
-        %input{id: "searchField", type: "text", class: 'example', value: 'What are you looking for?' }
+        %input.homepage-search{id: "searchField", type: "text", class: 'example', value: 'What are you looking for?' }
         %button
     .section
       #gettingSetUp.column.left.secondRow
@@ -163,7 +163,6 @@ no_nav: true
               Upload Widgets
 
 
-%script{ src: "{{ '/javascripts/homepage' | javascript_url }}" }
 :javascript
   var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false );
 
