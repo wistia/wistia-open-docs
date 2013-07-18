@@ -65,8 +65,8 @@ em
   border-top: 6px solid $gray2
 
 .content_container
-  background-color: white
   @extend %container
+  background-color: white
   max-width: $total_width + $padding
   padding: 0 $padding
   border-top: 6px solid $light_blue
@@ -119,45 +119,108 @@ em
 
 .home_body
   background-color: #eee
+  padding-bottom: 40px
 
-.most_popular_wrapper
-  border-top: 4px solid $accent_gray
-  border-bottom: 4px solid $accent_gray
-  background-color: $skeletor_green
-  padding: $padding 0
-  +breakpoint(medium-screen)
-    padding-left: $padding*2
-  .post_list
-    margin-left: 3em
-  .articles_list
-    padding: 0
-    margin: 0
-    border-left: 2px solid white
-    vertical-align: bottom !important
-    +col
-    +breakpoint(medium-screen)
-      width: 90%
-      border: none
-      .post_list
-        margin: 0
+.home_container
+  border-top: 6px solid $light_blue
+  background-color: white
+  max-width: 848px
+  padding: 46px 80px 0 72px
+  margin: -6px auto 60px
+  h1
+    font-size: 22px
+    font-weight: 700
+  h2
+    font-size: 18px
+    margin-bottom: 33px
+    font-weight: 600
     a
-      color: white
-      font-size: 18px
+      color: $gray6
       &:hover
-        color: white
-        text-decoration: underline
-  .most_popular_body
-    width: 60%
-    margin: 0 auto
-  .most_popular_title
-    max-width: 45%
+        color: $light_blue
+        text-decoration: none
+        .icomoon-article
+          color: $light_blue
+  ul
+    list-style-image: url('http://wistia.com/doc/images/bullet.png')
+    color: $gray6
+    padding-left: 20px
+    margin-bottom: 35px
+    font-family: $fonts
+    -webkit-font-smoothing: antialiased
+    &.posts_list
+      padding-left: 0px
+  li
+    font-size: 16px
+    line-height: 25px
+    margin-bottom: 7px
+    font-family: $fonts
+    -webkit-font-smoothing: antialiased
+    a
+      color: $gray6
+
+  .upperCaseLink
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 600
+    color: $gray2
+    text-decoration: none
+    letter-spacing: 1px
+    font-family: $fonts
+    -webkit-font-smoothing: antialiased
+  .capitalize
+    text-transform: capitalize
+  .section
+    border-bottom: 1px solid $gray2
+    padding-top: 25px
+    padding-bottom: 18px
+    &.top
+      padding-top: 0px
+      padding-bottom: 25px
+    &.last
+      border-bottom: 0px solid $gray2
+  .column
     +col
-    +breakpoint(medium-screen)
-      max-width: 100%
-      margin-bottom: $padding
-    h1
-      color: white
-      font-size: 60px
+    position: relative
+  .secondRow
+    height: 342px
+    margin-top: 6px
+  .left
+    width: 225px
+    padding-right: 75px
+  .middle
+    width: 225px
+    padding-right: 75px
+  .right
+    width: 225px
+  .columnBig
+    +col
+    width: 544px
+  .icomoon-article
+    padding-right: 0px
+    color: $gray2
+    &:before
+      content: "\e001"
+  .icomoon
+    display: inline
+    font-family: 'wistiacom-icons'
+    font-size: 23px
+    font-style: normal
+    speak: none
+    font-weight: normal
+    -webkit-font-smoothing: antialiased
+    position: relative
+    top: 1px
+  .viewAll
+    height: 18px
+    padding-top: 1px
+    position: absolute
+    bottom: 20px
+    &:hover
+      background-position-y: -18px
+      color: $light_blue
+      .icomoon-article
+        color: $light_blue
 
 .all_articles_wrapper
   padding: $padding 0 $padding*2
@@ -207,6 +270,31 @@ em
       font-size: 16px
       &:hover
         color: $text_color
+
+#search
+  input
+    font-size: 18px
+    color: $gray6
+    height: 40px
+    -webkit-font-smoothing: antialiased
+    font-family: $fonts
+    outline: 0px
+    padding-left: 10px
+    width: 530px
+    border: 1px solid $gray2
+    font-weight: 500
+    &.example
+      color: $gray2
+  button
+    position: relative
+    padding: 0px
+    border: 0px solid white
+    background: url('http://wistia.com/doc/images/arrow.png')
+    width: 42px
+    height: 38px
+    top: -41px
+    left: 500px
+    cursor: pointer
 
 //////// post header /////////////
 
@@ -1137,154 +1225,3 @@ table
     left: 134px
     top: 80px
 
-
-////////////////Liat Stuff//////////////
-
-#doc
-  Background-color: $gray1
-  border-top: 6px solid $gray2
-  margin-top: -6px
-  padding-bottom: 40px
-  #marsBar
-    background-color: $gray2
-    height: 6px
-  #container
-    background-color: white
-    width: 848px
-    padding-left: 72px
-    padding-right: 80px
-    padding-top: 46px
-    border-top: 6px solid $light_blue
-    margin-left: auto
-    margin-right: auto
-    margin-top: -6px
-    margin-bottom: 60px
-    h1
-      font-size: 22px
-      font-family: $fonts
-      color: $gray6
-      text-transform: none
-      -webkit-font-smoothing: antialiased
-      letter-spacing: 0px
-      text-align: left
-      font-weight: 700
-    h2
-      font-size: 18px
-      letter-spacing: 0px
-      text-align: left
-      margin-bottom: 33px
-      color: $gray6
-      font-weight: 600
-      font-family: $fonts
-      -webkit-font-smoothing: antialiased
-      a
-        color: $gray6
-        &:hover
-          color: $light_blue
-          text-decoration: none
-          .icomoon-article
-            color: $light_blue
-    ul
-      list-style-image: url('http://wistia.com/doc/images/bullet.png')
-      color: $gray6
-      padding-left: 20px
-      margin-bottom: 35px
-      font-family: $fonts
-      -webkit-font-smoothing: antialiased
-      &.posts_list
-        padding-left: 0px
-    li
-      font-size: 16px
-      line-height: 25px
-      margin-bottom: 7px
-      font-family: $fonts
-      -webkit-font-smoothing: antialiased
-      a
-        color: $gray6
-    .icomoon-article
-      padding-right: 0px
-      color: $gray2
-      &:before
-        content: "\e001"
-    .icomoon
-      display: inline
-      font-family: 'wistiacom-icons'
-      font-size: 23px
-      font-style: normal
-      speak: none
-      font-weight: normal
-      -webkit-font-smoothing: antialiased
-      position: relative
-      top: 1px
-    .viewAll
-      height: 18px
-      padding-top: 1px
-      position: absolute
-      bottom: 20px
-      &:hover
-        background-position-y: -18px
-        color: $light_blue
-        .icomoon-article
-          color: $light_blue
-    .upperCaseLink
-      text-transform: uppercase
-      font-size: 14px
-      font-weight: 600
-      color: $gray2
-      text-decoration: none
-      letter-spacing: 1px
-      font-family: $fonts
-      -webkit-font-smoothing: antialiased
-    .capitalize
-      text-transform: capitalize
-    .section
-      border-bottom: 1px solid $gray2
-      padding-top: 25px
-      padding-bottom: 18px
-      &.top
-        padding-top: 0px
-        padding-bottom: 25px
-      &.last
-        border-bottom: 0px solid $gray2
-    .column
-      +col
-      position: relative
-    .secondRow
-      height: 342px
-      margin-top: 6px
-    .left
-      width: 225px
-      padding-right: 75px
-    .middle
-      width: 225px
-      padding-right: 75px
-    .right
-      width: 225px
-    .columnBig
-      +col
-      width: 544px
-    #search
-      input
-        font-size: 18px
-        color: $gray6
-        height: 40px
-        -webkit-font-smoothing: antialiased
-        font-family: $fonts
-        outline: 0px
-        padding-left: 10px
-        width: 530px
-        border: 1px solid $gray2
-        font-weight: 500
-        &.example
-          color: $gray2
-
-      button
-        position: relative
-        padding: 0px
-        border: 0px solid white
-        background: url('http://wistia.com/doc/images/arrow.png')
-        width: 42px
-        height: 38px
-        top: -41px
-        left: 500px
-        cursor: pointer
