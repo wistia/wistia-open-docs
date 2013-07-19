@@ -44,6 +44,15 @@ $bracket_yellow: #F9D164
   width: 100%
   overflow: hidden
 
+.devhq_container
+  @extend %container
+  max-width: 960px + $padding
+  padding: 0 $padding
+  +breakpoint(large-screen)
+    min-width: 972px
+  +breakpoint(medium-screen)
+    min-width: auto
+
 .devhq_header
   margin-bottom: 140px
   margin-left: -25px

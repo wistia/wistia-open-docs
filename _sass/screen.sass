@@ -78,15 +78,6 @@ em
   &.nav
     border-top: 0px solid white
 
-.devhq_container
-  @extend %container
-  max-width: 960px + $padding
-  padding: 0 $padding
-  +breakpoint(large-screen)
-    min-width: 972px
-  +breakpoint(medium-screen)
-    min-width: auto
-
 #post_container
   position: relative
   left: $fixed_column_width + 20
@@ -130,6 +121,7 @@ em
   padding-bottom: 40px
 
 .home_container
+  @extend %container
   border-top: 6px solid $light_blue
   background-color: white
   max-width: 848px
@@ -227,55 +219,6 @@ em
       color: $light_blue
       &:before
         color: $light_blue
-
-.all_articles_wrapper
-  padding: $padding 0 $padding*2
-  text-align: center
-  .col
-    +col
-    margin: 0 5px
-    width: 40%
-    max-width: 400px
-    +breakpoint(medium-screen)
-      width: 90%
-
-.articles_list
-  margin: $padding auto 0
-  text-align: left
-  h3
-    border-bottom: 1px solid $accent_gray
-    font-size: 26px
-    margin-bottom: $padding/2
-    margin-left: 0
-    padding-bottom: 5px
-
-.category_card
-  background-color: white
-  margin-bottom: 10px
-  padding: 20px
-  h3 a
-    color: $text_color
-    margin-bottom: 10px
-    padding-bottom: 5px
-  p
-    color: lighten($text_color, 20%)
-    font-size: 16px
-  &.developers
-    i
-      color: yellow
-  &.last
-    margin-bottom: 0
-
-.post_list
-  margin-left: 0px
-  font-family: $title-fonts
-  li
-    margin-bottom: 10px
-    a
-      color: lighten($text_color, 20%)
-      font-size: 16px
-      &:hover
-        color: $text_color
 
 #search
   input
@@ -606,7 +549,6 @@ em
     image: url(http://embed.wistia.com/deliveries/035aae7c13d02975a0e714b86125e65a01d7a792.png)
 
 
-
 /////// images /////////
 
 .post_image
@@ -670,26 +612,6 @@ table
   tr td pre
     margin: 0
     padding: 0
-
-////// EMBED SCREEN ////////
-
-.embed_type_content
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
-  padding: 20px
-  width: $post_width / 2 - 10
-.embed_type_image
-  margin-left: 20px
-  height: 100%
-  display: inline-block
-  /* For IE 7 */
-  zoom: 1
-  *display: inline
-  vertical-align: top
-.embed_screen_image
-  border: none
 
 ////// RANDEEEZE ////////
 
@@ -980,9 +902,6 @@ table
   font-family: $title-fonts
   h2
     margin: 0
-    &:hover
-      .icomoon-article
-        color: $light_blue
   a
     font-size: 18px
     letter-spacing: 0px
@@ -1000,21 +919,6 @@ table
     width: 600px
     margin-top: 13px
     margin-left: 36px
-  .icomoon-article
-    color: $gray2
-    padding-right: 7px
-    &:before
-      content: "\e001"
-  .icomoon
-    display: inline
-    font-family: 'wistiacom-icons'
-    font-size: 23px
-    font-style: normal
-    speak: none
-    font-weight: normal
-    -webkit-font-smoothing: antialiased
-    position: relative
-    top: 1px
 
 .no_result
   p
@@ -1053,37 +957,13 @@ table
   .center
     margin-left: 0
 
-//////////// background shee /////////////
-
-#beegee
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 0
-  path
-    fill: $header_blue
-    //stroke: #fff
-    //stroke-width: 1
-  .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
-    fill: #fff
-
-.activated
-  #beegee
-    path
-      fill: $accent_blue
-      stroke: #bbb
-      stroke-width: 1
-    .q0,.q1,.q2,.q3,.q4,.q5,.q6,.q7,.q8,.q9
-      fill: #fff
-
-
-
 ////// videos ////////
 
 .video_wrapper
   margin: 0 auto
   max-width: 960px
   position: relative
+  padding-bottom: 40px
 
 #local-header-container
   margin: 0
@@ -1111,8 +991,8 @@ table
 
 .video-info-container
   background-color: white
-  margin: 20px 0
-  padding: 30px 0
+  margin-top: 20px
+  padding: 30px
   ul
     text-align: left
     li
