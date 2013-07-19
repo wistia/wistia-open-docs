@@ -4,9 +4,7 @@
       <ul>
         {% if page.type != 'post' %}
         <li id='breadcrumbs'>
-          <a href="{{ '/' | post_url }}" style='padding-left: 0;'>
-            Documentation
-          </a>
+          <a href="{{ '/' | post_url }}" style='padding-left: 0;'>Documentation</a>
           <span class='breadcrumb_post_title'>
             <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {% if page.type %}
@@ -19,9 +17,7 @@
         {% else %}
         <li id='breadcrumbs'>
           {% if page.category && page.category != 'no_index' %}
-          <a href="{{ '/' | post_url }}">
-            Documentation
-          </a>
+          <a href="{{ '/' | post_url }}">Documentation</a>
           <span class='breadcrumb_post_title'>
             <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {% if page.special_category_link %}
@@ -36,9 +32,7 @@
             {% endif %}
           </span>
           {% else %}
-          <a href="{{ '/' | post_url }}">
-            Documentation
-          </a>
+          <a href="{{ '/' | post_url }}">Documentation</a>
           {% endif %}
           <span class='breadcrumb_post_title'>
             <img src="{{ '/images/greaterThan.png' | image_url }}" />

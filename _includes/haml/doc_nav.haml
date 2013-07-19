@@ -4,8 +4,7 @@
       %ul
         {% if page.type != 'post' %}
         %li#breadcrumbs
-          %a{ style: 'padding-left: 0;', href: "{{ '/' | post_url }}" }
-            Documentation
+          %a{ style: 'padding-left: 0;', href: "{{ '/' | post_url }}" } Documentation
           %span.breadcrumb_post_title
             %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {% if page.type %}
@@ -16,9 +15,9 @@
 
         {% else %}
         %li#breadcrumbs
+
           {% if page.category && page.category != 'no_index' %}
-          %a{ href: "{{ '/' | post_url }}" }
-            Documentation
+          %a{ href: "{{ '/' | post_url }}" } Documentation
           %span.breadcrumb_post_title
             %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {% if page.special_category_link %}
@@ -31,13 +30,14 @@
             {% else %}
             %a{ href: "{{ page.category | category_url }}" } {{ page.category }}
             {% endif %}
+
           {% else %}
-          %a{ href: "{{ '/' | post_url }}" }
-            Documentation
+          %a{ href: "{{ '/' | post_url }}" } Documentation
           {% endif %}
           %span.breadcrumb_post_title
             %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {{ page.title }}
+
         {% endif %}
         %li#nav_search_box.search_bar
           %input#searchField.nav-search{ type: "text", value: "Search our docs", class: "example" }
