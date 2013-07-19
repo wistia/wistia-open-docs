@@ -720,6 +720,7 @@ em { font-style: italic; }
 .doc_nav_container .doc_nav .search_bar { font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 0; position: absolute; right: 0; top: -7px; text-align: right; width: 35%; }
 .doc_nav_container .doc_nav .search_bar input { font-size: 15px; font-weight: 700; margin: 0; padding: 3px 9px; position: relative; width: 237px; height: 24px; border: 1px solid #cbd0d6; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
 .doc_nav_container .doc_nav .search_bar button { font-size: 12px; margin: 0; padding: 0px 0px; background: url(http://wistia.com/doc/images/search.png) no-repeat; width: 25px; height: 25px; border: 0px solid white; right: 34px; top: 4px; background-position: center; cursor: pointer; }
+.doc_nav_container .doc_nav .search_bar:focus { outline: none; }
 .doc_nav_container .doc_nav .search_bar .example { color: #cbd0d6; }
 
 #post, #results { margin-left: 10px; width: 600px; background-color: white; clear: both; padding-bottom: 70px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
