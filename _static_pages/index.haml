@@ -21,9 +21,9 @@ no_nav: true
             %a{ href: "{{ '/embedding' | post_url }}" } Embedding Your Video
           %li
             %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } Wistia Analytics
-      #search.columnBig.firstRow
+      #search.columnBig.firstRow.homepage-search
         %h2 Search
-        %input.homepage-search{id: "searchField", type: "text", class: 'example', value: 'What are you looking for?' }
+        %input.example#searchField{ type: "text", value: 'What are you looking for?' }
         %button
     .section
       #gettingSetUp.column.left.secondRow
