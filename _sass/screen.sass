@@ -127,7 +127,6 @@ em
   padding: $padding*2 0 80px
 
 .home_body
-  background-color: #eee
   padding-bottom: 40px
 
 .home_container
@@ -150,7 +149,6 @@ em
         color: $light_blue
         text-decoration: none
   ul
-    list-style-image: url('http://wistia.com/doc/images/bullet.png')
     color: $gray6
     padding-left: 20px
     margin-bottom: 35px
@@ -164,6 +162,19 @@ em
     margin-bottom: 7px
     font-family: $fonts
     -webkit-font-smoothing: antialiased
+    position: relative
+    &:before
+      content: "\f111"
+      color: $gray1
+      font-family: FontAwesome
+      font-size: 7px
+      font-style: normal
+      speak: none
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      position: absolute
+      left: -19px
+      top: -1px
     a
       color: $gray6
   .section
@@ -609,7 +620,7 @@ em
 .center
   text-align: center
 .intro_image, .integration_logo
-+floated-images
+  +floated-images
 
 
 /////// video /////////
