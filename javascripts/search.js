@@ -7,11 +7,11 @@
     function Search() {
       var _this = this;
       this.query = this.getQuery();
-      this.header = this.buildHeader();
       this.getSearchResults(this.query, function(data) {
         var result, _i, _len, _ref;
         _this.resultHtml = "";
-        if (data.results.length) {
+        _this.resultsLength = data.results.length || 0;
+        if (_this.resultsLength > 0) {
           _ref = data.results;
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             result = _ref[_i];
@@ -22,6 +22,7 @@
         } else {
           _this.resultHtml = _this.suggestedSearchesStr();
         }
+        _this.header = _this.buildHeader();
         return _this.renderResults();
       });
     }
@@ -54,7 +55,7 @@
       var html_end_str, html_start_str, resultHeaderText;
       html_start_str = "<div class='results_header'><h1>";
       html_end_str = "</h1></div>";
-      resultHeaderText = (this.query != null) && this.query.length > 0 ? "" + this.query.length + " results found for " + (this.stringify(this.query)) : "Enter a search to begin";
+      resultHeaderText = (this.query != null) && this.query.length > 0 ? "" + this.resultsLength + " results found for " + (this.stringify(this.query)) : "Enter a search to begin";
       return "" + html_start_str + resultHeaderText + html_end_str;
     };
 

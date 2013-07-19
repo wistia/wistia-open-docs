@@ -1,10 +1,10 @@
 class Search
   constructor: ->
     @query = @getQuery()
-    @header = @buildHeader()
     @getSearchResults @query, (data) =>
       @resultHtml = ""
-      if data.results.length
+      @resultsLength = data.results.length || 0
+      if @resultsLength > 0
         for result in data.results
           @resultHtml += @convertJsonToHtml result
       else if @query?
@@ -12,6 +12,7 @@ class Search
       else
         @resultHtml = @suggestedSearchesStr()
 
+      @header = @buildHeader()
       @renderResults()
 
   getQuery: ->
@@ -66,7 +67,7 @@ class Search
     html_end_str = "</h1></div>"
 
     resultHeaderText = if @query? and @query.length > 0
-        "#{@query.length} results found for #{@stringify @query}"
+        "#{@resultsLength} results found for #{@stringify @query}"
       else
         "Enter a search to begin"
 
