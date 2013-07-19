@@ -848,11 +848,11 @@ table tr td pre { margin: 0; padding: 0; }
 #post_content_nav.fixedPosition { position: fixed; top: -29px; }
 #post_content_nav.bottomPadding { bottom: 55px; }
 #post_content_nav ul { list-style-type: none; }
-#post_content_nav li { padding-bottom: 15px; }
+#post_content_nav li { padding-bottom: 18px; }
 #post_content_nav li a { display: inline; padding: 6px 0px; color: #161d25; font-size: 15px; text-decoration: none; line-height: 150%; }
 #post_content_nav li a:hover { text-decoration: underline; }
 #post_content_nav li:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-#post_content_nav .title_list_item { padding-bottom: 5px; border-bottom: 1px solid #cbd0d6; margin-bottom: 15px; }
+#post_content_nav .title_list_item { padding: 11px 0 13px; border-bottom: 1px solid #cbd0d6; margin-bottom: 22px; }
 #post_content_nav .title_list_item a { padding: 0 0 20px 0px; position: relative; font-size: 15px; font-weight: 700; }
 #post_content_nav .title_list_item.current li { background: none; }
 #post_content_nav .title_list_item.current a, #post_content_nav .title_list_item.current a:hover { padding: 0 0 20px 0px; background: none; color: #161d25; }
