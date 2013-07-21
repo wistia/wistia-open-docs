@@ -12,103 +12,107 @@ require_relative './_config'
 # fix so foreman gets logging
 $stdout.sync = true
 
-use Rack::Rewrite do
-  r301 %r{/start/?}, "#{$config.basepath}"
-  r301 %r{/randor-basics/?}, "#{$config.basepath}/wistia-basics-getting-started"
-  r301 %r{/randor-(\w+)/?}, "#{$config.basepath}/wistia-basics-$1"
-  r301 %r{/randor?}, "#{$config.basepath}/wistia-basics"
-  r301 "#{$config.basepath}/construct-an-embed-code", "#{$config.basepath}/embed-api"
-  rewrite %r{#{$config.basepath}(.*)}, '$1'
-end
+class TheApp < Sinatra::Base
 
-class SuperStatic
-  def initialize(app)
-    @app = app
-    @root = File.join(File.dirname(__FILE__), '_site')
-    @file_server = Rack::File.new(@root)
+  use Rack::Rewrite do
+    r301 %r{/start/?}, "#{$config.basepath}"
+    r301 %r{/randor-basics/?}, "#{$config.basepath}/wistia-basics-getting-started"
+    r301 %r{/randor-(\w+)/?}, "#{$config.basepath}/wistia-basics-$1"
+    r301 %r{/randor?}, "#{$config.basepath}/wistia-basics"
+    r301 "#{$config.basepath}/construct-an-embed-code", "#{$config.basepath}/embed-api"
+    rewrite %r{#{$config.basepath}(.*)}, '$1'
   end
 
-  def call(env)
-    path = env['PATH_INFO']
-    file_path = File.join(@root, path)
-    file_path_with_index = File.join(@root, path, 'index.html')
-    if FileTest.file?(file_path)
-      send_file(file_path)
-    elsif FileTest.file?(file_path_with_index)
-      send_file(file_path_with_index)
-    else
-      @app.call(env)
+  class SuperStatic
+    def initialize(app)
+      @app = app
+      @root = File.join(File.dirname(__FILE__), '_site')
+      @file_server = Rack::File.new(@root)
+    end
+
+    def call(env)
+      path = env['PATH_INFO']
+      file_path = File.join(@root, path)
+      file_path_with_index = File.join(@root, path, 'index.html')
+      if FileTest.file?(file_path)
+        send_file(file_path)
+      elsif FileTest.file?(file_path_with_index)
+        send_file(file_path_with_index)
+      else
+        @app.call(env)
+      end
+    end
+
+    def send_file(path)
+      [ 200,
+        {
+          'Content-Length' => ::File.size(path).to_s,
+          'Content-Type'   => Rack::Mime.mime_type(::File.extname(path))
+        },
+        [::File.read(path)]
+      ]
     end
   end
 
-  def send_file(path)
-    [ 200,
+  use SuperStatic
+
+  get "/search/:q" do
+    q = params[:q]
+
+    q.gsub!("_", " ")
+
+    s = Tire.search 'posts' do
+      query do
+        string q
+      end
+    end
+
+    Tire.configure do
+      logger 'elasticsearch.log'
+    end
+
+    results_list = s.results.map do |result|
       {
-        'Content-Length' => ::File.size(path).to_s,
-        'Content-Type'   => Rack::Mime.mime_type(::File.extname(path))
-      },
-      [::File.read(path)]
-    ]
-  end
-end
-
-use SuperStatic
-
-get "/search/:q" do
-  q = params[:q]
-
-  q.gsub!("_", " ")
-
-  s = Tire.search 'posts' do
-    query do
-      string q
+        :title => result.title,
+        :url => result.url,
+        :description => result.description
+      }
+    end
+    
+    result = { :results => results_list }.to_json
+    if params[:callback]
+      "#{params[:callback]}(#{result});"
+    else
+      result
     end
   end
 
-  Tire.configure do
-    logger 'elasticsearch.log'
+  # TODO: Properly re-initialize the server.
+  # github will hit this URL after a commit so we can auto-update
+  # the doc. omg this is cool.
+  post '/update' do
+    return 403 unless params[:update_key] == $config.update_key
+    spawn('rake', 'nuclear_update', chdir: File.dirname(__FILE__))
+    'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
   end
 
-  results_list = s.results.map do |result|
-    {
-      :title => result.title,
-      :url => result.url,
-      :description => result.description
-    }
+  # 404 page
+  not_found do
+    send_file(File.join(File.dirname(__FILE__), '_site', '404.html'), {:status => 404})
   end
-  
-  result = { :results => results_list }.to_json
-  if params[:callback]
-    "#{params[:callback]}(#{result});"
-  else
-    result
+
+  # DevHQ page
+  get "/developers" do
+    send_file(File.join(File.dirname(__FILE__), '_site', 'developers.html'))
   end
-end
 
-# TODO: Properly re-initialize the server.
-# github will hit this URL after a commit so we can auto-update
-# the doc. omg this is cool.
-post '/update' do
-  return 403 unless params[:update_key] == $config.update_key
-  spawn('rake', 'nuclear_update', chdir: File.dirname(__FILE__))
-  'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
-end
+  # Agency!
+  get "/agency" do
+    send_file(File.join(File.dirname(__FILE__), '_site', 'agency.html'))
+  end
 
-# 404 page
-not_found do
-  send_file(File.join(File.dirname(__FILE__), '_site', '404.html'), {:status => 404})
-end
+  get "/wistia-basics" do
+    send_file(File.join(File.dirname(__FILE__), '_site', 'wistia-basics.html'))
+  end
 
-# DevHQ page
-get "/developers" do
-  send_file(File.join(File.dirname(__FILE__), '_site', 'developers.html'))
-end
-
-# Agency!
-get "/agency" do
-  send_file(File.join(File.dirname(__FILE__), '_site', 'agency.html'))
-end
-
-get "/wistia-basics" do
-  send_file(File.join(File.dirname(__FILE__), '_site', 'wistia-basics.html'))
 end

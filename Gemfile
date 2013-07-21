@@ -14,6 +14,7 @@ gem 'shotgun', '~> 0.9'
 gem 'sinatra', '~> 1.3.3'
 gem 'tire', '~> 0.4.2'
 gem 'rack-rewrite', '~> 1.2.1'
+gem 'unicorn'
 
 group :test do
   gem 'rspec', '~> 2.13.0'
