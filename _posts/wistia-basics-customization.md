@@ -10,9 +10,9 @@ video_hashed_id: 01a1d9f97c
 ---
 
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(30).play(); return false;"><i class="icon-play"></i>(0:30)</a> 
-  We're using Wordpress here, but you can use all sorts of website setups / CMS environments with Wistia.  Check out our [list of tested sites]({{ '/integration' | post_url }}).
+  We're using WordPress here, but you can use all sorts of website setups / CMS environments with Wistia.  Check out our [list of tested sites]({{ '/integration' | post_url }}).
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(35).play(); return false;"><i class="icon-play"></i>(0:35)</a> 
-  Normally Alyce sets up the Wordpress blog post, and then tells me what size the video needs to be to fit within the post. We've also chosen a color we use for all our blog embeds.
+  Normally Alyce sets up the WordPress blog post, and then tells me what size the video needs to be to fit within the post. We've also chosen a color we use for all our blog embeds.
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(60).play(); return false;"><i class="icon-play"></i>(1:00)</a> 
   All settings within the SuperEmbed builder apply to **embedded** video only, not video that plays from within your account.  It also doesn't update videos that are already embedded - if you have already embedded the video on your site, and want to change settings in the SuperEmbed builder, you'll need to re-embed the video.
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(71).play(); return false;"><i class="icon-play"></i>(1:11)</a> 
