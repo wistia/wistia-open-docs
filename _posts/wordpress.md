@@ -1,28 +1,28 @@
 ---
-title: Wordpress &amp; Wistia
+title: WordPress &amp; Wistia
 layout: post
 category: Integrations
-description: Wordpress is one of the most popular blog/website platforms out there, and Wistia videos work quite well in the Wordpress environment. 
+description: WordPress is one of the most popular blog/website platforms out there, and Wistia videos work quite well in the WordPress environment. 
 ---
 
-## Wistia Wordpress Plugin
+## Wistia WordPress Plugin
 
 {% post_image hashed_id: 'bdad3d0b4f6e6581194fbcbd25dd9626501c7c80', width: 200, class: 'integration_logo float_left' %}
 
-Using the [Wistia Wordpress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin), you can add your embed codes and they will be protected. It won't take up any space in your Wordpress admin dashboard, but instead works quietly in the background (as it should).
+Using the [Wistia WordPress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin), you can add your embed codes and they will be protected. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background (as it should).
 
 <div class="clear"></div>
 
-{{ "Wistia embed codes can only be used with Wordpress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between Wordpress.com hosted blogs and Wordpress installs</a>." | note }}
+{{ "Wistia embed codes can only be used with WordPress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between WordPress.com hosted blogs and WordPress installs</a>." | note }}
 
-## Tips for Using Wordpress
+## Tips for Using WordPress
 
 *  When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code.
-*  If you have larger resolution videos, and they are appearing smaller or squished, access the Wordpress admin control panel (Settings -> Media -> Maximum Video Embed Size) and set the max to the largest size of your video ('no limit' setting doesn't work, must be actual size).
+*  If you have larger resolution videos, and they are appearing smaller or squished, access the WordPress admin control panel (Settings -> Media -> Maximum Video Embed Size) and set the max to the largest size of your video ('no limit' setting doesn't work, must be actual size).
 
-## Styling Your Embed in Wordpress
+## Styling Your Embed in WordPress
 
-To center your video in Wordpress, you will first use an outer div with the style "text-align: center".  Then, add the inline-block styling to the video div (see the code below, the "style" attributes in both divs can be copied to your own page).
+To center your video in WordPress, you will first use an outer div with the style "text-align: center".  Then, add the inline-block styling to the video div (see the code below, the "style" attributes in both divs can be copied to your own page).
 
 <pre><code class='language-markup'>
 <div id="the_video" style="text-align: center;">
@@ -45,9 +45,9 @@ To center your video in Wordpress, you will first use an outer div with the styl
 </code></pre>
 
 
-## Using Wistia Video SEO with Wordpress
+## Using Wistia Video SEO with WordPress
 
-The best way to use Video SEO, Wistia embeds, and Wordpress together is by installing
+The best way to use Video SEO, Wistia embeds, and WordPress together is by installing
 the awesome [Yoast plugin](http://yoast.com/wordpress/video-seo/). Joost, the one
 man wrecking crew behind Yoast, has put together a really valuable and easy-to-use
 workflow that also includes Wistia support (awesome!!).
