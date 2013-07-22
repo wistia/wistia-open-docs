@@ -27,7 +27,7 @@ video_hashed_id: 8a5e87899d
 </h2>
 
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(130).play(); return false;"><i class="icon-play"></i>(2:10)</a> To see that video on customization, head here: [Customizing Your Embed]( {{ '/wistia-basics-customization' | post_url }})
-* <a href="#" class="chapter_link" onclick="wistiaEmbed.time(140).play(); return false;"><i class="icon-play"></i>(2:20)</a> In this example, I used a Wordpress blog, but there are lots of different site types and platforms you can embed Wistia videos into.  See our [list of tested sites]({{ '/integration' | post_url }}).
+* <a href="#" class="chapter_link" onclick="wistiaEmbed.time(140).play(); return false;"><i class="icon-play"></i>(2:20)</a> In this example, I used a WordPress blog, but there are lots of different site types and platforms you can embed Wistia videos into.  See our [list of tested sites]({{ '/integration' | post_url }}).
 
 <h2>
   <a href="#" class="chapter_link" onclick="wistiaEmbed.time(159).play(); return false;">

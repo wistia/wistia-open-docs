@@ -5,17 +5,17 @@ description: Wistia plays well with lots of 3rd party services. See some of the 
 post_intro: <p>As we update our embedding processes and APIs, Wistia will get better and better at integrating with other top-notch services. On this doc page, we'll do our best to keep track of places where Wistia works out-of-the-box for embedding, and also where deeper integrations have been built out by our awesome friends.</p>
 ---
 
-## Wordpress
+## WordPress
 
 {% post_image hashed_id: 'bdad3d0b4f6e6581194fbcbd25dd9626501c7c80', width: 200, class: 'integration_logo float_left' %}
 
-Using the [Wistia Wordpress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin), you can add your embed codes and they will be protected. It won't take up any space in your Wordpress admin dashboard, but instead works quietly in the background (as it should).
+Using the [Wistia WordPress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin), you can add your embed codes and they will be protected. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background (as it should).
 
-We have some other information on using Wistia and Wordpress, including styling tips (we so stylish!) on the [Wordpress integration page]({{ "/wordpress" | post_url }}).
+We have some other information on using Wistia and WordPress, including styling tips (we so stylish!) on the [WordPress integration page]({{ "/wordpress" | post_url }}).
 
 <div class="clear"></div>
 
-{{ "Wistia embed codes can only be used with Wordpress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between Wordpress.com hosted blogs and Wordpress installs</a>." | note }}
+{{ "Wistia embed codes can only be used with WordPress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between WordPress.com hosted blogs and WordPress installs</a>." | note }}
 
 ## Drupal
 
@@ -85,7 +85,6 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * [Facebook]({{ '/social-sharing' | post_url }})
 * Google Sites
 * Lexblog
-* Posterous
 * Sharepoint
 * Shopify
 * Tumblr (add the video embed code to your text post)

@@ -69,9 +69,9 @@ management system you are using. If you are self-hosting your site, you can
 edit the robots.txt file in your site's root directory
 (or create one, if one does not exist).
 
-If you are using Wordpress, they have several popular plug-ins for editing your
+If you are using WordPress, they have several popular plug-ins for editing your
 robots.txt file. Refer to our
-[Wordpress doc page]({{ '/wordpress#using_wistia_video_seo_with_wordpress' | post_url }}) 
+[WordPress doc page]({{ '/wordpress#using_wistia_video_seo_with_wordpress' | post_url }}) 
 for more info.
 
 {% post_image hashed_id: 'cd5333ac993a15daeab379729834217492736b57', width: 320, class: 'float_right' %}
