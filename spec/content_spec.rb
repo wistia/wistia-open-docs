@@ -1,9 +1,8 @@
 require_relative 'spec_helper'
-require 'yaml'
-require 'psych'
+#require 'yaml'
+#require 'psych'
 
 describe "Content" do
-
   before(:each) do
     @posts = []
     Dir.foreach('_posts') do |p|

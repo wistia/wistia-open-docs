@@ -1,6 +1,9 @@
+require 'rubygems'
+require 'bundler'
+Bundler.require
+
 require File.join(File.dirname(__FILE__), '..', 'the_app.rb')
 
-require 'sinatra'
 require 'rack/test'
 
 # setup test environment
@@ -10,7 +13,7 @@ set :raise_errors, true
 set :logging, false
 
 def app
-  Sinatra::Application
+  @app ||= TheApp.new
 end
 
 RSpec.configure do |config|

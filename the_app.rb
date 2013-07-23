@@ -2,10 +2,7 @@
 # This app handles search requests and also has a hook to allow for self-updating
 #
 
-require 'tire'
 require 'pp'
-require 'sinatra'
-require 'haml'
 require 'rack/rewrite'
 require_relative './_config'
 
