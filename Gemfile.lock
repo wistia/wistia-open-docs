@@ -1,18 +1,3 @@
-GIT
-  remote: https://github.com/mojombo/jekyll
-  revision: ba64a9fe306eb629df3765a15bd995444b0ed2c1
-  specs:
-    jekyll (1.0.0.rc1)
-      classifier (~> 1.3)
-      colorator (~> 0.1)
-      commander (~> 4.1.3)
-      directory_watcher (~> 1.4.1)
-      kramdown (~> 0.14)
-      liquid (~> 2.3)
-      maruku (~> 0.5)
-      pygments.rb (~> 0.4.2)
-      safe_yaml (~> 0.7.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -29,7 +14,7 @@ GEM
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
     colorator (0.1)
-    commander (4.1.3)
+    commander (4.1.4)
       highline (~> 1.6.11)
     compass (0.12.2)
       chunky_png (~> 1.2)
@@ -45,14 +30,24 @@ GEM
     fssm (0.2.10)
     haml (3.1.8)
     hashr (0.0.22)
-    highline (1.6.18)
+    highline (1.6.19)
     httparty (0.11.0)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     i18n (0.6.1)
+    jekyll (1.0.3)
+      classifier (~> 1.3)
+      colorator (~> 0.1)
+      commander (~> 4.1.3)
+      directory_watcher (~> 1.4.1)
+      kramdown (~> 1.0.2)
+      liquid (~> 2.3)
+      maruku (~> 0.5)
+      pygments.rb (~> 0.5.0)
+      safe_yaml (~> 0.7.0)
     json (1.7.7)
     kgio (2.8.0)
-    kramdown (0.14.2)
+    kramdown (1.0.2)
     launchy (2.3.0)
       addressable (~> 2.3)
     liquid (2.5.0)
@@ -63,7 +58,8 @@ GEM
     multi_xml (0.5.3)
     nokogiri (1.5.9)
     posix-spawn (0.3.6)
-    pygments.rb (0.4.2)
+    psych (1.3.4)
+    pygments.rb (0.5.2)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
@@ -127,9 +123,10 @@ DEPENDENCIES
   domainatrix (~> 0.0.11)
   foreman (~> 0.57.0)
   haml (~> 3.1.6)
-  jekyll!
+  jekyll (~> 1.0)
   json
   nokogiri (~> 1.5.5)
+  psych (~> 1.3.4)
   rack-rewrite (~> 1.2.1)
   rack-test (~> 0.6.2)
   rb-fsevent (~> 0.9.1)
