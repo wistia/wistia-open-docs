@@ -3,7 +3,7 @@ title: Use Wistia With a MailChimp Email Campaign
 layout: post
 description: Have a MailChimp Campaign? Have a Wistia account? Combine their powers for all sorts of awesome.
 footer: 'for_intermediates'
-category: Public Sharing
+category: integrations
 ---
 
 {% post_image hashed_id: '79ba6d71f2de6aa71d02bcecaf2fe823ea09ec02', width: 200, class: 'intro_image float_right' %}
