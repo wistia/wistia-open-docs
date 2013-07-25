@@ -110,14 +110,18 @@ no_nav: true
             %a{ href: "{{ '/integrations' | post_url }}" } 
               Integrations Index
           %li
+            %a{ href: "{{ '/hubspot' | post_url }}" }
+              HubSpot
+          %li
+            %a{ href: "{{ '/mailchimp' | post_url }}" }
+              MailChimp
+          %li
             %a{ href: "{{ '/drupal' | post_url }}" } Drupal
           %li
             %a{ href: "{{ '/wordpress' | post_url }}" } WordPress
           %li
             %a{ href: "{{ '/google-analytics' | post_url }}" } 
               Google Analytics
-          %li
-            %a{ href: "{{ '/joomla' | post_url }}" } Joomla
       #publicSharing.column.right.thirdRow
         %h2
           %a{ href: "{{ 'public-sharing' | category_url }}" } 
