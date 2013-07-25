@@ -30,7 +30,7 @@ and select *Setup An Email Provider*.
 
 Select HubSpot from the list, and then click <span class='faux_button'>Configure</span>.
 
-{% post_image hashed_id: '', class: 'center' %} #HUB_ID
+{% post_image hashed_id: '56f97c3d6a0e46bff145aaf21731d64566aed330', class: 'center' %}
 
 For HubSpot configuration, you will need your *Hub ID*, *username*, and
 *password*. Your *Hub ID* can be found in the lower-right-hand corner of any
