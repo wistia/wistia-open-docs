@@ -28,7 +28,7 @@ and select *Setup An Email Provider*.
 
 {% post_image hashed_id: "1a41347bfeb5390f3ed666167b39b751e565fe2b", class: 'center' %}
 
-Select HubSpot from the list, and then click <span class='faux_button'>Configure</span>.
+Select HubSpot from the list, and then click <span class='faux_button'>Configure</span>
 
 {% post_image hashed_id: '56f97c3d6a0e46bff145aaf21731d64566aed330', class: 'center' %}
 
@@ -49,17 +49,32 @@ allow you to pass viewing analytics into HubSpot.
 The JavaScript snippet will be added to the *Site Footer HTML* in your HubSpot
 Account.
 
-{% post_image hashed_id: '', class: 'center' %} #CONTENT_SETTINGS
+{% post_image hashed_id: 'b83e5159698404b5e57695caee83ced2b5a2de87', class: 'center' %}
 
 Open the Content > Content Settings area in your account. 
 
-{% post_image hashed_id: '', class: 'center' %} #post_footer
+{% post_image hashed_id: '22f0e988ac098330f63651a96c03dd821ff20073', class: 'center' %}
 
-Add the JavaScript to the *Site Footer HTML* area, as shown in the image below.
+Add the JavaScript to the *Site Footer HTML* area, as shown in the image above.
 
 For easy copying, here is the HubSpot integration JavaScript:
 
-<code class="full_width"><script src="//fast.wistia.com/static/integrations-hubspot-v1.js" async></script></code>
+<code class="full_width">&lt;script src="//fast.wistia.com/static/integrations-hubspot-v1.js" async&gt;&lt;/script&gt;</code>
 
 ## Tracking Form Submissions in HubSpot
 
+So now you have your HubSpot turnstile integration set up, and you've shared
+(or embedded) a video with turnstile turned on. Here's a quick guide to
+tracking those submissions in HubSpot.
+
+{% post_image hashed_id: 'd37a1ea780c75bcdb925551f1684e0f9bbd3fef6', class: 'center' %}
+
+From under the *Contacts* menu in your HubSpot account, select *Forms*.
+
+{% post_image hashed_id: '28a697190baf533e077989bcff33e6f204a79015', class: 'center' %}
+
+Your video should appear in your Forms list, entered under the title of your
+video in your Wistia account. You can check the submissions and take other
+conversion actions from the *Forms* area.
+
+Awesome!
