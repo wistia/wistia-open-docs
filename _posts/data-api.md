@@ -24,7 +24,11 @@ Generate an API password for your account from the *API* area in your Account Da
 #### Authentication
 
 You must use **SSL** (https instead of http) to access the API.
-The API uses **HTTP Basic authentication** to authorize access to the information.
+
+There are two ways to authenticate when accessing the API:
+
+  1. **HTTP Basic authentication** with `api` as your username and your API password as the password.
+  2. Add `api_password` as a parameter when making a request. For example `https://api.wistia.com/v1/medias.json?api_password=xyz123`.
 
 #### JSON vs. XML
 
@@ -2014,9 +2018,9 @@ averagePercentWatched         | This is an integer between 0 and 100.  It shows 
 
 Field   | Description
 --------|-------------
-Id    | Numeric id of the account
-Name  | Account name
-Url | Account's main Wistia URL
+id    | Numeric id of the account
+name  | Account name
+url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
 
 ---
