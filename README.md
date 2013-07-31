@@ -45,6 +45,24 @@ Development
     elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
     rake build
 
+### Installing CoffeeScript
+
+if you don't have homebrew:
+
+    ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+
+if you don't have node installed:
+
+    brew install node 
+
+make sure this is in your `.bashrc`:
+
+    export NODE_PATH=/usr/local/lib/node_modules
+
+install CoffeeScript:
+
+    npm install -g coffee-script
+
 ### How to Add/Update Content
 
 Update markdown files in `_posts` directory. Based on markdown syntax by 
