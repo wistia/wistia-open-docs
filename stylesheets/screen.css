@@ -701,7 +701,7 @@ em { font-style: italic; }
 .content_container { background-color: white; max-width: 860px; padding: 0 70px 35px; border-top: 6px solid #3ea9f5; margin-top: -6px; }
 @media (max-width: 1080px) { .content_container { min-width: 972px; } }
 @media (max-width: 960px) { .content_container { min-width: auto; } }
-.content_container.nav { border-top: 0px solid white; }
+.content_container.nav { border-top: 0px solid white; padding-bottom: 0; }
 
 #post_container { position: relative; left: 242px; text-align: left; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 
