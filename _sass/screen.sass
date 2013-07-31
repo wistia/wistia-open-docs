@@ -65,12 +65,13 @@ em
 #container
   background-color: $gray1
   border-top: 6px solid $gray2
+  padding-bottom: $padding/2
 
 .content_container
   @extend %container
   background-color: white
   max-width: $total_width + $padding
-  padding: 0 $padding
+  padding: 0 $padding $padding/2
   border-top: 6px solid $light_blue
   margin-top: -6px
   +breakpoint(large-screen)

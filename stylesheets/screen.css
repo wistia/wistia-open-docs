@@ -589,7 +589,7 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .devhq_footer_arrow { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #eceef1; }
 
-#container.devhq { position: relative; width: 100%; overflow: hidden; }
+#container.devhq { position: relative; width: 100%; overflow: hidden; padding-bottom: 0; }
 
 .devhq_container { max-width: 1030px; padding: 0 70px; }
 @media (max-width: 1080px) { .devhq_container { min-width: 972px; } }
@@ -651,6 +651,33 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .devhq_footer_arrow { margin: 0 auto; }
 
+#wistia-basics-header .project-description, #media-tiles-container #media-tiles .media-tile .description { color: #161d25; font-size: 16px; line-height: 140%; text-align: left; }
+
+#wistia-basics-header { background-color: white; margin: 30px 0; position: relative; font-family: "Avenir", Futura, Helvetica, sans-serif; }
+#wistia-basics-header ul { text-align: center; }
+#wistia-basics-header .project-title { margin-bottom: 20px; }
+#wistia-basics-header .project-title h1 { font-size: 35px; font-style: normal; text-align: left; }
+#wistia-basics-header .project-description { width: 55%; }
+
+#media-tiles-container { border-top: 1px solid #cbd0d6; margin-bottom: 40px; padding-top: 20px; position: relative; text-align: center; }
+#media-tiles-container #media-tiles { text-align: left; width: 100%; }
+#media-tiles-container #media-tiles h1 { font-size: 54px; text-align: center; }
+#media-tiles-container #media-tiles .row { margin: 20px 0; position: relative; }
+#media-tiles-container #media-tiles .media-tile { background-color: white; font-family: "Avenir", Futura, Helvetica, sans-serif; height: 415px; vertical-align: top; width: 425px; -webkit-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; -moz-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+#media-tiles-container #media-tiles .media-tile.second_column { position: absolute; right: 0; }
+#media-tiles-container #media-tiles .media-tile:hover { background-color: #eceef1; }
+#media-tiles-container #media-tiles .media-tile a { position: relative; display: block; }
+#media-tiles-container #media-tiles .media-tile img { margin: 0 auto; display: block; width: 425px; }
+#media-tiles-container #media-tiles .media-tile em { font-weight: 200; }
+#media-tiles-container #media-tiles .media-tile .info { width: 70%; padding: 30px; }
+#media-tiles-container #media-tiles .media-tile .title { margin-bottom: 10px; }
+#media-tiles-container #media-tiles .media-tile .title a { font-size: 26px; font-weight: 100; text-decoration: none; color: #333333; }
+
+.thumbnail_color { position: relative; cursor: pointer; }
+.thumbnail_color:before { content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: none; }
+
+.media-tile:hover .thumbnail_color:before { content: url("http://embed.wistia.com/deliveries/04ce671a8d70642a150ef2c2ad96d3700e1d4caf.bin"); left: 134px; top: 80px; }
+
 body { font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; color: #161d25; text-align: left; }
 body a { color: #161d25; text-decoration: none; }
 body a:hover { text-decoration: underline; }
@@ -669,9 +696,9 @@ em { font-style: italic; }
 
 .devhq_container, .content_container, .home_container, .category_container { margin: 0 auto; position: relative; }
 
-#container { background-color: #eceef1; border-top: 6px solid #cbd0d6; }
+#container { background-color: #eceef1; border-top: 6px solid #cbd0d6; padding-bottom: 35px; }
 
-.content_container { background-color: white; max-width: 860px; padding: 0 70px; border-top: 6px solid #3ea9f5; margin-top: -6px; }
+.content_container { background-color: white; max-width: 860px; padding: 0 70px 35px; border-top: 6px solid #3ea9f5; margin-top: -6px; }
 @media (max-width: 1080px) { .content_container { min-width: 972px; } }
 @media (max-width: 960px) { .content_container { min-width: auto; } }
 .content_container.nav { border-top: 0px solid white; }
@@ -911,30 +938,3 @@ table tr td pre { margin: 0; padding: 0; }
 .video-info-container .description ul li:hover a:first-child, .video-info-container .description ul li:hover i { color: #40aaef; }
 .video-info-container .description h2 { font-size: 18px; margin: 15px 0; border: none; }
 .video-info-container .description h2 a { color: #161d25; text-decoration: underline; }
-
-#wistia-basics-header .project-description, #media-tiles-container #media-tiles .media-tile .description { color: #161d25; font-size: 16px; line-height: 140%; text-align: left; }
-
-#wistia-basics-header { background-color: white; margin: 30px 0; position: relative; font-family: "Avenir", Futura, Helvetica, sans-serif; }
-#wistia-basics-header ul { text-align: center; }
-#wistia-basics-header .project-title { margin-bottom: 20px; }
-#wistia-basics-header .project-title h1 { font-size: 35px; font-style: normal; text-align: left; }
-#wistia-basics-header .project-description { width: 55%; }
-
-#media-tiles-container { border-top: 1px solid #cbd0d6; margin-bottom: 40px; padding-top: 20px; position: relative; text-align: center; }
-#media-tiles-container #media-tiles { text-align: left; width: 100%; }
-#media-tiles-container #media-tiles h1 { font-size: 54px; text-align: center; }
-#media-tiles-container #media-tiles .row { margin: 20px 0; position: relative; }
-#media-tiles-container #media-tiles .media-tile { background-color: white; font-family: "Avenir", Futura, Helvetica, sans-serif; height: 415px; margin: 0 30px; vertical-align: top; width: 425px; -webkit-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; -moz-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
-#media-tiles-container #media-tiles .media-tile.second_column { position: absolute; right: 0; }
-#media-tiles-container #media-tiles .media-tile:hover { background-color: #eceef1; }
-#media-tiles-container #media-tiles .media-tile a { position: relative; display: block; }
-#media-tiles-container #media-tiles .media-tile img { margin: 0 auto; display: block; width: 425px; }
-#media-tiles-container #media-tiles .media-tile em { font-weight: 200; }
-#media-tiles-container #media-tiles .media-tile .info { width: 70%; padding: 30px; }
-#media-tiles-container #media-tiles .media-tile .title { margin-bottom: 10px; }
-#media-tiles-container #media-tiles .media-tile .title a { font-size: 26px; font-weight: 100; text-decoration: none; color: #333333; }
-
-.thumbnail_color { position: relative; cursor: pointer; }
-.thumbnail_color:before { content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: none; }
-
-.media-tile:hover .thumbnail_color:before { content: url("http://embed.wistia.com/deliveries/04ce671a8d70642a150ef2c2ad96d3700e1d4caf.bin"); left: 134px; top: 80px; }
