@@ -1,0 +1,103 @@
+// main Wistia Basics page
+
+%wistia_basics_paragraph
+  color: $text_color
+  font-size: 16px
+  line-height: 140%
+  text-align: left
+
+#wistia-basics-header
+  background-color: white
+  margin: 30px 0
+  position: relative
+  font-family: $title-fonts
+  ul
+    text-align: center
+  .project-title
+    margin-bottom: 20px
+    h1
+      font:
+        size: 35px
+        style: normal
+      text-align: left
+  .project-description
+    @extend %wistia_basics_paragraph
+    width: 55%
+
+#media-tiles-container
+  border-top: 1px solid $accent_gray
+  margin-bottom: 40px
+  padding-top: 20px
+  position: relative
+  text-align: center
+
+  #media-tiles 
+    text-align: left
+    width: 100%
+    h1
+      font-size: 54px
+      text-align: center
+
+    .row
+      margin: 20px 0
+      position: relative
+
+    .media-tile
+      background-color: white
+      font-family: $title-fonts
+      height: 415px
+      margin: 0 30px
+      vertical-align: top
+      width: 425px
+      +box-shadow(rgba(0,0,0,.05), 0, 0, 10px)
+      +col
+      &.second_column
+        position: absolute
+        right: 0
+      &:hover
+        background-color: $background_gray
+      a 
+        position: relative
+        display: block
+      img 
+        margin: 0 auto
+        display: block
+        width: 425px
+      em
+        font-weight: 200
+
+      .info
+        width: 70%
+        padding: 30px
+      .title 
+        margin-bottom: 10px
+        a 
+          font:
+            size: 26px
+            weight: 100
+          text-decoration: none
+          color: #333
+      .description 
+        @extend %wistia_basics_paragraph
+
+// thumbnail coloring psuedo elements
+
+.thumbnail_color
+  position: relative
+  cursor: pointer
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0 
+    right: 0
+    background: none
+
+.media-tile:hover
+  .thumbnail_color:before
+    content: url("http://embed.wistia.com/deliveries/04ce671a8d70642a150ef2c2ad96d3700e1d4caf.bin")
+    left: 134px
+    top: 80px
+
