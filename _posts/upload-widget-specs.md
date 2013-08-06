@@ -131,7 +131,7 @@ The handler receives a string whose possible values are *error* or *timeout*.
         },
 
         'fileQueued': function(file) {
-          $('#output').append('<p>fileQueued: ' + file.name + </p>');
+          $('#output').append('<p>fileQueued: ' + file.name + '</p>');
         },
 
         'uploadProgress': function() {
