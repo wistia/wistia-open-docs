@@ -1307,7 +1307,7 @@ following query parameters to the request URL:
 
 Parameter | Description
 ----------|-------------
-sort_by | The name of the field to sort by.  Valid values are name, created, or updated.  Any other value will cause the results to be sorted by id, which is the default.
+sort_by | The name of the field to sort by.  Valid values are name, created, updated, or position (which will use the same order as the main Wistia interface).  Any other value will cause the results to be sorted by id, which is the default.
 sort_direction (optional, defaults to 1) | This field specifies the direction of the sort.  Valid values are 1 or 0, which specify ascending or descending order, respectively.
 
 For example, if you want to sort your results in descending order by the date 
