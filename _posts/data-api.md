@@ -1301,8 +1301,8 @@ The format of the request should be something like this:
 #### Parameters
 
 **Sorting**<br/>
-You can get the results back sorted by the **name**, **created**, or 
-**updated** fields.  In order to specify how you want the results to be sorted, append one or both of the 
+You can get the results back sorted by the **name**, **created**, 
+**updated**, or **position** fields.  In order to specify how you want the results to be sorted, append one or both of the 
 following query parameters to the request URL:
 
 Parameter | Description
