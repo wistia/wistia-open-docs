@@ -37,9 +37,9 @@ hours_watched | The total amount of time spent watching all of the videos in thi
 
 {% codeblock wistia.json %}
   {
-    &quot;load_count&quot;: 1000,
-    &quot;play_count&quot;: 400,
-    &quot;hours_watched&quot;: 21.9
+    "load_count": 1000,
+    "play_count": 400,
+    "hours_watched": 21.9
   }
 {% endcodeblock %}
 
@@ -83,16 +83,16 @@ hours_watched | The total amount of time spent watching videos in this account o
 {% codeblock example_json.json %}
 [
   {
-    &quot;date&quot;: &quot;2012-10-09&quot;,
-    &quot;load_count&quot;: 100,
-    &quot;play_count&quot;: 80,
-    &quot;hours_watched&quot;: 21.9
+    "date": "2012-10-09",
+    "load_count": 100,
+    "play_count": 80,
+    "hours_watched": 21.9
   },
   {
-    &quot;date&quot;: &quot;2012-10-08&quot;,
-    &quot;load_count&quot;: 60,
-    &quot;play_count&quot;: 45,
-    &quot;hours_watched&quot;: 12.4
+    "date": "2012-10-08",
+    "load_count": 60,
+    "play_count": 45,
+    "hours_watched": 12.4
   }
 ]
 {% endcodeblock %}
@@ -128,10 +128,10 @@ number_of_videos | The total number of videos in this project.
 
 {% codeblock example_json.json %}
 {
-  &quot;load_count&quot;: 5498,
-  &quot;play_count&quot;: 3942,
-  &quot;hours_watched&quot;: 59.8,
-  &quot;number_of_videos&quot;: 8,
+  "load_count": 5498,
+  "play_count": 3942,
+  "hours_watched": 59.8,
+  "number_of_videos": 8,
 }
 {% endcodeblock %}
 
@@ -171,16 +171,16 @@ hours_watched | The total amount of time spent watching all of videos in the pro
 {% codeblock example_json_response.json %}
 [
   {
-    &quot;date&quot;: '2012-11-20',
-    &quot;load_count&quot;: 5498,
-    &quot;play_count&quot;: 3942,
-    &quot;hours_watched&quot;: 59.8
+    "date": '2012-11-20',
+    "load_count": 5498,
+    "play_count": 3942,
+    "hours_watched": 59.8
   },
   {
-    &quot;date&quot;: '2012-11-21',
-    &quot;load_count&quot;: 3568,
-    &quot;play_count&quot;: 1941,
-    &quot;hours_watched&quot;: 32.4
+    "date": '2012-11-21',
+    "load_count": 3568,
+    "play_count": 1941,
+    "hours_watched": 32.4
   },
 ]
 {% endcodeblock %}
@@ -219,12 +219,12 @@ visitors | The total number of unique people that have loaded this video.
 
 {% codeblock example_json_response.json %}
 {
-  &quot;load_count&quot;: 100,
-  &quot;play_count&quot;: 80,
-  &quot;play_rate&quot;: 0.54,
-  &quot;hours_watched&quot;: 21.9,
-  &quot;engagement&quot;: 0.89,
-  &quot;visitors&quot;: 94
+  "load_count": 100,
+  "play_count": 80,
+  "play_rate": 0.54,
+  "hours_watched": 21.9,
+  "engagement": 0.89,
+  "visitors": 94
 }
 {% endcodeblock %}
 
@@ -260,16 +260,16 @@ hours_watched | The total time spent watching this video on the given day.
 {% codeblock example_json_response.json %}
 [
   {
-    &quot;date&quot;: '2012-10-21',
-    &quot;load_count&quot;: 100,
-    &quot;play_count&quot;: 80,
-    &quot;hours_watched&quot;: 21.9
+    "date": '2012-10-21',
+    "load_count": 100,
+    "play_count": 80,
+    "hours_watched": 21.9
   },
   {
-    &quot;date&quot;: '2012-10-22',
-    &quot;load_count&quot;: 140,
-    &quot;play_count&quot;: 96,
-    &quot;hours_watched&quot;: 26.9
+    "date": '2012-10-22',
+    "load_count": 140,
+    "play_count": 96,
+    "hours_watched": 26.9
   }
 ]
 {% endcodeblock %}
