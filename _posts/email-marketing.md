@@ -25,35 +25,37 @@ need to embed it on your landing page (if you're planning to use one) and also
 create an email embed.
 
 Start by embedding the video on the landing page you'll be using (if you're 
-having it point to your Wistia Media Page, you're all set).  Follow the embedding 
-steps if you have any trouble: [Embedding Your Video]({{ '/embedding' | post_url }}).
+having it point to your Wistia Media Page, you're all set).  
 
-{% post_image hashed_id: 'd129371996ba14ee95adaf0fc17ce5b3bbf2f31d', class: 'center' %}
+If you are having any trouble, check out our [customizing]() and [embedding]() 
+articles for more.
 
-Next, select `Email Marketing` from under the Media Actions drop-down menu.
+{% post_image hashed_id: '040563313d58c1fd7e00a8f9daae83061838ddc0', class: 'center' %}
+
+Next, select `Embed & Share` from under the Video Actions menu.
 
 ---
 
 ### Select Your Email Marketing Provider
 
-Next, select your provider from the drop-down list.  We've got a whole list of 
+Select your provider from the drop-down list.  We've got a whole list of 
 the best in the biz, like [Constant Contact](http://constantcontact.com), 
 [MailChimp](http://mailchimp.com), [Campaign Monitor](http://www.campaignmonitor.com), 
 and [MadMimi](http://madmimi.com).
 
+{% post_image hashed_id: 'd7b89dafd94baf1a5f103bf7ffea346ba3dcb126', class: 'center' %}
+
 After you choose your email marketing provider, you can customize the settings 
 for your campaign.
 
-{% post_image hashed_id: '43a348de097029eb4e1b4040f0407e4095939a11', class: 'center' %}
-
-Thumbnail width refers to the size of the thumbnail image in your email.  Do 
-you want it to dominate the email? Or should it be playing 3rd fiddle?  450px 
+`Thumbnail Size` refers to the size of the thumbnail image in your email.  Do 
+you want it to dominate the email? Or should it be playing 3rd fiddle? `450px` 
 is our standard width, but you can change it as you see fit.
 
-Link to means where people will end up after clicking the thumbnail image.  
-By default, it's a public link to the media in your Wistia account. But if you 
+`Links to` means where people will end up after clicking the thumbnail image.  
+By default, it's a public link to the media in your Wistia account. If you 
 want to set up a landing page instead, just change the link here.  One thing to 
-note is that wherever this points, the video HAS to be embedded on that page in 
+note is that wherever this points, the video **has** to be embedded there in 
 order to track the stats correctly.
 
 ---
@@ -61,10 +63,15 @@ order to track the stats correctly.
 ### Create the Campaign
 
 Once you've got your settings dialed in, copy the "video merge tag", and paste 
-it into the HTML editor for your email provider.  Voila! The thumbnail image 
-will appear, attached to a link to your video.  And in the background, we'll be 
-collecting stats on which email addresses viewed your videos (available in the 
-Public Stats area of your account).
+it into the HTML editor for your email provider. It may show up as just the
+merge tag - try the *preview* mode in your email campaign provider to see how
+it displays. When you are satisfied, send it out to your loving audience!
+
+
+Voila! The thumbnail image will appear in your email, linked to the page you 
+specified with your video. In the background, we'll be collecting stats on 
+which viewers in your list viewed the video (available in the Public Stats area
+of your account).
 
 {% post_image hashed_id: '44087ef2759f48e1b04d72cac7ba90e058f0f388', class: 'center' %}
 
