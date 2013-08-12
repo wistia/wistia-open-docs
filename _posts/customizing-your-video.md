@@ -11,7 +11,7 @@ post_intro: <p>Your video content is truly powerful - and Wistia customization c
 {% post_image hashed_id: 'db0025a27de21064aa0bb2c5de505445643d1795', class: 'center' %}
 
 After uploading a new video, the *customization* step gets it ready for the big
-time. Open the customization panel by selecting *Customize* from under the
+time. Open the customization panel by selecting *Customize* from the
 <span class="action_menu">Video Actions</span> menu.
 
 {% post_image hashed_id: '1cb27f6a4d8a302de3f2e6fc72c44b2ff15236a1', class: 'center' %}
@@ -24,7 +24,7 @@ video. Let's walk through the customization options, along with some of the
 
 {% post_image hashed_id: 'ce7c8e288eadec78f049a63a4ed6660e09123dc9', width: 300, class: 'float_left' %}
 
-The *Appearance* options are about getting your video looking *sharp*. 
+The *Appearance* options are about getting your video looking *sharp*.
 
 Make sure the **thumbnail** is the one you want (we choose one for you from the middle
 of the video by default, so you may want to [change it]('#changing-the-thumbnail')).
@@ -38,7 +38,7 @@ option to **leave comments**.
 ## Changing the Thumbnail
 
 Video still, poster image, first frame...we've heard all sorts of terms for the
-image that appears when the page loads, before your viewer's begin watching. 
+image that appears when the page loads, before your viewer's begin watching.
 We call it the **thumbnail**.
 
 By default, we select the middle frame of the video. But sometimes this can
@@ -68,7 +68,7 @@ the video and make it easy to share the video in social networks.
 
 {% post_image hashed_id: '2ae01359e66b3db9d58c4b7ddd48a14d8ec4ed7e', class: 'float_right', width: 300 %}
 
-The Social Bar has a bunch of options, from social networks like Twitter and 
+The Social Bar has a bunch of options, from social networks like Twitter and
 Facebook to actions like *share stats* and *download*.
 
 ### Configuring the Social Bar Buttons
@@ -282,4 +282,3 @@ A: Unfortunately, because of the limitations of Facebook embedding, we are not
 able to push all of your awesome video customizations over there. That being 
 said, we are hopeful that Facebook will start to update their methods for 
 pulling video information so that we can get the customizations flowing!
-
