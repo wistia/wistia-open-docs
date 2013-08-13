@@ -108,7 +108,7 @@ your site.
 Two Popover Embed advanced options:
 
 * **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use 
-  a URL as an embed code. CMS like Wordpress support adding an oEmbed link 
+  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link 
   to your site/blog post markup, and generating an embed code (hence it doesn't
   break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
   Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
