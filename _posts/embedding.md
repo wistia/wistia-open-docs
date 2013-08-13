@@ -128,9 +128,9 @@ page editor (which could be a CMS, blog, HTML document, etc.) This is where it
 gets complicated to talk in specifics, since each website management system is
 different, but here are some tips:
 
-  1. If you are using a CMS, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
-  2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
-  3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
+1. If you are using a CMS, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
+2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
+3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
 
 
 ## Embedded Video Stats
