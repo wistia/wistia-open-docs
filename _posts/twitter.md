@@ -21,19 +21,16 @@ can start following the handle you specified, and the video will just keep on
 playing without interruption.
 
 To use the Twitter Follow lab, head to your account and open the video you would
-like to embed. Under the *Video Actions* menu, select *embed*.
+like to use. First, get it [customized]({{ '/customizing-your-video' | post_url }}) 
+the way you want. Next, select *Embed & Share* from the <span class="action_menu">Video Actions</span> menu.
 
-{% post_image hashed_id: '03f01b4127731be530fc747141b978ad90ea1d74', class: 'center' %}
+{% post_image hashed_id: 'c184782eab1ae24589872575580f084bd1de6bca', class: 'center' %}
 
-In the SuperEmbed builder, you should customize the embed to look the way you like.
-One note, the Twitter Follow lab includes a Post-Roll call-to-action, so at this
-time you cannot use both (i.e. any CTA you create in the SuperEmbed builder will
-be overwritten by the Twitter Follow Lab).
+In the **Inline Embed** area, copy the Embed Code.
 
-Once you are ready to start adding Twitter follow functionality to your embed,
-select *copy* from the embed code box in the upper-right hand corner.
+{{ "The Twitter Follow lab uses a Post-Roll call-to-action, so you cannot use a customize call-to-action and the Twitter Follow lab (it will be overwritten if you do)." | note }}
 
-{% post_image hashed_id: 'f3e40d2a394ac64a751a238272b96900795d17f2', class: 'center' %}
+{% post_image hashed_id: 'd6cccb65c6f27bb6735bf1372c126075172910cd', class: 'center' %}
 
 Now that you have your embed code copied, open the [Twitter Follow lab](http://wistia.com/labs/twitter-follows)
 paste your embed code into the box labeled *Paste embed code* (aren't we good with names?).
@@ -66,18 +63,18 @@ approval? These guys!
 So, you're asking, how can I take advantage of this awesome-ness.  Here we go:
 
 Open up the media in your account that you want to share in your Twitter feed.
-From under the *Video Actions* menu, select *Share*.
+From the <span class="action_menu">Video Actions</span> menu, select *Embed & Share*.
 
-{% post_image hashed_id: 'e14928022ea78e4f0e5aaa6ea71a268d1ddaa2cc', class: 'center' %}
+{% post_image hashed_id: 'c184782eab1ae24589872575580f084bd1de6bca', class: 'center' %}
+
+In the *Share & Embed* window, select the *Social Sharing* area at the top. 
+If you don't have a description for your video yet, we will include a line 
+recommending you do so. Descriptions show up on the Twitter cards, which makes 
+them pretty useful for setting context for your viewers and piquing their interest.
 
 {{ "If your Project is currently set to Private, you will be prompted to switch it to Public. This means viewers who click through the link will be able to watch your video." | note }} 
 
-In the *Share* modal, select the *Tweet* button. If you don't have a description
-for your video yet, we will include a line recommending you do so. The descriptions
-show up on the Twitter cards, which makes them pretty useful for setting context
-for your viewers and piquing their interest.
-
-{% post_image hashed_id: '3a0bb650347949e376ae9a4463b528b5af959aa0', class: 'center' %}
+{% post_image hashed_id: '7834d139a11867813ded24d2bc75c67597d7754f', class: 'center' %}
 
 After you click the *Tweet* button, the Twitter tweet modal will appear (you may
 be asked to login). The default tweet text is the name of the media and the 
