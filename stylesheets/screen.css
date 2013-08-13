@@ -824,6 +824,7 @@ em { font-style: italic; }
 
 .center { text-align: center; }
 
+.intro_image, .integration_logo { border: none; }
 .intro_image .float_left, .integration_logo .float_left { float: left; margin: 9px 25px 25px 0px; }
 .intro_image .float_right, .integration_logo .float_right { float: left; margin: 9px 25px 25px 0px; }
 

@@ -11,9 +11,22 @@ description: WordPress is one of the most popular blog/website platforms out the
 
 Using the [Wistia WordPress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin), you can add your embed codes and they will be protected. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background (as it should).
 
-<div class="clear"></div>
-
 {{ "Wistia embed codes can only be used with WordPress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between WordPress.com hosted blogs and WordPress installs</a>." | note }}
+
+## Using the oEmbed Embed Code
+
+The [Wistia WordPress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin)
+allows for using oEmbed embed codes, which are really simple links that don't
+break in Wordpress (yay!).
+
+To access them, first [customize your video]({{ '/customizing-your-video' | post_url }}),
+then open the *Embed & Share* window from the <span class="action_menu">Video
+Actions</span> menu. Select the **Inline Embed** option.
+
+{% post_image hashed_id: '45141c78d70b64b9b2bd3ca682c51c6e69fd73fb', class: 'center' %}
+
+Under the **Advanced Options** area, select the *oEmbed* checkbox. The embed
+code will update to an oEmbed URL, which you can add to your Wordpress post.
 
 ## Tips for Using WordPress
 
