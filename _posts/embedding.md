@@ -69,7 +69,7 @@ Once you have your settings dialed in, you can *copy* the embed code at the top.
 Two Inline Embed advanced options:
 
 * **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use 
-  a URL as an embed code. CMS like Wordpress support adding an oEmbed link 
+  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link 
   to your site/blog post markup, and generating an embed code (hence it doesn't
   break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
   Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
@@ -128,7 +128,7 @@ page editor (which could be a CMS, blog, HTML document, etc.) This is where it
 gets complicated to talk in specifics, since each website management system is
 different, but here are some tips:
 
-1. If you are using a CMS, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
+1. If you are using a CMS suite, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
 2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
 3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
 
