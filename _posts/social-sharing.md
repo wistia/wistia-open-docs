@@ -27,15 +27,12 @@ Description* to get started.
 {% post_image hashed_id: '117bb6cb93218c3779224bfc8ab5b3a4ca0e7591', class: 'center' %}
 
 Select *Embed & Share* under the <span class="action_menu">Video Actions</span> menu.
-
-{% post_image hashed_id: '1683bf04ea26b9a6e036eac654e8bf837afecdd5', class: 'center' %}
-
 In the *Embed & Share* window, select the *Social Sharing* option at the top.
 
 {% post_image hashed_id: '7834d139a11867813ded24d2bc75c67597d7754f', class: 'center' %}
 
-Enter the URL in Facebook's *Status Update*. The video thumbnail and
-description will be pulled in and ready to share!
+Copy the URL from the *Link* box, and enter it in Facebook's *Status Update*. 
+The video thumbnail and description will be pulled in and ready to share!
 
 {% post_image hashed_id: 'b6ac0cffb05da0566bff1f37c25f147f72c3f024', class: 'center' %}
 
