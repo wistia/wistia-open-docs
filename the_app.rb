@@ -16,6 +16,7 @@ class TheApp < Sinatra::Base
     r301 %r{/randor-basics/?}, "#{$config.basepath}/wistia-basics-getting-started"
     r301 %r{/randor-(\w+)/?}, "#{$config.basepath}/wistia-basics-$1"
     r301 %r{/randor?}, "#{$config.basepath}/wistia-basics"
+    r301 %r{/embed-screen?}, "#{$config.basepath}/customizing-your-video"
     r301 "#{$config.basepath}/construct-an-embed-code", "#{$config.basepath}/embed-api"
     rewrite %r{#{$config.basepath}(.*)}, '$1'
   end
