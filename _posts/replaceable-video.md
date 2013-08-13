@@ -15,7 +15,7 @@ Just like Ben says in the video, we all make mistakes.  If you've embedded a vid
 
 ## Select the Video to be Replaced
 
-{% post_image hashed_id: '05b52293ca30983d8bf5203c78c07857553d6964', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '4fdffd1137f199d42da517826c99b7b4142b3e88', class: 'center' %}
 
 Open up the media page in your account for the video that needs replacing.
 
@@ -24,19 +24,19 @@ Find the "Replace Video" option under the green Media Actions drop-down menu
 
 ## Choose the Replacement Video 
 
-{% post_image hashed_id: '3cdd2c451899e0b35a26717f3c95eb8199bfd4a6', width: 660, class: 'center' %}
+{% post_image hashed_id: '3cdd2c451899e0b35a26717f3c95eb8199bfd4a6', class: 'center' %}
 
 In the pop-up window, selecting "Upload Replacement" will bring up a dialogue box so that you can locate the video you want to replace the current video with.
 
 ## After Upload
 
-{% post_image hashed_id: 'a5c47cabc5bf11548bc57f5d19cf81e16d230cdf', width: 660, class: 'center' %}
+{% post_image hashed_id: 'a5c47cabc5bf11548bc57f5d19cf81e16d230cdf', class: 'center' %}
 
 Once the new video is finished uploading, Wistia will encode it and perform the backend work to replace the old video with the new one, immediately, across the internet.
 
 When the encoding/replacing process is done, the new video will appear in your account.  No need to update embed codes, URLs, or sharing.  All done!
 
-{% post_image hashed_id: 'eadf1d5c180b2580c747542f5ffe9e337976ac9a', width: 660, class: 'center' %}
+{% post_image hashed_id: 'eadf1d5c180b2580c747542f5ffe9e337976ac9a', class: 'center' %}
 
 Geez, Adam looks good, doesn't he?
 
