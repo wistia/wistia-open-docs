@@ -18,7 +18,9 @@ no_nav: true
           %li
             %a{ href: "{{ '/upload-video' | post_url }}" } Uploading Video
           %li
-            %a{ href: "{{ '/embedding' | post_url }}" } Embedding Your Video
+            %a{ href: "{{ '/customizing-your-video' | post_url }}" } Customizing Your Video
+          %li
+            %a{ href: "{{ '/embedding' | post_url }}" } Embedding
           %li
             %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } Wistia Analytics
       #search.columnBig.firstRow.homepage-search
@@ -51,14 +53,14 @@ no_nav: true
       #embedding.column.middle.secondRow
         %h2
           %a{ href: "{{ 'embedding' | category_url }}" } 
-            Embedding
+            Customize & Embed
         %ul
+          %li
+            %a{ href: "{{ '/customizing-your-video' | post_url }}" } 
+              Customizing Your Video
           %li
             %a{ href: "{{ '/embedding' | post_url }}" } 
               Embedding Video on Your Website
-          %li
-            %a{ href: "{{ '/embed-screen' | post_url }}" } 
-              Using the SuperEmbed Screen
           %li
             %a{ href: "{{ '/playlists' | post_url }}" } 
               Video Playlists
@@ -94,7 +96,7 @@ no_nav: true
         %ul
           %li
             %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } 
-              Analytics for Embedded Video
+              Analytics for Public Video
           %li
             %a{ href: "{{ '/private-analytics' | post_url }}" } 
               Analytics for Private Video
@@ -116,9 +118,11 @@ no_nav: true
             %a{ href: "{{ '/mailchimp' | post_url }}" }
               MailChimp
           %li
-            %a{ href: "{{ '/drupal' | post_url }}" } Drupal
+            %a{ href: "{{ '/drupal' | post_url }}" } 
+              Drupal
           %li
-            %a{ href: "{{ '/wordpress' | post_url }}" } WordPress
+            %a{ href: "{{ '/wordpress' | post_url }}" } 
+              WordPress
           %li
             %a{ href: "{{ '/google-analytics' | post_url }}" } 
               Google Analytics
@@ -131,9 +135,11 @@ no_nav: true
             %a{ href: "{{ '/email-marketing' | post_url }}" } 
               Email Marketing
           %li
-            %a{ href: "{{ '/video-seo' | post_url }}" } Video SEO
+            %a{ href: "{{ '/video-seo' | post_url }}" } 
+              Video SEO
           %li
-            %a{ href: "{{ '/podcast' | post_url }}" } RSS/Podcasts
+            %a{ href: "{{ '/podcast' | post_url }}" } 
+              RSS/Podcasts
           %li
             %a{ href: "{{ '/replaceable-video' | post_url }}" }
               Replaceable Video
