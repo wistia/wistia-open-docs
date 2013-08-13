@@ -24,15 +24,15 @@ First, open the media in your account and make sure it has a description! If it
 doesn't currently have a description, hover under the title and select *Add a
 Description* to get started.
 
-{% post_image hashed_id: '4d24a3ea198b830c5127036e63c2ebbd09e55958', class: 'center' %}
+{% post_image hashed_id: '117bb6cb93218c3779224bfc8ab5b3a4ca0e7591', class: 'center' %}
 
-Select *Share* under the <span class="action_menu">Video Actions</span> menu.
+Select *Embed & Share* under the <span class="action_menu">Video Actions</span> menu.
 
 {% post_image hashed_id: '1683bf04ea26b9a6e036eac654e8bf837afecdd5', class: 'center' %}
 
-In the Share Modal, copy the URL provided and open your Facebook account.
+In the *Embed & Share* window, select the *Social Sharing* option at the top.
 
-{% post_image hashed_id: '60b1fe32117e941651662d9c226fcc8765b9a7d6', class: 'center' %}
+{% post_image hashed_id: '7834d139a11867813ded24d2bc75c67597d7754f', class: 'center' %}
 
 Enter the URL in Facebook's *Status Update*. The video thumbnail and
 description will be pulled in and ready to share!
