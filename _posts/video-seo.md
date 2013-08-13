@@ -17,13 +17,13 @@ post_intro: <p>Video SEO is the act of proactively submitting your content and p
 
 ## Video Walkthrough
 
-{% wistia_embed hashed_id: 38bcf1939d, videoHeight: 371 %}
+{% wistia_embed hashed_id: 38bcf1939d, videoHeight: 338 %}
 
 ----
 
 ## Getting Set Up
 
-The typical Video SEO workflow is: create the sitemap, add it to the 'root'
+The typical Video SEO workflow is a mess: create the sitemap, add it to the 'root'
 folder of your website, submit to Google through Webmaster Tools, and check
 periodically to make sure it is still operating properly.  Each time you add a
 new video, you'd need to re-create the sitemap and re-submit to Google. *Yuck*.
@@ -74,16 +74,16 @@ robots.txt file. Refer to our
 [WordPress doc page]({{ '/wordpress#using_wistia_video_seo_with_wordpress' | post_url }}) 
 for more info.
 
-{% post_image hashed_id: 'cd5333ac993a15daeab379729834217492736b57', width: 320, class: 'float_right' %}
-
 You will be adding one line to your robots.txt file that notifies Google your
 video SEO sitemap is hosted by Wistia. To find the line you'll be adding for
-your account, open up the Video SEO area of your account, which can be found
-under the Account menu.
+your account, open up the *Video SEO* area of your account, which can be found
+under the *Account* menu.
 
-<div class="clear"></div>
+{% post_image hashed_id: '9066ac8fec778db22277a2012c0c0be4439d1c2d', class: 'center' %}
 
-{% post_image hashed_id: 'adc7dbb2d06e6ff59a4f99898c852f4785f806ac', width: 320, class: 'float_right' %}
+The three steps to getting your sitemap set up are outlined on the Video SEO page.
+
+{% post_image hashed_id: 'f4b03dbe2604ef4825da70899fec49d7b8bbf27f', class: 'center' %}
 
 Once you have added the line to your robots.txt and typed the URL, click the
 <span class="faux_button">VERIFY YOUR ROBOTS.TXT</span> button.
@@ -104,7 +104,7 @@ video title, decription, etc. and translate that into nice meta content for
 spiders to crawl (it's not as icky as it sounds).
 
 To get one of these for your video, open the video you'd like to embed, and 
-select *&lt;/&gt; Embed* from the <span class="action_menu">Media Actions</span>
+select *&lt;/&gt; Embed & Share* from the <span class="action_menu">Video Actions</span>
 menu. For more information on embedding, review the 
 [embedding a video]({{ '/embedding' | post_url }}) guide.
 
@@ -112,7 +112,7 @@ menu. For more information on embedding, review the
 
 ## Making a video sitemap entry
 
-{% post_image hashed_id: 'db21c33ccc521d51de35d2db7804823f1d7a2565', class: 'center' %}
+{% post_image hashed_id: 'c65b0df80e77faa460ec36a24aaee1061ee0879e', class: 'center' %}
 
 Once you have verified the entry in your robots.txt file, you will be able to
 add entries to your video sitemap.  Once a video sitemap entry is made, it will
@@ -124,9 +124,8 @@ talk all about your content and why it is valuable.
 
 After you have embedded a video on your website, go to your video's media page
 (i.e. the page in Wistia where you can view the video, which has a URL like
-`<youraccount>.wistia.com/medias/12345`).  Hover over the
-<span class="action_menu">Media Actions</span> menu and select
-*Add to SEO sitemap*.
+`<youraccount>.wistia.com/medias/12345`).  Select *Add to SEO Sitemap* form the 
+<span class="action_menu">Video Actions</span> menu.
 
 {{ "The Video SEO functionality will only work with SEO embeds!" | note }}
 
@@ -162,7 +161,7 @@ be automatically updated and the new changes that should be indexed.
 
 ## Managing your video sitemap entries
 
-{% post_image hashed_id: 'cd5333ac993a15daeab379729834217492736b57', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '9066ac8fec778db22277a2012c0c0be4439d1c2d', class: 'center' %}
 
 SEO Sitemap entries can be managed from the video SEO dashboard within your
 Wistia account.
