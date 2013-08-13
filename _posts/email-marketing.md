@@ -27,12 +27,13 @@ create an email embed.
 Start by embedding the video on the landing page you'll be using (if you're 
 having it point to your Wistia Media Page, you're all set).  
 
-If you are having any trouble, check out our [customizing]() and [embedding]() 
+If you are having any trouble, check out our 
+[customizing]({{ '/customizing-your-video' | post_url }}) and [embedding]({{ '/embedding' | post_url }}) 
 articles for more.
 
 {% post_image hashed_id: '040563313d58c1fd7e00a8f9daae83061838ddc0', class: 'center' %}
 
-Next, select `Embed & Share` from under the Video Actions menu.
+Next, select *Embed & Share* from the <span class="action_menu">Video Actions</span> menu.
 
 ---
 
@@ -48,21 +49,21 @@ and [MadMimi](http://madmimi.com).
 After you choose your email marketing provider, you can customize the settings 
 for your campaign.
 
-`Thumbnail Size` refers to the size of the thumbnail image in your email.  Do 
+**Thumbnail Size** refers to the size of the thumbnail image in your email.  Do 
 you want it to dominate the email? Or should it be playing 3rd fiddle? `450px` 
 is our standard width, but you can change it as you see fit.
 
-`Links to` means where people will end up after clicking the thumbnail image.  
+**Links to** means where people will end up after clicking the thumbnail image.  
 By default, it's a public link to the media in your Wistia account. If you 
-want to set up a landing page instead, just change the link here.  One thing to 
-note is that wherever this points, the video **has** to be embedded there in 
-order to track the stats correctly.
+want to set up a landing page instead, just change the link here.  
+
+{{ "The video must be embedded at the Links to URL to track the stats correctly." | note }}
 
 ---
 
 ### Create the Campaign
 
-Once you've got your settings dialed in, copy the "video merge tag", and paste 
+Once you've got your settings dialed in, copy the video merge tag, and paste 
 it into the HTML editor for your email provider. It may show up as just the
 merge tag - try the *preview* mode in your email campaign provider to see how
 it displays. When you are satisfied, send it out to your loving audience!
