@@ -29,23 +29,22 @@ Let's jump in to creating and using your captions and transcripts.
 
 ## Select Your Video
 
-{% post_image hashed_id: '6cd1849af804ba034c02a86dbc7dc1e68ff102bb', class: 'center' %}
-
-First, navigate to the media page for the video you'd like to transcribe (the
+First, navigate to the video page for the video you'd like to transcribe (the
 page where you can play the video itself).
 
 Under the <span class='action_menu'>Video Actions</span> menu, select the
-*Captions* option.
+*Customize* option.
 
-{% post_image hashed_id: '8c9d8d35d7d4fe4e5ff536c519ce42cf5c6ca44e', class: 'center' %}
+{% post_image hashed_id: '18aaa114cfb74eeccf002eaf18ec07f40b530ccf', class: 'center' %}
 
-Selecting *Captions* launches a dialogue box for pricing and ordering your transcription.
+From the *Customize Panel*, select the *Captions* settings area.
 
-* If you'd like to have us create the transcript for your video, select the <span
-  class="faux_button">PURCHASE TRANSCRIPT</span> option. The transcription should
-  be ready within five business days.
+{% post_image hashed_id: 'b1909f6eb16dba8bd49786323e2d34c1d459b5b8', class: 'float_right', width: 300 %}
+
+* If you'd like to have us create the transcript for your video, select the 
+  *Order Captions* option. The transcription should be ready within five business days.
 * If you already have an [SRT file](http://en.wikipedia.org/wiki/SubRip) ready
-  to upload, select the <span class="faux_button">UPLOAD .SRT</span> option.
+  to upload, select the *Upload SRT* option.
 
 Either way, you can use the single transcription to create an interactive
 transcript OR to add closed captioning to your video.
@@ -59,19 +58,18 @@ button will appear to all viewers who view the video within your account. The
 caption or transcription-enabled video is now ready to be embedded on your site
 as well.
 
-To embed your video with transcription or captions, select the &lt;/&gt; Embed
-action from under the <span class='action_menu'>Video Actions</span> as you
-normally would to embed your video (for more help on this, head over here:
-[embedding a video]({{ '/embedding' | post_url }})).
+To customize your video with transcription or captions, select the *Customize*
+from the <span class='action_menu'>Video Actions</span> menu. Open the
+*Captions* customization area.
 
-{% post_image hashed_id: 'a46bd4616031aa70d471a6172b954af38f857669', class: 'center' %}
+{% post_image hashed_id: 'afd727efc19ee2923393848bea8e87a9d14e6179', class: 'center' %}
 
-From inside the [SuperEmbed builder]({{ '/embed-screen' | post_url }}), look
-for the captions area. Inside, choose if you'd like to use a transcript or
-closed captioning, and whether you'd like it displayed by default.
+Inside the Captions customization area, you can choose to *Edit* your SRT file, 
+*Download* your SRT file, and *Delete* your SRT file.
 
-Once that is complete, you can copy out your updated embed code, and paste it
-on your site for a video with closed captioning or an interactive transcript!
+If you set your captions to show by default, you can now go through the
+[embedding process]({{ '/embedding' | post_url }}) and your captions will
+appear automatically on your site!
 
 ## Captions...on an iPhone!
 
@@ -95,12 +93,11 @@ it should be!
 
 ## Editing Your Transcription
 
-{% post_image hashed_id: '50790ac6c8ec8e44d5bb0e23897ff65e89bf00ad', class: 'center' %}
-
 If you spot an error in the automated transcription we produce for you, or just
-need to update your SRT file, you can do that easily by selecting the
-*Captions* option under the <span class="action_menu">Video Actions</span>
-after your transcription is complete.
+need to update your SRT file, you can do that easily by selecting the *Edit* option 
+in the Captions area of the *Customize Panel*.
+
+{% post_image hashed_id: '41726c8fe540ef97a25ca8042d7358e25ed1cc70', class: 'center' %}
 
 {{ "Make sure to keep the timing in line! If you update the content of your video, the timing may have changed. Make sure to note that in your SRT file!" | note }}
 
