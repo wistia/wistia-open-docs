@@ -290,6 +290,7 @@ playbar               | boolean | Show playbar. Default is true.
 playerColor           | string  | Set custom color on play button/controls. HTML5 player has access to custom play button color only.
 smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.
 stillUrl              | string  | The still image that should appear before the video is played.
+stillSnap             | boolean | For thumbnails that are different aspect ratio than the video, set to *false*. Default is *true*.
 time                  | float   | Set a starting time for the video on load. If you'd like the video to also play immediately, use the autoPlay parameter.
 trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
 videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam)
