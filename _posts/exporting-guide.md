@@ -256,4 +256,5 @@ In the *Recording* preference category, select *convert to Windows Media Player
 file*.
 
 And that is it! Your WMV will encode at much higher quality after being
-uploaded to Wistia than the default G2M4 video.
+uploaded to Wistia than the default G2M4 video. If you have any trouble, check
+out the [GoToMeeting Transcoding Wizard](http://support.citrixonline.com/en_US/GoToMeeting/knowledge_articles/000081292?title=Using+The+GoToMeeting+Transcoding+Wizard%7D).
