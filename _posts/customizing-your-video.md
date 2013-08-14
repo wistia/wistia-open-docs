@@ -215,6 +215,12 @@ describe the customizations on the video, which if you ask me is pretty slick.
 
 ## Customization FAQ
 
+**Q: Do you have an awesome animation explaining all these differences?**
+
+A: Yes, yes we do.
+
+{% wistia_embed hashed_id: tn01bs4yyv %}
+
 **Q: I have 135 videos embedded on my website...do I have to re-embed everything? HALP!**
 
 A: No, all of your embeds will continue to work exactly as they always have.
