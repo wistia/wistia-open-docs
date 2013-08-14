@@ -60,12 +60,6 @@ task :update_from_git do
   `git fetch && git reset --hard origin/master`
 end
 
-desc "run specs"
-RSpec::Core::RakeTask.new(:spec)
-
-desc "Run RSpec tests!"
-task :default => :spec
-
 # add a title to a post like np title="Blah this is my title"
 desc "Create a new post"
 task :np do
