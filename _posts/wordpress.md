@@ -17,7 +17,7 @@ Using the [Wistia WordPress Plug-in](http://wordpress.org/extend/plugins/wistia-
 
 The [Wistia WordPress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin)
 allows for using oEmbed embed codes, which are really simple links that don't
-break in Wordpress (yay!).
+break in WordPress (yay!).
 
 To access them, first [customize your video]({{ '/customizing-your-video' | post_url }}),
 then open the *Embed & Share* window from the <span class="action_menu">Video
@@ -26,7 +26,11 @@ Actions</span> menu. Select the **Inline Embed** option.
 {% post_image hashed_id: '45141c78d70b64b9b2bd3ca682c51c6e69fd73fb', class: 'center' %}
 
 Under the **Advanced Options** area, select the *oEmbed* checkbox. The embed
-code will update to an oEmbed URL, which you can add to your Wordpress post.
+code will update to an oEmbed URL, which you can add to your WordPress post.
+
+WordPress themes often set a maximum width for oEmbed embed codes. If you want
+to change that, check out
+[How to Set oEmbed Max Width in WordPress 3.5 with $content_width](http://www.wpbeginner.com/wp-themes/how-to-set-oembed-max-width-in-wordpress-3-5-with-content_width/).
 
 ## Tips for Using WordPress
 
