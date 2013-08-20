@@ -10,33 +10,33 @@ post_intro: <p>A <strong>project</strong> is Wistia's method for grouping relate
 
 ## Create a new Project
 
-{% post_image hashed_id: '46e709a64e16ee0b7f9f780908480281f3db35a2', width: 320, class: 'float_right' %}
-
 To create a new project, select *New Project* from under the
 <span class="action_menu">Actions</span> menu. A new Project will be created,
 and you will immediately be taken in where you can upload content, invite
 contacts, and edit the project name.
 
+{% post_image hashed_id: 'ee3f80662bb6152948b9cf954babb732ded4f8b7', class: 'center'%}
+
 ---
 
 ## Copy an existing Project
 
-{% post_image hashed_id: 'f3c9f1c7deb0e032a0ef0e97665ebbedec99e9dc', width: 320, class: 'float_right' %}
-
 To copy a Project, select *Copy Project* from under the
 <span class="action_menu">Actions</span> menu.
 
+{% post_image hashed_id: '99e00bd8938dbc9276a7facf9bdcaadd8f8cbe6a', class: 'center' %}
+
 This will launch a dialogue box with a drop-down menu that contains all your
-Projects.  Choosing one from the drop-down will create a duplicate of the Project.
+Projects. Choosing one from the drop-down will create a duplicate of the Project.
 
 ---
 
 ## The Project Title
 
-{% post_image hashed_id: '9dcd74438c70331a580f16a2f9c7d6e102899c48', width: 320, class: 'float_right' %}
-
 The title of the Project is how you will find it in your Account. By default,
 the title is *Untitled Project*, but that's not what you want!
+
+{% post_image hashed_id: '9dcd74438c70331a580f16a2f9c7d6e102899c48', class: 'center' %}
 
 Changing the title of the Project won't affect embed codes or links, either.
 
@@ -59,19 +59,6 @@ on the [private sharing documentation page]({{ '/private-sharing' | post_url }})
 account. You can select `</> Embed Playlist` to get started, or head over to 
 the [playlists doc page]({{ '/playlists' | post_url }}) for more information.
 
-___
-
-## Disable comments for a project
-
-{% post_image hashed_id: 'f36a0402507b2c57d43221dcc7c4d481c013f67b', width: 320, class: 'float_right' %}
-
-To turn off comments (preventing **ALL** users from seeing or making comments),
-open the "Project Settings" dialogue from the
-<span class='action_menu'>Project Actions</span> menu.
-
-Select the *off* option for the Comments setting and click
-<span class="faux_button">SAVE SETTINGS</span>.
-
 ---
 
 ## Project Sections
@@ -90,29 +77,11 @@ To give the Section a title, hover over the title text, select the
 
 ---
 
-## Add a description to your Project
-
-{% post_image hashed_id: '61046a0f8885a423432827723d15b0c5ea65e274', width: 320, class: 'float_right' %}
-
-The space to add a description to your Project is just under the title. Move
-your mouse under the title, and click the *Add a Description* text that
-appears.
-
-A new description element will now show up below the title. Start typing to add
-your description.
-
-{% post_image hashed_id: '9248c99096631f71e6721cf29a96a5a39a85e6d1', class: 'center' %}
-
-When you are finished, click <span class="faux_button">SAVE</span> and your
-changes will be viewable by all.
-
----
-
 ## Delete a Project
-
-{% post_image hashed_id: '581406b742b2a103ce226f36a9fa65f69a378131', width: 320, class: 'float_right' %}
 
 To delete a project, select *Delete Project* from under the
 <span class="action_menu">Project Actions</span> menu.
+
+{% post_image hashed_id: '581406b742b2a103ce226f36a9fa65f69a378131', class: 'center' %}
 
 Say *sayonara* to that project!
