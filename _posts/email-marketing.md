@@ -76,63 +76,9 @@ of your account).
 
 {% post_image hashed_id: '44087ef2759f48e1b04d72cac7ba90e058f0f388', class: 'center' %}
 
----
+## Advanced Email Marketing Integration
 
-## Email Provider List
-
-This is the full list of providers we currently integrate with:
-
-*  [AWeber](http://www.aweber.com)
-*  [Blue Hornet](http://www.bluehornet.com)
-*  [Campaign Monitor](http://www.campaignmonitor.com)
-*  [Constant Contact](http://www.constantcontact.com)
-*  [Emailvision](http://www.emailvision.com)
-*  [Emma](http://myemma.com)
-*  [GetResponse](http://www.getresponse.com)
-*  [iContact](http://go.icontact.com)
-*  [Infusion Soft](http://www.infusionsoft.com)
-*  [Lyris](http://lyris.com)
-*  [MadMimi](https///madmimi.com)
-*  [Marketo](http://www.marketo.com)
-*  [MailChimp](http://mailchimp.com)
-*  [Pardot](http://www.pardot.com)
-*  [Sendible](http://sendible.com)
-*  [Vertical Response](http://www.verticalresponse.com)
-
----
-
-## Email Clients That Support Dynamic Links
-
-The following is a table that includes the email clients we have encountered 
-that support dynamic links, and the merge tags needed to take advantage of them. 
-Some of them are not included in the product itself - directions for using them are
-given in the following section.
-
-Provider  |  URL Email Merge Tag
-----------|----------------------
-AWeber    |  `{!email}`
-Blue Hornet  |  `%%to_email%%`
-Campaign Monitor | `[email]`
-ClearWebb | `$email`
-Constant Contact | `$SUBSCRIBER.EMAIL$`
-Emailvision  |  `[EMV FIELD]EMAIL[EMV /FIELD]`
-Emma  | `[[email]]`
-GetResponse  |  `[email]`
-Hubspot  | {`{ contact.email }`}
-iContact  |  `[email]`
-Infusionsoft  |  `~Contact.Email~`
-MailChimp  |  `%%URL:EMAIL%%`
-Marketo  |  {`{lead.Email Address:default=noemail}`}
-Pardot  |  `%%email%%`
-Vertical Response  |  `{EMAIL_ADDRESS}`
-ExactTarget  |  `%%Email Address%%`
-Convio Luminate | `[[S1:primary_email]]`
-Streamsend | `{`{`{email_address}`}`}`
-SendGrid | [see more](#email_merge_tags_with_sendgrid)
-
----
-
-## Using Dynamic Links in Email Marketing Services
+### Using Dynamic Links in Email Marketing Services
 
 ### Step 1: Upload and embed the video
 
@@ -232,7 +178,36 @@ how much time they spent doing so.  This information allows you to score (rank)
 your leads, target future follow-up with pin-point precision, and calculate the 
 return on investment of your campaigns.
 
-## Email Merge Tags With SendGrid
+### Email Clients That Support Dynamic Links
+
+The following is a table that includes the email clients we have encountered 
+that support dynamic links, and the merge tags needed to take advantage of them. 
+Some of them are not included in the product itself - directions for using them are
+given in the following section.
+
+Provider  |  URL Email Merge Tag
+----------|----------------------
+AWeber    |  `{!email}`
+Blue Hornet  |  `%%to_email%%`
+Campaign Monitor | `[email]`
+ClearWebb | `$email`
+Constant Contact | `$SUBSCRIBER.EMAIL$`
+Emailvision  |  `[EMV FIELD]EMAIL[EMV /FIELD]`
+Emma  | `[[email]]`
+GetResponse  |  `[email]`
+Hubspot  | {`{ contact.email }`}
+iContact  |  `[email]`
+Infusionsoft  |  `~Contact.Email~`
+MailChimp  |  `%%URL:EMAIL%%`
+Marketo  |  {`{lead.Email Address:default=noemail}`}
+Pardot  |  `%%email%%`
+Vertical Response  |  `{EMAIL_ADDRESS}`
+ExactTarget  |  `%%Email Address%%`
+Convio Luminate | `[[S1:primary_email]]`
+Streamsend | `{`{`{email_address}`}`}`
+SendGrid | [see more](#email_merge_tags_with_sendgrid)
+
+### Email Merge Tags With SendGrid
 
 Thanks to some research from our friend Steven Tell of [SpudFlower](http://spudflower.com/),
 here's how to use dynamic merge tags with [SendGrid](http://sendgrid.com):
