@@ -4,8 +4,9 @@ layout: post
 description: Learn how uploading with Wistia works.
 ---
 
-{% wistia_embed hashed_id: s1dmqzh5ua, videoHeight: 371 %}
+{% wistia_embed hashed_id: s1dmqzh5ua %}
 
+## Quick Intro to Projects
 
 All content in Wistia must be uploaded inside a **Project**.
 Projects work just like folders on your computer - great for organizing and
@@ -14,23 +15,29 @@ managing your stuff.
 To create a new Project, select *New Project* under the
 <span class="action_menu">Actions</span> menu.
 
-{% post_image hashed_id: 'ddbe1f41c6c03e460ac7f2e2820a88556ca878b6', width: 600, class: 'center'%}
+{% post_image hashed_id: 'ee3f80662bb6152948b9cf954babb732ded4f8b7', class: 'center'%}
 
 Once you are in your new Project, give it a title by clicking
 <span class="edit_tag">&nbsp;</span> next to the title bar
 (it's called "Untitled Project" by default).
 
+To see more on Projects, head to the [projects doc page]({{ '/projects' | post_url }}).
+
 Now we're ready to upload a video.
+
+## Upload Your Video
 
 Select *Upload Media* under the
 <span class="action_menu">Project Actions</span> menu.
 
+{% post_image hashed_id: '9c8a26c0465c898b525716a9e673f042310a93d9', class: 'center'%}
+
 From the upload dialogue box, choose the file to upload from your computer.
 
-{{ "To upload multiple media at once, hold down the shift or control buttons while browsing." | note }}
+{{ "To upload multiple media at once, hold down the shift or control buttons while browsing." | tip }}
 
-Once a file has been chosen, you will see the progress of the file uploading
-as in the image below.
+Once a file has been chosen, the progress bar displays where you are in the
+uploading process.
 
 {% post_image hashed_id: '69498e53ff4f696cc3810229c2bfd88375bcd10d', class: 'center'%}
 
@@ -41,3 +48,5 @@ downside - no progress bar.
 
 For instructions on the best way to encode your video prior to uploading it,
 check our [video exporting page]({{ '/export-settings' | post_url }}).
+
+Once your video is uploaded, [it's time to customize]({{ '/customizing-your-video' | post_url }}).
