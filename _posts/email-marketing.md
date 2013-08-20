@@ -71,7 +71,8 @@ it displays. When you are satisfied, send it out to your loving audience!
 
 Voila! The thumbnail image will appear in your email, linked to the page you 
 specified with your video. In the background, we'll be collecting stats on 
-which viewers in your list viewed the video (available in the Public Stats area
+which viewers in your list viewed the video (available in the
+[Public Stats]({{ '/embedded-video-analytics' | post_url }}) area
 of your account).
 
 {% post_image hashed_id: '44087ef2759f48e1b04d72cac7ba90e058f0f388', class: 'center' %}
