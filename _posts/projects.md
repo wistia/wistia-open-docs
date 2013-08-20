@@ -17,8 +17,6 @@ contacts, and edit the project name.
 
 {% post_image hashed_id: 'ee3f80662bb6152948b9cf954babb732ded4f8b7', class: 'center'%}
 
----
-
 ## Copy an existing Project
 
 To copy a Project, select *Copy Project* from under the
@@ -28,8 +26,6 @@ To copy a Project, select *Copy Project* from under the
 
 This will launch a dialogue box with a drop-down menu that contains all your
 Projects. Choosing one from the drop-down will create a duplicate of the Project.
-
----
 
 ## The Project Title
 
@@ -44,14 +40,26 @@ To edit the title, hover over it with your mouse, and click the
 <span class="edit_tag">&nbsp;</span> tag. Edit the title text, and press the
 `return` key to finish editing.
 
----
+## Add a description to your Project
+
+{% post_image hashed_id: '61046a0f8885a423432827723d15b0c5ea65e274', class: 'center' %}
+
+The space to add a description to your Project is just under the title. Move
+your mouse under the title, and click the *Add a Description* text that
+appears.
+
+A new description element will now show up below the title. Start typing to add
+your description.
+
+{% post_image hashed_id: '9248c99096631f71e6721cf29a96a5a39a85e6d1', class: 'center' %}
+
+When you are finished, click <span class="faux_button">SAVE</span> and your
+changes will be viewable by all.
 
 ## Share a Project Privately
 
 Sharing a Project by Email and Link with other viewers is covered in-depth
 on the [private sharing documentation page]({{ '/private-sharing' | post_url }}).
-
----
 
 ## Playlists
 
@@ -59,23 +67,19 @@ on the [private sharing documentation page]({{ '/private-sharing' | post_url }})
 account. You can select `</> Embed Playlist` to get started, or head over to 
 the [playlists doc page]({{ '/playlists' | post_url }}) for more information.
 
----
-
 ## Project Sections
 
 Project sections allow you to organize media within a project. Media can be put
 into project sections and the sections can then expanded or collapsed to provide
 a cleaner experience for projects with many media. 
 
-{% post_image hashed_id: '7832934fe67fb18882143b3532fb037d44fa529a', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '7832934fe67fb18882143b3532fb037d44fa529a', class: 'center' %}
 
 To create a section, select `+ New section` from the Project Actions menu.
 A new section will be created, which you can name, and drag-and-drop media into.
 
 To give the Section a title, hover over the title text, select the
 <span class="edit_tag"></span>, update the text, and then press `Enter`.
-
----
 
 ## Delete a Project
 
