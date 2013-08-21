@@ -6,7 +6,7 @@ footer: 'for_intermediates'
 category: integrations
 ---
 
-{% post_image hashed_id: '79ba6d71f2de6aa71d02bcecaf2fe823ea09ec02', width: 200, class: 'intro_image float_right' %}
+{% post_image hashed_id: 'e298970f564442cd0fb182c592a2de140e283515', width: 200, class: 'intro_image float_right' %}
 
 [MailChimp](http://mailchimp.com) is our favorite email marketing system.  When we need to send an email to our wonderful customers, and don't want it to get stuck in spam filters, we use MailChimp.
 
