@@ -70,7 +70,7 @@ Once the box is checked and the comment has been written, click the
 
 {% post_image hashed_id: '98a66b9660a799dc284bcf3d0b97f8b4c7bc9176', class: 'center' %}
 
-### Delete a Comments
+### Delete Comment
 
 To delete comments, hover over the comment you'd like to delete, and the trash
 can icon will appear. Select the trash can to remove the comment permanently.
@@ -79,7 +79,7 @@ can icon will appear. Select the trash can to remove the comment permanently.
 
 ### Can I turn off comments for videos and other media?
 
-Yes. Comments can be disabled for each video. The [Customize documentation]({{ '/customize-your-video' | post_url }}) 
+Yes. Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video' | post_url }}) 
 covers this in further detail.
 
 ## Video Description
