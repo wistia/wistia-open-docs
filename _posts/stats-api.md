@@ -2,7 +2,7 @@
 layout: post
 api: true
 special_category_link: developers
-category: For Developers
+category: Developers
 title: Stats API
 description: Learn how to access your stats via our API.
 post_intro: "<p>Ever looked at your Wistia heatmaps and wished you could show them to other people with ease? Ever looked at your Wistia heatmaps and wished that they were built out of purple cats instead of red, yellow, and green bars?</p><p>Want to figure out which of your Wistia videos your users have already viewed and recommend them ones they haven't so they don't get bored?</p><p>Want to make sure you purposely recommend the same videos repeatedly until they're annoyed enough to convert?</p><p>Look no further, developers: <strong>the Wistia Stats API has you covered</strong>.</p>"
