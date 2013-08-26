@@ -199,7 +199,7 @@ GetResponse  |  `[email]`
 Hubspot  | {`{ contact.email }`}
 iContact  |  `[email]`
 Infusionsoft  |  `~Contact.Email~`
-MailChimp  |  `%%URL:EMAIL%%`
+MailChimp  |  `*|URL:EMAIL|*`
 Marketo  |  {`{lead.Email Address:default=noemail}`}
 Pardot  |  `%%email%%`
 Vertical Response  |  `{EMAIL_ADDRESS}`
