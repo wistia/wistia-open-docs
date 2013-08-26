@@ -327,8 +327,8 @@ id | A unique numeric identifier for the media within the system.
 name  | The display name of the media.
 section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
 thumbnail     | An object representing the thumbnail for this media.  The attributes are URL, width, and height.
-type  | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-duration (optional) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
+type  | A string representing what type of media this is. Values can be “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
+duration (optional) | For Audio or Video files, this field specifies the length (in seconds). For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
 created   | The date when the media was originally uploaded.
 updated   | The date when the media was last changed.
 
@@ -1307,7 +1307,7 @@ following query parameters to the request URL:
 
 Parameter | Description
 ----------|-------------
-sort_by | The name of the field to sort by.  Valid values are name, created, updated, or position (which will use the same order as the main Wistia interface).  Any other value will cause the results to be sorted by id, which is the default.
+sort_by | The name of the field to sort by.  Valid values are "name", "created", "updated", or "position" (which will use the same order as the main Wistia interface).  Any other value will cause the results to be sorted by id, which is the default.
 sort_direction (optional, defaults to 1) | This field specifies the direction of the sort.  Valid values are 1 or 0, which specify ascending or descending order, respectively.
 
 For example, if you want to sort your results in descending order by the date 
@@ -1343,7 +1343,7 @@ Parameter | Description
 ----------|---------------
 project_id | An integer specifying the project from which you would like to get results.
 name | Find a media or medias whose name exactly matches this parameter.
-type       | A string specifying which type of media you would like to get.  The valid values are “Video”, “Audio”, “Image”, “PdfDocument”, “MicrosoftOfficeDocument”, “Swf”, or “UnknownType”.
+type       | A string specifying which type of media you would like to get. Values can be “Video”, “Audio”, “Image”, “PdfDocument”, “MicrosoftOfficeDocument”, “Swf”, or “UnknownType”.
 hashed_id|Find the media by hashed_id, which is now present in Wistia embeds.
 
 
@@ -1358,7 +1358,7 @@ Field     |  Description
 id                  | A unique numeric identifier for the media within the system.
 name                | The display name of the media.
 project             | An object representing information about the project in which the media resides.  It has 2 fields: the numeric id of the project, and the name of the project.
-type                | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
+type                | A string representing what type of media this is. Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
 status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
 progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
 section  <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
@@ -1380,7 +1380,7 @@ width  <br>(if available)  | The width of this specific asset, if applicable.
 height  <br>(if available) | The height of this specific asset, if applicable.
 fileSize          | The size of the asset file that's referenced by url, measured in bytes.
 contentType       | The asset's content type.
-type              | The internal type of the asset, describing how the asset should be used.  Valid values are “OriginalFile”, “FlashVideoFile”, “Mp4VideoFile”, “IPhoneVideoFile”, “StillImageFile”, “SwfFile”, “Mp3AudioFile”, and “LargeImageFile”.
+type              | The internal type of the asset, describing how the asset should be used. Values can include “OriginalFile”, “FlashVideoFile”, "MdFlashVideoFile", "HdFlashVideoFile", “Mp4VideoFile”, "MdMp4VideoFile", "HdMp4VideoFile", “IPhoneVideoFile”, “StillImageFile”, “SwfFile”, “Mp3AudioFile”, and “LargeImageFile”.
 
 #### Example JSON Response
 
@@ -2027,20 +2027,30 @@ url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
 ## Asset URLs - Tips & Tricks
 
+
 ### Modifying File Extensions
 
 Asset URLs in Wistia take this form:
 
 <code class="full_width">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.bin</code>
 
-The .bin extension at the URL is for binary. 
-Certain ornery clients (iTunes, ahem) won't accept URLs that don't end in an extension that's familiar to them. 
-In this case, you can drop the .bin, add a slash, and append whatever filename and extension you like – you'll still get the 
-underlying asset. So, say the URL above is an mp4 file and we _really_ 
+The `.bin` extension at the URL is for binary. 
+Certain ornery clients (iTunes, ahem) won't accept URLs that don't end in an
+extension that's familiar to them.  In this case, you can drop the `.bin`, add
+a slash, and append whatever filename and extension you like -– you'll still
+get the underlying asset. So, say the URL above is an mp4 file and we _really_
 want that in the URL. Here's what we'd have:
 
 <code class="full_width">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf/my-file.mp4</code>
 
+
 ### Resizing Images
 
-Using the Data API or [oEmbed endpoint]({{ '/oembed' | post_url }}), you can obtain the thumbnail URL for your video, and then manipulate it. Check [working with images]({{'/working-with-images' | post_url }})
+Using the Data API or [oEmbed endpoint]({{ '/oembed' | post_url }}), you can obtain the thumbnail URL for your video, and then manipulate it. Check [working with images]({{ '/working-with-images' | post_url }}).
+
+
+### Extracting Thumbnails
+
+You can also extract thumbnails from a video by modify the URL of that video 
+asset. Pretty sneaky, right? Here's how to do it: 
+[Extracting Thumbnails]({{ '/extracting-thumbnails' | post_url }})
