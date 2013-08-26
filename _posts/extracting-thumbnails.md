@@ -2,7 +2,7 @@
 layout: post
 title: Extracting Thumbnails from a Video
 description: Generate thumbnails at different times in a video using the Wistia API.
-category: For Developers
+category: Developers
 ---
 
 <div class="post_intro">
