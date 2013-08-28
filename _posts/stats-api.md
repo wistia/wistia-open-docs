@@ -294,8 +294,8 @@ The response will come back as a single object that represents the main engageme
 Field | Description
 ------|------------
 engagement | The percentage of the video that was viewed, averaged across all viewing sessions.
-engagement_data | An array which can be used as the data source for creating an engagement graph. Normally, each cell in the array represents how many times 1 second of the video has been viewed. However, for longer form content (over 1000 seconds), the array will be scaled down to 1000 items, 
-with each item representing more than 1 second of playback.
+engagement_data | An array which can be used as the data source for creating an engagement graph. Normally, each cell in the array represents how many times 1 second of the video has been viewed. However, for longer form content (over 1000 seconds), the array will be scaled down to 1000 items, with each item representing more than 1 second of playback.
+rewatch_data | An array which can be used for creating the rewatch block on an engagement graph. Normally, each cell in the array represents how many times 1 second of the video has been viewed. However, for longer form content (over 1000 seconds), the array will be scaled down to 1000 items, with each item representing more than 1 second of playback.
 
 #### Example JSON Response
 
@@ -304,7 +304,8 @@ with each item representing more than 1 second of playback.
 {% codeblock example_json_response.json %}
 {
   "engagement": 0.75,
-  "engagement_data": [ 154, 152, 152, 151, 148, ... ]
+  "engagement_data": [ 154, 152, 152, 151, 148, ... ],
+  "rewatch_data": [ 13, 17, 19, 19, 15, ... ]
 }
 {% endcodeblock %}
 
