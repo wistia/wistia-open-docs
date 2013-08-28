@@ -122,11 +122,7 @@ If you're a HubSpot Enterprise customer you have access to their powerful
 events engine. Once you have this integration set up, we'll automatically send
 the following events for every Wistia video on your site:
 
-- Video loaded
 - Video played
-- Video 25% watched
-- Video 50% watched
-- Video 75% watched
 - Video 100% watched
 
 This means that you can segment your contacts based on this viewing data.
@@ -139,8 +135,60 @@ Some cool things you can do with this:
 
 - Find everyone who loaded a particular video but didn't play it and send that
   video out to them in an email.
-- Know who your most engaged viewers are (got to 75% or 100% on all your videos).
+- Know who your most engaged viewers are. 
 - Follow up with people who entered their email to watch a video but never finished it.
+
+
+## Getting wildly advanced
+
+Using Hubspot's JavaScript events API and our player API, you can accomplish 
+some awe-inspiring feats of sales and marketing automation.
+
+Consider this: you sell self-driving cars. You have a video that's part of your 
+sales funnel, and you want to know if a prospect has watched key areas of that 
+video.
+
+You could set up code like this to report to Hubspot when a prospect has watched
+the following sections:
+
+- Never look for a parking spot again
+- Have your car drive your kids to school
+- Drink a beer while riding home from work on a Friday
+
+{% codeblock advanced-hubspot.js %}
+(function(){
+  var reportSection = function(name, start, end){
+    var watched = [];
+    for (i = start; i < end; i++) { watched.push(false); }
+
+    function watchedItAll(){
+      var c = 0;
+      for(i = 0; i < watched.length; i++) {
+        if (watched[i]) { c++; }
+      }
+      return c == watched.length;
+    }
+
+    wistiaEmbed.bind("secondchange", function(s){
+      if (s >= start && s < end) {
+        watched[s - start] = true;
+      }
+
+      if (watchedItAll()) {
+        window._hsq.push(['trackEvent', { id: name }]);
+        return this.unbind;
+      };
+    });
+  };
+
+  reportSection("Watched part about death to parking", 11, 22);
+  reportSection("Watched part about kid chauffeur", 38, 46);
+  reportSection("Watched part about drinking and driving", 95, 108);
+})();
+{% endcodeblock %}
+
+Ta da! Automation bliss! Segment on these events, see them in your timeline, 
+the sky's the limit.
 
 
 ## Feedback
