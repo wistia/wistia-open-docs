@@ -30,7 +30,7 @@ To edit the title, hover over it with your mouse, and click the
 
 ## Change the Thumbnail
 
-Changing the thumbnail of your video is covered in detail in the [Customize documentation]({{ '/customize-your-video' | post_url }}).
+Changing the thumbnail of your video is covered in detail in the [Customize documentation]({{ '/customizing-your-video' | post_url }}).
 
 ## Embed Video
 
