@@ -66,7 +66,7 @@ autoplay.
 The *Social Bar* is our nickname for the group of social buttons that sit below 
 the video and make it easy to share the video in social networks.
 
-{% post_image hashed_id: '2ae01359e66b3db9d58c4b7ddd48a14d8ec4ed7e', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '9f47519fd807ec8436a030b32d97f1649f88ac99', class: 'float_right', width: 300 %}
 
 The Social Bar has a bunch of options, from social networks like Twitter and
 Facebook to actions like *share stats* and *download*.
@@ -94,6 +94,26 @@ totally up to you!).
 {{ "Logo images should have the max size of 100px by 20px, unless you want to crop it." | note }}
 
 Finally, update the *Logo Link* to point to a page of your choosing.
+
+### Using Video Backlinks
+
+If you use the *embed* option on the Social Bar, you can add backlinks support - 
+which means if a viewer re-embeds your video, the embed will have a link to
+your original content. This is also valuable from a Video SEO perspective.
+
+{% post_image hashed_id: '7548122af8f0985d1ff2f33e182709ca406c4936', class: 'center' %}
+
+In the Social Bar customization area, click the *configure* link next to the
+*Embed* option. Check the *Include backlink* option.
+
+{% post_image hashed_id: 'c09a26462067cad142400ed120a84609d2d2f03c', class: 'center' %}
+
+Configure the link location and link text using the *Buttons link to* and
+*Specific Page* options (the embed configuration window will also include those
+instructions).
+
+Once that is done, save your customizations. Open the [Embed & Share]({{'/embedding#generate_the_embed_code' | post_url}})
+window, and make sure to select an SEO embed code.
 
 ## Call to Action
 
