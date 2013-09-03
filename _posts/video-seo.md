@@ -217,7 +217,7 @@ Video SEO is tough, but valuable. Customers have lots of questions around how
 to use our Video SEO tool for their business video. We'll attempt to compile
 them here.
 
-<span class="seo_faq">
+<span class='seo_faq'>
   Do I still need to create an sitemap, or submit something to Google Webmaster
   Tools?
 </span>
@@ -226,7 +226,7 @@ them here.
 We create a sitemap, add the videos you designate, and submit it through
 Google Webmaster Tools, all automatically.
 
-<span class="seo_faq">
+<span class='seo_faq'>
   Is hosting my video sitemap with Wistia ok? Will Google accept it?
 </span>
 
@@ -235,7 +235,7 @@ accepted and efficient part of the SEO workflow.
 See [this article from the Google Webmaster Central Blog](http://googlewebmastercentral.blogspot.com/2008/02/cross-submissions-via-robotstxt-on.html)
 for more.
 
-<span class="seo_faq">It's been several days, when can I expect to see my video
+<span class='seo_faq'>It's been several days, when can I expect to see my video
 ranked in SERPs?</span>
 
 This is a good question. Because Google can be a bit of a black box, it's not
@@ -247,7 +247,24 @@ something has gone wrong, don't hesitate to email our support team. We'll take
 a look at the Webmaster Tools entry we create and maintain for you, to see if
 Google has reported any errors in indexing.
 
-<span class="seo_faq">Can I hear Ben talking about SEO?</span>
+<span class='seo_faq'>Can I generate SEO linkbacks using Wistia embeds?</span>
+
+**Yes, you can**. 
+
+The *Social Bar* includes an *embed* button, which allows
+viewers to embed your video in other places. Wistia includes a customize option 
+for adding Video Backlinks to the social bar embed button code, which is the 
+embed code your viewer re-embeds.
+
+The result is *their* viewers can track down the original
+source of the content, which Google and search engines also value. Phil
+Nottingham from [Distilled](www.distilled.net), who is a real SEO expert (we just play one on 
+video), [posted at length about using this for your content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-settings-to-build-links-with-your-video-content/).
+
+For more on using Video Backlinks for your content,
+[see the Customization docs]({{'/customizing-your-video#social_bar' | post_url}}).
+
+<span class='seo_faq'>Can I hear Ben talking about SEO?</span>
 
 **Yes!** Our Video SEO expert, Ben, got up-close with the camera to talk about
 how Video SEO can create benefits for your business:
