@@ -103,6 +103,8 @@ your original content. This is also valuable from a Video SEO perspective.
 
 {% post_image hashed_id: '7548122af8f0985d1ff2f33e182709ca406c4936', class: 'center' %}
 
+*The link underneath the video in the example above is a Video Backlink*
+
 In the Social Bar customization area, click the *configure* link next to the
 *Embed* option. Check the *Include backlink* option.
 

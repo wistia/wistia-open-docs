@@ -249,17 +249,18 @@ Google has reported any errors in indexing.
 
 <span class='seo_faq'>Can I generate SEO linkbacks using Wistia embeds?</span>
 
-**Yes, you can**. 
+**Yes, you can**.
 
 The *Social Bar* includes an *embed* button, which allows
 viewers to embed your video in other places. Wistia includes a customize option 
-for adding Video Backlinks to the social bar embed button code, which is the 
+for adding Video Backlinks to the social bar embed button code, which is the
 embed code your viewer re-embeds.
 
-The result is *their* viewers can track down the original
-source of the content, which Google and search engines also value. Phil
-Nottingham from [Distilled](www.distilled.net), who is a real SEO expert (we just play one on 
-video), [posted at length about using this for your content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-settings-to-build-links-with-your-video-content/).
+The result is *their* viewers can track down the original source of the content,
+which Google and search engines also value. Phil Nottingham from
+[Distilled](www.distilled.net), who is a real SEO expert (we just play one on
+video), [posted at length about using this for your content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-settings-to-build-links-with-your-video-content/). Building links back to your original content can be hugely powerful
+for building your audience.
 
 For more on using Video Backlinks for your content,
 [see the Customization docs]({{'/customizing-your-video#social_bar' | post_url}}).
