@@ -41,15 +41,22 @@ Development
 
 ### Installing and starting elasticsearch
 
+If you don't have homebrew:
+
+    ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+
+In a new window, run:
+
     brew install elasticsearch
     elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+
+
+Go back to your old window and run
+
     rake build
 
 ### Installing CoffeeScript
 
-if you don't have homebrew:
-
-    ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
 
 if you don't have node installed:
 
