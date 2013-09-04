@@ -807,6 +807,9 @@ em { font-style: italic; }
 .tip h4 { color: #3ea9f5; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
 .tip p { font-size: 16px; margin-left: 40px; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #3ea9f5; -webkit-font-smoothing: antialiased; font-weight: 400; }
 
+.warning { background-color: rgba(255, 255, 0, 0.4); padding: 15px; }
+.warning .top-line { font-size: 18px; font-weight: 700; line-height: 30px; margin-top: 20px; }
+
 .expert_tip { position: relative; overflow: hidden; padding: 34px; background-color: rgba(62, 169, 245, 0.2); margin: 50px 0; clear: both; }
 .expert_tip h4 { color: #3ea9f5; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
 .expert_tip p { font-size: 16px; margin-left: 40px; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #3ea9f5; -webkit-font-smoothing: antialiased; font-weight: 400; }

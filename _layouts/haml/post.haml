@@ -13,6 +13,9 @@ type: post
       .post_title
         %h1 {{ page.title }}
       .post_content
+
+        {% if page.api_warning %}{% include api_warning.html %}{% endif %}
+
         {% if page.post_intro %}
         .post_intro
           {{ page.post_intro }}
