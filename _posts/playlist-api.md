@@ -2,6 +2,7 @@
 title: Wistia Playlist API
 layout: post
 api: true
+api_warning: true
 special_category_link: developers
 category: Developers
 description: Wistia Playlists have an API which give you access to its functionality and behavior! 
