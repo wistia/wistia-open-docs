@@ -1,6 +1,7 @@
 ---
 title: Wistia Plugin API
 layout: post
+api_warning: true
 special_category_link: developers
 api: true
 category: Embedding

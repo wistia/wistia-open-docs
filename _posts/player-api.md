@@ -1,6 +1,7 @@
 ---
 layout: post
 api: true
+api_warning: true
 special_category_link: developers
 category: Developers
 title: Wistia Video Player API
