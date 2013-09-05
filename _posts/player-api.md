@@ -21,7 +21,7 @@ If you are having trouble using the Player API, or just want to show off what
 you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
 
 If you are also looking to construct embed codes, refer to
-[constructing an embed code]({{ '/construct-an-embed-code' | post_url }}).
+[the Embed API]({{ '/embed-api' | post_url }}).
 
 
 ### The 'wistiaEmbed' Variable
