@@ -8,11 +8,11 @@ category: Developers
 ---
 
 When building an embed code, embed options can be included to customize the
-appearance/behavior of the embedded video.
+appearance/behavior of the embedded video. First, we'll cover the options
+themselves, then, we'll show you some examples of how you can use them for your
+embeds!
 
 ## Embed Options List
-
-Here is a list of available options:
 
 Option Name           | Type    | Description
 -----------           | ----    | -----------
