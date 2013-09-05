@@ -146,7 +146,7 @@ no_nav: true
     .section.last
       #developers.column.left.thirdRow
         %h2
-          %a{ href: "{{ 'developers' | category_url }}" } Developers
+          %a{ href: "{{ '/developers' | post_url }}" } Developers
         %ul
           %li
             %a{ href: "{{ '/player-api' | post_url }}" } 
@@ -160,6 +160,9 @@ no_nav: true
           %li
             %a{ href: "{{ '/stats-api' | post_url }}" } 
               Stats API
+          %li
+            %a{ href: "{{ '/customize-api' | post_url }}" } 
+              Customize API
           %li
             %a{ href: "{{ '/embed-api' | post_url }}" } 
               Embed API

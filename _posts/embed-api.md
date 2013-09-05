@@ -7,126 +7,8 @@ category: Developers
 api_warning: true
 description: Learn how to construct an embed code starting with just the video ID!
 footer: 'for_developers'
-post_intro: <p>There are lots of valid use cases for building embed codes dynamically. The embed API covers the best ways to get that done.</p><p>The <a href='#data-api-approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed-approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the params you want and get an embed code!</p>
+post_intro: <p>You may find yourself needing to build embed codes for your videos dynamically.</p><p>The <a href='#data-api-approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed-approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the parameters you want and get an embed code!</p>
 ---
-
-## Data API Approach
-
-The hashed_id is a unique identifier to a video within the Wistia system. You can get hashed_ids for your videos via the <a href="{{ '/data-api' | post_url }}">Data API</a>.
-
-We pass parameters into an iframe embed via the src attribute. They're just simple URL parameters, with any sub-keys namespaced by brackets.
-
-For example, say we have the hashed_id of the video we want to embed, but we
-want to change the color of the play button, hide the fullscreen button, and
-add a socialbar. Here's how we do it:
-
-{{ "Before you get too deep here, you might want to check out our <a href='/doc/oembed'>oEmbed endpoint</a>. It provides a simple way to generate Wistia embed codes without you having to write much code. The only downside is you'll have to make an extra request to get an embed code." | note }}
-
-### Building an iframe embed code
-
-Ok, for this example we'll be using a hashed_id of `'abcde12345'`. Just substitute your hashed_id anywhere you see `'abcde12345'`.
-
-First, build the base URL:
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345</code>
-
-Next, customize the video parameters:
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false</code>
-
-Then, add plugin parameters. Plugins have parameters in their own 
-namespace, using bracket notation:
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin[socialbar][version]=v1&plugin[socialbar][buttons]=embed-twitter-facebook</code>
-
-It's usually good practice to URL encode both keys and values:
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook</code>
-
-Finally we drop this src into an iframe, where we also specify the width and height. Note that the width and height should be the size of the entire embed (the video plus the plugins).
-
-{% codeblock thumbnail.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="387"></iframe>
-{% endcodeblock %}
-
-
-### Building a JavaScript API embed code
-
-Sometimes it's important to embed a video directly on the page (rather
-than using an iframe).  In this case we do the following:
-
-First, add a container to the page, and make sure it has a unique ID attribute:
-
-{% codeblock thumbnail.html %}
-<div id="wistia_abcde12345" style="height:387px;width:640px" data-video-width="640" data-video-height="360">
-  this is displayed if javascript is disabled
-</div>
-{% endcodeblock %}
-
-
-Next, including all the required external scripts:
-
-{% codeblock playlist_api.js %}
-<script src="http://fast.wistia.net/static/E-v1.js"></script>
-<script src="http://fast.wistia.net/static/concat/E-v1-gridify,socialbar-v1.js"></script>
-{% endcodeblock %}
-
-Now initialize the embed and pass in the video parameters:
-
-{% codeblock playlist_api.js %}
-<script>
-wistiaEmbed = Wistia.embed("abcde12345", {
-  playerColor: "ff0000",
-  fullscreenButton: false,
-  container: "wistia_abcde12345"
-});
-</script>
-{% endcodeblock %}
-
-
-Also initialize the socialbar plugin:
-
-{% codeblock playlist_api.js %}
-<script>
-Wistia.plugin.socialbar(wistiaEmbed, {
-  version: "v1",
-  buttons: "embed-twitter-facebook"
-});
-</script>
-{% endcodeblock %}
-
-
-Now that you've finished your API embed, you can access the [JavaScript API]({{ '/player-api' | post_url }}) and 
-do cool stuff!
-
-{% codeblock playlist_api.js %}
-<script>
-wistiaEmbed.bind("end", function() {
-  alert("The video has ended!");
-});
-wistiaEmbed.bind("timechange", function(t) {
-  if (t > 25 && !highlightedCallToAction) {
-    highlightCallToAction();
-  }
-});
-wistiaEmbed.volume(.5);
-</script>
-{% endcodeblock %}
-
-
-### Building an SEO embed code
-
-Unfortunately you can't programmatically build an SEO-compatible embed yourself right now.
-
-Google's video search is a bit antiquated in that it can't properly detect videos inside iframes 
-(which is our preferred method of embedding video). They only recognize the `<object><embed>` style embed codes.
-
-The good news is you can easily use our <a href="{{ '/oembed' | post_url }}">oEmbed endpoint</a> to generate an SEO embed for you.
-
-
----
-
-
 
 ## oEmbed Approach
 
@@ -146,7 +28,8 @@ It's likely we'll add more URLs to this list in the future.
 
 ### The Regex
 
-If you're looking to automatically detect Wistia URLs and run them against our endpoint, we recommend using this regular expression:
+If you're looking to automatically detect Wistia URLs and run them against our
+endpoint, we recommend using this regular expression:
 
 <code class="full_width">/https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/</code>
 
@@ -192,19 +75,22 @@ This returns:
 
 If you're looking for XML instead of JSON, use: `http://fast.wistia.net/oembed.xml`
 
-For all the fine details about the options supported, see the official [oEmbed spec](http://oembed.com).
+For all the fine details about the options supported, see the official
+[oEmbed spec](http://oembed.com).
 
 ### Parameters
 
 Our endpoint supports all the options detailed at oembed.com.
 
-The required url parameter that's passed in supports all the options detailed in the [Player API]({{ '/player-api' | post_url }}).
+The required url parameter that's passed in supports all the options detailed
+in the [Player API]({{ '/player-api' | post_url }}).
 
-We also accept some additional parameters that can change the output of the embed code:
+We also accept some additional parameters that can change the output of the
+embed code:
 
 Name | Type  | Description
 -----|-------|------------
-callback | string | Only application to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
+callback | string | Only applicable to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
 embedType | string | Only applicable to videos and playlists. Accepts "iframe", "api", "seo", "popover", "playlist_iframe", and "playlist_api".
 width | integer | The requested width of the video embed. Defaults to the native size of the video or 360, whichever is smaller.
 height | integer | The requested height of the video embed. Defaults to the native size of the video or 640, whichever is smaller.
@@ -215,9 +101,14 @@ ssl | boolean | Determines whether the embed code should use https. Defaults to 
 
 ### Working With The Thumbnail
 
-Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a direct link to the thumbnail image asset. If your implementation involves using the thumbnail image (i.e. building your own 'popover' embeds, displaying your own play button, etc.) you should use this thumbnail image, which by default has no Wistia play button overlaid on it.
+Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a
+direct link to the thumbnail image asset. If your implementation involves using
+the thumbnail image (i.e. building your own 'popover' embeds, displaying your
+own play button, etc.) you should use this thumbnail image, which by default
+has no Wistia play button overlaid on it.
 
-See our [working with Wistia images]({{ '/working-with-images' | post_url }}) guide for more info!
+See our [working with Wistia images]({{ '/working-with-images' | post_url }})
+guide for more info!
 
 ### Troubleshooting
 
@@ -225,8 +116,6 @@ See our [working with Wistia images]({{ '/working-with-images' | post_url }}) gu
   2. If an unparseable URL is given in the url param, the endpoint will return <span class="code">404 Not Found</span>.
   3. If a media is found but has no available embed code, the endpoint will return <span class="code">501 Not Implemented</span>. Video, Image, Audio, and Document files all currently implement oembeds.
   4. If a playlist is found but has no videos, the endpoint will return <span class="code">501 Not Implemented</span>.
-
----
 
 ### Make Your Life Easier
 
@@ -238,74 +127,133 @@ ready-made libraries for every popular language, plus they're just nice guys!
 
 ---
 
-## Embedding Options
+## Data API Approach
 
-When building an embed code, it is possible to pass along embedding options 
-which customize the appearance/behavior of your embed.  In our example embed 
-**''Wistia.embed("bfc34aa023", { ... options ... });''** there are two 
-arguments: the media's hashed ID, and a set of embedding options. 
 
-Embedding options can be used with all embed code types to update the video 
-quality, interactive experience, and controls available to viewers.
+{{ "This is totally FYI: We've been recommending the <a href='#oembed_approach'>oEmbed approach</a> as the preferred method. It provides a simple way to generate Wistia embed codes without you having to write much code. The only downside is you'll have to make an extra request to get an embed code." | note }} 
 
-Here's how use of embedding options works for API and SEO embed codes:
+The hashed_id is a unique identifier to a video within the Wistia system. 
+You can get hashed IDs for your videos programmatically using the 
+[Data API]({{ '/data-api' | post_url }}).
 
-{% codeblock playlist_api.js %}
-<div id="my_container"></div>
-var wistiaEmbed = Wistia.embed("bfc34aa023", {
-  platformPreference: "html5",
-  autoPlay: true,
-  container: "my_container"
-});
+By-and-large, our embed codes are *turnkey* - the most important part is the
+hashed ID.
+
+### Building an iframe embed code
+
+For this example we'll be using a hashed ID of `'abcde12345'`. Substitute
+your hashed ID anywhere you see `'abcde12345'`.
+
+First, build the base URL:
+
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345</code>
+
+Next, you could customize the video parameters [see more about customization]({{'/customize-api' | post_url}}):
+
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false</code>
+
+You can also add plugin parameters. Plugins have parameters in their own 
+namespace, using bracket notation:
+
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin[socialbar][version]=v1&plugin[socialbar][buttons]=embed-twitter-facebook</code>
+
+It is good practice to URL encode both keys and values:
+
+<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook</code>
+
+Finally we drop this src into an iframe, where we also specify the width and
+height. 
+
+{{"Width and height should be the size of the entire embed (the video plus the plugins)." | note }}
+
+{% codeblock building_an_iframe_embed_code.html %}
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="387"></iframe>
 {% endcodeblock %}
 
-For iframe embed codes, these must be added to the *iframe src* using `&embeddingOption=value`, like so:
+
+### Building a JavaScript API embed code
+
+If you are using the [Player API]({{'/player-api' | post_url}}) it's important
+to embed a video directly on the page (rather than using an iframe).
+
+In this case we do the following:
+
+First, add a div container to the page with a unique ID attribute. In our
+standard embeds, we use the video's hashed ID as the unique ID.
 
 {% codeblock thumbnail.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/2cf8fbb2c0?
-  controlsVisibleOnLoad=true
-  &version=v1
-  &videoHeight=360&videoWidth=640
-  &volumeControl=true" 
-  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360">
-</iframe>
+<div id="wistia_abcde12345" style="height:387px;width:640px" data-video-width="640" data-video-height="360">
+  this is displayed if javascript is disabled
+</div>
 {% endcodeblock %}
 
-Here is a list of available options:
+Next, include the Wistia library:
 
-Option Name           | Type    | Description
------------           | ----    | -----------
-autoPlay              | boolean | flash/html5 only. Doesn't work on mobile. When true, the video plays as soon as it's ready.
-canonicalTitle        | string  | The title of the page, used for social features.
-canonicalUrl          | string  | The url of the page, used for social features.
-chromeless            | boolean | flash only. When true, player is created without controls.
-container             | string  | The element that should container the embed. Defaults to wistia_{hashed_id}
-controlsVisibleOnLoad | boolean | flash only. When true, controls are visible before you click play.
-doNotTrack            | boolean | When true, embed will not track views.
-endVideoBehavior      | string  | flash only. Behavior when the video ends: default/reset/loop.
-fullscreenButton      | boolean | Show fullscreen button. Default is true.
-pageUrl               | string  | The page that the embed thinks it's embedded on. Defaults to the current page.
-platformPreference    | string  | Accepts: 'flash', 'html5', or 'external'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'flash'.
-playButton            | boolean | flash/external only. When true, display play button over video poster.
-playbar               | boolean | Show playbar. Default is true.
-playerColor           | string  | Set custom color on play button/controls. HTML5 player has access to custom play button color only.
-smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.
-stillUrl              | string  | The still image that should appear before the video is played.
-stillSnap             | boolean | For thumbnails that are different aspect ratio than the video, set to *false*. Default is *true*.
-time                  | float   | Set a starting time for the video on load. If you'd like the video to also play immediately, use the autoPlay parameter.
-trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
-videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam)
-videoQuality          | string  | Specify the starting video quality. sd-only/hd-only/auto
-videoWidth            | integer | The original width of the video.
-videoHeight           | integer | The original height of the video.
-volume                | float   | Set a starting volume for the video on load.
-volumeControl         | boolean | Show volume control. Default is false.
-wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
+{% codeblock playlist_api.js %}
+<script src="http://fast.wistia.net/static/E-v1.js"></script>
+{% endcodeblock %}
 
-### Adding ID Tagging to your embeds
+Now initialize the embed and pass in the video parameters:
 
-If you are looking to enable ID tagging for your embeds, have the 
-[ID Tagging]({{ '/identity-tagging' | post_url }}) article open alongside this one!
+{% codeblock playlist_api.js %}
+<script>
+wistiaEmbed = Wistia.embed("abcde12345", {
+  playerColor: "ff0000",
+  fullscreenButton: false,
+  container: "wistia_abcde12345"
+});
+</script>
+{% endcodeblock %}
+
+
+Let's also include the socialbar in the embed code:
+
+{% codeblock playlist_api.js %}
+<script>
+wistiaEmbed = Wistia.embed("abcde12345", {
+  playerColor: "ff0000",
+  fullscreenButton: false,
+  container: "wistia_abcde12345",
+  plugin: {
+    "socialbar-v1": {
+      buttons: "embed-twitter-facebook"
+    }
+  }
+});
+</script>
+{% endcodeblock %}
+
+Now that you've finished your API embed, you can access the [JavaScript API]({{ '/player-api' | post_url }}) and 
+do more cool stuff!
+
+{% codeblock playlist_api.js %}
+<script>
+wistiaEmbed.bind("end", function() {
+  alert("The video has ended!");
+});
+wistiaEmbed.bind("timechange", function(t) {
+  if (t > 25 && !highlightedCallToAction) {
+    highlightCallToAction();
+  }
+});
+wistiaEmbed.volume(.5);
+</script>
+{% endcodeblock %}
+
+
+### Building an SEO embed code
+
+Unfortunately you can't programmatically build an SEO-compatible embed yourself right now.
+
+Google's video search is a bit antiquated in that it can't properly detect 
+videos inside iframes (which is our preferred method of embedding video). 
+They only recognize the `<object><embed>` style embed codes.
+
+The good news is you can easily use the 
+[oEmbed approach]('#oembed_approach') to generate an SEO embed for you.
+
+---
+
 
 ## Plugin Options
 
