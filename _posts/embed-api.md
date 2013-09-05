@@ -85,7 +85,7 @@ We also accept some additional parameters that can change the output of the embe
 
 Name | Type  | Description
 -----|-------|------------
-callback | string | Only application to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
+callback | string | Only applicable to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
 embedType | string | Only applicable to videos and playlists. Accepts "iframe", "api", "seo", "popover", "playlist_iframe", and "playlist_api".
 width | integer | The requested width of the video embed. Defaults to the native size of the video or 360, whichever is smaller.
 height | integer | The requested height of the video embed. Defaults to the native size of the video or 640, whichever is smaller.
