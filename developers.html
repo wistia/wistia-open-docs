@@ -21,23 +21,6 @@ no_nav: true
 <div class='devhq_container'>
   <div class='api_button_garden'>
     <div class='column'>
-      <div class='api_garden_square' id='player_api'>
-        <a href="{{ '/player-api' | post_url }}">Player API</a>
-        <p>
-          A JavaScript interface to control your videos’ playback experience
-          and capture events. Works seamlessly across desktops and
-          devices with both Flash and HTML5.
-        </p>
-      </div>
-      <div class='api_garden_square last-child' id='playlist_api'>
-        <a href="{{ '/playlist-api' | post_url }}">Playlist API</a>
-        <p>
-          Control the look and behavior of your playlists.
-          Provides access to the Player API instance for each video in a playlist.
-        </p>
-      </div>
-    </div>
-    <div class='column'>
       <div class='api_garden_square' id='upload_api'>
         <a href="{{ '/upload-api' | post_url }}">Upload API</a>
         <p>
@@ -55,8 +38,16 @@ no_nav: true
         </p>
       </div>
     </div>
-    <div class='column last-child'>
-      <div class='api_garden_square' id='data_api'>
+    <div class='column'>
+      <div class='api_garden_square' id='customize_api'>
+        <a href="{{ '/customize-api' | post_url }}">Customize API</a>
+        <p>
+          The Customize API allows you to see and update the
+          customizations on your video. Customize to your&nbsp;<i class='icon-heart' style='color:red;'></i>'s
+          desire, then see it update in your account and embedded instances!
+        </p>
+      </div>
+      <div class='api_garden_square last-child' id='data_api'>
         <a href="{{ '/data-api' | post_url }}">Data API</a>
         <p>
           Read and write access for objects in your Wistia account,
@@ -64,12 +55,22 @@ no_nav: true
           Simplify your workflow or build your app on top of our platform.
         </p>
       </div>
-      <div class='api_garden_square last-child' id='embed_api'>
+    </div>
+    <div class='column last-child'>
+      <div class='api_garden_square' id='embed_api'>
         <a href="{{ '/embed-api' | post_url }}">Embed API</a>
         <p>
-          Grab a video ID and then programmatically generate
-          an embed code for it. Customize to your&nbsp;<i class='icon-heart' style='color:red;'></i>'s
-          desire.
+          Grab your video's hashed ID and learn how to dynamically build an
+          embed code for it. See best practices for building iframe, API, and
+          SEO embeds.
+        </p>
+      </div>
+      <div class='api_garden_square last-child' id='player_api'>
+        <a href="{{ '/player-api' | post_url }}">Player API</a>
+        <p>
+          A JavaScript interface to control your videos’ playback experience
+          and capture events. Works seamlessly across desktops and
+          devices with both Flash and HTML5.
         </p>
       </div>
     </div>

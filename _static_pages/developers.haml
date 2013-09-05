@@ -18,19 +18,6 @@ no_nav: true
 .devhq_container
   .api_button_garden
     .column
-      #player_api.api_garden_square
-        %a{ href: "{{ '/player-api' | post_url }}" } Player API
-        %p
-          A JavaScript interface to control your videos’ playback experience 
-          and capture events. Works seamlessly across desktops and 
-          devices with both Flash and HTML5.
-      #playlist_api.api_garden_square.last-child
-        %a{ href: "{{ '/playlist-api' | post_url }}"} Playlist API
-        %p
-          Control the look and behavior of your playlists. 
-          Provides access to the Player API instance for each video in a playlist.
-
-    .column
       #upload_api.api_garden_square
         %a{ href: "{{ '/upload-api' | post_url }}"} Upload API
         %p
@@ -44,21 +31,35 @@ no_nav: true
           Get at data for specific viewers. 
           Easily embed heatmaps in your own dashboard or application (!!).
 
-    .column.last-child
-      #data_api.api_garden_square
+    .column
+      #customize_api.api_garden_square
+        %a{ href: "{{ '/customize-api' | post_url }}"} Customize API
+        %p
+          The Customize API allows you to see and update the 
+          customizations on your video. Customize to your&nbsp;
+          %i{ class: 'icon-heart', style: 'color:red;' }>
+          's
+          desire, then see it update in your account and embedded instances!
+      #data_api.api_garden_square.last-child
         %a{ href: "{{ '/data-api' | post_url }}"} Data API
         %p
           Read and write access for objects in your Wistia account, 
           like projects, videos, and users. 
           Simplify your workflow or build your app on top of our platform.
-      #embed_api.api_garden_square.last-child
+
+    .column.last-child
+      #embed_api.api_garden_square
         %a{ href: "{{ '/embed-api' | post_url }}"} Embed API
         %p
-          Grab a video ID and then programmatically generate 
-          an embed code for it. Customize to your&nbsp;
-          %i{ class: 'icon-heart', style: 'color:red;' }>
-          's
-          desire.
+          Grab your video's hashed ID and learn how to dynamically build an 
+          embed code for it. See best practices for building iframe, API, and
+          SEO embeds.
+      #player_api.api_garden_square.last-child
+        %a{ href: "{{ '/player-api' | post_url }}" } Player API
+        %p
+          A JavaScript interface to control your videos’ playback experience 
+          and capture events. Works seamlessly across desktops and 
+          devices with both Flash and HTML5.
 
 .devhq_footer
   .devhq_footer_arrow
