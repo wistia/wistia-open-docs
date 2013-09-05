@@ -132,7 +132,7 @@ The Customize API allows you to do partial updates on a video's customizations.
 Make sure you replace `<media-id>` with the hashed ID of the video you want to
 customize.
 
-The raw post data is be JSON representing the customizations that should be 
+The raw post data should be JSON representing the customizations that should be 
 explicitly set for this video.
 
 If a value is `null`, then that key will be deleted from the saved
@@ -148,7 +148,11 @@ PUT /medias/hxsvasanee/customizations.json HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 Form Data:
-{"playerColor":"77dd77","controlsVisibleOnLoad":null,"smallPlayButton":false}
+{
+  "playerColor":"77dd77",
+  "controlsVisibleOnLoad":null,
+  "smallPlayButton":false
+}
 {% endcodeblock %}
 
 #### The Response
