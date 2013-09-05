@@ -11,15 +11,24 @@ footer: 'for_developers'
 
 ## Using the API
 
-It is possible to access the javascript API using any embed type: API, SEO, or iframe. If you are using the iframe API, you will need to insert the [iframe player API script](#using_popovers_and_the_player_api) at the bottom of your page. In our voyage for simplicity, we want to make the iframe API and Javascript interaction with it easier (so that someday only the iframe embed code type will be necessary).
+It is possible to access the javascript API using any embed type: *API*, *SEO*, 
+or *iframe*. If you are using iframe embeds, you will need to insert the 
+[iframe player API script](#using_popovers_and_the_player_api) at the bottom of 
+your page.
 
-If you are having trouble using the Player API, or just want to show off what you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
+If you are having trouble using the Player API, or just want to show off what
+you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
 
-If you are also looking to construct embed codes, refer to [constructing an embed code]({{ '/construct-an-embed-code' | post_url }}).
+If you are also looking to construct embed codes, refer to
+[constructing an embed code]({{ '/construct-an-embed-code' | post_url }}).
+
+If you are working with playlists (i.e. multiple-video players), you will need
+to refer to the [playlist API]({{'/playlist-api' | post_url}}).
 
 ### The 'wistiaEmbed' Variable
 
-The *API* version of the Wistia embed codes includes a variable `wistiaEmbed` to make this easy.
+The *API* version of the Wistia embed codes includes a variable `wistiaEmbed`
+to make this easy.
 
 <code class="full_width">var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });</code>
 
