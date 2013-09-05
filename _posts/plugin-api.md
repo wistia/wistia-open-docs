@@ -12,14 +12,19 @@ post_intro: <p>The Plugin API provides a light framework for script loading and 
 
 ## The Components of a Wistia Plugin
 
-A Wistia plugin has two basic pieces. First, the embed code needs to define the plugin script and options. Second, the plugin script needs to initialize using the Wistia.plugin function.
+A Wistia plugin has two basic pieces. First, the embed code needs to define 
+the plugin script and options. Second, the plugin script needs to initialize 
+using the Wistia.plugin function.
 
 
 ### Defining plugins in an embed code
 
-For learning purposes, I'll be demonstrating with an API embed code type. I've removed the HTML portion and left only the script, since that's what we care about.
+For learning purposes, I'll be demonstrating with an API embed code type. 
+I've removed the HTML portion and left only the script, since that's what we 
+care about.
 
-First, here's an embed code that references one of Wistia's internal plugins, "requireEmail-v1".
+First, here's an embed code that references one of Wistia's internal plugins, 
+"requireEmail-v1".
 
 {% codeblock plugin_api.js %}
 wistiaEmbed = Wistia.embed("hashedId", {
@@ -40,7 +45,8 @@ wistiaEmbed = Wistia.embed("hashedId", {
 {% endcodeblock %}
 
 
-Third Party plugins can use the exact same syntax, but they must add a src attribute.
+Third Party plugins can use the exact same syntax, but they must add a src 
+attribute.
 
 {% codeblock plugin_api.js %}
 wistiaEmbed = Wistia.embed("hashedId", {
@@ -58,7 +64,8 @@ wistiaEmbed = Wistia.embed("hashedId", {
 });
 {% endcodeblock %}
 
-The script file is executed asynchronously. And this is where the second part of Wistia plugins comes in...
+The script file is executed asynchronously. And this is where the second part 
+of Wistia plugins comes in...
 
 
 ### Initialize Your Plugin
@@ -75,14 +82,18 @@ Wistia.plugin("my-plugin-name", function(video, options) {
 });
 {% endcodeblock %}
 
-That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're doing a few things:
+That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're 
+doing a few things:
 
-1. It caches the function so, if multiple videos on the page use the same script, we don't need to download it twice.
-2. It places the function in the Wistia.plugin namespace, callable like `Wistia.plugin["my-plugin-name"](video, options)`.
-3. It immediately executes the function with the originating video handle and plugin options as arguments.
+1. It caches the function so, if multiple videos on the page use the same 
+script, we don't need to download it twice.
+2. It places the function in the Wistia.plugin namespace, callable like 
+`Wistia.plugin["my-plugin-name"](video, options)`.
+3. It immediately executes the function with the originating video handle 
+and plugin options as arguments.
 
-The `video` argument is a handle to the [Player API](player-api), which means you can now do anything that the normal 
-javascript API can do.
+The `video` argument is a handle to the [Player API](player-api), which means 
+you can now do anything that the normal javascript API can do.
 
 
 ## Using plugins with an iframe embed
@@ -119,7 +130,8 @@ left_inside     | Absolutely positioned over the video. Height of the video, anc
 
 ### Use the grid to place an element over the video
 
-For example, if I wanted to to overlay an HTML element in the upper right of the video, offset by 10px, I could use:
+For example, if I wanted to to overlay an HTML element in the upper right of
+the video, offset by 10px, I could use:
 
 {% codeblock plugin_api.js %}
 var myElem = document.createElement("div");
@@ -144,9 +156,9 @@ $(video.grid.right_inside).append($myElem);
 
 ### Use the grid to place an element beside the video.
 
-You can use the grid to put elements outside the video too. This is a good idea because, as long 
-your DOM elements are a fixed width, they will work correctly with our responsive solution, 
-[Video Foam](http://wistia.github.com/demobin/video-foam/).
+You can use the grid to put elements outside the video too. This is a good idea
+because, as long your DOM elements are a fixed width, they will work correctly 
+with our responsive solution, [Video Foam](http://wistia.github.com/demobin/video-foam/).
 
 Here's an example that adds a plugin to the right of the video.
 
@@ -158,12 +170,12 @@ video.grid.right.appendChild(myElem);
 video.fit();
 {% endcodeblock %}
 
-Note the `fit()` method, which will cause the video to change its width and height such that all 
-the plugins fit within the container.
+Note the `fit()` method, which will cause the video to change its width and 
+height such that all the plugins fit within the container.
 
-Because fitting can cause an incorrect aspect ratio, it's recommended that DOM elements outside 
-the video have fixed dimensions. Then, when the embed code is created, you can simply add these 
-dimensions to the total width and height.
+Because fitting can cause an incorrect aspect ratio, it's recommended that DOM 
+elements outside the video have fixed dimensions. Then, when the embed code is 
+created, you can simply add these dimensions to the total width and height.
 
 For example, I might have a 640x272 video. The iframe embed code would look like this:
 
@@ -171,7 +183,8 @@ For example, I might have a 640x272 video. The iframe embed code would look like
 <iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="272"></iframe>
 {% endcodeblock %}
 
-But if I add the socialbar, which is 26px high in this case and appears below the video, the iframe height is 298.
+But if I add the socialbar, which is 26px high in this case and appears below
+the video, the iframe height is 298.
 
 {% codeblock thumbnail.html %}
 <iframe src="http://fast.wistia.net/embed/iframe/vqy2dontcx?controlsVisibleOnLoad=true&amp;plugin%5Bsocialbar-v1%5D=%7B%22buttons%22%3A%22embed-twitter-facebook%22%7D&amp;version=v1&amp;videoHeight=272&amp;videoWidth=640&amp;volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="298"></iframe>
