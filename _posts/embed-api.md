@@ -177,11 +177,10 @@ standard embeds, we use the video's hashed ID as the unique ID.
 </div>
 {% endcodeblock %}
 
-Next, including all the required external scripts:
+Next, include the Wistia library:
 
 {% codeblock playlist_api.js %}
 <script src="http://fast.wistia.net/static/E-v1.js"></script>
-<script src="http://fast.wistia.net/static/concat/E-v1-gridify,socialbar-v1.js"></script>
 {% endcodeblock %}
 
 Now initialize the embed and pass in the video parameters:
@@ -197,17 +196,22 @@ wistiaEmbed = Wistia.embed("abcde12345", {
 {% endcodeblock %}
 
 
-Let's also initialize the socialbar plugin:
+Let's also include the socialbar in the embed code:
 
 {% codeblock playlist_api.js %}
 <script>
-Wistia.plugin.socialbar(wistiaEmbed, {
-  version: "v1",
-  buttons: "embed-twitter-facebook"
+wistiaEmbed = Wistia.embed("abcde12345", {
+  playerColor: "ff0000",
+  fullscreenButton: false,
+  container: "wistia_abcde12345",
+  plugin: {
+    "socialbar-v1": {
+      buttons: "embed-twitter-facebook"
+    }
+  }
 });
 </script>
 {% endcodeblock %}
-
 
 Now that you've finished your API embed, you can access the [JavaScript API]({{ '/player-api' | post_url }}) and 
 do more cool stuff!
