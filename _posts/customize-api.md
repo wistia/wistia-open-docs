@@ -69,7 +69,6 @@ The embedding options are explained in the
       "buttons":"embed-twitter-facebook",
       "showTweetCount":"false",
       "tweetText":"{default}",
-      "includeLinkback":"true",
       "height":"25"
     }
   }
