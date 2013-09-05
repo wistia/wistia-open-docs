@@ -28,7 +28,8 @@ It's likely we'll add more URLs to this list in the future.
 
 ### The Regex
 
-If you're looking to automatically detect Wistia URLs and run them against our endpoint, we recommend using this regular expression:
+If you're looking to automatically detect Wistia URLs and run them against our
+endpoint, we recommend using this regular expression:
 
 <code class="full_width">/https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/</code>
 
@@ -74,15 +75,18 @@ This returns:
 
 If you're looking for XML instead of JSON, use: `http://fast.wistia.net/oembed.xml`
 
-For all the fine details about the options supported, see the official [oEmbed spec](http://oembed.com).
+For all the fine details about the options supported, see the official
+[oEmbed spec](http://oembed.com).
 
 ### Parameters
 
 Our endpoint supports all the options detailed at oembed.com.
 
-The required url parameter that's passed in supports all the options detailed in the [Player API]({{ '/player-api' | post_url }}).
+The required url parameter that's passed in supports all the options detailed
+in the [Player API]({{ '/player-api' | post_url }}).
 
-We also accept some additional parameters that can change the output of the embed code:
+We also accept some additional parameters that can change the output of the
+embed code:
 
 Name | Type  | Description
 -----|-------|------------
@@ -97,9 +101,14 @@ ssl | boolean | Determines whether the embed code should use https. Defaults to 
 
 ### Working With The Thumbnail
 
-Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a direct link to the thumbnail image asset. If your implementation involves using the thumbnail image (i.e. building your own 'popover' embeds, displaying your own play button, etc.) you should use this thumbnail image, which by default has no Wistia play button overlaid on it.
+Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a
+direct link to the thumbnail image asset. If your implementation involves using
+the thumbnail image (i.e. building your own 'popover' embeds, displaying your
+own play button, etc.) you should use this thumbnail image, which by default
+has no Wistia play button overlaid on it.
 
-See our [working with Wistia images]({{ '/working-with-images' | post_url }}) guide for more info!
+See our [working with Wistia images]({{ '/working-with-images' | post_url }})
+guide for more info!
 
 ### Troubleshooting
 
@@ -121,7 +130,7 @@ ready-made libraries for every popular language, plus they're just nice guys!
 ## Data API Approach
 
 
-{{ "This is totally FYI: We've been recommending the <a href='#oembed_approach'>oEmbed approach</a> as the preferred method. It provides a simple way to generate Wistia embed codes without you having to write much code. The only downside is you'll have to make an extra request to get an embed code." | note }}
+{{ "This is totally FYI: We've been recommending the <a href='#oembed_approach'>oEmbed approach</a> as the preferred method. It provides a simple way to generate Wistia embed codes without you having to write much code. The only downside is you'll have to make an extra request to get an embed code." | note }} 
 
 The hashed_id is a unique identifier to a video within the Wistia system. 
 You can get hashed IDs for your videos programmatically using the 
