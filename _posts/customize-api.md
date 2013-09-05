@@ -1,6 +1,7 @@
 ---
 special_category_link: developers
 api: true
+api_warning: true
 layout: post
 title: The Customize API
 description: Learn how to customize your videos with the API.
@@ -12,7 +13,6 @@ post_intro: <p>The Customize API lets you configure each video in your account w
 
 The Customize API is a subset of the [Data API]({{ '/data-api' | post_url }}), so you should
 look at that for information on how to get set up.
-
 
 #### JSON vs. XML
 
@@ -47,8 +47,8 @@ customizations for the video.
 
 #### Example JSON Response
 
-The meaning of each option is explained in the
-[Embed API]({{ '/embed-api' | post_url }}).
+The embedding options are explained in the 
+[Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
 {% codeblock example_json_response.json %}
 {
@@ -93,8 +93,8 @@ for the video.
 
 #### Example JSON Request
 
-The meaning of each option is explained in the
-[Embed API]({{ '/embed-api' | post_url }}).
+The embedding options are explained in the 
+[Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
 {% codeblock example_json_request.json %}
 POST /medias/hxsvasanee/customizations.json HTTP/1.1
@@ -140,8 +140,8 @@ customizations. If it is not `null`, that value will be set.
 
 #### Example JSON Request
 
-The meaning of each option is explained in the
-[Embed API]({{ '/embed-api' | post_url }}).
+The embedding options are explained in the 
+[Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
 {% codeblock example_json_request.json %}
 PUT /medias/hxsvasanee/customizations.json HTTP/1.1
