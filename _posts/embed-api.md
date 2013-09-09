@@ -252,14 +252,3 @@ They only recognize the `<object><embed>` style embed codes.
 The good news is you can easily use the 
 [oEmbed approach]('#oembed_approach') to generate an SEO embed for you.
 
----
-
-
-## Plugin Options
-
-Our plugins have a lot of options too! Check them out:
-
-*  [Socialbar]({{ '/socialbar-params' | post_url }})
-*  [Post-Roll Call To Action]({{ '/postroll-params' | post_url }})
-*  [Interactive Transcript]({{ '/transcript-params' | post_url }})
-*  [Turnstile Email Capturing]({{ '/turnstile-params' | post_url }})

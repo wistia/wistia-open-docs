@@ -46,9 +46,9 @@ wmode                 | string  | flash only. The flash window mode of the embed
 
 ## Using Embed Options
 
-### API and SEO Embed codes
+### API Embed codes
 
-Given a video with hashed ID `g5pnf59ala`, we can build an API or SEO embed
+Given a video with hashed ID `g5pnf59ala`, we can build an API embed
 code (using either the in-app embed workflow, or a [dynamic embed building
 approach]({{ '/embed-api' | post_url }}).
 
@@ -83,4 +83,61 @@ as a query string, like `?videoFoam=true`:
 {% codeblock example_iframe_embed.html %}
 <iframe src="http://fast.wistia.net/embed/iframe/g5pnf59ala?videoFoam=true"
   allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"> </iframe>
+{% endcodeblock %}
+
+## Plugin Options
+
+Our plugins (like the social bar, turnstile, and captions) have an array of options as well! Check them out:
+
+*  [Socialbar]({{ '/socialbar-params' | post_url }})
+*  [Post-Roll Call To Action]({{ '/postroll-params' | post_url }})
+*  [Interactive Transcript]({{ '/transcript-params' | post_url }})
+*  [Turnstile Email Capturing]({{ '/turnstile-params' | post_url }})
+
+## Using Plugin Options
+
+### API and SEO Embed Codes
+
+Given a video with the hashed ID `abcde12345`, we can build an API embed code
+and include a plugin (like the social bar) as follows.
+
+First, here is what the embed code should look like:
+
+{% codeblock example_api_embed.html %}
+<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script> wistiaEmbed = Wistia.embed("abcde12345"); </script>
+{% endcodeblock %}
+
+We will be adding a nested plugin object to the embed parameters, referring to
+the [social bar plugin options documentation]({{ '/socialbar-params' | post_url }}).
+
+{% codeblock plugin_options_for_api_embeds.js %}
+<script>
+wistiaEmbed = Wistia.embed("abcde12345", {
+  plugin: {
+    "socialbar-v1": {
+      buttons: "embed-twitter-facebook"
+    }
+  }
+});
+</script>
+{% endcodeblock %}
+
+### iframe Embed Codes
+
+Let's go through the same example (video with hashed ID `abcde12345`) as an iframe.
+
+First the embed code:
+
+{% codeblock example_iframe_embed.html %}
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345"
+  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"> </iframe>
+{% endcodeblock %}
+
+Now we append the plugin using URL-encoded bracket notation:
+
+{% codeblock example_iframe_embed.html %}
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook"
+  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
 {% endcodeblock %}
