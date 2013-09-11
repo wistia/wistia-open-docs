@@ -90,7 +90,11 @@ class TheApp < Sinatra::Base
   # the doc. omg this is cool.
   post '/update' do
     return 403 unless params[:update_key] == $config.update_key
-    spawn({'PATH' => '/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.5.4:/opt/elasticsearch-0.19.9/bin'}, 'rake nuclear_update', chdir: File.dirname(__FILE__))
+    spawn({
+        'PATH' => '/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.5.4:/opt/elasticsearch-0.19.9/bin',
+        'LANG' => 'en_US.UTF-8',
+        'LC_ALL' => 'en_US.UTF-8'
+      }, 'rake nuclear_update', chdir: File.dirname(__FILE__))
     'We can rebuild him. We have the technology. We can make him better than he was. Better...stronger...faster.'
   end
 
