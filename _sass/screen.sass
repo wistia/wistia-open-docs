@@ -315,37 +315,24 @@ em
 
   p, pre, ol, ul
     margin: 15px 0
-  ol
-    font-size: 16px
-    color: $gray6
-    font-family: $fonts
-  ul, ol
-    border-left: 4px solid $light_blue
-    padding-left: 20px
-    font-size: 16px
-    color: $gray6
-    font-family: $fonts
-    line-height: 31px
+  ol, ul
     +anti-alias
-    font-weight: 600
-
-    li p
-      margin: $padding/2 0
-      font-weight: 600
-  ul
-    list-style-type: none
-    position: relative
-    margin: 20px 0px
+    font-family: $fonts
     clear: both
     li
-      margin-top: 25px
-  ol
-    list-style: decimal
-    padding-left: 42px
-    li
-      margin-top: 32px
+      margin-bottom: 15px
       p
         font-weight: 600
+      
+  ul
+    list-style-type: disc
+    line-height: 150%
+    padding-left: 15px
+  ol
+    list-style: decimal
+    li
+      margin-left: 30px
+
   a
     +link-hover
   p
@@ -820,19 +807,11 @@ table
   line-height: 31px
   font-style: italic
   p, ul
-    margin: 15px 0px 0px 0px
-    padding: 0px 0px
-    line-height: 31px
-    font-size: 16px
-    color: $gray6
+    margin-top: 15px
     font-weight: 500
   p
     &:last-child
       padding-bottom: 0px
-  ul
-    padding: 0
-    padding-left: $padding/2
-    margin-top: $padding/2
   ul li
     list-style-position: inside
 
