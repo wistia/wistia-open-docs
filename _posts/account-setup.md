@@ -28,8 +28,8 @@ drop-down menu in the upper-right hand corner of your account. Next, select the
 
 ## Uploading Your Logo
 From the *Account Dashboard*, choose
-<span class="faux_button">Upload your logo</span>.  This will bring up dialog
-that will guide you through the process of uploading and displaying your company
+<span class="faux_button">Upload your logo</span>.  The Upload Your Logo dialog
+will guide you through the process of uploading and displaying your company
 logo in your Wistia account.
 
 {% post_image hashed_id: '4ea0e2a40e66c31af1d275deafd1cfbfa91ae9f4', width: 600, class: 'center' %}
