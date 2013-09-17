@@ -113,27 +113,6 @@ added to the group (no duplicate contacts will be created).
 
 {% post_image hashed_id: '9eec03f4f25becaf23e9bf2bb78aaa669873ed6d', width: 660, class: 'center' %}
 
- 
-## Can a contact be invited in such a way that they don't need to set a password?
-
-Yes.  By default, when a project is shared with a contact, the contact will be 
-required to choose a password if they have never logged into Wistia before or 
-enter their password if they have previously logged in to Wistia. 
-
-{% post_image hashed_id: '2a0ccd84a75c766b5cafdec2550b95a9802ab2d9', width: 320, class: 'float_right' %}
-
-To share a project with a contact in a manner that doesn't require a password, 
-choose "Share project" from the Project Actions menu.  Then, uncheck the 
-"Require invitees to enter password" box in the permissions section.  
-
-Fill out the rest of the information on the form as appropriate and then click 
-the "Share" button.  
-
-The person shared will receive an email with a link to the project.  When they 
-click this link, they will not be required to login; rather, they will be taken 
-directly to the project page where they will be able to view your content.  The 
-users activity will still be tracked and tied to their contact information in 
-your account.  Their activity can be viewed in the User Sessions section of the Stats.
 
 ## How can a contact change their password?
 
