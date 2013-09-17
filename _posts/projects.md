@@ -86,6 +86,6 @@ To give the Section a title, hover over the title text, select the
 To delete a project, select *Delete Project* from under the
 <span class="action_menu">Project Actions</span> menu.
 
-{% post_image hashed_id: '581406b742b2a103ce226f36a9fa65f69a378131', class: 'center' %}
+{% post_image hashed_id: '206d83a6cf49018acfa4a6ee39d8f2d393f1f0fc', class: 'center' %}
 
 Say *sayonara* to that project!

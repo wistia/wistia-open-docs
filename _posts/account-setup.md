@@ -12,7 +12,7 @@ footer: 'for_intermediates'
 
 ## Open Your Account Dashboard
 
-{% post_image hashed_id: 'b9c54623ae5c7aef464dc3802ec54122f6a29ea9', width: 600, class: 'center' %}
+{% post_image hashed_id: '55c81b1270231d7c31d6a460425e425ad595641a', width: 600, class: 'center' %}
 
 Most of the important Wistia settings for your Account are housed in the
 *Account Dashboard*. Many of the tips below require you to open the Account
@@ -22,7 +22,7 @@ First, you will need to be logged in as the Account Owner. Find the *Account*
 drop-down menu in the upper-right hand corner of your account. Next, select the
 *Account Dashboard* option.
 
-{% post_image hashed_id: '86e27462ccb1bdcbeb169dbfbdf5eaa30056475c', width: 600, class: 'center' %}
+{% post_image hashed_id: '528df9cc390e92c0a6198a267175ecc33f2b6b61', width: 600, class: 'center' %}
 
 ---
 

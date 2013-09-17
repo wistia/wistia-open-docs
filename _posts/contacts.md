@@ -49,7 +49,7 @@ project-by-project basis.  As a result, if a contact is shared on multiple
 projects, you will need to remove them from each project individually or delete 
 the contact from your account entirely.
 
-{% post_image hashed_id: '9eec03f4f25becaf23e9bf2bb78aaa669873ed6d', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'd0bfab05474351f90b5bfb9281ed051119c9111b', width: 320, class: 'float_right' %}
 
 To remove a contact from a project, go to the project page and select "Manage 
 permissions" from the Project Actions menu.  This will bring up the permission
@@ -121,13 +121,13 @@ contact chooses their own password and the user resets their own password if it
 is forgotten.  If a contact forgets their password, they can click the "Forgot 
 your password?" link on your Wistia account's login page.
 
-{% post_image hashed_id: 'b96f6ed09802356f5e612ecf4302dbd682245ccd', width: 660, class: 'center' %}
+{% post_image hashed_id: '3b9465ddfd0f6cd43c6b29aaec269d46fdaa468c', width: 660, class: 'center' %}
 
 The contact will then be prompted for their email address (which is also their 
 Wistia login).  Once the "Reset Account" button is pressed, an email will be 
 sent containing a link which will allow them to set their password again.
 
-{% post_image hashed_id: 'c50a9ffad0d3497b6ed2a2c347c5adafe69b34ab', width: 660, class: 'center' %}
+{% post_image hashed_id: 'ddab300c7ed243b3d0396fdc22600320d7d15a6d', width: 660, class: 'center' %}
 
 The contact's old password will work until it is reset which prevents others 
 from locking a contact out by resetting the contact's password.  Finally, 
