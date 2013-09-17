@@ -64,11 +64,19 @@ if you don't have node installed:
 
 make sure this is in your `.bashrc`:
 
+    vim ~/.bashrc
+
+add this line to the end of your `.bashrc` file
+
     export NODE_PATH=/usr/local/lib/node_modules
 
 install CoffeeScript:
 
     npm install -g coffee-script
+
+### Installing wget
+
+    brew install wget
 
 ### How to Add/Update Content
 
