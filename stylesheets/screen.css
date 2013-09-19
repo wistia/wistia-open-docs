@@ -831,7 +831,7 @@ em { font-style: italic; }
 
 .video_embed { margin: 30px 0px; }
 
-table { font-size: 16px; line-height: 31px; font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 70px 0; width: 100%; text-align: left; border-collapse: collapse; table-layout: fixed; -webkit-font-smoothing: antialiased; }
+table { font-size: 16px; line-height: 31px; font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 70px 0; width: 100%; text-align: left; border-collapse: collapse; -webkit-font-smoothing: antialiased; }
 table th { font-size: 16px; padding: 10px 20px; background: #3ea9f5; border-bottom: 2px solid white; color: white; }
 table td { padding: 10px 20px; background: rgba(62, 169, 245, 0.2); border-bottom: 1px solid white; color: #3ea9f5; border-top: 1px solid transparent; word-wrap: break-word; }
 table td a { border-bottom: 1px solid #cbd0d6; color: #161d25; text-decoration: none; }
