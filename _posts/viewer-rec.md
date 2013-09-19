@@ -17,9 +17,6 @@ No worries on which operating system your viewers are using - Wistia is
 friendly with almost every OS on every planet we are aware of, including
 Mac OS, Windows, and Linux.
 
-<img src="http://embed.wistia.com/deliveries/cffeb29191a848fbaf9220775cd262dbf34d7563.png" alt="os_logos" style="margin: 0 auto;" width="350px" />
-<div class="clear"></div>
-
 ## Browsers Supported
 
 Wistia will work on any browser that supports Adobe Flash and/or HTML5.
@@ -35,9 +32,13 @@ to a Flash format as well.
 We also work with all of the major browsers and versions Internet Explorer
 (7,8, and 9), Firefox, Safari, Chrome, Opera, etc.
 
-<img src="http://embed.wistia.com/deliveries/c6d79c9dbafed72414d1577f55241e8925fae9cc.png" alt="browser_logos" width="600px" />
-
-<div class="clear"></div>
+<div class='browser_images'>
+  <img src='https://raw.github.com/paulirish/browser-logos/master/ie9-10/ie9-10_128x128.png' width="80px" />
+  <img src='https://raw.github.com/paulirish/browser-logos/master/safari/safari_128x128.png' width="80px" />
+  <img src='https://raw.github.com/paulirish/browser-logos/master/firefox/firefox_128x128.png' width="80px" />
+  <img src='https://raw.github.com/paulirish/browser-logos/master/opera/opera_128x128.png' width="80px" />
+  <img src='https://raw.github.com/paulirish/browser-logos/master/chrome/chrome_128x128.png' width="80px" />
+</div>
 
 ## Mobile OS Support
 
@@ -49,16 +50,12 @@ Older Android devices have a *native playback* mode and support for flash.
 Our embed codes are designed to seamlessly flip between HTML5 and Flash,
 based on the type of device and OS detected.
 
-We have found the most consistent support on all iOS devices, and Android
-devices running version 2.2 or later.
+We have found the most consistent support on all **iOS** devices, and
+**Android** devices running version 2.2 or later.
 
 Blackberry at this point supports neither HTML5 or Flash. As a result, there
 is not a consistently available way to deliver video via the web to Blackberry
 devices.
-
-<img src="http://embed.wistia.com/deliveries/68456b8d7413d12d1a06c1b92eff101c3e02fcca.png" alt="mobile_os" width="450px" />
-
-<div class="clear"></div>
 
 Basically, if you can view videos on YouTube or any other major video site,
 you (and your viewers) should be all set to use Wistia.

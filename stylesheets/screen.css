@@ -829,6 +829,9 @@ em { font-style: italic; }
 .intro_image .float_left, .integration_logo .float_left { float: left; margin: 9px 25px 25px 0px; }
 .intro_image .float_right, .integration_logo .float_right { float: left; margin: 9px 25px 25px 0px; }
 
+.browser_images { margin: 0 auto; text-align: center; }
+.browser_images img { margin: 0 16px; }
+
 .video_embed { margin: 30px 0px; }
 
 table { font-size: 16px; line-height: 31px; font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 70px 0; width: 100%; text-align: left; border-collapse: collapse; -webkit-font-smoothing: antialiased; }
