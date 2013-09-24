@@ -12,7 +12,7 @@ description: Wistia makes it easy to privately share your videos with people. In
 
 ## Invite Viewers
 
-{% post_image hashed_id: 'b4776e01d8fbe98d585ad48337ddd84e1ad135f3', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '716b85b3eeebeadfa57f9dd51a0fec4c36fc6120', width: 320, class: 'float_right' %}
 
 
 Managers in your Wistia account can invite new viewers to view private content using the "Sharing and Privacy" feature.  From the Project screen, select "Sharing and Privacy" from under the green "Project Actions" drop-down menu. 

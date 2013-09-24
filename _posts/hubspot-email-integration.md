@@ -20,7 +20,7 @@ email, you'll be able to see who they are and what parts of the video they've wa
 
 {% post_image hashed_id: 'c73f6e28514a8ce52e59636069fc7418e6d61c6c', width: 1067, height: 807 %}
 
-Navigate to a video in your account and click *Email Marketing* from the *Media Actions* menu.
+Navigate to a video in your account and click *Embed & Share* from the *Video Actions* menu, then select *Link in Email Campaign*.
 Change the size, play button color, and page the video links to. Then copy the embed code.
 I've highlighted the embed code in that pretty pink box.
 

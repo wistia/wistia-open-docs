@@ -14,7 +14,7 @@ Account (perhaps all the videos across your website).
 
 
 
-{% post_image hashed_id: 'e89760ac0509f0e3fee93e9bd2355b6ea8ad9034', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'a1d4328e0f493dc9b1f9b27b4bf97c199093e713', width: 320, class: 'float_right' %}
 
 Starting from the Projects List page of your Account 
 (i.e. *myaccount.wistia.com/projects*), access your high level stats by 
@@ -96,7 +96,7 @@ Clicking the title of an individual media will move you to the Media-level Trend
 
 ## Media-Level Trends
 
-{% post_image hashed_id: '00d580ac4816a78f26ca675f22c2c067c3615770', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'ac566c14c044b9e5a0bb501216c81c89c5486a06', width: 320, class: 'float_right' %}
 
 The media level provides detailed insight into how the video was viewed, both 
 at an aggregate level through an engagement graph, and individually through 
@@ -207,7 +207,7 @@ drilled down into the individual viewer.
 
 ### The Viewer Stream Page
 
-{% post_image hashed_id: '5a58a21833887c8845b20080328f97b513a4a3f8', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '03c8bea4fb026b228e84f54244c57d14d5cb4975', width: 320, class: 'float_right' %}
 
 To open the Viewers Stream page, select "Viewers" from under the Stats drop-down 
 menu.

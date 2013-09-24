@@ -6,7 +6,7 @@ description: When you invite contacts in to your Wistia account to privately wat
 post_intro: <p>If you have invited viewers in to view videos in your account through the <a href="/doc/private-sharing">Private Sharing</a> workflow, their analytics will show up in the Private Sessions area of your account.  To view these viewing sessions, follow the directions below!</p>
 ---
 
-{% post_image hashed_id: 'a28ea0e63e6b1f60c5a7f3000eb89ec07c9813f7', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '67f85df6a21e1845c9f0c572c281a0ebd47318ec', width: 320, class: 'float_right' %}
 
 To view the individual user statistics for people you invited into Wistia, select the "User sessions" option under the "Stats" tab at the top of any page in your Wistia account.
 

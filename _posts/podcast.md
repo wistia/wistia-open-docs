@@ -12,7 +12,7 @@ footer: 'for_intermediates'
 
 ## Choose a Project to Use
 
-{% post_image hashed_id: 'a20d3e9329ae919cd3fb2440b5500672d68cc5d0', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '16702e3f6c6fbb7b25d4d2eada98fbedd61f5b05', width: 320, class: 'float_right' %}
 
 First we'll need to choose a Project to use as the Podcast.  Perhaps you'll want to create a Project in your Wistia account just for regularly scheduled programming.  In this case, I'll choose our "Wistia Video Snacks" Project, a set of irreverent videos we've cobbled together over the years.
 

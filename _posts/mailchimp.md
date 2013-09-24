@@ -16,7 +16,7 @@ So let's dive in to how to create an email campaign with Wistia &amp; MailChimp!
 
 ## Prework
 
-{% post_image hashed_id: '037f60ea97dd566d4204a86bcf1efd5a76a71986', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '53db32a7d5f7e7c151657ec6b62d656bb55f66dc', width: 320, class: 'float_right' %}
 
 The first step is choosing the video you'd like to show off in your campaign.
 
@@ -24,7 +24,7 @@ Start by embedding the video on the landing page you'll be using (or, if you're 
 
 ## Create Your Merge Tag
 
-{% post_image hashed_id: 'a9ea3abad60147a0d1b14f7e31296b34817d33ff', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'c2457af105ea9884389e436fce38e748a152cd37', width: 320, class: 'float_right' %}
 
 Next, select <span class="code">Email Marketing</span> from under the Media Actions menu.
 

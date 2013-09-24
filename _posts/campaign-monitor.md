@@ -15,7 +15,7 @@ Oh, and creating an email campaign including a Wistia video with Campaign Monito
 
 ## Prework
 
-{% post_image hashed_id: '037f60ea97dd566d4204a86bcf1efd5a76a71986', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '158ba02913c1b3a4c298143a3542fea81e8f1f85', width: 320, class: 'float_right' %}
 
 The first step is choosing the video you'd like to show off in your campaign.
 
@@ -25,7 +25,7 @@ Start by embedding the video on the landing page you'll be using (or, if you're 
 
 ## Generating the Campaign Monitor Merge Tag
 
-{% post_image hashed_id: '2f2d65382f208f22150318c6ccc7358a06a6b244', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '48c849fe57613e96237954c65704241dc9d1187f', width: 320, class: 'float_right' %}
 
 The next step is to create the merge tag for your Campaign Monitor email. On your video's media page, select 'Email Marketing from under the <span class="action_menu">Media Actions</span> menu.
 
