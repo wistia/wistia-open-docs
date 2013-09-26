@@ -26,9 +26,6 @@ There are 3 Steps to getting fully integrated:
 
 ## Enable the integration inside HubSpot
 
-**NOTE** This integration is currently in beta at HubSpot. It's not on for all 
-customers yet. Give them a call and have them enable it for your account!
-
 To enable the integration within HubSpot, log into your HubSpot account, 
 click on your name in the upper right of the screen, and go to **Settings**.
 
