@@ -197,7 +197,7 @@ Here's the workflow:
 * Load up transmit, and enter the following settings:
   * Server: ftp.wistia.com
   * User Name: wistia
-  * Password: your account's API key
+  * Password: your account's API password
   * and make sure to select *FTP with TLS/SSL* from the security options.
 * Your projects list will appear. 
 * When uploading, upload into the Project's folder, not it's `_assets` dir
