@@ -11,14 +11,20 @@ leads and drive better engagement. They are the masters of inbound
 marketing...heck, they *invented* it!
 
 HubSpot and Wistia work together in a bunch of different ways:
-- Video heatmaps show up in your contacts' timelines
-- A [Wistia Turnstile]({{ '/turnstile' | post_url }}) integration
-- Video events are piped to HubSpot so you can segment your contacts based on viewing behavior
+
+* Video heatmaps show up in your contacts' timelines
+* A [Wistia Turnstile]({{ '/turnstile' | post_url }}) integration
+* Video events are piped to HubSpot so you can segment your contacts based on viewing behavior
+
+See this video for more:
+
+{% wistia_embed hashed_id: y1ezg4s4ef %}
 
 
 ## Setting Everything Up
 
-There are 3 Steps to getting fully integrated:
+Three Steps to getting fully integrated:
+
 1. Enable the integration inside your HubSpot account.
 2. Add the integration JavaScript snippet to your website.
 3. Set up Turnstile to work with HubSpot.
@@ -29,8 +35,7 @@ There are 3 Steps to getting fully integrated:
 To enable the integration within HubSpot, log into your HubSpot account, 
 click on your name in the upper right of the screen, and go to **Settings**.
 
-In Settings, click **Wistia Integration** under Integrations on the left of 
-the screen.
+In Settings, click **Wistia Integration** under the *Integrations* headline.
 
 Follow the instructions! Note that some of their instructions, notably the 
 part related to the JavaScript snippet, overlap with the instructions below.
