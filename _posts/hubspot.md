@@ -191,10 +191,3 @@ the following sections:
 
 Ta da! Automation bliss! Segment on these events, see them in your timeline, 
 the sky's the limit.
-
-
-## Feedback
-
-We'd love to hear how this is working for you and suggestions for ways it can
-be improved. Feel free to email Kristen and Brendan with your feedback! Our 
-emails are just our first names at wistia.com. Thanks!
