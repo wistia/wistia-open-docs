@@ -1,9 +1,11 @@
 require 'rspec/core/rake_task'
+require 'date'
 
 
 # HT: http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
 desc "Pre Jekyll rendering stuff"
 task :pre_jekyll do
+  puts Time.now.to_s
   puts "Doing pre-Jekyll schtuffs ..."
 
   print "  Compass Compiling ... \n"
