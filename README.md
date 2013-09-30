@@ -76,6 +76,8 @@ install CoffeeScript:
 
 ### Installing wget
 
+btw, wget is used to pull global Wistia header from `wistiacom`.
+
     brew install wget
 
 ### How to Add/Update Content
