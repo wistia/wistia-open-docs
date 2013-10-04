@@ -6,7 +6,7 @@
   line-height: 140%
   text-align: left
 
-#wistia-basics-header
+.wistia-basics-header
   background-color: white
   margin: 30px 0
   position: relative
@@ -24,14 +24,14 @@
     @extend %wistia_basics_paragraph
     width: 55%
 
-#media-tiles-container
+.media-tiles-container
   border-top: 1px solid $accent_gray
   margin-bottom: 40px
   padding-top: 20px
   position: relative
   text-align: center
 
-  #media-tiles 
+  .media-tiles 
     text-align: left
     width: 100%
     h1
@@ -70,10 +70,11 @@
         padding: 30px
       .title 
         margin-bottom: 10px
+        +anti-alias
         a 
           font:
             size: 26px
-            weight: 100
+            weight: 400
           text-decoration: none
           color: #333
       .description 

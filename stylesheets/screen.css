@@ -651,27 +651,27 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .devhq_footer_arrow { margin: 0 auto; }
 
-#wistia-basics-header .project-description, #media-tiles-container #media-tiles .media-tile .description { color: #161d25; font-size: 16px; line-height: 140%; text-align: left; }
+.wistia-basics-header .project-description, .media-tiles-container .media-tiles .media-tile .description { color: #161d25; font-size: 16px; line-height: 140%; text-align: left; }
 
-#wistia-basics-header { background-color: white; margin: 30px 0; position: relative; font-family: "Avenir", Futura, Helvetica, sans-serif; }
-#wistia-basics-header ul { text-align: center; }
-#wistia-basics-header .project-title { margin-bottom: 20px; }
-#wistia-basics-header .project-title h1 { font-size: 35px; font-style: normal; text-align: left; }
-#wistia-basics-header .project-description { width: 55%; }
+.wistia-basics-header { background-color: white; margin: 30px 0; position: relative; font-family: "Avenir", Futura, Helvetica, sans-serif; }
+.wistia-basics-header ul { text-align: center; }
+.wistia-basics-header .project-title { margin-bottom: 20px; }
+.wistia-basics-header .project-title h1 { font-size: 35px; font-style: normal; text-align: left; }
+.wistia-basics-header .project-description { width: 55%; }
 
-#media-tiles-container { border-top: 1px solid #cbd0d6; margin-bottom: 40px; padding-top: 20px; position: relative; text-align: center; }
-#media-tiles-container #media-tiles { text-align: left; width: 100%; }
-#media-tiles-container #media-tiles h1 { font-size: 54px; text-align: center; }
-#media-tiles-container #media-tiles .row { margin: 20px 0; position: relative; }
-#media-tiles-container #media-tiles .media-tile { background-color: white; font-family: "Avenir", Futura, Helvetica, sans-serif; height: 415px; vertical-align: top; width: 425px; -webkit-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; -moz-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
-#media-tiles-container #media-tiles .media-tile.second_column { position: absolute; right: 0; }
-#media-tiles-container #media-tiles .media-tile:hover { background-color: #eceef1; }
-#media-tiles-container #media-tiles .media-tile a { position: relative; display: block; }
-#media-tiles-container #media-tiles .media-tile img { margin: 0 auto; display: block; width: 425px; }
-#media-tiles-container #media-tiles .media-tile em { font-weight: 200; }
-#media-tiles-container #media-tiles .media-tile .info { width: 70%; padding: 30px; }
-#media-tiles-container #media-tiles .media-tile .title { margin-bottom: 10px; }
-#media-tiles-container #media-tiles .media-tile .title a { font-size: 26px; font-weight: 100; text-decoration: none; color: #333333; }
+.media-tiles-container { border-top: 1px solid #cbd0d6; margin-bottom: 40px; padding-top: 20px; position: relative; text-align: center; }
+.media-tiles-container .media-tiles { text-align: left; width: 100%; }
+.media-tiles-container .media-tiles h1 { font-size: 54px; text-align: center; }
+.media-tiles-container .media-tiles .row { margin: 20px 0; position: relative; }
+.media-tiles-container .media-tiles .media-tile { background-color: white; font-family: "Avenir", Futura, Helvetica, sans-serif; height: 415px; vertical-align: top; width: 425px; -webkit-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; -moz-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.media-tiles-container .media-tiles .media-tile.second_column { position: absolute; right: 0; }
+.media-tiles-container .media-tiles .media-tile:hover { background-color: #eceef1; }
+.media-tiles-container .media-tiles .media-tile a { position: relative; display: block; }
+.media-tiles-container .media-tiles .media-tile img { margin: 0 auto; display: block; width: 425px; }
+.media-tiles-container .media-tiles .media-tile em { font-weight: 200; }
+.media-tiles-container .media-tiles .media-tile .info { width: 70%; padding: 30px; }
+.media-tiles-container .media-tiles .media-tile .title { margin-bottom: 10px; -webkit-font-smoothing: antialiased; }
+.media-tiles-container .media-tiles .media-tile .title a { font-size: 26px; font-weight: 400; text-decoration: none; color: #333333; }
 
 .thumbnail_color { position: relative; cursor: pointer; }
 .thumbnail_color:before { content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: none; }
