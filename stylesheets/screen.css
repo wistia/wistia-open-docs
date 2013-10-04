@@ -584,8 +584,8 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .api_button_garden .column .api_garden_square a, .devhq_footer h2 { color: #1353a2; cursor: pointer; display: block; font-family: Gill Sans, Arial, sans-serif; font-size: 32px; font-weight: 100; letter-spacing: 1px; padding: 0.4em 0; padding-left: 20px; text-transform: uppercase; }
 
-.api_button_garden .column .api_garden_square a:after { content: " "; background: transparent url(http://embed.wistia.com/deliveries/05cd0b1fdee8d76d7005440159c50b9e60737a34.png) no-repeat; background-position: 0 0; width: 21px; height: 21px; position: absolute; margin: 0.15em 0.5em; }
-.api_button_garden .column .api_garden_square a:hover:after { content: " "; background-position: 0 -21px; }
+.api_button_garden .column .api_garden_square a:after { content: " "; background: transparent url(http://embed.wistia.com/deliveries/05cd0b1fdee8d76d7005440159c50b9e60737a34.png) no-repeat; background-position: 0 0; width: 22px; height: 21px; position: absolute; margin: 0.15em 0.5em; }
+.api_button_garden .column .api_garden_square a:hover:after { content: " "; background-position: 0 -22px; }
 
 .devhq_footer_arrow { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #eceef1; }
 
