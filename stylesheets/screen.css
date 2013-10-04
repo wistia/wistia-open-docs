@@ -678,6 +678,8 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .media-tile:hover .thumbnail_color:before { content: url("http://embed.wistia.com/deliveries/04ce671a8d70642a150ef2c2ad96d3700e1d4caf.bin"); left: 134px; top: 80px; }
 
+.chapter_link { position: relative; }
+
 body { font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; color: #161d25; text-align: left; }
 body a { color: #161d25; text-decoration: none; }
 body a:hover { text-decoration: underline; }
@@ -938,7 +940,7 @@ table tr td pre { margin: 0; padding: 0; }
 .video-info-container .description ul li { margin-left: 1.5em; }
 .video-info-container .description ul li a { font-weight: 300; font-style: italic; color: #161d25; }
 .video-info-container .description ul li a:hover { color: #40aaef; }
-.video-info-container .description ul li i[class^="icon-"] { color: transparent; position: absolute; left: -0.25em; }
+.video-info-container .description ul li i[class^="icon-"] { color: transparent; position: absolute; left: -1.5em; }
 .video-info-container .description ul li:hover a:first-child, .video-info-container .description ul li:hover i { color: #40aaef; }
 .video-info-container .description h2 { font-size: 18px; margin: 15px 0; border: none; }
 .video-info-container .description h2 a { color: #161d25; text-decoration: underline; }
