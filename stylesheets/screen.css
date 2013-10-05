@@ -584,8 +584,8 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .api_button_garden .column .api_garden_square a, .devhq_footer h2 { color: #1353a2; cursor: pointer; display: block; font-family: Gill Sans, Arial, sans-serif; font-size: 32px; font-weight: 100; letter-spacing: 1px; padding: 0.4em 0; padding-left: 20px; text-transform: uppercase; }
 
-.api_button_garden .column .api_garden_square a:after { content: " "; background: transparent url(http://embed.wistia.com/deliveries/05cd0b1fdee8d76d7005440159c50b9e60737a34.png) no-repeat; background-position: 0 0; width: 21px; height: 21px; position: absolute; margin: 0.15em 0.5em; }
-.api_button_garden .column .api_garden_square a:hover:after { content: " "; background-position: 0 -21px; }
+.api_button_garden .column .api_garden_square a:after { content: " "; background: transparent url(http://embed.wistia.com/deliveries/05cd0b1fdee8d76d7005440159c50b9e60737a34.png) no-repeat; background-position: 0 0; width: 22px; height: 21px; position: absolute; margin: 0.15em 0.5em; }
+.api_button_garden .column .api_garden_square a:hover:after { content: " "; background-position: 0 -22px; }
 
 .devhq_footer_arrow { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #eceef1; }
 
@@ -651,32 +651,34 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .devhq_footer_arrow { margin: 0 auto; }
 
-#wistia-basics-header .project-description, #media-tiles-container #media-tiles .media-tile .description { color: #161d25; font-size: 16px; line-height: 140%; text-align: left; }
+.wistia-basics-header .project-description, .media-tiles-container .media-tiles .media-tile .description { color: #161d25; font-size: 16px; line-height: 140%; text-align: left; }
 
-#wistia-basics-header { background-color: white; margin: 30px 0; position: relative; font-family: "Avenir", Futura, Helvetica, sans-serif; }
-#wistia-basics-header ul { text-align: center; }
-#wistia-basics-header .project-title { margin-bottom: 20px; }
-#wistia-basics-header .project-title h1 { font-size: 35px; font-style: normal; text-align: left; }
-#wistia-basics-header .project-description { width: 55%; }
+.wistia-basics-header { background-color: white; margin: 30px 0; position: relative; font-family: "Avenir", Futura, Helvetica, sans-serif; }
+.wistia-basics-header ul { text-align: center; }
+.wistia-basics-header .project-title { margin-bottom: 20px; }
+.wistia-basics-header .project-title h1 { font-size: 35px; font-style: normal; text-align: left; }
+.wistia-basics-header .project-description { width: 55%; }
 
-#media-tiles-container { border-top: 1px solid #cbd0d6; margin-bottom: 40px; padding-top: 20px; position: relative; text-align: center; }
-#media-tiles-container #media-tiles { text-align: left; width: 100%; }
-#media-tiles-container #media-tiles h1 { font-size: 54px; text-align: center; }
-#media-tiles-container #media-tiles .row { margin: 20px 0; position: relative; }
-#media-tiles-container #media-tiles .media-tile { background-color: white; font-family: "Avenir", Futura, Helvetica, sans-serif; height: 415px; vertical-align: top; width: 425px; -webkit-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; -moz-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
-#media-tiles-container #media-tiles .media-tile.second_column { position: absolute; right: 0; }
-#media-tiles-container #media-tiles .media-tile:hover { background-color: #eceef1; }
-#media-tiles-container #media-tiles .media-tile a { position: relative; display: block; }
-#media-tiles-container #media-tiles .media-tile img { margin: 0 auto; display: block; width: 425px; }
-#media-tiles-container #media-tiles .media-tile em { font-weight: 200; }
-#media-tiles-container #media-tiles .media-tile .info { width: 70%; padding: 30px; }
-#media-tiles-container #media-tiles .media-tile .title { margin-bottom: 10px; }
-#media-tiles-container #media-tiles .media-tile .title a { font-size: 26px; font-weight: 100; text-decoration: none; color: #333333; }
+.media-tiles-container { border-top: 1px solid #cbd0d6; margin-bottom: 40px; padding-top: 20px; position: relative; text-align: center; }
+.media-tiles-container .media-tiles { text-align: left; width: 100%; }
+.media-tiles-container .media-tiles h1 { font-size: 54px; text-align: center; }
+.media-tiles-container .media-tiles .row { margin: 20px 0; position: relative; }
+.media-tiles-container .media-tiles .media-tile { background-color: white; font-family: "Avenir", Futura, Helvetica, sans-serif; height: 415px; vertical-align: top; width: 425px; -webkit-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; -moz-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.media-tiles-container .media-tiles .media-tile.second_column { position: absolute; right: 0; }
+.media-tiles-container .media-tiles .media-tile:hover { background-color: #eceef1; }
+.media-tiles-container .media-tiles .media-tile a { position: relative; display: block; }
+.media-tiles-container .media-tiles .media-tile img { margin: 0 auto; display: block; width: 425px; }
+.media-tiles-container .media-tiles .media-tile em { font-weight: 200; }
+.media-tiles-container .media-tiles .media-tile .info { width: 70%; padding: 30px; }
+.media-tiles-container .media-tiles .media-tile .title { margin-bottom: 10px; -webkit-font-smoothing: antialiased; }
+.media-tiles-container .media-tiles .media-tile .title a { font-size: 26px; font-weight: 400; text-decoration: none; color: #333333; }
 
 .thumbnail_color { position: relative; cursor: pointer; }
 .thumbnail_color:before { content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: none; }
 
 .media-tile:hover .thumbnail_color:before { content: url("http://embed.wistia.com/deliveries/04ce671a8d70642a150ef2c2ad96d3700e1d4caf.bin"); left: 134px; top: 80px; }
+
+.chapter_link { position: relative; }
 
 body { font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; color: #161d25; text-align: left; }
 body a { color: #161d25; text-decoration: none; }
@@ -938,7 +940,7 @@ table tr td pre { margin: 0; padding: 0; }
 .video-info-container .description ul li { margin-left: 1.5em; }
 .video-info-container .description ul li a { font-weight: 300; font-style: italic; color: #161d25; }
 .video-info-container .description ul li a:hover { color: #40aaef; }
-.video-info-container .description ul li i[class^="icon-"] { color: transparent; position: absolute; left: -0.25em; }
+.video-info-container .description ul li i[class^="icon-"] { color: transparent; position: absolute; left: -1.5em; }
 .video-info-container .description ul li:hover a:first-child, .video-info-container .description ul li:hover i { color: #40aaef; }
 .video-info-container .description h2 { font-size: 18px; margin: 15px 0; border: none; }
 .video-info-container .description h2 a { color: #161d25; text-decoration: underline; }

@@ -5,7 +5,7 @@ category: Wistia Basics
 \---
 
 .content_container
-  #wistia-basics-header
+  .wistia-basics-header
     %ul
       %li.project-title
         %h1 
@@ -16,54 +16,93 @@ category: Wistia Basics
         you through the key features and workflows of Wistia, to make sure you 
         get the most out of your account.
 
-  #media-tiles-container
-    #media-tiles.cf
+  .media-tiles-container
+    .media-tiles
       .row
         .media-tile
           %a{ :href => "{{ '/wistia-basics-getting-started' | post_url }}" }
             %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/58118331a969734ccb61e1b10dd8ca0a234cb274.jpg", :data => {:video_hashed_id => "8a5e87899d"} }
+              %img{ :src => "http://embed.wistia.com/deliveries/c2e6a5da1e9be8d51b04347d7702170a643013fd.jpg", :data => {:video_hashed_id => "1sy7vkwnw9"} }
           .info
             .title
               %a{ :href => "{{ '/wistia-basics-getting-started' | post_url }}" }
                 Getting Started
             .description 
-              %em Getting Started
-              features uploading, embedding, analytics, and account settings
-              with Wistia.
+              Just signed up and ready to get started? This video will walk you
+              through taking a video from your computer, to your Wistia account
 
         .media-tile.second_column
           %a{ :href => "{{ '/wistia-basics-customization' | post_url }}" }
             %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/630f8bc02b20a2fe598a9884ad2dbb7de9beba96.jpg", :data => {:video_hashed_id => "01a1d9f97c"} }
+              %img{ :src => "http://embed.wistia.com/deliveries/ef996f4f0a2c50de5c77f3e7339cb3505637d4c6.jpg", :data => {:video_hashed_id => "wukpl5v6vj"} }
           .info
             .title
               %a{ :href => "{{ '/wistia-basics-customization' | post_url }}" }
                 Customizing Your Video Embeds
             .description 
-              %em Customizing Your Wistia Embeds
-              details how to control the Wistia player that appears on your website.
+              Ok, your video is uploaded and now you're ready to amp it up? 
+              This video details how to control the Wistia player that appears 
+              on your website.
       .row
         .media-tile
-          %a{ :href => "{{ '/wistia-basics-promoting' | post_url }}" }
+          %a{ :href => "{{ '/wistia-basics-embedding' | post_url }}" }
             %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/62be4701bd3abcaa83b8b5a81ce768b8135f97fd.jpg", :data => {:video_hashed_id => "07bb07bab1"} }
+              %img{ :src => "http://embed.wistia.com/deliveries/902db9c88bae0b2ae6420e7dcda40622a0bd76cc.jpg", :data => {:video_hashed_id => "abkrbi5o1v"} }
           .info
             .title
-              %a{ :href => "{{ '/wistia-basics-promoting' | post_url }}" }
-                Promoting &amp; Sharing Content
+              %a{ :href => "{{ '/wistia-basics-embedding' | post_url }}" }
+                Embedding & Sharing
             .description 
-              %em Promoting Your video
-              covers the tools that ensure your video content gets the attention it deserves.
+              Once your video is customized, it's ready to be shared, whether
+              on your website or within your Wistia account.
         .media-tile.second_column
           %a{ :href => "{{ '/wistia-basics-analytics' | post_url }}" }
             %div.thumbnail_color
-              %img{ :src => "http://embed.wistia.com/deliveries/070c4f1525e01da1d6dca42d814fd3f81894b744.jpg", :data => {:video_hashed_id => "f13ff05fc3"} }
+              %img{ :src => "http://embed.wistia.com/deliveries/27b40dd401546b3093304f5c7f58ec6d824cf5a8.jpg", :data => {:video_hashed_id => "t22v99y5kl"} }
           .info
             .title
               %a{ :href => "{{ '/wistia-basics-analytics' | post_url }}" }
                 Understanding Analytics
             .description 
-              %em Understanding Analytics 
-              is all about Wistia's bread-and-butter - the powerful analytics 
-              provided for embedded video plays.
+              Learn more about measuring your video campaign's performance. See 
+              how Wistia uses analytics to drive their video decisions.
+
+  .wistia-basics-header
+    %ul
+      %li.project-title
+        %h1 
+          Wistia Master Classes
+      %li.project-description
+        These guides include functionality that falls out of the scope of 
+        = succeed ',' do
+          %em Wistia Basics
+        but are super valuable nonetheless!
+
+  .media-tiles-container
+    .media-tiles
+      .row
+        .media-tile
+          %a{ :href => "{{ '/wistia-basics-advanced-marketing' | post_url }}" }
+            %div.thumbnail_color
+              %img{ :src => "http://embed.wistia.com/deliveries/fbe7aa0abb3b89afb87e8441946d7a8d938864dd.jpg", :data => {:video_hashed_id => "jbpw8ga2xu"} }
+          .info
+            .title
+              %a{ :href => "{{ '/wistia-basics-advanced-marketing' | post_url }}" }
+                Email Marketing and Video SEO
+            .description 
+              These two techniques can drive some serious ROI for your video 
+              marketing campaigns. Check out how Wistia can help!
+
+        .media-tile.second_column
+          %a{ :href => "{{ '/wistia-basics-private-sharing' | post_url }}" }
+            %div.thumbnail_color
+              %img{ :src => "http://embed.wistia.com/deliveries/0fe2437e8c80997e2efafdcc265060ddbf9a08c3.jpg", :data => {:video_hashed_id => "fwnwv2d361"} }
+          .info
+            .title
+              %a{ :href => "{{ '/wistia-basics-private-sharing' | post_url }}" }
+                Private Sharing
+            .description 
+              If you are sharing sensitive, internal content, or doing reviews
+              \& approvals, you should check out the 
+              %em Private Sharing
+              workflow.
