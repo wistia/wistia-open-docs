@@ -52,7 +52,7 @@ We recommend uploading video at 1280px wide because it is the most efficient app
 ----
 ## How Wistia Does HD
 
-Because the way we do HD is a little different than more, it bears mentioning.
+Because the way we do HD is a little different than most, it bears mentioning.
 
 When your viewers watch a video at 'embedding' size (640px - 960px wide) it is a waste of bandwidth to show them HD - at that size, the difference in picture is nearly imperceptible.  The HD files are also much *much* larger, which means the viewer can also have that stuttering playback experience. Not good. Instead, we have chosen smart standard definition defaults (what we call *Smart Encoding*) based on your video type (i.e. screencast, action, interview) and that is the version that is shown.
 
