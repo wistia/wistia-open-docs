@@ -16,4 +16,4 @@ video_hashed_id: abkrbi5o1v
   in depth in the [Email Marketing & Video SEO Masterclass]({{ '/wistia-basics-advanced-marketing' | post_url }}).
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(230).play(); return false;"><i class="icon-play"></i>(3:50)</a> This tweet did not get a lot of favorites. It 
   was also not very clever.
-* <a href="#" class="chapter_link" onclick="wistiaEmbed.time(290).play(); return false;"><i class="icon-play"></i>(4:50)</a> One you see Ben uppercutting the air with that Wreck-It Ralph fist, you cannot unsee it.
+* <a href="#" class="chapter_link" onclick="wistiaEmbed.time(290).play(); return false;"><i class="icon-play"></i>(4:50)</a> Once you see Ben uppercutting the air with that Wreck-It Ralph fist, you cannot unsee it.
