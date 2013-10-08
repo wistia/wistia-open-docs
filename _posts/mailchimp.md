@@ -82,3 +82,11 @@ Note, I set the following styles on the div:
   center the thumbnail.
 
 Give this a shot with your next MailChimp merge tag embed!
+
+## Troubleshooting
+
+Sometimes you may run into a little trouble with not seeing emails appear in your Mailchimp lists. In our experience, there are a few reasons why this may happen.
+
+* If you have previously had this email included in one of your lists in Mailchimp but have since deleted it, Mailchimp will not allow the email to be included in a list again. This is something that we often run into with test emails!
+
+* Mailchimp uses a double opt-in system. If the viewer that has checked out your video hasn't yet had the opportunity to confirm their opt-in for your email list, Mailchimp will not populate their email. You can read more about this [here](http://kb.mailchimp.com/article/how-does-confirmed-optin-or-double-optin-work). Thanks! Happy embedding!
