@@ -107,7 +107,7 @@ video (where you can watch the video in your account).  Under the *Media Actions
 drop-down menu, select "Stats".
 
 This will open the page with viewing stats specifically for that media.  You 
-can see the [overall engagement graph]({{ '/audience_engagement_graph' | post_url }}), 
+can see the [overall engagement graph]({{ '/audience-engagement-graph' | post_url }}), 
 summary stats, and [individual viewer heatmaps](#heatmaps).
 
 {% post_image hashed_id: '12ba4ab2ca59f3616215f091bb9b3ae60f22c5b3', class: 'center' %}
@@ -129,7 +129,7 @@ to see specific information for a time in the video, and click the graph to jump
 to that point in the video.
 
 
-More on [Audience Engagement Graphs]({{ '/audience_engagement_graph' | post_url }}).
+More on [Audience Engagement Graphs]({{ '/audience-engagement-graph' | post_url }}).
 
 ---
 
@@ -247,7 +247,7 @@ page gives you a clear view into the activity of your video viewers.
 
 Adding a name to a viewer makes it easy to track their viewing sessions in your 
 analytics.  You can also tag viewers with email address automatically, using 
-[email marketing embeds]({{ '/email_marketing' | post_url }}).
+[email marketing embeds]({{ '/email-marketing' | post_url }}).
 
 Once your viewer is tagged with an email, you can sort to view them in the Viewer 
 Stream by clicking the "With Emails" option on the sorting bar.
