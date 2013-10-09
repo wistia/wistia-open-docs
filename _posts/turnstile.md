@@ -22,7 +22,7 @@ but it is most powerful when connected to your favorite email provider.
 
 To set up the connection, first open your [Account Dashboard]({{ '/account-setup#open_your_account_dashboard' | post_url }}).
 
-Find the *Setup and Email Provider* option.
+Find the *Setup an Email Provider* option.
 
 {{ "In order to access the Integrations area, you will need to be logged in as the Owner of the account." | note }}
 
@@ -44,7 +44,7 @@ Once your account is set up to use an email provider with Turnstile, you can set
 up a Turnstile-enabled embed to collect email addresses, and pass them directly
 into a specific group in your connected email provider.
 
-Inside the [SuperEmbed builder]({{ '/embed-screen' | post_url }}), find the 
+Inside the [Customize screen]({{ '/embed-screen' | post_url }}), find the 
 *Turnstile Email Capture* options area. Select *Enable*, and then select the 
 email list (group) you want the email to be added to when viewers submit their 
 email.
