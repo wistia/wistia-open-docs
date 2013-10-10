@@ -296,7 +296,7 @@ In order to tell Wistia that you want a list of all the media for a specific pro
 HTTP **GET** request to the 
 following URL:
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
 
 #### The Response
 
@@ -538,7 +538,7 @@ Currently, the only attribute that you can update is the project name.
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/projects/<project-id>.json</code>
+<code class="full_width">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that you want to update.
 
@@ -617,7 +617,7 @@ The Wistia data API allows you to delete a project.
 
 #### The Request
 
-<code class="full_width">DELETE https://api.wistia.com/v1/projects/<project-id>.json</code>
+<code class="full_width">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
 
 Make sure you replace *<project-id>* with the hashed ID of the project that you want to delete.
 
@@ -701,7 +701,7 @@ including all of its media, sidebar elements, and sections.
 #### The Request
 
 
-<code class="full_width">POST https://api.wistia.com/v1/projects/<project-id>/copy.json</code>
+<code class="full_width">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that you want to copy.
 
@@ -797,7 +797,7 @@ A sharing is an object that links either a contact or a contact group to a proje
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>/sharings.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project for which you would like to see sharings.
 
@@ -919,7 +919,7 @@ The Wistia data API allows you to see the details of a particular sharing on a p
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project for 
 which you would like to see sharings, and replace *<sharing-id>* with the ID 
@@ -1007,7 +1007,7 @@ Conceptually, you do this by creating a new sharing object for a project.
 
 #### The Request
 
-<code class="full_width">POST https://api.wistia.com/v1/projects/<project-id>/sharings.json</code>
+<code class="full_width">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that 
 you want to share.
@@ -1078,7 +1078,7 @@ the only attributes that you can update are **can_share**, **can_download**,
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
+<code class="full_width">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that you want, 
 and replace `<sharing-id>` with the ID of the sharing that you want to update.
@@ -1202,7 +1202,7 @@ The Wistia data API allows you to delete a sharing on a project.
 
 #### Request
 
-<code class="full_width">DELETE https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
+<code class="full_width">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of 
 the project that you want, and replace `<sharing-id>` with the 
@@ -1524,7 +1524,7 @@ In order to tell Wistia that you want information about a specific piece of medi
 send an HTTP GET request to 
 the following URL:
 
-<code class="full_width">https://api.wistia.com/v1/medias/<media-id>.json</code>
+<code class="full_width">https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want.
 
@@ -1682,7 +1682,7 @@ The Wistia data API allows you to update a piece of media.
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/medias/<media-id>.json</code>
+<code class="full_width">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want to update.
 
@@ -1765,7 +1765,7 @@ The Wistia data API allows you to delete a piece of media.
 
 #### The Request
 
-<code class="full_width">DELETE https://api.wistia.com/v1/medias/<media-id>.json</code>
+<code class="full_width">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want 
 to delete.  This action does not take any parameters.
@@ -1846,7 +1846,7 @@ The Wistia data API allows you to copy a piece of media.
 
 #### The Request
 
-<code class="full_width">POST https://api.wistia.com/v1/medias/<media-id>/copy.json</code>
+<code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/copy.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want to copy.
 
@@ -1946,9 +1946,9 @@ will contain an error message (in either XML or JSON format).
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/medias/<media-id>/stats.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/stats.json</code>
 
-Make sure you replace *<media-id>* with the 
+Make sure you replace `<media-id>` with the 
 hashed ID of the video for which you would like to retrieve statistics.  There are no parameters for this action.
 
 
@@ -2038,7 +2038,7 @@ This method is for adding captions to a video.
 
 #### The Request
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2057,7 +2057,7 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method will return all the captions for a video in SRT format.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
 
 This method takes no parameters.
 
@@ -2109,7 +2109,7 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method will return the captions for a specific language for a video in SRT format.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions/<language-code></code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/<language-code></code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2151,7 +2151,7 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method is for replacing the captions on a video.
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2171,7 +2171,7 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method is for removing the captions file from a video altogether.
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
+<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2190,7 +2190,7 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method is for purchasing English captions on a video.
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/purchase_captions</code></pre>
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/purchase_captions</code></pre>
 
 Note that this request will charge the credit card on your account if successful. Therefore, you must have a saved credit card in order to use this API endpoint.
 
