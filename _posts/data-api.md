@@ -2030,8 +2030,7 @@ url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
 The Captions API allows you to manage the captions for a video.
 
-**Currently you can only have 1 set of captions for each video. Support for
-multiple captions in different languages will be added later.**
+**Currently you can only have 1 set of captions per language for each video.**
 
 ### Captions: Create
 
@@ -2039,7 +2038,7 @@ This method is for adding captions to a video.
 
 #### The Request
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2050,16 +2049,15 @@ language | An optional parameter that denotes which language this file represent
 
 If successful, this method will respond with an empty HTTP 200 OK.
 
-If the media in question is not found, the response will be HTTP 404 Not Found.
+If the specified (or English) captions already exist for this video, the response will be HTTP 400 Bad Request.
 
-If captions already exist for this video, the response will be HTTP 400 Bad Request.
-
+If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
 
 ### Captions: Index
 
 This method will return all the captions for a video in SRT format.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
 
 This method takes no parameters.
 
@@ -2102,18 +2100,20 @@ captions | The text of the captions for the specified language in SRT format.
 &lt;/caption-files&gt;
 </code></pre>
 
-If there are no captions available, the response will be an empty array in the case of JSON or an empty document in the case of XML.
+If captions do not exist for this video, the response will be an empty array in the case of JSON or an empty document in the case of XML.
 
-If an invalid media-id is used, the response will be an empty 404.
+If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
 
 
 ### Captions: Show
 
 This method will return the captions for a specific language for a video in SRT format.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/<media-id>/captions/<language-code></code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions/<language-code></code></pre>
 
-This method takes no parameters.
+Parameter | Description
+----------|------------
+language | An optional parameter that denotes which language to get captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
 
 #### The Response
 
@@ -2130,10 +2130,6 @@ captions | The text of the captions for the specified language in SRT format.
 {
   &quot;language&quot;: 'eng',
   &quot;captions&quot;: 'English SRT file contents here'
-},
-{
-  &quot;language&quot;: 'tlh',
-  &quot;captions&quot;: 'Klingon SRT file contents here'
 }
 </code></pre>
 
@@ -2146,16 +2142,16 @@ captions | The text of the captions for the specified language in SRT format.
 &lt;/caption-file&gt;
 </code></pre>
 
-If the specified captions don't exist, the response will be an empty 404.
+If the specified (or English) captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
 
-If an invalid media-id is used, the response will be an empty 404.
+If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
 
 
 ### Captions: Update
 
 This method is for replacing the captions on a video.
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2166,16 +2162,16 @@ caption_file | Either an attached SRT file or a string parameter with the conten
 
 If successful, this method will respond with an empty HTTP 200 OK.
 
-If the specified video does not exist, this method will return an empty 404.
+If the specified (or English) captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
 
-If there are no captions for the video, this method will return an empty 404.
+If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
 
 
 ### Captions: Delete
 
 This method is for removing the captions file from a video altogether.
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/<media-id>/captions</code></pre>
+<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/captions</code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2185,7 +2181,26 @@ language | An optional parameter that denotes which language of captions to dele
 
 If successful, the response will be an empty HTTP 200 OK.
 
-If the language parameter is present and there are no captions for the specified language, the response will be an empty HTTP 404 Not Found.
+If the specified (or English) captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
+
+If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
+
+
+### Captions: Purchase
+
+This method is for purchasing English captions on a video.
+
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/{% raw %}<media-id>{% endraw %}/purchase_captions</code></pre>
+
+Note that this request will charge the credit card on your account if successful. Therefore, you must have a saved credit card in order to use this API endpoint.
+
+#### The Response
+
+If successful, this method will respond with an empty HTTP 200 OK.
+
+If English captions exist for this video, this method will return an empty HTTP 422 Unprocessable Entity.
+
+If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
 
 ---
 
