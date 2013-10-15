@@ -2030,7 +2030,7 @@ url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
 The Captions API allows you to manage the captions for a video.
 
-**Currently you can only have 1 set of captions per language for each video.**
+**Currently you can only have 1 set of captions for each video. Support for multiple captions will be added later.**
 
 ### Captions: Create
 
@@ -2190,7 +2190,7 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method is for purchasing English captions on a video.
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/purchase_captions</code></pre>
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/purchase</code></pre>
 
 Note that this request will charge the credit card on your account if successful. Therefore, you must have a saved credit card in order to use this API endpoint.
 
