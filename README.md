@@ -97,7 +97,7 @@ Images get uploaded to the Bakery - currently live in Project in home acct.
 
 Images have their own Jekyll 'tag':
 
-    {% post_image hashed_id: *video hashed id* (string), width: *width* (integer), class: *classes* (string) %}
+    {% post_image hashed_id: *image hashed id* (string), width: *width* (integer), class: *classes* (string) %}
 
 ### How to Add/Update Videos
 
