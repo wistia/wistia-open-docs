@@ -25,4 +25,6 @@ The summary stats contains useful metrics like "percentage of visitors that clic
 
 The summary stats are also available in explanation form, which makes it easy to express those high-level stats to others, like a client or a boss.
 
+{{ 'Popover embeds will only show viewers and loads for as many individual viewers who have clicked to launch the popover player, rather than the amount of individual viewers who have loaded the page as a whole.' | note }}
+
 
