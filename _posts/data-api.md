@@ -2109,11 +2109,11 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method will return the captions for a specific language for a video in SRT format.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/<language-code></code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;<language-code></code></pre>
 
-Parameter | Description
-----------|------------
-language | An optional parameter that denotes which language to get captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
+`<language-code>` denotes which language to get captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+
+This method takes no parameters.
 
 #### The Response
 
@@ -2142,7 +2142,7 @@ captions | The text of the captions for the specified language in SRT format.
 &lt;/caption-file&gt;
 </code></pre>
 
-If the specified (or English) captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
+If the specified captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
 
 If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
 
@@ -2151,18 +2151,19 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method is for replacing the captions on a video.
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;</code></pre>
+
+`<language-code>` denotes which language to update captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 Parameter | Description
 ----------|------------
-language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
 caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
 
 #### The Response
 
 If successful, this method will respond with an empty HTTP 200 OK.
 
-If the specified (or English) captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
+If the specified captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
 
 If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
 
@@ -2171,11 +2172,11 @@ If the specified video does not exist, this method will return an empty HTTP 404
 
 This method is for removing the captions file from a video altogether.
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
+<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;</code></pre>
 
-Parameter | Description
-----------|------------
-language | An optional parameter that denotes which language of captions to delete. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
+`<language-code>` denotes which language to delete captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+
+This method takes no parameters.
 
 #### The Response
 
