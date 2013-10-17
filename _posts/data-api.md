@@ -2043,15 +2043,15 @@ This method is for adding captions to a video.
 Parameter | Description
 ----------|------------
 caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
-language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be set to 'eng' by default.
+language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
 
 #### The Response
 
-If successful, this method will respond with an empty HTTP 200 OK.
+If successful, the response will be an empty HTTP 200 OK.
 
-If the specified (or English) captions already exist for this video, the response will be HTTP 400 Bad Request.
+If captions already exist for this video, the response will be HTTP 400 Bad Request.
 
-If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 ### Captions: Index
 
@@ -2063,7 +2063,7 @@ This method takes no parameters.
 
 #### The Response
 
-The response will be an array of JSON objects with the following properties:
+The response will be an array of JSON or XML objects with the following properties:
 
 Field | Description
 ------|------------
@@ -2102,7 +2102,7 @@ captions | The text of the captions for the specified language in SRT format.
 
 If captions do not exist for this video, the response will be an empty array in the case of JSON or an empty document in the case of XML.
 
-If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 
 ### Captions: Show
@@ -2117,7 +2117,7 @@ This method takes no parameters.
 
 #### The Response
 
-The response will be a JSON object with the following properties:
+The response will be a JSON or XML object with the following properties:
 
 Field | Description
 ------|------------
@@ -2142,9 +2142,9 @@ captions | The text of the captions for the specified language in SRT format.
 &lt;/caption-file&gt;
 </code></pre>
 
-If the specified captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
+If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
 
-If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 
 ### Captions: Update
@@ -2161,11 +2161,11 @@ caption_file | Either an attached SRT file or a string parameter with the conten
 
 #### The Response
 
-If successful, this method will respond with an empty HTTP 200 OK.
+If successful, the response will be an empty HTTP 200 OK.
 
-If the specified captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
+If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
 
-If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 
 ### Captions: Delete
@@ -2182,9 +2182,9 @@ This method takes no parameters.
 
 If successful, the response will be an empty HTTP 200 OK.
 
-If the specified (or English) captions do not exist for this video, this method will return an empty HTTP 404 Not Found.
+If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
 
-If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 
 ### Captions: Purchase
@@ -2197,11 +2197,11 @@ Note that this request will charge the credit card on your account if successful
 
 #### The Response
 
-If successful, this method will respond with an empty HTTP 200 OK.
+If successful, the response will be an empty HTTP 200 OK.
 
-If English captions exist for this video, this method will return an empty HTTP 422 Unprocessable Entity.
+If English captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
 
-If the specified video does not exist, this method will return an empty HTTP 404 Not Found.
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 ---
 
