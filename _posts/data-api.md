@@ -2183,7 +2183,7 @@ Note that this request will charge the credit card on your account if successful
 
 If successful, the response will be an empty HTTP 200 OK.
 
-If English captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
+If English captions already exist for this video, the response will be an empty HTTP 400 Bad Request.
 
 If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
