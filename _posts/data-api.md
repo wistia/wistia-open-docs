@@ -2032,13 +2032,15 @@ The Captions API allows you to manage the captions for a video.
 
 **Currently you can only have 1 set of captions for each video. Support for multiple captions will be added later.**
 
+**Captions API only supports JSON.**
+
 ### Captions: Create
 
 This method is for adding captions to a video.
 
 #### The Request
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code></pre>
 
 Parameter | Description
 ----------|------------
@@ -2055,15 +2057,15 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 ### Captions: Index
 
-This method will return all the captions for a video in SRT format.
+This method will return all the captions for a video.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions</code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code></pre>
 
 This method takes no parameters.
 
 #### The Response
 
-The response will be an array of JSON or XML objects with the following properties:
+The response will be an array of JSON objects with the following properties:
 
 Field | Description
 ------|------------
@@ -2075,32 +2077,21 @@ captions | The text of the captions for the specified language in SRT format.
 <pre><code class="language-json">
 [
   {
-    &quot;language&quot;: 'eng',
-    &quot;captions&quot;: 'English SRT file contents here'
+    &quot;captions&quot;: {
+      &quot;language&quot;: &quot;eng&quot;,
+      &quot;text&quot;: &quot;English SRT file contents here&quot;
+    }
   },
   {
-    &quot;language&quot;: 'tlh',
-    &quot;captions&quot;: 'Klingon SRT file contents here'
+    &quot;captions&quot;: {
+      &quot;language&quot;: &quot;tlh&quot;,
+      &quot;text&quot;: &quot;Klingon SRT file contents here&quot;
+    }
   }
 ]
 </code></pre>
 
-##### Example XML Response
-
-<pre><code class="language-xml">
-&lt;caption-files&gt;
-  &lt;caption-file&gt;
-    &lt;language&gt;eng&lt;/language&gt;
-    &lt;captions&gt;English SRT file contents here&lt;/captions&gt;
-  &lt;/caption-file&gt;
-  &lt;caption-file&gt;
-    &lt;language&gt;tlh&lt;/language&gt;
-    &lt;captions&gt;Klingon SRT file contents here&lt;/captions&gt;
-  &lt;/caption-file&gt;
-&lt;/caption-files&gt;
-</code></pre>
-
-If captions do not exist for this video, the response will be an empty array in the case of JSON or an empty document in the case of XML.
+If captions do not exist for this video, the response will be an empty JSON array.
 
 If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
@@ -2109,7 +2100,7 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method will return the captions for a specific language for a video in SRT format.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;<language-code></code></pre>
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json<language-code></code></pre>
 
 `<language-code>` denotes which language to get captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
@@ -2117,7 +2108,7 @@ This method takes no parameters.
 
 #### The Response
 
-The response will be a JSON or XML object with the following properties:
+The response will be a JSON object with the following properties:
 
 Field | Description
 ------|------------
@@ -2128,18 +2119,11 @@ captions | The text of the captions for the specified language in SRT format.
 
 <pre><code class="language-json">
 {
-  &quot;language&quot;: 'eng',
-  &quot;captions&quot;: 'English SRT file contents here'
+  &quot;captions&quot;: {
+    &quot;language&quot;: &quot;eng&quot;,
+    &quot;text&quot;: &quot;English SRT file contents here&quot;
+  }
 }
-</code></pre>
-
-##### Example XML Response
-
-<pre><code class="language-xml">
-&lt;caption-file&gt;
-  &lt;language&gt;eng&lt;/language&gt;
-  &lt;captions&gt;English SRT file contents here&lt;/captions&gt;
-&lt;/caption-file&gt;
 </code></pre>
 
 If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
@@ -2151,7 +2135,7 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method is for replacing the captions on a video.
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;</code></pre>
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code></pre>
 
 `<language-code>` denotes which language to update captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
@@ -2172,7 +2156,7 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method is for removing the captions file from a video altogether.
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;</code></pre>
+<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code></pre>
 
 `<language-code>` denotes which language to delete captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
@@ -2191,7 +2175,7 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method is for purchasing English captions on a video.
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/purchase</code></pre>
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/purchase.json</code></pre>
 
 Note that this request will charge the credit card on your account if successful. Therefore, you must have a saved credit card in order to use this API endpoint.
 
