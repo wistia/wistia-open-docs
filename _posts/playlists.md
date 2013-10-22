@@ -16,6 +16,8 @@ Embedded playlists automatically show the videos contained in the project.  If v
 <iframe src="http://fast.wistia.net/embed/playlists/1d35830d05?bento%5BmenuPosition%5D=bottom&media_0_0%5BautoPlay%5D=false&media_0_0%5BcontrolsVisibleOnLoad%5D=false&theme=bento&version=v1&videoOptions%5BautoPlay%5D=true&videoOptions%5BplayerColor%5D=688AAD&videoOptions%5BvideoHeight%5D=371&videoOptions%5BvideoWidth%5D=660" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_playlist" name="wistia_playlist" width="600" height="467"></iframe>
 </div>
 
+{{ "Those sweet bars you see at the top of our playlist are sections that we have built in, and you can too! Pretty neat, huh?" | tip }}
+
 ---
 
 ## Creating a Video Playlist
@@ -27,3 +29,5 @@ Once you have selected the "Playlist embed" option, you will be taken to a page 
 {% post_image hashed_id: '97fdeb14dc8765354e9769122a782f4cfb5c35c7', class: 'center' %}
 
 Choose the **theme** you want to use, the **size** for the embedded playlist, and other customization settings on the SuperPlaylist builder.
+
+{{ "There are some functionalities in our app that don't work as fully as we'd like them to with Playlists. If you have questions about any of them, just drop us a line at support@wistia.com." | note }}
