@@ -296,7 +296,7 @@ In order to tell Wistia that you want a list of all the media for a specific pro
 HTTP **GET** request to the 
 following URL:
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
 
 #### The Response
 
@@ -538,7 +538,7 @@ Currently, the only attribute that you can update is the project name.
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/projects/<project-id>.json</code>
+<code class="full_width">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that you want to update.
 
@@ -617,7 +617,7 @@ The Wistia data API allows you to delete a project.
 
 #### The Request
 
-<code class="full_width">DELETE https://api.wistia.com/v1/projects/<project-id>.json</code>
+<code class="full_width">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
 
 Make sure you replace *<project-id>* with the hashed ID of the project that you want to delete.
 
@@ -701,7 +701,7 @@ including all of its media, sidebar elements, and sections.
 #### The Request
 
 
-<code class="full_width">POST https://api.wistia.com/v1/projects/<project-id>/copy.json</code>
+<code class="full_width">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that you want to copy.
 
@@ -797,7 +797,7 @@ A sharing is an object that links either a contact or a contact group to a proje
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>/sharings.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project for which you would like to see sharings.
 
@@ -919,7 +919,7 @@ The Wistia data API allows you to see the details of a particular sharing on a p
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project for 
 which you would like to see sharings, and replace *<sharing-id>* with the ID 
@@ -1007,7 +1007,7 @@ Conceptually, you do this by creating a new sharing object for a project.
 
 #### The Request
 
-<code class="full_width">POST https://api.wistia.com/v1/projects/<project-id>/sharings.json</code>
+<code class="full_width">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that 
 you want to share.
@@ -1078,7 +1078,7 @@ the only attributes that you can update are **can_share**, **can_download**,
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
+<code class="full_width">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of the project that you want, 
 and replace `<sharing-id>` with the ID of the sharing that you want to update.
@@ -1202,7 +1202,7 @@ The Wistia data API allows you to delete a sharing on a project.
 
 #### Request
 
-<code class="full_width">DELETE https://api.wistia.com/v1/projects/<project-id>/sharings/<sharing-id>.json</code>
+<code class="full_width">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
 
 Make sure you replace `<project-id>` with the hashed ID of 
 the project that you want, and replace `<sharing-id>` with the 
@@ -1524,7 +1524,7 @@ In order to tell Wistia that you want information about a specific piece of medi
 send an HTTP GET request to 
 the following URL:
 
-<code class="full_width">https://api.wistia.com/v1/medias/<media-id>.json</code>
+<code class="full_width">https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want.
 
@@ -1682,7 +1682,7 @@ The Wistia data API allows you to update a piece of media.
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/medias/<media-id>.json</code>
+<code class="full_width">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want to update.
 
@@ -1765,7 +1765,7 @@ The Wistia data API allows you to delete a piece of media.
 
 #### The Request
 
-<code class="full_width">DELETE https://api.wistia.com/v1/medias/<media-id>.json</code>
+<code class="full_width">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want 
 to delete.  This action does not take any parameters.
@@ -1846,7 +1846,7 @@ The Wistia data API allows you to copy a piece of media.
 
 #### The Request
 
-<code class="full_width">POST https://api.wistia.com/v1/medias/<media-id>/copy.json</code>
+<code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/copy.json</code>
 
 Make sure you replace `<media-id>` with the hashed ID of the media that you want to copy.
 
@@ -1946,9 +1946,9 @@ will contain an error message (in either XML or JSON format).
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/medias/<media-id>/stats.json</code>
+<code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/stats.json</code>
 
-Make sure you replace *<media-id>* with the 
+Make sure you replace `<media-id>` with the 
 hashed ID of the video for which you would like to retrieve statistics.  There are no parameters for this action.
 
 
@@ -2010,7 +2010,7 @@ averagePercentWatched         | This is an integer between 0 and 100.  It shows 
 
 ---
 
-## Account API
+## Account
 
 #### The Request
 
@@ -2024,6 +2024,168 @@ id    | Numeric id of the account
 name  | Account name
 url | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 
+---
+
+## Captions
+
+The Captions API allows you to manage the captions for a video.
+
+**Currently you can only have 1 set of captions for each video. Support for multiple captions will be added later.**
+
+**Captions API only supports JSON.**
+
+### Captions: Create
+
+This method is for adding captions to a video.
+
+#### The Request
+
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code></pre>
+
+Parameter | Description
+----------|------------
+caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
+language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
+
+#### The Response
+
+If successful, the response will be an empty HTTP 200 OK.
+
+If captions already exist for this video, the response will be HTTP 400 Bad Request.
+
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
+
+### Captions: Index
+
+This method will return all the captions for a video.
+
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code></pre>
+
+This method takes no parameters.
+
+#### The Response
+
+The response will be an array of JSON objects with the following properties:
+
+Field | Description
+------|------------
+language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+captions | The text of the captions for the specified language in SRT format.
+
+##### Example JSON Response
+
+<pre><code class="language-json">
+[
+  {
+    &quot;captions&quot;: {
+      &quot;language&quot;: &quot;eng&quot;,
+      &quot;text&quot;: &quot;English SRT file contents here&quot;
+    }
+  },
+  {
+    &quot;captions&quot;: {
+      &quot;language&quot;: &quot;tlh&quot;,
+      &quot;text&quot;: &quot;Klingon SRT file contents here&quot;
+    }
+  }
+]
+</code></pre>
+
+If captions do not exist for this video, the response will be an empty JSON array.
+
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
+
+
+### Captions: Show
+
+This method will return the captions for a specific language for a video in SRT format.
+
+<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json<language-code></code></pre>
+
+`<language-code>` denotes which language to get captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+
+This method takes no parameters.
+
+#### The Response
+
+The response will be a JSON object with the following properties:
+
+Field | Description
+------|------------
+language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+captions | The text of the captions for the specified language in SRT format.
+
+##### Example JSON Response
+
+<pre><code class="language-json">
+{
+  &quot;captions&quot;: {
+    &quot;language&quot;: &quot;eng&quot;,
+    &quot;text&quot;: &quot;English SRT file contents here&quot;
+  }
+}
+</code></pre>
+
+If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
+
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
+
+
+### Captions: Update
+
+This method is for replacing the captions on a video.
+
+<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code></pre>
+
+`<language-code>` denotes which language to update captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+
+Parameter | Description
+----------|------------
+caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
+
+#### The Response
+
+If successful, the response will be an empty HTTP 200 OK.
+
+If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
+
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
+
+
+### Captions: Delete
+
+This method is for removing the captions file from a video altogether.
+
+<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code></pre>
+
+`<language-code>` denotes which language to delete captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+
+This method takes no parameters.
+
+#### The Response
+
+If successful, the response will be an empty HTTP 200 OK.
+
+If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
+
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
+
+
+### Captions: Purchase
+
+This method is for purchasing English captions on a video.
+
+<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/purchase.json</code></pre>
+
+Note that this request will charge the credit card on your account if successful. Therefore, you must have a saved credit card in order to use this API endpoint.
+
+#### The Response
+
+If successful, the response will be an empty HTTP 200 OK.
+
+If English captions already exist for this video, the response will be an empty HTTP 400 Bad Request.
+
+If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 ---
 
