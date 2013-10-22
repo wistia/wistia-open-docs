@@ -2018,24 +2018,26 @@ The Captions API allows you to manage the captions for a video.
 
 **Captions API only supports JSON.**
 
+Make sure you replace `<media-id>` with the hashed ID of the media you're interested in.
+
 ### Captions: Create
 
 This method is for adding captions to a video.
 
 #### The Request
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code></pre>
+<code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code>
 
 Parameter | Description
 ----------|------------
 caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
-language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
+language | An optional parameter that denotes which language this file represents and it should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
 
-Example of <code class="language-markup">caption_file</code> as a string parameter using curl:
-<pre><code class="language-markup">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --data $'caption_file=1\n00:00:00,000 --> 00:00:03,000\nOh caption, my caption.'</code></pre>
+Example of <code>caption_file</code> as a string parameter using curl:
+<code class="full_width">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --data $'caption_file=1\n00:00:00,000 --> 00:00:03,000\nOh caption, my caption.'</code>
 
-Example of <code class="language-markup">caption_file</code> as an attached file using curl:
-<pre><code class="language-markup">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --form "caption_file=@./oh_caption.srt"</code></pre>
+Example of <code>caption_file</code> as an attached file using curl:
+<code class="full_width">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --form "caption_file=@./oh_caption.srt"</code>
 
 #### The Response
 
@@ -2049,7 +2051,7 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method will return all the captions for a video.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code>
 
 This method takes no parameters.
 
@@ -2064,22 +2066,22 @@ captions | The text of the captions for the specified language in SRT format.
 
 ##### Example JSON Response
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
 [
   {
-    &quot;captions&quot;: {
-      &quot;language&quot;: &quot;eng&quot;,
-      &quot;text&quot;: &quot;English SRT file contents here&quot;
+    "captions": {
+      "language": "eng",
+      "text": "English SRT file contents here."
     }
   },
   {
-    &quot;captions&quot;: {
-      &quot;language&quot;: &quot;tlh&quot;,
-      &quot;text&quot;: &quot;Klingon SRT file contents here&quot;
+    "captions": {
+      "language": "tlh",
+      "text": "Klingon SRT file contents here."
     }
   }
 ]
-</code></pre>
+{% endcodeblock %}
 
 If captions do not exist for this video, the response will be an empty JSON array.
 
@@ -2090,9 +2092,9 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method will return the captions for a specific language for a video in SRT format.
 
-<pre><code class="language-markup">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json<language-code></code></pre>
+<code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code>
 
-`<language-code>` denotes which language to get captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+`<language-code>` denotes which language to get captions for and it should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 This method takes no parameters.
 
@@ -2107,14 +2109,16 @@ captions | The text of the captions for the specified language in SRT format.
 
 ##### Example JSON Response
 
-<pre><code class="language-json">
+{% codeblock example_json_response.json %}
+
 {
-  &quot;captions&quot;: {
-    &quot;language&quot;: &quot;eng&quot;,
-    &quot;text&quot;: &quot;English SRT file contents here&quot;
+  "captions": {
+    "language": "eng",
+    "text": "English SRT file contents here."
   }
 }
-</code></pre>
+
+{% endcodeblock %}
 
 If the specified captions do not exist for this video, the response will be an empty HTTP 404 Not Found.
 
@@ -2125,9 +2129,9 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method is for replacing the captions on a video.
 
-<pre><code class="language-markup">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code></pre>
+<code class="full_width">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code>
 
-`<language-code>` denotes which language to update captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+`<language-code>` denotes which language to update captions for and it should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 Parameter | Description
 ----------|------------
@@ -2146,9 +2150,9 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method is for removing the captions file from a video altogether.
 
-<pre><code class="language-markup">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code></pre>
+<code class="full_width">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code>
 
-`<language-code>` denotes which language to delete captions for. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+`<language-code>` denotes which language to delete captions for and it should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 This method takes no parameters.
 
@@ -2165,7 +2169,7 @@ If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 This method is for purchasing English captions on a video.
 
-<pre><code class="language-markup">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/purchase.json</code></pre>
+<code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/purchase.json</code>
 
 Note that this request will charge the credit card on your account if successful. Therefore, you must have a saved credit card in order to use this API endpoint.
 
