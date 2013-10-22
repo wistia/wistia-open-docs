@@ -2047,6 +2047,12 @@ Parameter | Description
 caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
 language | An optional parameter that denotes which language this file represents. The format of this parameter should conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
 
+Example of <code class="language-markup">caption_file</code> as a string parameter using curl:
+<pre><code class="language-markup">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --data $'caption_file=1\n00:00:00,000 --> 00:00:03,000\nOh caption, my caption.'</code></pre>
+
+Example of <code class="language-markup">caption_file</code> as an attached file using curl:
+<pre><code class="language-markup">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --form "caption_file=@./oh_caption.srt"</code></pre>
+
 #### The Response
 
 If successful, the response will be an empty HTTP 200 OK.
