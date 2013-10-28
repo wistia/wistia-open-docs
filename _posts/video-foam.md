@@ -32,9 +32,9 @@ site!
 We'll leave most of the tips for responsive design to the
 [experts](http://davidwalsh.name/design-responsively). In terms of using video
 foam specifically, the most important thing to remember is *your parent
-container cannot take it's size/dimensions based on it's content*. 
+container cannot take its size/dimensions based on its content*. 
 
-If your parent container looks for it's content to set the size, the
+If your parent container looks for its content to set the size, the
 videoFoam'ed video will not expand as you expect it to. Use a `max-width` or
 relative-based width instead.
 
