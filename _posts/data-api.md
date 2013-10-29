@@ -1368,7 +1368,7 @@ duration  <br>(if available) | For Audio or Video files, this field specifies th
 created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
-embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/construct-an-embed-code' | post_url }}">Embedding API</a>.
+embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/embed-api' | post_url }}">Embedding API</a>.
 description         | A description for the media which usually appears near the top of the sidebar on the media's page.
 hashed_id           | A unique alphanumeric identifier for this media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
 
@@ -1536,7 +1536,7 @@ duration <br>(if available) | For Audio or Video files, this field specifies the
 created             | The date when the media was originally uploaded.
 updated             | The date when the media was last changed.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
-embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/construct-an-embed-code' | post_url }}">Embedding API</a>.
+embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/embed-api' | post_url }}">Embedding API</a>.
 description         | A description for the media which usually appears near the top of the sidebar on the media's page.
 hashed_id           | A unique alphanumeric identifier for this media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
 
