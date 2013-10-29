@@ -211,7 +211,47 @@ SEO account section for adding additional domains (see the image at right).
 
 You will be prompted to walk through the same steps as adding your initial domain.
 
-## Video SEO FAQ ##
+## Host Your Own SEO Sitemap
+
+The functionality we have designed is meant to *reduce* headaches around using
+Video SEO. There are some situations, however, when you might want use Wistia
+to build your XML Sitemap file, but self-host it somewhere else. This section
+will cover the steps to hosting and submitting an XML Sitemap file yourself.
+
+**Build your XML sitemap**
+
+In order for these steps to be useful, you must first go through the [normal
+Video SEO setup steps]('#getting_set_up'). You'll need to confirm your
+[Robots.txt file]('#robotstxt_file_setup'). Once that is complete, you can use 
+the “Add to SEO Sitemap” function under the Media Actions menu to create new
+entries for your videos.
+
+**Export your XML sitemap**
+
+The next step is to export the XML sitemap Wistia built based on your metadata
+entries. To save the contents of your XML Sitemap file, navigate to the Sitemap
+URL (i.e. http://app.wistia.com/sitemaps/26547.xml), and then save that webpage.
+
+To track down the URL of the Sitemap, look under the help bubble (question mark
+icon) on the Video SEO tool page. See the screenshot below.
+
+{% post_image hashed_id: '0ca8fda6bfa40c2d95f99083f990225542b0a5e2', class: 'center' %}
+
+**Upload XML sitemap to your own host**
+
+Upload to your web host, the same way you might for a new web page or web page 
+image. Doesn’t need to go anywhere in particular, just needs to be accessible
+by Google.
+
+**Submit Sitemap URL to Google Webmaster Tools**
+Follow [this guide](https://support.google.com/webmasters/answer/183669?hl=en)
+to make sure you submit your new XML Sitemap correctly.
+
+When you add a new video to your sitemap, you will need to re-export, replace 
+the version you have on your end, and re-submit to Google. Annoying, but if our
+hosting paradigm doesn't work for some reason, this might be a good solution!
+
+## Video SEO FAQ
 
 Video SEO is tough, but valuable. Customers have lots of questions around how
 to use our Video SEO tool for their business video. We'll attempt to compile
