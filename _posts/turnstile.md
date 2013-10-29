@@ -50,3 +50,11 @@ email list (group) you want the email to be added to when viewers submit their
 email.
 
 Watch your lists grow! It's a thing of beauty :) 
+
+## How To Use Turnstile Without an Integrated Email Provider
+
+Unfortunately, we aren't able to integrate with all of the awesome email providers in the world. If that is the case for you, you can follow these simple steps to get the emails returned from Turnstile right into the lists of any provider you'd like. If you navigate to the Media that you want to gather emails from and select *Stats* from the *Video Actions* drop down, you will be brought to the Stats page for that project. 
+
+{% post_image hashed_id: "863cb635f0fed31de15c07126bcde2ea76fb8845", class: 'center' %}
+
+Then, scroll all the way to the bottom of the page and select *Export Stats to CSV*—it'll be on the right side. That will send a sweet spreadsheet of all that information right to the email associated with your account, where you can copy and paste them into the email provider of your choice! How awesome is that?!
