@@ -16,6 +16,8 @@ Read more about that and more on the [Twitter Integration page]({{ '/twitter' | 
 
 ## Facebook
 
+{{ "Many of the features of Customize (such as the Turnstile, and Call to Action) do not work inline in Facebook. Sorry about that!" | note }}
+
 Facebook embeds show up right in your news feed.  Your followers can click to play the video in the feed, or click through the link to watch the video in your Wistia account.
 
 {% post_image hashed_id: '9326ce283fa05001610a85440a19531ad3230c7e', class: 'center' %}
