@@ -58,7 +58,7 @@ Now that we have all the back-end coding out of the way, it's time to monitor ho
 
 {% post_image hashed_id: 'd65c31e1c319b67c41664711dc64faa2cd92078b', width: 320, class: 'float_right' %} 
 
-The first step is to navigate to the Event Tracking section.  Click the "Content" area of the left hand nav bar, and then select "Event Tracking".  The Event Tracking section will show the total number of events, the average number of events per visit, and the Top Events.  To see just the video events, select "Categories".
+The first step is to navigate to the Event Tracking section.  Click the "Behavior" area of the left hand nav bar, and then select "Event Tracking".  The Event Tracking section will show the total number of events, the average number of events per visit, and the Top Events.  To see just the video events, select "Categories".
 
 ----
 
