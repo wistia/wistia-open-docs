@@ -51,6 +51,8 @@ email.
 
 Watch your lists grow! It's a thing of beauty :) 
 
+{{ "Once a user has entered an email into the turnstile for a specific video, it will not ask them for their email again. If you never want them to have to enter an email again once they've done so once, check out our Golden Ticket Lab." | note }}
+
 ## How To Use Turnstile Without an Integrated Email Provider
 
 Unfortunately, we aren't able to integrate with all of the awesome email providers in the world. If that is the case for you, you can follow these simple steps to get the emails returned from Turnstile right into the lists of any provider you'd like. If you navigate to the Media that you want to gather emails from and select *Stats* from the *Video Actions* drop down, you will be brought to the Stats page for that project. 
