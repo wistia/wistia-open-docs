@@ -288,6 +288,7 @@ includes:
 *  Organization
 *  Email (if passed through)
 *  Percent of Video Viewed
+*  URL where the view happened
 
 There are also a variety of options of how to filter the data.  These include:
 
