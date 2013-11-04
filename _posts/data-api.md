@@ -1536,21 +1536,23 @@ detailed information about the requested media.  The format of the content (JSON
 
 Field      |  Description
 -----------|-----------------
-id                  | A unique numeric identifier for the media within the system.
-name                | The display name of the media.
-type                | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
+id         | A unique numeric identifier for the media within the system.
+name       | The display name of the media.
+type       | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
+created             | The date when the media was originally uploaded.
+updated             | The date when the media was last changed.
+duration <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
+hashed_id           | A unique alphanumeric identifier for this media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
+description         | A description for the media which usually appears near the top of the sidebar on the media's page.
 section <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default). 
 status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
 progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
+status <br>(if available) | String that represents if the video is ready for embedding.
 thumbnail           | An object representing the thumbnail for this media.  The attributes are URL, width, and height.
-duration <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
-created             | The date when the media was originally uploaded.
-updated             | The date when the media was last changed.
+project             | An object representing the Project for this media. Attributes are name, ID, and Project hashed ID.
 assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
 project             | An object representing the project for this media. The attributes are ID, name, and hashed ID.
 embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/embed-api' | post_url }}">Embedding API</a>.
-description         | A description for the media which usually appears near the top of the sidebar on the media's page.
-hashed_id           | A unique alphanumeric identifier for this media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
 
 
 
@@ -1566,118 +1568,73 @@ contentType       | The asset's content type.
 type              | The internal type of the asset, describing how the asset should be used.  Valid values are “OriginalFile”, “FlashVideoFile”, “Mp4VideoFile”, “IPhoneVideoFile”, “StillImageFile”, “SwfFile”, “Mp3AudioFile”, and “LargeImageFile”.
 
 
-#### Example JSON Response
+#### Example Response
+
+Here is the request:
+
+<pre class='api_request'>
+  curl --user wistia:2baf301d70cdfe6fa3a000770c9989674105d https://api.wistia.com/v1/medias/v80gyfkt28.json
+</pre>
+
+Here is the JSON response received:
 
 {% codeblock example_json_response.json %}
 {
-  "id": 181279,
-  "hashed_id": "abc123",
-  "name": "Introducing the Slimlist",
-  "description": "Test Description",
-  "type": "Video",
-  "section": "Trailers",
-  "status": "ready",
-  "progress": 1.0,
-  "thumbnail": {
-    "url": "http://www.wistia.com/path/to/thumbnail2.png",
-    "width": 100,
-    "height": 60
+  "id":4489021,
+  "name":"How They Work - Zappos",
+  "type":"Video",
+  "created":"2013-09-19T15:30:49+00:00",
+  "updated":"2013-10-28T20:53:12+00:00",
+  "duration":167.0,
+  "hashed_id":"v80gyfkt28",
+  "description":"<p>\n\nWistia goes to Nevada to visit with Zappos to hear what they have to say about their company culture.&nbsp;</p>\n<p>\n\n&nbsp;</p>\n<p>\n\nFor more How They Work videos, check out:</p>\n<p>\n\n<a href=\"http://jeff.wistia.com/projects/ln2k6qwi9k\">http://jeff.wistia.com/projects/ln2k6qwi9k</a></p>\n",
+  "progress":1.0,
+  "status":"ready",
+  "thumbnail":{
+    "url":"http://embed.wistia.com/deliveries/7fbf9c2fe9c6585f9aa032f43f0aecc3f287e86b.jpg?image_crop_resized=100x60",
+    "width":100,
+    "height":60
   },
-  "duration": 126,
-  "created": "2010-08-15T18:47:39+00:00",
-  "updated": "2010-08-21T21:47:00+00:00",
-  "assets": [
+  "project":{
+    "id":464427,
+    "name":"How They Work",
+    "hashed_id":"ln2k6qwi9k"
+  },
+  "assets":[
     {
-      "url": "http://www.wistia.com/path/to/original-file.bin",
-      "width": 640,
-      "height": 272,
-      "fileSize": 12345678,
-      "contentType": "video/quicktime",
-      "type": "Original"
+      "url":"http://embed.wistia.com/deliveries/856970d9a4bcb9aab381a0bd9ab714f19d72c62f.bin",
+      "width":960,
+      "height":540,
+      "fileSize":23695556,
+      "contentType":"video/mp4",
+      "type":"OriginalFile"
+    }, 
+    {
+      "url":"http://embed.wistia.com/deliveries/c16c2ef4a87dc8147305637cc302f2e9f9c78977.bin",
+      "width":960,
+      "height":540,
+      "fileSize":17493009,
+      "contentType":"video/x-flv",
+      "type":"FlashVideoFile"
     },
     {
-      "url": "http://www.wistia.com/path/to/mp4-version.bin",
-      "width": 640,
-      "height": 272,
-      "fileSize": 12123456,
-      "contentType": "video/mp4",
-      "type": "Mp4Video"
+      "url":"http://embed.wistia.com/deliveries/9e5ead0ef514bef19e3bad9062038c7dad60e10a.bin",
+      "width":640,
+      "height":360,
+      "fileSize":19542684,
+      "contentType":"video/mp4",
+      "type":"IphoneVideoFile"
     },
     {
-      "url": "http://www.wistia.com/path/to/still-image.bin",
-      "width": 640,
-      "height": 272,
-      "fileSize": 92008,
-      "contentType": "image/jpeg",
-      "type": "StillImageFile"
+      "url":"http://embed.wistia.com/deliveries/7fbf9c2fe9c6585f9aa032f43f0aecc3f287e86b.bin",
+      "width":960,
+      "height":540,
+      "fileSize":105070,
+      "contentType":"image/jpeg",
+      "type":"StillImageFile"
     }
   ],
-  "project": {
-    "id": 1337,
-    "name": "Blog Videos",
-    "hashed_id": "efg456"
-  },
-  "embedCode": "<object id=\"wistia_181279\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"640\" height=\"272\"><param name=\"allowfullscreen\" value=\"true\" /><param name=\"allowscriptaccess\" value=\"always\" /><param name=\"wmode\" value=\"opaque\" /><param name=\"flashvars\" value=\"videoUrl=http://embed.wistia.com/deliveries/d3cd5688adcf44780e7d90ec1e7b2d988777f1d3.bin&stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&playButtonVisible=true&controlsVisibleOnLoad=false&unbufferedSeek=true&autoLoad=false&autoPlay=false&endVideoBehavior=default&embedServiceURL=http://distillery.wistia.com/x&accountKey=wistia-production_97&mediaID=wistia-production_181279&mediaDuration=74.0&hdUrl=http://embed.wistia.com/deliveries/c7a8037514cd9adbdc96c8cf4b590497d0f63c74.bin\" /><param name=\"movie\" value=\"http://embed.wistia.com/flash/embed_player_v2.0.swf\" /><embed src=\"http://embed.wistia.com/flash/embed_player_v2.0.swf\" name=\"wistia_181279\" type=\"application/x-shockwave-flash\" width=\"640\" height=\"272\" allowfullscreen=\"true\" allowscriptaccess=\"always\" wmode=\"opaque\" flashvars=\"videoUrl=http://embed.wistia.com/deliveries/d3cd5688adcf44780e7d90ec1e7b2d988777f1d3.bin&stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&playButtonVisible=true&controlsVisibleOnLoad=false&unbufferedSeek=true&autoLoad=false&autoPlay=false&endVideoBehavior=default&embedServiceURL=http://distillery.wistia.com/x&accountKey=wistia-production_97&mediaID=wistia-production_181279&mediaDuration=74.0&hdUrl=http://embed.wistia.com/deliveries/c7a8037514cd9adbdc96c8cf4b590497d0f63c74.bin\"></embed></object><script src=\"http://embed.wistia.com/embeds/v.js\"></script><script>if(!navigator.mimeTypes['application/x-shockwave-flash'] || navigator.userAgent.match(/Android/i)!==null)Wistia.VideoEmbed('wistia_181279','640','272',{videoUrl:'http://embed.wistia.com/deliveries/14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin',stillUrl:'http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin',distilleryUrl:'http://distillery.wistia.com/x',accountKey:'wistia-production_97',mediaId:'wistia-production_181279',mediaDuration:74.0})</script>"
-}
 {% endcodeblock %}
-
-#### Example XML Response
-
-
-{% codeblock example_xml_response.xml %}
-<media>
-  <id>181279</id>
-  <name>Introducing the Slimlist</name>
-  <type>Video</type>
-  <section>Trailers</section>
-  <status>ready</status>
-  <progress>1.0</progress>
-  <thumbnail>
-    <url>http://www.wistia.com/path/to/thumbnail2.png</url>
-    <width>100</width>
-    <height>60</height>
-  </thumbnail>
-  <duration>126</duration>
-  <created>2010-08-15T18:47:39+00:00</created>
-  <updated>2010-08-21T21:47:00+00:00</updated>
-  <assets>
-    <asset>
-      <url>http://www.wistia.com/path/to/original-file.bin</url>
-      <width>640</width>
-      <height>272</height>
-      <fileSize>12345678</fileSize>
-      <contentType>video/quicktime</contentType>
-      <type>Original</type>
-    </asset>
-    <asset>
-      <url>http://www.wistia.com/path/to/mp4-version.bin</url>
-      <width>640</width>
-      <height>272</height>
-      <fileSize>12123456</fileSize>
-      <contentType>video/mp4</contentType>
-      <type>Mp4Video</type>
-    </asset>
-    <asset>
-      <url>http://www.wistia.com/path/to/still-image.bin</url>
-      <width>640</width>
-      <height>272</height>
-      <fileSize>92008</fileSize>
-      <contentType>image/jpeg</contentType>
-      <type>StillImageFile</type>
-    </asset>
-  </assets>
-  <project>
-    <id>1337</id>
-    <name>Blog Videos</name>
-    <hashed_id>efg456</hashed_id>
-  </project>
-  <embedCode>amp;<object id=#039;wistia_181279#039; classid=#039;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000#039; width=#039;640#039; height=#039;360#039;amp;>amp;<param name=#039;allowfullscreen#039; value=#039;true#039; /amp;>amp;<param name=#039;allowscriptaccess#039; value=#039;always#039; /amp;>amp;<param name=#039;wmode#039; value=#039;opaque#039; /amp;>amp;<param name=#039;flashvars#039; value=#039;videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;amp;playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;amp;unbufferedSeek=trueamp;amp;autoLoad=falseamp;amp;autoPlay=falseamp;amp;embedServiceURL=http://distillery.wistia.com/xamp;amp;accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;amp;mediaDuration=6.51#039; /amp;>amp;<param name=#039;movie#039; value=#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf#039; /amp;>amp;<embed src=#039;http://brendan.unraw.net/flash/embed_player_v1.1.swf#039; name=#039;wistia_1#039; type=#039;application/x-shockwave-flash#039; width=#039;640#039; height=#039;360#039; allowfullscreen=#039;true#039; allowscriptaccess=#039;always#039; wmode=#039;opaque#039; flashvars=#039;videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;amp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;amp;playButtonVisible=trueamp;amp;controlsVisibleOnLoad=falseamp;amp;unbufferedSeek=trueamp;amp;autoLoad=falseamp;amp;autoPlay=falseamp;amp;embedServiceURL=http://distillery.wistia.com/xamp;amp;accountKey=jim-development_1amp;amp;mediaID=jim-development_1amp;amp;mediaDuration=6.51#039;amp;>amp;</embedamp;>amp;</objectamp;>amp;<script src=#039;http://brendan.unraw.net/embeds/v.js#039;amp;>amp;</scriptamp;>amp;<scriptamp;>if(!navigator.mimeTypes[#039;application/x-shockwave-flash#039;])Wistia.VideoEmbed(#039;wistia_1#039;,#039;640#039;,#039;360#039;,{videoUrl:#039;http://brendan.unraw.net/deliveries/5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin#039;,stillUrl:#039;http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin#039;,distilleryUrl:#039;http://distillery.wistia.com/x#039;,accountKey:#039;jim-development_1#039;,mediaId:#039;jim-development_1#039;,mediaDuration:6.51})amp;</scriptamp;></embedCode>
-  <description>Test Description</description>
-  <hashed_id>abc123</hashed_id>
-</media>
-{% endcodeblock %}
-
-
 
 ---
 

@@ -509,6 +509,7 @@ code { color: #161d25; font-size: 14px; padding: 7px; }
 
 pre { font-size: 1/0.9em; line-height: 1.5; margin: 35px 0; padding: 5px 15px; overflow-x: auto; }
 pre code { background: none; border: none; padding: 0; margin: 0; }
+pre.api_request { padding: 15px 0; }
 
 .full_width { display: block; white-space: nowrap; overflow-x: auto; padding: 20px; }
 
