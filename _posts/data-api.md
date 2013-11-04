@@ -8,52 +8,6 @@ category: Developers
 post_intro: <p><a href="http://wistia.com">Wistia</a> is a video hosting solution for marketers.  We make it easy to upload, manage, share, and track your web video performance.</p><p>The Wistia data API gives you all kinds of programmatic access to your Wistia account. The data is available in either JSON or XML format over HTTP.</p><p>There is also a <a href="https://github.com/wistia/wistia-api" target="_blank">Wistia API Ruby gem</a> for access from the command line.</p><p><strong>Wistia API Exchange Forum:</strong> We've recently added a forum, just for Data API users.  It's meant to be a place for sharing projects and getting language-specific help. Head to <a href="http://dev-forum.wistia.com" target="_blank">http://dev-forum.wistia.com</a> to check it out!</p>
 ---
 
-### Status
-Queued means the file is waiting
-in the queue to be processed. Processing means the file is actively being
-processed. Ready means it has been fully processed and is ready for embedding
-and viewing. Failed means that we were unable to automatically process the
-file.  
-
-other stuff
-The parameters should be passed in the body of the request and URL encoded.
-Alternatively, they can be appended to the end of the 
-URL after a question mark (?) character and passed as query string parameters.
-
-#### Sorting
-
-You can sort the results you receive based on a field you specify. To specify
-how you want the results to be sorted, append one or both of the following
-query parameters to the request URL:
-
-Parameter | Description
------------------------
-sort_by | The name of the field to sort by.
-      Valid values are “name”, “mediaCount”, “created”, or “updated”.
-      Defaults to sorting by Project ID.
-sort_direction | Specifies the direction of the sort, defaults to '1'.
-      1 = ascending, 0 = descending.
-
-For example, if you want to sort your results in *descending order* by the *date
-created*, your request URL would look something like this:
-
-<code class="full_width">https://api.wistia.com/v1/projects.json?sort_by=created&amp;sort_direction=0</code>
-
-#### Paging
-
-You can get your results back in chunks. In order to set the page size 
-and/or the number of pages that you want to see, use the following query parameters:
-
-Parameter | Description
------------------------
-page | Specifies which page of the results you want to see. Defaults to 1 (not 0).
-per_page | The number of results you want to get back per request.
-      The maximum value of this parameter is 100. Defaults to 100.
-
-
-
-
-
 
 ## Getting Started
 
@@ -65,39 +19,6 @@ Generate an API password for your account from the *API* area in your Account Da
 
 {% post_image hashed_id: '655da9c9b7addebc9d935a02a987d9332bd5f3c1', class: 'center' %}
 
-#### Authentication
-
-You must use **SSL** (https instead of http) to access the API.
-
-There are two ways to authenticate when accessing the API:
-
-  1. **HTTP Basic authentication** with `api` as your username and your API password as the password.
-  2. Add `api_password` as a parameter when making a request. For example:
-
-<code class="full_width">https://api.wistia.com/v1/medias.json?api_password=xyz123</code>
-
-#### JSON vs. XML
-
-The request examples retrieve the data in **JSON** format.
-If you would like the data in **XML** format, 
-change the extension of the request from `json` to `xml`.
-
-#### PUT and DELETE
-
-Some HTTP clients are limited to sending GET and POST requests 
-(e.g. HTML forms have this limitation).
-You will notice, however, that many of the API calls only respond to 
-**PUT** or **DELETE** requests.  In order to trigger these calls from a client that does not support 
-**PUT** or **DELETE**, use a POST request and add a parameter named “\_method” (no quotes) with 
-a value of either `put` or `delete`.
-
-#### Rate Limit
-
-The API has a rate limit at 100 requests per minute.
-If there are more than 100 requests in a minute for a particular account, the service will respond with 
-HTTP error 503 (Service Unavailable) and the Retry-After 
-HTTP header will be set with a number of seconds to wait before trying again.
-
 #### Versions and Updates
 
 We will introduce API changes when necessary/possible,
@@ -105,14 +26,89 @@ and update the version number (i.e. *v1*) when a **breaking change** is made.
 
 Stay tuned to the [dev-forum](dev-forum.wistia.com) for updates on the API.
 
-
-## Resources
+#### Resources
 
 To make your Wistia experience even more awesome, here are some resources just for you:
 
-[ Wistia-API Ruby Gem ]( https://github.com/wistia/wistia-api ) - selected *best gem ever* by Jim Bancroft
+[Wistia-API Ruby Gem](https://github.com/wistia/wistia-api) - selected
+*best gem ever* by Jim Bancroft
 
-[ Wistia-API PHP Class ]( https://github.com/stephenreid/wistia-api ) - created by Stephen Reid
+[Wistia-API PHP Class](https://github.com/stephenreid/wistia-api) - created by
+Stephen Reid
+
+
+## Making Requests
+
+### Authentication
+
+You must use **SSL** (https instead of http) to access the API.
+
+There are two ways to authenticate when accessing the API:
+
+1. **HTTP Basic authentication** with `api` as your username and your API password as the password.
+2. Add `api_password` as a parameter when making a request. For example:
+
+<code class="full_width">https://api.wistia.com/v1/medias.json?api_password=xyz123</code>
+
+### Passing Parameters
+
+All parameters should be passed in the body of the request and URL encoded.
+Alternatively, they can be appended to the end of the URL after a question mark
+(?) character and passed as query string parameters.
+
+### JSON vs. XML
+
+The request examples retrieve the data in **JSON** format.
+If you would like the data in **XML** format, 
+change the extension of the request from `json` to `xml`.
+
+### PUT and DELETE
+
+Some HTTP clients are limited to sending `GET` and `POST` requests (e.g. HTML
+forms have this limitation).  You will notice, however, that many of the API
+calls only respond to `PUT` or `DELETE` requests.  In order to trigger these
+calls from a client that does not support `PUT` or `DELETE`, use a POST request
+and add a parameter named “\_method” (no quotes) with a value of either `put`
+or `delete`.
+
+### Rate Limit
+
+The API has a rate limit at 100 requests per minute.  If there are more than
+100 requests in a minute for a particular account, the service will respond
+with HTTP `error 503 Service Unavailable` and the Retry-After HTTP header will
+be set with a number of seconds to wait before trying again.
+
+
+## Organizing for List Methods
+
+The *list* methods in the API support paging, sorting, and filtering of
+results. Filtering will be covered in the individual methods.
+
+#### Paging
+
+You can get your results back in chunks. In order to set the page size and/or
+the number of pages that you want to see, use the following query parameters:
+
+Parameter | Description
+----------|------------
+page | Specifies which page of the results you want to see. Defaults to 1 (not 0).
+per_page | The number of results you want to get back per request. The maximum value of this parameter is 100. Defaults to 100.
+
+#### Sorting
+
+You can sort the results you receive based on a field you specify. To specify
+how you want the results to be sorted, append one or both of the following
+query parameters to the request URL:
+
+Parameter | Description
+----------|------------
+sort_by | The name of the field to sort by.  Valid values are `name`, `mediaCount`, `created`, or `updated`.  Defaults to sorting by Project ID.
+sort_direction | Specifies the direction of the sort, defaults to '1'.  1 = ascending, 0 = descending.
+
+For example, if you want to sort your results in *descending order* by the *date
+created*, your request URL would look something like this:
+
+<code class="full_width">https://api.wistia.com/v1/projects.json?sort_by=created&amp;sort_direction=0</code>
 
 
 ## Projects
@@ -120,17 +116,34 @@ To make your Wistia experience even more awesome, here are some resources just f
 **Projects** are the main organizational objects within Wistia.
 Media must be stored within Projects.
 
+### Projects Response
+
+When a Project Object is returned from a method, it will include the following
+fields:
+
+Field | Description
+------|------------
+id    | A unique numeric identifier for the project within the system.
+name  | The project's display name.
+description | The project's description.
+mediaCount  | The number of different medias that have been uploaded to the project.
+created   | The date that the project was originally created.
+updated   | The date that the project was last updated.
+hashedId  | A private hashed id, uniquely identifying the project within the system.
+anonymousCanUpload  | A boolean indicating whether or not anonymous uploads are enabled for the project.
+anonymousCanDownload  | A boolean indicating whether or not anonymous downloads are enabled for this project.
+public  | A boolean indicating whether the project is available for public (anonymous) viewing.
+publicId  | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
+
 ### Projects: List
 
-#### The Request
+Use the Projects#list method to request a list of Projects in your Wistia 
+account. This request also supports [paging and
+sorting](#organizing_for_list_methods).
 
-To request a list of Projects in your Wistia account, send the following request:
+Projects#list requests look like this:
 
 <code class="full_width">GET https://api.wistia.com/v1/projects.json</code>
-
-Don't forget to include the **Username** and **API Key**.
-
-
 
 #### Example
 
@@ -138,63 +151,11 @@ If you want to get your results back 10 projects at a time,
 starting on the second page of results, then your request 
 URL should look something like this:
 
-<code class="full_width">https://api.wistia.com/v1/projects.json?page=2&amp;per_page=10</code>
+<code class="full_width">
+  https://api.wistia.com/v1/projects.json?page=2&amp;per_page=10
+</code>
 
-#### The Response
-
-<div><table>
-<tr><th>Field</th><th>Description</th></tr>
-<tr>
-  <td> id </td>
-  <td> A unique numeric identifier for the project within the system.</td>
-</tr>
-<tr>
-  <td> name </td>
-  <td> The project's display name.</td>
-</tr>
-<tr>
-  <td> description </td>
-  <td> The project's description.</td>
-</tr>
-<tr>
-  <td> mediaCount </td>
-  <td> The number of different medias that have been uploaded to the project.</td>
-</tr>
-<tr>
-  <td> created </td>
-  <td> The date that the project was originally created.</td>
-</tr>
-<tr>
-  <td> updated </td>
-  <td> The date that the project was last updated.</td>
-</tr>
-<tr>
-  <td> hashedId </td>
-  <td>
-    A private hashed id, uniquely identifying the project within the system.
-    Used for playlists and RSS feeds. 
-  </td>
-</tr>
-<tr>
-  <td> anonymousCanUpload </td>
-  <td> A boolean indicating whether or not anonymous uploads are enabled for the project.</td>
-</tr>
-<tr>
-  <td> anonymousCanDownload </td>
-  <td> A boolean indicating whether or not anonymous downloads are enabled for this project. </td>
-</tr>
-<tr>
-  <td> public </td>
-  <td> A boolean indicating whether the project is available for public (anonymous) viewing. </td>
-</tr>
-<tr>
-  <td> publicId </td>
-  <td> If the project is public, this field contains a string representing the ID used for referencing the project in public URLs. </td>
-</tr>
-</table></div>
-
-#### Example JSON Response
-
+That would return the following JSON:
 
 {% codeblock json_example_response.json %}
   [
@@ -240,36 +201,8 @@ project, send an HTTP **GET** request to the following URL:
 
 <code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
 
-#### The Response
-
-Field | Description
-------|---------------------------
-id    | A unique numeric identifier for the project within the system.
-name  | The project's title or display name.
-description  | The project's description.
-mediaCount | The number of media in the project.
-created | The date that the project was originally created.
-updated | The date that the project was last changed.
-hashedId | A private hashed id, uniquely identifying the project within the system.  Used for playlists and RSS feeds.
-anonymousCanUpload | A boolean indicating whether or not anonymous uploads are enabled for the project.
-anonymousCanDownload | A boolean indicating whether or not anonymous downloads are enabled for this project.
-public | A boolean indicating whether the project is available for public (anonymous) viewing.
-publicId | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
-medias | An array containing a list of objects representing the media in the project.  See the table below for a description of the fields in each media entry.
-
-Each entry in the media array for a project has the following fields:
-
-Field | Description
-------|------------
-id | A unique numeric identifier for the media within the system.
-name  | The display name of the media.
-section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).
-thumbnail     | An object representing the thumbnail for this media.  The attributes are URL, width, and height.
-type  | A string representing what type of media this is. Values can be “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-duration (optional) | For Audio or Video files, this field specifies the length (in seconds). For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
-created   | The date when the media was originally uploaded.
-updated   | The date when the media was last changed.
-
+The response for the Projects#show request will also include an array of media
+objects. Each entry in the media array has [all media object fields](#media_show).
 
 #### Example JSON Response
 
@@ -330,20 +263,16 @@ Create a new project in your Wistia account.
 
 <code class="full_width">POST https://api.wistia.com/v1/projects.json</code>
 
+
 #### Parameters
 
 Parameter Name  | Description
 ----------------|--------------
 name (required) | The name of the project you want to create (*required*).  
-adminEmail | The email address of the person you want to set as the owner of
-this project.  Defaults to the Wistia account owner.
-anonymousCanUpload (optional) | A flag indicating whether or not anonymous 
-users may upload files to this project.  Set to “1” to enable and “0” to disable.
-anonymousCanDownload (optional) | A flag indicating whether or not anonymous
-users may download files from this project.  Set to “1” to enable and “0” to
-disable.  
-public (optional) | A flag indicating whether or not the project is
-enabled for public access.  Set to “1” to enable and “0” to disable.
+adminEmail | The email address of the person you want to set as the owner of this project.  Defaults to the Wistia account owner.
+anonymousCanUpload (optional) | A flag indicating whether or not anonymous users may upload files to this project.  Set to “1” to enable and “0” to disable.
+anonymousCanDownload (optional) | A flag indicating whether or not anonymous users may download files from this project.  Set to “1” to enable and “0” to disable.  
+public (optional) | A flag indicating whether or not the project is enabled for public access.  Set to “1” to enable and “0” to disable.
 
 
 #### The Response
@@ -351,24 +280,6 @@ enabled for public access.  Set to “1” to enable and “0” to disable.
 If the project is created successfully, the API will respond with an `HTTP 201
 Created` status code, and the “Location” HTTP header will refer to the URL
 where the API can make the next request to get the new project.  
-
-The body of the response will contain the newly created project in JSON or XML
-format, depending on which extension was used in the request.
-
-
-Field | Description
-------|---------------
-id        | A numeric identifier that uniquely identifies the project to the system.  You can use this field to obtain more information about the project using the other API methods.
-name      | The name of the newly created project.
-description      | The description of the newly created project.
-mediaCount | The number of media in the project.
-created    | The date that the project was originally created.
-updated    | The date that the project was last changed.
-hashedId   | A private hashed id, uniquely identifying the project within the system.  Used for playlists and RSS feeds.
-anonymousCanUpload | A boolean indicating whether or not anonymous uploads are enabled for the project.
-anonymousCanDownload | A boolean indicating whether or not anonymous downloads are enabled for this project.
-public | A boolean indicating whether the project is available for public (anonymous) viewing.
-publicId | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
 
 
 #### Example JSON Response
@@ -405,6 +316,7 @@ The Wistia data API allows you to update a project.
 
 Make sure you replace `<project-id>` with the hashed ID of the project that you want to update.
 
+
 #### The Parameters
 
 Here are the valid parameters for this action:
@@ -416,23 +328,6 @@ anonymousCanUpload | A flag indicating whether or not anonymous users may upload
 anonymousCanDownload | A flag indicating whether or not anonymous users may download files from this project.  Set to “1” to enable and “0” to disable.
 public | A flag indicating whether or not the project is enabled for public access.  Set to “1” to enable and “0” to disable.
 
-#### The Response
-
-If the project update is successful, the server will send a response with something similar to the following:
-
-Field   | Description
---------|----------------
-id         | A numeric identifier that uniquely identifies the project to the system.  You can use this field to obtain more information about the project using the other API methods.
-name       | The name of the project.
-description       | A description of the project.
-mediaCount | The number of media in the project.
-created    | The date that the project was originally created.
-updated    | The date that the project was last changed.
-hashedId   | A private hashed id, uniquely identifying the project within the system.  Used for playlists and RSS feeds.
-anonymousCanUpload | A boolean indicating whether or not anonymous uploads are enabled for the project.
-anonymousCanDownload | A boolean indicating whether or not anonymous downloads are enabled for this project.
-public | A boolean indicating whether the project is available for public (anonymous) viewing.
-publicId | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
 
 #### Example JSON Response
 
@@ -460,7 +355,9 @@ The Wistia data API allows you to delete a project.
 
 #### The Request
 
-<code class="full_width">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
+<code class="full_width">
+  DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json
+</code>
 
 #### The Response
 
@@ -493,11 +390,13 @@ the project that was just deleted.
 
 Copy a project, including all media and sections.  
 
-{{ "This method does not copy the projects sharing information (i.e. users that could see the old project will not automatically be able to see the new one)." | note }}
+{{ "This method does not copy the projects sharing information (i.e. users that could see the old project will not automatically be able to see the new one)." | note }} 
 
 #### The Request
 
-<code class="full_width">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json</code>
+<code class="full_width">
+  POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json
+</code>
 
 #### Parameters
 
@@ -506,10 +405,7 @@ The person you specify must be a manager in the account.
 
 Parameter Name   | Description
 -----------------|----------------
-adminEmail (optional) | The email address of the account manager that will be
-the owner of the new project.  Defaults to the account owner if invalid or
-omitted.
-
+adminEmail (optional) | The email address of the account manager that will be the owner of the new project.  Defaults to the account owner if invalid or omitted.
 
 #### The Response
 
@@ -550,38 +446,40 @@ the project that was just created.
 A **sharing** is an object that links either a contact or a contact group to a 
 project, including information about the contacts' permissions to that project.
 
+### Sharings Response
+
+Field     | Description
+----------|----------------
+id          | Unique numeric identifier for the sharing object.
+isAdmin     | Whether the user has admin rights on the project.
+canShare    | Whether the user is allowed to share the project with others.
+canDownload | Whether the user is allowed to download files from the project.
+canUpload   | Whether the user is allowed to upload files to the project.
+share       | An object identifying the `Contact` or `ContactGroup` with which this sharing object ties the project. See below for a description of the fields in this object.
+project     | An object representing the project to which this sharing object grants access.  It only has 2 attributes: `id` and `name`, which both have the same meaning as they do elsewhere in the API.
+
+### Share Response
+
+Field     | Description
+----------|---------------
+id        | A unique numeric identifier for the Contact or ContactGroup.
+name      | The display name of this Contact or ContactGroup.
+type      | A string representing what type of share this object represents: `Contact` or `ContactGroup`.
+email     | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
+
+
 ### Project Sharings: List
 
 See a list of sharings on a project.
 
-#### The Request
-
-<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code>
+<code class="full_width">
+  GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json
+</code>
 
 #### The Response
 
 The server responds with `HTTP status 200 OK`. The response body contains a 
 list of all sharings on the project.
-
-
-Field     | Description
-----------|----------------
-id          | A unique numeric identifier for the sharing object within the system.
-isAdmin     | This field indicates whether the user has admin rights on the project.
-canShare    | This field indicates whether the user is allowed to share the project with others.
-canDownload | This field indicates whether the user is allowed to download files from the project.
-canUpload   | This field indicates whether the user is allowed to upload files to the project.
-share       | An object identifying the Contact or ContactGroup with which this sharing object ties the project.  See below for a description of the fields in this object.
-project     | An object representing the project to which this sharing object grants access.  It only has 2 attributes: id and name, which both have the same meaning as they do elsewhere in the API.
-
-The attributes of each share object are as follows:
-
-Field     | Description
-----------|---------------
-id               | A unique numeric identifier for the Contact or ContactGroup.
-name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 #### Example JSON Response
 
@@ -631,35 +529,18 @@ See the details of a particular sharing on a project.
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
+<code class="full_width">
+  GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json
+</code>
 
 * `<project-id>` is the hashed ID of the project for which you would like to see sharings, 
-* *<sharing-id>* is the ID of the specific sharing object that you want to see.
+* `<sharing-id>` is the ID of the specific sharing object that you want to see.
 
 #### The Response
 
 The server responds with `HTTP status 200 OK` and the response body contains 
 the requested sharing on the project.
 
-
-Field    | Description
----------|-------------------
-id          | A unique numeric identifier for the sharing object within the system.
-isAdmin     | This field indicates whether the user has admin rights on the project.
-canShare    | This field indicates whether the user is allowed to share the project with others.
-canDownload | This field indicates whether the user is allowed to download files from the project.
-canUpload   | This field indicates whether the user is allowed to upload files to the project.
-share       | An object identifying the Contact or ContactGroup with which this sharing object ties the project.  See below for a description of the fields in this object.
-project     | An object representing the project to which this sharing object grants access.  It only has 2 attributes: id and name, which both have the same meaning as they do elsewhere in the API.
-
-The attributes of each share object are as follows:
-
-Field     | Description
-----------|---------------
-id               | A unique numeric identifier for the Contact or ContactGroup.
-name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 #### Example JSON Response
 
@@ -692,7 +573,9 @@ new sharing object for a project.
 
 #### The Request
 
-<code class="full_width">POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json</code>
+<code class="full_width">
+  POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json
+</code>
 
 This method can accept several parameters to customize the way that the sharing 
 happens.
@@ -723,12 +606,16 @@ username/password.
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/13/sharings/16.json
 
-{% codeblock example_json_response.json %}{ "project": "http://myaccount.wistia.com/projects/13" }{% endcodeblock %}
+{% codeblock example_json_response.json %}
+{ "project": "http://myaccount.wistia.com/projects/13" }
+{% endcodeblock %}
 
 Here's an example of what the response body might look like if the user is not 
 yet activated:
 
-{% codeblock example_json_response.json %}{ "activation": "http://myaccount.wistia.com/my_activation_link" }{% endcodeblock %}
+{% codeblock example_json_response.json %}
+{ "activation": "http://myaccount.wistia.com/my_activation_link" }
+{% endcodeblock %}
 
 ---
 
@@ -742,32 +629,10 @@ Update a sharing on a project.
 
 Parameter Name    | Description
 ------------------|-----------------
-canShare (optional)    | “1” to allow the user or group to share the project with others, “0” to disable this functionality.
-canDownload (optional) | “1” to allow the user or group to download media from the project, “0” to disable this functionality.
-canUpload (optional)   | “1” to allow the user or group to upload media to the project, “0” to disable this functionality.
-isAdmin (optional)     | “1” to give this user admin rights to the project, “0” to take away admin rights.
-
-#### The Response
-
-Field  | Description
--------|------------------
-id          | A unique numeric identifier for the sharing object within the system.
-isAdmin     | This field indicates whether the user has admin rights on the project.
-canShare    | This field indicates whether the user is allowed to share the project with others.
-canDownload | This field indicates whether the user is allowed to download files from the project.
-canUpload   | This field indicates whether the user is allowed to upload files to the project.
-share       | An object identifying the Contact or ContactGroup with which this sharing object ties the project.  See below for a description of the fields in this object.
-project     | An object representing the project to which this sharing object grants access.  It only has 2 attributes: id and name, which both have the same meaning as they do elsewhere in the API.
-
-The attributes of each share object are as follows:
-
-Field    | Description
----------|-----------------
-id               | A unique numeric identifier for the Contact or ContactGroup.
-name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
-
+canShare        | “1” to allow the user or group to share the project with others, “0” to disable this functionality.
+canDownload     | “1” to allow the user or group to download media from the project, “0” to disable this functionality.
+canUpload       | “1” to allow the user or group to upload media to the project, “0” to disable this functionality.
+isAdmin         | “1” to give this user admin rights to the project, “0” to take away admin rights.
 
 #### Example JSON Response
 
@@ -808,26 +673,6 @@ The server will respond with `HTTP status 200 OK`. The body of the response
 will contain an object representing the sharing that was just deleted.
 
 
-Field     | Description
-----------|-----------------
-id          | A unique numeric identifier for the sharing object within the system.
-isAdmin     | This field indicates whether the user has admin rights on the project.
-canShare    | This field indicates whether the user is allowed to share the project with others.
-canDownload | This field indicates whether the user is allowed to download files from the project.
-canUpload   | This field indicates whether the user is allowed to upload files to the project.
-share       | An object identifying the Contact or ContactGroup with which this sharing object ties the project.  See below for a description of the fields in this object.
-project     | An object representing the project to which this sharing object grants access.  It only has 2 attributes: id and name, which both have the same meaning as they do elsewhere in the API.
-
-The attributes of each share object are as follows:
-
-Field      | Description
------------|--------------
-id               | A unique numeric identifier for the Contact or ContactGroup.
-name             | The display name of this Contact or ContactGroup.
-type             | A string representing what type of share this object represents: 'Contact' or 'ContactGroup'.
-email  <br>(if available) | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
-
-
 #### Example JSON Response
 
 
@@ -855,93 +700,38 @@ email  <br>(if available) | If this object refers to a Contact, this field will 
 
 ## Medias
 
-### Medias: List
-
-Obtain a list of all the media in your account.
-
-#### Request
-
-The format of the request should be something like this:
-
-<code class="full_width">https://api.wistia.com/v1/medias.json</code>
-
-### Sorting
-
-You can get the results back sorted a field you specify. To specify how you
-want the results to be sorted, append one or both of the following query
-parameters to the request URL:
-
-Parameter | Description
-----------|-------------
-sort_by | The name of the field to sort by.  Valid values are `name`,
-`created`, `updated`, or `position` (which reflects the Wistia interface).
-Defaults to `id`.
-sort_direction | This field specifies the direction of the sort. Valid values
-are 1 or 0, which specify ascending or descending order, respectively.
-
-For example, if you want to sort your results in descending order by the date 
-each media was created (i.e. when it was first uploaded to Wistia), your request 
-URL would look something like this:
-
-<code class="full_width">https://api.wistia.com/v1/medias.json?sort_by=created&amp;sort_direction=0</code>
-
-### Paging
-
-You can get your results back in chunks using the paging feature.  In order to 
-set the page size and/or the number of pages that you want to see, use the 
-following query parameters:
-
-Parameter | Description
-----------|--------------
-page | Specifies which page of the results you want to see. 
-Note that this parameter starts at 1, as opposed to 0.
-per_page | Set how many results you want to get back in each request. 
-The maximum and default value of this parameter is 100.
-
-For example, if you want to get your results back 10 media at a time, starting 
-on the second page of results, then your request URL should look something like this:
-
-<code class="full_width">https://api.wistia.com/v1/medias.json?page=2&amp;per_page=10</code>
-
-### Filtering
-
-You can filter the results by project or type of media. Similar to sorting,
-filters are specified by appending query parameters to the end of the URL used
-to access the API.  The following table lists the parameters that you can use
-for filtering and a description of how to use them.
-
-Parameter | Description
-----------|---------------
-project_id | An integer specifying the project from which you would like to get
-results.  
-name | Find a media or medias whose name exactly matches this
-parameter.  
-type  | A string specifying which type of media you would like to
-get. Values can be `Video`, `Audio`, `Image`, `PdfDocument`,
-`MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.  
-hashed_id | Find the media by hashed_id.
-
-#### The Response
+### Medias Response
 
 Field     |  Description
 ----------|------------------
-id        | A unique numeric identifier for the media within the system.
-name      | The display name of the media.  
-type      | A string representing what type of media this is. Values can be `Video`, `Audio`, `Image`, `PdfDocument`, `MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.
-status    | Post upload processing status. There are four statuses: `queued`, `processing`, `ready`, and `failed`. 
-progress  | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.  
-section   | The title of the section in which the media appears. This attribute is omitted if the media is not in a section (default).
+id  | A unique numeric identifier for the media within the system.
+name  | The display name of the media.  
+type | A string representing what type of media this is. Values can be `Video`, `Audio`, `Image`, `PdfDocument`, `MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.  
+status | [Post upload processing status](#post_processing_status). There are four statuses: `queued`, `processing`, `ready`, and `failed`. 
+progress (if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.  
+section | The title of the section in which the media appears. This attribute is omitted if the media is not in a section (default).
 thumbnail | An object representing the thumbnail for this media. The attributes are `URL`, `width`, and `height`.  
-duration  | Specifies the length (in seconds) for audio and video files. Specifies number of pages in the document. Omitted for other types of media.
-created   | The date when the media was originally uploaded.  
-updated   | The date when the media was last changed.  
-assets    | An array of the assets available for this media.  See the table below for a description the fields in each asset object.  
+duration | Specifies the length (in seconds) for audio and video files. Specifies number of pages in the document. Omitted for other types of media.
+created | The date when the media was originally uploaded.  
+updated | The date when the media was last changed.  
+assets  | An array of the assets available for this media. See the table below for a description the fields in each asset object.  
 embedCode | **DEPRECATED:** If you want to programmatically embed videos, use the [Embed Api]({{ '/embed-api' | post_url }}).
-description | A description for the media which usually appears near the top 
-of the sidebar on the media's page.  
+description | A description for the media which usually appears near the top of the sidebar on the media's page.  
 hashed_id | A unique alphanumeric identifier for this media.
 
-Each asset object in the assets array has the following properties:
+<h3 id='post_processing_status'>Media Status</h3>
+
+Media files return a response attribute called **status**. After upload is
+complete, media files must be processed. Status indicates which stage in
+processing the file is at.
+
+There are four status settings: `queued`, `processing`, `ready`, and `failed`.
+Queued means the file is waiting in the queue to be processed. Processing means
+the file is actively being processed. Ready means it has been fully processed
+and is ready for embedding and viewing. Failed means that we were unable to
+automatically process the file.
+
+### Asset Object Response
 
 Field        | Description
 -------------|-----------------
@@ -952,7 +742,32 @@ fileSize  | The size of the asset file that's referenced by url, measured in byt
 contentType | The asset's content type.
 type  | The internal type of the asset, describing how the asset should be used. Values can include `OriginalFile`, `FlashVideoFile`, `MdFlashVideoFile`, `HdFlashVideoFile`, `Mp4VideoFile`, `MdMp4VideoFile`, `HdMp4VideoFile`, `IPhoneVideoFile`, `StillImageFile`, `SwfFile`, `Mp3AudioFile`, and `LargeImageFile`.
 
+### Medias: List
 
+Obtain a list of all the media in your account. You can [page and
+sort]('#organizing_for_list_methods') the returned list.
+
+#### Request
+
+The format of the request should be something like this:
+
+<code class="full_width">
+  https://api.wistia.com/v1/medias.json
+</code>
+
+### Filtering
+
+You can filter the results by project or type of media. Similar to sorting,
+filters are specified by appending query parameters to the end of the URL used
+to access the API.  The following table lists the parameters that you can use
+for filtering and a description of how to use them.
+
+Parameter | Description
+----------|---------------
+project_id | An integer specifying the project from which you would like to get results.  
+name | Find a media or medias whose name exactly matches this parameter.  
+type  | A string specifying which type of media you would like to get. Values can be `Video`, `Audio`, `Image`, `PdfDocument`, `MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.  
+hashed_id | Find the media by hashed_id.
 
 #### Example JSON Response
 
@@ -1000,87 +815,10 @@ type  | The internal type of the asset, describing how the asset should be used.
       "contentType": "image/jpeg",
       "type": "StillImageFile"
     }
-<<<<<<< HEAD
-  ],
-  "project": {
-    "id": 1337,
-    "name": "Blog Videos",
-    "hashed_id": "efg456"
-  },
-  "embedCode": "<object id=\"wistia_181279\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"640\" height=\"272\"><param name=\"allowfullscreen\" value=\"true\" /><param name=\"allowscriptaccess\" value=\"always\" /><param name=\"wmode\" value=\"opaque\" /><param name=\"flashvars\" value=\"videoUrl=http://embed.wistia.com/deliveries/d3cd5688adcf44780e7d90ec1e7b2d988777f1d3.bin&stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&playButtonVisible=true&controlsVisibleOnLoad=false&unbufferedSeek=true&autoLoad=false&autoPlay=false&endVideoBehavior=default&embedServiceURL=http://distillery.wistia.com/x&accountKey=wistia-production_97&mediaID=wistia-production_181279&mediaDuration=74.0&hdUrl=http://embed.wistia.com/deliveries/c7a8037514cd9adbdc96c8cf4b590497d0f63c74.bin\" /><param name=\"movie\" value=\"http://embed.wistia.com/flash/embed_player_v2.0.swf\" /><embed src=\"http://embed.wistia.com/flash/embed_player_v2.0.swf\" name=\"wistia_181279\" type=\"application/x-shockwave-flash\" width=\"640\" height=\"272\" allowfullscreen=\"true\" allowscriptaccess=\"always\" wmode=\"opaque\" flashvars=\"videoUrl=http://embed.wistia.com/deliveries/d3cd5688adcf44780e7d90ec1e7b2d988777f1d3.bin&stillUrl=http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin&playButtonVisible=true&controlsVisibleOnLoad=false&unbufferedSeek=true&autoLoad=false&autoPlay=false&endVideoBehavior=default&embedServiceURL=http://distillery.wistia.com/x&accountKey=wistia-production_97&mediaID=wistia-production_181279&mediaDuration=74.0&hdUrl=http://embed.wistia.com/deliveries/c7a8037514cd9adbdc96c8cf4b590497d0f63c74.bin\"></embed></object><script src=\"http://embed.wistia.com/embeds/v.js\"></script><script>if(!navigator.mimeTypes['application/x-shockwave-flash'] || navigator.userAgent.match(/Android/i)!==null)Wistia.VideoEmbed('wistia_181279','640','272',{videoUrl:'http://embed.wistia.com/deliveries/14cb1fed9fb9d2c235be9e00e7998ad3a9e1a278.bin',stillUrl:'http://embed.wistia.com/deliveries/43500c9644e43068d8995ecb5ddea82440419eaf.bin',distilleryUrl:'http://distillery.wistia.com/x',accountKey:'wistia-production_97',mediaId:'wistia-production_181279',mediaDuration:74.0})</script>"
-}]
-{% endcodeblock %}
-
-
-#### Example XML Response
-
-
-{% codeblock example_xml_response.xml %}
-<medias>
-  <media>
-  <id>181279</id>
-  <name>Introducing the Slimlist</name>
-  <project>
-  <id>22570</id>
-  <name>Slimlist for Website</name>
-  </project>
-  <type>Video</type>
-  <section>Trailers</section>
-  <status>ready</status>
-  <progress>1.0</progress>
-  <thumbnail>
-    <url>http://www.wistia.com/path/to/thumbnail2.png</url>
-    <width>100</width>
-    <height>60</height>
-  </thumbnail>
-  <duration>126</duration>
-  <created>2010-08-15T18:47:39+00:00</created>
-  <updated>2010-08-21T21:47:00+00:00</updated>
-  <assets>
-    <asset>
-      <url>http://www.wistia.com/path/to/original-file.bin</url>
-      <width>640</width>
-      <height>272</height>
-      <fileSize>12345678</fileSize>
-      <contentType>video/quicktime</contentType>
-      <type>Original</type>
-    </asset>
-    <asset>
-      <url>http://www.wistia.com/path/to/mp4-version.bin</url>
-      <width>640</width>
-      <height>272</height>
-      <fileSize>12123456</fileSize>
-      <contentType>video/mp4</contentType>
-      <type>Mp4Video</type>
-    </asset>
-    <asset>
-      <url>http://www.wistia.com/path/to/still-image.bin</url>
-      <width>640</width>
-      <height>272</height>
-      <fileSize>92008</fileSize>
-      <contentType>image/jpeg</contentType>
-      <type>StillImageFile</type>
-    </asset>
-  </assets>
-  <project>
-    <id>1337</id>
-    <name>Blog Videos</name>
-    <hashed_id>efg456</hashed_id>
-  </project>
-  <embedCode><object id='wistia_1' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='640' height='360'><param name='allowfullscreen' value='true' /><param name='allowscriptaccess' value='always' /><param name='wmode' value='opaque' /><param name='flashvars' value='videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;playButtonVisible=trueamp;controlsVisibleOnLoad=falseamp;unbufferedSeek=trueamp;autoLoad=falseamp;autoPlay=falseamp;embedServiceURL=http://distillery.wistia.com/xamp;accountKey=jim-development_1amp;mediaID=jim-development_1amp;mediaDuration=6.51' /><param name='movie' value='http://brendan.unraw.net/flash/embed_player_v1.1.swf' /><embed src='http://brendan.unraw.net/flash/embed_player_v1.1.swf' name='wistia_1' type='application/x-shockwave-flash' width='640' height='360' allowfullscreen='true' allowscriptaccess='always' wmode='opaque' flashvars='videoUrl=http://brendan.unraw.net/deliveries/57c6fbdfa4c236ce5a84abaf4363568355a2f059.binamp;stillUrl=http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.binamp;playButtonVisible=trueamp;controlsVisibleOnLoad=falseamp;unbufferedSeek=trueamp;autoLoad=falseamp;autoPlay=falseamp;embedServiceURL=http://distillery.wistia.com/xamp;accountKey=jim-development_1amp;mediaID=jim-development_1amp;mediaDuration=6.51'></embed></object><script src='http://brendan.unraw.net/embeds/v.js'></script><script>if(!navigator.mimeTypes['application/x-shockwave-flash'])Wistia.VideoEmbed('wistia_1','640','360',{videoUrl:'http://brendan.unraw.net/deliveries/5b7bd7827acb4315198b421aa9d5ffc55de8df11.bin',stillUrl:'http://brendan.unraw.net/deliveries/b5dfc55613f47ff32ef42eac275a2a1b784f08f8.bin',distilleryUrl:'http://distillery.wistia.com/x',accountKey:'jim-development_1',mediaId:'jim-development_1',mediaDuration:6.51})</script></embedCode>
-  <description>Test Description</description>
-  <hashed_id>abc123</hashed_id>
-  </media>
-</medias>
-{% endcodeblock %}
-
-
-=======
   ]
 }]
 {% endcodeblock %}
 
->>>>>>> First pass on Data API clean up
 ---
 
 ### Media: Show
@@ -1093,79 +831,6 @@ In order to tell Wistia that you want information about a specific piece of
 media, send an HTTP GET request:
 
 <code class="full_width">https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
-
-#### Response
-
-Field      |  Description
------------|-----------------
-<<<<<<< HEAD
-id         | A unique numeric identifier for the media within the system.
-name       | The display name of the media.
-type       | A string representing what type of media this is.  Valid values are “Video”, “Image”, “Audio”, “Swf”, “MicrosoftOfficeDocument”, “PdfDocument”, or “UnknownType”.
-created             | The date when the media was originally uploaded.
-updated             | The date when the media was last changed.
-duration <br>(if available) | For Audio or Video files, this field specifies the length (in seconds).  For Document files, this field specifies the number of pages in the document.  For other types of media, or if the duration is unknown, this field is omitted.
-hashed_id           | A unique alphanumeric identifier for this media. It's used all over the place, from URLs inside the Wistia application (e.g. http://home.wistia.com/medias/jocs98za4l) to embed codes!
-description         | A description for the media which usually appears near the top of the sidebar on the media's page.
-section <br>(if available)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default). 
-status | After a file has been uploaded to Wistia, it needs to be processed before it's available for online viewing. There are four statuses: "queued", "processing", "ready", and "failed". Queued means the file is waiting in the queue to be processed. Processing means the file is actively being processed. Ready means it has been fully processed and is ready for embedding and viewing. Failed means that we were unable to automatically process the file.
-progress <br>(if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.
-status <br>(if available) | String that represents if the video is ready for embedding.
-thumbnail           | An object representing the thumbnail for this media.  The attributes are URL, width, and height.
-project             | An object representing the Project for this media. Attributes are name, ID, and Project hashed ID.
-assets              | An array of the assets available for this media.  See the table below for a description the fields in each asset object.
-project             | An object representing the project for this media. The attributes are ID, name, and hashed ID.
-embedCode           | DEPRECATED: If you want to programmatically embed videos, use the <a href="{{ '/embed-api' | post_url }}">Embedding API</a>.
-=======
-id  | A unique numeric identifier for the media within the system.  
-name  | The display name of the media.  
-type  | A string representing what type of media this is.  Valid values are
-`Video`, `Image`, `Audio`, `Swf`, `MicrosoftOfficeDocument`, `PdfDocument`, or
-`UnknownType`.  
-created | The date when the media was originally uploaded.  
-updated | The date when the media was last changed.  
-duration | The length (in seconds) of audio and video media.  Number of pages
-in document files. For other types of media, or if the duration is unknown,
-this field is omitted.  
-hashed_id | A unique alphanumeric identifier for this media.  
-description | A description for the media which usually appears near the top of
-the sidebar on the media's page.  
-section | The title of the section in which the media appears. Omitted if the
-media is not in a section (default).  
-status | One of four statuses: `queued`, `processing`, `ready`, and `failed`.
-[See more on media status]('#media_status').  
-progress | This field is a floating point value between 0 and 1 that indicates
-the progress of the processing for this file. For instance, a value of 0.5
-indicates we're about halfway done processing this file.  
-status | String that represents if the video is ready for embedding.  
-thumbnail | An object representing the thumbnail for this media.  The
-attributes are URL, width, and height.  
-project | An object representing the Project for this media. Attributes are
-name, ID, and Project hashed ID.  
-assets  | An array of the assets available for this media.  See the table below
-for a description the fields in each asset object.  
-embedCode | DEPRECATED: Use the <a href="{{ '/embed-api' | post_url }}">Embedding API</a>
-for programmatically embedding videos.
->>>>>>> First pass on Data API clean up
-
-
-
-Each asset object in the assets array has the following properties:
-
-Field     |  Description
-----------|-----------------
-url | A direct-access URL to the content of the asset. These URLs end in a .bin
-extension (for binary).
-width (optional)  | The width of this specific asset, if applicable.
-height (optional) | The height of this specific asset, if applicable.
-fileSize          | The size of the asset file that's referenced by url,
-measured in bytes.
-contentType       | The asset's content type.
-type              | The internal type of the asset, describing how the asset
-should be used.  Valid values are `OriginalFile`, `FlashVideoFile`,
-`Mp4VideoFile`, `IPhoneVideoFile`, `StillImageFile`, `SwfFile`, `Mp3AudioFile`,
-and `LargeImageFile`.
-
 
 #### Example Response
 
@@ -1232,12 +897,8 @@ Here is the JSON response received:
       "contentType":"image/jpeg",
       "type":"StillImageFile"
     }
-<<<<<<< HEAD
-  ],
-=======
   ]
-  }
->>>>>>> First pass on Data API clean up
+}
 {% endcodeblock %}
 
 ---
@@ -1255,34 +916,8 @@ Update attributes on a piece of media.
 Parameter Name      |  Description
 --------------------|-------------------------
 name               | The media's new name.
-new_still_media_id | The numeric ID of an image within the system that will
-replace the still that's displayed before the player starts playing.  If this
-parameter is present while updating a non-video media, or if it specifies a
-non-image type media, then the call will fail with an error.
+new_still_media_id | The numeric ID of an image within the system that will replace the still that's displayed before the player starts playing.  If this parameter is present while updating a non-video media, or if it specifies a non-image type media, then the call will fail with an error.
 description        | A new description to display next to the media within Wistia.
-
-
-#### The Response
-
-Field  |  Description
--------|---------------
-id    | A unique numeric identifier for the media within the system.
-name    | The display name of the media.
-type    | A string representing what type of media this is.  Valid values are `Video`, `Image`, `Audio`, `Swf`, `MicrosoftOfficeDocument`, `PdfDocument`, or `UnknownType`.
-section  | The title of the section in which the media appears.  This attribute
-is omitted if the media is not in a section (default).
-status | One of four processing statuses: `queued`, `processing`, `ready`, and
-`failed`.
-progress | This field is a floating point value between 0 and 1 that indicates
-the progress of the processing for this file. For instance, a value of 0.5
-indicates we're about halfway done processing this file.
-thumbnail   | An object representing the thumbnail for this media.  The
-attributes are url, width, and height.
-duration | The length (in seconds) of audio and video media.  Number of pages
-in document files. For other types of media, or if the duration is unknown,
-this field is omitted.
-created   | The date when the media was originally uploaded.
-updated   | The date when the media was last changed.
 
 
 #### Example JSON Response
@@ -1322,31 +957,6 @@ Delete a piece of media.
 If the media is deleted successfully, the server will respond with `HTTP status 
 200 OK` to let you know that it worked.  The body of the response will 
 contain an object representing the piece of media that was just deleted.
-
-
-Field    |  Description
----------|-----------------
-id      | A unique numeric identifier for the media within the system.
-name    | The display name of the media.
-type    | A string representing what type of media this is.  Valid values are
-`Video`, `Image`, `Audio`, `Swf`, `MicrosoftOfficeDocument`, `PdfDocument`, or
-`UnknownType`.
-section | The title of the section in which the media appears.  This attribute
-is omitted if the media is not in a section (default).
-status | One of four processing statuses: `queued`, `processing`, `ready`, and
-`failed`.
-progress | This field is a floating point value between 0
-and 1 that indicates the progress of the processing for this file. For
-instance, a value of 0.5 indicates we're about halfway done processing this
-file.
-thumbnail | An object representing the thumbnail for this media.  The
-attributes are url, width, and height.
-duration  | The length (in seconds) of audio and video media.  Number of pages
-in document files. For other types of media, or if the duration is unknown,
-this field is omitted.
-created   | The date when the media was originally uploaded.
-updated   | The date when the media was last changed.
-
 
 
 #### Example JSON Response
@@ -1397,28 +1007,6 @@ If the media is copied successfully, the server will respond with `HTTP status
 201 Created`. The HTTP `Location` header will be set to the URL where the
 newly created media resource resides.  The body of the response will contain an
 object representing the *new copy* of the media that was just created.
-
-Field     |  Description
-----------|----------------
-id        | A unique numeric identifier for the media within the system.
-name      | The display name of the media.
-type      | A string representing what type of media this is.  Valid values are
-`Video`, `Image`, `Audio`, `Swf`, `MicrosoftOfficeDocument`, `PdfDocument`, or
-`UnknownType`.
-section   | The title of the section in which the media appears.  This
-attribute is omitted if the media is not in a section (default).
-status    | One of four processing statuses: `queued`, `processing`, `ready`, and
-`failed`.
-progress  | A floating point value between 0 and 1 that indicates the progress
-of the processing for this file. For instance, a value of 0.5 indicates we're
-about halfway done processing this file.
-thumbnail | An object representing the thumbnail for this media.  The
-attributes are url, width, and height.
-duration  | The length (in seconds) of audio and video media.  Number of pages
-in document files. For other types of media, or if the duration is unknown,
-this field is omitted.
-created   | The date when the media was originally uploaded.
-updated   | The date when the media was last changed.
 
 
 #### Example JSON Response
@@ -1476,17 +1064,10 @@ Here is the definition of each field in the **stats** object:
 
 Field        |  Description
 -------------|----------------
-pageLoads     | The total number of times that the page containing the embedded
-video has been loaded.
-visitors      | The number of unique visitors to the page containing the
-embedded video.
-percentOfVisitorsClickingPlay | This is an integer between 0 and 100 that shows
-what percentage of the time someone who saw the page containing the embedded
-video played the video.
-plays         | The total number of times that the video has been played.
-averagePercentWatched   | This is an integer between 0 and 100.  It shows the
-average percentage of the video that was watched over every time the video was
-played.
+pageLoads     | The total number of times that the page containing the embedded video has been loaded.
+visitors      | The number of unique visitors to the page containing the embedded video.
+percentOfVisitorsClickingPlay | This is an integer between 0 and 100 that shows what percentage of the time someone who saw the page containing the embedded video played the video.
+plays         | The total number of times that the video has been played.  averagePercentWatched   | This is an integer between 0 and 100.  It shows the average percentage of the video that was watched over every time the video was played.
 
 #### Example JSON Response
 
@@ -1544,12 +1125,9 @@ This method is for adding captions to a video.
 
 Parameter | Description
 ----------|------------
-caption_file | Either an attached SRT file or a string parameter with the
-contents of an SRT file.
-language | An optional parameter that denotes which language this file
-represents and it should conform to
-[ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the
-language code will be detected automatically.
+caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
+language | An optional parameter that denotes which language this file represents and it should conform to
+[ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
 
 Example of `caption_file` as a string parameter using curl:
 
@@ -1579,8 +1157,7 @@ The response will be an array of JSON objects with the following properties:
 
 Field | Description
 ------|------------
-language | A 3 character language code as specified by
-[ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 captions | The text of the captions for the specified language in SRT format.
 
 ##### Example JSON Response
@@ -1621,8 +1198,7 @@ The response will be a JSON object with the following properties:
 
 Field | Description
 ------|------------
-language | A 3 character language code as specified by
-[ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
+language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 captions | The text of the captions for the specified language in SRT format.
 
 ##### Example JSON Response
@@ -1655,8 +1231,7 @@ conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 Parameter | Description
 ----------|------------
-caption_file | Either an attached SRT file or a string parameter with the
-contents of an SRT file.
+caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
 
 #### The Response
 
