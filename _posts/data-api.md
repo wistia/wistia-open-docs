@@ -21,8 +21,8 @@ Generate an API password for your account from the *API* area in your Account Da
 
 #### Versions and Updates
 
-We will introduce API changes when necessary/possible,
-and update the version number (i.e. *v1*) when a **breaking change** is made.
+We will introduce API changes when necessary/possible, and update the version
+number (i.e. *v1*) when a **breaking change** is made.
 
 Stay tuned to the [dev-forum](dev-forum.wistia.com) for updates on the API.
 
@@ -56,11 +56,11 @@ All parameters should be passed in the body of the request and URL encoded.
 Alternatively, they can be appended to the end of the URL after a question mark
 (?) character and passed as query string parameters.
 
-### JSON vs. XML
+### Response Formats
 
-The request examples retrieve the data in **JSON** format.
-If you would like the data in **XML** format, 
-change the extension of the request from `json` to `xml`.
+The request examples retrieve the data in **JSON** format. If you would like
+the data in **XML** format, change the extension of the request from `json` to
+`xml`.
 
 ### PUT and DELETE
 
@@ -138,8 +138,7 @@ publicId  | If the project is public, this field contains a string representing 
 ### Projects: List
 
 Use the Projects#list method to request a list of Projects in your Wistia 
-account. This request also supports [paging and
-sorting](#organizing_for_list_methods).
+account. This request supports [paging and sorting](#organizing_for_list_methods).
 
 Projects#list requests look like this:
 
@@ -147,9 +146,8 @@ Projects#list requests look like this:
 
 #### Example
 
-If you want to get your results back 10 projects at a time, 
-starting on the second page of results, then your request 
-URL should look something like this:
+To retrieve all projects in an account, 10 projects at a time, starting on the
+second page of results, then your request URL should look something like this:
 
 <code class="full_width">
   https://api.wistia.com/v1/projects.json?page=2&amp;per_page=10
@@ -199,56 +197,85 @@ Retrieve details about a specific project.
 In order to tell Wistia that you want a list of all the media for a specific
 project, send an HTTP **GET** request to the following URL:
 
-<code class="full_width">GET https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
+<code class="full_width">
+  GET https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
+</code>
 
 The response for the Projects#show request will also include an array of media
 objects. Each entry in the media array has [all media object fields](#media_show).
 
-#### Example JSON Response
+#### Example Projects#show Request
 
+<code class='full_width'>
+  curl --user wistia:333344445555 https://api.wistia.com/v1/projects/ln2k6qwi9k.json
+</code>
 
 {% codeblock example_json_response.json %}
 {
-  "id": 22570,
-    "name": "My Project Title",
-    "description": "My Project Description",
-    "mediaCount": 2,
-    "created": "2010-08-13T18:47:39+00:00",
-    "updated": "2010-08-19T21:47:00+00:00",
-    "hashedId": "4d23503f70",
-    "anonymousCanUpload": false,
     "anonymousCanDownload": false,
-    "public": false,
-    "publicId": "4bD",
+    "anonymousCanUpload": false,
+    "created": "2013-09-19T15:05:15+00:00",
+    "description": "",
+    "hashedId": "ln2k6qwi9k",
+    "id": 464427,
+    "mediaCount": 3,
     "medias": [
-    {
-      "id": 181279,
-      "name": "Introducing the Slimlist",
-      "thumbnail": {
-        "url": "http://www.wistia.com/path/to/thumbnail1.png",
-        "width": 100,
-        "height": 60
-      },
-      "type": "Video",
-      "duration": 74,
-      "created": "2010-08-14T18:47:39+00:00",
-      "updated": "2010-08-20T21:47:00+00:00"
-    },
-    {
-      "id": 181182,
-      "name": "Due Date",
-      "section": "Trailers",
-      "thumbnail": {
-        "url": "http://www.wistia.com/path/to/thumbnail2.png",
-        "width": 100,
-        "height": 60
-      },
-      "type": "Video",
-      "duration": 126,
-      "created": "2010-08-15T18:47:39+00:00",
-      "updated": "2010-08-21T21:47:00+00:00"
-    }
-  ]
+        {
+            "created": "2013-09-19T15:05:17+00:00",
+            "description": "",
+            "duration": 167.29,
+            "hashed_id": "azh1x9nesb",
+            "id": 4488635,
+            "name": "How They Work: Zappos",
+            "progress": 1.0,
+            "status": "ready",
+            "thumbnail": {
+                "height": 60,
+                "url": "http://embed.wistia.com/deliveries/11bb346da9e041a4ce5c8f0a37803f8ef50e2848.jpg?image_crop_resized=100x60",
+                "width": 100
+            },
+            "type": "Video",
+            "updated": "2013-10-28T20:53:12+00:00"
+        },
+        {
+            "created": "2013-09-19T15:30:49+00:00",
+            "description": "<p>\n\nWistia goes to Nevada to visit with Zappos to hear what they have to say about their company culture.&nbsp;</p>\n<p>\n\n&nbsp;</p>\n<p>\n\nFor more How They Work videos, check out:</p>\n<p>\n\n<a href=\"http://jeff.wistia.com/projects/ln2k6qwi9k\">http://jeff.wistia.com/projects/ln2k6qwi9k</a></p>\n",
+            "duration": 167.0,
+            "hashed_id": "v80gyfkt28",
+            "id": 4489021,
+            "name": "How They Work - Zappos",
+            "progress": 1.0,
+            "status": "ready",
+            "thumbnail": {
+                "height": 60,
+                "url": "http://embed.wistia.com/deliveries/7fbf9c2fe9c6585f9aa032f43f0aecc3f287e86b.jpg?image_crop_resized=100x60",
+                "width": 100
+            },
+            "type": "Video",
+            "updated": "2013-10-28T20:53:12+00:00"
+        },
+        {
+            "created": "2013-09-19T15:44:10+00:00",
+            "description": "<p>\n\nWistia goes to Nevada to visit with Zappos to hear what they have to say about their company culture.&nbsp;</p>\n<p>\n\n&nbsp;</p>\n<p>\n\nFor more How They Work videos, check out:</p>\n<p>\n\n<a href=\"http://jeff.wistia.com/projects/ln2k6qwi9k\">http://jeff.wistia.com/projects/ln2k6qwi9k</a></p>\n",
+            "duration": 167.0,
+            "hashed_id": "cqvzbmyeid",
+            "id": 4489159,
+            "name": "How They Work - Zappos",
+            "progress": 1.0,
+            "status": "ready",
+            "thumbnail": {
+                "height": 60,
+                "url": "http://embed.wistia.com/deliveries/1d5b471a6a28b5d54787ae01a67e8d20c3b39267.jpg?image_crop_resized=100x60",
+                "width": 100
+            },
+            "type": "Video",
+            "updated": "2013-10-28T20:53:12+00:00"
+        }
+    ],
+    "name": "How They Work",
+    "public": true,
+    "publicId": "ln2k6qwi9k",
+    "updated": "2013-10-28T20:53:12+00:00"
 }
 {% endcodeblock %}
 
@@ -261,7 +288,9 @@ Create a new project in your Wistia account.
 
 #### The Request
 
-<code class="full_width">POST https://api.wistia.com/v1/projects.json</code>
+<code class="full_width">
+  POST https://api.wistia.com/v1/projects.json
+</code>
 
 
 #### Parameters
@@ -282,7 +311,7 @@ Created` status code, and the “Location” HTTP header will refer to the URL
 where the API can make the next request to get the new project.  
 
 
-#### Example JSON Response
+#### Example Projects#create Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/1.json
@@ -312,10 +341,9 @@ The Wistia data API allows you to update a project.
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;.json</code>
-
-Make sure you replace `<project-id>` with the hashed ID of the project that you want to update.
-
+<code class="full_width">
+  PUT https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
+</code>
 
 #### The Parameters
 
@@ -329,7 +357,7 @@ anonymousCanDownload | A flag indicating whether or not anonymous users may down
 public | A flag indicating whether or not the project is enabled for public access.  Set to “1” to enable and “0” to disable.
 
 
-#### Example JSON Response
+#### Example Projects#update Request
 
 {% codeblock example_json_response.json %}
 {
@@ -365,7 +393,7 @@ If the project is deleted successfully, the server will respond with `HTTP
 status 200 OK`. The body of the response will contain an object representing
 the project that was just deleted.
 
-#### Example JSON Response
+#### Example Projects#delete Request
 
 
 {% codeblock example_json_response.json %}
@@ -418,7 +446,7 @@ project resource resides.
 The body of the response will contain an object representing the *new copy* of 
 the project that was just created.
 
-#### Example JSON Response
+#### Example Projects#copy Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/3.json
@@ -470,7 +498,8 @@ email     | If this object refers to a Contact, this field will be present, indi
 
 ### Project Sharings: List
 
-See a list of sharings on a project.
+See a list of sharings on a project. 
+This request supports [paging and sorting](#organizing_for_list_methods).
 
 <code class="full_width">
   GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json
@@ -481,7 +510,7 @@ See a list of sharings on a project.
 The server responds with `HTTP status 200 OK`. The response body contains a 
 list of all sharings on the project.
 
-#### Example JSON Response
+#### Example ProjectSharings#list Request
 
 {% codeblock example_json_response.json %}
 [
@@ -542,7 +571,7 @@ The server responds with `HTTP status 200 OK` and the response body contains
 the requested sharing on the project.
 
 
-#### Example JSON Response
+#### Example ProjectSharings#show Request
 
 {% codeblock example_json_response.json %}
 {
@@ -601,7 +630,7 @@ The response body contains either a link for the user to activate their account
 or a link for the user to access the project if they already have a 
 username/password.
 
-#### Example JSON Response
+#### Example ProjectSharings#create Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/13/sharings/16.json
@@ -625,7 +654,9 @@ Update a sharing on a project.
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
+<code class="full_width">
+  PUT https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json
+</code>
 
 Parameter Name    | Description
 ------------------|-----------------
@@ -634,8 +665,7 @@ canDownload     | “1” to allow the user or group to download media from the 
 canUpload       | “1” to allow the user or group to upload media to the project, “0” to disable this functionality.
 isAdmin         | “1” to give this user admin rights to the project, “0” to take away admin rights.
 
-#### Example JSON Response
-
+#### Example ProjectSharings#update Request
 
 {% codeblock example_json_response.json %}
 {
@@ -673,8 +703,7 @@ The server will respond with `HTTP status 200 OK`. The body of the response
 will contain an object representing the sharing that was just deleted.
 
 
-#### Example JSON Response
-
+#### Example ProjectSharings#delete
 
 {% codeblock example_json_response.json %}
 {
@@ -769,8 +798,11 @@ name | Find a media or medias whose name exactly matches this parameter.
 type  | A string specifying which type of media you would like to get. Values can be `Video`, `Audio`, `Image`, `PdfDocument`, `MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.  
 hashed_id | Find the media by hashed_id.
 
-#### Example JSON Response
+#### Example Medias#list Request
 
+<code class='full_width'>
+  curl --user wistia:333344445555 https://api.wistia.com/v1/medias.json
+</code>
 
 {% codeblock example_json_response.json %}
 [{
@@ -832,9 +864,9 @@ media, send an HTTP GET request:
 
 <code class="full_width">https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
 
-#### Example Response
+#### Example Media#show
 
-Here is the request:
+Here is an example request:
 
 <code class='full_width'>
   curl --user wistia:2baf301d70cdfe6fa3a000770c9989674105d https://api.wistia.com/v1/medias/v80gyfkt28.json
@@ -920,7 +952,7 @@ new_still_media_id | The numeric ID of an image within the system that will repl
 description        | A new description to display next to the media within Wistia.
 
 
-#### Example JSON Response
+#### Example Media#update Request
 
 
 {% codeblock example_json_response.json %}
@@ -946,7 +978,7 @@ description        | A new description to display next to the media within Wisti
 
 ### Media: Delete
 
-Delete a piece of media.
+Delete a media from your account.
 
 #### The Request
 
@@ -955,31 +987,11 @@ Delete a piece of media.
 #### The Response
 
 If the media is deleted successfully, the server will respond with `HTTP status 
-200 OK` to let you know that it worked.  The body of the response will 
-contain an object representing the piece of media that was just deleted.
+200 OK` to let you know that it worked.
 
+The body of the response will contain an object representing the piece of media
+that was just deleted.
 
-#### Example JSON Response
-
-
-{% codeblock example_json_response.json %}
-{
-  "id": 181279,
-  "name": "Introducing the Slimlist",
-  "type": "Video",
-  "section": "Trailers",
-  "status": "ready",
-  "progress": 1.0,
-  "thumbnail": {
-    "url": "http://www.wistia.com/path/to/thumbnail2.png",
-    "width": 100,
-    "height": 60
-  },
-  "duration": 126,
-  "created": "2010-08-15T18:47:39+00:00",
-  "updated": "2010-08-21T21:47:00+00:00"
-}
-{% endcodeblock %}
 
 ---
 
@@ -991,8 +1003,6 @@ The Wistia data API allows you to copy a piece of media.
 #### The Request
 
 <code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/copy.json</code>
-
-Make sure you replace `<media-id>` with the hashed ID of the media that you want to copy.
 
 #### Parameters
 
@@ -1009,7 +1019,7 @@ newly created media resource resides.  The body of the response will contain an
 object representing the *new copy* of the media that was just created.
 
 
-#### Example JSON Response
+#### Example Media#copy Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/medias/3.json
@@ -1048,11 +1058,14 @@ status code `400 Bad Request` and the body will contain an error message.
 
 #### The Request
 
-<code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/stats.json</code>
+<code class="full_width">
+  GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/stats.json
+</code>
 
 #### The Response
 
-If the request is successful, the server will send a response with something similar to the following:
+If the request is successful, the server will send a response with something
+similar to the following:
 
 Field   |  Description
 --------|----------------
@@ -1067,22 +1080,87 @@ Field        |  Description
 pageLoads     | The total number of times that the page containing the embedded video has been loaded.
 visitors      | The number of unique visitors to the page containing the embedded video.
 percentOfVisitorsClickingPlay | This is an integer between 0 and 100 that shows what percentage of the time someone who saw the page containing the embedded video played the video.
-plays         | The total number of times that the video has been played.  averagePercentWatched   | This is an integer between 0 and 100.  It shows the average percentage of the video that was watched over every time the video was played.
+plays         | The total number of times that the video has been played.  
+averagePercentWatched   | This is an integer between 0 and 100.  It shows the average percentage of the video that was watched over every time the video was played.
 
-#### Example JSON Response
+#### Example Media#show Request
 
+<code class='full_width'>
+  curl --user wistia:333344445555 https://api.wistia.com/v1/medias/azh1x9nesb.json
+</code>
 
 {% codeblock example_json_response.json %}
 {
-  "id": 181279,
-  "name": "Introducing the Slimlist",
-  "stats": {
-    "pageLoads": 96,
-    "visitors": 52,
-    "percentOfVisitorsClickingPlay": 42,
-    "plays": 43,
-    "averagePercentWatched": 74
-  }
+    "created": "2013-09-19T15:05:17+00:00",
+    "description": "",
+    "duration": 167.29,
+    "hashed_id": "azh1x9nesb",
+    "id": 4488635,
+    "name": "How They Work: Zappos",
+    "progress": 1.0,
+    "project": {
+        "hashed_id": "ln2k6qwi9k",
+        "id": 464427,
+        "name": "How They Work"
+    },
+    "status": "ready",
+    "thumbnail": {
+        "height": 60,
+        "url": "http://embed.wistia.com/deliveries/11bb346da9e041a4ce5c8f0a37803f8ef50e2848.jpg?image_crop_resized=100x60",
+        "width": 100
+    },
+    "type": "Video",
+    "updated": "2013-10-28T20:53:12+00:00",
+    "assets": [
+        {
+            "contentType": "video/mp4",
+            "fileSize": 267837242,
+            "height": 720,
+            "type": "OriginalFile",
+            "url": "http://embed.wistia.com/deliveries/cb40bce84a15e9a8ccfba7ef28ab326c15435ac2.bin",
+            "width": 1280
+        },
+        {
+            "contentType": "video/x-flv",
+            "fileSize": 23802260,
+            "height": 540,
+            "type": "FlashVideoFile",
+            "url": "http://embed.wistia.com/deliveries/45f7820b4d97f8607a7cdee013f53acdfab17d5c.bin",
+            "width": 960
+        },
+        {
+            "contentType": "video/x-flv",
+            "fileSize": 44687291,
+            "height": 720,
+            "type": "HdFlashVideoFile",
+            "url": "http://embed.wistia.com/deliveries/08db858e39661cfcd6ae8f820e3c20ef294fae2a.bin",
+            "width": 1280
+        },
+        {
+            "contentType": "video/mp4",
+            "fileSize": 23695556,
+            "height": 540,
+            "type": "HdMp4VideoFile",
+            "url": "http://embed.wistia.com/deliveries/091a671a6c84876e0d245d466ccdb301ae9541d8.bin",
+            "width": 960
+        },
+        {
+            "contentType": "video/mp4",
+            "fileSize": 15349574,
+            "height": 360,
+            "type": "IphoneVideoFile",
+            "url": "http://embed.wistia.com/deliveries/b1cd50af03df70bd975deda5c14b54e8529c6585.bin",
+            "width": 640
+        },
+        {
+            "contentType": "image/jpeg",
+            "fileSize": 133379,
+            "height": 540,
+            "type": "StillImageFile",
+            "url": "http://embed.wistia.com/deliveries/11bb346da9e041a4ce5c8f0a37803f8ef50e2848.bin",
+            "width": 960
+        }
+    ]
 }
 {% endcodeblock %}
 
