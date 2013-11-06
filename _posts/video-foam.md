@@ -38,4 +38,6 @@ If your parent container looks for its content to set the size, the
 videoFoam'ed video will not expand as you expect it to. Use a `max-width` or
 relative-based width instead.
 
+If you're wrapping your videos in `<span>` tags, make sure that you're setting their width to match the width of the div that they live in. If you're not, video foam won't accurately be able to get a read on what size your video should be and will simply display as the default embedded size.
+
 **Woot!**
