@@ -165,11 +165,6 @@ Restart Elasticsearch
     /etc/init.d/elasticsearch stop
     /etc/init.d/elasticsearch start
 
-To-Do
------
-
-* Update the floating nav for API layouts
-
 Contact
 -------
 
