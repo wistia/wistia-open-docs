@@ -79,7 +79,7 @@ with HTTP `error 503 Service Unavailable` and the Retry-After HTTP header will
 be set with a number of seconds to wait before trying again.
 
 
-## Organizing for List Methods
+## Paging and Sorting Responses
 
 The *list* methods in the API support paging, sorting, and filtering of
 results. Filtering will be covered in the individual methods.
@@ -116,6 +116,14 @@ created*, your request URL would look something like this:
 **Projects** are the main organizational objects within Wistia.
 Media must be stored within Projects.
 
+### Methods
+
+* Projects#list
+* Projects#show
+* Projects#create
+* Projects#update
+* Projects#copy
+
 ### Projects Response
 
 When a Project Object is returned from a method, it will include the following
@@ -135,7 +143,7 @@ anonymousCanDownload  | A boolean indicating whether or not anonymous downloads 
 public  | A boolean indicating whether the project is available for public (anonymous) viewing.
 publicId  | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
 
-### Projects: List
+### Projects#List
 
 Use the Projects#list method to request a list of Projects in your Wistia 
 account. This request supports [paging and sorting](#organizing_for_list_methods).
@@ -144,7 +152,7 @@ Projects#list requests look like this:
 
 <code class="full_width">GET https://api.wistia.com/v1/projects.json</code>
 
-#### Example
+#### Example Project#list Request
 
 To retrieve all projects in an account, 10 projects at a time, starting on the
 second page of results, then your request URL should look something like this:
@@ -188,14 +196,11 @@ That would return the following JSON:
 
 ---
 
-### Projects: Show
+### Projects#Show
 
 Retrieve details about a specific project.
 
-#### The Request
-
-In order to tell Wistia that you want a list of all the media for a specific
-project, send an HTTP **GET** request to the following URL:
+To get the details on a Project (and all media therein), send an HTTP **GET** request to the following URL:
 
 <code class="full_width">
   GET https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
@@ -285,8 +290,6 @@ objects. Each entry in the media array has [all media object fields](#media_show
 ### Projects: Create
 
 Create a new project in your Wistia account.
-
-#### The Request
 
 <code class="full_width">
   POST https://api.wistia.com/v1/projects.json
