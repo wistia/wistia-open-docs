@@ -10,6 +10,7 @@ class NavBar
     if @titlesForNav.length
       @mainTitle.attr 'id', $.textToId(@mainTitle.text())
       @appendTitlesToNavBox()
+      @addSubtopicAnchor()
       @spaceTheTopicsTitle()
     else
       @navBoxUl.hide()
@@ -25,22 +26,27 @@ class NavBar
         """
 
     for title in @titlesForNav
-      $text = $(title).text()
-      $idText = $.textToId($text)
+      text = $(title).text()
+      idText = $.textToId(text)
 
-      $(title)
-        .attr('id', $idText)
-        .prepend """
-          <a class="subtopic_anchor" href="##{$idText}">#</a>
-          """
-
-      @appendListElemToNavBox $(title), $text, $idText
+      @appendListElemToNavBox $(title), text, idText
 
   appendListElemToNavBox: (elem, linkText, idText) ->
     linkSettings = @linkSettings(elem, linkText)
     @navBoxUl.append """
       <li class="#{linkSettings.klass}"><a href="##{idText}">#{linkSettings.linkText}</a></li>
       """
+
+  addSubtopicAnchor: ->
+    topics = $('h2,h3:not(wistiacom_footer h3)')
+
+    for topic in topics
+      idText = $.textToId($(topic).text())
+      
+      $(topic).attr('id', idText).prepend """
+          <a class="subtopic_anchor" href="##{idText}">#</a>
+        """
+
 
   linkSettings: (elem, linkText) ->
     if window.api
@@ -52,10 +58,7 @@ class NavBar
       { klass: "", linkText: linkText }
 
   titlesForNav: ->
-    if window.api
-      $('h2,h3').not('#wistiacom_footer h3')
-    else
-      $('h2')
+    $('h2')
 
   spaceTheTopicsTitle: ->
     $topicsTitleBox = $('#page_nav li:first-child')
