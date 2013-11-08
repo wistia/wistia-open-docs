@@ -118,12 +118,12 @@ Media must be stored within Projects.
 
 ### Methods
 
-* [Projects#list](#projectslist)
-* [Projects#show](#projectsshow)
-* [Projects#create](#projectscreate)
-* [Projects#update](#projectsupdate)
-* [Projects#delete](#projectsdelete)
-* [Projects#copy](#projectscopy)
+* [Projects#list](#projects_list)
+* [Projects#show](#projects_show)
+* [Projects#create](#projects_create)
+* [Projects#update](#projects_update)
+* [Projects#delete](#projects_delete)
+* [Projects#copy](#projects_copy)
 
 ### Projects Response
 
@@ -144,7 +144,7 @@ anonymousCanDownload  | A boolean indicating whether or not anonymous downloads 
 public  | A boolean indicating whether the project is available for public (anonymous) viewing.
 publicId  | If the project is public, this field contains a string representing the ID used for referencing the project in public URLs.
 
-### Projects#List
+### Projects: List
 
 Use the Projects#list method to request a list of Projects in your Wistia 
 account. This request supports [paging and sorting](#organizing_for_list_methods).
@@ -153,7 +153,7 @@ Projects#list requests look like this:
 
 <code class="full_width">GET https://api.wistia.com/v1/projects.json</code>
 
-#### Example Project#list Request
+#### Example Project#List Request
 
 To retrieve all projects in an account, 10 projects at a time, starting on the
 second page of results, then your request URL should look something like this:
@@ -197,7 +197,7 @@ That would return the following JSON:
 
 ---
 
-### Projects#Show
+### Projects: Show
 
 Retrieve details about a specific project.
 
@@ -210,7 +210,7 @@ To get the details on a Project (and all media therein), send an HTTP **GET** re
 The response for the Projects#show request will also include an array of media
 objects. Each entry in the media array has [all media object fields](#media_show).
 
-#### Example Projects#show Request
+#### Example Projects#Show Request
 
 <code class='full_width'>
   curl --user wistia:333344445555 https://api.wistia.com/v1/projects/ln2k6qwi9k.json
@@ -315,7 +315,7 @@ Created` status code, and the “Location” HTTP header will refer to the URL
 where the API can make the next request to get the new project.  
 
 
-#### Example Projects#create Request
+#### Example Projects#Create Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/1.json
@@ -361,7 +361,7 @@ anonymousCanDownload | A flag indicating whether or not anonymous users may down
 public | A flag indicating whether or not the project is enabled for public access.  Set to “1” to enable and “0” to disable.
 
 
-#### Example Projects#update Request
+#### Example Projects#Update Request
 
 {% codeblock example_json_response.json %}
 {
@@ -397,7 +397,7 @@ If the project is deleted successfully, the server will respond with `HTTP
 status 200 OK`. The body of the response will contain an object representing
 the project that was just deleted.
 
-#### Example Projects#delete Request
+#### Example Projects#Delete Request
 
 
 {% codeblock example_json_response.json %}
@@ -418,13 +418,11 @@ the project that was just deleted.
 
 ---
 
-### Projects#Copy
+### Projects: Copy
 
 Copy a project, including all media and sections.  
 
 {{ "This method does not copy the projects sharing information (i.e. users that could see the old project will not automatically be able to see the new one)." | note }} 
-
-#### The Request
 
 <code class="full_width">
   POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json
@@ -450,7 +448,7 @@ project resource resides.
 The body of the response will contain an object representing the *new copy* of 
 the project that was just created.
 
-#### Example Projects#copy Request
+#### Example Projects#Copy Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/3.json
@@ -480,11 +478,11 @@ project, including information about the contacts' permissions to that project.
 
 ### Methods
 
-* [ProjectSharings#list](#project_sharingslist)
-* [ProjectSharings#show](#project_sharingsshow)
-* [ProjectSharings#create](#project_sharingscreate)
-* [ProjectSharings#update](#project_sharingsupdate)
-* [ProjectSharings#delete](#project_sharingsdelete)
+* [Project Sharings#list](#project_sharings_list)
+* [Project Sharings#show](#project_sharings_show)
+* [Project Sharings#create](#project_sharings_create)
+* [Project Sharings#update](#project_sharings_update)
+* [Project Sharings#delete](#project_sharings_delete)
 
 ### Sharings Response
 
@@ -508,7 +506,7 @@ type      | A string representing what type of share this object represents: `Co
 email     | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 
-### Project Sharings#List
+### Project Sharings: List
 
 See a list of sharings on a project. 
 This request supports [paging and sorting](#organizing_for_list_methods).
@@ -522,7 +520,7 @@ This request supports [paging and sorting](#organizing_for_list_methods).
 The server responds with `HTTP status 200 OK`. The response body contains a 
 list of all sharings on the project.
 
-#### Example ProjectSharings#list Request
+#### Example Project Sharings#list Request
 
 {% codeblock example_json_response.json %}
 [
@@ -564,11 +562,9 @@ list of all sharings on the project.
 
 ---
 
-### Project Sharings#Show
+### Project Sharings: Show
 
 See the details of a particular sharing on a project.
-
-#### The Request
 
 <code class="full_width">
   GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json
@@ -583,7 +579,7 @@ The server responds with `HTTP status 200 OK` and the response body contains
 the requested sharing on the project.
 
 
-#### Example ProjectSharings#show Request
+#### Example Project Sharings#Show Request
 
 {% codeblock example_json_response.json %}
 {
@@ -611,8 +607,6 @@ the requested sharing on the project.
 
 Share a project with a user by email. Conceptually, you do this by creating a 
 new sharing object for a project.
-
-#### The Request
 
 <code class="full_width">
   POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json
@@ -642,7 +636,7 @@ The response body contains either a link for the user to activate their account
 or a link for the user to access the project if they already have a 
 username/password.
 
-#### Example ProjectSharings#create Request
+#### Example Project Sharings#create Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/projects/13/sharings/16.json
@@ -660,7 +654,7 @@ yet activated:
 
 ---
 
-### Project Sharings#update
+### Project Sharings: Update
 
 Update a sharing on a project. 
 
@@ -677,7 +671,7 @@ canDownload     | “1” to allow the user or group to download media from the 
 canUpload       | “1” to allow the user or group to upload media to the project, “0” to disable this functionality.
 isAdmin         | “1” to give this user admin rights to the project, “0” to take away admin rights.
 
-#### Example ProjectSharings#update Request
+#### Example Project Sharings#Update Request
 
 {% codeblock example_json_response.json %}
 {
@@ -701,11 +695,9 @@ isAdmin         | “1” to give this user admin rights to the project, “0”
 
 ---
 
-### Project Sharings#delete
+### Project Sharings: Delete
 
 Delete a sharing on a project.
-
-#### Request
 
 <code class="full_width">DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json</code>
 
@@ -715,7 +707,7 @@ The server will respond with `HTTP status 200 OK`. The body of the response
 will contain an object representing the sharing that was just deleted.
 
 
-#### Example ProjectSharings#delete
+#### Example Project Sharings#Delete
 
 {% codeblock example_json_response.json %}
 {
@@ -743,12 +735,12 @@ will contain an object representing the sharing that was just deleted.
 
 ### Methods
 
-* [Medias#list](#mediaslist)
-* [Medias#show](#mediasshow)
-* [Medias#update](#mediasupdate)
-* [Medias#delete](#mediasdelete)
-* [Medias#copy](#mediascopy)
-* [Medias#stats](#mediasstats)
+* [Medias#list](#medias_list)
+* [Medias#show](#medias_show)
+* [Medias#update](#medias_update)
+* [Medias#delete](#medias_delete)
+* [Medias#copy](#medias_copy)
+* [Medias#stats](#medias_stats)
 
 ### Medias Response
 
@@ -792,14 +784,10 @@ fileSize  | The size of the asset file that's referenced by url, measured in byt
 contentType | The asset's content type.
 type  | The internal type of the asset, describing how the asset should be used. Values can include `OriginalFile`, `FlashVideoFile`, `MdFlashVideoFile`, `HdFlashVideoFile`, `Mp4VideoFile`, `MdMp4VideoFile`, `HdMp4VideoFile`, `IPhoneVideoFile`, `StillImageFile`, `SwfFile`, `Mp3AudioFile`, and `LargeImageFile`.
 
-### Medias#List
+### Medias: List
 
 Obtain a list of all the media in your account. You can [page and
 sort]('#organizing_for_list_methods') the returned list.
-
-#### Request
-
-The format of the request should be something like this:
 
 <code class="full_width">
   https://api.wistia.com/v1/medias.json
@@ -819,7 +807,7 @@ name | Find a media or medias whose name exactly matches this parameter.
 type  | A string specifying which type of media you would like to get. Values can be `Video`, `Audio`, `Image`, `PdfDocument`, `MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.  
 hashed_id | Find the media by hashed_id.
 
-#### Example Medias#list Request
+#### Example Medias#List Request
 
 <code class='full_width'>
   curl --user wistia:333344445555 https://api.wistia.com/v1/medias.json
@@ -874,18 +862,15 @@ hashed_id | Find the media by hashed_id.
 
 ---
 
-### Medias#show
+### Medias: Show
 
 Get information about a specific piece of media that you have uploaded to your account.
 
-#### Request
+<code class="full_width">
+https://api.wistia.com/v1/medias/&lt;media-id&gt;.json
+</code>
 
-In order to tell Wistia that you want information about a specific piece of
-media, send an HTTP GET request:
-
-<code class="full_width">https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
-
-#### Example Media#show
+#### Example Media#Show
 
 Here is an example request:
 
@@ -957,7 +942,7 @@ Here is the JSON response received:
 ---
 
 
-### Medias#update
+### Medias: Update
 
 Update attributes on a piece of media.
 
@@ -973,7 +958,7 @@ new_still_media_id | The numeric ID of an image within the system that will repl
 description        | A new description to display next to the media within Wistia.
 
 
-#### Example Media#update Request
+#### Example Media#Update Request
 
 
 {% codeblock example_json_response.json %}
@@ -997,13 +982,13 @@ description        | A new description to display next to the media within Wisti
 
 ---
 
-### Medias#delete
+### Medias: Delete
 
 Delete a media from your account.
 
-#### The Request
-
-<code class="full_width">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
+<code class="full_width">
+DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;.json
+</code>
 
 #### The Response
 
@@ -1017,13 +1002,13 @@ that was just deleted.
 ---
 
 
-### Medias#copy
+### Medias: Copy
 
 The Wistia data API allows you to copy a piece of media.
 
-#### The Request
-
-<code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/copy.json</code>
+<code class="full_width">
+POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/copy.json
+</code>
 
 #### Parameters
 
@@ -1040,7 +1025,7 @@ newly created media resource resides.  The body of the response will contain an
 object representing the *new copy* of the media that was just created.
 
 
-#### Example Media#copy Request
+#### Example Media#Copy Request
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/medias/3.json
@@ -1068,7 +1053,7 @@ object representing the *new copy* of the media that was just created.
 ---
 
 
-### Medias#stats
+### Medias: Stats
 
 Aggregated tracking statistics for a video that has been embedded on your site.
 
@@ -1076,8 +1061,6 @@ Aggregated tracking statistics for a video that has been embedded on your site.
 
 If you try to get stats for a non-video, the server will respond with HTTP
 status code `400 Bad Request` and the body will contain an error message.
-
-#### The Request
 
 <code class="full_width">
   GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/stats.json
@@ -1104,7 +1087,7 @@ percentOfVisitorsClickingPlay | This is an integer between 0 and 100 that shows 
 plays         | The total number of times that the video has been played.  
 averagePercentWatched   | This is an integer between 0 and 100.  It shows the average percentage of the video that was watched over every time the video was played.
 
-#### Example Media#stats Request
+#### Example Media#Stats Request
 
 <code class='full_width'>
   curl --user wistia:333344445555 https://api.wistia.com/v1/medias/azh1x9nesb.json
@@ -1216,14 +1199,14 @@ conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 ### Methods
 
-* [Captions#index](#captionsindex)
-* [Captions#create](#captionscreate)
-* [Captions#show](#captionsshow)
-* [Captions#update](#captionsupdate)
-* [Captions#delete](#captionsdelete)
-* [Captions#purchase](#captionspurchase)
+* [Captions#index](#captions_index)
+* [Captions#create](#captions_create)
+* [Captions#show](#captions_show)
+* [Captions#update](#captions_update)
+* [Captions#delete](#captions_delete)
+* [Captions#purchase](#captions_purchase)
 
-### Captions#Index
+### Captions: Index
 
 This method will return all the captions for a video.
 
@@ -1238,7 +1221,7 @@ Field | Description
 language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 captions | The text of the captions for the specified language in SRT format.
 
-##### Example JSON Response
+##### Example Captions#Index Response
 
 {% codeblock example_json_response.json %}
 [
@@ -1262,7 +1245,7 @@ If captions do not exist for this video, the response will be an empty JSON arra
 If this video does not exist, the response will be an empty HTTP `404 Not Found`.
 
 
-### Captions#Create
+### Captions: Create
 
 This method is for adding captions to a video.
 
@@ -1296,13 +1279,12 @@ Request`.
 If this video does not exist, the response will be an empty HTTP `404 Not Found`.
 
 
-### Captions#Show
+### Captions: Show
 
 This method will return the captions for a specific language for a video in SRT
 format.
 
 <code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code>
-
 
 #### The Response
 
@@ -1313,7 +1295,7 @@ Field | Description
 language | A 3 character language code as specified by [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 captions | The text of the captions for the specified language in SRT format.
 
-##### Example JSON Response
+##### Example Captions#Show Response
 
 {% codeblock example_json_response.json %}
 
@@ -1332,7 +1314,7 @@ empty HTTP 404 Not Found.
 If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 
-### Captions#Update
+### Captions: Update
 
 This method is for replacing the captions on a video.
 
@@ -1355,7 +1337,7 @@ empty HTTP `404 Not Found`.
 If this video does not exist, the response will be an empty HTTP `404 Not Found`.
 
 
-### Captions#Delete
+### Captions: Delete
 
 This method is for removing the captions file from a video altogether.
 
@@ -1371,7 +1353,7 @@ empty HTTP `404 Not Found`.
 If this video does not exist, the response will be an empty HTTP `404 Not Found`.
 
 
-### Captions#Purchase
+### Captions: Purchase
 
 This method is for purchasing English captions on a video.
 
