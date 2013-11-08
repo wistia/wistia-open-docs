@@ -118,11 +118,12 @@ Media must be stored within Projects.
 
 ### Methods
 
-* Projects#list
-* Projects#show
-* Projects#create
-* Projects#update
-* Projects#copy
+* [Projects#list](#projectslist)
+* [Projects#show](#projectsshow)
+* [Projects#create](#projectscreate)
+* [Projects#update](#projectsupdate)
+* [Projects#delete](#projectsdelete)
+* [Projects#copy](#projectscopy)
 
 ### Projects Response
 
@@ -417,7 +418,7 @@ the project that was just deleted.
 
 ---
 
-### Projects: Copy
+### Projects#Copy
 
 Copy a project, including all media and sections.  
 
@@ -477,6 +478,14 @@ the project that was just created.
 A **sharing** is an object that links either a contact or a contact group to a 
 project, including information about the contacts' permissions to that project.
 
+### Methods
+
+* [ProjectSharings#list](#project_sharingslist)
+* [ProjectSharings#show](#project_sharingsshow)
+* [ProjectSharings#create](#project_sharingscreate)
+* [ProjectSharings#update](#project_sharingsupdate)
+* [ProjectSharings#delete](#project_sharingsdelete)
+
 ### Sharings Response
 
 Field     | Description
@@ -499,7 +508,7 @@ type      | A string representing what type of share this object represents: `Co
 email     | If this object refers to a Contact, this field will be present, indicating the contact email of the person with which the project is shared.  If it's a ContactGroup, this field will be omitted.
 
 
-### Project Sharings: List
+### Project Sharings#List
 
 See a list of sharings on a project. 
 This request supports [paging and sorting](#organizing_for_list_methods).
@@ -555,7 +564,7 @@ list of all sharings on the project.
 
 ---
 
-### Project Sharings: Show
+### Project Sharings#Show
 
 See the details of a particular sharing on a project.
 
@@ -651,7 +660,7 @@ yet activated:
 
 ---
 
-### Project Sharings: Update the Sharing on a Project
+### Project Sharings#update
 
 Update a sharing on a project. 
 
@@ -692,7 +701,7 @@ isAdmin         | “1” to give this user admin rights to the project, “0”
 
 ---
 
-### Project Sharings: Delete
+### Project Sharings#delete
 
 Delete a sharing on a project.
 
@@ -731,6 +740,15 @@ will contain an object representing the sharing that was just deleted.
 ---
 
 ## Medias
+
+### Methods
+
+* [Medias#list](#mediaslist)
+* [Medias#show](#mediasshow)
+* [Medias#update](#mediasupdate)
+* [Medias#delete](#mediasdelete)
+* [Medias#copy](#mediascopy)
+* [Medias#stats](#mediasstats)
 
 ### Medias Response
 
@@ -774,7 +792,7 @@ fileSize  | The size of the asset file that's referenced by url, measured in byt
 contentType | The asset's content type.
 type  | The internal type of the asset, describing how the asset should be used. Values can include `OriginalFile`, `FlashVideoFile`, `MdFlashVideoFile`, `HdFlashVideoFile`, `Mp4VideoFile`, `MdMp4VideoFile`, `HdMp4VideoFile`, `IPhoneVideoFile`, `StillImageFile`, `SwfFile`, `Mp3AudioFile`, and `LargeImageFile`.
 
-### Medias: List
+### Medias#List
 
 Obtain a list of all the media in your account. You can [page and
 sort]('#organizing_for_list_methods') the returned list.
@@ -856,7 +874,7 @@ hashed_id | Find the media by hashed_id.
 
 ---
 
-### Media: Show
+### Medias#show
 
 Get information about a specific piece of media that you have uploaded to your account.
 
@@ -939,7 +957,7 @@ Here is the JSON response received:
 ---
 
 
-### Media: Update
+### Medias#update
 
 Update attributes on a piece of media.
 
@@ -979,7 +997,7 @@ description        | A new description to display next to the media within Wisti
 
 ---
 
-### Media: Delete
+### Medias#delete
 
 Delete a media from your account.
 
@@ -999,7 +1017,7 @@ that was just deleted.
 ---
 
 
-### Media: Copy
+### Medias#copy
 
 The Wistia data API allows you to copy a piece of media.
 
@@ -1050,7 +1068,7 @@ object representing the *new copy* of the media that was just created.
 ---
 
 
-### Media: Show Stats
+### Medias#stats
 
 Aggregated tracking statistics for a video that has been embedded on your site.
 
@@ -1086,7 +1104,7 @@ percentOfVisitorsClickingPlay | This is an integer between 0 and 100 that shows 
 plays         | The total number of times that the video has been played.  
 averagePercentWatched   | This is an integer between 0 and 100.  It shows the average percentage of the video that was watched over every time the video was played.
 
-#### Example Media#show Request
+#### Example Media#stats Request
 
 <code class='full_width'>
   curl --user wistia:333344445555 https://api.wistia.com/v1/medias/azh1x9nesb.json
@@ -1171,9 +1189,9 @@ averagePercentWatched   | This is an integer between 0 and 100.  It shows the av
 
 ## Account
 
-#### The Request
-
-<code class="full_width">GET https://api.wistia.com/v1/account.json</code>
+<code class="full_width">
+GET https://api.wistia.com/v1/account.json
+</code>
 
 #### The Response
 
@@ -1196,37 +1214,16 @@ multiple captions will be added later.
 * `<language-code>` denotes which language to get captions for and it should
 conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
-### Captions: Create
+### Methods
 
-This method is for adding captions to a video.
+* [Captions#index](#captionsindex)
+* [Captions#create](#captionscreate)
+* [Captions#show](#captionsshow)
+* [Captions#update](#captionsupdate)
+* [Captions#delete](#captionsdelete)
+* [Captions#purchase](#captionspurchase)
 
-#### The Request
-
-<code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code>
-
-Parameter | Description
-----------|------------
-caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
-language | An optional parameter that denotes which language this file represents and it should conform to
-[ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
-
-Example of `caption_file` as a string parameter using curl:
-
-<code class="full_width">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --data $'caption_file=1\n00:00:00,000 --> 00:00:03,000\nOh caption, my caption.'</code>
-
-Example of <code>caption_file</code> as an attached file using curl:
-<code class="full_width">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --form "caption_file=@./oh_caption.srt"</code>
-
-#### The Response
-
-If successful, the response will be an empty `HTTP 200 OK`.
-
-If captions already exist for this video, the response will be `HTTP 400 Bad
-Request`.
-
-If this video does not exist, the response will be an empty HTTP `404 Not Found`.
-
-### Captions: Index
+### Captions#Index
 
 This method will return all the captions for a video.
 
@@ -1265,7 +1262,41 @@ If captions do not exist for this video, the response will be an empty JSON arra
 If this video does not exist, the response will be an empty HTTP `404 Not Found`.
 
 
-### Captions: Show
+### Captions#Create
+
+This method is for adding captions to a video.
+
+<code class="full_width">
+POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json
+</code>
+
+Parameter | Description
+----------|------------
+caption_file | Either an attached SRT file or a string parameter with the contents of an SRT file.
+language | An optional parameter that denotes which language this file represents and it should conform to
+[ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
+
+Example of `caption_file` as a string parameter using curl:
+
+<code class="full_width">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --data $'caption_file=1\n00:00:00,000 --> 00:00:03,000\nOh caption, my caption.'</code>
+
+Example of `caption_file` as an attached file using curl:
+
+<code class="full_width">
+curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --form "caption_file=@./oh_caption.srt"
+</code>
+
+#### The Response
+
+If successful, the response will be an empty `HTTP 200 OK`.
+
+If captions already exist for this video, the response will be `HTTP 400 Bad
+Request`.
+
+If this video does not exist, the response will be an empty HTTP `404 Not Found`.
+
+
+### Captions#Show
 
 This method will return the captions for a specific language for a video in SRT
 format.
@@ -1301,7 +1332,7 @@ empty HTTP 404 Not Found.
 If this video does not exist, the response will be an empty HTTP 404 Not Found.
 
 
-### Captions: Update
+### Captions#Update
 
 This method is for replacing the captions on a video.
 
@@ -1324,7 +1355,7 @@ empty HTTP `404 Not Found`.
 If this video does not exist, the response will be an empty HTTP `404 Not Found`.
 
 
-### Captions: Delete
+### Captions#Delete
 
 This method is for removing the captions file from a video altogether.
 
@@ -1340,7 +1371,7 @@ empty HTTP `404 Not Found`.
 If this video does not exist, the response will be an empty HTTP `404 Not Found`.
 
 
-### Captions: Purchase
+### Captions#Purchase
 
 This method is for purchasing English captions on a video.
 
