@@ -300,7 +300,7 @@ em
       .subtopic_anchor
         color: $light_blue
   h2
-    margin: 55px 16px 13px 16px
+    margin: 55px 16px 13px 0
     font-size: 18px
     line-height: 30px
   h3
@@ -357,7 +357,7 @@ em
     font-size: 18px
     font-weight: 700
     position: absolute
-    left: 10px
+    left: -5px
     +transition
     &:hover
       color: $light_blue
@@ -638,11 +638,13 @@ table
   #post_content_nav
     position: absolute
   .post_content
+    h2
+      font-size: 24px
     h3
       font-size: 18px
       margin-top: 55px
       font-weight: 600
-      margin: 55px 16px 13px 16px
+      margin: 55px 16px 13px 0
     h4
       font-weight: 600
 
@@ -676,6 +678,10 @@ table
       border-bottom: none
       margin-bottom: 0
       padding-bottom: 0
+    &.current > a
+      font-weight: 700
+      &:hover
+        color: $title_color
 
   .title_list_item
     padding: 11px 0 13px
@@ -694,10 +700,7 @@ table
         background: none
         color: $title_color
 
-  .current > a
-    font-weight: 700
-    &:hover
-      color: $title_color
+
 
   .header_link
     a
