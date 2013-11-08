@@ -678,6 +678,10 @@ table
       border-bottom: none
       margin-bottom: 0
       padding-bottom: 0
+    &.current > a
+      font-weight: 700
+      &:hover
+        color: $title_color
 
   .title_list_item
     padding: 11px 0 13px
@@ -696,10 +700,7 @@ table
         background: none
         color: $title_color
 
-  .current > a
-    font-weight: 700
-    &:hover
-      color: $title_color
+
 
   .header_link
     a
