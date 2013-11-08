@@ -86,8 +86,6 @@ GEM
     rspec-mocks (2.13.1)
     safe_yaml (0.7.1)
     sass (3.2.7)
-    shotgun (0.9)
-      rack (>= 1.0)
     sinatra (1.3.6)
       rack (~> 1.4)
       rack-protection (~> 1.3)
@@ -135,7 +133,6 @@ DEPENDENCIES
   rdiscount
   rspec (~> 2.13.0)
   sass (~> 3.2)
-  shotgun (~> 0.9)
   sinatra (~> 1.3.3)
   tddium
   tire (~> 0.4.2)

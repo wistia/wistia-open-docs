@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
 
-`shotgun config.ru`
+`rackup config.ru`
