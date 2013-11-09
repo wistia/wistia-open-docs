@@ -1027,25 +1027,32 @@ object representing the *new copy* of the media that was just created.
 
 #### Example Media#Copy Request
 
+The request:
+
+<code class="full_width">
+POST https://api.wistia.com/v1/medias/zckfiliwoi/copy.json
+</code>
+
 **Status:** 201 Created<br/>
-**Location:** https://api.wistia.com/v1/medias/3.json
+**Location:** https://api.wistia.com/v1/medias/wrlyf77iw5.json
 
 {% codeblock example_json_response.json %}
 {
-  "id": 3,
-  "name": "Introducing the Slimlist",
-  "type": "Video",
-  "section": "Trailers",
-  "status": "ready",
-  "progress": 1.0,
-  "thumbnail": {
-    "url": "http://www.wistia.com/path/to/thumbnail2.png",
-    "width": 100,
-    "height": 60
-  },
-  "duration": 126,
-  "created": "2010-08-15T18:47:39+00:00",
-  "updated": "2010-08-21T21:47:00+00:00"
+  "id":160,
+  "name":"MVI_9736",
+  "type":"Video",
+  "created":"2013-11-09T21:33:23+00:00",
+  "updated":"2013-11-09T21:33:23+00:00",
+  "duration":68.0,
+  "hashed_id":"wrlyf77iw5",
+  "description":"",
+  "progress":1.0,
+  "status":"ready",
+  "thumbnail":{
+    "url":"http://embed-0.wistia.com/deliveries/fcf39d52918652ecbde8e2123ea479c382f8771c.jpg?image_crop_resized=100x60",
+    "width":100,
+    "height":60
+  }
 }
 {% endcodeblock %}
 
@@ -1084,87 +1091,28 @@ Field        |  Description
 pageLoads     | The total number of times that the page containing the embedded video has been loaded.
 visitors      | The number of unique visitors to the page containing the embedded video.
 percentOfVisitorsClickingPlay | This is an integer between 0 and 100 that shows what percentage of the time someone who saw the page containing the embedded video played the video.
-plays         | The total number of times that the video has been played.  
+plays         | The total number of times that the video has been played.
 averagePercentWatched   | This is an integer between 0 and 100.  It shows the average percentage of the video that was watched over every time the video was played.
 
 #### Example Media#Stats Request
 
+The request:
 <code class='full_width'>
-  curl --user wistia:333344445555 https://api.wistia.com/v1/medias/azh1x9nesb.json
+  curl --user wistia:333344445555 https://api.wistia.com/v1/medias/azh1x9nesb/stats.json
 </code>
 
+The response:
 {% codeblock example_json_response.json %}
 {
-    "created": "2013-09-19T15:05:17+00:00",
-    "description": "",
-    "duration": 167.29,
-    "hashed_id": "azh1x9nesb",
-    "id": 4488635,
-    "name": "How They Work: Zappos",
-    "progress": 1.0,
-    "project": {
-        "hashed_id": "ln2k6qwi9k",
-        "id": 464427,
-        "name": "How They Work"
-    },
-    "status": "ready",
-    "thumbnail": {
-        "height": 60,
-        "url": "http://embed.wistia.com/deliveries/11bb346da9e041a4ce5c8f0a37803f8ef50e2848.jpg?image_crop_resized=100x60",
-        "width": 100
-    },
-    "type": "Video",
-    "updated": "2013-10-28T20:53:12+00:00",
-    "assets": [
-        {
-            "contentType": "video/mp4",
-            "fileSize": 267837242,
-            "height": 720,
-            "type": "OriginalFile",
-            "url": "http://embed.wistia.com/deliveries/cb40bce84a15e9a8ccfba7ef28ab326c15435ac2.bin",
-            "width": 1280
-        },
-        {
-            "contentType": "video/x-flv",
-            "fileSize": 23802260,
-            "height": 540,
-            "type": "FlashVideoFile",
-            "url": "http://embed.wistia.com/deliveries/45f7820b4d97f8607a7cdee013f53acdfab17d5c.bin",
-            "width": 960
-        },
-        {
-            "contentType": "video/x-flv",
-            "fileSize": 44687291,
-            "height": 720,
-            "type": "HdFlashVideoFile",
-            "url": "http://embed.wistia.com/deliveries/08db858e39661cfcd6ae8f820e3c20ef294fae2a.bin",
-            "width": 1280
-        },
-        {
-            "contentType": "video/mp4",
-            "fileSize": 23695556,
-            "height": 540,
-            "type": "HdMp4VideoFile",
-            "url": "http://embed.wistia.com/deliveries/091a671a6c84876e0d245d466ccdb301ae9541d8.bin",
-            "width": 960
-        },
-        {
-            "contentType": "video/mp4",
-            "fileSize": 15349574,
-            "height": 360,
-            "type": "IphoneVideoFile",
-            "url": "http://embed.wistia.com/deliveries/b1cd50af03df70bd975deda5c14b54e8529c6585.bin",
-            "width": 640
-        },
-        {
-            "contentType": "image/jpeg",
-            "fileSize": 133379,
-            "height": 540,
-            "type": "StillImageFile",
-            "url": "http://embed.wistia.com/deliveries/11bb346da9e041a4ce5c8f0a37803f8ef50e2848.bin",
-            "width": 960
-        }
-    ]
+    "id": 3690639,
+    "name": "Dan Mills - Young and Free",
+    "stats": {
+        "averagePercentWatched": 23,
+        "pageLoads": 147,
+        "percentOfVisitorsClickingPlay": 50,
+        "plays": 46,
+        "visitors": 20
+    }
 }
 {% endcodeblock %}
 
