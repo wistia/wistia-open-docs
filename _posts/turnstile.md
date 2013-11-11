@@ -14,7 +14,7 @@ post_intro:
 
 ## Setup Your Email Provider Integration
 
-{% post_image hashed_id: "d6166e343c3cebdda782d3b8a8370a8d782d9a90", class: 'center' %}
+{% post_image hashed_id: "73af93a7120e830cdc02912871b2ea4ed353cf6c", class: 'center' %}
 
 Once enabled, a video using Turnstile will automatically track the emails entered 
 by your viewers in [Wistia analytics]({{ '/embedded-video-analytics' | post_url}}),
@@ -26,17 +26,17 @@ Find the *Setup an Email Provider* option.
 
 {{ "In order to access the Integrations area, you will need to be logged in as the Owner of the account." | note }}
 
-{% post_image hashed_id: "1a41347bfeb5390f3ed666167b39b751e565fe2b", class: 'center' %}
+{% post_image hashed_id: "becfa8df8421970409f380d69bcb36d6cc8d8912", class: 'center' %}
 
 Select your provider from the list, and select <span
 class="faux_button">Configure</span>. For this example, we will be using Emma.
 
-{% post_image hashed_id: "32654d43f624fd3606746d382c86ff1dd01b8a86", class: 'center' %}
+{% post_image hashed_id: "a5bcdfb0e55cc4fb608a8300c3903d2afc3aa39d", class: 'center' %}
 
 Each provider needs a different set of information - you can see what info is
 required on the configuration page. Emma, for example, requires the following
-information from your Emma account: your Public API, Private Key, and Account
-ID. We also try to include some pointers on where to find this info.
+information from your Emma account: your Public API Key, Private API Key, and
+Account ID. We also try to include some pointers on where to find this info.
 
 ## Use Your Email Provider With Turnstile
 
@@ -47,7 +47,8 @@ into a specific group in your connected email provider.
 Inside the [Customize screen]({{ '/embed-screen' | post_url }}), find the 
 *Turnstile Email Capture* options area. Select *Enable*, and then select the 
 email list (group) you want the email to be added to when viewers submit their 
-email.
+email. If you're integrating with HubSpot or Marketo, there's no need to select
+a list; once enabled, captured emails will go straight into your linked account!
 
 Watch your lists grow! It's a thing of beauty :) 
 
