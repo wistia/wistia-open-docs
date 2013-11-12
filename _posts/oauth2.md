@@ -184,7 +184,7 @@ Responds with JSON in the form:
       token_type: "bearer",
       expires_in: 21600,
       refresh_token: "366d1b695bccf10bae1b50bb869ea17187328e5b90045eb6368d7c912f03393c",
-      scope: "api"
+      scope: ["read", "write", "offline"]
     }
 
 
