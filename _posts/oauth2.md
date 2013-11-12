@@ -9,6 +9,12 @@ post_intro: <p>So you want to integrate your app with Wistia. Cool! To make it r
 ---
 
 
+## What is OAuth2?
+
+This page is meant for people who have a grasp of how OAuth2 works. If you're 
+not sure, check out [the official OAuth2 resource](http://oauth.net/2/).
+
+
 ## Get Approved
 
 OAuth2 is not yet available for all accounts. Until it is, send an email to 
