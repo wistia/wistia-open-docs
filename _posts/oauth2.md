@@ -188,6 +188,11 @@ Responds with JSON in the form:
     }
 
 
+## Revoking Access
+
+A user can revoke access to your app by going to Account > My Settings.
+
+
 ## Known Issues
 
 - The wistia-api ruby gem currently does __not__ support oauth. We will be
