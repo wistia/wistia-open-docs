@@ -84,7 +84,7 @@ After the OAuth flow is finished, it would redirect to:
 
 Or if there's an error:
 
-<code class="full_width">http://localhost/myapp?error=access_denied&error_description=The+resource+owner+or+authorization+server+denied+the+request.</code>
+<code class="full_width">http://localhost/myapp?account_id=35&error=access_denied&error_description=The+resource+owner+or+authorization+server+denied+the+request.</code>
 
 
 ## Use the Authorization Code to get an Access Token
@@ -168,7 +168,7 @@ __https://api.wistia.com/oauth/authorize__
 
 Expects a request like:
 
-    https://api.wistia.com/oauth/authorize?client_id=mypublicconsumerkey&redirect_uri=https%3A%2F%2Flocalhost%2Fmyapp
+    https://api.wistia.com/oauth/authorize?client_id=mypublicconsumerkey&redirect_uri=https%3A%2F%2Flocalhost%2Fmyapp&response_type=code
 
 It will ultimately redirect back to the Redirect URI with a `code` param if
 succesful, or `error` and `error_description` params if unsuccessful.
