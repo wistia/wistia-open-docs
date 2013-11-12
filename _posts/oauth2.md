@@ -180,11 +180,11 @@ It expects requests like:
 Responds with JSON in the form:
 
     {
-      access_token: "ba371cc8c511e0d9114b8e17777ebc4ad5e23811144341f0ca4726d67ff4b19e",
-      token_type: "bearer",
-      expires_in: 21600,
-      refresh_token: "366d1b695bccf10bae1b50bb869ea17187328e5b90045eb6368d7c912f03393c",
-      scope: ["read", "write", "offline"]
+      "access_token": "ba371cc8c511e0d9114b8e17777ebc4ad5e23811144341f0ca4726d67ff4b19e",
+      "token_type": "bearer",
+      "expires_in": 21600,
+      "refresh_token": "366d1b695bccf10bae1b50bb869ea17187328e5b90045eb6368d7c912f03393c",
+      "scope": ["read", "write", "offline"]
     }
 
 
