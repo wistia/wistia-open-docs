@@ -149,6 +149,9 @@ can get an API key for a user without requiring re-authorization.
     old_access_token = OAuth2::AccessToken.new(client, refresh_token: 'thesavedrefreshtoken')
     token = old_access_token.refresh!
 
+    # Your refresh_token will also be updated, so you should save its new value:
+    token.refresh_token
+
 Note: These keys are not valid and are for demonstration purposes only.
 
 
