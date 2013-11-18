@@ -16,13 +16,24 @@ post_intro: <p>You may find yourself needing to build embed codes for your video
 
 Our oEmbed endpoint is: `http://fast.wistia.net/oembed`
 
-Currently, our oEmbed endpoint recognizes two URL formats:
+Currently, our oEmbed endpoint recognizes two URL formats.
 
-Type | Example URL
------|-------------
-iframe embed code URLs | http://fast.wistia.net/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
-iframed playlist URLs | http://fast.wistia.net/embed/playlists/fbe3880a4e?theme=trime&version=v1&videoOptions%5BvideoHeight%5D=360&videoOptions%5BvideoWidth%5D=640
-Public media URLs | http://home.wistia.com/medias/e4a27b971d
+### iframe embed code URLs
+
+You can build these for single videos or playlists, or generate them through 
+your account.
+
+**example:** http://fast.wistia.net/embed/iframe/
+b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
+
+**playlist example:** http://fast.wistia.net/embed/playlists/fbe3880a4e?theme=trim
+&version=v1&videoOptions%5BvideoHeight%5D=360&videoOptions%5BvideoWidth%5D=640
+
+### Public Media URLs
+
+Public Media URLs are the address to a video in your account.
+
+**example:** http://home.wistia.com/medias/e4a27b971d
 
 It's likely we'll add more URLs to this list in the future.
 
@@ -78,7 +89,7 @@ If you're looking for XML instead of JSON, use: `http://fast.wistia.net/oembed.x
 For all the fine details about the options supported, see the official
 [oEmbed spec](http://oembed.com).
 
-### Parameters
+## Parameters
 
 Our endpoint supports all the options detailed at oembed.com.
 
@@ -112,17 +123,22 @@ guide for more info!
 
 ### Troubleshooting
 
-  1. If an invalid URL (one that doesn't match our regular expression above) is given, the endpoint will return <span class="code">404 Not Found</span>.
-  2. If an unparseable URL is given in the url param, the endpoint will return <span class="code">404 Not Found</span>.
-  3. If a media is found but has no available embed code, the endpoint will return <span class="code">501 Not Implemented</span>. Video, Image, Audio, and Document files all currently implement oembeds.
-  4. If a playlist is found but has no videos, the endpoint will return <span class="code">501 Not Implemented</span>.
+  1. If an invalid URL (one that doesn't match our regular expression above) is
+     given, the endpoint will return <span class="code">404 Not Found</span>.
+  2. If an unparseable URL is given in the url param, the endpoint will return
+     <span class="code">404 Not Found</span>.
+  3. If a media is found but has no available embed code, the endpoint will
+     return <span class="code">501 Not Implemented</span>. Video, Image, Audio,
+and Document files all currently implement oembeds.
+  4. If a playlist is found but has no videos, the endpoint will return <span
+     class="code">501 Not Implemented</span>.
 
 ### Make Your Life Easier
 
-If you're contemplating doing an oEmbed implementation with Wistia (or any 
-oEmbed provider for that matter), we strongly recommend checking out 
-[Embedly](http://embed.ly). By integrating with them you'll have immediate 
-access to over 100 oEmbed providers. They also have great documentation and 
+If you're contemplating doing an oEmbed implementation with Wistia (or any
+oEmbed provider for that matter), we strongly recommend checking out
+[Embedly](http://embed.ly). By integrating with them you'll have immediate
+access to over 100 oEmbed providers. They also have great documentation and
 ready-made libraries for every popular language, plus they're just nice guys!
 
 ---

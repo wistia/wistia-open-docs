@@ -772,7 +772,7 @@ em { font-style: italic; }
 .post_content ol { list-style: decimal; }
 .post_content ol li { margin-left: 30px; }
 .post_content a:hover { text-decoration: underline; }
-.post_content p { margin-left: 0px; line-height: 31px; position: relative; font-size: 16px; font-weight: 200; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #161d25; margin-top: 10px; margin-bottom: 18px; }
+.post_content p { margin-left: 0px; line-height: 31px; position: relative; font-size: 16px; font-weight: 200; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #161d25; margin-top: 10px; margin-bottom: 18px; word-wrap: break-word; }
 .post_content p a { text-decoration: none !important; }
 .post_content p pre { margin: 35px 0 35px 70px; background-color: #eceef1; }
 .post_content .subtopic_anchor { color: #cbd0d6; font-size: 18px; font-weight: 700; position: absolute; left: -5px; -webkit-transition-property: all; -moz-transition-property: all; -o-transition-property: all; transition-property: all; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; }
