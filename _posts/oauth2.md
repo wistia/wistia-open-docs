@@ -84,7 +84,7 @@ After the OAuth flow is finished, it would redirect to:
 
 Or if there's an error:
 
-<code class="full_width">http://localhost/myapp?account_id=35&error=access_denied&error_description=The+resource+owner+or+authorization+server+denied+the+request.</code>
+<code class="full_width">http://localhost/myapp?my_account_id=35&error=access_denied&error_description=The+resource+owner+or+authorization+server+denied+the+request.</code>
 
 
 ## Use the Authorization Code to get an Access Token
