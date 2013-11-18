@@ -32,8 +32,8 @@ your app is genuine, and that they authorize whatever permissions you request.
 3. Click the "register your app" link at the bottom. This opens the OAuth
    Applications page.
 4. Go to Actions > New Application.
-5. Enter a name, a brief description, and a callback URL (also known as a
-   Redirect URI in OAuth2 jargon) for your app. These can be changed later, so
+5. Enter a name, a brief description, and a Redirect URI (also known as a
+   Callback URL in some circles) for your app. These can be changed later, so
 don't fret too much over them. Click Save.
 6. Your app should now be visible in the list of OAuth Applications.
 7. Click the name of your app, or Edit, to get credentials and update your
@@ -64,23 +64,23 @@ the following process:
    description of your application, and will be prompted to authorize or deny
    it. If they're already authorized, skip to number 4. If they deny the app,
    skip to number 5.
-4. We will redirect back to the Redirect URI with a `code` URL param.
+4. We will redirect back to the Redirect URI with the following params: `code` (this is the authorization code), `account_id`, `account_url`, `account_name`, `contact_id`, `contact_name`, `contact_email`.
 5. We will redirect back to the Redirect URI with `error` and
    `error_description` URL params.
 
 Note that the `redirect_uri` you pass in the authorization URL must match the
-Callback URL that you configured previously. However, you are also allowed to 
+Redirect URI that you configured previously. However, you are also allowed to 
 include arbitrary query params on the `redirect_uri`. This might be desirable 
 if you want to maintain state but can't store it in the session.
 
 For example, if you want to pass an account ID in `redirect_uri`, you could 
 modify the Authorization URL to be:
 
-<code class="full_width">https://app.wistia.com/oauth/authorize?client_id=10c665d60281648f87d273488b8705bef6b4507c3473bbb1a81e397857962af5&redirect_uri=https%3A%2F%2Flocalhost%2Fmyapp%3Faccount_id%3D35&response_type=code</code>
+<code class="full_width">https://app.wistia.com/oauth/authorize?client_id=10c665d60281648f87d273488b8705bef6b4507c3473bbb1a81e397857962af5&redirect_uri=https%3A%2F%2Flocalhost%2Fmyapp%3Fmyapp_account_id%3D35&response_type=code</code>
 
 After the OAuth flow is finished, it would redirect to:
 
-<code class="full_width">https://localhost/myapp?account_id=35&code=e110c0d1043fdc139d577989bb22dad04d86992fc61cb871cd7c4ab2652762e8</code>
+<code class="full_width">https://localhost/myapp?myapp_account_id=35&code=e110c0d1043fdc139d577989bb22dad04d86992fc61cb871cd7c4ab2652762e8</code>
 
 Or if there's an error:
 
@@ -115,10 +115,10 @@ using the [oauth2 gem](https://github.com/intridea/oauth2):
     # oauth2 shorthand to perform requests:
     response = token.get('/v1/medias/myhashedid')
 
+Note: These keys are not valid and are for demonstration purposes only.
+
 If you're not using ruby, you can find an OAuth2 library for your own language, 
 or roll your own authentication using the technical details on this page.
-
-Note: These keys are not valid and are for demonstration purposes only.
 
 
 ## Perform an API request with OAuth credentials
@@ -130,8 +130,9 @@ There are three ways to authenticate with your token.
 3. Include it in the "Authorization" request header as `Bearer %s`, where `%s`
    is the token.
 
-When using the Upload API, only the first two methods (that is, via query
-params) are supported.
+Once the Upload API works with OAuth2, the Upload API will only support the 
+first two methods. That is, via the `access_token` or `bearer_token` query 
+params.
 
 
 ## Use the Refresh Token to renew your Access Token
@@ -149,7 +150,8 @@ can get an API key for a user without requiring re-authorization.
     old_access_token = OAuth2::AccessToken.new(client, refresh_token: 'thesavedrefreshtoken')
     token = old_access_token.refresh!
 
-    # Your refresh_token will also be updated, so you should save its new value:
+    # Your refresh_token will stay the same until the end-user goes through the 
+    # OAuth flow again.
     token.refresh_token
 
 Note: These keys are not valid and are for demonstration purposes only.
