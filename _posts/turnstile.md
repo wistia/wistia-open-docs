@@ -26,7 +26,7 @@ Find the *Setup an Email Provider* option.
 
 {{ "In order to access the Integrations area, you will need to be logged in as the Owner of the account." | note }}
 
-{% post_image hashed_id: "becfa8df8421970409f380d69bcb36d6cc8d8912", class: 'center' %}
+{% post_image hashed_id: "8f262b19e5294d135865586405e516fd85fbfb44", class: 'center' %}
 
 Select your provider from the list, and select <span
 class="faux_button">Configure</span>. For this example, we will be using Emma.
