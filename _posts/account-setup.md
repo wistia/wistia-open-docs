@@ -96,17 +96,16 @@ rocking a custom URL!
 
 ## Monthly Usage
 
-{% post_image hashed_id: 'e9d0506033f5d35682bfe1f741f3dc2099467de9', width: 600, class: 'center' %}
+{% post_image hashed_id: '32960b1e0af49064c948759d8d30378277258daa', class: 'center' %}
 
 To see account limits, you must be logged in as the account owner. Select
 the <span class="faux_button">Usage</span> option from your Account Dashboard.
-This will show you how much bandwidth and storage you have used, along with
-your current account limits.
+This will show you how much bandwidth you have used, along with
+your current account limits. If you have a video limit on your account, that will be
+included as well.
 
 Along the right-hand side of the Account Dashboard page, you will see usage and
 limit information within the panel labeled "Current Subscription".
-
-<div class="clear"></div>
 
 ---
 
