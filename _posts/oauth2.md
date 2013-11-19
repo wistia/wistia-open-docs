@@ -130,9 +130,8 @@ There are three ways to authenticate with your token.
 3. Include it in the "Authorization" request header as `Bearer %s`, where `%s`
    is the token.
 
-Once the Upload API works with OAuth2, the Upload API will only support the 
-first two methods. That is, via the `access_token` or `bearer_token` query 
-params.
+The Upload API will only support the first two methods. That is, via the
+`access_token` or `bearer_token` in a query param.
 
 
 ## Use the Refresh Token to renew your Access Token
@@ -208,8 +207,6 @@ A user can revoke access to your app by going to Account > My Settings.
 
 - The wistia-api ruby gem currently does __not__ support oauth. We will be
   updating this in the future.
-- The Upload API does not yet support oauth authentication. This should be
-  fixed soon.
 - Only managers and owners of an account can authorize an application at this
   time.
 - The `scope` param is currently ignored. Until the api supports it, all
