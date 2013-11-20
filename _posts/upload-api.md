@@ -101,11 +101,19 @@ The *file* parameter must be multipart-form encoded into the request body.
 ## Response Format
 
 For successful uploads, the Upload API will respond with an HTTP-200 and the
-body will contain a JSON object 
+body will contain a JSON object.
 
   * **HTTP 200** *[application/json]* Success. A JSON object with media details.
   * **HTTP 400** *[application/json]* Error. A JSON object detailing errors.
   * **HTTP 401** *[text/html]* Authorization error. Check your api_password.
+
+The most common error that all implementations should beware of is a 400 due 
+to reaching the video limit of your account. Not all accounts have video
+limits, but for those that do, you will receive a 400 response with JSON like:
+
+    {
+      "error": "This account has exceeded its video limit. Please upgrade to upload more videos."
+    }
 
 
 ### Example Response
