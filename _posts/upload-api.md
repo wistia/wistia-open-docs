@@ -55,9 +55,16 @@ The *file* parameter must be multipart-form encoded into the request body.
   <tr>
     <td>api_password</td>
     <td> 
-      <b>Required</b>.
+      <b>Required unless access_token is specified</b>.
       A 40 character hex string. This parameter can be found on the API page 
       in your Account Dashboard.
+    </td>
+  </tr>
+  <tr>
+    <td>access_token</td>
+    <td> 
+      <b>Required unless api_password is specified</b>.
+      The token you received from authenticating via [OAuth2]({{ '/oauth2' | post_url }}).
     </td>
   </tr>
   <tr>
@@ -145,9 +152,23 @@ Uploading a media file with cURL:
 
 <code class="full_width">$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/</code>
 
+In other words, we expect a multipart/form-data POST to the server, with both 
+`file` and `api_password` params.
+
+If you're using the `access_token` param with [OAuth2]({{ '/oauth2' | post_url }}),
+it should be appended to the URL as a query parameter, like
+`https://upload.wistia.com/?access_token=myaccesstoken`.
+
 Importing a media file with cURL:
 
 <code class="full_width">$ curl -i -d "api_password=&lt;YOUR_API_PASSWORD&gt;&amp;url=&lt;REMOTE_FILE_PATH&gt;" https://upload.wistia.com/</code>
+
+In other words, we expect an application/x-www-form-urlencoded POST to the
+server, with both `url` and `api_password` params.
+
+If you're using the `access_token` param with [OAuth2]({{ '/oauth2' | post_url }}),
+you can either include it as another POST param, or append it to the URL as a
+query parameter.
 
 ## Ruby Code
 
