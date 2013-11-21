@@ -63,9 +63,6 @@ our thumbnail in a MailChimp campaign*. Here's the skinny:
 
 * Copy out your MailChimp merge tag - and take special note of the `width` (you
   might have it set up as the default, `450px`)
-* Select the `html` editing mode in MailChimp - I always get my campaign
-  totally laid out with a placeholder for the thumbnail image - then I go back
-  and add it.
 * Before I paste in the merge tag, I create a `<div>` tag to wrap it in, like
   this:
 
