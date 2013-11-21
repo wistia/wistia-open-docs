@@ -8,7 +8,7 @@ post_intro: <p>Squarespace provides simple and easy tools to build great looking
 
 ## How it works
 
-This integration let's you add video to your Squarespace-powered website by just
+This integration lets you add video to your Squarespace-powered website by just
 copying and pasting the URLs of your Wistia videos into the Squarespace interface.
 
 It's almost silly to include step-by-step instructions because this whole process is so simple.
@@ -21,28 +21,6 @@ But, what the heck, let's do it!
 
 Navigate to a video in your account and copy the URL from your browsers address bar.
 I've highlighted the URL in a pink box.
-
-
-### But what if I want to add a SuperEmbed to Squarespace?
-
-{% post_image hashed_id: '9b2840e63c59322535c2f1747f02601b0c02a56e', width: 1039, height: 834 %}
-
-Well then, you're in luck! To get the full power of SuperEmbeds, you can just get the URL from the iframe embed code and use that!
-
-Head to the SuperEmbed builder for your video, customize it, then copy the embed code. It will look something like this:
-
-<pre><code class="language-markup">
-<iframe src="http://fast.wistia.net/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
-</code></pre>
-
-Now, grab the URL from the <code>src</code> parameter of your embed code.
-In this example the URL is:
-
-<pre><code class="language-markup">
-http://fast.wistia.net/embed/iframe/tsi3yi3amh?controlsVisibleOnLoad=true&playerColor=4991C4&version=v1&videoHeight=360&videoWidth=640
-</code></pre>
-
-Copy this URL, it's what you'll use in the next step.
 
 
 ## 2. Add a video block in Squarespace

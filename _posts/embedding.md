@@ -64,7 +64,7 @@ Once you have your settings dialed in, you can *copy* the embed code at the top.
 
 ### Inline Embed Advanced Options
 
-{% post_image hashed_id: '0c275bab1a1a1eca9c299ed00c1ea05565fe0ee4', class: 'center' %}
+{% post_image hashed_id: 'ea30ecdbaf3536db58a046ec8b7805ceabcef452', class: 'center' %}
 
 Two Inline Embed advanced options:
 
@@ -73,9 +73,7 @@ Two Inline Embed advanced options:
   to your site/blog post markup, and generating an embed code (hence it doesn't
   break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
   Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
-* **Use SSL:** If your video transmits data over SSL (i.e. hint: it has the 
-  `https` prefix on the URL), you should use this option to prevent *unsafe
-  content* errors.
+* **Use Videofoam:** If your site is built to be responsive, your videos should be too! Enabling this setting will make your videos responsive.
 
 ## Popover Embed
 
@@ -103,7 +101,7 @@ your site.
 
 ### Popover Embed Advanced Options
 
-{% post_image hashed_id: '0c275bab1a1a1eca9c299ed00c1ea05565fe0ee4', class: 'center' %}
+{% post_image hashed_id: '7b8528b966fc9d722fe0452b9eafc1bd47374a0b', class: 'center' %}
 
 Two Popover Embed advanced options:
 
@@ -112,9 +110,6 @@ Two Popover Embed advanced options:
   to your site/blog post markup, and generating an embed code (hence it doesn't
   break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
   Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
-* **Use SSL:** If your video transmits data over SSL (i.e. hint: it has the 
-  `https` prefix on the URL), you should use this option to prevent *unsafe
-  content* errors.
 
 ## Link in Email Campaign & Social Sharing
 
