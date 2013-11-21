@@ -34,7 +34,7 @@ to change that, check out
 
 ## Tips for Using WordPress
 
-*  When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code.
+*  When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code. If you switch from HTML to Visual mode, it will can add formatting tags around your oEmbed, which will cause it to break. Be careful of that!
 *  If you have larger resolution videos, and they are appearing smaller or squished, access the WordPress admin control panel (Settings -> Media -> Maximum Video Embed Size) and set the max to the largest size of your video ('no limit' setting doesn't work, must be actual size).
 
 ## Styling Your Embed in WordPress

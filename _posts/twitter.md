@@ -85,3 +85,5 @@ Christmas morning, except instead of presents you get your video content in your
 Twitter feed.
 
 {% post_image hashed_id: 'a2255839136f83fdde7f87dc924e5361404d8491', class: 'center' %}
+
+{{ "The inline video feature on Twitter will not work for CNAMEd accounts unless you get your own Twitter Card, which you can do [here.](https://dev.twitter.com/docs/cards)" | note }}
