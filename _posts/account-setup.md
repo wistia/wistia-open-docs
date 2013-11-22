@@ -121,6 +121,7 @@ bring up a dialog box showing a list of all the receipts for your transactions.
 ---
 
 ## Adding & Removing Managers
+
 From your *Account Dashboard*, click the "Add / remove managers" button on the
 Accounts page. A dialog will appear.  To add managers, enter the new manager's
 email address into the text box and click <span class="faux_button">Add</span>.
@@ -128,3 +129,19 @@ email address into the text box and click <span class="faux_button">Add</span>.
 To remove existing managers, click <span class="faux_button">Remove</span>.
 
 {% post_image hashed_id: '1ac3c146ef56721d5e8718229243ba6c66158cf3', width: 600, class: 'center' %}
+
+---
+
+## Transferring Ownership of Your Account
+
+If you need to set someone else up as the owner of your account, the first step
+is to [add them as a manager](#adding__removing_managers).
+
+Once the new owner is a manager (or maybe they already were, you are so sneaky
+efficient!), select the *Settings* area in your *Account Dashboard*.
+
+{% post_image hashed_id: '5c77e94fb77ee33eb1b25afcc138ef6fec82930a', class: 'center' %}
+
+Select the new owner from the *Account Owner* menu, and then <span
+class='faux_button'>SAVE SETTINGS</span>. Ownership will be transferred
+immediately.
