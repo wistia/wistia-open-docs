@@ -38,6 +38,7 @@ style option, you can override the default sizing.
  errorColor       | string | The hex color of the error text that can displayed. Yellow by default.                               
  exampleText      | string | The text that is displayed when the input field is empty.                                            
  style            | object | The styles to be applied to the root turnstile element.                                              
+ time             | string | The point in the video when Turnstile displays. A value of "before" shows Turnstile before the video starts. "end" shows it at the end. You can also supply a time in seconds (e.g. "130") and it will appear when the viewer reaches that point in the video (or tries to skip past that point).
  topText          | string | The text displayed above the input field. Usually a request to enter the email.                      
  version          | string | Must be "v1".                                                                                        
 
