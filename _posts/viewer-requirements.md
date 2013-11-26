@@ -33,7 +33,7 @@ We also work with all of the major browsers and versions Internet Explorer
 (7,8, and 9), Firefox, Safari, Chrome, Opera, etc.
 
 <div class='browser_images'>
-  <img src='https://raw.github.com/paulirish/browser-logos/master/ie9-10/ie9-10_128x128.png' width="80px" />
+  <img src='https://raw.github.com/paulirish/browser-logos/master/ie/ie_128x128.png' width="80px" />
   <img src='https://raw.github.com/paulirish/browser-logos/master/safari/safari_128x128.png' width="80px" />
   <img src='https://raw.github.com/paulirish/browser-logos/master/firefox/firefox_128x128.png' width="80px" />
   <img src='https://raw.github.com/paulirish/browser-logos/master/opera/opera_128x128.png' width="80px" />
