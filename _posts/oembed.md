@@ -53,7 +53,7 @@ enhancements! Perhaps this:
 Get the embed code and some information for a video at 
 `http://home.wistia.com/medias/e4a27b971d` in JSON format:
 
-<code class="full_width">curl "http://fast.wistia.com/oembed?url=http://home.wistia.com/medias/e4a27b971d"</code>
+<code class="full_width">curl "http://fast.wistia.com/oembed?url=http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d"</code>
 
 This returns:
 
@@ -125,7 +125,7 @@ We'll URL-encode this request:
 
 And now use the oEmbed endpoint:
 
-<code class="full_width">curl "http://fast.wistia.com/oembed?url=http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"</code>
+<code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"</code>
 
 This returns:
 
