@@ -11,51 +11,54 @@ footer: 'for_developers'
 <script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1%2Csocialbar-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("4d8229898d", {
-  version: "v1",
-  videoWidth: 660,
-  videoHeight: 371,
   controlsVisibleOnLoad: true,
   playerColor: "4991C4"
-});
-Wistia.plugin.socialbar(wistiaEmbed, {
-  version: "v1",
-  buttons: "embed-email-videoStats-twitter-tumblr-facebook",
-  logo: true,
-  tweetText: "",
-  badgeUrl: "http://wistia.com",
-  badgeImage: "http://static.wistia.com/images/badges/wistia_100x96_black.png"
+  plugin: {
+    "socialbar-v1": {
+      buttons: "embed-email-videoStats-twitter-tumblr-facebook",
+      logo: true,
+      tweetText: "",
+      badgeUrl: "http://wistia.com",
+      badgeImage: "http://static.wistia.com/images/badges/wistia_100x96_black.png"
+    }
+  }
 });
 </script>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/embed/medias/4d8229898d/metadata.js"></script>
+<script charset="ISO-8859-1" src="//fast.wistia.net/embed/medias/4d8229898d/metadata.js"></script>
 
 ## Socialbar Options
 
- Option Name | Type    | Description                                                                                   
- ----------- | ----    | ----------------------------------------------------------------------------------------------
- badgeImg    | string  | The src attribute of the logo image.                                                           
- badgeUrl    | string  | The URL that the logo launches when you click on it.                                           
- buttons     | string  | Dash-delimited list of buttons to display.                                                     
- logo        | boolean | When true, float the badge to the right side of the socialbar.                                 
- pageTitle   | string  | The specific pageTitle to be promoted when liked or shared.                                    
- pageUrl     | string  | The specific pageUrl to be promoted when liked or shared.                                      
- position    | string  | The grid location of the Social Bar. Default value is "below", but "above" also acceptable.    
- tweetText   | string  | The text that will be tweeted with the link. Defaults to the name of the video in Wistia.      
- version     | string  | The version of the socialbar to use. Must be "v1".                                             
+ Option Name        | Type      | Description
+ -----------        | ----      | ----------------------------------------------------------------------------------------------
+ badgeImg           | string    | The src attribute of the logo image.
+ badgeUrl           | string    | The URL that the logo launches when you click on it.
+ buttons            | string    | Dash-delimited list of buttons to display.
+ downloadType       | string    | If the download button is available, this determines the quality of video that is downloaded. Possible values are "sd_mp4", "hd_mp4", and "original". "hd_mp4" will only be used if it exists for the video. If it does not, it falls back to "sd_mp4".
+ height             | integer   | The height of the socialbar. Not required, but simplifies resizing operations. Defaults to 23. The total height of the socialbar is always this value plus 5 (for margin and padding).
+ ignoreQueryParams  | boolean   | If pageUrl is not specified, this determines if we should include the query params in the pageUrl. Defaults to false.
+ includeLinkback    | boolean   | When set to true, embed codes produced by the Embed button will also include a link 
+ logo               | boolean   | When true, float the badge to the right side of the socialbar.
+ on                 | boolean   | Whether to show the social bar. Default is true. Can be set to false to override Customize options.
+ pageTitle          | string    | The specific pageTitle to be promoted when liked or shared.
+ pageUrl            | string    | The specific pageUrl to be promoted when liked or shared.
+ position           | string    | The grid location of the Social Bar. Default value is "below", but "above" is also acceptable.
+ tweetText          | string    | The text that will be tweeted with the link. Defaults to the title of the page. The keyword Substituteions `{page_title}` and `{video_name}` can be used in the tweet text.
 
-Button order can be changed. Possible buttons are:
+Possible buttons are:
 
-
-*  digg
-*  email
-*  embed
-*  facebook
-*  googlePlus
-*  linkedIn
-*  reddit
-*  stumbleUpon
-*  tumblr
-*  twitter
-*  videoStats
+* playCount
+* embed
+* email
+* videoStats
+* download
+* twitter
+* reddit
+* tumblr
+* stumbleUpon
+* linkedIn
+* googlePlus
+* facebook
+* wistia
 
 ## iframe Embed Example
 
