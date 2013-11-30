@@ -363,3 +363,10 @@ allowtransparency="true" frameborder="0" scrolling="no"
 class="wistia_embed" name="wistia_embed" width="640"
 height="360"></iframe>
 {% endcodeblock %}
+
+
+## Embedding Options
+
+If you just want to set some different options for your embed code, check out
+what's available in our
+[Embedding Options Documentation]({{ '/embed-options' | post_url }}).
