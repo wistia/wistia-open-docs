@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Postroll Parameters
+title: Post-Roll Call to Action Parameters
 description: Need to find the parameters for the post roll call to action feature? Look no further, they're all here!
 footer: 'for_developers'
 ---
@@ -37,10 +37,11 @@ wistiaEmbed = Wistia.embed("4d8229898d", {
  autoSize           | boolean | When true, sets a font-size and line-height for the call to action based on the height of the video. Default is false.
  backgroundOpacity  | float   | A decimal between 0 and 1 to set the overall opacity of the background. Default is 0.91.
  image              | string  | The image src for the call to action.
- link               | string  | The destination URL when you click the postroll.
+ link               | string  | The destination URL when you click the post-roll.
+ on                 | boolean | Whether to show the post-roll. Default is true. Can be set to false to override Customize options.
  raw                | string  | The raw HTML for the call to action.
  rewatch            | boolean | Whether to show "Rewatch" button in lower left. Defaults to true for text calls to action, false for image or HTML.
- style              | object  | The styles to be applied to the root postroll element.
+ style              | object  | The styles to be applied to the root post-roll element.
  text               | string  | The text for the call to action.
 
 The link param can be used with either text or image calls to action. If a raw param 
@@ -68,7 +69,6 @@ Our links use <span class="code">target="\_blank"</span> to pop open a new windo
 wistiaEmbed = Wistia.embed("abcde12345", {
   plugin: {
     "postRoll-v1": {
-      version: "v1"
       text: "You made it to the end of my video! Now check out my product."
       link: "http://myawesomeproduct.com/awesome"
       style: {
