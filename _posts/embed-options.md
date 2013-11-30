@@ -60,7 +60,7 @@ Here is what the embed code should look like:
 
 {% codeblock example_api_embed.html %}
 <div id="wistia_g5pnf59ala" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script> wistiaEmbed = Wistia.embed("g5pnf59ala"); </script>
 {% endcodeblock %}
 
@@ -86,14 +86,15 @@ as a query string, like `?videoFoam=true`:
 
 {% codeblock example_iframe_embed.html %}
 <iframe src="http://fast.wistia.net/embed/iframe/g5pnf59ala?videoFoam=true"
-  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"> </iframe>
+  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 {% endcodeblock %}
 
 ## Plugin Options
 
-Our plugins (like the social bar, turnstile, and captions) have an array of options as well! Check them out:
+Our plugins (like the social bar, turnstile, and captions) have an array of
+options as well! Check them out:
 
-*  [Socialbar]({{ '/socialbar-params' | post_url }})
+*  [Social Bar]({{ '/socialbar-params' | post_url }})
 *  [Post-Roll Call To Action]({{ '/postroll-params' | post_url }})
 *  [Interactive Transcript]({{ '/transcript-params' | post_url }})
 *  [Turnstile Email Capturing]({{ '/turnstile-params' | post_url }})
@@ -109,7 +110,7 @@ First, here is what the embed code should look like:
 
 {% codeblock example_api_embed.html %}
 <div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.com/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script> wistiaEmbed = Wistia.embed("abcde12345"); </script>
 {% endcodeblock %}
 

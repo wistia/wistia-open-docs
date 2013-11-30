@@ -85,7 +85,7 @@ For all the fine details about the options supported, see the official
 Our endpoint supports all the options detailed at oembed.com.
 
 The required url parameter that's passed in supports all the options detailed 
-in the [Player API]({{ '/player-api' | post_url }}).
+in the [Embed Options Documentation]({{ '/embed-options' | post_url }}).
 
 We also accept some additional parameters that can change the output of the 
 embed code:
@@ -134,7 +134,7 @@ This returns:
 {
   "version":"1.0",
   "type":"video",
-  "html":"<div id=\"wistia_e4a27b971d\" class=\"wistia_embed\" style=\"width:640px;height:360px;\" data-video-width=\"640\" data-video-height=\"360\">&nbsp;</div>\n<script charset=\"ISO-8859-1\" src=\"http://fast.wistia.net/static/concat/E-v1.js\"></script>\n<script>\noEmbedVideo = Wistia.embed(\"e4a27b971d\", {\n  version: \"v1\",\n  videoWidth: 640,\n  videoHeight: 360\n});\n</script>",
+  "html":"<div id=\"wistia_e4a27b971d\" class=\"wistia_embed\" style=\"width:640px;height:360px;\" data-video-width=\"640\" data-video-height=\"360\">&nbsp;</div>\n<script charset=\"ISO-8859-1\" src=\"//fast.wistia.com/assets/external/E-v1.js\"></script>\n<script>\noEmbedVideo = Wistia.embed(\"e4a27b971d\", {\n  version: \"v1\",\n  videoWidth: 640,\n  videoHeight: 360\n});\n</script>",
   "width":640,
   "height":360,
   "provider_name":"Wistia, Inc.",

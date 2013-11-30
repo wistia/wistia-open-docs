@@ -159,7 +159,7 @@ In this example, you want the video to skip ahead a certain amount of time when 
 
 {% codeblock wistia_js.js %}
 <div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("29b0fbf547", {
   version: "v1",
@@ -264,7 +264,7 @@ At this time, the `type` of conversion can be "pre-roll-email", "mid-roll-email"
 
 {% codeblock wistia_js.js %}
 <div id="wistia_tlb0v41zjd" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("tlb0v41zjd", {
   version: "v1",
