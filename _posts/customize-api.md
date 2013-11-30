@@ -208,7 +208,7 @@ is an empty hash.
 {% endcodeblock %}
 
 
-### Embedding Options
+## Embedding Options
 
 For a list of available embedding options to be used with the Customize API,
 check our [Embedding Options Documentation]({{ '/embed-options' | post_url }}).

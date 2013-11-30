@@ -269,7 +269,7 @@ The good news is you can easily use the
 [oEmbed approach]('#oembed_approach') to generate an SEO embed for you.
 
 
-### Embedding Options
+## Embedding Options
 
 For a list of available embedding options to be used with the Customize API,
 check our [Embedding Options Documentation]({{ '/embed-options' | post_url }}).
