@@ -64,9 +64,9 @@ Possible buttons are:
 
 {% codeblock socialbar-params.html %}
 <iframe src="http://fast.wistia.net/embed/iframe/abcde12345
-?videoWidth=640&videoHeight=360&plugin[socialbar][version]=v1
-&plugin[socialbar][buttons]=embed-twitter-facebook&plugin[socialbar][pageUrl]=
-http://wistia.com&pageTitle=The best in online video hosting." 
+?videoWidth=640&videoHeight=360&plugin%5Bsocialbar%5D%5Bversion%5D=v1
+&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook&plugin%5Bsocialbar%5D%5BpageUrl%5D=
+http%3A%2F%2Fwistia.com&pageTitle=The%20best%20in%20online%20video%20hosting." 
 allowtransparency="true" frameborder="0" scrolling="no" 
 class="wistia_embed" name="wistia_embed" width="640" height="387">
 </iframe>
@@ -75,19 +75,17 @@ class="wistia_embed" name="wistia_embed" width="640" height="387">
 ## API Embed Example
 
 {% codeblock socialbar-params.html %}
-<div id="wistia_abcde12345" style="width:640px;height;387px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script src="http://fast.wistia.net/static/E-v1.js"></script>
-<script src="http://fast.wistia.net/static/concat/E-v1-gridify,socialbar-v1.js"></script>
+<div id="wistia_4d8229898d" class="wistia_embed" style="width:640px;height;387px;">&nbsp;</div>
+<script src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
-  wistiaEmbed = Wistia.embed("abcde12345", {
-    videoWidth: 640,
-    videoHeight: 360
-  });
-  Wistia.plugin.socialbar(wistiaEmbed, {
-    version: "v1"
-    buttons: "embed-twitter-facebook",
-    pageUrl: "http://wistia.com",
-    pageTitle: "The best in online video hosting."
-  });
+wistiaEmbed = Wistia.embed("4d8229898d", {
+  plugin: {
+    "socialbar-v1": {
+      buttons: "embed-twitter-facebook",
+      pageUrl: "http://wistia.com",
+      pageTitle: "The best in online video hosting."
+    }
+  }
+});
 </script>
 {% endcodeblock %}
