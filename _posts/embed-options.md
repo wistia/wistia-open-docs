@@ -14,6 +14,10 @@ embeds!
 
 ## Embed Options List
 
+These options are for use with both the
+[Customize API]({{ '/customize-api' | post_url }}) and
+[Embed API]({{ '/embed-api' | post_url }}).
+
 Option Name           | Type    | Description
 -----------           | ----    | -----------
 autoPlay              | boolean | flash/html5 only. Doesn't work on mobile. When true, the video plays as soon as it's ready.
@@ -42,10 +46,6 @@ videoHeight           | integer | The original height of the video.
 volume                | float   | Set a starting volume for the video on load.
 volumeControl         | boolean | Show volume control. Default is false.
 wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
-
-These options are for use with both the
-[Customize API]({{ '/customize-api' | post_url }}) and
-[Embed API]({{ '/embed-api' | post_url }}).
 
 
 ## Using Embed Options
