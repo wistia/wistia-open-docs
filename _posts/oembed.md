@@ -99,7 +99,6 @@ height | integer | The requested height of the video embed. Defaults to the nati
 handle | string | Only applicable to "api", "seo", and "playlist_api" embed types. Sets the javascript handle. Default is "wistiaEmbed" for medias and "wistiaPlaylist" for playlists.
 popoverHeight | integer | Only applicable to "popover" embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.
 popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
-ssl | boolean | Determines whether the embed code should use https. Defaults to false.
 
 If given a `width`, `height`, `maxwidth`, or `maxheight` parameter 
 (or any combination of those), the other dimensions in the resulting embed 
