@@ -11,8 +11,6 @@ footer: 'for_developers'
 <script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1%2Csocialbar-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("4d8229898d", {
-  controlsVisibleOnLoad: true,
-  playerColor: "4991C4"
   plugin: {
     "socialbar-v1": {
       buttons: "embed-email-videoStats-twitter-tumblr-facebook",
@@ -32,7 +30,7 @@ wistiaEmbed = Wistia.embed("4d8229898d", {
  -----------        | ----      | ----------------------------------------------------------------------------------------------
  badgeImg           | string    | The src attribute of the logo image.
  badgeUrl           | string    | The URL that the logo launches when you click on it.
- buttons            | string    | Dash-delimited list of buttons to display.
+ buttons            | string    | Dash-delimited list of buttons to display, e.g. "playCount-embed-facebook-twitter".
  downloadType       | string    | If the download button is available, this determines the quality of video that is downloaded. Possible values are "sd_mp4", "hd_mp4", and "original". "hd_mp4" will only be used if it exists for the video. If it does not, it falls back to "sd_mp4".
  height             | integer   | The height of the socialbar. Not required, but simplifies resizing operations. Defaults to 23. The total height of the socialbar is always this value plus 5 (for margin and padding).
  ignoreQueryParams  | boolean   | If pageUrl is not specified, this determines if we should include the query params in the pageUrl. Defaults to false.
