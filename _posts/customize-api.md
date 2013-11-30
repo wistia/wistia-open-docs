@@ -206,3 +206,9 @@ is an empty hash.
 {% codeblock example_json_response.json %}
 {}
 {% endcodeblock %}
+
+
+### Embedding Options
+
+For a list of available embedding options to be used with the Customize API,
+check our [Embedding Options Documentation]({{ '/embed-options' | post_url }}).

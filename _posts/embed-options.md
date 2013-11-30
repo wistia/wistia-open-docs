@@ -43,6 +43,10 @@ volume                | float   | Set a starting volume for the video on load.
 volumeControl         | boolean | Show volume control. Default is false.
 wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
 
+These options are for use with both the
+[Customize API]({{ '/customize-api' | post_url }}) and
+[Embed API]({{ '/embed-api' | post_url }}).
+
 
 ## Using Embed Options
 
