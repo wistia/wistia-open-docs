@@ -9,7 +9,7 @@ footer: 'for_developers'
 ## Transcript Example:
 
 <div class="video_embed">
-  <iframe src="//fast.wistia.net/embed/iframe/e9daad32af?plugin%5Btranscript%5D%5Bversion%5D=v2" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="660" height="571"></iframe>
+  <iframe src="//fast.wistia.net/embed/iframe/e9daad32af?plugin%5Btranscript-v2%5D%5Bposition%5D=below" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="660" height="571"></iframe>
 </div>
 
 ## Transcript Options
@@ -22,7 +22,7 @@ footer: 'for_developers'
  container      | string  | The container ID where we will place the interactive transcript. Only useful for API embed.
  height         | integer | The height of the interactive transcript. Defaults to 200px if below the video, or the height of the video if on the side.
  collapseOnload | boolean | Determines whether the transcript starts out collapsed. Defaults to false.
- position       | string  | The grid location where the transcript should live. Can be above/below/left/right.
+ position       | string  | The grid location where the transcript should live. Can be above/below/left/right. Default is "below".
  width          | integer | The width of the interactive transcript. Defaults to the width of the embed if below the video, or 275px if on the side.
 
 Note that, for <span class="code">onloadCollapse</span> to work, <span class="code">canCollapse</span> must also be true.
