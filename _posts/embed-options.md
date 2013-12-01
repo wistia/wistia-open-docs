@@ -96,8 +96,9 @@ options as well! Check them out:
 
 *  [Social Bar]({{ '/socialbar-params' | post_url }})
 *  [Post-Roll Call To Action]({{ '/postroll-params' | post_url }})
-*  [Interactive Transcript]({{ '/transcript-params' | post_url }})
+*  [Captions]({{ '/captions-params' | post_url }})
 *  [Turnstile Email Capturing]({{ '/turnstile-params' | post_url }})
+*  [Interactive Transcript]({{ '/transcript-params' | post_url }})
 
 ## Using Plugin Options
 
