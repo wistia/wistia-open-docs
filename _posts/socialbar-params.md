@@ -13,7 +13,7 @@ footer: 'for_developers'
 wistiaEmbed = Wistia.embed("4d8229898d", {
   plugin: {
     "socialbar-v1": {
-      buttons: "embed-email-videoStats-twitter-tumblr-facebook",
+      buttons: "playCount-embed-email-videoStats-twitter-tumblr-facebook",
       logo: true,
       tweetText: "",
       badgeUrl: "http://wistia.com",
