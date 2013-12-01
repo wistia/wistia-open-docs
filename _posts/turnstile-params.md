@@ -22,9 +22,15 @@ wistiaEmbed = Wistia.embed("4d8229898d", {
 });
 /*]]*/</script>
 
-Turnstile slides an extremely simple form over the video as soon as it's ready to play. The sizing of the top 
-and bottom text is determined by the height of the video by default. If you specify the fontSize property in the 
-style option, you can override the default sizing.
+At the beginning, middle, or end Turnstile slides an extremely simple form over
+the video. By default, he sizing of the top and bottom text is determined by
+the height of the video. If you specify the fontSize property in the style
+option, you can override the default sizing.
+
+Turnstile also tries to avoid asking for the viewers email if it has already
+been collected. It does this by saving the email in local storage for the
+specific `location.href` where it was collected. You can turn off this
+functionality by setting `alwaysShow` to false.
 
 ## Turnstile Options
 
