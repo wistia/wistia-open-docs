@@ -9,7 +9,7 @@ footer: 'for_developers'
 ## Captions Example:
 
 <div class="video_embed">
-  <iframe src="//fast.wistia.net/embed/iframe/e9daad32af?plugin%5Bcaptions-v1%5D%5Bon%5D=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="660" height="571" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+  <iframe src="//fast.wistia.net/embed/iframe/e9daad32af?plugin%5Bcaptions-v1%5D%5Bon%5D=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="660" height="371" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 </div>
 
 ## Captions Options
