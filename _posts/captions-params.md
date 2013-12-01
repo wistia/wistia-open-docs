@@ -14,6 +14,9 @@ footer: 'for_developers'
 
 ## Captions Options
 
+If you want to programmatically set the text for the captions of a video, check
+out the [Captions API]({{ '/data-api#captions' | post_url }})
+
  Option Name    | Type    | Description
  -----------    | ----    | ----------------------------------------------------------------------------------------------------------------------------
  onByDefault    | boolean | Determines whether captions should be visible by default, or if they need to click the CC button first to see them. Defaults to false--they need to click the CC button, which is visible when the mouse is over the video.
