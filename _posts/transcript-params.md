@@ -31,8 +31,8 @@ Note that, for <span class="code">onloadCollapse</span> to work, <span class="co
 
 {% codeblock transcript-params.html %}
 <iframe src="//fast.wistia.net/embed/iframe/abcde12345
-  ?plugin%5Btranscript%5D%5Bposition%5D=below&plugin%5Btranscript%5D%5Bheight%5D=300
-  &plugin%5Btranscript%5D%5BcanDownload%5D=true" 
+  ?plugin%5Btranscript-v2%5D%5Bposition%5D=below&plugin%5Btranscript-v2%5D%5Bheight%5D=300
+  &plugin%5Btranscript-v2%5D%5BcanDownload%5D=true" 
   allowtransparency="true" frameborder="0" scrolling="no" 
   class="wistia_embed" name="wistia_embed" width="640" height="560">
 </iframe>
@@ -42,7 +42,7 @@ Note that, for <span class="code">onloadCollapse</span> to work, <span class="co
 
 {% codeblock transcript-params.html %}
 <div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/concat/E-v1.js"></script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
   wistiaEmbed = Wistia.embed("abcde12345", {
     plugin: {
