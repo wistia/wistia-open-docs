@@ -109,9 +109,10 @@ should have a [valid DOCTYPE](http://www.totalvalidator.com/support/doctypes.htm
 
 ## Pure CSS Approach
 
-A few years ago, [A List Apart](http://alistapart.com/) came up with an
-approach for resizing using purely CSS. With some modifications, it can be used
-with Wistia embeds too.
+A few years ago, [A List Apart](http://alistapart.com/) came up with [an
+approach for resizing videos using CSS
+alone](http://alistapart.com/article/creating-intrinsic-ratios-for-video). With
+some modifications, it can be used with Wistia embeds too.
 
     <style>
     /* #containingBlock is for demonstration purposes only */
