@@ -79,8 +79,7 @@ world of hurt.
     </div>
 
 The CSS rule will affect many elements inside the fluidVideo wrapper--not just
-video wrappers. Changing their dimensions like this will definitely cause
-issues.
+a single div. Changing their dimensions like this will definitely cause issues.
 
 ### Common Problem: Your framework injects markup around object/embed tags.
 
