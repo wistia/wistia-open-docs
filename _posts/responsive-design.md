@@ -234,8 +234,7 @@ the aspect ratio of your video. To get this value for any video, you can do:
 
 In the withSocialBar class, we use `padding-top` to adjust the height of the
 embed for any elements that are in the container, but not part of the video
-itself.  We could also add a withTranscript class that with
-`padding-top: 200px`.
+itself.  We could also add a withTranscript class with `padding-top: 200px`.
 
 __One downside__: You need to manually remove the width and height styles on API
 and SEO embeds for this to work properly.
