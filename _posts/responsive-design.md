@@ -81,7 +81,7 @@ world of hurt.
 The CSS rule will affect many elements inside the fluidVideo wrapper--not just
 a single div. Changing their dimensions like this will definitely cause issues.
 
-### Common Problem: Your framework injects markup around object/embed tags.
+### Common Problem: Your framework injects markup around object/embed/video elements.
 
 Some frameworks try to automate the "Pure CSS" solution by injecting fluidVideo
 wrappers (or something similar) around iframe, object, embed, and video
