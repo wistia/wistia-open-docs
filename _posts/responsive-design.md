@@ -13,6 +13,11 @@ easiest solution if you can get away with it. It uses javascript and a very
 simple strategy to make any kind of Wistia embed--iframe, API, or
 popover--responsive.
 
+To see how to turn Video Foam on for a single embed at a time, check our
+[Docs on Video Foam]({{ /video-foam | post_url }}). Or if you want to enable it
+for all the videos on your website, check out the
+[Video Foam Lab](http://wistia.com/labs/videofoam/).
+
 ### Here's how it works.
 
 When video foam is turned on, we look at the parent element of the Wistia video
