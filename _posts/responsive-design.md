@@ -217,10 +217,10 @@ and SEO embeds for this to work properly.
 
 ## Player API
 
-If neither of the above solutions will work for you, you could also use our
-[Player API]({{ '/player-api' | post_url }}) to change the width and height of
-the video. For example, maybe you want to match the width of the video to
-another element on the page.
+If neither of the above solutions will work for you, you could use our [Player
+API]({{ '/player-api' | post_url }}) to change the width and height of the
+video. For example, maybe you want to match the width of the video to another
+element on the page.
 
 This example uses jQuery.
 
@@ -243,9 +243,9 @@ This example uses jQuery.
     matchWidthToOtherElement();
     </script>
 
-The solutions above need to watch for size changes to match, which means there 
-can be a half second delay before the video actually resizes. But the Player
-API has the advantage of resizing the video with no delay. 
+The previous solutions need to watch for size changes to match, which means
+there can be a half second delay before the video actually resizes. But the
+Player API has the advantage of resizing the video with no delay. 
 
 
 ## What about playlists?
