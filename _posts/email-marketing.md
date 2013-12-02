@@ -156,7 +156,7 @@ This is the link that can be used in your email marketing campaign.  Your finish
 
 ---
 
-### Results
+### The Results
 
 When someone clicks the dynamic link in your email campaign, they will be taken 
 to the page on your site containing the embedded video.  Wistia will capture 
