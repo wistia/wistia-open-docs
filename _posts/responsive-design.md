@@ -211,7 +211,7 @@ embed for any elements that are in the container, but not part of the video
 itself.  We could also add a withTranscript class that with
 `padding-top: 200px`.
 
-One downside: You need to manually remove the width and height styles on API
+__One downside__: You need to manually remove the width and height styles on API
 and SEO embeds for this to work properly.
 
 
