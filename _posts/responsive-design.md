@@ -45,6 +45,11 @@ CSS rules meant for other responsive solutions can conflict with our own.
 
 BAD:
 
+
+In this example, a "fluidVideo" wrapper tries to make the embed code responsive
+by overriding its width and height. In so doing, it overrides the width and
+height set by Video Foam too.
+
     <style>
       .fluidVideo iframe, .fluidVideo object, .fluidVideo embed {
         height: auto !important;
@@ -55,12 +60,34 @@ BAD:
       ... wistia embed ...
     </div>
 
-In this example, a "fluidVideo" wrapper tries to make the embed code responsive
-by overriding its width and height. In so doing, it overrides the width and
-height set by Video Foam too.
+This styles will override the responsive widths and heights we set on the video
+elements.
 
-The only way to prevent this issue is to change or remove the conflicting
-style.
+BAD:
+
+In this example, if you're using an API or SEO embed code, you're in for a
+world of hurt.
+
+    <style>
+      .fluidVideo div {
+        height: 100% !important;
+        width: 100% !important;
+      }
+    </style>
+    <div class="fluidVideo">
+      ... wistia embed ...
+    </div>
+
+The CSS rule will affect many elements inside the fluidVideo wrapper--not just
+video wrappers. Changing their dimensions like this will definitely cause
+issues.
+
+### Common Problem: Your framework injects markup around object/embed tags.
+
+Some frameworks try to automate the "Pure CSS" solution by injecting fluidVideo
+wrappers (or something similar) around iframe, object, embed, and video
+elements. But Wistia videos have more complex markup than a wrapper and a video
+element, and changing the markup will have a negative effect on Video Foam.
 
 ### Common Problem: The parent element's width is dependent on its contents.
 
