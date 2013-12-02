@@ -268,9 +268,9 @@ This example uses jQuery.
     matchWidthToOtherElement();
     </script>
 
-The previous solutions need to watch for size changes to match, which means
-there can be a half second delay before the video actually resizes. But the
-Player API has the advantage of resizing the video with no delay. 
+The previous solutions need to poll for size changes, which means there can be
+a half second delay before the video actually resizes. But the Player API has
+the advantage of resizing the video with no delay. 
 
 
 ## What about playlists?
