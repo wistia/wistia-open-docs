@@ -89,7 +89,7 @@ wrappers (or something similar) around iframe, object, embed, and video
 elements. But Wistia videos have more complex markup than a wrapper and a video
 element, and changing the markup will have a negative effect on Video Foam.
 
-### Common Problem: The parent element's width is dependent on its contents.
+### Common Problem: The parent element's width is dependent on its own content.
 
 Take these examples.
 
