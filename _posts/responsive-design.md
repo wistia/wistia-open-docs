@@ -217,8 +217,9 @@ and SEO embeds for this to work properly.
 ## Player API
 
 If neither of the above solutions will work for you, you could also use our
-Player API to change the width and height of the video. For example, maybe you
-want to match the width of the video to another element on the page.
+[Player API]({{ '/player-api' | post_url }}) to change the width and height of
+the video. For example, maybe you want to match the width of the video to
+another element on the page.
 
 This example uses jQuery.
 
@@ -261,7 +262,7 @@ same styles and HTML patterns as single videos.
 
 ### Playlist API
 
-The Playlist API also supports changing the video's width and height, though
+The [Playlist API]({{ '/playlist-api' | post_url }}) also supports changing the video's width and height, though
 it does not yet support the `constrain` option.
 
 To change the width and constrain the height, you can do the following:
