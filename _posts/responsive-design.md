@@ -60,7 +60,7 @@ height set by Video Foam too.
       ... wistia embed ...
     </div>
 
-This styles will override the responsive widths and heights we set on the video
+This style will override the responsive widths and heights we set on the video
 elements.
 
 BAD:
