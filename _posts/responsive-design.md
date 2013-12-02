@@ -294,8 +294,8 @@ it does not yet support the `constrain` option.
 To change the width and constrain the height, you can do the following:
 
     wistiaPlaylist.hasData(function() {
-      aspectRatio = wistiaPlaylist.videoWidth() / wistiaPlaylist.videoHeight()
+      aspectRatio = wistiaPlaylist.videoWidth() / wistiaPlaylist.videoHeight();
       newWidth = 700;
       newHeight = newWidth / aspectRatio;
-      wistiaPlaylist.videoWidth(newWidth).videoHeight(newHeight)
+      wistiaPlaylist.videoWidth(newWidth).videoHeight(newHeight);
     });
