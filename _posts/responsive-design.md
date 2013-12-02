@@ -28,7 +28,7 @@ correct aspect ratio.
 In determining the new size, we also account for things outside the video, like
 the Social Bar. We try to always avoid the dreaded black bars. (Known in the
 film industry as
-[letterboxing](http://en.wikipedia.org/wiki/Letterboxing_(filming).)
+[letterboxing](http://en.wikipedia.org/wiki/Letterboxing_(filming)).)
 
 ### Cool Trick: Use a wrapper to set a min-width or max-width.
 
