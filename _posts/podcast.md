@@ -22,7 +22,7 @@ First we'll need to choose a Project to use as the Podcast.  Perhaps you'll want
 
 {% post_image hashed_id: '549c5aad282c6ba69ee3d4d78b85ecceee9cb61d', class: 'center' %}
 
-The second step is to find the RSS feed for your Playlist.  Inside of the Project you'd like to use as a podcast, select "</> Embed Playlist" from under the green "Project Actions" drop-down menu.
+The second step is to find the RSS feed for your Playlist.  Inside of the Project you'd like to use as a podcast, select "</> Get Playlist" from under the blue "Project Actions" drop-down menu.
 
 The "Embed Playlist" screen includes the embed code for your Playlist.  Copy all of this code and paste it into a text editor (like Text Edit, vi, etc).  At the beginning of the embed code madness, there is a snippet that starts "src='http://fast.wistia ...'".  This url is the portion you will need for creating a podcast/RSS feed. The gist of what it will look like appears below.
 
@@ -36,7 +36,7 @@ Now, we'll remove everything after the question mark '?':
 
 Now, we need to make two final changes, changing the subdomain and add the '.rss' extension:
 
-<pre><code class="language-markup">http://get-embed.wistia.com/embed/playlists/c67fec401f.rss</code></pre>
+<pre><code class="language-markup">http://fast.wistia.com/embed/playlists/c67fec401f.rss</code></pre>
 
 Now you're all set to move to the next step.
 
@@ -44,7 +44,7 @@ Now you're all set to move to the next step.
 
 ## Create the RSS feed
 
-Now that you have your code snippet (that starts "get-embed.wistia.com/...") paste that into the address bar of an empty browser window. Hit "enter", and now you have created an RSS feed for your Project.  Copy the URL in the address bar for the next step. 
+Now that you have your code snippet (that starts "fast.wistia.com/...") paste that into the address bar of an empty browser window. Hit "enter", and now you have created an RSS feed for your Project.  Copy the URL in the address bar for the next step. 
 
 If you were looking to create an RSS feed, you are now all set! If you are looking to make an iTunes Podcast, please read on...
 
