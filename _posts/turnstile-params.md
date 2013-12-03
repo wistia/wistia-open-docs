@@ -30,7 +30,7 @@ option, you can override the default sizing.
 Turnstile also tries to avoid asking for the viewers email if it has already
 been collected. It does this by saving the email in local storage for the
 specific `location.href` where it was collected. You can turn off this
-functionality by setting `alwaysShow` to false.
+functionality by setting `alwaysShow` to true.
 
 ## Turnstile Options
 
