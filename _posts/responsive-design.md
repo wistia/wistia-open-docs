@@ -11,7 +11,7 @@ description:
 This is Wistia's generic solution to responsive design, and is by far the 
 easiest solution if you can get away with it. It uses javascript and a very
 simple strategy to make any kind of Wistia embed--iframe, API, or
-popover--responsive.
+SEO--responsive.
 
 To see how to turn Video Foam on for a single embed at a time, check our
 [Docs on Video Foam]({{ /video-foam | post_url }}). Or if you want to enable it
