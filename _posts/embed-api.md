@@ -7,7 +7,7 @@ category: Developers
 api_warning: true
 description: Learn how to construct an embed code starting with just the video ID!
 footer: 'for_developers'
-post_intro: <p>You may find yourself needing to build embed codes for your videos dynamically.</p><p>The <a href='#data-api-approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed-approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the parameters you want and get an embed code!</p>
+post_intro: <p>You may find yourself needing to build embed codes for your videos dynamically.</p><p>The <a href='#data_api_approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed_approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the parameters you want and get an embed code!</p><p>Once you have your embed code built, check out the <a href="#embedding_options_and_plugins">Embedding Options and Plugins</a> guide to add custom behavior to your embeds programmatically.</p>
 ---
 
 ## oEmbed Approach
@@ -89,7 +89,7 @@ If you're looking for XML instead of JSON, use: `http://fast.wistia.net/oembed.x
 For all the fine details about the options supported, see the official
 [oEmbed spec](http://oembed.com).
 
-## Parameters
+## oEmbed Parameters
 
 Our endpoint supports all the options detailed at oembed.com.
 
@@ -362,7 +362,11 @@ The good news is you can easily use the
 [oEmbed approach]('#oembed_approach') to generate an SEO embed for you.
 
 
-## Embedding Options
+## Embedding Options and Plugins
+
+Once you have your embed code built, you probably want to tailor the appearance
+and behavior to your wishes. You may also want to add a plugin like Turnstile
+or a Call-to-Action.
 
 For a list of available embedding options to be used with the Customize API,
 check our [Embedding Options Documentation]({{ '/embed-options' | post_url }}).
