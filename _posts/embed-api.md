@@ -7,7 +7,7 @@ category: Developers
 api_warning: true
 description: Learn how to construct an embed code starting with just the video ID!
 footer: 'for_developers'
-post_intro: <p>You may find yourself needing to build embed codes for your videos dynamically.</p><p>The <a href='#data-api-approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed-approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the parameters you want and get an embed code!</p>
+post_intro: <p>You may find yourself needing to build embed codes for your videos dynamically.</p><p>The <a href='#data_api_approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed_approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the parameters you want and get an embed code!</p><p>Once you have your embed code built, check out the <a href="#embedding_options_and_plugins">Embedding Options and Plugins</a> guide to add custom behavior to your embeds programmatically.</p>
 ---
 
 ## oEmbed Approach
@@ -89,7 +89,7 @@ If you're looking for XML instead of JSON, use: `http://fast.wistia.net/oembed.x
 For all the fine details about the options supported, see the official
 [oEmbed spec](http://oembed.com).
 
-## Parameters
+## oEmbed Parameters
 
 Our endpoint supports all the options detailed at oembed.com.
 
@@ -109,6 +109,99 @@ handle | string | Only applicable to "api", "seo", and "playlist_api" embed type
 popoverHeight | integer | Only applicable to "popover" embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.
 popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
 ssl | boolean | Determines whether the embed code should use https. Defaults to false.
+
+If given a `width`, `height`, `maxwidth`, or `maxheight` parameter 
+(or any combination of those), the other dimensions in the resulting embed 
+code may change so that the video's aspect ratio is preserved.
+
+{{ "These parameters are attached to the Wistia media URL, and not the oEmbed call. So they must be URL-encoded to travel with the Wistia URL." | note }} 
+
+### Example
+
+In this example, we'll request an `API` embed code type, with the javascript 
+handle `oEmbedVideo`:
+
+First, the media URL we'll request:
+
+    http://home.wistia.com/medias/e4a27b971d
+
+Next, we'll add the parameters for our request:
+
+    http://home.wistia.com/medias/e4a27b971d?embedType=api&handle=oEmbedVideo
+
+We'll URL-encode this request:
+
+    http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo
+
+{{ "We URL-encoded this request, because we want the parameters `embedType` and `handle` passed along to Wistia, not to the oEmbed endpoint." | note }}
+
+And now use the oEmbed endpoint:
+
+<code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"</code>
+
+This returns:
+
+{% codeblock return.json %}
+{
+  "version":"1.0",
+  "type":"video",
+  "html":"<div id=\"wistia_e4a27b971d\" class=\"wistia_embed\" style=\"width:640px;height:360px;\" data-video-width=\"640\" data-video-height=\"360\">&nbsp;</div>\n<script charset=\"ISO-8859-1\" src=\"//fast.wistia.com/assets/external/E-v1.js\"></script>\n<script>\noEmbedVideo = Wistia.embed(\"e4a27b971d\", {\n  version: \"v1\",\n  videoWidth: 640,\n  videoHeight: 360\n});\n</script>",
+  "width":640,
+  "height":360,
+  "provider_name":"Wistia, Inc.",
+  "provider_url":"http://wistia.com",
+  "title":"Brendan - Make It Clap",
+  "thumbnail_url":"http://embed.wistia.com/deliveries/2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg?image_crop_resized=640x360",
+  "thumbnail_width":640,
+  "thumbnail_height":360,
+  "duration":16.43
+}
+{% endcodeblock %}
+
+---
+
+## Using JSONP
+
+[JSONP](http://en.wikipedia.org/wiki/JSONP) is a javascript technique used to
+get information from a server that is not the same origin as your current
+domain. This means they can avoid cross-domain security issues.
+
+In this example, we'll write some javascript to pull data for our video
+against the oEmbed endpoint, utilizing JSONP. Then, we'll manipulate the data
+returned to embed the thumbnail image.
+
+Given the oEmbed `base URL`, your `account URL`, and a `media hashed id`, we can 
+use the jQuery `getJSON` function to call against the oEmbed endpoint to return
+the video data. 
+
+Note this function also takes a callback function as a parameter. We'll set up
+that callback function next.
+
+{% codeblock playlist_api.js %}
+var baseUrl = "http://fast.wistia.com/oembed/?url=";
+var accountUrl = escape("http://home.wistia.com/medias/");
+var mediaHashedId = "01a1d9f97c";
+
+function getThumbnailUrl(hashedId, callback) {
+  $.getJSON(baseUrl + accountUrl + hashedId + "&format=json&callback=?", callback);
+}
+{% endcodeblock %}
+
+This function will return a JSON data object, and pass it to our callback
+function, which will parse the JSON and log the thumbnail URL. Let's write
+that callback function now:
+
+{% codeblock playlist_api.js %}
+function parseJSON(json) {
+  console.log(json.thumbnail_url);
+};
+{% endcodeblock %}
+
+Finally, we'll setup something to call these functions for our `media hashed id`:
+
+<code class="full_width">getThumbnailUrl(mediaHashedId, parseJSON);</code>
+
+---
 
 ### Working With The Thumbnail
 
@@ -269,7 +362,11 @@ The good news is you can easily use the
 [oEmbed approach]('#oembed_approach') to generate an SEO embed for you.
 
 
-## Embedding Options
+## Embedding Options and Plugins
+
+Once you have your embed code built, you probably want to tailor the appearance
+and behavior to your wishes. You may also want to add a plugin like Turnstile
+or a Call-to-Action.
 
 For a list of available embedding options to be used with the Customize API,
 check our [Embedding Options Documentation]({{ '/embed-options' | post_url }}).

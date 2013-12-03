@@ -67,16 +67,17 @@ Our links use <span class="code">target="\_blank"</span> to pop open a new windo
 <script src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
 wistiaEmbed = Wistia.embed("abcde12345", {
-  plugin: {
-    "postRoll-v1": {
-      text: "You made it to the end of my video! Now check out my product."
-      link: "http://myawesomeproduct.com/awesome"
-      style: {
-        background: "#404040",
-        color: "#ffffff"
-      }
-    }
-  }
+  videoWidth: 640,
+  videoHeight: 360
+});
+Wistia.plugin.postRoll(wistiaEmbed, {
+  version: "v1",
+  text: "You made it to the end of my video! Now check out my product.",
+  link: "http://myawesomeproduct.com/awesome",
+  style: {
+    background: "#404040",
+    color: "#ffffff"
+  },
 });
 </script>
 {% endcodeblock %}
