@@ -123,6 +123,8 @@ We'll URL-encode this request:
 
     http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo
 
+{{ "We URL-encoded this request, because we want the parameters `embedType` and `handle` passed along to Wistia, not to the oEmbed endpoint." | note }}
+
 And now use the oEmbed endpoint:
 
 <code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"</code>
