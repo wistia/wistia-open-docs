@@ -51,7 +51,7 @@ Nothing ruins your mood like an error message you can't fix. We're here to help!
 
 *  *issue:* you embedded the video correctly, but with an unsupported embed code type.
 
-*  *to solve:* make sure that the video has been embedded on your site using the "SEO" embed type. Note that popovers, iframes, and playlists are not supported. You can find the SEO embed type on the Super Embed page under the Embed Type tab on the left. 
+*  *to solve:* make sure that the video has been embedded on your site using the "SEO" embed type. Note that popovers, iframes, and playlists are not supported. You can find the SEO embed type on the Embed & Share modal under the Embed Type option for an Inline Embed. 
 
 **2. The video hasn't been embedded on the page specified**
 
