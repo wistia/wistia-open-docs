@@ -184,7 +184,7 @@ __https://api.wistia.com/oauth/token__
 
 It expects requests like:
 
-    https://api.wistia.com/oauth/token?grant_type=authorization_code&code=myauthorizationcode
+    https://api.wistia.com/oauth/token?grant_type=authorization_code&code=myauthorizationcode&redirect_uri=https%3A%2F%2Flocalhost%2Fmyapp
     https://api.wistia.com/oauth/token?grant_type=refresh_token&refresh_token=myrefreshtoken
 
 Responds with JSON in the form:
