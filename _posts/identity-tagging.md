@@ -12,7 +12,7 @@ post_intro: <p><b>Identity Tagging</b> is all about who is watching your videos,
 
 ## Tagging Viewers by Email
 
-Using [email marketing embeds]({{ '/email_marketing' | post_url }}), your viewers can be tagged by email in your account.  Using special embed codes, viewers who click through from an email can be tagged, and this email tag will follow the viewer into the future.
+Using [email marketing embeds]({{ '/email-marketing' | post_url }}), your viewers can be tagged by email in your account.  Using special embed codes, viewers who click through from an email can be tagged, and this email tag will follow the viewer into the future.
 
 For Wistia customers with advanced web design know-how and resources, there are also programmatic options for tagging viewers by email.  Refer to the [ID tagging player API]({{ '/player-id-tag' | post_url }}) documentation for more assistance.
 
