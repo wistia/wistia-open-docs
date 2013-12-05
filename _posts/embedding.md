@@ -9,7 +9,13 @@ post_intro:
   and in this guide we'll show you how to get it done right.</p>
 ---
 
-{% wistia_embed hashed_id: 5c913cd4fb, videoHeight: 338 %}
+To get started, check out this *embedding video guide*, part III of our [Wistia
+Basics]({{ '/wistia-basics' | post_url }}) series.
+
+{% wistia_embed hashed_id: g7uyjp24c6, videoHeight: 338 %}
+
+Below are the specific steps required to embed a video covered in a bit more
+detail.
 
 ## Upload Your Video
 
@@ -17,7 +23,7 @@ post_intro:
 
 Before you can embed your video, you need to upload it to your account. Haven't 
 done that yet? Check out our [guide to uploading]({{ '/upload-video' | post_url }})
-for more info on uploading.
+for more info.
 
 Once uploading is complete, Wistia transcodes several versions of your video -
 perfect for serving on multiple browsers and mobile devices.  After transcoding
@@ -61,6 +67,8 @@ The **Embed Type** option is for choosing between three basic types:
   embed code is not always as easy to use as iframe embeds.
 
 Once you have your settings dialed in, you can *copy* the embed code at the top.
+
+{{ "A quick note on our embeds. We use protocol relative URLs as part of our embed codes. This means they will work on SSL-enabled websites without any additional tinkering. They can look a bit funky without the `http` or `https` you might be expecting, but it can save you headaches when placing your video on your website." | note }}
 
 ### Inline Embed Advanced Options
 
