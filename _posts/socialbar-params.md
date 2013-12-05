@@ -62,8 +62,7 @@ Possible buttons are:
 
 {% codeblock socialbar-params.html %}
 <iframe src="http://fast.wistia.net/embed/iframe/abcde12345
-?videoWidth=640&videoHeight=360&plugin%5Bsocialbar%5D%5Bversion%5D=v1
-&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook&plugin%5Bsocialbar%5D%5BpageUrl%5D=
+?plugin%5Bsocialbar-v1%5D%5Bbuttons%5D=embed-twitter-facebook&plugin%5Bsocialbar-v1%5D%5BpageUrl%5D=
 http%3A%2F%2Fwistia.com&pageTitle=The%20best%20in%20online%20video%20hosting." 
 allowtransparency="true" frameborder="0" scrolling="no" 
 class="wistia_embed" name="wistia_embed" width="640" height="387">
