@@ -52,9 +52,9 @@ functionality by setting `alwaysShow` to true.
 
 {% codeblock turnstile-params.html %}
 <iframe src="//fast.wistia.net/embed/iframe/abcde12345
-  ?plugin%5BrequireEmail%5D%5BtopText%5D=Please%20enter%20your%20email%20below.
-  &plugin%5BrequireEmail%5D%5BbottomText%5D=We%20may%20use%20this%20email%20to%20contact%20you%20about%20the%20product%2C%20but%20we%20won't%20be%20too%20pushy.
-  &plugin%5BrequireEmail%5D%5Bstyle%5D%5Bbackground%5D=%23660000&plugin%5BrequireEmail%5D%5Bstyle%5D%5Bcolor%5D=%23eeffee" 
+  ?plugin%5BrequireEmail-v1%5D%5BtopText%5D=Please%20enter%20your%20email%20below.
+  &plugin%5BrequireEmail-v1%5D%5BbottomText%5D=We%20may%20use%20this%20email%20to%20contact%20you%20about%20the%20product%2C%20but%20we%20won't%20be%20too%20pushy.
+  &plugin%5BrequireEmail-v1%5D%5Bstyle%5D%5Bbackground%5D=%23660000&plugin%5BrequireEmail-v1%5D%5Bstyle%5D%5Bcolor%5D=%23eeffee" 
   allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" 
   allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen
   name="wistia_embed" width="640" height="360">
