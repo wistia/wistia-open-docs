@@ -13,7 +13,8 @@ post_intro: <p><a href="http://wistia.com">Wistia</a> is a video hosting solutio
 
 #### Generating an API Password
 
-Generate an API password for your account from the *API* area in your Account Dashboard.
+Generate an API password for your account from the *API* area in your
+[Account Dashboard]({{ '/account-setup#api_password_and_public_token' | post_url }}).
 
 **Note:** The user name is always `api`.
 

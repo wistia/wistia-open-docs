@@ -132,6 +132,18 @@ To remove existing managers, click <span class="faux_button">Remove</span>.
 
 ---
 
+## API Password and Public Token
+
+{% post_image hashed_id: '655da9c9b7addebc9d935a02a987d9332bd5f3c1', class: 'center' %}
+
+From your *Account Dashboard*, select the *API* tab.
+
+The API Username and Password are used most for interacting with the [Wistia
+Data API]({{ '/data-api' | post_url }}), and the Public Token is used mostly
+for 3rd party service (like Pardot).
+
+---
+
 ## Transferring Ownership of Your Account
 
 If you need to set someone else up as the owner of your account, the first step
