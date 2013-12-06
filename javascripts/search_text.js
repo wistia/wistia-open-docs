@@ -18,27 +18,6 @@
     }
   });
 
-  $('#searchField').focus(function() {
-    var $search;
-    $search = $(this);
-    if ($search.val() === 'What are you looking for?' || $search.val() === 'Search our docs') {
-      $search.val('');
-      return $search.removeClass('example');
-    }
-  });
-
-  $('#searchField').blur(function() {
-    var $search;
-    $search = $(this);
-    if ($.trim($search.val()) === '' && $search.closest('#search').hasClass('homepage-search')) {
-      $search.val('What are you looking for?');
-      return $search.addClass('example');
-    } else if ($.trim($search.val()) === '' && $search.closest('#search').hasClass('doc_nav_search')) {
-      $search.val('Search our docs');
-      return $search.addClass('example');
-    }
-  });
-
   $('#searchField').keyup(function(e) {
     if (e.keyCode === 13) {
       return performSearch();
