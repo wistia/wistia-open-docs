@@ -34,7 +34,7 @@ Enter the email addresses of contacts you would like to share this project priva
 
 ## Privately share video by link
 
-{% post_image hashed_id: '5f693f7bb68f4e19a64d27bd796ed2fd4aaa6cc5', width: 320 %}
+{% post_image hashed_id: 'c0abef6318491516e0ec8044efacfa1869cb609a', width: 320 %}
 
 This is the best sharing method to use if you want to:
 <ul style="margin-top: 5px;"><li><i>Send out a single link from your own email account to a group people to allow them to view your video.</i></li>
