@@ -20,7 +20,7 @@ Managers in your Wistia account can invite new viewers to view private content u
 Enter the email addresses of contacts you would like to share this project privately with in the box where it says "Enter email addresses to add users."  You can then set whether they need to create a password. You can customize the text from the message they will receive to first access the content you've allowed them to view by clicking on "Add a personal message."
 
 
-{% post_image hashed_id: '52ceeb3b8914f9fc0695bbf5de808f09da1242eb', class: 'center' %}
+{% post_image hashed_id: '49972fd41732b1f35c221718fd6d3fc83568eff7', class: 'center' %}
 
 
 
