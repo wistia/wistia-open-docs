@@ -111,7 +111,7 @@ be created and immediately added to the group.  Don't worry if some of the
 contacts in your list are already contacts in your account, they will only be 
 added to the group (no duplicate contacts will be created).
 
-{% post_image hashed_id: '9eec03f4f25becaf23e9bf2bb78aaa669873ed6d', width: 660, class: 'center' %}
+{% post_image hashed_id: 'f4c2a5784deec98de8b88eec19c3d70b74c21a30', width: 660, class: 'center' %}
 
 
 ## How can a contact change their password?
