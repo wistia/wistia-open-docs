@@ -108,8 +108,6 @@ select *&lt;/&gt; Embed & Share* from the <span class="action_menu">Video Action
 menu. For more information on embedding, review the 
 [embedding a video]({{ '/embedding' | post_url }}) guide.
 
-{{ "There are some SuperEmbed features that aren't compatible with SEO embeds, like the Email Capture feature" | note }}
-
 ## Making a video sitemap entry
 
 {% post_image hashed_id: 'c65b0df80e77faa460ec36a24aaee1061ee0879e', class: 'center' %}
