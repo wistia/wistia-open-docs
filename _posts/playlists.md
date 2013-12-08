@@ -22,12 +22,14 @@ Embedded playlists automatically show the videos contained in the project.  If v
 
 ## Creating a Video Playlist
 
-To get started, go into a project in your Wistia account you wish to create a playlist for.  Next, select "Playlist embed" from the Project Actions menu as shown on the right.
+To get started, go into a project in your Wistia account you wish to create a playlist for.  Next, select "Get Playlist" from the Project Actions menu as shown below.
 
-Once you have selected the "Playlist embed" option, you will be taken to a page where you can customize your playlist and get the embed code.  An example of this customization screen can be seen below.
+{% post_image hashed_id: '0441c26b85ebc4f3ceab93e239442d7e0e7857cc', width: 300, class: 'center' %}
 
-{% post_image hashed_id: '97fdeb14dc8765354e9769122a782f4cfb5c35c7', class: 'center' %}
+Once you have selected the "Get Playlist" option, you will be taken to a page where you can customize your playlist and get the embed code.  An example of this customization screen can be seen below.
 
-Choose the **theme** you want to use, the **size** for the embedded playlist, and other customization settings on the SuperPlaylist builder.
+{% post_image hashed_id: '9aee4f07f093a07b72f70e8c2aa8439017043fd2', class: 'center' %}
+
+Choose the **theme** you want to use, the **size** for the embedded playlist, and other customization settings here. These settings will override any customizations you may have applied to the individual videos in your playlist with [Customize]({{ '/customizing-your-video' | post_url }}). 
 
 {{ "There are some functionalities in our app that don't work as fully as we'd like them to with Playlists. If you have questions about any of them, just drop us a line at support@wistia.com." | note }}
