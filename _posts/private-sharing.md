@@ -3,7 +3,7 @@ title: Sharing Video Privately
 layout: post
 category: Private Sharing
 post_intro: <p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.</p><p>With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
-description: Wistia makes it easy to privately share your videos with people. Invite people via email, require a password, and track how they watch in a secure environment.
+description: Wistia makes it easy to privately share your videos with people. Invite people via email, and track how they watch in a secure environment.
 ---
 
 {% wistia_embed hashed_id: cfu321mfp9 %}
@@ -17,7 +17,7 @@ description: Wistia makes it easy to privately share your videos with people. In
 
 Managers in your Wistia account can invite new viewers to view private content using the "Sharing and Privacy" feature.  From the Project screen, select "Sharing and Privacy" from under the green "Project Actions" drop-down menu. 
 
-Enter the email addresses of contacts you would like to share this project privately with in the box where it says "Enter email addresses to add users."  You can then set whether they need to create a password. You can customize the text from the message they will receive to first access the content you've allowed them to view by clicking on "Add a personal message."
+Enter the email addresses of contacts you would like to share this project privately with in the box where it says "Enter email addresses to add users." You can customize the text from the message they will receive to first access the content you've allowed them to view by clicking on "Add a personal message."
 
 
 {% post_image hashed_id: '49972fd41732b1f35c221718fd6d3fc83568eff7', class: 'center' %}
@@ -121,24 +121,11 @@ viewed.
 
 When you invite new viewers into your account to privately view video, they
 will only have access to parts of the account that have been shared with them
-or they have been giving access to.
+or they have been giving access to. For a quick review on sending
+invitations, see the [Invite Viewers]({{ '/private-sharing#invite_viewers' | post_url }}) section above.
 
 Let's walk through an example of how this will look from your viewer's perspective.
 
-
-
-### The Share Dialog Box
-
-{% post_image hashed_id: '52ceeb3b8914f9fc0695bbf5de808f09da1242eb', class: 'center' %}
-
-We'll start with a quick review of the Share dialog box.
-
-Enter the emails of the viewers you'd like to invite in the “Enter email
-addresses to add users” box. Next, assign the permissions you'd like them to
-have for this project.
-
-You can also customize the wording of the email message that will be sent to
-the people you are inviting. 
 
 ### The Invitation Email
 
@@ -157,9 +144,7 @@ project you are sharing, along with a link for their access.
 {% post_image hashed_id: '6dc3b3ce1c35d22643f5105de3e1ae1140aa3355', class: 'center' %}
 
 After clicking the activation link, viewers who have never interacted with the
-Wistia system will land on a page where they can create Wistia credentials.  If
-you have required them to use a password to access the content, they will need
-to create a password for their access as well.
+Wistia system will land on a page where they can create Wistia credentials.  
 
 
 ### The Viewer's Perspective
