@@ -201,6 +201,7 @@ iContact  |  `[email]`
 Infusionsoft  |  `~Contact.Email~`
 MailChimp  |  `*|URL:EMAIL|*`
 Marketo  |  {`{lead.Email Address:default=noemail}`}
+Ontraport | {`[E-mail]`}
 Pardot  |  `%%email%%`
 Vertical Response  |  `{EMAIL_ADDRESS}`
 ExactTarget  |  `%%Email Address%%`
