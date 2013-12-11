@@ -7,9 +7,6 @@ footer: 'for_intermediates'
 post_intro: "<p>Video embed domain restrictions allows you to prevent a malicious viewer from stealing your embed code off your page.  When domain restriction is set up, the videos in your account will only display on the domains you specify.</p>"
 ---
 
-
-{{ 'Domain Restrictions will not work with SSL embeds.' | note }}
-
 {% post_image hashed_id: '867299a5760f489450dfffc5c08b5ccacfa75463', class: 'center' %}
 
 To get started with video embed domain restrictions:
