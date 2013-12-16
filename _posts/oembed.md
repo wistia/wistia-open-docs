@@ -123,7 +123,7 @@ We'll URL-encode this request:
 
     http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo
 
-{{ "We URL-encoded this request, because we want the parameters `embedType` and `handle` passed along to Wistia, not to the oEmbed endpoint." | note }}
+{{ "We URL-encoded this request, because we want the parameters `embedType` and `handle` passed along as part of the url param, not at the top level of the oembed endpoint." | note }}
 
 And now use the oEmbed endpoint:
 
