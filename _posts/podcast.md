@@ -22,7 +22,7 @@ First we'll need to choose a Project to use as the Podcast.  Perhaps you'll want
 
 {% post_image hashed_id: '549c5aad282c6ba69ee3d4d78b85ecceee9cb61d', class: 'center' %}
 
-The second step is to find the RSS feed for your Playlist.  Inside of the Project you'd like to use as a podcast, select "</> Get Playlist" from under the blue "Project Actions" drop-down menu.
+The second step is to find the RSS feed for your Playlist.  Inside of the Project you'd like to use as a podcast, select "Get Playlist" from under the blue "Project Actions" drop-down menu.
 
 The "Embed Playlist" screen includes the embed code for your Playlist.  Copy all of this code and paste it into a text editor (like Text Edit, vi, etc).  At the beginning of the embed code madness, there is a snippet that starts "src='http://fast.wistia ...'".  This url is the portion you will need for creating a podcast/RSS feed. The gist of what it will look like appears below.
 
