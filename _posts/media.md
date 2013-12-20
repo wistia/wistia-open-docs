@@ -91,7 +91,9 @@ Click the *Add a Description* text that appears.
 
 Descriptions are most helpful for sharing links to view video in your Wistia
 account (where viewers need additional context). Your video description will
-also be passed through to services like Facebook ([see more on social sharing]({{ '/social-sharing' | post_url }})). 
+also be passed through to services like Facebook ([see more on social sharing]({{ '/social-sharing' | post_url }})).
+
+{{ "Embedding elements via HTML in video descriptions is currently not recommended and can cause issues with the page displaying." | note }} 
 
 ## Copy Media
 

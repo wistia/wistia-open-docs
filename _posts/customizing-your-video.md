@@ -131,6 +131,8 @@ There are three types of CTAs:
 * **Image:** use an image instead of a text link to direct viewers.
 * **HTML:** write your own custom call-to-action *(advanced users only)*.
 
+{{ "There are some elements that can be stripped out of custom HTML CTAs for security reasons, email us at support@wistia.com if you run into trouble!" | note }}
+
 ## Turnstile Email Gate
 
 Turnstile is an easy email gate for your video content. It's great for lead
