@@ -90,6 +90,8 @@ Once you have added the line to your robots.txt and typed the URL, click the
 This will retrieve your specified robots.txt and verify that the information is
 viewable by Google.
 
+{{ "Robots.txt do need to follow a certain format! Make sure yours is correct by heading over to our favorite site to checking syntax, [here.](http://tool.motoricerca.info/robots-checker.phtml)" | note }}
+
 The next step is on Google's end. Google will review the sitemap entries, and
 check the content they point to (i.e. where you said the video was). It can
 take up to a week to complete this step.
