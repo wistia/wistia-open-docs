@@ -5,7 +5,7 @@ layout: post
 title: The Wistia Data API
 description: Learn how to enable Data API access for your account.
 category: Developers
-post_intro: <p><a href="http://wistia.com">Wistia</a> is a video hosting solution for marketers.  We make it easy to upload, manage, share, and track your web video performance.</p><p>The Wistia data API gives you all kinds of programmatic access to your Wistia account. The data is available in either JSON or XML format over HTTP.</p><p>There is also a <a href="https://github.com/wistia/wistia-api" target="_blank">Wistia API Ruby gem</a> for access from the command line.</p><p><strong>Wistia API Exchange Forum:</strong> We've recently added a forum, just for Data API users.  It's meant to be a place for sharing projects and getting language-specific help. Head to <a href="http://dev-forum.wistia.com" target="_blank">http://dev-forum.wistia.com</a> to check it out!</p>
+post_intro: <p><a href="http://wistia.com">Wistia</a> is a video hosting solution for marketers.  We make it easy to upload, manage, share, and track your web video performance.</p><p>The Wistia data API gives you all kinds of programmatic access to your Wistia account. The data is available in either JSON or XML format over HTTP.</p><p>There is also a <a href="https://github.com/wistia/wistia-api" target="_blank">Wistia API Ruby gem</a> for integrating into your application.</p>
 ---
 
 
@@ -24,8 +24,6 @@ Generate an API password for your account from the *API* area in your
 
 We will introduce API changes when necessary/possible, and update the version
 number (i.e. *v1*) when a **breaking change** is made.
-
-Stay tuned to the [dev-forum](dev-forum.wistia.com) for updates on the API.
 
 #### Resources
 
