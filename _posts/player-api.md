@@ -17,9 +17,6 @@ or *iframe*. If you are using iframe embeds, you will need to insert the
 [iframe player API script](#using_popovers_and_the_player_api) at the bottom of 
 your page.
 
-If you are having trouble using the Player API, or just want to show off what
-you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
-
 If you are also looking to construct embed codes, refer to
 [the Embed API]({{ '/embed-api' | post_url }}). Available options for embed
 codes are listed in

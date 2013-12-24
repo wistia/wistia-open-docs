@@ -63,9 +63,6 @@ Or if I wanted to pause the current video:
 wistiaPlaylist.currentVideo().pause()
 {% endcodeblock %}
 
-If you are having trouble using the Player API, or just want to show off what 
-you've built, our [dev-forum](http://dev-forum.wistia.com) is where it's at!
-
 ## Embedding Options
 
 In our example embed `>Wistia.playlist("abcde12345", { ... options ... });`
