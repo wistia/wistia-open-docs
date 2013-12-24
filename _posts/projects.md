@@ -56,9 +56,35 @@ your description.
 When you are finished, click <span class="faux_button">SAVE</span> and your
 changes will be viewable by all.
 
-## Share a Project Privately
+## Sharing Access to Projects
 
-Sharing a Project by Email and Link with other viewers is covered in-depth
+Projects can be in two modes: **unlocked** and **locked**. By default, they are
+set to *unlocked*.
+
+* **Unlocked** projects can be accessed by anyone with the link. Your content is
+still not findable/searchable on Google, but this setting makes it quick and
+painless to share your videos with someone else.
+* **Locked** projects can only be accessed when the viewer is invited by email.
+
+To see or adjust your current project's setting, open the *Sharing & Privacy*
+area under the <span class='action_menu'>Project Actions</span> menu.
+
+{% post_image hashed_id: 'b7f77d7e188bc953dfd491ae12d9476ee44f5c2c', class: 'center' %}
+
+{{ "Shortcut! You can access this screen by clicking the <i class='icon-lock'></i> icon next to the Project title." | note }}
+
+If you want to share your project, and all the videos within it,
+you would set your project to *public*, and then share the
+URL with viewers. That link would look something like:
+
+`mydomain.wistia.com/projects/xGFHnn33`
+
+Viewers who followed that URL would be able to access all media in the Project.
+
+If, however, you only shared the URL for a single video, the viewer would only
+have access to that video - not the entire project. Tricky, huh?
+
+Sharing a Project by Email and Link with other viewers is also covered in-depth
 on the [private sharing documentation page]({{ '/private-sharing' | post_url }}).
 
 ## Playlists
