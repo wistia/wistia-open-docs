@@ -23,7 +23,7 @@ type: post
         {{ content }}
       {% if page.api != true %}
       .post_footer
-        {% case page.footer %} {% when 'for_developers' %} {% include for_developers.html %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
+        {% case page.footer %} {% when 'for_intermediates' %} {% include for_intermediates.html %} {% else %} {% include for_beginners.html %} {% endcase %}
       {% endif %}
 
 %script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
