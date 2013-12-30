@@ -77,9 +77,9 @@ can icon will appear. Select the trash can to remove the comment permanently.
 
 {% post_image hashed_id: '53ca66ac5b6fb55713c9b3b274be578c9f3fd59e', class: 'center' %}
 
-### Can I turn off comments for videos and other media?
+### Disable Comments
 
-Yes. Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video' | post_url }}) 
+Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video#disable_comments' | post_url }}) 
 covers this in further detail.
 
 ## Video Description
