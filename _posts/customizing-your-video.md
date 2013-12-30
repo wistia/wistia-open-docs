@@ -33,7 +33,7 @@ The **player color** should reflect your branding, to encourage more consistency
 your viewer's experience.
 
 Finally - you can choose whether visitors to the video page will have the
-option to **leave comments**.
+option to [leave comments]('#disable-comments').
 
 ## Changing the Thumbnail
 
@@ -52,6 +52,17 @@ frame that is currently showing in your video to the right.
 Below is a quick screencast to show you the thumbnail update moves.
 
 {% wistia_embed hashed_id: oo6cr5kz8p %}
+
+## Disable Comments
+
+{% post_image hashed_id: '22e89f019b63d4c71b84843aad9f5e5c418b1857', class: 'center' %}
+
+By default, viewers of your content will be able to leave comments. To disable
+this functionality, open the Customize panel, and under the Appearance tab,
+un-check the *Enable comments* checkbox.
+
+To disable comments across all videos, see the 
+[project defaults](#set_project_defaults) section.
 
 ## Controls
 
