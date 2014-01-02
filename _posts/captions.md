@@ -15,20 +15,6 @@ Whether you're just trying to make sure people can get the message of your video
 the sound, or if you're just looking for a little more love in the video SEO department, 
 **Wistia Captions** can help!
 
-<!---
-
-It's like the two brothers of accessibility and general awesomeness: **Wistia
-Captions** are not just for desktop viewing, they can be viewed on iOS
-devices as well. **Wistia Transcripts**, on the other hand, are *interactive*,
-so viewers can jump ahead (or rewind) by simply clicking on a specific word in
-the transcript. They can also search ahead, to find the point in your video
-they are most interested in.
-
-*Both* Transcripts and Captions are included in your SEO embed codes, which
-makes them powerful for SEO purposes.
-
--->
-
 Let's jump in to creating and using your captions!
 
 ## Video Overview
