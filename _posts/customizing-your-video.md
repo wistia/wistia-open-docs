@@ -156,14 +156,14 @@ linked.
 
 ## Captions
 
-Captions and Transcripts are a must for the hearing impaired. They are also
+Captions are a must for the hearing impaired. They are also
 useful for educational content, to make sure the audience is able to follow the
 instructor. 
 
-The transcript for a video can also help boost SEO ranking of your video content,
+The captions for a video can also help boost SEO ranking of your video content,
 since the script of your video likely contains words related to your ranking terms.
 
-[Read more about transcripts with Wistia]({{ '/transcripts' | post_url }}).
+[Read more about captions with Wistia]({{ '/captions' | post_url }}).
 
 {% post_image hashed_id: '53bec864330fdd48fdfde29d74b46c817c3734d4', class: 'float_right', width: 300 %}
 
