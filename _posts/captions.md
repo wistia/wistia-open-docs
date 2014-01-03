@@ -23,7 +23,7 @@ Let's jump in to creating and using your captions!
 
 ## Select Your Video
 
-First, navigate to the video page for the video you'd like captions for(the
+First, navigate to the video page for the video you'd like captions for (the
 page where you can play the video itself).
 
 Under the <span class='action_menu'>Video Actions</span> menu, select the
@@ -31,7 +31,7 @@ Under the <span class='action_menu'>Video Actions</span> menu, select the
 
 {% post_image hashed_id: '18aaa114cfb74eeccf002eaf18ec07f40b530ccf', class: 'center' %}
 
-From the *Customize Panel*, select the *Captions* settings area.
+From the Customize Panel, select the *Captions* settings area.
 
 {% post_image hashed_id: 'b1909f6eb16dba8bd49786323e2d34c1d459b5b8', class: 'float_right', width: 300 %}
 
@@ -51,10 +51,10 @@ transcript OR to add closed captioning to your video.
 
 Once your captions are ready, you will be notified by email, and the *CC*
 button will appear to all viewers who view the video within your account. The
-captions are now ready to be embedded on your site
-as well.
+captions will now be included with your embed codes, if you are using the SEO 
+embed code type.
 
-To customize your video with transcription or captions, select the *Customize*
+To customize your video with transcription or captions, select *Customize*
 from the <span class='action_menu'>Video Actions</span> menu. Open the
 *Captions* customization area.
 
@@ -72,7 +72,7 @@ appear automatically on your site!
 {% post_image hashed_id: '78f0bb5247659ba1b4ba067b62ddb1124c312994', class: 'center' %}
 
 Wistia captions can also be used on your iPhone - I know, I didn't believe it
-either when Max showed it to me.
+either until Max showed me.
 
 If you have a captions-enabled video, the captions button will appear on the
 player controls bar when being played on an iPhone.
