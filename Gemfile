@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'RedCloth'
+gem 'RedCloth', '~> 4.2.9'
 gem 'compass', '~> 0.12.2'
 gem 'domainatrix', '~> 0.0.11'
 gem 'foreman', '~> 0.63.0'
