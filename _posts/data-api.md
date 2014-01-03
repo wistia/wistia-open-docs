@@ -150,18 +150,16 @@ account. This request supports [paging and sorting](#organizing_for_list_methods
 
 Projects#list requests look like this:
 
-<code class="full_width">GET https://api.wistia.com/v1/projects.json</code>
+    GET https://api.wistia.com/v1/projects.json
 
 #### Example Project#List Request
 
 To retrieve all projects in an account, 10 projects at a time, starting on the
 second page of results, then your request URL should look something like this:
 
-<code class="full_width">
-  https://api.wistia.com/v1/projects.json?page=2&amp;per_page=10
-</code>
+    https://api.wistia.com/v1/projects.json?page=2&amp;per_page=10
 
-That would return the following JSON:
+#### The Response
 
 {% codeblock json_example_response.json %}
   [
@@ -202,7 +200,7 @@ Retrieve details about a specific project.
 
 To get the details on a Project (and all media therein), send an HTTP **GET** request to the following URL:
 
-    GET https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
+    GET https://api.wistia.com/v1/projects/<project-hashed-id>.json
 
 The response for the Projects#show request will also include an array of media
 objects. Each entry in the media array has [all media object fields](#media_show).
@@ -341,7 +339,7 @@ created project.
 
 The Wistia data API allows you to update a project.
 
-    PUT https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
+    PUT https://api.wistia.com/v1/projects/<project-hashed-id>.json
 
 #### The Parameters
 
@@ -389,7 +387,7 @@ The Wistia data API allows you to delete a project.
 
 #### The Request
 
-    DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json
+    DELETE https://api.wistia.com/v1/projects/<project-hashed-id>.json
 
 #### The Response
 
@@ -431,7 +429,7 @@ Copy a project, including all media and sections.
 
 {{ "This method does not copy the projects sharing information (i.e. users that could see the old project will not automatically be able to see the new one)." | note }} 
 
-    POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json
+    POST https://api.wistia.com/v1/projects/<project-hashed-id>/copy.json
 
 #### Parameters
 
