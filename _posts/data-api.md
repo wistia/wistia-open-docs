@@ -1218,7 +1218,7 @@ conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 This method will return all the captions for a video.
 
-<code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json</code>
+    GET https://api.wistia.com/v1/medias/<media-hashed-id>/captions.json
 
 #### The Response
 
@@ -1257,9 +1257,7 @@ If this video does not exist, the response will be an empty HTTP `404 Not Found`
 
 This method is for adding captions to a video.
 
-<code class="full_width">
-POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json
-</code>
+    POST https://api.wistia.com/v1/medias/<media-hashed-id>/captions.json
 
 Parameter | Description
 ----------|------------
@@ -1267,24 +1265,23 @@ caption_file | Either an attached SRT file or a string parameter with the conten
 language | An optional parameter that denotes which language this file represents and it should conform to
 [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2). If left unspecified, the language code will be detected automatically.
 
-Example of `caption_file` as a string parameter using curl:
+Example of **caption_file** as a string parameter using curl:
 
-<code class="full_width">curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --data $'caption_file=1\n00:00:00,000 --> 00:00:03,000\nOh caption, my caption.'</code>
+    curl https://api.wistia.com/v1/medias/<media-hashed-id>/captions.json --data $'caption_file=1\n00:00:00,000 --> 00:00:03,000\nOh caption, my caption.'
 
-Example of `caption_file` as an attached file using curl:
+Example of **caption_file** as an attached file using curl:
 
-<code class="full_width">
-curl https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions.json --form "caption_file=@./oh_caption.srt"
-</code>
+    curl https://api.wistia.com/v1/medias/<media-hashed-id>/captions.json --form "caption_file=@./oh_caption.srt"
 
 #### The Response
 
-If successful, the response will be an empty `HTTP 200 OK`.
+If successful, the response will be an empty **HTTP 200 OK**.
 
-If captions already exist for this video, the response will be `HTTP 400 Bad
-Request`.
+If captions already exist for this video, the response will be **HTTP 400 Bad
+Request**.
 
-If this video does not exist, the response will be an empty HTTP `404 Not Found`.
+If this video does not exist, the response will be an empty **HTTP 404 Not
+Found**.
 
 
 ### Captions: Show
@@ -1292,7 +1289,7 @@ If this video does not exist, the response will be an empty HTTP `404 Not Found`
 This method will return the captions for a specific language for a video in SRT
 format.
 
-<code class="full_width">GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code>
+    GET https://api.wistia.com/v1/medias/<media-hashed-id/captions/<language-code>.json
 
 #### The Response
 
@@ -1317,16 +1314,17 @@ captions | The text of the captions for the specified language in SRT format.
 {% endcodeblock %}
 
 If the specified captions do not exist for this video, the response will be an
-empty HTTP 404 Not Found.
+empty **HTTP 404 Not Found**.
 
-If this video does not exist, the response will be an empty HTTP 404 Not Found.
+If this video does not exist, the response will be an empty **HTTP 404 Not
+Found**.
 
 
 ### Captions: Update
 
 This method is for replacing the captions on a video.
 
-<code class="full_width">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code>
+    PUT https://api.wistia.com/v1/medias/<media-hashed-id>/captions/<language-code>.json
 
 `<language-code>` denotes which language to update captions for and it should
 conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
@@ -1337,35 +1335,35 @@ caption_file | Either an attached SRT file or a string parameter with the conten
 
 #### The Response
 
-If successful, the response will be an empty `HTTP 200 OK`.
+If successful, the response will be an empty **HTTP 200 OK**.
 
 If the specified captions do not exist for this video, the response will be an
-empty HTTP `404 Not Found`.
+empty **HTTP 404 Not Found**.
 
-If this video does not exist, the response will be an empty HTTP `404 Not Found`.
+If this video does not exist, the response will be an empty **HTTP 404 Not Found**.
 
 
 ### Captions: Delete
 
 This method is for removing the captions file from a video altogether.
 
-<code class="full_width">DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/&lt;language-code&gt;.json</code>
+    DELETE https://api.wistia.com/v1/medias/<media-hashed-id>/captions/<language-code>.json
 
 #### The Response
 
-If successful, the response will be an empty HTTP `200 OK`.
+If successful, the response will be an empty **HTTP 200 OK**.
 
 If the specified captions do not exist for this video, the response will be an
-empty HTTP `404 Not Found`.
+empty **HTTP 404 Not Found**.
 
-If this video does not exist, the response will be an empty HTTP `404 Not Found`.
+If this video does not exist, the response will be an empty **HTTP 404 Not Found**.
 
 
 ### Captions: Purchase
 
 This method is for purchasing English captions on a video.
 
-<code class="full_width">POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/captions/purchase.json</code>
+    POST https://api.wistia.com/v1/medias/<media-hashed-id>/captions/purchase.json
 
 Note that this request will charge the credit card on your account if
 successful. Therefore, you must have a saved credit card in order to use this
@@ -1373,12 +1371,12 @@ API endpoint.
 
 #### The Response
 
-If successful, the response will be an empty HTTP `200 OK`.
+If successful, the response will be an empty **HTTP 200 OK**.
 
 If English captions already exist for this video, the response will be an empty
-HTTP `400 Bad Request`.
+**HTTP 400 Bad Request**.
 
-If this video does not exist, the response will be an empty HTTP `404 Not Found`.
+If this video does not exist, the response will be an empty **HTTP 404 Not Found**.
 
 ---
 
@@ -1389,7 +1387,7 @@ If this video does not exist, the response will be an empty HTTP `404 Not Found`
 
 Asset URLs in Wistia take this form:
 
-<code class="full_width">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.bin</code>
+    http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.bin
 
 The `.bin` extension at the URL is for binary. 
 Certain ornery clients (iTunes, ahem) won't accept URLs that don't end in an
@@ -1398,7 +1396,7 @@ a slash, and append whatever filename and extension you like -– you'll still
 get the underlying asset. So, say the URL above is an mp4 file and we _really_
 want that in the URL. Here's what we'd have:
 
-<code class="full_width">http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf/my-file.mp4</code>
+    http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf/my-file.mp4
 
 
 ### Resizing Images
