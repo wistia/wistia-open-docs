@@ -157,3 +157,13 @@ efficient!), select the *Settings* area in your *Account Dashboard*.
 Select the new owner from the *Account Owner* menu, and then <span
 class='faux_button'>SAVE SETTINGS</span>. Ownership will be transferred
 immediately.
+
+---
+
+## Changing the Email Address Associated With Your User Account
+
+If you would like to change the email address associated with your user account, it's actually super easy! From the *Account* tab in the top right corner of your screen, select *My Settings*. 
+
+{% post_image hashed_id: '6e8ae8a2517fe48452198167a252bfc55f594023', class: 'center' %}
+
+From there you can very easily change the email that you use to log in to Wistia and receive notifications to!
