@@ -757,11 +757,11 @@ Field     |  Description
 ----------|------------------
 id  | A unique numeric identifier for the media within the system.
 name  | The display name of the media.  
-type | A string representing what type of media this is. Values can be `Video`, `Audio`, `Image`, `PdfDocument`, `MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.  
-status | [Post upload processing status](#post_processing_status). There are four statuses: `queued`, `processing`, `ready`, and `failed`. 
+type | A string representing what type of media this is. Values can be **Video**, **Audio**, **Image**, **PdfDocument**, **MicrosoftOfficeDocument**, **Swf**, or **UnknownType**.  
+status | [Post upload processing status](#post_processing_status). There are four statuses: **queued**, **processing**, **ready**, and **failed**. 
 progress (if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.  
 section | The title of the section in which the media appears. This attribute is omitted if the media is not in a section (default).
-thumbnail | An object representing the thumbnail for this media. The attributes are `URL`, `width`, and `height`.  
+thumbnail | An object representing the thumbnail for this media. The attributes are **URL**, **width**, and **height**.  
 duration | Specifies the length (in seconds) for audio and video files. Specifies number of pages in the document. Omitted for other types of media.
 created | The date when the media was originally uploaded.  
 updated | The date when the media was last changed.  
@@ -776,11 +776,12 @@ Media files return a response attribute called **status**. After upload is
 complete, media files must be processed. Status indicates which stage in
 processing the file is at.
 
-There are four status settings: `queued`, `processing`, `ready`, and `failed`.
-Queued means the file is waiting in the queue to be processed. Processing means
-the file is actively being processed. Ready means it has been fully processed
-and is ready for embedding and viewing. Failed means that we were unable to
-automatically process the file.
+There are four status settings:
+
+  * **queued:** the file is waiting in the queue to be processed
+  * **processing:** the file is actively being processed
+  * **ready:** the file has been fully processed and is ready for embedding and viewing
+  * **failed:** the file was unable to be processed (usually a [format or size error]({{ '/export-settings' | post_url }}))
 
 ### Asset Object Response
 
@@ -791,16 +792,14 @@ width  | The width of this specific asset, if applicable.
 height  | The height of this specific asset, if applicable.
 fileSize  | The size of the asset file that's referenced by url, measured in bytes.
 contentType | The asset's content type.
-type  | The internal type of the asset, describing how the asset should be used. Values can include `OriginalFile`, `FlashVideoFile`, `MdFlashVideoFile`, `HdFlashVideoFile`, `Mp4VideoFile`, `MdMp4VideoFile`, `HdMp4VideoFile`, `IPhoneVideoFile`, `StillImageFile`, `SwfFile`, `Mp3AudioFile`, and `LargeImageFile`.
+type  | The internal type of the asset, describing how the asset should be used. Values can include **OriginalFile**, **FlashVideoFile**, **MdFlashVideoFile**, **HdFlashVideoFile**, **Mp4VideoFile**, **MdMp4VideoFile**, **HdMp4VideoFile**, **IPhoneVideoFile**, **StillImageFile**, **SwfFile**, **Mp3AudioFile**, and **LargeImageFile**.
 
 ### Medias: List
 
 Obtain a list of all the media in your account. You can [page and
 sort]('#organizing_for_list_methods') the returned list.
 
-<code class="full_width">
-  https://api.wistia.com/v1/medias.json
-</code>
+    GET https://api.wistia.com/v1/medias.json
 
 ### Filtering
 
@@ -813,60 +812,85 @@ Parameter | Description
 ----------|---------------
 project_id | An integer specifying the project from which you would like to get results.  
 name | Find a media or medias whose name exactly matches this parameter.  
-type  | A string specifying which type of media you would like to get. Values can be `Video`, `Audio`, `Image`, `PdfDocument`, `MicrosoftOfficeDocument`, `Swf`, or `UnknownType`.  
+type  | A string specifying which type of media you would like to get. Values can be **Video**, **Audio**, **Image**, **PdfDocument**, **MicrosoftOfficeDocument**, **Swf**, or **UnknownType**.
 hashed_id | Find the media by hashed_id.
 
 #### Example Medias#List Request
 
-<code class='full_width'>
-  curl --user wistia:333344445555 https://api.wistia.com/v1/medias.json
-</code>
+#### The Request
+
+    GET https://api.wistia.com/v1/medias.json
+
+#### The Response
+
+**Status** 200 OK
 
 {% codeblock example_json_response.json %}
-[{
-  "id": 181279,
-  "hashed_id": "abc123",
-  "name": "Introducing the Slimlist",
-  "description": "Test Description",
-  "type": "Video",
-  "section": "Trailers",
-  "status": "ready",
-  "progress": 1.0,
-  "thumbnail": {
-    "url": "http://www.wistia.com/path/to/thumbnail2.png",
-    "width": 100,
-    "height": 60
-  },
-  "duration": 126,
-  "created": "2010-08-15T18:47:39+00:00",
-  "updated": "2010-08-21T21:47:00+00:00",
-  "assets": [
-    {
-      "url": "http://www.wistia.com/path/to/original-file.bin",
-      "width": 640,
-      "height": 272,
-      "fileSize": 12345678,
-      "contentType": "video/quicktime",
-      "type": "Original"
+[
+  {
+    "id": 377249,
+    "name": "Litmus Team Video - Proof 2",
+    "type": "Video",
+    "created": "2011-05-26T00:04:25+00:00",
+    "updated": "2011-05-26T00:04:25+00:00",
+    "duration": 67.85,
+    "hashed_id": "0daadf36b3",
+    "description": "",
+    "progress": 1,
+    "status": "ready",
+
+    "thumbnail": {
+      "url": "http://embed.wistia.com/deliveries/02b2a615c6cd0db58132d2cb92fda84e04c9d8f3.jpg?image_crop_resized=100x60",
+      "width": 100,
+      "height": 60
     },
-    {
-      "url": "http://www.wistia.com/path/to/mp4-version.bin",
-      "width": 640,
-      "height": 272,
-      "fileSize": 12123456,
-      "contentType": "video/mp4",
-      "type": "Mp4Video"
+
+    "project": {
+      "id": 47115,
+      "name": "Media Needed to Rock",
+      "hashed_id": "5cb193e92c"
     },
-    {
-      "url": "http://www.wistia.com/path/to/still-image.bin",
-      "width": 640,
-      "height": 272,
-      "fileSize": 92008,
-      "contentType": "image/jpeg",
-      "type": "StillImageFile"
-    }
-  ]
-}]
+
+    "assets": [
+
+      {
+        "url": "http://embed.wistia.com/deliveries/6a55cd744123d52dd2735f31a2720451989da1ce.bin",
+        "width": 1280,
+        "height": 720,
+        "fileSize": 42726643,
+        "contentType": "video/quicktime",
+        "type": "OriginalFile"
+      },
+
+      {
+        "url": "http://embed.wistia.com/deliveries/d8b6b17ed40700c2bc4ba98dd481f7768dc6ad3a.bin",
+        "width": 640,
+        "height": 360,
+        "fileSize": 9305415,
+        "contentType": "video/mp4",
+        "type": "Mp4VideoFile"
+      },
+
+      {
+        "url": "http://embed.wistia.com/deliveries/18bc4e5256107dda3cc5e77e719ac8cc90408cd5.bin",
+        "width": 640,
+        "height": 360,
+        "fileSize": 6054188,
+        "contentType": "video/mp4",
+        "type": "IphoneVideoFile"
+      },
+
+      {
+        "url": "http://embed.wistia.com/deliveries/02b2a615c6cd0db58132d2cb92fda84e04c9d8f3.bin",
+        "width": 640,
+        "height": 360,
+        "fileSize": 37470,
+        "contentType": "image/jpeg",
+        "type": "StillImageFile"
+      }
+    ]
+  }
+]
 {% endcodeblock %}
 
 ---
@@ -875,19 +899,17 @@ hashed_id | Find the media by hashed_id.
 
 Get information about a specific piece of media that you have uploaded to your account.
 
-<code class="full_width">
-https://api.wistia.com/v1/medias/&lt;media-id&gt;.json
-</code>
+    https://api.wistia.com/v1/medias/<media-hashed-id>.json
 
-#### Example Media#Show
+#### Example Media#Show Request
 
-Here is an example request:
+#### The Request
 
-<code class='full_width'>
-  curl --user wistia:2baf301d70cdfe6fa3a000770c9989674105d https://api.wistia.com/v1/medias/v80gyfkt28.json
-</code>
+    GET https://api.wistia.com/v1/medias/v80gyfkt28.json
 
-Here is the JSON response received:
+#### The Response
+
+**Status** 200 OK
 
 {% codeblock example_json_response.json %}
 {
@@ -957,7 +979,7 @@ Update attributes on a piece of media.
 
 #### The Request
 
-<code class="full_width">PUT https://api.wistia.com/v1/medias/&lt;media-id&gt;.json</code>
+    PUT https://api.wistia.com/v1/medias/<media-hashed-id>.json
 
 
 Parameter Name      |  Description
@@ -969,23 +991,31 @@ description        | A new description to display next to the media within Wisti
 
 #### Example Media#Update Request
 
+#### The Request
+
+    PUT https://api.wistia.com/v1/medias/x8fiv4y2mc.json?name=A%20New%20Hope
+
+#### The Response
+
+**Status** 200 OK
 
 {% codeblock example_json_response.json %}
 {
-  "id": 181279,
-  "name": "Introducing the Slimlist",
+  "id": 5483881,
+  "name": "A New Hope",
   "type": "Video",
-  "section": "Trailers",
+  "created": "2014-01-03T23:27:30+00:00",
+  "updated": "2014-01-03T23:27:30+00:00",
+  "duration": 67.85,
+  "hashed_id": "x8fiv4y2mc",
+  "description": "",
+  "progress": 1,
   "status": "ready",
-  "progress": 1.0,
   "thumbnail": {
-    "url": "http://www.wistia.com/path/to/thumbnail2.png",
+    "url": "http://embed.wistia.com/deliveries/02b2a615c6cd0db58132d2cb92fda84e04c9d8f3.jpg?image_crop_resized=100x60",
     "width": 100,
     "height": 60
-  },
-  "duration": 126,
-  "created": "2010-08-15T18:47:39+00:00",
-  "updated": "2010-08-21T21:47:00+00:00"
+  }
 }
 {% endcodeblock %}
 
@@ -995,17 +1025,43 @@ description        | A new description to display next to the media within Wisti
 
 Delete a media from your account.
 
-<code class="full_width">
-DELETE https://api.wistia.com/v1/medias/&lt;media-id&gt;.json
-</code>
+    DELETE https://api.wistia.com/v1/medias/<media-hashed-id>.json
 
-#### The Response
-
-If the media is deleted successfully, the server will respond with `HTTP status 
-200 OK` to let you know that it worked.
+If the media is deleted successfully, the server will respond with HTTP status 
+**200 OK** to let you know that it worked.
 
 The body of the response will contain an object representing the piece of media
 that was just deleted.
+
+#### Example Request
+
+#### The Request
+
+    DELETE https://api.wistia.com/v1/medias/w3fpuwlec9.json
+
+#### The Response
+
+**Status** 200 OK
+
+{% codeblock example_json_response.json %}
+{
+  "id": 5483881,
+  "name": "A New Hope",
+  "type": "Video",
+  "created": "2014-01-03T23:27:30+00:00",
+  "updated": "2014-01-03T23:27:30+00:00",
+  "duration": 67.85,
+  "hashed_id": "x8fiv4y2mc",
+  "description": "",
+  "progress": 1,
+  "status": "ready",
+  "thumbnail": {
+    "url": "http://embed.wistia.com/deliveries/02b2a615c6cd0db58132d2cb92fda84e04c9d8f3.jpg?image_crop_resized=100x60",
+    "width": 100,
+    "height": 60
+  }
+}
+{% endcodeblock %}
 
 
 ---
@@ -1015,9 +1071,7 @@ that was just deleted.
 
 The Wistia data API allows you to copy a piece of media.
 
-<code class="full_width">
-POST https://api.wistia.com/v1/medias/&lt;media-id&gt;/copy.json
-</code>
+    POST https://api.wistia.com/v1/medias/<media-hashed-id>/copy.json
 
 #### Parameters
 
@@ -1028,19 +1082,19 @@ owner (optional)      | An email address specifying the owner of the new media. 
 
 #### The Response
 
-If the media is copied successfully, the server will respond with `HTTP status
-201 Created`. The HTTP `Location` header will be set to the URL where the
+If the media is copied successfully, the server will respond with HTTP status
+**201 Created**. The HTTP **Location** header will be set to the URL where the
 newly created media resource resides.  The body of the response will contain an
 object representing the *new copy* of the media that was just created.
 
 
 #### Example Media#Copy Request
 
-The request:
+#### The Request
 
-<code class="full_width">
-POST https://api.wistia.com/v1/medias/zckfiliwoi/copy.json
-</code>
+    POST https://api.wistia.com/v1/medias/zckfiliwoi/copy.json
+
+#### The Response
 
 **Status:** 201 Created<br/>
 **Location:** https://api.wistia.com/v1/medias/wrlyf77iw5.json
@@ -1073,14 +1127,9 @@ POST https://api.wistia.com/v1/medias/zckfiliwoi/copy.json
 
 Aggregated tracking statistics for a video that has been embedded on your site.
 
-**Note:** This request works for *videos only*.
+    GET https://api.wistia.com/v1/medias/<media-hashed-id>/stats.json
 
-If you try to get stats for a non-video, the server will respond with HTTP
-status code `400 Bad Request` and the body will contain an error message.
-
-<code class="full_width">
-  GET https://api.wistia.com/v1/medias/&lt;media-id&gt;/stats.json
-</code>
+{{"This request works for videos only. If you try to get stats for a non-video, the server will respond with HTTP status code `400 Bad Request` and the body will contain an error message." | note }}
 
 #### The Response
 
@@ -1105,12 +1154,14 @@ averagePercentWatched   | This is an integer between 0 and 100.  It shows the av
 
 #### Example Media#Stats Request
 
-The request:
-<code class='full_width'>
-  curl --user wistia:333344445555 https://api.wistia.com/v1/medias/azh1x9nesb/stats.json
-</code>
+#### The Request
 
-The response:
+    GET https://api.wistia.com/v1/medias/g5pnf59ala/stats.json
+
+#### The Response
+
+**Status** 200 OK
+
 {% codeblock example_json_response.json %}
 {
     "id": 3690639,
