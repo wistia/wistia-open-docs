@@ -20,6 +20,7 @@ class TheApp < Sinatra::Base
     r301 %r{/viewer-rec}, "#{$config.basepath}/viewer-requirements"
     r301 %r{/oembed}, "#{$config.basepath}/embed-api"
     r301 "#{$config.basepath}/construct-an-embed-code", "#{$config.basepath}/embed-api"
+    r301 %r{/transcripts}, "#{$config.basepath}/captions"
     rewrite %r{#{$config.basepath}(.*)}, '$1'
   end
 
