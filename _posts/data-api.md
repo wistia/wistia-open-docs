@@ -1199,10 +1199,11 @@ url   | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
 The Captions API allows you to manage the captions for a video.
 
 **Notes:**
+
 * You can only have 1 set of captions for each video. Support for
 multiple captions will be added later.
 * Captions API only supports JSON.
-* `<language-code>` denotes which language to get captions for and it should
+* **<language-code>** denotes which language to get captions for and it should
 conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
 
 ### Methods
