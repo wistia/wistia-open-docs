@@ -233,4 +233,4 @@ Here's the workflow:
   * Password: your account's API password
   * and make sure to select *FTP with TLS/SSL* from the security options.
 * Your projects list will appear. 
-* When uploading, upload into the Project's folder, not it's `_assets` dir
+* Upload into the Project's folder, not the `_assets` dir
