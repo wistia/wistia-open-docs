@@ -202,18 +202,18 @@ Retrieve details about a specific project.
 
 To get the details on a Project (and all media therein), send an HTTP **GET** request to the following URL:
 
-<code class="full_width">
-  GET https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
-</code>
+    GET https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
 
 The response for the Projects#show request will also include an array of media
 objects. Each entry in the media array has [all media object fields](#media_show).
 
 #### Example Projects#Show Request
 
-<code class='full_width'>
-  curl --user wistia:333344445555 https://api.wistia.com/v1/projects/ln2k6qwi9k.json
-</code>
+#### Request
+
+    curl --user wistia:333344445555 https://api.wistia.com/v1/projects/ln2k6qwi9k.json
+
+#### Response
 
 {% codeblock example_json_response.json %}
 {
@@ -291,9 +291,8 @@ objects. Each entry in the media array has [all media object fields](#media_show
 
 Create a new project in your Wistia account.
 
-<code class="full_width">
-  POST https://api.wistia.com/v1/projects.json
-</code>
+
+    POST https://api.wistia.com/v1/projects.json
 
 
 #### Parameters
@@ -309,9 +308,9 @@ public (optional) | A flag indicating whether or not the project is enabled for 
 
 #### The Response
 
-If the project is created successfully, the API will respond with an `HTTP 201
-Created` status code, and the “Location” HTTP header will refer to the URL
-where the API can make the next request to get the new project.  
+If the project is created successfully, the API will respond with an **HTTP 201
+Created** status code, and the **Location** HTTP header will point to the newly
+created project.  
 
 
 #### Example Projects#Create Request
@@ -342,11 +341,7 @@ where the API can make the next request to get the new project.
 
 The Wistia data API allows you to update a project.
 
-#### The Request
-
-<code class="full_width">
-  PUT https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
-</code>
+    PUT https://api.wistia.com/v1/projects/&lt;project-hashed-id&gt;.json
 
 #### The Parameters
 
@@ -362,19 +357,27 @@ public | A flag indicating whether or not the project is enabled for public acce
 
 #### Example Projects#Update Request
 
+#### The Request
+
+    PUT https://api.wistia.com/v1/projects/lpzgy6e09m.json?name="Jeff's First Project"
+
+#### The Response
+
+**Status**: 200 OK
+
 {% codeblock example_json_response.json %}
 {
   "id": 1,
-  "name": "Updated Project Name",
-  "description": "Updated Project Description",
+  "name": "Jeff's First Project",
+  "description": "This Project needs a description BAD.",
   "mediaCount": 5,
-  "created": "2010-08-15T18:47:39+00:00",
-  "updated": "2010-08-15T18:47:39+00:00",
-  "hashedId": "4d23503f70",
+  "created": "2013-08-15T18:47:39+00:00",
+  "updated": "2013-08-15T18:47:39+00:00",
+  "hashedId": "lpzgy6e09m",
   "anonymousCanUpload": false,
   "anonymousCanDownload": false,
   "public": false,
-  "publicId": "4bD"
+  "publicId": "lpzgy6e09m"
 }
 {% endcodeblock %}
 
@@ -386,18 +389,23 @@ The Wistia data API allows you to delete a project.
 
 #### The Request
 
-<code class="full_width">
-  DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json
-</code>
+    DELETE https://api.wistia.com/v1/projects/&lt;project-id&gt;.json
 
 #### The Response
 
-If the project is deleted successfully, the server will respond with `HTTP
-status 200 OK`. The body of the response will contain an object representing
+If the project is deleted successfully, the server will respond with HTTP
+status **200 OK**. The body of the response will contain an object representing
 the project that was just deleted.
 
 #### Example Projects#Delete Request
 
+#### The Request
+
+    DELETE https://api.wistia.com/v1/projects/lpzgy6e09m.json
+
+#### The Response
+
+**Status**: 200 OK
 
 {% codeblock example_json_response.json %}
 {
@@ -407,11 +415,11 @@ the project that was just deleted.
   "mediaCount": 5,
   "created": "2010-08-15T18:47:39+00:00",
   "updated": "2010-08-15T18:47:39+00:00",
-  "hashedId": "4d23503f70",
+  "hashedId": "lpzgy6e09m",
   "anonymousCanUpload": false,
   "anonymousCanDownload": false,
   "public": false,
-  "publicId": "4bD"
+  "publicId": "lpzgy6e09m"
 }
 {% endcodeblock %}
 
@@ -423,9 +431,7 @@ Copy a project, including all media and sections.
 
 {{ "This method does not copy the projects sharing information (i.e. users that could see the old project will not automatically be able to see the new one)." | note }} 
 
-<code class="full_width">
-  POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json
-</code>
+    POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/copy.json
 
 #### Parameters
 
@@ -438,8 +444,8 @@ adminEmail (optional) | The email address of the account manager that will be th
 
 #### The Response
 
-If the project is copied successfully, the server will respond with `HTTP 
-status 201 Created`.
+If the project is copied successfully, the server will respond with HTTP 
+status **201 Created**.
 
 The HTTP `Location` header will be set to the URL where the newly created 
 project resource resides.
@@ -449,8 +455,14 @@ the project that was just created.
 
 #### Example Projects#Copy Request
 
+#### The Request
+
+    POST https://api.wistia.com/v1/projects/fuw14mll5u/copy.json
+
+#### The Response
+
 **Status:** 201 Created<br/>
-**Location:** https://api.wistia.com/v1/projects/3.json
+**Location:** https://api.wistia.com/v1/projects/epzn8s7wju.json
 
 {% codeblock example_json_response.json %}
 {
@@ -460,11 +472,11 @@ the project that was just created.
   "mediaCount": 5,
   "created": "2010-08-15T18:47:39+00:00",
   "updated": "2010-08-15T18:47:39+00:00",
-  "hashedId": "4d23503f70",
+  "hashedId": "epzn8s7wju",
   "anonymousCanUpload": false,
   "anonymousCanDownload": false,
   "public": false,
-  "publicId": "4bD"
+  "publicId": "epzn8s7wju"
 }
 {% endcodeblock %}
 
