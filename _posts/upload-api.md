@@ -105,6 +105,34 @@ The *file* parameter must be multipart-form encoded into the request body.
   </tr>
 </table></div>
 
+
+
+## Examples
+
+**Uploading a media file with cURL**
+
+<code class="full_width">$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/</code>
+
+We expect a multipart/form-data POST to the server, with both **file** and
+**api_password** params.
+
+**Importing a media file via URL with cURL**
+
+<code class="full_width">$ curl -i -d "api_password=&lt;YOUR_API_PASSWORD&gt;&amp;url=&lt;REMOTE_FILE_PATH&gt;" https://upload.wistia.com/</code>
+
+We expect an `application/x-www-form-urlencoded` POST to the server, with both
+**url** and **api_password** params.
+
+### Using the OAuth2 Access Token
+
+If you are using the **access_token** param with [OAuth2]({{ '/oauth2' | post_url }}),
+it should be appended to the URL as a query parameter, like:
+
+    https://upload.wistia.com/?access_token=myaccesstoken
+
+If you are importing the media file via URL, you can also include the
+**access_token** as a POST param.
+
 ## Response Format
 
 For successful uploads, the Upload API will respond with an HTTP-200 and the
@@ -146,31 +174,7 @@ limits, but for those that do, you will receive a 400 response with JSON like:
 
 This data structure may change in future releases.
 
-## Examples
-
-Uploading a media file with cURL:
-
-<code class="full_width">$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/</code>
-
-In other words, we expect a multipart/form-data POST to the server, with both 
-`file` and `api_password` params.
-
-If you're using the `access_token` param with [OAuth2]({{ '/oauth2' | post_url }}),
-it should be appended to the URL as a query parameter, like
-`https://upload.wistia.com/?access_token=myaccesstoken`.
-
-Importing a media file with cURL:
-
-<code class="full_width">$ curl -i -d "api_password=&lt;YOUR_API_PASSWORD&gt;&amp;url=&lt;REMOTE_FILE_PATH&gt;" https://upload.wistia.com/</code>
-
-In other words, we expect an application/x-www-form-urlencoded POST to the
-server, with both `url` and `api_password` params.
-
-If you're using the `access_token` param with [OAuth2]({{ '/oauth2' | post_url }}),
-you can either include it as another POST param, or append it to the URL as a
-query parameter.
-
-## Ruby Code
+## Examples Using Ruby
 
 All media uploaded via https://upload.wistia.com must be transferred as
 multipart-form encoded data inside the body of an HTTP-POST. This can be
