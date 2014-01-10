@@ -155,7 +155,7 @@ widthchange   | width                   | Fired when the width of the embed code
 
 ---
 
-## Player API Examples
+## Player API Tutorials
 
 To get you making video magic as fast as possible, here are some examples of common javascript player API projects. We have also moved many of the more involved examples over to our [demobin](http://wistia.github.com/demobin) for your review.
 
