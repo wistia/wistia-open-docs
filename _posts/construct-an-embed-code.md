@@ -1,13 +1,13 @@
 ---
-title: Embed API
+title: Construct a Wistia Embed Code
 layout: post
 api: true
 special_category_link: developers
 category: Developers
 api_warning: true
-description: Learn how to construct an embed code starting with just the video ID!
+description: Learn to programmatically construct an embed code starting with just the video ID!
 footer: 'for_developers'
-post_intro: <p>You may find yourself needing to build embed codes for your videos dynamically.</p><p>The <a href='#data_api_approach'>Data API approach</a> is good for lots of videos and dynamically updated content.</p><p>The <a href="#oembed_approach">oEmbed approach</a> is best when you have the URL for your video - just plug it in with the parameters you want and get an embed code!</p><p>Once you have your embed code built, check out the <a href="#embedding_options_and_plugins">Embedding Options and Plugins</a> guide to add custom behavior to your embeds programmatically.</p>
+post_intro: <p>If your use case requires you to build lots of embed codes for your videos dynamically, you will want to live by this guide.</p><p>The best way to accomplish programmatic generation of embed codes is using the <a href="#oembed_approach">oEmbed approach</a>, but you can also use a <a href='#data_api_approach'>Data API-based approach</a>.</p>
 ---
 
 ## oEmbed Approach
