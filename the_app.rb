@@ -21,6 +21,7 @@ class TheApp < Sinatra::Base
     r301 %r{/oembed}, "#{$config.basepath}/embed-api"
     r301 "#{$config.basepath}/construct-an-embed-code", "#{$config.basepath}/embed-api"
     r301 %r{/transcripts}, "#{$config.basepath}/captions"
+    r301 %r{/customize-api}, "#{$config.basepath}/data-api#customizations"
     rewrite %r{#{$config.basepath}(.*)}, '$1'
   end
 

@@ -99,7 +99,7 @@ paramaters will be covered in this documentation.
 
 ### A Note on Plugins and Customize
 
-With the addition of [customize]({{ '/customize-api' | post_url }}), plugins
+With the addition of [customize]({{ '/data-api#customizations' | post_url }}), plugins
 enabled in the Account GUI are not visible in embed codes.
 
 If you want to add the plugin on the page, or be able to make changes
