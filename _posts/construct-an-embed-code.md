@@ -7,35 +7,60 @@ category: Developers
 api_warning: true
 description: Learn to programmatically construct an embed code starting with just the video ID!
 footer: 'for_developers'
-post_intro: <p>If your use case requires you to build lots of embed codes for your videos dynamically, you will want to live by this guide.</p><p>The best way to accomplish programmatic generation of embed codes is using the <a href="#oembed_approach">oEmbed approach</a>, but you can also use a <a href='#data_api_approach'>Data API-based approach</a>.</p>
+post_intro: <p>If your use case requires you to build lots of embed codes for your videos dynamically, you will want to live by this guide. We'll break down each embed code type, and the best way to generate them.</p>
 ---
 
-## oEmbed Approach
+## Embed Code Types
+
+Before we get started, let's define some jargon around embed code types. At
+this time, the three embed code types you can use with Wistia are:
+
+* **iframe** - super simple, supported almost everywhere, and easy to build.
+* **javascript player API** - If you want to use the 
+  [Player API]({{ '/player-api' | post_url }}) to interact with your video, use
+  this embed type.
+* **SEO** - We've built an embed code optimized for Google's SEO guidelines.
+  This embed code type has the most moving parts, and can be tricky in some
+  over-zealous CMS platforms.
+
+
+
+
+
+## Using the oEmbed Endpoint
+
+Here's a quick primer on using the Wistia oEmbed endpoint, which is the easiest
+way to generate each of the Wistia embed code types.
+
 
 ### The Endpoint
 
 Our oEmbed endpoint is: `http://fast.wistia.net/oembed`
 
-Currently, our oEmbed endpoint recognizes two URL formats.
+By default, the endpoint returns JSON, but use
+`http://fast.wistia.net/oembed.xml` to return XML.
 
-### iframe embed code URLs
+Our oEmbed endpoint recognizes two URL formats, *iframe embed URLs*
+and *public media URLs*.
+
+**iframe Embed URLs**
 
 You can build these for single videos or playlists, or generate them through 
 your account.
 
-**example:** http://fast.wistia.net/embed/iframe/
-b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
+**Examples**
 
-**playlist example:** http://fast.wistia.net/embed/playlists/fbe3880a4e?theme=trim
-&version=v1&videoOptions%5BvideoHeight%5D=360&videoOptions%5BvideoWidth%5D=640
+* **single video**: `http://fast.wistia.net/embed/iframe/b0767e8ebb`
 
-### Public Media URLs
+* **playlist**: `http://fast.wistia.net/embed/playlists/fbe3880a4e`
+
+**Public Media URLs**
 
 Public Media URLs are the address to a video in your account.
 
-**example:** http://home.wistia.com/medias/e4a27b971d
+* **example**: `http://home.wistia.com/medias/e4a27b971d`
 
-It's likely we'll add more URLs to this list in the future.
+
 
 ### The Regex
 
@@ -58,40 +83,17 @@ Note, it's likely we'll add support for more URLs in the future so feel free to
 use a more general regular expression so you don't miss out on future 
 enhancements! Perhaps this:
 
-<code class="full_width">/https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/</code>
+    /https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/
 
-### An Example
 
-Get the embed code and some information for a video at ''http://home.wistia.com/medias/e4a27b971d'' in JSON format:
 
-<code class="full_width">curl "http://fast.wistia.net/oembed?url=http://home.wistia.com/medias/e4a27b971d"</code>
 
-This returns:
 
-{% codeblock return.json %}
-{
-  "version":"1.0",
-  "type":"video",
-  "html":"&lt;iframe src=\"http://fast.wistia.net/embed/iframe/e4a27b971d?version=v1&videoHeight=360&videoWidth=640\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" width=\"640\" height=\"360\"&gt;&lt;/iframe&gt;",
-  "width":640,
-  "height":360,
-  "provider_name":"Wistia, Inc.",
-  "provider_url":"http://wistia.com",
-  "title":"Brendan - Make It Clap",
-  "thumbnail_url":"http://embed.wistia.com/deliveries/2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg?image_crop_resized=100x60",
-  "thumbnail_width":100,
-  "thumbnail_height":60
-}
-{% endcodeblock %}
 
-If you're looking for XML instead of JSON, use: `http://fast.wistia.net/oembed.xml`
 
-For all the fine details about the options supported, see the official
-[oEmbed spec](http://oembed.com).
+
 
 ## oEmbed Parameters
-
-Our endpoint supports all the options detailed at oembed.com.
 
 The required url parameter that's passed in supports all the options detailed
 in the [Player API]({{ '/player-api' | post_url }}).
@@ -110,13 +112,90 @@ popoverHeight | integer | Only applicable to "popover" embed type. The requested
 popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
 ssl | boolean | Determines whether the embed code should use https. Defaults to false.
 
-If given a `width`, `height`, `maxwidth`, or `maxheight` parameter 
+If given a **width**, **height**, **maxwidth**, or **maxheight** parameter 
 (or any combination of those), the other dimensions in the resulting embed 
 code may change so that the video's aspect ratio is preserved.
 
 {{ "These parameters are attached to the Wistia media URL, and not the oEmbed call. So they must be URL-encoded to travel with the Wistia URL." | note }} 
 
-### Example
+
+
+
+## Troubleshooting
+
+  1. If an invalid URL (one that doesn't match our regular expression above) is
+     given, the endpoint will return **404 Not Found**.
+  2. If an unparseable URL is given in the url param, the endpoint will return
+     **404 Not Found**.
+  3. If a media is found but has no available embed code, the endpoint will
+     return **501 Not Implemented**. Video, Image, Audio, and Document files all currently implement oEmbeds.
+  4. If a playlist is found but has no videos, the endpoint will return **501 Not Implemented**.
+
+
+
+## iframe Embed Tutorial
+
+### Using the oEmbed
+
+Here is how we can get the embed code and some information for a video at
+`http://home.wistia.com/medias/e4a27b971d` in JSON format:
+
+    curl "http://fast.wistia.net/oembed?url=http://home.wistia.com/medias/e4a27b971d"
+
+This returns:
+
+{% codeblock return.json %}
+{
+  "version":"1.0",
+  "type":"video",
+  "html":"<iframe src=\"http://fast.wistia.net/embed/iframe/e4a27b971d?version=v1&videoHeight=360&videoWidth=640\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" width=\"640\" height=\"360\"></iframe>",
+  "width":640,
+  "height":360,
+  "provider_name":"Wistia, Inc.",
+  "provider_url":"http://wistia.com",
+  "title":"Brendan - Make It Clap",
+  "thumbnail_url":"http://embed.wistia.com/deliveries/2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg?image_crop_resized=100x60",
+  "thumbnail_width":100,
+  "thumbnail_height":60
+}
+{% endcodeblock %}
+
+Note the `html` returned in the JSON body is the iframe embed code you can use
+to add this video to your website.
+
+For all the fine details about the options supported, see the official
+[oEmbed spec](http://oembed.com).
+
+### Using a Template Approach
+
+If you want to avoid making the additional request against the oEmbed endpoint,
+you can also build an iframe embed code template, and then add in the video's
+`hashed ID`.
+
+For this example we'll be using a hashed ID of `'abcde12345'`.
+
+The basic iframe embed code looks like this:
+
+{% codeblock building_an_iframe_embed_code.html %}
+<iframe src="http://fast.wistia.net/embed/iframe/<media-hashed-id>" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+{% endcodeblock %}
+
+So to use this template with the hashed ID `'abcde12345'`, we insert it in
+place of `<media-hashed-id>`:
+
+{% codeblock building_an_iframe_embed_code.html %}
+<iframe src="http://fast.wistia.net/embed/iframe/abcde12345" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
+{% endcodeblock %}
+
+{{ "Because height and width will change based on your video's content, the template approach is probably best when your entire library uses a consistent size." | note }}
+
+---
+
+
+
+## Javascript API Embed Tutorial
+
+### oEmbed Approach
 
 In this example, we'll request an `API` embed code type, with the javascript 
 handle `oEmbedVideo`:
@@ -158,132 +237,10 @@ This returns:
 }
 {% endcodeblock %}
 
----
+Note the `html` returned in the JSON body is the embed code you would use to
+add this video to your website.
 
-## Using JSONP
-
-[JSONP](http://en.wikipedia.org/wiki/JSONP) is a javascript technique used to
-get information from a server that is not the same origin as your current
-domain. This means they can avoid cross-domain security issues.
-
-In this example, we'll write some javascript to pull data for our video
-against the oEmbed endpoint, utilizing JSONP. Then, we'll manipulate the data
-returned to embed the thumbnail image.
-
-Given the oEmbed `base URL`, your `account URL`, and a `media hashed id`, we can 
-use the jQuery `getJSON` function to call against the oEmbed endpoint to return
-the video data. 
-
-Note this function also takes a callback function as a parameter. We'll set up
-that callback function next.
-
-{% codeblock playlist_api.js %}
-var baseUrl = "http://fast.wistia.com/oembed/?url=";
-var accountUrl = escape("http://home.wistia.com/medias/");
-var mediaHashedId = "01a1d9f97c";
-
-function getThumbnailUrl(hashedId, callback) {
-  $.getJSON(baseUrl + accountUrl + hashedId + "&format=json&callback=?", callback);
-}
-{% endcodeblock %}
-
-This function will return a JSON data object, and pass it to our callback
-function, which will parse the JSON and log the thumbnail URL. Let's write
-that callback function now:
-
-{% codeblock playlist_api.js %}
-function parseJSON(json) {
-  console.log(json.thumbnail_url);
-};
-{% endcodeblock %}
-
-Finally, we'll setup something to call these functions for our `media hashed id`:
-
-<code class="full_width">getThumbnailUrl(mediaHashedId, parseJSON);</code>
-
----
-
-### Working With The Thumbnail
-
-Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a
-direct link to the thumbnail image asset. If your implementation involves using
-the thumbnail image (i.e. building your own 'popover' embeds, displaying your
-own play button, etc.) you should use this thumbnail image, which by default
-has no Wistia play button overlaid on it.
-
-See our [working with Wistia images]({{ '/working-with-images' | post_url }})
-guide for more info!
-
-### Troubleshooting
-
-  1. If an invalid URL (one that doesn't match our regular expression above) is
-     given, the endpoint will return <span class="code">404 Not Found</span>.
-  2. If an unparseable URL is given in the url param, the endpoint will return
-     <span class="code">404 Not Found</span>.
-  3. If a media is found but has no available embed code, the endpoint will
-     return <span class="code">501 Not Implemented</span>. Video, Image, Audio,
-and Document files all currently implement oembeds.
-  4. If a playlist is found but has no videos, the endpoint will return <span
-     class="code">501 Not Implemented</span>.
-
-### Make Your Life Easier
-
-If you're contemplating doing an oEmbed implementation with Wistia (or any
-oEmbed provider for that matter), we strongly recommend checking out
-[Embedly](http://embed.ly). By integrating with them you'll have immediate
-access to over 100 oEmbed providers. They also have great documentation and
-ready-made libraries for every popular language, plus they're just nice guys!
-
----
-
-## Data API Approach
-
-
-{{ "This is totally FYI: We've been recommending the <a href='#oembed_approach'>oEmbed approach</a> as the preferred method. It provides a simple way to generate Wistia embed codes without you having to write much code. The only downside is you'll have to make an extra request to get an embed code." | note }} 
-
-The hashed_id is a unique identifier to a video within the Wistia system. 
-You can get hashed IDs for your videos programmatically using the 
-[Data API]({{ '/data-api' | post_url }}).
-
-By-and-large, our embed codes are *turnkey* - the most important part is the
-hashed ID.
-
-### Building an iframe embed code
-
-For this example we'll be using a hashed ID of `'abcde12345'`. Substitute
-your hashed ID anywhere you see `'abcde12345'`.
-
-First, build the base URL:
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345</code>
-
-Next, you could customize the video parameters [see more about customization]({{'/customize-api' | post_url}}):
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false</code>
-
-You can also add plugin parameters. Plugins have parameters in their own 
-namespace, using bracket notation:
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin[socialbar][version]=v1&plugin[socialbar][buttons]=embed-twitter-facebook</code>
-
-It is good practice to URL encode both keys and values:
-
-<code class="full_width">http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook</code>
-
-Finally we drop this src into an iframe, where we also specify the width and
-height. 
-
-{{"Width and height should be the size of the entire embed (the video plus the plugins)." | note }}
-
-{% codeblock building_an_iframe_embed_code.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?playerColor=ff0000&fullscreenButton=false&plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="387"></iframe>
-{% endcodeblock %}
-
-
-### Building a JavaScript API embed code
-
-If you are using the [Player API]({{'/player-api' | post_url}}) it's important
-to embed a video directly on the page (rather than using an iframe).
+### Template Approach
 
 In this case we do the following:
 
@@ -332,34 +289,122 @@ wistiaEmbed = Wistia.embed("abcde12345", {
 </script>
 {% endcodeblock %}
 
-Now that you've finished your API embed, you can access the [JavaScript API]({{ '/player-api' | post_url }}) and 
-do more cool stuff!
+---
 
-{% codeblock playlist_api.js %}
-<script>
-wistiaEmbed.bind("end", function() {
-  alert("The video has ended!");
-});
-wistiaEmbed.bind("timechange", function(t) {
-  if (t > 25 && !highlightedCallToAction) {
-    highlightCallToAction();
-  }
-});
-wistiaEmbed.volume(.5);
-</script>
+
+
+
+
+
+## Video SEO Embed Tutorial
+
+In this example, we'll request an `SEO` embed code type.
+
+First, the media URL we'll request:
+
+    http://home.wistia.com/medias/e4a27b971d
+
+Next, we'll add the parameters for our request:
+
+    http://home.wistia.com/medias/e4a27b971d?embedType=seo
+
+We'll URL-encode this request:
+
+    http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dseo
+
+{{ "We URL-encoded this request, because we want the parameter `embedType` passed along to Wistia, not to the oEmbed endpoint." | note }}
+
+And now use the oEmbed endpoint:
+
+<code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dseo"</code>
+
+This returns:
+
+{% codeblock return.json %}
+{
+    "duration": 16.43,
+    "height": 360,
+    "html": "<div id=\"wistia_e4a27b971d\" class=\"wistia_embed\" style=\"width:640px;height:360px;\"><div itemprop=\"video\" itemscope itemtype=\"http://schema.org/VideoObject\"><meta itemprop=\"name\" content=\"Brendan - Make It Clap\" /><meta itemprop=\"duration\" content=\"PT16S\" /><meta itemprop=\"thumbnailUrl\" content=\"https://embed-ssl.wistia.com/deliveries/2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.bin\" /><meta itemprop=\"contentURL\" content=\"https://embed-ssl.wistia.com/deliveries/fc8d44e971b21883eab861a56ce783052bb9fd42.bin\" /><meta itemprop=\"embedURL\" content=\"https://embed-ssl.wistia.com/flash/embed_player_v2.0.swf?2013-10-04&controlsVisibleOnLoad=true&customColor=7b796a&fullscreenDisabled=true&hdUrl%5Bext%5D=flv&hdUrl%5Bheight%5D=720&hdUrl%5Bsize%5D=4370055&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Ff6df0d2748d9388ed25d2f019081c4581f5d3d54.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=16.43&showVolume=true&stillUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg%3Fimage_crop_resized%3D640x360&unbufferedSeek=true&videoUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Ffc8d44e971b21883eab861a56ce783052bb9fd42.bin\" /><meta itemprop=\"uploadDate\" content=\"2012-07-25T16:47:44Z\" /><object id=\"wistia_e4a27b971d_seo\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" style=\"display:block;height:360px;position:relative;width:640px;\"><param name=\"movie\" value=\"https://embed-ssl.wistia.com/flash/embed_player_v2.0.swf?2013-10-04\"></param><param name=\"allowfullscreen\" value=\"true\"></param><param name=\"allowscriptaccess\" value=\"always\"></param><param name=\"bgcolor\" value=\"#000000\"></param><param name=\"wmode\" value=\"opaque\"></param><param name=\"flashvars\" value=\"controlsVisibleOnLoad=true&customColor=7b796a&fullscreenDisabled=true&hdUrl%5Bext%5D=flv&hdUrl%5Bheight%5D=720&hdUrl%5Bsize%5D=4370055&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Ff6df0d2748d9388ed25d2f019081c4581f5d3d54.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=16.43&showVolume=true&stillUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg%3Fimage_crop_resized%3D640x360&unbufferedSeek=true&videoUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Ffc8d44e971b21883eab861a56ce783052bb9fd42.bin\"></param><embed src=\"https://embed-ssl.wistia.com/flash/embed_player_v2.0.swf?2013-10-04\" allowfullscreen=\"true\" allowscriptaccess=\"always\" bgcolor=#000000 flashvars=\"controlsVisibleOnLoad=true&customColor=7b796a&fullscreenDisabled=true&hdUrl%5Bext%5D=flv&hdUrl%5Bheight%5D=720&hdUrl%5Bsize%5D=4370055&hdUrl%5Btype%5D=hdflv&hdUrl%5Burl%5D=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Ff6df0d2748d9388ed25d2f019081c4581f5d3d54.bin&hdUrl%5Bwidth%5D=1280&mediaDuration=16.43&showVolume=true&stillUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg%3Fimage_crop_resized%3D640x360&unbufferedSeek=true&videoUrl=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Ffc8d44e971b21883eab861a56ce783052bb9fd42.bin\" name=\"wistia_e4a27b971d_html\" style=\"display:block;height:100%;position:relative;width:100%;\" type=\"application/x-shockwave-flash\" wmode=\"opaque\"></embed></object><noscript itemprop=\"description\">Brendan - Make It Clap</noscript></div></div>\n<script charset=\"ISO-8859-1\" src=\"//fast.wistia.com/assets/external/E-v1.js\"></script>\n<script>\nwistiaEmbed = Wistia.embed(\"e4a27b971d\");\n</script>\n<script charset=\"ISO-8859-1\" src=\"//fast.wistia.com/embed/medias/e4a27b971d/metadata.js\"></script>",
+    "provider_name": "Wistia, Inc.",
+    "provider_url": "http://wistia.com",
+    "thumbnail_height": 360,
+    "thumbnail_url": "https://embed-ssl.wistia.com/deliveries/2d2c14e15face1e0cc7aac98ebd5b6f040b950b5.jpg?image_crop_resized=640x360",
+    "thumbnail_width": 640,
+    "title": "Brendan - Make It Clap",
+    "type": "video",
+    "version": "1.0",
+    "width": 640
+}
 {% endcodeblock %}
 
+Note the `html` returned in the JSON body is the embed code you would use to
+add this video to your website.
 
-### Building an SEO embed code
 
-Unfortunately you can't programmatically build an SEO-compatible embed yourself right now.
+---
 
-Google's video search is a bit antiquated in that it can't properly detect 
-videos inside iframes (which is our preferred method of embedding video). 
-They only recognize the `<object><embed>` style embed codes.
 
-The good news is you can easily use the 
-[oEmbed approach]('#oembed_approach') to generate an SEO embed for you.
+
+
+## Using JSONP
+
+[JSONP](http://en.wikipedia.org/wiki/JSONP) is a javascript technique used to
+get information from a server that is not the same origin as your current
+domain. This means they can avoid cross-domain security issues.
+
+In this example, we'll write some javascript to pull data for our video
+against the oEmbed endpoint, utilizing JSONP. Then, we'll manipulate the data
+returned to embed the thumbnail image.
+
+Given the oEmbed `base URL`, your `account URL`, and a `media hashed id`, we can 
+use the jQuery `getJSON` function to call against the oEmbed endpoint to return
+the video data. 
+
+Note this function also takes a callback function as a parameter. We'll set up
+that callback function next.
+
+{% codeblock playlist_api.js %}
+var baseUrl = "http://fast.wistia.com/oembed/?url=";
+var accountUrl = escape("http://home.wistia.com/medias/");
+var mediaHashedId = "01a1d9f97c";
+
+function getThumbnailUrl(hashedId, callback) {
+  $.getJSON(baseUrl + accountUrl + hashedId + "&format=json&callback=?", callback);
+}
+{% endcodeblock %}
+
+This function will return a JSON data object, and pass it to our callback
+function, which will parse the JSON and log the thumbnail URL. Let's write
+that callback function now:
+
+{% codeblock playlist_api.js %}
+function parseJSON(json) {
+  console.log(json.thumbnail_url);
+};
+{% endcodeblock %}
+
+Finally, we'll setup something to call these functions for our `media hashed id`:
+
+<code class="full_width">getThumbnailUrl(mediaHashedId, parseJSON);</code>
+
+---
+
+
+
+
+
+### Working With The Thumbnail
+
+Part of the JSON returned by the oEmbed is the `thumbnail_url`. This URL is a
+direct link to the thumbnail image asset. If your implementation involves using
+the thumbnail image (i.e. building your own 'popover' embeds, displaying your
+own play button, etc.) you should use this thumbnail image, which by default
+has no Wistia play button overlaid on it.
+
+See our [working with Wistia images]({{ '/working-with-images' | post_url }})
+guide for more info!
+
+---
 
 
 ## Embedding Options and Plugins
