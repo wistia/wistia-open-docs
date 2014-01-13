@@ -766,7 +766,7 @@ duration | Specifies the length (in seconds) for audio and video files. Specifie
 created | The date when the media was originally uploaded.  
 updated | The date when the media was last changed.  
 assets  | An array of the assets available for this media. See the table below for a description the fields in each asset object.  
-embedCode | **DEPRECATED:** If you want to programmatically embed videos, use the [Embed Api]({{ '/embed-api' | post_url }}).
+embedCode | **DEPRECATED:** If you want to programmatically embed videos, follow the [construct an embed code]({{ '/construct-an-embed-code' | post_url }}) guide.
 description | A description for the media which usually appears near the top of the sidebar on the media's page.  
 hashed_id | A unique alphanumeric identifier for this media.
 

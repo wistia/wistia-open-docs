@@ -16,7 +16,7 @@ embeds!
 
 These options are for use with both the
 [Customize API]({{ '/customize-api' | post_url }}) and
-[Embed API]({{ '/embed-api' | post_url }}).
+[Construct an Embed Code]({{ '/construct-an-embed-code' | post_url }}) guide.
 
 Option Name           | Type    | Description
 -----------           | ----    | -----------

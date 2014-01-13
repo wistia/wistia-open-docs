@@ -18,8 +18,8 @@ or *iframe*. If you are using iframe embeds, you will need to insert the
 your page.
 
 If you are also looking to construct embed codes, refer to
-[the Embed API]({{ '/embed-api' | post_url }}). Available options for embed
-codes are listed in
+the [construct an embed code]({{ '/construct-an-embed-code' | post_url }})
+guide. Available options for embed codes are listed in
 [Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
 **Playlists**
