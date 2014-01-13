@@ -135,7 +135,7 @@ width()                 | Gets the current width of the embed (the video plus an
 width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.
 
 
-## Player API Events
+## Javascript Player API Events
 
 Use these events when working with the `bind` and `unbind` methods.
 
