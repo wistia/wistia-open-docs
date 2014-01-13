@@ -104,12 +104,12 @@ embed code:
 Name | Type  | Description
 -----|-------|------------
 callback | string | Only applicable to JSON requests. When specified, json is wrapped in a javascript function given by the callback param. This is to facilitate JSONP requests.
-embedType | string | Only applicable to videos and playlists. Accepts "iframe", "api", "seo", "popover", "playlist_iframe", and "playlist_api".
+embedType | string | Only applicable to videos and playlists. Accepts **iframe**, **api**, **seo**, **popover**, **playlist_iframe**, and **playlist_api**.
 width | integer | The requested width of the video embed. Defaults to the native size of the video or 360, whichever is smaller.
 height | integer | The requested height of the video embed. Defaults to the native size of the video or 640, whichever is smaller.
-handle | string | Only applicable to "api", "seo", and "playlist_api" embed types. Sets the javascript handle. Default is "wistiaEmbed" for medias and "wistiaPlaylist" for playlists.
-popoverHeight | integer | Only applicable to "popover" embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.
-popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
+handle | string | Only applicable to **api**, **seo**, and **playlist_api** embed types. Sets the javascript handle. Default is **wistiaEmbed** for medias and **wistiaPlaylist** for playlists.
+popoverHeight | integer | Only applicable to **popover** embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.
+popoverWidth | integer | Only applicable to **popover** embed type. The requested width of the popover. Defaults to 150.
 ssl | boolean | Determines whether the embed code should use https. Defaults to false.
 
 If given a **width**, **height**, **maxwidth**, or **maxheight** parameter 
@@ -117,6 +117,7 @@ If given a **width**, **height**, **maxwidth**, or **maxheight** parameter
 code may change so that the video's aspect ratio is preserved.
 
 {{ "These parameters are attached to the Wistia media URL, and not the oEmbed call. So they must be URL-encoded to travel with the Wistia URL." | note }} 
+
 
 
 
