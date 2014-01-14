@@ -21,12 +21,47 @@ no_nav: true
 <div class='devhq_container'>
   <div class='api_button_garden'>
     <div class='column'>
-      <div class='api_garden_square' id='upload_api'>
+      <div class='api_garden_square' id='data_api'>
+        <a href="{{ '/data-api' | post_url }}">Data API</a>
+        <p>
+          Read and write access for objects in your Wistia account,
+          like projects, videos, and users.
+          Simplify your workflow or build your app on top of our platform.
+        </p>
+      </div>
+      <div class='api_garden_square last-child' id='upload_api'>
         <a href="{{ '/upload-api' | post_url }}">Upload API</a>
         <p>
           Programmatically upload videos to your Wistia account.
           Use for integrating with your application or
           smoothing out your video exporting workflow!
+        </p>
+      </div>
+    </div>
+    <div class='column'>
+      <div class='api_garden_square' id='construct_an_embed_code'>
+        <a href="{{ '/construct-an-embed-code' | post_url }}">Construct Embed Codes</a>
+        <p>
+          Learn how to dynamically generate embed codes for your videos. See
+          best practices for building iframe, API, and SEO embeds.
+        </p>
+      </div>
+      <div class='api_garden_square last-child' id='embed_options'>
+        <a href="{{ '/embed-options' | post_url }}">Embed Code Options</a>
+        <p>
+          Embed options can be used with embed codes to customize the behavior
+          and appearance of your embedded videos. See the available options and
+          tutorials on how to use them effectively.
+        </p>
+      </div>
+    </div>
+    <div class='column last-child'>
+      <div class='api_garden_square' id='player_api'>
+        <a href="{{ '/player-api' | post_url }}">Javascript Player API</a>
+        <p>
+          A JavaScript interface to control your videos’ playback experience
+          and capture events. Works seamlessly across desktops and
+          devices with both Flash and HTML5.
         </p>
       </div>
       <div class='api_garden_square last-child' id='stats_api'>
@@ -35,42 +70,6 @@ no_nav: true
           Mine the raw analytics output for your entire account.
           Get at data for specific viewers.
           Easily embed heatmaps in your own dashboard or application (!!).
-        </p>
-      </div>
-    </div>
-    <div class='column'>
-      <div class='api_garden_square' id='customize_api'>
-        <a href="{{ '/customize-api' | post_url }}">Customize API</a>
-        <p>
-          The Customize API allows you to see and update the
-          customizations on your video. Customize to your&nbsp;<i class='icon-heart' style='color:red;'></i>'s
-          desire, then see it update in your account and embedded instances!
-        </p>
-      </div>
-      <div class='api_garden_square last-child' id='data_api'>
-        <a href="{{ '/data-api' | post_url }}">Data API</a>
-        <p>
-          Read and write access for objects in your Wistia account,
-          like projects, videos, and users.
-          Simplify your workflow or build your app on top of our platform.
-        </p>
-      </div>
-    </div>
-    <div class='column last-child'>
-      <div class='api_garden_square' id='embed_api'>
-        <a href="{{ '/embed-api' | post_url }}">Embed API</a>
-        <p>
-          Grab your video's hashed ID and learn how to dynamically build an
-          embed code for it. See best practices for building iframe, API, and
-          SEO embeds.
-        </p>
-      </div>
-      <div class='api_garden_square last-child' id='player_api'>
-        <a href="{{ '/player-api' | post_url }}">Player API</a>
-        <p>
-          A JavaScript interface to control your videos’ playback experience
-          and capture events. Works seamlessly across desktops and
-          devices with both Flash and HTML5.
         </p>
       </div>
     </div>
