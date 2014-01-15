@@ -64,7 +64,7 @@ receives an object describing the newly created media:
 
 Field | Description
 ------|--------------
-hashed_id | A unique string identifier for the media in the system, also useful for [templating embed codes]({{ '/embed-api' | post_url }})
+hashed_id | A unique string identifier for the media in the system, also useful for [templating embed codes]({{ '/construct-an-embed-code' | post_url }})
 name  | The display name of the media.
 section (optional)  | The title of the section in which the media appears.  This attribute is omitted if the media is not in a section (default).                                                                                                             
 thumbnail | An object representing the thumbnail for this media.  The attributes are URL, width, and height.                                                                                                                                        

@@ -17,49 +17,49 @@ no_nav: true
 
 .devhq_container
   .api_button_garden
+
     .column
-      #upload_api.api_garden_square
+      #data_api.api_garden_square
+        %a{ href: "{{ '/data-api' | post_url }}"} Data API
+        %p
+          Read and write access for objects in your Wistia account, 
+          like projects, videos, and users. 
+          Simplify your workflow or build your app on top of our platform.
+      #upload_api.api_garden_square.last-child
         %a{ href: "{{ '/upload-api' | post_url }}"} Upload API
         %p
           Programmatically upload videos to your Wistia account. 
           Use for integrating with your application or 
           smoothing out your video exporting workflow!
+
+
+    .column
+      #construct_an_embed_code.api_garden_square
+        %a{ href: "{{ '/construct-an-embed-code' | post_url }}"} Construct Embed Codes
+        %p
+          Learn how to dynamically generate embed codes for your videos. See 
+          best practices for building iframe, API, and SEO embeds.
+      #embed_options.api_garden_square.last-child
+        %a{ href: "{{ '/embed-options' | post_url }}"} Embed Code Options
+        %p
+          Embed options can be used with embed codes to customize the behavior 
+          and appearance of your embedded videos. See the available options and
+          examples to guide you on how to use them effectively.
+
+
+    .column.last-child
+      #player_api.api_garden_square
+        %a{ href: "{{ '/player-api' | post_url }}" } Javascript Player API
+        %p
+          A JavaScript interface to control your videos’ playback experience 
+          and capture events. Works seamlessly across desktops and 
+          devices with both Flash and HTML5.
       #stats_api.api_garden_square.last-child
         %a{ href: "{{ '/stats-api' | post_url }}"} Stats API
         %p
           Mine the raw analytics output for your entire account. 
           Get at data for specific viewers. 
           Easily embed heatmaps in your own dashboard or application (!!).
-
-    .column
-      #customize_api.api_garden_square
-        %a{ href: "{{ '/customize-api' | post_url }}"} Customize API
-        %p
-          The Customize API allows you to see and update the 
-          customizations on your video. Customize to your&nbsp;
-          %i{ class: 'icon-heart', style: 'color:red;' }>
-          's
-          desire, then see it update in your account and embedded instances!
-      #data_api.api_garden_square.last-child
-        %a{ href: "{{ '/data-api' | post_url }}"} Data API
-        %p
-          Read and write access for objects in your Wistia account, 
-          like projects, videos, and users. 
-          Simplify your workflow or build your app on top of our platform.
-
-    .column.last-child
-      #embed_api.api_garden_square
-        %a{ href: "{{ '/embed-api' | post_url }}"} Embed API
-        %p
-          Grab your video's hashed ID and learn how to dynamically build an 
-          embed code for it. See best practices for building iframe, API, and
-          SEO embeds.
-      #player_api.api_garden_square.last-child
-        %a{ href: "{{ '/player-api' | post_url }}" } Player API
-        %p
-          A JavaScript interface to control your videos’ playback experience 
-          and capture events. Works seamlessly across desktops and 
-          devices with both Flash and HTML5.
 
 .devhq_footer
   .devhq_footer_arrow

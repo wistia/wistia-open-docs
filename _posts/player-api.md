@@ -4,11 +4,11 @@ api: true
 api_warning: true
 special_category_link: developers
 category: Developers
-title: Wistia Video Player API
-description: The Wistia player has a built in Javascript API, providing you with a variety of ways to create awesome functions and interact with the player.
-post_intro: "<p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p><p><strong>Note:</strong> for custom javascript you write to interface with a Wistia embed, add it to your source <em>under</em> the Wistia embed (ie. the footer).</p><p><strong>Playlists:</strong> If you are working with playlists (i.e. multiple-video players), you will need to refer to the <a href='http://wistia.com/doc/playlist-api'>playlist API</a>.</p><p><strong>Popovers:</strong> We've got a page setup if you are looking for <a href='http://wistia.com/doc/popover-customization'>popover customization options</a>.</p>"
-footer: 'for_developers'
+title: Javascript Player API
+description: The Wistia player has a built-in Javascript API, providing you with a variety of ways to create awesome functions and interact with the player.
+post_intro: "<p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p>"
 ---
+
 
 ## Using the API
 
@@ -18,10 +18,19 @@ or *iframe*. If you are using iframe embeds, you will need to insert the
 your page.
 
 If you are also looking to construct embed codes, refer to
-[the Embed API]({{ '/embed-api' | post_url }}). Available options for embed
-codes are listed in
+the [construct an embed code]({{ '/construct-an-embed-code' | post_url }})
+guide. Available options for embed codes are listed in
 [Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
+**Playlists**
+
+If you are working with Playlists (i.e. multiple-video players), please refer
+to the [Playlist API]({{ '/playlist-api' | post_url }}).
+
+**Popovers**
+
+If you are working with popovers, we've got a page setup specifically for that 
+as well. Check out the [popover customization options]({{ '/popover-customization' | post_url }}).
 
 ### The 'wistiaEmbed' Variable
 
@@ -126,7 +135,7 @@ width()                 | Gets the current width of the embed (the video plus an
 width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.
 
 
-## Player API Events
+## Javascript Player API Events
 
 Use these events when working with the `bind` and `unbind` methods.
 

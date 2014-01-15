@@ -50,9 +50,9 @@ $bracket_yellow: #F9D164
   max-width: 960px + $padding
   padding: 0 $padding
   +breakpoint(large-screen)
-    min-width: 972px
-  +breakpoint(medium-screen)
     min-width: auto
+  +breakpoint(medium-screen)
+    padding: 0 $padding/2
 
 .devhq_header
   margin-bottom: 140px
@@ -75,6 +75,7 @@ $bracket_yellow: #F9D164
       position: absolute
   +breakpoint(small-screen)
     margin-bottom: 60px
+    margin-left: -125px
 
 .one_tile
   cursor: pointer
@@ -106,6 +107,8 @@ $bracket_yellow: #F9D164
 .api_button_garden
   margin-left: 10px
   margin-bottom: 150px
+  +breakpoint(small-screen)
+    margin-bottom: 40px
   .column
     border-right: $dotted_border
     padding: 0 20px
@@ -118,7 +121,7 @@ $bracket_yellow: #F9D164
     &:first-child
       padding-left: 0
     .api_garden_square
-      height: 190px
+      height: 230px
       margin-bottom: 25px
       &.last-child
         border-bottom: none
@@ -148,6 +151,7 @@ $bracket_yellow: #F9D164
         height: auto
         margin: 0
     +breakpoint(small-screen)
+      width: 100%
       .api_garden_square, 
       .api_garden_square:first-child,
       .api_garden_square:last-child
