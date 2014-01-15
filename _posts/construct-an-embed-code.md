@@ -366,7 +366,7 @@ that callback function next.
 
 {% codeblock playlist_api.js %}
 var baseUrl = "http://fast.wistia.com/oembed/?url=";
-var accountUrl = escape("http://home.wistia.com/medias/");
+var accountUrl = encodeURIComponent("http://home.wistia.com/medias/");
 var mediaHashedId = "01a1d9f97c";
 
 function getThumbnailUrl(hashedId, callback) {
