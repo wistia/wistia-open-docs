@@ -207,7 +207,7 @@ Vertical Response  |  `{EMAIL_ADDRESS}`
 ExactTarget  |  `%%Email Address%%`
 Convio Luminate | `[[S1:primary_email]]`
 Streamsend | `{`{`{email_address}`}`}`
-INinbox | `#email#`
+INinbox | `##email##`
 SendGrid | [see more](#email_merge_tags_with_sendgrid)
 
 ### Email Merge Tags With SendGrid
