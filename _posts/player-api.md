@@ -24,8 +24,8 @@ guide. Available options for embed codes are listed in
 
 **Playlists**
 
-If you are working with playlists (i.e. multiple-video players), please refer
-to the [playlist API]({{ '/playlist-api' | post_url }}).
+If you are working with Playlists (i.e. multiple-video players), please refer
+to the [Playlist API]({{ '/playlist-api' | post_url }}).
 
 **Popovers**
 
@@ -155,7 +155,7 @@ widthchange   | width                   | Fired when the width of the embed code
 
 ---
 
-## Player API Tutorials
+## Player API Examples
 
 To get you making video magic as fast as possible, here are some examples of common javascript player API projects. We have also moved many of the more involved examples over to our [demobin](http://wistia.github.com/demobin) for your review.
 
