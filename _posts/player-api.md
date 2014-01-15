@@ -4,15 +4,15 @@ api: true
 api_warning: true
 special_category_link: developers
 category: Developers
-title: Javascript Player API
-description: The Wistia player has a built-in Javascript API, providing you with a variety of ways to create awesome functions and interact with the player.
+title: JavaScript Player API
+description: The Wistia player has a built-in JavaScript API, providing you with a variety of ways to create awesome functions and interact with the player.
 post_intro: "<p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p>"
 ---
 
 
 ## Using the API
 
-It is possible to access the javascript API using any embed type: *API*, *SEO*, 
+It is possible to access the JavaScript API using any embed type: *API*, *SEO*, 
 or *iframe*. If you are using iframe embeds, you will need to insert the 
 [iframe player API script](#using_popovers_and_the_player_api) at the bottom of 
 your page.
@@ -135,7 +135,7 @@ width()                 | Gets the current width of the embed (the video plus an
 width(w)                | Sets the width of the embed. The video will be resized to fit with the plugins fully visible.
 
 
-## Javascript Player API Events
+## JavaScript Player API Events
 
 Use these events when working with the `bind` and `unbind` methods.
 
@@ -157,11 +157,16 @@ widthchange   | width                   | Fired when the width of the embed code
 
 ## Player API Examples
 
-To get you making video magic as fast as possible, here are some examples of common javascript player API projects. We have also moved many of the more involved examples over to our [demobin](http://wistia.github.com/demobin) for your review.
+To get you making video magic as fast as possible, here are some examples of
+common JavaScript player API projects. We have also moved many of the more
+involved examples over to our [demobin](http://wistia.github.com/demobin) for
+your review.
 
 ### Start Video Playback at a Specific Time
 
-In this example, you want the video to skip ahead a certain amount of time when the viewer presses 'play'. This utilizes the `bind on play` functionality built into the API.
+In this example, you want the video to skip ahead a certain amount of time when
+the viewer presses 'play'. This utilizes the `bind on play` functionality built
+into the API.
 
 {% codeblock wistia_js.js %}
 <div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
@@ -186,12 +191,12 @@ wistiaEmbed.bind('play', function() {
 
 ### Trigger an event at a specific time
 
-In this example, let's assume that we want to fire a Javascript function when 
+In this example, let's assume that we want to fire a JavaScript function when 
 the viewer gets 60 seconds into the video. In order to accomplish this, we only
-need the bind method from the API.  The Javascript code can be seen below:
+need the bind method from the API.  The JavaScript code can be seen below:
 
 {% codeblock wistia_js.js %}
-<script type="text/javascript">
+<script type="text/JavaScript">
 wistiaEmbed.bind("secondchange", function (s) {
   if(s === 60) {
     // Insert code to be executed here
@@ -252,7 +257,10 @@ wistiaEmbed.bind("end", function () {
 
 ### Return the Email from Turnstile
 
-With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require your viewers to enter an email address to view video content on your webpage.  Using the "conversion" event, you can trigger actions based on the email being entered - including passing that email on to another service!
+With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require
+your viewers to enter an email address to view video content on your webpage.
+Using the "conversion" event, you can trigger actions based on the email being
+entered - including passing that email on to another service!
 
 {% codeblock wistia_js.js %}
 <script type="text/javascript">
@@ -262,7 +270,9 @@ wistiaEmbed.bind("conversion", function(type, val) {
 </script>
 {% endcodeblock %}
 
-At this time, the `type` of conversion can be "pre-roll-email", "mid-roll-email", or "post-roll-email", and the `val` is the viewers email address.
+At this time, the `type` of conversion can be "pre-roll-email",
+"mid-roll-email", or "post-roll-email", and the `val` is the viewers email
+address.
 
 ---
 
@@ -288,17 +298,23 @@ wistiaEmbed = Wistia.embed("tlb0v41zjd", {
 
 ### Selective Autoplay (Autoplay for viewers from specific sources)
 
-Selective Autoplay will automatically play your embedded video based on the presence of a query string you specify.
+Selective Autoplay will automatically play your embedded video based on the
+presence of a query string you specify.
 
-See more about how it works on the [Selective Autoplay Demo Page](http://wistia.github.com/demobin/selective-autoplay).
+See more about how it works on the 
+[Selective Autoplay Demo Page](http://wistia.github.com/demobin/selective-autoplay).
 
 ---
 
 ### Alert on play just once
 
-With the bind method, every time "play" is triggered, your function will be executed. But sometimes a user will scroll back to the beginning and hit Play again. If you want to avoid your function being executed again, you need to unbind it.
+With the bind method, every time "play" is triggered, your function will be
+executed. But sometimes a user will scroll back to the beginning and hit Play
+again. If you want to avoid your function being executed again, you need to
+unbind it.
 
-Our library contains a special unbinding pattern for convenience. In the callback function, just return `this.unbind`.
+Our library contains a special unbinding pattern for convenience. In the
+callback function, just return `this.unbind`.
 
 {% codeblock wistia_js.js %}
 <script type="text/javascript">
@@ -309,7 +325,8 @@ wistiaEmbed.bind("play", function() {
 </script>
 {% endcodeblock %}
 
-If you are performing asynchronous operations or need more control over unbinding, you can use the `unbind` method as shown below.
+If you are performing asynchronous operations or need more control over
+unbinding, you can use the `unbind` method as shown below.
 
 {% codeblock wistia_js.js %}
 <script type="text/javascript">
@@ -325,39 +342,54 @@ wistiaEmbed.bind("play", playFunc);
 ---
 ### Add Custom Pre-Roll to Your Videos
 
-By binding the loading of a second video on the 'end' event of the first one, it is easy to create your own custom 'pre-roll' videos.
+By binding the loading of a second video on the 'end' event of the first one,
+it is easy to create your own custom 'pre-roll' videos.
 
-See the full demo on our [Custom Pre-Roll Demo Page](http://wistia.github.com/demobin/custom-pre-roll/).
+See the full demo on our 
+[Custom Pre-Roll Demo Page](http://wistia.github.com/demobin/custom-pre-roll/).
 
 ---
 
 ### Playing a second video on Post Roll click
 
-By binding a click event onto the video container and verifying that the post roll has run, you can play a second video in the same container (Post Roll: "Click here to watch your free video!" and then have the video actually play in the same video container).
+By binding a click event onto the video container and verifying that the post
+roll has run, you can play a second video in the same container (Post Roll:
+"Click here to watch your free video!" and then have the video actually play in
+the same video container).
 
-See the full demo on our [Post-Roll Video Play Demo Page](http://wistia.github.com/demobin/post-roll-video-play/).
+See the full demo on our 
+[Post-Roll Video Play Demo Page](http://wistia.github.com/demobin/post-roll-video-play/).
 
 ---
 
 ### Creating HTML5-only Embed Codes
 
-Every single Wistia embed code type automatically supports HTML5 when it detects a device that requires it (ie. iPhones, iPads).  There is no extra work needed - standard HTML embed codes will work on your iOS device out-of-the-box.
+Every single Wistia embed code type automatically supports HTML5 when it
+detects a device that requires it (ie. iPhones, iPads).  There is no extra work
+needed - standard HTML embed codes will work on your iOS device out-of-the-box.
 
-That being said, there are (potentially) some instances where HTML5 only is advisable. This is easy using the platformPreference parameter:
+That being said, there are (potentially) some instances where HTML5 only is
+advisable. This is easy using the platformPreference parameter:
 
 `&platformPreference=html5`
 
 So a full HTML5 player embed code would look like this:
 
-<code class="full_width">&lt;iframe src="http://fast.wistia.net/embed/medias/e71f9baf4d?platformPreference=html5" width="960" height="450" frameborder="0"&gt;&lt;/iframe&gt;</code>
+<code class="full_width">&lt;iframe
+src="http://fast.wistia.net/embed/medias/e71f9baf4d?platformPreference=html5"
+width="960" height="450" frameborder="0"&gt;&lt;/iframe&gt;</code>
 
-HTML5 player instances are still controllable through the normal Player API methods.
+HTML5 player instances are still controllable through the normal Player API
+methods.
 
 ---
 
 ### Set the background of your video to transparent
 
-If you are embedding a Wistia video on a website with a white background, the natural black background of the Wistia player can look a little out of place. Instead, using a `wmode=transparent` string parameter, the background of the player loading can be set to transparent.
+If you are embedding a Wistia video on a website with a white background, the
+natural black background of the Wistia player can look a little out of place.
+Instead, using a `wmode=transparent` string parameter, the background of the
+player loading can be set to transparent.
 
 So a finished iframe embed code would look something like this:
 
