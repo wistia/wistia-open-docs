@@ -46,7 +46,9 @@ part related to the JavaScript snippet, overlap with the instructions below.
 If you build and maintain your own website (without using HubSpot's COS), add 
 this code snippet after HubSpot's analytics JavaScript:
 
-<code class="full_width">&lt;script src="//fast.wistia.com/static/integrations-hubspot-v1.js" async&gt;&lt;/script&gt;</code>
+{% codeblock hubspot_integration.html %}
+<script src="//fast.wistia.com/assets/external/integrations-hubspot-v1.js" async></script>
+{% endcodeblock %}
 
 If you use HubSpot's COS or make landing pages with HubSpot, you'll want to also 
 add this snippet to the *Site Footer HTML* in your HubSpot Account.
