@@ -211,13 +211,13 @@ Next, we'll add the parameters for our request:
 
 We'll URL-encode this request:
 
-    http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo
+    http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo
 
 {{ "We URL-encoded this request, because we want the parameters `embedType` and `handle` passed along to Wistia, not to the oEmbed endpoint." | note }}
 
 And now use the oEmbed endpoint:
 
-<code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"</code>
+<code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d%3FembedType%3Dapi%26handle%3DoEmbedVideo"</code>
 
 This returns:
 
@@ -311,13 +311,13 @@ Next, we'll add the parameters for our request:
 
 We'll URL-encode this request:
 
-    http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dseo
+    http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d%3FembedType%3Dseo
 
 {{ "We URL-encoded this request, because we want the parameter `embedType` passed along to Wistia, not to the oEmbed endpoint." | note }}
 
 And now use the oEmbed endpoint:
 
-<code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A//home.wistia.com/medias/e4a27b971d%3FembedType%3Dseo"</code>
+<code class="full_width">curl "http://fast.wistia.com/oembed.json?url=http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d%3FembedType%3Dseo"</code>
 
 This returns:
 
