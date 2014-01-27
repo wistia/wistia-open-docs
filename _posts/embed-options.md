@@ -30,7 +30,7 @@ doNotTrack            | boolean | When true, embed will not track views.
 endVideoBehavior      | string  | flash only. Behavior when the video ends: default/reset/loop.
 fullscreenButton      | boolean | Show fullscreen button. Default is true.
 pageUrl               | string  | The page that the embed thinks it's embedded on. Defaults to the current page.
-platformPreference    | string  | Accepts: 'flash', 'html5', or 'external'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'flash'.
+playerPreference    | string  | Accepts: 'flash', 'html5', or 'auto'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'auto'.
 playButton            | boolean | flash/external only. When true, display play button over video poster.
 playbar               | boolean | Show playbar. Default is true.
 playerColor           | string  | Set custom color on play button/controls. HTML5 player has access to custom play button color only.

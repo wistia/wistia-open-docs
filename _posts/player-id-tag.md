@@ -35,7 +35,7 @@ Inside the embed code, you will see a snippet that appears like this:
 {% codeblock playlist_api.js %}
 <script type="text/javascript"> 
   var wistiaEmbed = Wistia.embed("bfc34aa023", {
-    platformPreference: "html5",
+    playerPreference: "html5",
     autoPlay: true,
     wmode: "transparent",
     container: "my_container"
@@ -48,7 +48,7 @@ We will be adding the `trackEmail` embed option:
 {% codeblock playlist_api.js %}
 <script type="text/javascript"> 
   var wistiaEmbed = Wistia.embed("bfc34aa023", {
-    platformPreference: "html5",
+    playerPreference: "html5",
     autoPlay: true,
     wmode: "transparent",
     container: "my_container",
