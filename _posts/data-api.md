@@ -1387,18 +1387,7 @@ Content-Type: application/json
 #### The Response
 
 If the media update is successful, the server will respond with a status of 
-200 OK, along with an empty hash for the saved customizations.
-
-#### Example JSON Response
-
-Since all the customizations have just been reset, it's expected that this 
-is an empty hash.
-
-{% codeblock example_json_response.json %}
-{}
-{% endcodeblock %}
-
-
+200 OK.
 
 
 
