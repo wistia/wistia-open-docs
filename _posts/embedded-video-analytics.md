@@ -8,7 +8,7 @@ post_intro: <p>Wistia stats are the best way to get a complete view of who is wa
 
 ---
 
-{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about those [here.](http://wistia.com/doc/private-analytics)" | note }}
+{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about those [here.]({{ '/private-analytics' | post_url }})" | note }}
 
 ## Account-Level Trends View
 
