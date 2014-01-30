@@ -5,8 +5,10 @@ category: Analytics
 description: Wistia's analytics are designed to help you understand how your audience engages with your content. Dive in to everything you could dream of knowing about Wistia's all time favorite subject, Statistics. 
 post_intro: <p>Wistia stats are the best way to get a complete view of who is watching your video, how they are watching your video, and how your video initiatives are performing.</p><p>This guide will show you how to approach the two parts of Wistia analytics, <b>Stats Trends</b> and the <b>Viewer Stream</b>.</p>
 
-{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about those [here.](http://wistia.com/doc/private-analytics)" | note }}
+
 ---
+
+{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about those [here.](http://wistia.com/doc/private-analytics)" | note }}
 
 ## Account-Level Trends View
 
