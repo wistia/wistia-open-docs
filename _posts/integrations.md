@@ -14,6 +14,13 @@ analytics back to your Pardot prospect data.
 
 Read up on the [Pardot integration page]({{ '/pardot' | post_url }}).
 
+## HubSpot
+
+{% post_image hashed_id: '1b11fe5536f67f70699d752ca1e7f11775dd5f32', class: 'integration_logo' %}
+
+Using the [HubSpot integration](http://knowledge.hubspot.com/how-to-integrate-hubspot-and-wistia) with Wistia, you can get all your HubSpot customer data in the same spot for prime data organization.
+
+You can learn how to set this up over on [HubSpot's site](http://knowledge.hubspot.com/how-to-integrate-hubspot-and-wistia) or [in our docs]({{ '/hubspot' | post_url }})
 
 ## WordPress
 
@@ -35,7 +42,7 @@ This was updated by dev-god [Travis Carden](http://drupal.org/user/236758), than
 
 [Read more on using Wistia and Drupal]({{ '/drupal' | post_url }}).
 
-
+{{ "Wistia embeds have only been tested and verified through Drupal v6. Compatibility beyond v6 is not yet guaranteed." | note }}
 
 ## Expression Engine
 
@@ -44,21 +51,6 @@ This was updated by dev-god [Travis Carden](http://drupal.org/user/236758), than
 Posting a video on an Expression Engine page can be accomplished using any embed code, or through oEmbed links through a special plug-in lovingly designed by user [Antenna](http://devot-ee.com/add-ons/antenna).
 
 [See this guide]({{ '/expression-engine' | post_url }}) to embedding Wistia video in your Expression Engine template.
-
-
-
-## Joomla
-
-{% post_image hashed_id: 'cba39e8bef81a259f909e0b67919fe97d7e417a5', width: 200, class: 'integration_logo' %}
-
-The best way to embed in Joomla is to use the TinyMCE editor advanced settings to prevent deletion of iframes.
-
-In the 'Plugin Parameters' area of your Joomla account, enter the 'Media Support' section, and then select "yes" for 'Allow iframes'.  This will enable iframe support for your Joomla editor.
-
-Copy-and-paste the Wistia iframe embed code for the video you'd like to add to a Joomla page into the Joomla editor.
-
-For more info, and a guide to using API/SEO embed codes, see the [Joomla doc page]({{ '/joomla' | post_url }})
-
 
 
 ## Squarespace
@@ -70,31 +62,35 @@ With Wistia and Squarespace, embedding a video is as easy as pasting in your emb
 <a href="{{ '/squarespace' | post_url }}">Get the details on how it all works.</a>
 
 
-
-
 ## Wix
 
 {% post_image hashed_id: 'eaa07cfdb573a9e1c555947d25bf10933de060e3', width: 200, class: 'integration_logo' %}
 
 To embed a Wistia video in your Wix website, go to *Add --> Widgets --> HTML*. Click on the '*Settings*' for the HTML widget and you can paste your Wistia embed code where it reads '*Insert HTML Code*'. Once you save it, you should be all set.
 
-{{ "Wix is built upon Flash, which means that using their sites will prevent your videos from appearing on mobile devices that don't support Flash (notably iPhones)." | note }}
+{{ "Some Wix layouts do not reload the window to change pages, essentially creating HTML overlays that leave your video playing in the background." | note }}
 
 ---
 
-## Services Wistia Plays Well With
+## Other Services Wistia Plays Well With
 
 We love seeing Wistia videos out there in the wild. This is an incomplete list of services that make Wistia embed codes feel right at home.
 
 * Basecamp
 * Blogger
-* Confluence (use the iframe src URL)
+* [Confluence](https://answers.atlassian.com/questions/251000/how-can-i-embed-a-wistia-hosted-video-to-my-confluence-page)
 * DecalCMS
 * [Facebook]({{ '/social-sharing' | post_url }})
 * Google Sites
 * Lexblog
-* Sharepoint
-* Shopify
-* Tumblr (add the video embed code to your text post)
-* Weebly
-* WildApricot
+* Medium
+* Portfoliobox
+* [Sharepoint](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/embed-video-on-a-public-website-page-HA102828149.aspx)
+* [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)
+* Smore
+* Tumblr
+* [Twitter]({{ '/social-sharing' | post_url }})
+* [Weebly](http://kb.weebly.com/embed-audio-and-video.html)
+* [WildApricot](http://help.wildapricot.com/display/DOC/Adding+video+clips)
+
+{{ "If you know of a service that plays well with Wistia that is not on this list, send it along! Just e-mail support@wistia.com and we'll give you a high five for it or something!" | alert }}

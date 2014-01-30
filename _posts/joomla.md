@@ -5,6 +5,8 @@ description: Having trouble getting your Wistia video to work in your Joomla env
 category: Integrations
 ---
 
+{{ "This document is pretty out of date at this point. If you're using a newer version of Joomla and would like to help us get this doc back into shape, get in touch!" | warning }}
+
 {% post_image hashed_id: 'cba39e8bef81a259f909e0b67919fe97d7e417a5', width: 200, class: 'integration_logo float_left' %}
 
 The best way to embed in Joomla is to use the TinyMCE editor advanced settings to prevent deletion of iframes.
