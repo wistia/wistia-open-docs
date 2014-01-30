@@ -5,6 +5,14 @@ category: Integrations
 post_intro: <div class="post_image intro_image float_right"><img src="http://embed.wistia.com/deliveries/85df32f894f2b308139bd9feb49c8c04aed6efbd.png" width="250px" alt="google-analytics2" /></div><p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic 'video play' stats in Google Analytics can give you a better picture of your web visit metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
 description: Learn how to use Wistia and Google Analytics together to track video plays.
 footer: 'for_intermediates'
+
+---
+
+## Google Analytics Lab
+
+We realize that sometimes these things can get a bit complex, so to save you some time we built out the Google Analytics Labs. It actually does all of the stuff mentioned below for you! You can check it out [here.](http://wistia.com/labs/google-analytics/)
+
+If you are still committed to doing it yourself, read on!
 ---
 
 ## Before You Get Started
@@ -79,3 +87,4 @@ The "Video" section page will show the total number of plays and the total numbe
 The final drill down shows what specific video titles (defined in the javascript function above) were played.
 
 Using Wistia and Google Analytics is a good way to get all your top-level video analytics data in the same place you already get your other website tracking information.
+

@@ -32,6 +32,8 @@ WordPress themes often set a maximum width for oEmbed embed codes. If you want
 to change that, check out
 [How to Set oEmbed Max Width in WordPress 3.5 with $content_width](http://www.wpbeginner.com/wp-themes/how-to-set-oembed-max-width-in-wordpress-3-5-with-content_width/).
 
+{{ "The oEmbed embedding method does not work with CNAMEd accounts." | note }}
+
 ## Tips for Using WordPress
 
 *  When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code. If you switch from HTML to Visual mode, it will can add formatting tags around your oEmbed, which will cause it to break. Be careful of that!
