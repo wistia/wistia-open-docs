@@ -791,13 +791,8 @@ em { font-style: italic; }
 
 .seo_faq { margin-left: 0; font-size: 24px; font-size: 16px; font-weight: 700; }
 
-.post_callout_boxes p, .note p, .tip p { width: 70%; margin-top: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
-.post_callout_boxes p:last-child, .note p:last-child, .tip p:last-child { margin-bottom: 0; }
-
-.note { padding: 34px; background-color: rgba(62, 169, 245, 0.2); margin: 50px 0; clear: both; }
-.note h4 { color: #3ea9f5; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
-.note p { font-size: 16px; margin-left: 40px; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #3ea9f5; -webkit-font-smoothing: antialiased; font-weight: 400; }
-.note a { color: #3ea9f5; }
+.post_callout_boxes p, .tip p, .alert p, .note p { width: 70%; margin-top: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.post_callout_boxes p:last-child, .tip p:last-child, .alert p:last-child, .note p:last-child { margin-bottom: 0; }
 
 .faq { padding: 34px; background-color: rgba(62, 169, 245, 0.2); margin: 50px 0; clear: both; padding: 50px 60px; }
 .faq h4 { color: #3ea9f5; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
@@ -809,6 +804,15 @@ em { font-style: italic; }
 .tip { padding: 34px; background-color: rgba(192, 219, 235, 0.2); margin: 50px 0; clear: both; }
 .tip h4 { color: #3ea9f5; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
 .tip p { font-size: 16px; margin-left: 40px; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #3ea9f5; -webkit-font-smoothing: antialiased; font-weight: 400; }
+
+.alert { padding: 34px; background-color: rgba(255, 255, 0, 0.2); margin: 50px 0; clear: both; }
+.alert h4 { color: black; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
+.alert p { font-size: 16px; margin-left: 40px; font-family: "Avenir", Futura, Helvetica, sans-serif; color: black; -webkit-font-smoothing: antialiased; font-weight: 400; }
+
+.note { padding: 34px; background-color: rgba(62, 169, 245, 0.2); margin: 50px 0; clear: both; }
+.note h4 { color: #3ea9f5; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
+.note p { font-size: 16px; margin-left: 40px; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #3ea9f5; -webkit-font-smoothing: antialiased; font-weight: 400; }
+.note a { color: #3ea9f5; }
 
 .warning { background-color: rgba(255, 255, 0, 0.4); padding: 34px; }
 .warning .top-line { font-size: 18px; font-weight: 700; line-height: 30px; margin-top: 0; }

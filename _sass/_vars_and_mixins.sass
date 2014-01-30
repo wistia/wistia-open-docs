@@ -35,6 +35,8 @@ $skeletor_green: #56be8e
 $skeletor_orange: rgba(#faa928, .4)
 
 $note_color: $light_blue
+$alert_color: rgba(yellow, .4)
+$alert_text: rgba(black, 1)
 
 $for_intermediates: #8aad68
 $for_developers: #f0818b
@@ -92,13 +94,13 @@ $body-text-fonts: 'HelveticaNeue', Helvetica, Arial, sans-serif
 =anti-alias
   -webkit-font-smoothing: antialiased
 
-=callout-box($background-color, $h3-color: $accent_blue)
+=callout-box($background-color, $h3-color: $accent_blue, $h4-color: $light_blue)
   padding: 34px
   background-color: rgba($background-color, .2)
   margin: 50px 0
   clear: both
   h4
-    color: $light_blue
+    color: $h4-color
     font-size: 16px
     margin: 0
     padding: 0
@@ -108,7 +110,7 @@ $body-text-fonts: 'HelveticaNeue', Helvetica, Arial, sans-serif
     font-size: 16px
     margin-left: 40px
     font-family: $fonts
-    color: $light_blue
+    color: $h4-color
     -webkit-font-smoothing: antialiased
     font-weight: 400
 
