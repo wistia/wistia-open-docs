@@ -42,6 +42,13 @@ module Jekyll
           </div>)
       end
 
+      def alert(input)
+        %(<div class="alert">
+          <h4><i class="icon-bell"></i> Alert</h4>
+          <p>#{input}</p>
+          </div>)
+      end
+
   end
 
 end
