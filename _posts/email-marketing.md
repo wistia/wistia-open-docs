@@ -199,6 +199,7 @@ GetResponse  |  `[email]`
 Hubspot  | {`{ contact.email }`}
 iContact  |  `[email]`
 Infusionsoft  |  `~Contact.Email~`
+MadMimi | `(email)`
 MailChimp  |  `*|URL:EMAIL|*`
 Marketo  |  {`{lead.Email Address:default=noemail}`}
 Ontraport | {`[E-mail]`}
