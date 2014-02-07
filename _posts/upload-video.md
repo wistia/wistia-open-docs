@@ -44,7 +44,7 @@ uploading process.
 If you are having trouble with uploads completing, please try our
 [simple uploader]({{ '/simple-uploader' | post_url }}). Most upload troubles
 are caused by Flash plugin issues - the Simple Uploader does not use Flash. One
-downside - no progress bar.
+downside - no progress bar. You can also take a peek at our [upload troubleshooting guide]({{ '/upload-troubleshooting' | post_url }}) to get things fixed right up.
 
 For instructions on the best way to encode your video prior to uploading it,
 check our [video exporting page]({{ '/export-settings' | post_url }}).
