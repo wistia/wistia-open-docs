@@ -14,7 +14,7 @@ embeds!
 
 ## Embed Options List
 
-These options are for use with the
+These options are for use with the [Customize API](http://wistia.com/doc/data-api#customizations) and
 [Construct an Embed Code]({{ '/construct-an-embed-code' | post_url }}) guide.
 
 Option Name           | Type    | Description
