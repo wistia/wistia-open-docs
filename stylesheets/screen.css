@@ -742,6 +742,10 @@ em { font-style: italic; }
 .home_container .middle, .category_container .middle { width: 225px; padding-right: 75px; }
 .home_container .right, .category_container .right { width: 225px; }
 .home_container .columnBig, .category_container .columnBig { display: inline-block; *display: inline; vertical-align: top; zoom: 1; width: 544px; }
+.home_container .wistia-basics .thumbnails, .category_container .wistia-basics .thumbnails { padding: 0; }
+.home_container .wistia-basics .thumbnails li, .category_container .wistia-basics .thumbnails li { margin-right: 8px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.home_container .wistia-basics .thumbnails li:before, .category_container .wistia-basics .thumbnails li:before { content: ""; }
+.home_container .wistia-basics .thumbnails li .text-link, .category_container .wistia-basics .thumbnails li .text-link { display: block; text-align: center; }
 .home_container .viewAll, .category_container .viewAll { height: 18px; padding-top: 1px; padding-left: 10px; left: 15px; position: absolute; bottom: 20px; }
 .home_container .viewAll:before, .category_container .viewAll:before { content: "\e001"; font-family: "wistiacom-icons"; font-size: 23px; font-style: normal; speak: none; font-weight: normal; -webkit-font-smoothing: antialiased; position: absolute; top: -6px; left: -20px; }
 .home_container .viewAll:hover, .category_container .viewAll:hover { color: #3ea9f5; }
