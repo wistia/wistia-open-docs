@@ -776,9 +776,10 @@ em { font-style: italic; }
 .post_content ol li, .post_content ul li { margin-bottom: 15px; }
 .post_content ol li p, .post_content ul li p { font-weight: 600; }
 .post_content ul { list-style-type: disc; line-height: 150%; padding-left: 15px; }
+.post_content ul a { border-bottom: 1px solid #cbd0d6; }
+.post_content ul a:hover { border-bottom: 1px solid #3ea9f5; text-decoration: none; }
 .post_content ol { line-height: 150%; list-style: decimal; }
 .post_content ol li { margin-left: 30px; }
-.post_content a:hover { text-decoration: underline; }
 .post_content p { margin-left: 0px; line-height: 31px; position: relative; font-size: 16px; font-weight: 200; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #161d25; margin-top: 10px; margin-bottom: 18px; word-wrap: break-word; }
 .post_content p a { text-decoration: none !important; }
 .post_content p pre { margin: 35px 0 35px 70px; background-color: #eceef1; }

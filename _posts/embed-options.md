@@ -2,15 +2,32 @@
 special_category_link: developers
 api: true
 layout: post
-title: Embedding Options
-description: Learn more about the embed options available for your embedded videos.
+title: Embed Options and Plugins
+description: Learn more about the embed options and plugins available for your embedded videos.
 category: Developers
 ---
 
-When building an embed code, embed options can be included to customize the
-appearance/behavior of the embedded video. First, we'll cover the options
-themselves, then, we'll show you some examples of how you can use them for your
-embeds!
+Embed options and Plugins are useful when building an embed code or customizing your embeds
+programmatically.
+
+*Embed Options* are essentially attributes for the behavior of your video -
+`fullscreenButton`, for example, is a boolean that controls whether the
+fullscreen button is shown on your player or not.
+
+*Plugins* are additional scripts you can add to your video, giving it new
+functionality and adding new interfaces. Turnstile, for example, is an email
+collector you can add to your video by including the plugin.
+
+## A Note on Embeds and Customize
+
+With the addition of [customize]({{ '/data-api#customizations' | post_url }}),
+plugins and embed options enabled in the Account GUI are not visible in embed
+codes.
+
+When you add embed options or plugins to your embed code using the approach
+outlined below, it will *override* any conflicting customizations (i.e. if you
+set `playerColor` inline, and if you've already set it in the GUI, your inline
+attribute will be used).
 
 ## Embed Options List
 
@@ -39,7 +56,7 @@ stillUrl              | string  | The still image that should appear before the 
 stillSnap             | boolean | For thumbnails that are different aspect ratio than the video, set to *false*. Default is *true*.
 time                  | float   | Set a starting time for the video on load. If you'd like the video to also play immediately, use the autoPlay parameter.
 trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
-videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.github.com/demobin/video-foam)
+videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.com/labs/videofoam)
 videoQuality          | string  | Specify the starting video quality. sd-only/hd-only/auto
 videoWidth            | integer | The original width of the video.
 videoHeight           | integer | The original height of the video.
@@ -50,11 +67,9 @@ wmode                 | string  | flash only. The flash window mode of the embed
 
 ## Using Embed Options
 
-### API Embed codes
-
 Given a video with hashed ID `g5pnf59ala`, we can build an API embed
 code (using either the in-app embed workflow, or a [dynamic embed building
-approach]({{ '/embed-api' | post_url }}).
+approach]({{ '/construct-an-embed-code' | post_url }}).
 
 Here is what the embed code should look like:
 
@@ -67,49 +82,127 @@ Here is what the embed code should look like:
 To use our embed options, we will append them as a hash to the `wistiaEmbed`
 declaration. 
 
-For example, let's add Video Foam to our embed (this would probably be easier
-to do in the [video foam lab](http://wistia.com/labs/videofoam), but shh I'm
-example-ing):
+For example, let's make this video autoplay on page load, and change the color
+of the player to <span style="color:#ff69b4;">hot pink</span> (#ff69b4):
 
 {% codeblock example_api_embed_with_videofoam.js %}
 <script>
   wistiaEmbed = Wistia.embed("g5pnf59ala", {
-    videoFoam: true
+    autoPlay: true,
+    playerColor: '#ff69b4'
   });
 </script>
 {% endcodeblock %}
 
-### iframe Embed Codes
 
-For iframe embed codes, our embed options will be appended to the iframe `src` 
-as a query string, like `?videoFoam=true`:
-
-{% codeblock example_iframe_embed.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/g5pnf59ala?videoFoam=true"
-  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-{% endcodeblock %}
 
 
 ## Embed Plugins
 
-Wistia embed plugins, like calls-to-action and Turnstile, take
-parameters that can be modified for your needs. Each plugin and it's
-paramaters will be covered in this documentation.
+The following Embed Plugins are available for Wistia videos:
+
+* [Turnstile](#turnstile_plugin) - Add an email gate to your video. [Configure
+  it]({{ '/turnstile' | post_url }}) to pass emails to your Email Marketing platform.
+* Post-Roll Call-to-Action -
+* Socialbar - 
+* Captions - 
 
 
-### A Note on Plugins and Customize
 
-With the addition of [customize]({{ '/data-api#customizations' | post_url }}), plugins
-enabled in the Account GUI are not visible in embed codes.
 
-If you want to add the plugin on the page, or be able to make changes
-to it dynamically, you can build it using the javascript below.
+## Turnstile Plugin
+
+
+
+
+
+
+## Post-Roll Call-to-Action Plugin
+
+The Post-Roll Call-to-Action plugin adds an interactive screen of your design,
+which slides into view *after* the video has finished playing.
+
+### Plugin Options
+
+Option Name        | Type    | Description
+-----------        | ----    | --------------------------------------------------------
+backgroundOpacity  | float   | A decimal between 0 and 1 to set the overall opacity of the background. Default is 0.91.
+image              | string  | The image src for the call to action.
+link               | string  | The destination URL when you click the postroll.
+raw                | string  | The raw HTML for the call to action.
+style              | object  | The styles to be applied to the root postroll element.
+text               | string  | The text for the call to action.
+version            | string  | The version of the post roll to use. Must be "v1".
+
+The link param can be used with either text or image calls to action. If a raw
+param is given, it will be used instead of text/image/link.
+
+Our links use `target="\_blank"` to pop open a new window when you click. This 
+is so that iframe embeds don't open a new link inside the iframe! If you're 
+using an API embed and raw HTML, you can omit `target="\_blank"` safely.
+
+### Using the Call-to-Action Plugin
+
+{% codeblock postRoll-api-embed.html %}
+<script>
+  wistiaEmbed = Wistia.embed("abcde12345");
+  Wistia.plugin.postRoll(wistiaEmbed, {
+    version: "v1",
+    text: "You made it to the end of my video! Now check out my product.",
+    link: "http://myawesomeproduct.com/awesome",
+    style: {
+      background: "#404040",
+      color: "#ffffff"
+    },
+  });
+</script>
+{% endcodeblock %}
+
+
+
+
+## Socialbar Plugin
+
+The Socialbar Plugin adds social sharing buttons to your video player. Choose
+the buttons included, and set specific sharing options, using the Plugin
+options.
+
+### Plugin Options
+
+Option Name | Type    | Description                                                                                   
+----------- | ----    | -------------------------------------------
+badgeImg    | string  | The src attribute of the logo image.                                                           
+badgeUrl    | string  | The URL that the logo launches when you click on it.                                           
+buttons     | string  | Dash-delimited list of buttons to display. Button options: **digg**, **email**, **embed**, **facebook**, **googlePlus**, **linkedIn**, **reddit**, **stumbleUpon**, **tumblr**, **twitter**, **videoStats**
+logo        | boolean | When true, float the badge to the right side of the socialbar.
+pageTitle   | string  | The specific pageTitle to be promoted when liked or shared.
+pageUrl     | string  | The specific pageUrl to be promoted when liked or shared.
+position    | string  | The grid location of the Social Bar. Default value is **below**, but **above** also acceptable.
+tweetText   | string  | The text that will be tweeted with the link. Defaults to the name of the video in Wistia.
+version     | string  | The version of the socialbar to use. Must be "v1".
+
+### Using the Socialbar Plugin
+
+{% codeblock plugin_options_for_api_embeds.js %}
+<script>
+  wistiaEmbed = Wistia.embed("abcde12345", {
+    plugin: {
+      "socialbar-v1": {
+        buttons: "embed-twitter-facebook"
+      }
+    }
+  });
+</script>
+
+{% endcodeblock %}
+
+
+## Captions Plugins
+
 
 ## Using Embed Plugins
 
-What follows is a primer on using Wistia Embed Plugins for your video. It will
-walk you through a generic example for adding an embed plugin to your video's
-embed code.
+
 
 ### API and SEO Embed Codes
 
@@ -127,17 +220,7 @@ First, here is what the embed code should look like:
 We will be adding a nested plugin object to the embed parameters, referring to
 the [social bar plugin options documentation]({{ '/socialbar-params' | post_url }}).
 
-{% codeblock plugin_options_for_api_embeds.js %}
-<script>
-wistiaEmbed = Wistia.embed("abcde12345", {
-  plugin: {
-    "socialbar-v1": {
-      buttons: "embed-twitter-facebook"
-    }
-  }
-});
-</script>
-{% endcodeblock %}
+
 
 ### iframe Embed Codes
 
@@ -174,22 +257,7 @@ wistiaEmbed = Wistia.embed("k4txh7z9c4");
 
 ### CTA Options
 
- Option Name        | Type    | Description
- -----------        | ----    | --------------------------------------------------------
- backgroundOpacity  | float   | A decimal between 0 and 1 to set the overall opacity of the background. Default is 0.91.
- image              | string  | The image src for the call to action.
- link               | string  | The destination URL when you click the postroll.
- raw                | string  | The raw HTML for the call to action.
- style              | object  | The styles to be applied to the root postroll element.
- text               | string  | The text for the call to action.
- version            | string  | The version of the post roll to use. Must be "v1".
 
-The link param can be used with either text or image calls to action. If a raw
-param is given, it will be used instead of text/image/link.
-
-Our links use `target="\_blank"` to pop open a new window when you click. This 
-is so that iframe embeds don't open a new link inside the iframe! If you're 
-using an API embed and raw HTML, you can omit `target="\_blank"` safely.
 
 ### Iframe Example
 
@@ -204,26 +272,7 @@ using an API embed and raw HTML, you can omit `target="\_blank"` safely.
 
 ### API Embed Example
 
-{% codeblock postRoll-api-embed.html %}
-<div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script src="http://fast.wistia.net/static/E-v1.js"></script>
-<script src="http://fast.wistia.net/static/concat/E-v1-gridify,postRoll-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("abcde12345", {
-  videoWidth: 640,
-  videoHeight: 360
-});
-Wistia.plugin.postRoll(wistiaEmbed, {
-  version: "v1",
-  text: "You made it to the end of my video! Now check out my product.",
-  link: "http://myawesomeproduct.com/awesome",
-  style: {
-    background: "#404040",
-    color: "#ffffff"
-  },
-});
-</script>
-{% endcodeblock %}
+
 
 
 ### Social Sharing Bar
@@ -239,31 +288,11 @@ wistiaEmbed = Wistia.embed("acg32qioez");
 
 ### Socialbar Options
 
- Option Name | Type    | Description                                                                                   
- ----------- | ----    | ----------------------------------------------------------------------------------------------
- badgeImg    | string  | The src attribute of the logo image.                                                           
- badgeUrl    | string  | The URL that the logo launches when you click on it.                                           
- buttons     | string  | Dash-delimited list of buttons to display.                                                     
- logo        | boolean | When true, float the badge to the right side of the socialbar.                                 
- pageTitle   | string  | The specific pageTitle to be promoted when liked or shared.                                    
- pageUrl     | string  | The specific pageUrl to be promoted when liked or shared.                                      
- position    | string  | The grid location of the Social Bar. Default value is "below", but "above" also acceptable.    
- tweetText   | string  | The text that will be tweeted with the link. Defaults to the name of the video in Wistia.      
- version     | string  | The version of the socialbar to use. Must be "v1".                                             
+                                         
 
 Button order can be changed. Possible buttons are:
 
-*  digg
-*  email
-*  embed
-*  facebook
-*  googlePlus
-*  linkedIn
-*  reddit
-*  stumbleUpon
-*  tumblr
-*  twitter
-*  videoStats
+
 
 ### iframe Embed Example
 

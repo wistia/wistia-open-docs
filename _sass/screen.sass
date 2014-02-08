@@ -340,14 +340,16 @@ em
     list-style-type: disc
     line-height: 150%
     padding-left: 15px
+    a
+      border-bottom: 1px solid $gray2
+      &:hover
+        border-bottom: 1px solid $light_blue
+        text-decoration: none
   ol
     line-height: 150%
     list-style: decimal
     li
       margin-left: 30px
-
-  a
-    +link-hover
   p
     margin-left: 0px
     line-height: 31px
