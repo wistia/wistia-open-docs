@@ -15,10 +15,11 @@ programmatically.
 fullscreen button is shown on your player or not.
 
 *Plugins* are additional scripts you can add to your video, giving it new
-functionality and adding new interfaces. Turnstile, for example, is an email
-collector you can add to your video by including the plugin.
+functionality and adding new interfaces. [Turnstile](#turnstile_plugin), for
+example, is an email collector you can add to your video by including the
+plugin.
 
-## A Note on Embeds and Customize
+## Using Embed Options / Plugins and Customize
 
 With the addition of [customize]({{ '/data-api#customizations' | post_url }}),
 plugins and embed options enabled in the Account GUI are not visible in embed
@@ -97,336 +98,46 @@ of the player to <span style="color:#ff69b4;">hot pink</span> (#ff69b4):
 
 
 
+
+
+
 ## Embed Plugins
 
 The following Embed Plugins are available for Wistia videos:
 
 * [Turnstile](#turnstile_plugin) - Add an email gate to your video. [Configure
   it]({{ '/turnstile' | post_url }}) to pass emails to your Email Marketing platform.
-* Post-Roll Call-to-Action -
-* Socialbar - 
-* Captions - 
+* [Post-Roll Call-to-Action](#postroll_calltoaction_plugin) - Suggest an action after viewing.
+* [Socialbar](#socialbar_plugin) - Add social sharing buttons to your video player.
+* [Captions](#captions_plugin) - Enable captions for your video.
+
+
+
+
 
 
 
 
 ## Turnstile Plugin
 
-
-
-
-
-
-## Post-Roll Call-to-Action Plugin
-
-The Post-Roll Call-to-Action plugin adds an interactive screen of your design,
-which slides into view *after* the video has finished playing.
-
-### Plugin Options
-
-Option Name        | Type    | Description
------------        | ----    | --------------------------------------------------------
-backgroundOpacity  | float   | A decimal between 0 and 1 to set the overall opacity of the background. Default is 0.91.
-image              | string  | The image src for the call to action.
-link               | string  | The destination URL when you click the postroll.
-raw                | string  | The raw HTML for the call to action.
-style              | object  | The styles to be applied to the root postroll element.
-text               | string  | The text for the call to action.
-version            | string  | The version of the post roll to use. Must be "v1".
-
-The link param can be used with either text or image calls to action. If a raw
-param is given, it will be used instead of text/image/link.
-
-Our links use `target="\_blank"` to pop open a new window when you click. This 
-is so that iframe embeds don't open a new link inside the iframe! If you're 
-using an API embed and raw HTML, you can omit `target="\_blank"` safely.
-
-### Using the Call-to-Action Plugin
-
-{% codeblock postRoll-api-embed.html %}
-<script>
-  wistiaEmbed = Wistia.embed("abcde12345");
-  Wistia.plugin.postRoll(wistiaEmbed, {
-    version: "v1",
-    text: "You made it to the end of my video! Now check out my product.",
-    link: "http://myawesomeproduct.com/awesome",
-    style: {
-      background: "#404040",
-      color: "#ffffff"
-    },
-  });
-</script>
-{% endcodeblock %}
-
-
-
-
-## Socialbar Plugin
-
-The Socialbar Plugin adds social sharing buttons to your video player. Choose
-the buttons included, and set specific sharing options, using the Plugin
-options.
-
-### Plugin Options
-
-Option Name | Type    | Description                                                                                   
------------ | ----    | -------------------------------------------
-badgeImg    | string  | The src attribute of the logo image.                                                           
-badgeUrl    | string  | The URL that the logo launches when you click on it.                                           
-buttons     | string  | Dash-delimited list of buttons to display. Button options: **digg**, **email**, **embed**, **facebook**, **googlePlus**, **linkedIn**, **reddit**, **stumbleUpon**, **tumblr**, **twitter**, **videoStats**
-logo        | boolean | When true, float the badge to the right side of the socialbar.
-pageTitle   | string  | The specific pageTitle to be promoted when liked or shared.
-pageUrl     | string  | The specific pageUrl to be promoted when liked or shared.
-position    | string  | The grid location of the Social Bar. Default value is **below**, but **above** also acceptable.
-tweetText   | string  | The text that will be tweeted with the link. Defaults to the name of the video in Wistia.
-version     | string  | The version of the socialbar to use. Must be "v1".
-
-### Using the Socialbar Plugin
-
-{% codeblock plugin_options_for_api_embeds.js %}
-<script>
-  wistiaEmbed = Wistia.embed("abcde12345", {
-    plugin: {
-      "socialbar-v1": {
-        buttons: "embed-twitter-facebook"
-      }
-    }
-  });
-</script>
-
-{% endcodeblock %}
-
-
-## Captions Plugins
-
-
-## Using Embed Plugins
-
-
-
-### API and SEO Embed Codes
-
-Given a video with the hashed ID `abcde12345`, we can build an API embed code
-and include a plugin (like the social bar) as follows.
-
-First, here is what the embed code should look like:
-
-{% codeblock example_api_embed.html %}
-<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script> wistiaEmbed = Wistia.embed("abcde12345"); </script>
-{% endcodeblock %}
-
-We will be adding a nested plugin object to the embed parameters, referring to
-the [social bar plugin options documentation]({{ '/socialbar-params' | post_url }}).
-
-
-
-### iframe Embed Codes
-
-Let's go through the same example (video with hashed ID `abcde12345`) as an iframe.
-
-First the embed code:
-
-{% codeblock example_iframe_embed.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345"
-  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"> </iframe>
-{% endcodeblock %}
-
-Now we append the plugin using URL-encoded bracket notation:
-
-{% codeblock example_iframe_embed.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?plugin%5Bsocialbar%5D%5Bversion%5D=v1&plugin%5Bsocialbar%5D%5Bbuttons%5D=embed-twitter-facebook"
-  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
-{% endcodeblock %}
-
-## Embed Plugin Options Guides
-
-### Post-roll Call-to-Action
-
-### Example
-
-(jump to the end to see the effect)
-<div class="video_embed">
-<div id="wistia_k4txh7z9c4" class="wistia_embed" style="width:640px;height:360px;"> </div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("k4txh7z9c4");
-</script>
-</div>
-
-### CTA Options
-
-
-
-### Iframe Example
-
-{% codeblock postRoll-params.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345?videoWidth=640&videoHeight=360
-&plugin[postRoll][version]=v1&plugin[postRoll][text]=You made it to the end of my video! Now check out my product.
-&plugin[postRoll][link]=http://myawesomeproduct.com/awesome
-&plugin[postRoll][style][background]=#404040
-&plugin[postRoll][style][color]=#ffffff"
- allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
-{% endcodeblock %}
-
-### API Embed Example
-
-
-
-
-### Social Sharing Bar
-
-### Example
-
-<div id="wistia_acg32qioez" class="wistia_embed" style="width:640px;height:388px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("acg32qioez");
-</script>
-
-
-### Socialbar Options
-
-                                         
-
-Button order can be changed. Possible buttons are:
-
-
-
-### iframe Embed Example
-
-{% codeblock socialbar-params.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345
-?videoWidth=640&videoHeight=360&plugin[socialbar][version]=v1
-&plugin[socialbar][buttons]=embed-twitter-facebook&plugin[socialbar][pageUrl]=
-http://wistia.com&pageTitle=The best in online video hosting." 
-allowtransparency="true" frameborder="0" scrolling="no" 
-class="wistia_embed" name="wistia_embed" width="640" height="387">
-</iframe>
-{% endcodeblock %}
-
-### API Embed Example
-
-{% codeblock socialbar-params.html %}
-<div id="wistia_abcde12345" style="width:640px;height;387px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script src="http://fast.wistia.net/static/E-v1.js"></script>
-<script src="http://fast.wistia.net/static/concat/E-v1-gridify,socialbar-v1.js"></script>
-<script>
-  wistiaEmbed = Wistia.embed("abcde12345", {
-    videoWidth: 640,
-    videoHeight: 360
-  });
-  Wistia.plugin.socialbar(wistiaEmbed, {
-    version: "v1"
-    buttons: "embed-twitter-facebook",
-    pageUrl: "http://wistia.com",
-    pageTitle: "The best in online video hosting."
-  });
-</script>
-{% endcodeblock %}
-
-### Captions and Transcripts
-
-### Example
-
-<div id="wistia_rbhxsdm1rc" class="wistia_embed" style="width:640px;height:360px;"> </div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("rbhxsdm1rc");
-</script>
-
-### Transcript Options
-
- Option Name    | Type    | Description                                                                                                                 
- -----------    | ----    | ----------------------------------------------------------------------------------------------------------------------------
- canCollapse    | boolean | Determines whether the transcript can be toggled open/closed. Defaults to false.                                             
- canDownload    | boolean | Determines whether a download link is provided on the interactive transcript. Defaults to false.                             
- canPrint       | boolean | Determines whether a print link is provided on the interactive transcript. Defaults to true.                                 
- container      | string  | The container ID where we will place the interactive transcript. Only useful for API embed.                                  
- height         | integer | The height of the interactive transcript. Defaults to 200px if below the video, or the height of the video if on the side.   
- collapseOnload | boolean | Determines whether the transcript starts out collapsed. Defaults to false.                                                   
- position       | string  | The grid location where the transcript should live. Can be above/below/left/right.                                           
- version        | string  | Must be "v2".                                                                                                                
- width          | integer | The width of the interactive transcript. Defaults to the width of the embed if below the video, or 275px if on the side.     
-
-Note that, for `onloadCollapse` to work, `canCollapse` must also be true.
-
-### iframe Example
-
-{% codeblock transcript-params.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345
-  ?videoWidth=640&videoHeight=360&plugin[transcript][version]=v2
-  &plugin[transcript][position]=below&plugin[transcript][height]=300
-  &plugin[transcript][canDownload]=true" 
-  allowtransparency="true" frameborder="0" scrolling="no" 
-  class="wistia_embed" name="wistia_embed" width="640" height="560">
-</iframe>
-{% endcodeblock %}
-
-### API Embed Example
-
-{% codeblock transcript-params.html %}
-<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/concat/E-v1.js"></script>
-<script>
-  wistiaEmbed = Wistia.embed("abcde12345", {
-    version: "v1",
-    videoWidth: 640,
-    videoHeight: 360,
-    controlsVisibleOnLoad: true,
-    playerColor: "aae3d8"
-  });
-  Wistia.plugin.transcript(wistiaEmbed, {
-    version: "v2",
-    position: "below",
-    height: 300,
-    canDownload: true
-  });
-</script>
-{% endcodeblock %}
-
-### Turnstile (Email Gate)
-
-### Example
-
-<div id="wistia_2pg2ssc7uk" class="wistia_embed" style="width:640px;height:427px;"> </div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("2pg2ssc7uk");
-</script>
-
-Turnstile slides an extremely simple form over the video as soon as it's ready
-to play. The sizing of the top and bottom text is determined by the height of
-the video by default. If you specify the `fontSize` property in the style
-option, you can override the default sizing.
-
-### Turnstile Options
-
- Option Name      | Type   | Description                                                                                         
- -----------      | ----   | ----------------------------------------------------------------------------------------------------
- bottomText       | string | The text displayed below the input field. Usually information about what you'll do with the email.   
- buttonBackground | string | The hex color of the button. Defaults to the player color.                                           
- errorColor       | string | The hex color of the error text that can displayed. Yellow by default.                               
- exampleText      | string | The text that is displayed when the input field is empty.                                            
- style            | object | The styles to be applied to the root turnstile element.                                              
- topText          | string | The text displayed above the input field. Usually a request to enter the email.                      
- version          | string | Must be "v1".                                                                                        
-
-### iframe Example
-
-{% codeblock turnstile-params.html %}
-<iframe src="http://fast.wistia.net/embed/iframe/abcde12345
-  ?videoWidth=640&videoHeight=360&plugin[requireEmail][version]=v1
-  &plugin[requireEmail][topText]=Please enter your email below.
-  &plugin[requireEmail][bottomText]=We may use this email to contact you about the product, but we won't be too pushy.
-  &plugin[requireEmail][style][background]=#660000&plugin[requireEmail][style][color]=#eeffee" 
-  allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" 
-  name="wistia_embed" width="640" height="360">
-</iframe>
-{% endcodeblock %}
-
-### API Embed Example
+The Turnstile plugin slides an extremely simple form over the video as soon as
+it's ready to play. The sizing of the top and bottom text is determined by the
+height of the video by default. If you specify the `fontSize` property in the
+style option, you can override the default sizing.
+
+
+Option Name      | Type   | Description                                                                                         
+-----------      | ----   | ----------------------------------------------------------------------------------------------------
+bottomText       | string | The text displayed below the input field. Usually information about what you'll do with the email.   
+buttonBackground | string | The hex color of the button. Defaults to the player color.                                           
+errorColor       | string | The hex color of the error text that can displayed. Yellow by default.                               
+exampleText      | string | The text that is displayed when the input field is empty.                                            
+style            | object | The styles to be applied to the root turnstile element.                                              
+topText          | string | The text displayed above the input field. Usually a request to enter the email.                      
+version          | string | Must be "v1".    
+
+
+### Turnstile Plugin Example
 
 {% codeblock turnstile-params.html %}
 <div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
@@ -448,3 +159,146 @@ option, you can override the default sizing.
   });
 </script>
 {% endcodeblock %}
+
+
+
+
+
+
+
+
+## Post-Roll Call-to-Action Plugin
+
+The Post-Roll Call-to-Action plugin adds an interactive screen of your design,
+which slides into view *after* the video has finished playing.
+
+Option Name        | Type    | Description
+-----------        | ----    | --------------------------------------------------------
+backgroundOpacity  | float   | A decimal between 0 and 1 to set the overall opacity of the background. Default is 0.91.
+image              | string  | The image src for the call to action.
+link               | string  | The destination URL when you click the postroll.
+raw                | string  | The raw HTML for the call to action.
+style              | object  | The styles to be applied to the root postroll element.
+text               | string  | The text for the call to action.
+version            | string  | The version of the post roll to use. Must be "v1".
+
+The link param can be used with either text or image calls to action. If a raw
+param is given, it will be used instead of text/image/link.
+
+Our links use `target="\_blank"` to pop open a new window when you click. This 
+is so that iframe embeds don't open a new link inside the iframe! If you're 
+using an API embed and raw HTML, you can omit `target="\_blank"` safely.
+
+### Call-to-Action Plugin Example
+
+{% codeblock postRoll-api-embed.html %}
+<script>
+  wistiaEmbed = Wistia.embed("abcde12345");
+  Wistia.plugin.postRoll(wistiaEmbed, {
+    version: "v1",
+    text: "You made it to the end of my video! Now check out my product.",
+    link: "http://myawesomeproduct.com/awesome",
+    style: {
+      background: "#404040",
+      color: "#ffffff"
+    },
+  });
+</script>
+{% endcodeblock %}
+
+
+
+
+
+
+
+## Socialbar Plugin
+
+The Socialbar Plugin adds social sharing buttons to your video player. Choose
+the buttons included, and set specific sharing options, using the Plugin
+options.
+
+
+
+Option Name | Type    | Description                                                                                   
+----------- | ----    | -------------------------------------------
+badgeImg    | string  | The src attribute of the logo image.                                                           
+badgeUrl    | string  | The URL that the logo launches when you click on it.                                           
+buttons     | string  | Dash-delimited list of buttons to display. Button options: **digg**, **email**, **embed**, **facebook**, **googlePlus**, **linkedIn**, **reddit**, **stumbleUpon**, **tumblr**, **twitter**, **videoStats**
+logo        | boolean | When true, float the badge to the right side of the socialbar.
+pageTitle   | string  | The specific pageTitle to be promoted when liked or shared.
+pageUrl     | string  | The specific pageUrl to be promoted when liked or shared.
+position    | string  | The grid location of the Social Bar. Default value is **below**, but **above** also acceptable.
+tweetText   | string  | The text that will be tweeted with the link. Defaults to the name of the video in Wistia.
+version     | string  | The version of the socialbar to use. Must be "v1".
+
+
+
+### Socialbar Plugin Example
+
+Here's a pretty simple example, invoking the socialbar and adding several
+buttons.
+
+{% codeblock plugin_options_for_api_embeds.js %}
+<script>
+  wistiaEmbed = Wistia.embed("abcde12345", {
+    plugin: {
+      "socialbar-v1": {
+        buttons: "embed-twitter-facebook"
+      }
+    }
+  });
+</script>
+{% endcodeblock %}
+
+This example is a bit more involved - it specifies the `pageUrl` and
+`pageTitle` attributes as well.
+
+{% codeblock socialbar-params.html %}
+<script>
+  wistiaEmbed = Wistia.embed("abcde12345", {
+    videoWidth: 640,
+    videoHeight: 360
+  });
+  Wistia.plugin.socialbar(wistiaEmbed, {
+    version: "v1"
+    buttons: "embed-twitter-facebook",
+    pageUrl: "http://wistia.com",
+    pageTitle: "The best in online video hosting."
+  });
+</script>
+{% endcodeblock %}
+
+
+## Captions Plugin
+
+
+Option Name    | Type    | Description                                                                                                                 
+-----------    | ----    | ----------------------------------------------------------------------------------------------------------------------------
+canCollapse    | boolean | Determines whether the transcript can be toggled open/closed. Defaults to false.                                             
+canDownload    | boolean | Determines whether a download link is provided on the interactive transcript. Defaults to false.                             
+canPrint       | boolean | Determines whether a print link is provided on the interactive transcript. Defaults to true.                                 
+container      | string  | The container ID where we will place the interactive transcript. Only useful for API embed.                                  
+height         | integer | The height of the interactive transcript. Defaults to 200px if below the video, or the height of the video if on the side.   
+collapseOnload | boolean | Determines whether the transcript starts out collapsed. Defaults to false.                                                   
+position       | string  | The grid location where the transcript should live. Can be above/below/left/right.                                           
+version        | string  | Must be "v2".                                                                                                                
+width          | integer | The width of the interactive transcript. Defaults to the width of the embed if below the video, or 275px if on the side.     
+
+Note that, for `onloadCollapse` to work, `canCollapse` must also be true.
+
+### Using the Captions Plugin
+
+{% codeblock captions-params.html %}
+<script>
+  wistiaEmbed = Wistia.embed("abcde12345");
+  Wistia.plugin.transcript(wistiaEmbed, {
+    version: "v2",
+    position: "below",
+    height: 300,
+    canDownload: true
+  });
+</script>
+{% endcodeblock %}
+
+
