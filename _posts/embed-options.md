@@ -120,46 +120,50 @@ The following Embed Plugins are available for Wistia videos:
 
 ## Turnstile Plugin
 
-The Turnstile plugin slides an extremely simple form over the video as soon as
-it's ready to play. The sizing of the top and bottom text is determined by the
+The Turnstile plugin slides an extremely simple form over the video at a time
+of your choosing. The sizing of the top and bottom text is determined by the
 height of the video by default. If you specify the `fontSize` property in the
 style option, you can override the default sizing.
 
+Turnstile also tries to avoid asking for the viewers email if it has already
+been collected. It does this by saving the email in local storage for the
+specific `location.href` where it was collected. You can turn off this
+functionality by setting `alwaysShow` to true.
 
-Option Name      | Type   | Description                                                                                         
------------      | ----   | ----------------------------------------------------------------------------------------------------
-bottomText       | string | The text displayed below the input field. Usually information about what you'll do with the email.   
-buttonBackground | string | The hex color of the button. Defaults to the player color.                                           
-errorColor       | string | The hex color of the error text that can displayed. Yellow by default.                               
-exampleText      | string | The text that is displayed when the input field is empty.                                            
-style            | object | The styles to be applied to the root turnstile element.                                              
-topText          | string | The text displayed above the input field. Usually a request to enter the email.                      
-version          | string | Must be "v1".    
+
+Option Name        | Type      | Description
+-----------        | ----      | ----------------------------------------------------------------------------------------------------
+allowSkip          | boolean   | Determines whether to display a "Skip" button in the lower right for a gate at the beginning or middle. Defaults to false.
+alwaysShow         | boolean   | Determines whether to display the Turnstile gate even if the email has already been collected. Defaults to false.
+bottomText         | string    | The text displayed below the input field. Usually information about what you'll do with the email
+buttonBackground   | string    | The hex color of the button. Defaults to the player color.
+errorColor         | string    | The hex color of the error text that can displayed. Yellow by default.
+exampleText        | string    | The text that is displayed when the input field is empty.
+sectionIndex       | integer   | Only applies to playlists. Used in conjunction with `videoIndex` option to determine which video to begin gating. Defaults to 0.
+style              | object    | The styles to be applied to the root turnstile element.
+time               | string    | The point in the video when Turnstile displays. A value of "before" shows Turnstile before the video starts. "end" shows it at the end. You can also supply a time in seconds (e.g. 130) and it will appear when the viewer reaches that point in the video (or tries to skip past that point).
+topText            | string    | The text displayed above the input field. Usually a request to enter the email.
+videoIndex         | integer   | Only applies to playlists. Used in conjunction with `sectionIndex` option to determine which video to begin gating. Defaults to 0.
 
 
 ### Turnstile Plugin Example
 
 {% codeblock turnstile-params.html %}
-<div id="wistia_abcde12345" style="width:640px;height;360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script src="http://fast.wistia.net/static/E-v1.js"></script>
-<script src="http://fast.wistia.net/static/concat/E-v1-gridify,requireEmail-v1.js"></script>
 <script>
   wistiaEmbed = Wistia.embed("abcde12345", {
-    videoWidth: 640,
-    videoHeight: 360
-  });
-  Wistia.plugin.requireEmail(wistiaEmbed, {
-    version: "v1",
-    topText: "Please enter your email below.",
-    bottomText: "We may use this email to contact you about the product, but we won't be too pushy.",
-    style: {
-      background: "#660000",
-      color: "#eeffee"
+    plugin: {
+      "requireEmail-v1": {
+        topText: "Please enter your email below.",
+        bottomText: "We may use this email to contact you about the product, but we won't be too pushy.",
+        style: {
+          background: "#660000",
+          color: "#eeffee"
+        }
+      }
     }
   });
 </script>
 {% endcodeblock %}
-
 
 
 
