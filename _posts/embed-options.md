@@ -178,13 +178,15 @@ which slides into view *after* the video has finished playing.
 
 Option Name        | Type    | Description
 -----------        | ----    | --------------------------------------------------------
+autoSize           | boolean | When true, sets a font-size and line-height for the call to action based on the height of the video. Default is false.
 backgroundOpacity  | float   | A decimal between 0 and 1 to set the overall opacity of the background. Default is 0.91.
 image              | string  | The image src for the call to action.
-link               | string  | The destination URL when you click the postroll.
+link               | string  | The destination URL when you click the post-roll.
+on                 | boolean | Whether to show the post-roll. Default is true. Can be set to false to override Customize options.
 raw                | string  | The raw HTML for the call to action.
-style              | object  | The styles to be applied to the root postroll element.
+rewatch            | boolean | Whether to show "Rewatch" button in lower left. Defaults to true for text calls to action, false for image or HTML.
+style              | object  | The styles to be applied to the root post-roll element.
 text               | string  | The text for the call to action.
-version            | string  | The version of the post roll to use. Must be "v1".
 
 The link param can be used with either text or image calls to action. If a raw
 param is given, it will be used instead of text/image/link.
@@ -197,20 +199,39 @@ using an API embed and raw HTML, you can omit `target="\_blank"` safely.
 
 {% codeblock postRoll-api-embed.html %}
 <script>
-  wistiaEmbed = Wistia.embed("abcde12345");
-  Wistia.plugin.postRoll(wistiaEmbed, {
-    version: "v1",
-    text: "You made it to the end of my video! Now check out my product.",
-    link: "http://myawesomeproduct.com/awesome",
-    style: {
-      background: "#404040",
-      color: "#ffffff"
-    },
+  wistiaEmbed = Wistia.embed("4d8229898d", {
+    controlsVisibleOnLoad: true,
+    playerColor: "688AAD",
+    plugin: {
+      "postRoll-v1": {
+        text: "This clickable message\n will appear after your\n video ends!",
+        link: "http://wistia.com",
+        style: {
+          backgroundColor: "#616161",
+          color: "#ffffff",
+          fontSize: "36px",
+          fontFamily: "Gill Sans, Helvetica, Arial, sans-serif"
+        }
+      }
+    }
   });
 </script>
 {% endcodeblock %}
 
+### Scripts and CSS in Post-Rolls
 
+`<script>`, `<style>`, and `<link rel="stylesheet">` tags __are__ allowed in
+the `raw` option, but have some special rules around them for security.
+
+1. When saved via the Customize API, `<style>` tags and `style` attributes will be sanitized to
+prevent XSS vectors.
+2. `<script>` and `<link rel="stylesheet">` tags will not be executed when your
+embed is in a wistia.com domain. This includes the video that's visible in your
+account. However, if you embed the video on a different domain, the scripts
+will execute in order.
+3. Assuming you are on a non-wistia.com domain, `<script>`, `<style>`, and
+`<link rel="stylesheet">` tags will be injected onto the page immediately after
+your HTML has been rendered to the page.
 
 
 
