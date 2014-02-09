@@ -299,18 +299,14 @@ This example is a bit more involved - it specifies the `pageUrl` and
 
 ## Captions Plugin
 
+The Captions plugin enables the Wistia captions functionality for your player.
 
-Option Name    | Type    | Description                                                                                                                 
+If you want to programmatically set the text for the captions of a video, check
+out the [Captions API]({{ '/data-api#captions' | post_url }})
+
+Option Name    | Type    | Description
 -----------    | ----    | ----------------------------------------------------------------------------------------------------------------------------
-canCollapse    | boolean | Determines whether the transcript can be toggled open/closed. Defaults to false.                                             
-canDownload    | boolean | Determines whether a download link is provided on the interactive transcript. Defaults to false.                             
-canPrint       | boolean | Determines whether a print link is provided on the interactive transcript. Defaults to true.                                 
-container      | string  | The container ID where we will place the interactive transcript. Only useful for API embed.                                  
-height         | integer | The height of the interactive transcript. Defaults to 200px if below the video, or the height of the video if on the side.   
-collapseOnload | boolean | Determines whether the transcript starts out collapsed. Defaults to false.                                                   
-position       | string  | The grid location where the transcript should live. Can be above/below/left/right.                                           
-version        | string  | Must be "v2".                                                                                                                
-width          | integer | The width of the interactive transcript. Defaults to the width of the embed if below the video, or 275px if on the side.     
+onByDefault    | boolean | Determines whether captions should be visible by default, or if they need to click the CC button first to see them. Defaults to false--they need to click the CC button, which is visible when the mouse is over the video.   
 
 Note that, for `onloadCollapse` to work, `canCollapse` must also be true.
 
@@ -318,14 +314,18 @@ Note that, for `onloadCollapse` to work, `canCollapse` must also be true.
 
 {% codeblock captions-params.html %}
 <script>
-  wistiaEmbed = Wistia.embed("abcde12345");
-  Wistia.plugin.transcript(wistiaEmbed, {
-    version: "v2",
-    position: "below",
-    height: 300,
-    canDownload: true
+  wistiaEmbed = Wistia.embed("abcde12345", {
+    plugin: {
+      "captions-v1": {
+        onByDefault: false
+      }
+    }
   });
 </script>
 {% endcodeblock %}
+
+### iOS Oddities
+
+The iPhone and iPad use a slightly different mechanism to show captions. For the iphone, captions can only be turned on when the video is already playing and it's in landscape mode. For the iPad, captions can only be turned on when the video is in fullscreen mode, though they will continue to show when not in fullscreen.
 
 
