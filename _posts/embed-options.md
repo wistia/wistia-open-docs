@@ -244,18 +244,21 @@ the buttons included, and set specific sharing options, using the Plugin
 options.
 
 
-
-Option Name | Type    | Description                                                                                   
------------ | ----    | -------------------------------------------
-badgeImg    | string  | The src attribute of the logo image.                                                           
-badgeUrl    | string  | The URL that the logo launches when you click on it.                                           
-buttons     | string  | Dash-delimited list of buttons to display. Button options: **digg**, **email**, **embed**, **facebook**, **googlePlus**, **linkedIn**, **reddit**, **stumbleUpon**, **tumblr**, **twitter**, **videoStats**
-logo        | boolean | When true, float the badge to the right side of the socialbar.
-pageTitle   | string  | The specific pageTitle to be promoted when liked or shared.
-pageUrl     | string  | The specific pageUrl to be promoted when liked or shared.
-position    | string  | The grid location of the Social Bar. Default value is **below**, but **above** also acceptable.
-tweetText   | string  | The text that will be tweeted with the link. Defaults to the name of the video in Wistia.
-version     | string  | The version of the socialbar to use. Must be "v1".
+Option Name        | Type      | Description
+-----------        | ----      | ------------------------------
+badgeImg           | string    | The src attribute of the logo image.
+badgeUrl           | string    | The URL that the logo launches when you click on it.
+buttons            | string    | Dash-delimited list of buttons to display, e.g. "playCount-embed-facebook-twitter".
+downloadType       | string    | If the download button is available, this determines the quality of video that is downloaded. Possible values are **sd_mp4**, **hd_mp4**, and **original**. **hd_mp4** will only be used if it exists for the video. If it does not, it falls back to **sd_mp4**.
+height             | integer   | The height of the socialbar. Not required, but simplifies resizing operations. Defaults to 23. The total height of the socialbar is always this value plus 5 (for margin and padding).
+ignoreQueryParams  | boolean   | If pageUrl is not specified, this determines if we should include the query params in the pageUrl. Defaults to false.
+includeLinkback    | boolean   | When set to true, embed codes produced by the Embed button will also include a link 
+logo               | boolean   | When true, float the badge to the right side of the socialbar.
+on                 | boolean   | Whether to show the social bar. Default is true. Can be set to false to override Customize options.
+pageTitle          | string    | The specific pageTitle to be promoted when liked or shared.
+pageUrl            | string    | The specific pageUrl to be promoted when liked or shared.
+position           | string    | The grid location of the Social Bar. Default value is **below**, but **above** is also acceptable.
+tweetText          | string    | The text that will be tweeted with the link. Defaults to the title of the page. The keyword substitutions `{page_title}` and `{video_name}` can be used in the tweet text.
 
 
 
@@ -281,15 +284,14 @@ This example is a bit more involved - it specifies the `pageUrl` and
 
 {% codeblock socialbar-params.html %}
 <script>
-  wistiaEmbed = Wistia.embed("abcde12345", {
-    videoWidth: 640,
-    videoHeight: 360
-  });
-  Wistia.plugin.socialbar(wistiaEmbed, {
-    version: "v1"
-    buttons: "embed-twitter-facebook",
-    pageUrl: "http://wistia.com",
-    pageTitle: "The best in online video hosting."
+  wistiaEmbed = Wistia.embed("4d8229898d", {
+    plugin: {
+      "socialbar-v1": {
+        buttons: "playCount-embed-email-videoStats-twitter-tumblr-facebook",
+        pageUrl: "http://wistia.com/blog",
+        pageTitle: "Wistia's Blog"
+      }
+    }
   });
 </script>
 {% endcodeblock %}
