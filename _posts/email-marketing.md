@@ -42,7 +42,7 @@ Next, select *Embed & Share* from the <span class="action_menu">Video Actions</s
 Select your provider from the drop-down list.  We've got a whole list of 
 the best in the biz, like [Constant Contact](http://constantcontact.com), 
 [MailChimp](http://mailchimp.com), [Campaign Monitor](http://www.campaignmonitor.com), 
-and [MadMimi](http://madmimi.com).
+and [Mad Mimi](http://madmimi.com).
 
 {% post_image hashed_id: 'd7b89dafd94baf1a5f103bf7ffea346ba3dcb126', class: 'center' %}
 
@@ -199,7 +199,7 @@ GetResponse  |  `[email]`
 Hubspot  | {`{ contact.email }`}
 iContact  |  `[email]`
 Infusionsoft  |  `~Contact.Email~`
-MadMimi | `(email)`
+Mad Mimi | `(email)`
 MailChimp  |  `*|URL:EMAIL|*`
 Marketo  |  {`{lead.Email Address:default=noemail}`}
 Ontraport | {`[E-mail]`}
