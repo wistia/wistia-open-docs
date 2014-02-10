@@ -15,7 +15,7 @@
 @import fonts
 @import vars_and_mixins
 @import search
-@import syntax
+@import technical_docs
 @import devHQ
 @import wistia_basics
 
@@ -340,17 +340,19 @@ em
     list-style-type: disc
     line-height: 150%
     padding-left: 15px
+    a
+      border-bottom: 1px solid $gray2
+      &:hover
+        border-bottom: 1px solid $light_blue
+        text-decoration: none
   ol
     line-height: 150%
     list-style: decimal
     li
       margin-left: 30px
-
-  a
-    +link-hover
   p
     margin-left: 0px
-    line-height: 31px
+    line-height: 145%
     position: relative
     font-size: 16px
     font-weight: 200
@@ -548,13 +550,13 @@ table
   +anti-alias
 
   th
-    font-size: 16px
+    font-size: 15px
     padding: 10px 20px
     background: $light_blue
     border-bottom: 2px solid white
     color: white
   td
-    padding: 10px 20px
+    padding: 5px 20px
     background: rgba($light_blue, .2)
     border-bottom: 1px solid white
     color: $light_blue
