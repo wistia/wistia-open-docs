@@ -1,0 +1,510 @@
+#post
+  margin-left: 10px
+  width: $post_width
+  background-color: white
+  clear: both
+  padding-bottom: 20px
+  +col
+
+
+
+.post_title
+  margin: 64px 0px 20px 0px
+  border-bottom: 1px solid $gray2
+  padding-bottom: 15px
+
+
+
+.post_content
+  hr
+    clear: both
+    height: 1px
+    background-color: $gray2
+    border: 0
+    margin-top: 50px
+    margin-bottom: -39px
+  h1, h2, h3, h4
+    margin: 15px 16px
+
+  h2, h3
+    line-height: 120%
+    margin: 20px 0px
+    clear: both
+    font-weight: 700
+    color: $title_color
+    &:hover
+      .subtopic_anchor
+        color: $light_blue
+  h2
+    margin: 55px 16px 13px 0
+    font-size: 18px
+    line-height: 30px
+  h3
+    font-size: 18px
+    margin-top: 55px
+    font-weight: 600
+  h4
+    font-size: 16px
+    margin: 14px 0px
+    margin-top: 48px
+
+  p, pre, ol, ul
+    margin: 15px 0
+  ol, ul
+    +anti-alias
+    font-family: $fonts
+    clear: both
+    li
+      margin-bottom: 15px
+      p
+        font-weight: 600
+      
+  ul
+    list-style-type: disc
+    line-height: 150%
+    padding-left: 15px
+    a
+      border-bottom: 1px solid $gray2
+      &:hover
+        border-bottom: 1px solid $light_blue
+        text-decoration: none
+  ol
+    line-height: 150%
+    list-style: decimal
+    li
+      margin-left: 30px
+  p
+    margin-left: 0px
+    line-height: 145%
+    position: relative
+    font-size: 16px
+    font-weight: 200
+    font-family: $fonts
+    color: $gray6
+    margin-top: 10px
+    margin-bottom: 18px
+    word-wrap: break-word
+    a
+      text-decoration: none !important
+    pre
+      margin: $padding/2 0 $padding/2 $padding
+      background-color: $gray1
+
+
+// those little anchors before each h2 and h3 //
+.subtopic_anchor
+  color: $gray2
+  font-size: 18px
+  font-weight: 700
+  position: absolute
+  left: -5px
+  +transition
+  &:hover
+    color: $light_blue
+
+////////// post intro styles ////////
+
+.post_intro
+  margin: 0px 0px 35px 0px
+  font-size: 16px
+  color: $title_color
+  padding: 0px 0
+  line-height: 31px
+  font-style: italic
+  p, ul
+    margin-top: 15px
+    font-weight: 500
+  p
+    &:last-child
+      padding-bottom: 0px
+  ul li
+    list-style-position: inside
+
+  .center
+    margin-left: 0
+
+///// Span Styles //////
+
+.action_menu
+  background-color: #54bbff
+  color: white
+  padding: 4px 5px
+  font-family: $fonts
+  margin: 0px 2px
+  font-size: 15px
+  font-weight: 700
+  +anti-alias
+
+.faux_button
+  background-color: #e8e7e6
+  color: #939291
+  font-family: $fonts
+  border-radius: 15px
+  -moz-border-radius: 15px
+  -webkit-border-radius: 15px
+  padding: 5px 13px
+  margin: 0px 3px
+  font-size: 12px
+  text-transform: uppercase
+  font-weight: 800
+  -webkit-font-smoothing: antialiased
+  letter-spacing: 1px
+
+.edit_tag
+  background: transparent url(http://embed.wistia.com/deliveries/c4728e279c91c74605f00f6c2629a646ed3905af.png) no-repeat
+  padding-left: 33px
+  height: 10px
+  +col
+
+.help_bubble
+  background: transparent url(http://fast.wistia.com/images/zebra/elements/questionhelp_dark.png) no-repeat
+  padding-left: 28px
+  height: 28px
+  position: relative
+  top: 8px
+  +col
+
+.seo_faq
+  margin-left: 0
+  font-size: 24px
+  font-size: 16px
+  font-weight: 700
+
+
+/// post callout boxes ///
+
+
+.post_callout_boxes
+  p
+    width: 70%
+    margin-top: 0
+    +col
+    &:last-child
+      margin-bottom: 0
+
+.faq
+  +callout-box($note_color)
+  padding: 50px 60px
+  p
+    margin-top: 0
+    margin-left: 0px
+    +col
+    &:last-child
+      margin-bottom: 0
+  h4
+    margin-bottom: 17px
+
+.tip
+  @extend .post_callout_boxes
+  +callout-box($background_blue)
+.alert
+  @extend .post_callout_boxes
+  +callout-box($alert_color, $alert_text, $alert_text)
+.note
+  @extend .post_callout_boxes
+  +callout-box($note_color)
+  a
+    color: $light_blue
+
+.warning
+  background-color: rgba(yellow, .4)
+  padding: 34px
+  .top-line
+    font-size: 18px
+    font-weight: 700
+    line-height: 30px
+    margin-top: 0
+  &.dev
+    margin-bottom: $padding / 2
+
+.expert_tip
+  position: relative
+  overflow: hidden
+  +callout-box($light_blue)
+  h3
+    padding-top: 0
+  img
+    position: absolute
+    top: -5px
+    right: -45px
+    +border-radius(75px)
+    +opacity(.8)
+  p
+    padding: 0
+    margin: 0
+    margin-top: 10px
+    display: block
+    +col
+    &:last-child
+      margin-bottom: 0
+
+
+=expert-tip-images($y)
+  background:
+    repeat: no-repeat
+    position: 45px 35px
+    size: 100px 100px
+
+.video_seo
+  +expert-tip-images(60%)
+  padding-left: 193px
+  background:
+    image: url(http://embed.wistia.com/deliveries/661c19b720a884cbafd7b199d63d1d14874cf6e2.png)
+
+.expression_engine
+  +expert-tip-images(40%)
+  background:
+    image: url(http://embed.wistia.com/deliveries/035aae7c13d02975a0e714b86125e65a01d7a792.png)
+
+
+/////// images /////////
+
+.post_image
+  margin: 20px auto
+  clear: both
+  position: relative
+  overflow: hidden
+  border: 1px solid $gray2
+  img
+    vertical-align: top
+.center
+  text-align: center
+.intro_image, .integration_logo
+  +floated-images
+  border: none
+
+.browser_images
+  margin: 0 auto
+  text-align: center
+  img
+    margin: 0 16px
+/////// video /////////
+
+.video_embed
+  margin: 30px 0px
+
+//////// EVIL TABLES //////
+
+table
+  font-size: 15px
+  line-height: 140%
+  font-family: $fonts
+  margin: 30px 0
+  width: 100%
+  text-align: left
+  border-collapse: collapse
+  +anti-alias
+
+  th
+    font-size: 15px
+    padding: 10px 20px
+    background: $light_blue
+    border-bottom: 2px solid white
+    color: white
+  td
+    padding: 5px 20px
+    background: rgba($light_blue, .2)
+    border-bottom: 1px solid white
+    color: $light_blue
+    border-top: 1px solid transparent
+    word-wrap: break-word
+    a
+      color: $blue
+      text-decoration: underline
+  tr
+    &:hover
+      td
+        background: rgba($light_blue, .1)
+        color: $light_blue
+  tr td pre
+    margin: 0
+    padding: 0
+
+////// RANDEEEZE ////////
+
+.randor_links
+  text-align: center
+  width: 100%
+  p
+    vertical-align: top
+    text:
+      align: center
+      decoration: underline
+
+  ul
+    padding: 0
+    border: 0
+    li
+      margin-bottom: 10px
+
+/////// Exporting Page ///////
+
+.exporting_guide_box
+  +callout-box($light_blue)
+  padding: 34px 34px 45px 34px
+  margin: 45px 0px
+  h3
+    margin: 0
+    color: $light_blue
+  p
+    margin: 0 0 $padding/2 $padding
+    color: $light_blue
+  ul
+    border: none
+    margin: 0
+    margin-left: $padding
+    padding: 0
+    li
+      color: $accent_blue
+  .answer
+    color: $gray6
+    font-weight: normal
+
+
+/////// post footer //////////
+
+.post_footer
+  margin-top: 60px
+  clear: both
+  ul
+    position: relative
+    width: 460px
+    height: 109px
+    list-style-type: none
+    li
+      position: absolute
+      width: 230px
+      -webkit-font-smoothing: antialiased
+      font-family: $fonts
+      h4
+        font-weight: 600
+        margin-bottom: 13px
+      &:first-child
+        left: 50px
+      &:last-child
+        right: 45px
+.footer_content
+  padding: 60px 70px 70px 70px
+  p
+    font-size: 15px
+    margin-bottom: $padding/6
+    line-height: 22px
+.for_developers
+  +footer-styling($for_developers)
+.for_beginners
+  +footer-styling($accent_blue)
+.for_intermediates
+  +footer-styling($for_intermediates)
+
+
+/////// post nav box ////////
+.api
+  #post_content_nav
+    position: absolute
+  .post_content
+    h2
+      font-size: 24px
+    h3
+      font-size: 18px
+      margin-top: 55px
+      font-weight: 600
+      margin: 55px 16px 13px 0
+    h4
+      font-weight: 600
+
+#post_content_nav
+  background-color: white
+  padding-top: 55px
+  position: absolute
+  width: $fixed_column_width
+  vertical-align: top
+  font-family: $title-fonts
+  +col
+  &.fixedPosition
+    position: fixed
+    top: -29px
+  &.bottomPadding
+    bottom: 55px
+  ul
+    list-style-type: none
+  li
+    padding-bottom: 18px
+    a
+      display: inline
+      padding: 6px 0px
+      color: $text_color
+      font-size: 15px
+      text-decoration: none
+      line-height: 150%
+      &:hover
+        text-decoration: underline
+    &:last-of-type
+      border-bottom: none
+      margin-bottom: 0
+      padding-bottom: 0
+    &.current > a
+      font-weight: 700
+      &:hover
+        color: $title_color
+
+  .title_list_item
+    padding: 11px 0 13px
+    border-bottom: 1px solid $gray2
+    margin-bottom: 22px
+    a
+      padding: 0 0 20px 0px
+      position: relative
+      font-size: 15px
+      font-weight: 700
+    &.current
+      li
+        background: none
+      a, a:hover
+        padding: 0 0 20px 0px
+        background: none
+        color: $title_color
+
+  .header_link
+    a
+      display: block
+      padding: 5px 0px 0px 0px
+      color: $text_color
+      font-size: 15px
+      font-weight: 600
+      text-decoration: none
+      line-height: 26px
+      &:hover
+        text-decoration: underline
+
+  .sub_link
+    margin-left: 10px
+    a
+      font-size: 15px
+      font-weight: 400
+      line-height: 26px
+      padding: 5px 0px 0px 0px
+
+///// utility classes ///////
+
+.clear
+  clear: both
+
+.unhide
+  visibility: visible
+
+// 'to the tippy' link //
+
+#top-link
+  color: white
+  display: none
+  position: fixed
+  right: 40px
+  bottom: 40px
+  text-decoration: none
+  background: rgba($gray3, .6)
+  padding: 14px
+  font-weight: 800
+  font-family: $fonts
+  font-size: 14px
+  text-transform: uppercase
+  +anti-alias

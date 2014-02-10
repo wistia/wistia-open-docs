@@ -1,0 +1,55 @@
+.category_container
+  @extend .home_container
+  padding: 46px 0
+  .section
+    padding-top: 25px
+    padding-bottom: 20px
+    h1
+      text-transform: capitalize
+      font-size: 22px
+      -webkit-font-smoothing: antialiased
+      letter-spacing: 0px
+      text-align: left
+      font-weight: 700
+    ul
+      text-align: left
+      list-style-type: none
+      list-style-image: none
+
+      li:before
+        content: ""
+
+      .category_title
+        position: relative
+        margin-bottom: 0px
+        padding: 0px 0px
+        a
+          padding-left: 35px
+          
+        a
+          &:before
+            content: "\e001"
+            color: $gray2
+            font-family: 'wistiacom-icons'
+            font-size: 23px
+            font-style: normal
+            speak: none
+            font-weight: normal
+            -webkit-font-smoothing: antialiased
+            position: absolute
+            left: 0
+            top: -4px
+          &:hover
+            color: $light_blue
+            &:before
+              color: $light_blue
+          
+      p
+        +anti-alias
+        padding-left: 35px
+        font-size: 16px
+        line-height: 31px
+        font-weight: 400
+        width: 600px
+        margin-top: 15px
+        margin-bottom: 48px

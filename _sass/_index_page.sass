@@ -1,0 +1,134 @@
+%upperCaseLink
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: 600
+  color: $gray2
+  text-decoration: none
+  letter-spacing: 1px
+  font-family: $fonts
+  -webkit-font-smoothing: antialiased
+
+#home_logo
+  margin: 0 auto
+  width: 673px
+  height: 187px
+  background: transparent url(http://embed.wistia.com/deliveries/14d8f72f61b4866ff365396c58c2ad1be697e79f.png) no-repeat
+
+.home_header
+  padding: $padding*2 0 80px
+
+.home_body
+  padding-bottom: 40px
+
+.home_container
+  background-color: white
+  border-top: 6px solid $light_blue
+  margin: -6px auto 60px
+  max-width: 848px
+  padding: 46px 80px 0 72px
+  position: relative
+  h1
+    font-size: 22px
+    font-weight: 700
+    text-transform: capitalize
+  h2
+    font-size: 18px
+    margin-bottom: 33px
+    font-weight: 600
+    a
+      color: $gray6
+      &:hover
+        color: $light_blue
+        text-decoration: none
+  ul
+    color: $gray6
+    padding-left: 20px
+    margin-bottom: 35px
+    font-family: $fonts
+    -webkit-font-smoothing: antialiased
+    &.posts_list
+      padding-left: 0px
+  li
+    font-size: 16px
+    line-height: 25px
+    margin-bottom: 7px
+    font-family: $fonts
+    -webkit-font-smoothing: antialiased
+    position: relative
+    &:before
+      content: "\f111"
+      color: $gray2
+      font-family: FontAwesome
+      font-size: 7px
+      font-style: normal
+      speak: none
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      position: absolute
+      left: -19px
+      top: -1px
+    a
+      color: $gray6
+  .section
+    border-bottom: 1px solid $gray2
+    padding-top: 25px
+    padding-bottom: 18px
+    &.top
+      padding-top: 0px
+      padding-bottom: 25px
+    &.last
+      border-bottom: 0px solid $gray2
+  .column
+    +col
+    position: relative
+    &.developers
+      width: 50%
+  .secondRow
+    height: 342px
+    margin-top: 6px
+  .left
+    width: 225px
+    padding-right: 75px
+  .middle
+    width: 225px
+    padding-right: 75px
+  .right
+    width: 225px
+  .columnBig
+    +col
+    width: 544px
+  .wistia-basics
+    .thumbnails
+      padding: 0
+      li
+        margin-right: 8px
+        +col
+        &:before
+          content: ""
+        .text-link
+          display: block
+          text-align: center
+
+  .viewAll
+    @extend %upperCaseLink
+    height: 18px
+    padding-top: 1px
+    padding-left: 10px
+    left: 15px
+    position: absolute
+    bottom: 20px
+    &:before
+      content: "\e001"
+      font-family: 'wistiacom-icons'
+      font-size: 23px
+      font-style: normal
+      speak: none
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      position: absolute
+      top: -6px
+      left: -20px
+    &:hover
+      color: $light_blue
+      &:before
+        color: $light_blue
