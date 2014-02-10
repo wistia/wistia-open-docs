@@ -849,12 +849,11 @@ em { font-style: italic; }
 
 .video_embed { margin: 30px 0px; }
 
-table { font-size: 16px; line-height: 31px; font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 30px 0; width: 100%; text-align: left; border-collapse: collapse; -webkit-font-smoothing: antialiased; }
+table { font-size: 15px; line-height: 140%; font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 30px 0; width: 100%; text-align: left; border-collapse: collapse; -webkit-font-smoothing: antialiased; }
 table th { font-size: 15px; padding: 10px 20px; background: #3ea9f5; border-bottom: 2px solid white; color: white; }
 table td { padding: 5px 20px; background: rgba(62, 169, 245, 0.2); border-bottom: 1px solid white; color: #3ea9f5; border-top: 1px solid transparent; word-wrap: break-word; }
-table td a { border-bottom: 1px solid #cbd0d6; color: #161d25; text-decoration: none; }
+table td a { color: #0e7ac4; text-decoration: underline; }
 table tr:hover td { background: rgba(62, 169, 245, 0.1); color: #3ea9f5; }
-table tr:hover a:hover { border-bottom: 1px solid #3ea9f5; text-decoration: none; }
 table tr td pre { margin: 0; padding: 0; }
 
 .randor_links { text-align: center; width: 100%; }
