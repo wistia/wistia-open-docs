@@ -6,10 +6,19 @@ description:
   Wistia videos work pretty much everywhere on the web, and if you want to
   double check this is the right place to look!
 post_intro:
-  <p>As you begin to add Wistia-hosted video to your marketing campaigns, you
+  <p>As you begin to add Wistia-hosted video to your marketing materials, you
   might wonder, "What does someone need to watch Wistia videos?"  No worries,
   we've got you covered.</p>
 ---
+
+## Our Player
+
+{% wistia_embed hashed_id: 4x9odvsk2t, videoWidth: 599, videoHeight: 337 %}
+
+This is our Wistia player. If you can watch this video - success! Your computer
+and browser are all set to view Wistia-hosted content.
+
+{% post_image hashed_id: '320d5c6bf8df4053a63d70869f3f7d7f6b8f78ad', class: 'center' %}
 
 ## Operating Systems Supported
 
