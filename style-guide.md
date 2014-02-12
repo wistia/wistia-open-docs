@@ -106,7 +106,7 @@ correlated on the area of the doc.
 
 After upload, use the Bakery Hashed ID with the Liquid embed tag we created:
 
-    {% post_image: 'BAKERY-ID', class: 'BLAH', width: 'BLAH' %}
+    {% post_image hashed_id: 'BAKERY-ID', class: 'BLAH', width: 'BLAH' %}
 
 ### CSS Styling
 Images are all given the class `post_image`. They can be floated to the left or right
