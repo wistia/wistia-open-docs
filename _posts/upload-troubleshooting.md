@@ -28,4 +28,6 @@ Some say it's the oldest trick in the book, but when it comes to connection issu
 
 **Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!**
 
+{{ "If something seems fishy, you can always check out [Status Page](http://status.wistia.com/) for more information about what might be going on." | note }}
+
 
