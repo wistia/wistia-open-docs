@@ -234,3 +234,5 @@ And that would be dynamically replaced to:
 `<a href="www.website.com?wemail=support@sendgrid.com">`
 
 Pretty neat! Thanks also to Jayson at SendGrid support!
+
+{{ "Some email providers, like Gmail or Outlook, might not play as nicely with HTML as others. For these, you can achieve similar results by using the image tool to create an image in the body of an email and then linking that to the page with your Wistia video on it. This will create the same appearance as the email marketing embeds mentioned above, but will unfortunately not track emails along with the views in Viewer Stream." | note }}
