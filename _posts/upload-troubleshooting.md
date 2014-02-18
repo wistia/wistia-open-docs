@@ -26,8 +26,6 @@ Sometimes the flash uploader just won't be co-operative, which is why we have ou
 
 Some say it's the oldest trick in the book, but when it comes to connection issues it can be a lifesaver. Try resetting your router and making sure you have a secure connection; a shaky connection can be a nightmare when trying to upload (especially for larger files). 
 
-**Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!**
-
-{{ "If something seems fishy, you can always check out [Status Page](http://status.wistia.com/) for more information about what might be going on." | note }}
+**If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!**
 
 

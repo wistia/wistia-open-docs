@@ -233,8 +233,9 @@ Here's the workflow for Transit:
   * Password: your account's API password
   * and make sure to select *FTP with TLS/SSL* from the security options.
 * Your projects list will appear. 
-* Upload into the Project's folder, not the `_assets` dir
-
+* Upload into the Project's folder, not the `_assets` dir  
+<br>
+<br>
 Here's the workflow for Filezilla:
 
 * Load up Filezille, and use these settings:

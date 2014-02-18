@@ -50,3 +50,5 @@ For instructions on the best way to encode your video prior to uploading it,
 check our [video exporting page]({{ '/export-settings' | post_url }}).
 
 Once your video is uploaded, [it's time to customize]({{ '/customizing-your-video' | post_url }}).
+
+**If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!**
