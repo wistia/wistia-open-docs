@@ -9,7 +9,9 @@ post_intro:
   <p>Turnstile is a great way to identify high-quality leads using video. Connect
   your account to your favorite email provider, then add an email capture gate to
   any point in your video.</p><p>Setting up Turnstile is a breeze, we'll show
-  you how!</p>
+  you how!</p><p>If you use an email provider or marketing automation system
+  that rocks but isn't on our current Turnstile list, submit them using <a
+  href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
 ---
 
 ## Setup Your Email Provider Integration
