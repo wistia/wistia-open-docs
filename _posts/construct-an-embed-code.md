@@ -141,7 +141,7 @@ code may change so that the video's aspect ratio is preserved.
 Here is how we can get the embed code and some information for a video at
 `http://home.wistia.com/medias/e4a27b971d` in JSON format:
 
-    curl "http://fast.wistia.net/oembed?url=http://home.wistia.com/medias/e4a27b971d"
+    curl "http://fast.wistia.net/oembed?url=http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d"
 
 This returns:
 
