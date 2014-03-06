@@ -1,9 +1,9 @@
 ---
-title: Sending Video Emails with Hubspot
+title: Sending Video Emails with HubSpot
 layout: post
 category: Integrations
-description: Send video in email via Hubspot and track who's watching
-post_intro: <p>Learn how to include videos in your Hubspot email campaigns</p><p>It's as easy as copying a snippet of code from your Wistia account and pasting it into the Hubspot email builder.</p>
+description: Send video in email via HubSpot and track who's watching
+post_intro: <p>Learn how to include videos in your HubSpot email campaigns</p><p>It's as easy as copying a snippet of code from your Wistia account and pasting it into the HubSpot email builder.</p>
 ---
 
 ## How it works
@@ -25,11 +25,11 @@ Change the size, play button color, and page the video links to. Then copy the e
 I've highlighted the embed code in that pretty pink box.
 
 
-## 2. Head over to Hubspot's Email Builder
+## 2. Head over to HubSpot's Email Builder
 
 {% post_image hashed_id: '441a85383456dac91881885259a11a892cdf3448', width: 1386, height: 874 %}
 
-When you're editing your email in Hubspot, click the *HTML* button in the *Main Body Text* editor.
+When you're editing your email in HubSpot, click the *HTML* button in the *Main Body Text* editor.
 This will ensure that the editor won't mess with the code that we paste in.
 
 
@@ -46,7 +46,7 @@ At this point, it's safe to switch back to the Visual editing mode if you like.
 ## 4. Send that email
 
 You're all set to send the email. It's always good to send a test message to yourself
-first to make sure everything's linked up right. Note that when Hubspot sends the test message
+first to make sure everything's linked up right. Note that when HubSpot sends the test message
 it will pass through "EMAIL" to our tracking system instead of your actual email address.
 
 When you send the actual email, it will substitute the recipients emails in instead.
