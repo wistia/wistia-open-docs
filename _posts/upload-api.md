@@ -238,7 +238,7 @@ Here's the workflow for Transit:
 <br>
 Here's the workflow for Filezilla:
 
-* Load up Filezille, and use these settings:
+* Load up Filezilla, and use these settings:
   * Host: ftp.wistia.com
   * Protocol: FTP — File Transfer Protocol
   * Encryption: Require explicit FTP over TLS
