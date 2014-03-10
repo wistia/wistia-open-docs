@@ -38,7 +38,7 @@ logo in your Wistia account.
 
 ## Filtering Out Internal Stats
 
-{% post_image hashed_id: 'c3b7767bf8523160c7ded97ff69ea4bf260b5ce1', width: 600, class: 'center' %}
+{% post_image hashed_id: '9feebb84249cac542f9f66a43c321d0c04c87f17', width: 600, class: 'center' %}
 
 You can filter out your own views, and those of the other testers you might
 have looking at your Wistia videos before launch, based on IP.
@@ -162,7 +162,7 @@ immediately.
 
 ## Changing the Email Address Associated With Your User Account
 
-If you would like to change the email address associated with your user account, it's actually super easy! From the *Account* tab in the top right corner of your screen, select *My Settings*. 
+If you would like to change the email address associated with your user account, it's actually super easy! From the *Account* tab in the top right corner of your screen, select *My Settings*.
 
 {% post_image hashed_id: '6e8ae8a2517fe48452198167a252bfc55f594023', class: 'center' %}
 
