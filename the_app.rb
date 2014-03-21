@@ -20,6 +20,7 @@ class TheApp < Sinatra::Base
     r301 %r{/viewer-rec}, "#{$config.basepath}/viewer-requirements"
     r301 %r{/transcripts}, "#{$config.basepath}/captions"
     r301 %r{/customize-api}, "#{$config.basepath}/data-api#customizations"
+    r301 %r{/replaceable-video}, "#{$config.basepath}/replace-video"
     rewrite %r{#{$config.basepath}(.*)}, '$1'
   end
 
