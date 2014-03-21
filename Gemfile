@@ -12,7 +12,7 @@ gem 'rdiscount'
 gem 'sass', '~> 3.2'
 gem 'sinatra', '~> 1.3.3'
 gem 'tire', '~> 0.4.2'
-gem 'rack-rewrite', '~> 1.2.1'
+gem 'rack-rewrite', '~> 1.5.0'
 gem 'unicorn'
 
 group :test do
