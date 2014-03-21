@@ -157,6 +157,12 @@ Pretty much none, just:
 
     git push origin master
 
+### Adding Redirects
+
+If we update a post URL, or allow multiple URLs to point to a single document, restart Unicorn on the docbox in order for them to take effect.
+
+    sudo /etc/init.d/unicorn restart
+
 ### Box Problems
 
 Restart Elasticsearch
