@@ -17,10 +17,10 @@ class TheApp < Sinatra::Base
     r301 %r{/randor-(\w+)/?}, "#{$config.basepath}/wistia-basics-$1"
     r301 %r{/randor?}, "#{$config.basepath}/wistia-basics"
     r301 %r{/embed-screen?}, "#{$config.basepath}/customizing-your-video"
-    r301 %r{/viewer-rec}, "#{$config.basepath}/viewer-requirements"
     r301 %r{/transcripts}, "#{$config.basepath}/captions"
     r301 %r{/customize-api}, "#{$config.basepath}/data-api#customizations"
     r301 %r{/replaceable-video}, "#{$config.basepath}/replace-video"
+    r301 %r{/viewer-rec}, "#{$config.basepath}/viewer-requirements"
     rewrite %r{#{$config.basepath}(.*)}, '$1'
   end
 
