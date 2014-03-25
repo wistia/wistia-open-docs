@@ -52,6 +52,8 @@ obsessive compulsive when it comes to organization :).
 Select *Move & Copy* from the <span class="action_menu">Project Actions</span>
 menu. This will open up the *Move & Copy panel*.
 
+{{ "You must be an admin on the project to view and open the Move & Copy panel." | note }}
+
 {% post_image hashed_id: '2c91018f45702bfc159e5659f5815398d8ffbcc7', class: 'center' %}
 
 You can drag & drop the media you wish to move in either direction (left to
@@ -62,6 +64,16 @@ To Copy, hold the `Ctrl` (Windows) or `⌘` (Apple) key while you arrange media.
 Watch the video to see Move & Copy in action.
 
 {% wistia_embed hashed_id: 50uxm03679 %}
+
+### Moving Videos Between Accounts
+
+If you are an admin on multiple accounts, the *Move & Copy panel* will allow
+you to move media to other accounts. For videos with stats, however, the stats
+will not transfer between accounts.
+
+**If you move a video between accounts accidentally**, and need the stats back,
+moving the video to it's original account and project will automatically
+restore the stats. Phew.
 
 ## Embed Video
 
