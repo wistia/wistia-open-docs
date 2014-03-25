@@ -32,6 +32,37 @@ To edit the title, hover over it with your mouse, and click the
 
 Changing the thumbnail of your video is covered in detail in the [Customize documentation]({{ '/customizing-your-video' | post_url }}).
 
+## Moving and Copying Media
+
+Moving and copying media is a normal part of the organizational workflow for
+your videos.
+
+*Copying* is good for creating multiple instances of a video with different
+customizations, or for zero-ing out stats for a certain video (i.e. you make a
+copy and then re-embed).
+
+*Moving* is good for keeping your account tidy. You might set up a project
+called "Active Videos" and another called "Archive". Moving an old video to the
+"Archive" project means you can reference the stats for that video later, but
+it doesn't clutter up the "Active Videos" project. Or maybe we're just
+obsessive compulsive when it comes to organization :).
+
+{% post_image hashed_id: 'cf7972e5b6055eb26078644ea9a99a40a79d1df2', class: 'center' %}
+
+Select *Move & Copy* from the <span class="action_menu">Project Actions</span>
+menu. This will open up the *Move & Copy panel*.
+
+{% post_image hashed_id: '2c91018f45702bfc159e5659f5815398d8ffbcc7', class: 'center' %}
+
+You can drag & drop the media you wish to move in either direction (left to
+right, or right to left). Hold the `Shift` key to select multiple media.
+
+To Copy, hold the `Ctrl` (Windows) or `⌘` (Apple) key while you arrange media.
+
+Watch the video to see Move & Copy in action.
+
+{% wistia_embed hashed_id: 50uxm03679 %}
+
 ## Embed Video
 
 The ins-and-outs of embedding your video is the subject of our 
@@ -94,21 +125,3 @@ account (where viewers need additional context). Your video description will
 also be passed through to services like Facebook ([see more on social sharing]({{ '/social-sharing' | post_url }})).
 
 {{ "Embedding elements via HTML in video descriptions is currently not recommended and can cause issues with the page displaying." | note }} 
-
-## Copy Media
-
-Copy media is good for creating multiple instances of a video with different
-customizations, or for zero-ing out stats for a certain video (i.e. you make a
-copy and then re-embed).
-
-Navigate to the project you want the copied video **to end up in**. Under
-the <span class="action_menu">Project Actions</span> menu, choose the *Copy Media* option.
-
-{% post_image hashed_id: 'f456efce4482b9e6f129e0c89f58daa653bcf92d', class: 'center' %}
-
-This will open up the *Copy Media* panel in the right-hand sidebar.  From the 
-drop-down menu in the Copy Media panel, choose the project from which you wish 
-to copy media.  Once the project is selected in the Copy Media panel, all of the 
-media from that project will be displayed below the drop down box.
-
-Select the media in the Copy Media panel to copy it to the current project.
