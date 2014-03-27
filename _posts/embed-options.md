@@ -42,7 +42,7 @@ canonicalTitle        | string  | The title of the page, used for social feature
 canonicalUrl          | string  | The url of the page, used for social features.
 chromeless            | boolean | flash only. When true, player is created without controls.
 container             | string  | The element that should container the embed. Defaults to wistia_{hashed_id}
-controlsVisibleOnLoad | boolean | flash only. When true, controls are visible before you click play.
+controlsVisibleOnLoad | boolean | When true, controls are visible before you click play.
 doNotTrack            | boolean | When true, embed will not track views.
 endVideoBehavior      | string  | flash only. Behavior when the video ends: default/reset/loop.
 fullscreenButton      | boolean | Show fullscreen button. Default is true.
@@ -61,7 +61,7 @@ videoQuality          | string  | Specify the starting video quality. options: *
 videoWidth            | integer | The original width of the video.
 videoHeight           | integer | The original height of the video.
 volume                | float   | Set a starting volume for the video on load.
-volumeControl         | boolean | Show volume control. Default is false.
+volumeControl         | boolean | Show volume control. Default is true.
 wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
 
 
