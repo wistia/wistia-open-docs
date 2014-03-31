@@ -1085,7 +1085,8 @@ owner (optional)      | An email address specifying the owner of the new media. 
 If the media is copied successfully, the server will respond with HTTP status
 **201 Created**. The HTTP **Location** header will be set to the URL where the
 newly created media resource resides.  The body of the response will contain an
-object representing the *new copy* of the media that was just created.
+object representing the *new copy* of the media that was just created, as well
+as the project it belongs to.
 
 
 #### Example Media#Copy Request
@@ -1144,6 +1145,7 @@ similar to the following:
 Field   |  Description
 --------|----------------
 id    | A unique numeric identifier for the video within the system.
+hashed_id | A unique alphanumeric identifier for the video within the system.
 name  | The display name of the video.
 stats | An object representing the aggregated embed statistics for this video.
 
