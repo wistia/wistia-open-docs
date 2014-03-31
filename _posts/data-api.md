@@ -1115,6 +1115,11 @@ object representing the *new copy* of the media that was just created.
     "url":"http://embed-0.wistia.com/deliveries/fcf39d52918652ecbde8e2123ea479c382f8771c.jpg?image_crop_resized=100x60",
     "width":100,
     "height":60
+  },
+  "project": {
+    "id": 47115,
+    "name": "Media Needed to Rock",
+    "hashed_id": "5cb193e92c"
   }
 }
 {% endcodeblock %}
