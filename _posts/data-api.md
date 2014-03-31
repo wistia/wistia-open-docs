@@ -1170,6 +1170,7 @@ averagePercentWatched   | This is an integer between 0 and 100.  It shows the av
 {% codeblock example_json_response.json %}
 {
     "id": 3690639,
+    "hashed_id": "g5pnf59ala",
     "name": "Dan Mills - Young and Free",
     "stats": {
         "averagePercentWatched": 23,
