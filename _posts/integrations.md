@@ -32,6 +32,15 @@ We have some other information on using Wistia and WordPress, including styling 
 
 {{ "Wistia embed codes can only be used with WordPress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between WordPress.com hosted blogs and WordPress installs</a>." | note }}
 
+## Zapier
+
+{% post_image hashed_id: 'b182cbf925e093852d701f6350c40281b5799ffc', width: 500, class: 'integration_logo' %}
+
+[Zapier](https://zapier.com/how-it-works/) is a system that allows users to connect all sorts of web apps to each other, creating "zaps" to automate repetitive tasks with little to no trouble at all. Wistia is now featured among the list of web apps they integrate with, giving you even more power for connecting Wistia with all your other favorite web services.
+
+On the Zapbook page for Wistia, Zapier has handily included a bunch of sample zaps to help you get the ball rolling--just [head over to that zapbook](https://zapier.com/zapbook/wistia/) to get started!
+
+
 ## Drupal
 
 {% post_image hashed_id: '97d57d4890140c3e6f529e7e58fe7b7d3610d9b5', width: 200, class: 'integration_logo' %}
