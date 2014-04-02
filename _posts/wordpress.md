@@ -3,6 +3,7 @@ title: WordPress &amp; Wistia
 layout: post
 category: Integrations
 description: WordPress is one of the most popular blog/website platforms out there, and Wistia videos work quite well in the WordPress environment. 
+temper: true
 ---
 
 ## Wistia WordPress Plugin

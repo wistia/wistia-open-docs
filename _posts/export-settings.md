@@ -4,6 +4,7 @@ layout: post
 category: Getting Set Up
 description: Get the low down on our recommended file settings when finishing up your videos.
 post_intro: <p>Before you start uploading to your Wistia account, get familiar with our recommendations for video resolution, settings, and formats.</p><p>This will make uploading a painless experience, and you will end up with top quality web encodes for your videos!</p>
+temper: true
 ---
 
 Wistia does have a few specifications and guidelines we recommend following in order to obtain the best performance using our service.
