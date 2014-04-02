@@ -4,6 +4,7 @@ layout: post
 category: Public Sharing
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
 post_intro: <p>Video SEO is the act of proactively submitting your content and providing on-page markup, through what’s called a “Video Sitemap", so that it’s easier for Google and other search engines to find it.</p><p>Once your video sitemap is submitted and you're using SEO style embeds your videos can:</p><ul><li>Appear inline in universal search results</li><li>Send people directly to your website when clicked on in search results</li><li>Boost overall placement for your page</li><li>Appear in video specific search results, like http://video.google.com</li></ul>
+temper: true
 ---
 
 <div class="expert_tip video_seo">
