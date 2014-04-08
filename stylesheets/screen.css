@@ -484,7 +484,7 @@ h1, h2, h3, h4, .seo_faq { color: #161d25; font-family: "Avenir", Futura, Helvet
 
 .home_body { padding-bottom: 40px; }
 
-.home_container, .category_container { background-color: white; border-top: 6px solid #3ea9f5; margin: -6px auto 60px; max-width: 848px; padding: 46px 80px 0 72px; position: relative; }
+.home_container, .category_container { background-color: white; margin: -6px auto 60px; max-width: 848px; padding: 46px 80px 0 72px; position: relative; }
 .home_container h1, .category_container h1 { font-size: 22px; font-weight: 700; text-transform: capitalize; }
 .home_container h2, .category_container h2 { font-size: 18px; margin-bottom: 33px; font-weight: 600; }
 .home_container h2 a, .category_container h2 a { color: #161d25; }
@@ -910,7 +910,7 @@ strong { font-weight: 700; letter-spacing: 0px; -webkit-font-smoothing: antialia
 
 em { font-style: italic; }
 
-#container { background-color: #eceef1; border-top: 6px solid #cbd0d6; padding-bottom: 70px; }
+#container { background-color: #eceef1; border-top: 6px solid transparent; padding-bottom: 70px; }
 
 .content_container { background-color: white; border-top: 6px solid #3ea9f5; margin: -6px auto 0; max-width: 860px; padding: 0 70px 35px; position: relative; }
 @media (max-width: 1080px) { .content_container { min-width: 972px; } }

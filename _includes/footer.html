@@ -21,7 +21,7 @@
 
 #wistiacom_footer {
   position: relative;
-  background-color: #0e7ac4;
+  background-color: white;
   text-align: center;
   z-index: 100; }
   #wistiacom_footer .footer_container {
@@ -30,52 +30,44 @@
     max-width: 1080px;
     height: 100%;
     position: relative;
-    padding: 40px 20px 60px; }
-    #wistiacom_footer .footer_container .footer_sections {
-      list-style-type: none;
-      margin: 0;
-      text-align: center;
-      padding-left: 0;
-      margin-top: 30px;
-      position: relative;
-      display: inline-block;
-      *display: inline;
-      vertical-align: top;
-      zoom: 1; }
-      @media (max-width: 960px) {
-        #wistiacom_footer .footer_container .footer_sections {
-          display: block; } }
-    #wistiacom_footer .footer_container .links ul {
+    padding: 47px 20px 60px; }
+    #wistiacom_footer .footer_container ul {
       margin-top: 0px;
       white-space: nowrap;
       list-style-type: none;
       padding-left: 0px; }
     #wistiacom_footer .footer_container li, #wistiacom_footer .footer_container p {
       font-family: "Avenir", "Futura", Helvetica, sans-serif;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 400;
-      line-height: 28px;
+      line-height: 26px;
       -webkit-font-smoothing: antialiased; }
       @media (max-width: 650px) {
         #wistiacom_footer .footer_container li, #wistiacom_footer .footer_container p {
-          font-size: 18px; } }
+          font-size: 18px;
+          line-height: 32px; } }
+      #wistiacom_footer .footer_container li img, #wistiacom_footer .footer_container p img {
+        padding-left: 10%;
+        padding-top: 8px; }
+        @media (max-width: 650px) {
+          #wistiacom_footer .footer_container li img, #wistiacom_footer .footer_container p img {
+            padding-left: 0; } }
     #wistiacom_footer .footer_container h3 {
-      color: #3ea9f5;
+      color: #363948;
       font-family: "Avenir", "Futura", Helvetica, sans-serif;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 1px;
       margin-top: 0;
-      text-transform: uppercase;
+      margin-bottom: 8px;
       -webkit-font-smoothing: antialiased;
       white-space: nowrap; }
       @media (max-width: 650px) {
         #wistiacom_footer .footer_container h3 {
-          font-size: 20px;
-          font-weight: 400; } }
+          font-size: 18px;
+          margin-bottom: 14px; } }
     #wistiacom_footer .footer_container a {
       text-decoration: none;
-      color: white;
+      color: #363948;
       padding: 10px 0px; }
       #wistiacom_footer .footer_container a:hover {
         text-decoration: underline; }
@@ -84,77 +76,26 @@
       *display: inline;
       vertical-align: top;
       zoom: 1;
-      width: 200px;
-      text-align: left; }
+      text-align: left;
+      width: 15%; }
+      #wistiacom_footer .footer_container .links.logo {
+        width: 24%; }
       @media (max-width: 650px) {
         #wistiacom_footer .footer_container .links {
           text-align: center; }
-          #wistiacom_footer .footer_container .links.product, #wistiacom_footer .footer_container .links.community, #wistiacom_footer .footer_container .links.company, #wistiacom_footer .footer_container .links.blog, #wistiacom_footer .footer_container .links.social {
+          #wistiacom_footer .footer_container .links.product, #wistiacom_footer .footer_container .links.company, #wistiacom_footer .footer_container .links.logo, #wistiacom_footer .footer_container .links.learning, #wistiacom_footer .footer_container .links.support, #wistiacom_footer .footer_container .links.social {
             display: block;
-            margin: 0 auto 25px; }
-            #wistiacom_footer .footer_container .links.product h3, #wistiacom_footer .footer_container .links.community h3, #wistiacom_footer .footer_container .links.company h3, #wistiacom_footer .footer_container .links.blog h3, #wistiacom_footer .footer_container .links.social h3 {
-              margin: 0; }
-          #wistiacom_footer .footer_container .links.blog, #wistiacom_footer .footer_container .links.social {
-            width: 200px; } }
-      #wistiacom_footer .footer_container .links.blog {
-        padding: 0px 60px;
-        width: 150px; }
-        #wistiacom_footer .footer_container .links.blog:before, #wistiacom_footer .footer_container .links.blog:after {
-          content: "";
-          position: absolute;
-          background-color: #3ea9f5;
-          width: 1px;
-          height: 120px;
-          top: 40px; }
-        #wistiacom_footer .footer_container .links.blog:before {
-          left: 0px; }
-        #wistiacom_footer .footer_container .links.blog:after {
-          right: 100px; }
-        @media (max-width: 960px) {
-          #wistiacom_footer .footer_container .links.blog:before, #wistiacom_footer .footer_container .links.blog:after {
-            background-color: transparent; } }
-        #wistiacom_footer .footer_container .links.blog p {
-          line-height: 20px;
-          margin-top: 5px; }
-      #wistiacom_footer .footer_container .links.social {
-        width: 40px;
-        margin-top: 50px;
-        margin-left: 50px; }
-        @media (max-width: 650px) {
-          #wistiacom_footer .footer_container .links.social {
-            width: 200px;
-            margin: 0 auto; } }
-        #wistiacom_footer .footer_container .links.social .icon {
-          display: block;
-          font-family: "wistiacom-icons";
-          font-size: 28px;
-          font-style: normal;
-          speak: none;
-          font-weight: normal;
-          -webkit-font-smoothing: antialiased; }
-        #wistiacom_footer .footer_container .links.social .icon-twitter, #wistiacom_footer .footer_container .links.social .icon-facebook {
-          color: #3ea9f5; }
-          #wistiacom_footer .footer_container .links.social .icon-twitter:hover, #wistiacom_footer .footer_container .links.social .icon-facebook:hover {
-            color: white;
-            text-decoration: none; }
-        #wistiacom_footer .footer_container .links.social .icon-twitter:before {
-          font-family: "wistiacom-icons";
-          content: "\e007"; }
-        #wistiacom_footer .footer_container .links.social .icon-facebook:before {
-          font-family: "wistiacom-icons";
-          content: "\e008"; }
-        @media (max-width: 650px) {
-          #wistiacom_footer .footer_container .links.social {
-            width: auto; }
-            #wistiacom_footer .footer_container .links.social .icon {
-              display: inline-block;
-              *display: inline;
-              vertical-align: top;
-              zoom: 1; } }
+            margin: 0 auto 40px;
+            width: initial; } }
 </style>
 <div id='wistiacom_footer'>
 <div class='footer_container'>
-<ul class='footer_sections'>
+<ul>
+<li class='links logo'>
+<a href='http://wistia.com'>
+<img height='22' src='/images/footer/logo.png' width='139'>
+</a>
+</li>
 <li class='product links'>
 <h3>Product</h3>
 <ul>
@@ -162,10 +103,10 @@
 <a href='http://wistia.com/product'>Features</a>
 </li>
 <li>
-<a href='http://wistia.com/doc/developers'>Developers</a>
+<a href='http://wistia.com/pricing'>Pricing</a>
 </li>
 <li>
-<a href='http://wistia.com/support'>Help & Support</a>
+<a href='http://wistia.com/terms' target='_blank'>Terms of Service</a>
 </li>
 </ul>
 </li>
@@ -176,45 +117,57 @@
 <a href='http://wistia.com/about/yearbook'>Team</a>
 </li>
 <li>
-<a href='http://wistia.com/privacy' target='_blank'>Privacy Policy</a>
-</li>
-<li>
-<a href='http://wistia.com/terms' target='_blank'>Terms of Service</a>
+<a href='http://wistia.com/about/assets'>Brand Assets</a>
 </li>
 <li>
 <a href='http://wistia.theresumator.com/apply'>Jobs</a>
 </li>
 <li>
-<a href='http://wistia.com/about/assets'>Brand Assets</a>
+<a href='http://wistia.com/privacy' target='_blank'>Privacy Policy</a>
 </li>
 </ul>
 </li>
-<li class='community links'>
-<h3>Community</h3>
+<li class='learning links'>
+<h3>Learning</h3>
 <ul>
 <li>
-<a href='http://wistia.com/learning'>The Learning Center</a>
+<a href='http://wistia.com/learning'>Learning Center</a>
 </li>
 <li>
-<a href='http://wistia.com/blog' target='_blank'>Blog</a>
-</li>
-<li>
-<a href='http://50grove.wistia.com' target='_blank'>Video Producers</a>
+<a href='http://wistia.com/blog'>Blog</a>
 </li>
 </ul>
 </li>
+<li class='support links'>
+<h3>Support</h3>
+<ul>
+<li>
+<a href='http://wistia.com/doc'>Documentation</a>
+</li>
+<li>
+<a href='http://wistia.com/blog'>Status</a>
+</li>
+<li>
+<a href='http://wistia.com/doc/wistia-basics'>Help Videos</a>
+</li>
+<li>
+<a href='http://wistia.com/support/faq'>FAQ</a>
+</li>
 </ul>
-<ul class='footer_sections'>
-<li class='blog links'>
-<h3>Blog: March 25</h3>
-<a href='http://wistia.com/blog/organize-your-videos'>
-<img src='http://wistia.com/images/footer/blog-thumbnail.png?032514'>
-<p>A New Way to Organize Your Videos</p>
-</a>
 </li>
 <li class='social links'>
-<a class='icon icon-twitter' href='http://www.twitter.com/wistia' target='_blank'></a>
-<a class='icon icon-facebook' href='http://www.facebook.com/wistia' target='_blank'></a>
+<h3>Follow us on</h3>
+<ul>
+<li>
+<a href='http://www.twitter.com/wistia' target='_blank'>Twitter</a>
+</li>
+<li>
+<a href='http://www.facebook.com/wistia' target='_blank'>Facebook</a>
+</li>
+<li>
+<a href='http://www.dribbble.com/wistia' target='_blank'>Dribbble</a>
+</li>
+</ul>
 </li>
 </ul>
 </div>
