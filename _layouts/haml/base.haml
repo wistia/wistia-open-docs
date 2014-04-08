@@ -19,6 +19,7 @@
       {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
     
   %body{ class: "{{ page.type }}_layout" }
+    {% include wgh_config.html %}
     {% include header.html %}
     {% unless page.no_nav %}{% include doc_nav.html %}{% endunless %}
 
