@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Responsive Design with Video
-description: 
+description:
   So you want to put your video in a responsive design, eh? You can use this
   page as your one-stop shop to find the best way to do it.
 ---
 
 ## Video Foam
 
-This is Wistia's generic solution to responsive design, and is by far the 
+This is Wistia's generic solution to responsive design, and is by far the
 easiest solution if you can get away with it. It uses javascript and a very
 simple strategy to make any kind of Wistia embed--iframe, API, or
 SEO--responsive.
 
 To see how to turn Video Foam on for a single embed at a time, check our
-[Docs on Video Foam]({{ /video-foam | post_url }}). Or if you want to enable it
+[Docs on Video Foam]({{ '/video-foam' | post_url }}). Or if you want to enable it
 for all the videos on your website, check out the
 [Video Foam Lab](http://wistia.com/labs/videofoam/).
 
@@ -270,7 +270,7 @@ This example uses jQuery.
 
 The previous solutions need to poll for size changes, which means there can be
 a half second delay before the video actually resizes. But the Player API has
-the advantage of resizing the video with no delay. 
+the advantage of resizing the video with no delay.
 
 
 ## What about playlists?
