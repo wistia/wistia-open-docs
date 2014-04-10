@@ -49,7 +49,7 @@
 
     NavBar.prototype.addSubtopicAnchor = function() {
       var idText, topic, topics, _i, _len, _results;
-      topics = $('h2,h3:not(wistiacom_footer h3)');
+      topics = $('h2,h3:not(#wistiacom_footer h3)');
       _results = [];
       for (_i = 0, _len = topics.length; _i < _len; _i++) {
         topic = topics[_i];

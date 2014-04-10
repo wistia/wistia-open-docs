@@ -38,7 +38,7 @@ class NavBar
       """
 
   addSubtopicAnchor: ->
-    topics = $('h2,h3:not(wistiacom_footer h3)')
+    topics = $('h2,h3:not(#wistiacom_footer h3)')
 
     for topic in topics
       idText = $.textToId($(topic).text())
