@@ -46,7 +46,7 @@ type: post
 
   $(function() {
     var windowHeight = $(window).height();
-    var postContentNavHeight = $('#post_content_nav').outerHeight();
+    var postContentNavHeight = $('#page_nav').outerHeight();
     if (windowHeight < postContentNavHeight) {
       keepFixed = true;
     }
@@ -62,15 +62,16 @@ type: post
     var pageHeight = docHeight - footerHeight - bottomPadding - 25;
 
     if (!keepFixed) {
+      console.log('it got here!');
       if (scroll >= 250 && yPosition < pageHeight) {
-        $('#post_content_nav').addClass('fixedPosition');
-        $('#post_content_nav').removeClass('bottomPadding');
+        $('#page_nav').addClass('fixedPosition');
+        $('#page_nav').removeClass('bottomPadding');
       } else if (yPosition >= pageHeight){
-        $('#post_content_nav').removeClass('fixedPosition');
-        $('#post_content_nav').addClass('bottomPadding');
+        $('#page_nav').removeClass('fixedPosition');
+        $('#page_nav').addClass('bottomPadding');
       } else {
-        $('#post_content_nav').removeClass('fixedPosition');
-        $('#post_content_nav').removeClass('bottomPadding');
+        $('#page_nav').removeClass('fixedPosition');
+        $('#page_nav').removeClass('bottomPadding');
       };
     };
   });

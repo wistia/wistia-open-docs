@@ -1,6 +1,5 @@
 #post
-  margin-left: 10px
-  width: $post_width
+  width: 100%
   background-color: white
   clear: both
   padding-bottom: 20px
@@ -9,7 +8,7 @@
 
 
 .post_title
-  margin: 64px 0px 20px 0px
+  margin: 54px 0px 20px 0px
   border-bottom: 1px solid $gray2
   padding-bottom: 15px
 
@@ -39,15 +38,16 @@
     margin: 55px 16px 13px 0
     font-size: 18px
     line-height: 30px
+    margin-left: 12px
   h3
     font-size: 18px
     margin-top: 55px
     font-weight: 600
+    margin-left: 12px
   h4
     font-size: 16px
     margin: 14px 0px
     margin-top: 48px
-
   p, pre, ol, ul
     margin: 15px 0
   ol, ul
@@ -58,11 +58,15 @@
       margin-bottom: 15px
       p
         font-weight: 600
-      
   ul
-    list-style-type: disc
+    list-style-type: none
     line-height: 150%
     padding-left: 15px
+    li:before
+      content: "-"
+      margin-left: -15px
+      margin-right: 10px
+      font-weight: 800
     a
       border-bottom: 1px solid $gray2
       &:hover
@@ -75,7 +79,7 @@
       margin-left: 30px
   p
     margin-left: 0px
-    line-height: 145%
+    line-height: 32px
     position: relative
     font-size: 16px
     font-weight: 200
@@ -109,11 +113,12 @@
   font-size: 16px
   color: $title_color
   padding: 0px 0
-  line-height: 31px
+  line-height: 32px
   font-style: italic
   p, ul
     margin-top: 15px
     font-weight: 500
+    line-height: 32px
   p
     &:last-child
       padding-bottom: 0px
@@ -411,20 +416,23 @@ table
       margin: 55px 16px 13px 0
     h4
       font-weight: 600
-
+#page_nav
+  position: absolute
+  width: 230px
+  &.fixedPosition
+    position: fixed
+    top: 26px
+  &.bottomPadding
+    bottom: 137px
 #post_content_nav
   background-color: white
-  padding-top: 55px
+  padding-top: 45px
   position: absolute
   width: $fixed_column_width
   vertical-align: top
   font-family: $title-fonts
   +col
-  &.fixedPosition
-    position: fixed
-    top: -29px
-  &.bottomPadding
-    bottom: 55px
+  height: 100%
   ul
     list-style-type: none
   li
