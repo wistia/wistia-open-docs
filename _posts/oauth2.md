@@ -11,20 +11,20 @@ post_intro: <p>So you want to integrate your app with Wistia. Cool! To make it r
 
 ## What is OAuth2?
 
-This page is meant for people who have a grasp of how OAuth2 works. If you're 
+This page is meant for people who have a grasp of how OAuth2 works. If you're
 not sure, check out [the official OAuth2 resource](http://oauth.net/2/).
 
 
 ## Get Approved
 
-OAuth2 is not yet available for all accounts. Until it is, send an email to 
+OAuth2 is not yet available for all accounts. Until it is, send an email to
 <a href="mailto:support@wistia.com">support@wistia.com</a> to get it enabled.
 
 
 ## Create an OAuth Application
 
 Before you can perform the OAuth protocol, you need to register an oauth
-application with us. By doing this, your users will be able to verify that 
+application with us. By doing this, your users will be able to verify that
 your app is genuine, and that they authorize whatever permissions you request.
 
 1. Go to Account > Account Dashboard.
@@ -32,12 +32,54 @@ your app is genuine, and that they authorize whatever permissions you request.
 3. Click the "register your app" link at the bottom. This opens the OAuth
    Applications page.
 4. Go to Actions > New Application.
-5. Enter a name, a brief description, and a Redirect URI (also known as a
-   Callback URL in some circles) for your app. These can be changed later, so
-don't fret too much over them. Click Save.
+5. Enter a name, a brief description, a Redirect URI (also known as a
+   Callback URL in some circles), and Permissions for your app.
+   These can be changed later, so don't fret too much over them. Click Save.
 6. Your app should now be visible in the list of OAuth Applications.
 7. Click the name of your app, or Edit, to get credentials and update your
    app's information.
+
+
+### Notes on Permissions
+
+You can choose multiple permissions--also known as "scopes"--when you create or
+edit your OAuth Application. The permissions you choose there will be the same
+permissions as those that the end user must approve when they grant your
+application authorization.
+
+Changing Application permissions <em>will not</em> update the permissions for
+already existing access tokens. The end-user will need to revalidate if
+those permissions change.
+
+
+### Available Scopes
+
+If you think you have a use case that is not covered by one or a combination of
+these scopes, please send an email to
+<a href="mailto:support@wistia.com">support@wistia.com</a> and explain your
+situation to us. Maybe we can help you out!
+
+#### all:all
+
+Anything you can do with our API is allowed.
+
+#### all:read
+
+All requests for data are allowed, but no changes can be made.
+
+### media:read
+
+All requests for media and project data are allowed. This also extends to
+customization and captions data.
+
+### stats:read
+
+All requests for stats data are allowed.
+
+### media:upload
+
+Uploading via the API is allowed, as well as fetching data about a single media
+by hashed ID (i.e. medias#show).
 
 
 ## Setup an Authorization URL
@@ -69,11 +111,11 @@ the following process:
    `error_description` URL params.
 
 Note that the `redirect_uri` you pass in the authorization URL must match the
-Redirect URI that you configured previously. However, you are also allowed to 
-include arbitrary query params on the `redirect_uri`. This might be desirable 
+Redirect URI that you configured previously. However, you are also allowed to
+include arbitrary query params on the `redirect_uri`. This might be desirable
 if you want to maintain state but can't store it in the session.
 
-For example, if you want to pass an account ID in `redirect_uri`, you could 
+For example, if you want to pass an account ID in `redirect_uri`, you could
 modify the Authorization URL to be:
 
 <code class="full_width">https://app.wistia.com/oauth/authorize?client_id=10c665d60281648f87d273488b8705bef6b4507c3473bbb1a81e397857962af5&redirect_uri=https%3A%2F%2Flocalhost%2Fmyapp%3Fmyapp_account_id%3D35&response_type=code</code>
@@ -105,7 +147,7 @@ using the [oauth2 gem](https://github.com/intridea/oauth2):
     redirect_uri = 'https://localhost/myapp'
     auth_code = params[:code]
     token = client.auth_code.get_token(auth_code, redirect_uri: redirect_uri)
-    
+
     # The access token
     token.token
 
@@ -136,7 +178,7 @@ The Upload API will only support the first two methods. That is, via the
 
 ## Use the Refresh Token to renew your Access Token
 
-With every access token response, we also return a "refresh token". You can 
+With every access token response, we also return a "refresh token". You can
 trade a refresh token for another access token. By using a refresh token, you
 can get an API key for a user without requiring re-authorization.
 
@@ -162,7 +204,7 @@ Note: These keys are not valid and are for demonstration purposes only.
 
 __https://api.wistia.com__
 
-This is just the base URL of the Wistia API. It can be used as the base URL 
+This is just the base URL of the Wistia API. It can be used as the base URL
 for the other endpoints.
 
 
@@ -194,7 +236,7 @@ Responds with JSON in the form:
       "token_type": "bearer",
       "expires_in": 21600,
       "refresh_token": "366d1b695bccf10bae1b50bb869ea17187328e5b90045eb6368d7c912f03393c",
-      "scope": ["read", "write", "offline"]
+      "scope": ["all:read"]
     }
 
 
@@ -209,5 +251,3 @@ A user can revoke access to your app by going to Account > My Settings.
   updating this in the future.
 - Only managers and owners of an account can authorize an application at this
   time.
-- The `scope` param is currently ignored. Until the api supports it, all
-  applications must request the scope "read write offline".
