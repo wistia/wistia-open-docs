@@ -3,8 +3,8 @@ title: Embedding Video on Your Website
 layout: post
 category: Embedding
 description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
-post_intro: 
-  <p>Putting video on your website is the best way to get your message across. 
+post_intro:
+  <p>Putting video on your website is the best way to get your message across.
   The act of putting a video on your website is called <strong>embedding</strong>,
   and in this guide we'll show you how to get it done right.</p>
 temper: true
@@ -22,7 +22,7 @@ detail.
 
 {% post_image hashed_id: 'e1fe1bdde534d154ea0b2aaa73aa8224055aa483', width: 600, class: 'center' %}
 
-Before you can embed your video, you need to upload it to your account. Haven't 
+Before you can embed your video, you need to upload it to your account. Haven't
 done that yet? Check out our [guide to uploading]({{ '/upload-video' | post_url }})
 for more info.
 
@@ -40,7 +40,7 @@ start by selecting the *&lt;/&gt; Embed & Share* option under the
 <span class='action_menu'>Video Actions</span> menu.
 
 
-The Embed & Share Screen is where you can make some basic changes to the look 
+The Embed & Share Screen is where you can make some basic changes to the look
 and feel of your video presentation. If you are looking for customizations like
 calls-to-action and Turnstile, [read up on customization]({{ '/customizing-your-video' | post_url }}).
 
@@ -62,7 +62,7 @@ The **Embed Type** option is for choosing between three basic types:
 
 * **iframe:** the default embedding option, because it works with most website
   building applications.
-* **API:** if you will be using the [Player API]({{ '/player-api' | post_url }}) 
+* **API:** if you will be using the [Player API]({{ '/player-api' | post_url }})
   with your video, use the API option.
 * **SEO:** SEO-optimized embed codes. Because of Google requirements, this
   embed code is not always as easy to use as iframe embeds.
@@ -77,8 +77,8 @@ Once you have your settings dialed in, you can *copy* the embed code at the top.
 
 Two Inline Embed advanced options:
 
-* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use 
-  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link 
+* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use
+  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link
   to your site/blog post markup, and generating an embed code (hence it doesn't
   break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
   Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
@@ -112,10 +112,10 @@ your site.
 
 {% post_image hashed_id: '7b8528b966fc9d722fe0452b9eafc1bd47374a0b', class: 'center' %}
 
-Two Popover Embed advanced options:
+Popover Embed advanced options:
 
-* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use 
-  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link 
+* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use
+  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link
   to your site/blog post markup, and generating an embed code (hence it doesn't
   break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
   Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
