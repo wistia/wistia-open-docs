@@ -985,8 +985,8 @@ Update attributes on a piece of media.
 Parameter Name      |  Description
 --------------------|-------------------------
 name               | The media's new name.
-new_still_media_id | The numeric ID of an image within the system that will replace the still that's displayed before the player starts playing.  If this parameter is present while updating a non-video media, or if it specifies a non-image type media, then the call will fail with an error.
-description        | A new description to display next to the media within Wistia.
+new_still_media_id | The Wistia hashed ID of an image that will replace the still that's displayed before the player starts playing.  Will return failure message unless media to update is a video, and new still is an image.
+description        | A new description to display with the media within Wistia.
 
 
 #### Example Media#Update Request
