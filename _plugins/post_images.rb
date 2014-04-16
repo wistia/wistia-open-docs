@@ -5,7 +5,7 @@ module Jekyll
   ## for use on the page like: {% post_image hashed_id: 'delivery_id_of_image', width: 640, height: 400 %} ##
   class PostImage < Liquid::Tag
 
-    MAX_WIDTH = 600
+    MAX_WIDTH = 730
 
     def initialize(tag_name, text, tokens)
       @params = eval "{#{text}}"
@@ -26,7 +26,7 @@ module Jekyll
     end
 
     def url
-      "http://embed.wistia.com/deliveries/#{hashed_id}.png?image_resize=#{MAX_WIDTH}>"
+      "http://embed.wistia.com/deliveries/#{hashed_id}.png"
     end
 
     def hashed_id
