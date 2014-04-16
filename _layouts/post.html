@@ -69,7 +69,6 @@ type: post
       var pageHeight = docHeight - footerHeight - bottomPadding - 25;
     
       if (!keepFixed) {
-        console.log('it got here!');
         if (scroll >= 250 && yPosition < pageHeight) {
           $('#page_nav').addClass('fixedPosition');
           $('#page_nav').removeClass('bottomPadding');
