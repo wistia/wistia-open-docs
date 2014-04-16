@@ -12,9 +12,9 @@ post_intro: "<p>The Wistia video player has a JavaScript API which supports a nu
 
 ## Using the API
 
-It is possible to access the JavaScript API using any embed type: *API*, *SEO*, 
-or *iframe*. If you are using iframe embeds, you will need to insert the 
-[iframe player API script](#using_popovers_and_the_player_api) at the bottom of 
+It is possible to access the JavaScript API using any embed type: *API*, *SEO*,
+or *iframe*. If you are using iframe embeds, you will need to insert the
+[iframe player API script](#using_iframes_and_the_player_api) at the bottom of 
 your page.
 
 If you are also looking to construct embed codes, refer to
@@ -29,7 +29,7 @@ to the [Playlist API]({{ '/playlist-api' | post_url }}).
 
 **Popovers**
 
-If you are working with popovers, we've got a page setup specifically for that 
+If you are working with popovers, we've got a page setup specifically for that
 as well. Check out the [popover customization options]({{ '/popover-customization' | post_url }}).
 
 ### The 'wistiaEmbed' Variable
@@ -39,8 +39,8 @@ to make this easy.
 
 <code class="full_width">var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });</code>
 
-You can reference the video object using the `wistiaEmbed` variable.  If you 
-have multiple videos on your page, you should update this variable to something 
+You can reference the video object using the `wistiaEmbed` variable.  If you
+have multiple videos on your page, you should update this variable to something
 specific to this video.
 
 As an example, if the following JS code is executed, the video will start to play:
@@ -49,10 +49,10 @@ As an example, if the following JS code is executed, the video will start to pla
 
 ### Using iframes and the Player API
 
-There is a script that can be used to access the player API from 
-outside the iframe. It has the same interface as the normal player API, 
+There is a script that can be used to access the player API from
+outside the iframe. It has the same interface as the normal player API,
 but with the caveat that it won't work in IE7 and below (it won't break
-anything, it just doesn't work). If you aren't too concerned with outdated 
+anything, it just doesn't work). If you aren't too concerned with outdated
 browsers, this is the recommended way to access the player API.
 
 Put the following anywhere in the HTML document:
@@ -191,7 +191,7 @@ wistiaEmbed.bind('play', function() {
 
 ### Trigger an event at a specific time
 
-In this example, let's assume that we want to fire a JavaScript function when 
+In this example, let's assume that we want to fire a JavaScript function when
 the viewer gets 60 seconds into the video. In order to accomplish this, we only
 need the bind method from the API.  The JavaScript code can be seen below:
 
@@ -301,7 +301,7 @@ wistiaEmbed = Wistia.embed("tlb0v41zjd", {
 Selective Autoplay will automatically play your embedded video based on the
 presence of a query string you specify.
 
-See more about how it works on the 
+See more about how it works on the
 [Selective Autoplay Demo Page](http://wistia.github.com/demobin/selective-autoplay).
 
 ---
@@ -345,7 +345,7 @@ wistiaEmbed.bind("play", playFunc);
 By binding the loading of a second video on the 'end' event of the first one,
 it is easy to create your own custom 'pre-roll' videos.
 
-See the full demo on our 
+See the full demo on our
 [Custom Pre-Roll Demo Page](http://wistia.github.com/demobin/custom-pre-roll/).
 
 ---
@@ -357,7 +357,7 @@ roll has run, you can play a second video in the same container (Post Roll:
 "Click here to watch your free video!" and then have the video actually play in
 the same video container).
 
-See the full demo on our 
+See the full demo on our
 [Post-Roll Video Play Demo Page](http://wistia.github.com/demobin/post-roll-video-play/).
 
 ---
@@ -396,8 +396,8 @@ So a finished iframe embed code would look something like this:
 {% codeblock iframe_example.html %}
 <iframe src="http://fast.wistia.net/embed/iframe/e4a27b971d?
 controlsVisibleOnLoad=true&playerColor=688AAD&version=v1
-&videoHeight=360&videoWidth=640&wmode=transparent" 
-allowtransparency="true" frameborder="0" scrolling="no" 
+&videoHeight=360&videoWidth=640&wmode=transparent"
+allowtransparency="true" frameborder="0" scrolling="no"
 class="wistia_embed" name="wistia_embed" width="640"
 height="360"></iframe>
 {% endcodeblock %}
