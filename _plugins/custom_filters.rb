@@ -1,6 +1,8 @@
 require_relative '../_config'
+require_relative 'md_to_html'
 
 module Jekyll
+  include MarkdownFilter
 
   module AssetFilter
     def post_url(input)
@@ -28,29 +30,28 @@ module Jekyll
 
   module CalloutFilter
 
-      def note(input)
-        %(<div class="note">
-          <h4><i class="icon-bullhorn"></i> Note</h4>
-          <p>#{input}</p>
-          </div>)
-      end
+    def note(input)
+      new_html = 
+      %(<div class="note">
+        <h4><i class="icon-bullhorn"></i> Note</h4>
+        #{md_to_html(input)}
+        </div>)
+    end
 
-      def tip(input)
-        %(<div class="tip">
-          <h4><i class="icon-thumbs-up"></i> Tip</h4>
-          <p>#{input}</p>
-          </div>)
-      end
+    def tip(input)
+      %(<div class="tip">
+        <h4><i class="icon-thumbs-up"></i> Tip</h4>
+        #{md_to_html(input)}
+        </div>)
+    end
 
-      def alert(input)
-        %(<div class="alert">
-          <h4><i class="icon-bell"></i> Alert</h4>
-          <p>#{input}</p>
-          </div>)
-      end
-
+    def alert(input)
+      %(<div class="alert">
+        <h4><i class="icon-bell"></i> Alert</h4>
+        #{md_to_html(input)}
+        </div>)
+    end
   end
-
 end
 
 Liquid::Template.register_filter(Jekyll::AssetFilter)
