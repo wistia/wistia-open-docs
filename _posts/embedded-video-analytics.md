@@ -18,7 +18,7 @@ Account (perhaps all the videos across your website).
 
 
 
-{% post_image hashed_id: 'a1d4328e0f493dc9b1f9b27b4bf97c199093e713', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'a1d4328e0f493dc9b1f9b27b4bf97c199093e713', class: 'center'' %}
 
 Starting from the Projects List page of your Account 
 (i.e. *myaccount.wistia.com/projects*), access your high level stats by 
@@ -31,7 +31,7 @@ for public stats performance.
 
 ### Trends Graph
 
-{% post_image hashed_id: 'd1b8faf732de501e12a8de159977b3f949373f2d', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'd1b8faf732de501e12a8de159977b3f949373f2d', class: 'center' %}
 
 The graph at the top shows the Projects in your Account according to views over 
 time. Using your mouse, choose to either see all views across the account or 
@@ -64,7 +64,7 @@ This allows you to see all the views by time as you move your cursor around on
 the map.  The details for the views across the account will appear in the upper 
 two rows of the Trends table.
 
-{% post_image hashed_id: '7af3115ff6f5b97d1549f8a0463874c978ad1fd2', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '7af3115ff6f5b97d1549f8a0463874c978ad1fd2', class: 'center' %}
 
 To see the data for a specific Project compared to the others, use the selection 
 tool functionality.  Clicking on one specific Project in either the list view 
@@ -75,7 +75,7 @@ the Project more specifically.
 
 ### Projects/Media List
 
-{% post_image hashed_id: 'cbc708bfaab19ab4ac6d30b69b9bbbb863eeb281', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'cbc708bfaab19ab4ac6d30b69b9bbbb863eeb281', class: 'center' %}
 
 Underneath the Trends graph is the list of Projects or Media that is 
 represented in the graph.  To drill down to the Project or Media level, 
@@ -85,7 +85,7 @@ click the title of the Project/Media.
 
 ## Project-Level Trends
 
-{% post_image hashed_id: 'ca06679fead9ffaa80b99d8f231a8e270d7653a5', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'ca06679fead9ffaa80b99d8f231a8e270d7653a5', class: 'center' %}
 
 The Trends graph for projects is very similar to the aggregate Account-level 
 graph.  Moving your cursor along the graph will show information on the 
@@ -100,7 +100,7 @@ Clicking the title of an individual media will move you to the Media-level Trend
 
 ## Media-Level Trends
 
-{% post_image hashed_id: 'ac566c14c044b9e5a0bb501216c81c89c5486a06', width: 320, class: 'float_right' %}
+{% post_image hashed_id: 'ac566c14c044b9e5a0bb501216c81c89c5486a06', class: 'center' %}
 
 The media level provides detailed insight into how the video was viewed, both 
 at an aggregate level through an engagement graph, and individually through 
@@ -124,7 +124,7 @@ you how it is performing compared to your other video initiatives).
 
 ### Engagement Graph
 
-{% post_image hashed_id: '9c58bf6c6fa2fb25986a93ec4acf5779554be733', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '9c58bf6c6fa2fb25986a93ec4acf5779554be733', class: 'center' %}
 
 The blue section of the engagement graph shows the engagement of viewers who 
 clicked play on the video.  The orange section on top shows the number of times 
@@ -139,7 +139,7 @@ More on [Audience Engagement Graphs]({{ '/audience-engagement-graph' | post_url 
 
 ### Plays by Date
 
-{% post_image hashed_id: '40a5d3c0af039607eab984bfb5911f4b91325ae1', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '40a5d3c0af039607eab984bfb5911f4b91325ae1', class: 'center' %}
 
 Select the 'plays by date' tab above the engagement graph to see Trends-type 
 data for the video. Moving the yellow tabs below the graph will change the date 
@@ -211,7 +211,7 @@ drilled down into the individual viewer.
 
 ### The Viewer Stream Page
 
-{% post_image hashed_id: '03c8bea4fb026b228e84f54244c57d14d5cb4975', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '03c8bea4fb026b228e84f54244c57d14d5cb4975', class: 'center' %}
 
 To open the Viewers Stream page, select "Viewers" from under the Stats drop-down 
 menu.
@@ -220,7 +220,7 @@ menu.
 The Viewers Stream is a snapshot of the viewers of your publicly embedded videos.  
 These will appear as a list of viewers, with their most recent heatmaps.
 
-{% post_image hashed_id: '5f63b2b98f7ccd437736c253a822fe5355c0b5c2', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '5f63b2b98f7ccd437736c253a822fe5355c0b5c2', class: 'center' %}
 
 Use the sorting bar to specify which group of viewers you'd like to see, or use 
 the search box to find a specific viewer.  The number bubbles next to each name 
@@ -231,7 +231,7 @@ take you to the Viewer Page.
 
 ### Viewer Page
 
-{% post_image hashed_id: '66e78052b6d6e4d4fe4708d84bd5bf1e80e1be62', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '66e78052b6d6e4d4fe4708d84bd5bf1e80e1be62', class: 'center' %}
 
 From the Viewer Page, you can track activity for a specific viewer.  Want to 
 'tag' this viewer for future tracking?  Edit their name as you would a Wistia 
