@@ -13,7 +13,7 @@ temper: true
 To get started, check out this *embedding video guide*, part III of our [Wistia
 Basics]({{ '/wistia-basics' | post_url }}) series.
 
-{% wistia_embed hashed_id: g7uyjp24c6, videoHeight: 338 %}
+{% wistia_embed hashed_id: g7uyjp24c6 %}
 
 Below are the specific steps required to embed a video covered in a bit more
 detail.
