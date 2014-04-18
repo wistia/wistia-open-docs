@@ -32,7 +32,7 @@ Here's the rundown on what we need to get done (in order):
   1. Add *Sitemap* line from account to `robots.txt` file, then verify it.
   2. Embed the video using the `video SEO` embed code type.
   3. Create an `video sitemap entry` for the embedded video.
-  4. Be extra patient with Google.
+  4. Can take up to 2 weeks for Google to index new content.
 
 The first thing you need to do is authorize Wistia to host your video sitemap
 and reference pages on your site. This is done through the robots.txt file on
@@ -140,9 +140,9 @@ be automatically updated and the new changes that should be indexed.
 
 **Title**
 
-We’ve found that having the title of your video match the meta title of your
-page will help a video snippet appear along with your page in search engine
-result pages.
+The title should be relevant for the video. Don't try and make it overly wordy
+or contain too many *tags*, just focus on appropriately naming the video for a
+viewer's experience.
 
 **Description**
 
@@ -171,26 +171,31 @@ This will take you to the video SEO dashboard where you can:
 
 {% post_image hashed_id: '6daa77704da771e666aebe6c8d7a0372ffab491b', class: 'center' %}
 
-## Search Results
+## Optimizing After Indexing
 
-In the end, the goal is to get your content to rank higher in search engines
-like Google.  Telling search engines about your content through Wistia's Video
-SEO features allows your pages to:
+In the end, the goal is to drive more traffic back to your website. Optimizing
+your video content for search engines means the pages show in results with
+a video (which gets clicked more often) and in video-specific search results as
+well. When a searcher clicks the video still in results, they will be taken to
+*your* website, which is a major advantage over YouTube SEO.
 
-* Rank higher in basic search results based on the presence and relevance of
-  your video content.
-* When someone clicks on your video in a search engine results page, they will
-  be taken directly to your website.
-* Show up as a featured video in search engine results pages.
-* Display in video specific search results.
+We recommend keeping a close eye on your traffic during the SEO indexing
+process - see if you notice an uptick after your video content is indexed. From
+that baseline data, you can experiment with changes to improve incoming
+traffic.
 
+First, make sure you have related content on your page so that search engines
+have context surrounding the video. If you notice an increase in traffic from
+specific searches, add more content for those visitors.
 
-Make sure you have related content on your page so that search engines
-have context surrounding the video. Once your snippet is shown in search
-results, look out for an increase in click-through-rates!
-
+Second, the thing that drives folks to click on the video is the thumbnail!
+Choose a thumbnail that looks attractive for the topic at hand. If you update
+the thumbnail of your video, you will need to re-embed it, because the SEO
+embed code contains a direct URL to that image. Google will automatically
+update their index every few weeks.
 
 {% post_image hashed_id: '53a36ccf4c2bfe6215f13d2d5523d5d919176224', class: 'center' %}
+
 
 ## Adding Additional Domains
 
@@ -206,10 +211,10 @@ You will be prompted to walk through the same steps as adding your initial domai
 
 The functionality we have designed is meant to *reduce* headaches around using
 Video SEO. There are some situations, however, when you might want use Wistia
-to build your XML Sitemap file, but self-host it somewhere else. This section
-will cover the steps to hosting and submitting an XML Sitemap file yourself.
+to build your Video Sitemap file, but self-host it somewhere else. This section
+will cover the steps to hosting and submitting a Video Sitemap file yourself.
 
-**Build your XML sitemap**
+**Build your Video sitemap**
 
 In order for these steps to be useful, you must first go through the [normal
 Video SEO setup steps]('#getting_set_up'). You'll need to confirm your
@@ -217,10 +222,10 @@ Video SEO setup steps]('#getting_set_up'). You'll need to confirm your
 the “Add to SEO Sitemap” function under the Media Actions menu to create new
 entries for your videos.
 
-**Export your XML sitemap**
+**Export your Video sitemap**
 
-The next step is to export the XML sitemap Wistia built based on your metadata
-entries. To save the contents of your XML Sitemap file, navigate to the Sitemap
+The next step is to export the Video sitemap Wistia built based on your metadata
+entries. To save the contents of your Video Sitemap file, navigate to the Sitemap
 URL (i.e. http://app.wistia.com/sitemaps/26547.xml), and then save that webpage.
 
 To track down the URL of the Sitemap, look under the help bubble (question mark
@@ -228,7 +233,7 @@ icon) on the Video SEO tool page. See the screenshot below.
 
 {% post_image hashed_id: '0ca8fda6bfa40c2d95f99083f990225542b0a5e2', class: 'center' %}
 
-**Upload XML sitemap to your own host**
+**Upload Video sitemap to your own host**
 
 Upload to your web host, the same way you might for a new web page or web page 
 image. Doesn’t need to go anywhere in particular, just needs to be accessible
@@ -236,7 +241,7 @@ by Google.
 
 **Submit Sitemap URL to Google Webmaster Tools**
 Follow [this guide](https://support.google.com/webmasters/answer/183669?hl=en)
-to make sure you submit your new XML Sitemap correctly.
+to make sure you submit your new Video Sitemap correctly.
 
 When you add a new video to your sitemap, you will need to re-export, replace 
 the version you have on your end, and re-submit to Google. Annoying, but if our
@@ -248,57 +253,91 @@ Video SEO is tough, but valuable. Customers have lots of questions around how
 to use our Video SEO tool for their business video. We'll attempt to compile
 them here.
 
-<span class='seo_faq'>
-  Do I still need to create an sitemap, or submit something to Google Webmaster
-  Tools?
-</span>
+### Do I still need to create an sitemap, or submit something to Google Webmaster Tools?
 
-**Nope!** Wistia tools take care of that process automatically for you.
-We create a sitemap, add the videos you designate, and submit it through
-Google Webmaster Tools, all automatically.
+Wistia tools take care of that process automatically for you.  We create a
+sitemap, add the videos you designate, and submit it through Google Webmaster
+Tools, all automatically.
 
-<span class='seo_faq'>
-  Is hosting my video sitemap with Wistia ok? Will Google accept it?
-</span>
+### I thought only YouTube got indexed on Google search results? Should I have my video on both platforms?
+
+Google has continued to support an open market, indexing videos that follow
+their SEO guidelines, regardless of where they are hosted. 
+
+That being said, you don't really want to have your video on YouTube *and* use
+Wistia Video SEO. Because YouTube videos are indexed by default, your content
+will compete with itself in the rankings if you use both.
+
+If the most important metric for your video is *views*, YouTube is a great
+place for them. If your goal is to encourage a *conversion event*, like a
+sign-up, subscription, or a share, then you want to drive viewers to your site
+to watch your video. That is where Video SEO can be a valuable tool.
+
+### I can't update my robots.txt file. What should I do?
+
+We don't create a sitemap for your account unless we can verify the robots.txt
+file is accurate. That being said, the SEO embed code type can still provide
+plenty of value. Because it is optimized to use Open Graph tags and Schema.org
+markup, we've seen videos get indexed without the need for a sitemap. While the
+sitemap is still considered a *best practice*, it is no longer a must-have for
+Video SEO.
+
+### Is hosting my video sitemap with Wistia ok? Will Google accept it?
 
 **Yes.** Google has made cross-submission support via a robots.txt file an
 accepted and efficient part of the SEO workflow.
 See [this article from the Google Webmaster Central Blog](http://googlewebmastercentral.blogspot.com/2008/02/cross-submissions-via-robotstxt-on.html)
 for more.
 
-<span class='seo_faq'>It's been several days, when can I expect to see my video
-ranked in SERPs?</span>
+### It's been several days, when can I expect to see my video ranked in SERPs?
 
 This is a good question. Because Google can be a bit of a black box, it's not
 possible to determine exactly when new content will be indexed for video
-results. In our experience, a waiting period of `10 - 15 days` is not uncommon.
+results. In our experience, a waiting period of **10 - 15 days** is not uncommon.
 
-If you have been waiting for a considerable amount of time, or are nervous
-something has gone wrong, don't hesitate to email our support team. We'll take
-a look at the Webmaster Tools entry we create and maintain for you, to see if
-Google has reported any errors in indexing.
+If you have been waiting for a considerable amount of time, double-check the
+list of possibly bad practices below, to make sure your content doesn't fall
+into one of the areas of content that Google doesn't index reliably.
 
-<span class='seo_faq'>Can I generate SEO linkbacks using Wistia embeds?</span>
+### What can prevent videos from being added to Google search results?
 
-**Yes, you can**.
+There are a few practices that we have seen prevent indexing.
 
-The *Social Bar* includes an *embed* button, which allows
-viewers to embed your video in other places. Wistia includes a customize option 
-for adding Video Backlinks to the social bar embed button code, which is the
-embed code your viewer re-embeds.
+* **Redirects** are a tricky practice, and more often than not, they seem to
+  cause failures. Google might not follow the redirect when crawling, or the
+  redirects might be set up incorrectly.
+* **Disallowing content in the robots.txt file** would result in everything
+  appearing "successful", but your content never appears in search results.
+  Double-check that any "disallow" blocks in your robots.txt file do not point
+  to content you *want* indexed.
+* **Dynamically loading content** using javascript, or light-boxes (like Wistia
+  popovers), etc. does not currently work. Google wants your content to be on
+  the page when a visitor loads it up (no additional clicks or actions required).
+* **Putting video farther down the page** can have a negative and even negating
+  effect on the content. Where possible, make sure your videos are embedded at
+  a good viewing size (at least 600px wide) and near the top of the page.
 
-The result is *their* viewers can track down the original source of the content,
-which Google and search engines also value. Phil Nottingham from
-[Distilled](www.distilled.net), who is a real SEO expert (we just play one on
-video), [posted at length about using this for your content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-settings-to-build-links-with-your-video-content/). Building links back to your original content can be hugely powerful
-for building your audience.
+### Can I use Wistia embeds to build links for SEO?
 
-For more on using Video Backlinks for your content,
+The *Social Bar* includes an *embed* button, which allows viewers to embed your
+video in other places. Wistia includes a 
+[customize option]({{ '/customizing-your-video' | post_url }}) for adding links 
+that point back to the original site into the embed code your viewers can access.
+
+So if one of your viewers re-embeds the video, new viewers can track down the
+original source of the content, which Google and search engines also value.
+Phil Nottingham from [Distilled](http://distilled.net), who is a real SEO
+expert (we just play one on video), [posted at length about using this for your
+content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-settings-to-build-links-with-your-video-content/).
+Building links back to your original content can be hugely powerful for
+building your audience.
+
+For more on building SEO links using for your content,
 [see the Customization docs]({{'/customizing-your-video#social_bar' | post_url}}).
 
-<span class='seo_faq'>Can I hear Ben talking about SEO?</span>
+### Can I hear Ben talking about SEO?
 
 **Yes!** Our Video SEO expert, Ben, got up-close with the camera to talk about
-how Video SEO can create benefits for your business:
+the business benefits of using Video SEO properly:
 
 {% wistia_embed hashed_id: b96bdea4c2 %}
