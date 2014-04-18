@@ -548,9 +548,9 @@ h1, h2, h3, h4, .seo_faq { color: #363945; font-family: "Avenir", Futura, Helvet
 .post_intro ul li { list-style-position: inside; }
 .post_intro .center { margin-left: 0; }
 
-.action_menu { background-color: #54bbff; color: white; padding: 4px 5px; font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 0px 2px; font-size: 15px; font-weight: 700; -webkit-font-smoothing: antialiased; }
+.action_menu { background-color: #54bbff; color: white; padding: 4px 5px; font-family: "Avenir", Futura, Helvetica, sans-serif; margin: 0px 2px; font-size: 15px; font-weight: 700; -webkit-font-smoothing: antialiased; white-space: nowrap; }
 
-.faux_button { background-color: #e8e7e6; color: #939291; font-family: "Avenir", Futura, Helvetica, sans-serif; border-radius: 15px; -moz-border-radius: 15px; -webkit-border-radius: 15px; padding: 5px 13px; margin: 0px 3px; font-size: 12px; text-transform: uppercase; font-weight: 800; -webkit-font-smoothing: antialiased; letter-spacing: 1px; }
+.faux_button { background-color: #e8e7e6; color: #939291; font-family: "Avenir", Futura, Helvetica, sans-serif; border-radius: 15px; -moz-border-radius: 15px; -webkit-border-radius: 15px; padding: 5px 13px; margin: 0px 3px; font-size: 12px; text-transform: uppercase; font-weight: 800; -webkit-font-smoothing: antialiased; letter-spacing: 1px; white-space: nowrap; }
 
 .edit_tag { background: transparent url(http://embed.wistia.com/deliveries/c4728e279c91c74605f00f6c2629a646ed3905af.png) no-repeat; padding-left: 33px; height: 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 
@@ -600,7 +600,7 @@ h1, h2, h3, h4, .seo_faq { color: #363945; font-family: "Avenir", Futura, Helvet
 .post_image { margin: 20px auto; clear: both; position: relative; overflow: hidden; border: 1px solid #cbd0d6; }
 .post_image img { vertical-align: top; }
 
-.center { text-align: center; }
+.center { text-align: center; width: 100%; }
 
 .intro_image, .integration_logo { border: none; }
 .intro_image .float_left, .integration_logo .float_left { float: left; margin: 9px 25px 25px 0px; }
@@ -633,8 +633,8 @@ table tr td pre { margin: 0; padding: 0; }
 .exporting_guide_box .answer { color: #161d25; font-weight: normal; }
 
 .post_footer { margin-top: 60px; clear: both; }
-.post_footer ul { position: relative; width: 460px; height: 109px; list-style-type: none; }
-.post_footer ul li { position: absolute; width: 230px; -webkit-font-smoothing: antialiased; font-family: "Avenir", Futura, Helvetica, sans-serif; }
+.post_footer ul { position: relative; list-style-type: none; }
+.post_footer ul li { display: inline-block; *display: inline; vertical-align: top; zoom: 1; width: 40%; -webkit-font-smoothing: antialiased; font-family: "Avenir", Futura, Helvetica, sans-serif; padding: 0 20px; }
 .post_footer ul li h4 { font-weight: 600; margin-bottom: 13px; }
 .post_footer ul li:first-child { left: 50px; }
 .post_footer ul li:last-child { right: 45px; }

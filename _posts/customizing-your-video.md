@@ -198,8 +198,6 @@ Once your video is looking the way you want, the
 <span class="faux_button">Public Preview</span> button will
 allow you to see the video as your viewers will see it.
 
-{% post_image hashed_id: '63719fcec549ffe1f10c1808074902912f3686f6', width: 300 %}
-
 Selecting the <span class="faux_button">Public Preview</span> mode will
 temporarily close the customization panel and you will see exactly what your
 viewers will experience on your Wistia page!

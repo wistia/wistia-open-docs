@@ -1,10 +1,10 @@
 require_relative '../_config'
-require 'redcloth'
+require 'rdiscount'
 
 module Jekyll
   module MarkdownFilter
     def md_to_html(text)
-      new_text = RedCloth.new(text)
+      new_text = RDiscount.new(text)
       new_text.to_html
     end
   end

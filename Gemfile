@@ -21,4 +21,5 @@ group :test do
   gem 'psych', '~> 1.3.4'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'tddium'
+  gem 'pry', '~> 0.9.12.6'
 end
