@@ -18,7 +18,7 @@ Account (perhaps all the videos across your website).
 
 
 
-{% post_image hashed_id: 'a1d4328e0f493dc9b1f9b27b4bf97c199093e713', class: 'center'' %}
+{% post_image hashed_id: 'a1d4328e0f493dc9b1f9b27b4bf97c199093e713', class: 'center' %}
 
 Starting from the Projects List page of your Account 
 (i.e. *myaccount.wistia.com/projects*), access your high level stats by 
