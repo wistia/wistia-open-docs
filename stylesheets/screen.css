@@ -633,8 +633,8 @@ table tr td pre { margin: 0; padding: 0; }
 .exporting_guide_box .answer { color: #161d25; font-weight: normal; }
 
 .post_footer { margin-top: 60px; clear: both; }
-.post_footer ul { position: relative; width: 460px; height: 109px; list-style-type: none; }
-.post_footer ul li { position: absolute; width: 230px; -webkit-font-smoothing: antialiased; font-family: "Avenir", Futura, Helvetica, sans-serif; }
+.post_footer ul { position: relative; list-style-type: none; }
+.post_footer ul li { display: inline-block; *display: inline; vertical-align: top; zoom: 1; width: 40%; -webkit-font-smoothing: antialiased; font-family: "Avenir", Futura, Helvetica, sans-serif; padding: 0 20px; }
 .post_footer ul li h4 { font-weight: 600; margin-bottom: 13px; }
 .post_footer ul li:first-child { left: 50px; }
 .post_footer ul li:last-child { right: 45px; }
