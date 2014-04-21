@@ -84,6 +84,73 @@ Two Inline Embed advanced options:
   Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
 * **Use Videofoam:** If your site is built to be responsive, your videos should be too! Enabling this setting will make your videos responsive.
 
+
+## Pasting your Embed Code onto Your Page
+
+Once you have copied the embed code, the next step is to paste it into your web
+page editor (which could be a CMS, blog, HTML document, etc.) This is where it
+gets complicated to talk in specifics, since each website management system is
+different, but here are some tips:
+
+1. If you are using a CMS suite, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
+2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
+3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
+
+## Styling Your Embed
+
+### Centering Your Embedded Video
+
+<div style="text-align: center;">
+  <iframe src="//fast.wistia.net/embed/iframe/zmgfiw3ckj" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="450" height="253"></iframe>
+</div>
+
+There are several possible solutions for centering a video inside a `div` or
+column in your website. The solution that works best for you will depend on the
+*embed code type* you use, and the structure of your website.
+
+For an iframe embed, your embed code normally looks *something* like this:
+
+    <iframe src="//fast.wistia.net/embed/iframe/479268413a" width="960" height="540"></iframe>
+
+One possible solution is to add `display: block` and `margin: 0 auto` style
+attributes to the embed code, like this:
+
+    <iframe src="//fast.wistia.net/embed/iframe/479268413a" style="display: block; margin: 0 auto;" width="960" height="540"></iframe>
+
+Another solution for iframes is to set the `parent div` (which wraps around the
+video) to `text-align: center`, like this:
+
+{% codeblock center-text-align.html %}
+<div style="text-align: center;">
+  <iframe src="//fast.wistia.net/embed/iframe/479268413a" width="960" height="540"></iframe>
+</div>
+{% endcodeblock %}
+
+For an API embed, the original code might look like this:
+
+    <div id="wistia_479268413a" class="wistia_embed" style="width:960px;height:540px;">
+
+Add the `margin: 0 auto` to the existing style settings, like this:
+
+    <div id="wistia_479268413a" class="wistia_embed" style="margin: 0 auto;width:960px;height:540px;">
+
+### Centering oEmbed Codes in Wordpress
+
+For using Wordpress and oEmbed codes, first add an outer div with the style
+`text-align: center;`. Then, add a second div with the style `display:
+inline-block;`, as seen here:
+
+{% codeblock center-wordpress.html %}
+<div style="text-align: center;">
+  <div style="display: inline-block;">
+
+    http://dave.wistia.com/medias/mgdmzrzrm4?embedType=api&videoWidth=640
+
+  </div>
+</div>
+{% endcodeblock %}
+
+
 ## Popover Embed
 
 {% post_image hashed_id: 'c33b48a797eee9e15d9020b9be23d656111bbf21', class: 'center' %}
@@ -125,16 +192,6 @@ Popover Embed advanced options:
 These options are covered in-depth in the [email marketing]({{ '/email-marketing' | post_url }}) and [social
 sharing]({{ '/social-sharing' | post_url }}) documentation pages respectively.
 
-## Pasting your Embed Code onto Your Page
-
-Once you have copied the embed code, the next step is to paste it into your web
-page editor (which could be a CMS, blog, HTML document, etc.) This is where it
-gets complicated to talk in specifics, since each website management system is
-different, but here are some tips:
-
-1. If you are using a CMS suite, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
-2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
-3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
 
 
 ## Embedded Video Stats

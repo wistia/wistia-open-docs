@@ -37,22 +37,11 @@ to change that, check out
 
 ## Tips for Using WordPress
 
-*  When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code. If you switch from HTML to Visual mode, it can add formatting tags around your oEmbed which may cause it to break. Be careful of that!
-*  If you have larger resolution videos and they are appearing smaller or squished, access the WordPress admin control panel (Settings -> Media -> Maximum Video Embed Size) and set the max to the largest size of your video ('no limit' setting doesn't work, must be actual size).
+* When inserting the embed codes, make sure you are in HTML editing mode, and leave a line open above and below the embed code. If you switch from HTML to Visual mode, it can add formatting tags around your oEmbed which may cause it to break. Be careful of that!
+* If you have larger resolution videos and they are appearing smaller or squished, access the WordPress admin control panel (Settings -> Media -> Maximum Video Embed Size) and set the max to the largest size of your video ('no limit' setting doesn't work, must be actual size).
+* If you want to **center** your video inside a `div` or column on your
+  website, refer to our tips in the [embedding documentation]({{ '/embedding#styling_your_embed' | post_url }}).
 
-## Styling Your Embed in WordPress
-
-To center your video in WordPress, first add an outer div with the style `text-align: center;`.  Then, add a second div with the style `display: inline-block;`, as seen here:
-
-{% codeblock center-wordpress.html %}
-<div style="text-align: center;">
-  <div style="display: inline-block;">
-
-    http://dave.wistia.com/medias/mgdmzrzrm4?embedType=api&videoWidth=640
-
-  </div>
-</div>
-{% endcodeblock %}
 
 ## Using Wistia Video SEO with WordPress
 
