@@ -85,6 +85,13 @@ Once you've entered all your HubSpot info and configured it, you are ready to
 use the HubSpot Turnstile with your next Wistia video (look for it under
 *Turnstile Email Capture*).
 
+Note that unlike the many of the other Turnstile integrations, with the HubSpot
+integration you don't choose a list for the emails to be pushed to. Instead,
+we automatically create a Form for you in HubSpot for each video. You can use
+HubSpot's [Smart Lists](http://help.hubspot.com/articles/How_To_Doc/how-to-create-a-smart-list-in-hubspot)
+to group and organize your contacts. This is far more flexible and powerful than
+having to select a list for each video and forcing the contacts into that one list!
+
 For a more in-depth guide see the [Turnstile doc page]({{ '/turnstile' | post_url }}).
 
 
