@@ -30,6 +30,12 @@ Once uploading is complete, Wistia transcodes several versions of your video -
 perfect for serving on multiple browsers and mobile devices.  After transcoding
 wraps up, your video is ready to be embedded onto your site.
 
+## Customizing Your Video
+
+If you want to change the player color, update the thumbnail, or change the
+controls that are available on your video embed, please refer to the [customize
+documentation]({{ '/customizing-your-video' | post_url }}).
+
 ## Generate the Embed Code
 
 {% post_image hashed_id: '9f6b506677bd26f2ea10ef98b9e7a205fa1305dd', width: 600, class: 'center' %}
