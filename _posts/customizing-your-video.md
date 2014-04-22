@@ -143,7 +143,12 @@ There are three types of CTAs:
 * **Image:** use an image instead of a text link to direct viewers.
 * **HTML:** write your own custom call-to-action *(advanced users only)*.
 
-{{ "There are some elements that can be stripped out of custom HTML CTAs for security reasons, shoot us an email at support@wistia.com if you run into trouble!" | note }}
+### Custom HTML Calls to Action
+
+You can build custom HTML calls to action that take on-page or inline styles.
+Where possible, use on-page styles (i.e. including them in a `<style>` tag in
+the head of your page), because they *may* be stripped out during the
+customization process.
 
 ## Turnstile Email Gate
 
