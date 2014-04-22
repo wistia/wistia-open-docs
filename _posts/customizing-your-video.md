@@ -143,6 +143,8 @@ There are three types of CTAs:
 * **Image:** use an image instead of a text link to direct viewers.
 * **HTML:** write your own custom call-to-action *(advanced users only)*.
 
+{{ "When adding your link, make sure you include the `http://`" | note }}
+
 ### Custom HTML Calls to Action
 
 You can build custom HTML calls to action that take on-page or inline styles.
