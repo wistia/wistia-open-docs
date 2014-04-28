@@ -64,7 +64,7 @@ Auto-HD takes over when the viewer 'full screens' the video.  At the larger size
 ----
 ## Formats Wistia Supports
 
-Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in an MP4 or MOV format*. 
+Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in MP4 format*. 
 
 If a file type is not supported (or recognized), users will simply be able to download the file.
 
