@@ -34,7 +34,7 @@ Enter the email addresses of contacts you would like to share this project priva
 
 ## Privately share video by link
 
-{% post_image hashed_id: 'c0abef6318491516e0ec8044efacfa1869cb609a', width: 320 %}
+{% post_image hashed_id: 'c0abef6318491516e0ec8044efacfa1869cb609a', class: 'right', width: 320 %}
 
 This is the best sharing method to use if you want to:
 
