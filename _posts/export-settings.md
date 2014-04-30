@@ -42,11 +42,13 @@ After you upload a video, we perform encoding on it - creating multiple derivati
 
 The largest resolution we create is 720p, or *1280px by 720px*.  If you upload any video larger than 1280px wide, we're going to create the following derivatives:
 
-* 1280px wide HD
-* 960px wide MD
-* 640px wide SD
-* iPhone
-* HD iPhone (for iPad3)
+Derivative | Bitrate
+-----------|---------
+1280px wide HD | 2,000 kbps
+960px wide MD | 1,000 kbps
+640px wide SD | 700 kbps
+iPhone | 800 kbps
+HD iPhone (for iPad3) | 1,200 kbps
 
 We recommend uploading video at 1280px wide because it is the most efficient approach - your original files won't be taking up extra space in your account, and your uploading/processing times will be as speedy as possible as well.
 
