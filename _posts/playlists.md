@@ -24,7 +24,7 @@ Embedded playlists automatically show the videos contained in the project.  If v
 
 To get started, go into a project in your Wistia account you wish to create a playlist for.  Next, select "Get Playlist" from the Project Actions menu as shown below.
 
-{% post_image hashed_id: '0441c26b85ebc4f3ceab93e239442d7e0e7857cc', width: 300, class: 'center' %}
+{% post_image hashed_id: '0441c26b85ebc4f3ceab93e239442d7e0e7857cc', width: 300, class: 'right' %}
 
 Once you have selected the "Get Playlist" option, you will be taken to a page where you can customize your playlist and get the embed code.  An example of this customization screen can be seen below.
 
