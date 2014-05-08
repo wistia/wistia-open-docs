@@ -47,7 +47,7 @@ up a Turnstile-enabled embed to collect email addresses, and pass them directly
 into a specific group in your connected email provider.
 
 Inside the [Customize screen]({{ '/embed-screen' | post_url }}), find the 
-*Turnstile Email Capture* options area. Select *Enable*, and then select the 
+*Turnstile Email Capture* options area. Then select the 
 email list (group) you want the email to be added to when viewers submit their 
 email. If you're integrating with HubSpot or Marketo, there's no need to select
 a list; once enabled, captured emails will go straight into your linked account!
