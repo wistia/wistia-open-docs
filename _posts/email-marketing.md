@@ -98,7 +98,7 @@ instructions on how to do that see the following Quickstart articles:
 The way that Wistia is able to attach views of your video on your website to 
 individual email addresses is through the use of a special hyper-link called a 
 dynamic link. It is called a dynamic link because it uses the mail merge 
-capabilities of your email marketing provider to create an personalized URL for 
+capabilities of your email marketing provider to create a personalized URL for 
 every person in your mailing list. The dynamic link created here is what will 
 be input into your email marketing tool to create the link that your users will 
 click on to view your video.

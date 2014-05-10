@@ -36,6 +36,8 @@ your viewer's experience.
 Finally - you can choose whether visitors to the video page will have the
 option to [leave comments]('#disable-comments').
 
+{{ "Changes to the thumbnail won't apply to popover embeds without re-embedding due to them referencing the exact image that was the thumbnail when you embedded the video." | note }}
+
 ## Changing the Thumbnail
 
 Video still, poster image, first frame...we've heard all sorts of terms for the
