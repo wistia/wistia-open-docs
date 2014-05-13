@@ -65,7 +65,7 @@ wistiaPlaylist.currentVideo().pause()
 
 ## Embedding Options
 
-In our example embed `>Wistia.playlist("abcde12345", { ... options ... });`
+In our example embed `Wistia.playlist("abcde12345", { ... options ... });`
 there are two arguments: the playlist's `hashed ID`, and a set of `embedding options`.
 
 Here is a list of available options:
