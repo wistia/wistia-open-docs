@@ -35,6 +35,9 @@ articles for more.
 
 Next, select *Embed & Share* from the <span class="action_menu">Video Actions</span> menu.
 
+{{ "This also works with playlist embeds, though you will need to select an email marketing embed for a specific video." | note }}
+
+
 ---
 
 ### Select Your Email Marketing Provider
