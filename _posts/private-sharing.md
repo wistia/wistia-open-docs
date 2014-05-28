@@ -6,7 +6,15 @@ post_intro: <p>For many users, video is something that needs to be shared only a
 description: Wistia makes it easy to privately share your videos with people. Invite people via email, and track how they watch in a secure environment.
 ---
 
-{% wistia_embed hashed_id: cfu321mfp9 %}
+<div id="bumper_test" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script>
+  var testArray = ['ghu5huofk1','zqrde007oo']
+  var randHashedId = testArray[Math.floor(Math.random() * testArray.length)];
+  wistiaEmbed = Wistia.embed(randHashedId, {
+    container: 'bumper_test'  
+  });
+</script>
 
 ----
 
