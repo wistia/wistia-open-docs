@@ -303,5 +303,5 @@ the DOM.
 
 ## Known Issues
 
-- Async API Embeds currently do not work with labs. We need to identify our lab
+- Async API Embeds currently do not work with labs. We need to update our lab
 scripts to properly identify them.
