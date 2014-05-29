@@ -90,15 +90,10 @@ of the player to <span style="color:#ff69b4;">hot pink</span> (#ff69b4):
 <script>
   wistiaEmbed = Wistia.embed("g5pnf59ala", {
     autoPlay: true,
-    playerColor: '#ff69b4'
+    playerColor: 'ff69b4'
   });
 </script>
 {% endcodeblock %}
-
-
-
-
-
 
 
 ## Embed Plugins
@@ -208,7 +203,7 @@ using an API embed and raw HTML, you can omit `target="\_blank"` safely.
         link: "http://wistia.com",
         style: {
           backgroundColor: "#616161",
-          color: "#ffffff",
+          color: "ffffff",
           fontSize: "36px",
           fontFamily: "Gill Sans, Helvetica, Arial, sans-serif"
         }
