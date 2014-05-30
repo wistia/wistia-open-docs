@@ -89,10 +89,12 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * Blogger
 * [Confluence](https://answers.atlassian.com/questions/251000/how-can-i-embed-a-wistia-hosted-video-to-my-confluence-page)
 * DecalCMS
+* [Delivr](http://blog.delivr.com/post/87004293105/delivr-adds-support-for-wistia-video-hosting-platform)
 * [Facebook]({{ '/social-sharing' | post_url }})
 * Google Sites
 * Lexblog
 * Medium
+* MotoCMS 
 * Portfoliobox
 * [Sharepoint](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/embed-video-on-a-public-website-page-HA102828149.aspx)
 * [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)
