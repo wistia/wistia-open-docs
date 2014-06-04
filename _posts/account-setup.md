@@ -10,7 +10,7 @@ footer: 'for_intermediates'
 
 ---
 
-## Open Your Account Dashboard
+## Opening Your Account Dashboard
 
 {% post_image hashed_id: '55c81b1270231d7c31d6a460425e425ad595641a', width: 600, class: 'center' %}
 
@@ -117,6 +117,16 @@ bring up a dialog box showing a list of all the receipts for your transactions.
 
 {% post_image hashed_id: 'ab90b75617a960e658aa84c3eb8e17a8e8f0d70f', width: 600, class: 'center' %}
 
+
+---
+
+## Updating your Credit Card
+
+To update your credit card, you must be the Account Owner. Once logged in, head
+to your [Account Dashboard](#opening_your_account_dashboard) and select the
+"Update Credit Card" option.
+
+{% post_image hashed_id: '33974be9ddfbba1ec140cab539d53d7d7d9b1367' %}
 
 ---
 
