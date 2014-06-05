@@ -225,11 +225,8 @@ corner and select the file that you'd like to convert. Some of the fields will
 auto-populate. We recommend making sure that:
 
 * The "Video Codec" on the video tab is set to *H.264 (x264)*
-
 * The "Video Quality" uses "Average Bitrate" and is set to around 3000kbps, or whatever the maximum bitrate of your video is if it's lower. Also, you can check off "2-pass encoding."
-
 * On the "Audio" tab, use the "AAC (CoreAudio)" codec and set the bitrate to at least 128 kbps, or the maximum bitrate for the audio track in your video.
-
 * In the top right, click "Picture Settings" and make sure the aspect ratio is correct.
 
 Then, click "Start" at the top right and your video will begin encoding to the 
