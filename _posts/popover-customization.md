@@ -64,38 +64,6 @@ Add this style to your CSS, or inline in between tags.
 
 ---
 
-## Blackout Effect Behind the Popover
-
-Sometimes, you want to completely hide the content behind the video popover. Or, you'd like to change the color that shows up to better match your overall site color scheme. Here is how to change the Overlay Color and Opacity for your Popover (<a href="http://fast.wistia.net/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true"
-class='wistia-popover[width=640,height=360,playerColor=#636155,helpers.overlay.css.backgroundColor=#000,helpers.overlay.opacity=1,padding=60,]'>click here to experience the effect</a><script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>).
-
-To do this, you'll need to add attributes to the Inline styling for the Fancybox implementation. 
-
-Here is the normal Popover code:
-
-{% codeblock thumbnail.html %}
-<a href="http://fast.wistia.net/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" 
-class="wistia-popover[width=640,height=360,playerColor=#636155]"><img src="http://embed.wistia.com/deliveries/d88b25fd28dda2795fa3c754f6d08221cfb8b206.jpg?image_play_button=true&image_crop_resized=150x84" /></a>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>
-{% endcodeblock %}
-
-Inside the “class” area, we're going to use 'helpers' to add this additional functionality:
-
-<code class="full_width">helpers.overlay.css.backgroundColor=#000,helpers.overlay.opacity=1,padding=20</code>
-
-We also added padding, to provide that 'picture frame' effect around the video.
-
-
-The final embed code looks like this:
-
-{% codeblock thumbnail.html %}
-<a href="http://fast.wistia.net/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" 
-class="wistia-popover[width=640,height=360,playerColor=#636155]"><img src="http://embed.wistia.com/deliveries/d88b25fd28dda2795fa3c754f6d08221cfb8b206.jpg?image_play_button=true&image_crop_resized=150x84" /></a>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>
-{% endcodeblock %}
-
----
-
 ## Adding a Title or Captions to your Popover
 
 Just like the color and opacity above, adding a title/caption to your popover involves the use of helpers.
