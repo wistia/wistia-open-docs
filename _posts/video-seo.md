@@ -3,8 +3,7 @@ title: Video SEO
 layout: post
 category: Public Sharing
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
-post_intro: <p>Video SEO is the practice of providing information about your content using what's called a "video sitemap" and also including that data into the embed code using markup recommended by Google. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
-temper: true
+post_intro: <p>Video SEO is the practice of providing the metadata (or "information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia provides both recommended approaches to Video SEO - using what's called a "video sitemap", and also utilizing specific markup in the on-page embed code. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
 ---
 
 ## What is Video SEO?
@@ -14,27 +13,72 @@ this introduction from Ezra, Director of the Wistia Marketing team.
 
 {% wistia_embed hashed_id: 2u20d12eg4 %}
 
+Some key take-aways:
+
+* Video data can show up in search results in the form of *rich snippets*.
+* Research shows Google prefers videos to other search results.
+* Using the recommended markup makes it easier for Google to discover and index
+  your content.
+
+The two recommended ways to help web crawlers find and index your content are
+**on-page markup** (which comes in embed codes) and **video sitemaps**. Wistia
+provides functionality for both approaches, which we cover below.
+
 ----
 
 
-## Getting Set Up
+## Using the Video SEO Embed Type
+
+The Video SEO embed code type has been optimized for Video SEO, including best
+practices like Open Graph tags and schema.org markup.
+
+{{ "Even if you aren't able to set up a video sitemap, you can still get SEO benefits from using the Video SEO embed code type." | note }}
+
+The Video SEO embed code includes the following data for the video, which you
+will want to set *before* generating an embed code:
+
+* Video Thumbnail (the image that shows before it is played, which can be
+  [customized]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}))
+* Video Title (which can be edited [on the media page]({{ '/media#update_video_title' | post_url }}))
+* Video Description (which can also be edited [on the media page]({{ '/media#video_description' | post_url}}))
+
+While you can always edit this information later, you will need to generate a
+new embed code and re-paste it into your website to take advantage of any
+changes.
+
+Once this information is set correctly, you can generate a Video SEO embed code
+by opening the video you'd like to embed, and select *Embed & Share* from the
+<span class="action_menu">Video Actions</span> menu.
+
+{% post_image hashed_id: '54b400284c735b813bf9350c4e827b0e21636a77' %}
+
+In the *Embed & Share* window, select *SEO* from the *Embed Type* list. Copy
+the generated embed code and add it to your site.
+
+{% post_image hashed_id: '7452163a3e9bd6b3d4dd8ef6a7250e491b313ea5' %}
+
+For even more information on embedding, review the [embedding a video]({{ '/embedding' | post_url }}) guide.
+
+
+## Creating a Video Sitemap
 
 {% wistia_embed hashed_id: 38bcf1939d %}
 
-Wistia makes it easy to keep up on markup practices and sitemap conventions, so
-you can focus on the important stuff: *create great content*. Wistia can
-create, host, and submit your video sitemap. Wistia also helps you update it
-for new content. After some setup work, you won't have to touch it again - *set
-it and forget it*.
+Video Sitemaps are a metadata document that must follow a pretty rigid syntax
+([here's an example](http://app.wistia.com/sitemaps/4721.xml)). They
+can be complex to make and a mess to keep up-to-date. Wistia can create, host,
+and submit your video sitemap for you, and also update it for new content.
 
-Here's the rundown on what we need to get done (in order):
+To create a video sitemap, we have to go through a few set up steps. These
+steps are a one-time thing, and you won't have to do it for each video or for
+each update.
 
-  1. Add *Sitemap* line from account to `robots.txt` file, then verify it.
-  2. Embed the video using the `video SEO` embed code type.
-  3. Create an `video sitemap entry` for the embedded video.
-  4. Can take up to 2 weeks for Google to index new content.
+Here are the two steps we need to complete:
 
-The first thing you need to do is authorize Wistia to host your video sitemap
+  1. Add *Sitemap* line provided to your site's `robots.txt` file, then verify it.
+  2. Create a `video sitemap entry` for each video you want embedded and indexed.
+
+The first thing we need to do is authorize Wistia to host your video sitemap
 and reference pages on your site. This is done through the robots.txt file on
 your web server.
 
@@ -47,6 +91,9 @@ to index on your site and also where your video sitemap is located.
 The robots.txt file also informs search engines about sitemaps that exist for
 your website. To see your robots.txt file, open your browser and head to
 `yourdomainname.com/robots.txt` (substituting your domain name in).
+
+See the Wistia robots.txt file here:
+[http://wistia.com/robots.txt](http://wistia.com/robots.txt)
 
 A common SEO problem is accidentally blocking search engines from crawling your
 website with robots.txt. Make sure you allow search engines to crawl and find
@@ -70,6 +117,8 @@ editor (like TextEdit, Vim, or Word), and add the line:
 
 Add the Video Sitemap link as outlined below, then save the file as
 `robots.txt`.
+
+{{ "If you cannot create or edit the robots.txt file for your website, you can still get SEO benefits using the [SEO embed code type](#using_the_video_seo_embed_type)." | note }}
 
 
 ### Adding the Video Sitemap URL
@@ -95,18 +144,7 @@ viewable by Google.
 
 Next, we'll embed the video using the SEO embed code type.
 
-## Embed Video Using the SEO Embed Type
 
-The Video SEO embed code type has been optimized for Video SEO, including best
-practices like Open Graph tags and Schema.org markup. Even if you don't setup
-a Video Sitemap, you will still be able to access the SEO embed type.
-
-To get one of these for your video, open the video you'd like to embed, and
-select *&lt;/&gt; Embed & Share* from the <span class="action_menu">Video
-Actions</span> menu.
-
-For more information on embedding, review the
-[embedding a video]({{ '/embedding' | post_url }}) guide.
 
 ## Making a video sitemap entry
 
@@ -135,6 +173,7 @@ information about your video (like tags, description).
 Enter your video's information, and click
 <span class="faux_button">Add to video sitemap</span>.  Your sitemap will then
 be automatically updated and the new changes that should be indexed.
+
 
 ### Making Better Sitemap Entries
 
@@ -240,6 +279,7 @@ image. Doesn’t need to go anywhere in particular, just needs to be accessible
 by Google.
 
 **Submit Sitemap URL to Google Webmaster Tools**
+
 Follow [this guide](https://support.google.com/webmasters/answer/183669?hl=en)
 to make sure you submit your new Video Sitemap correctly.
 
@@ -249,9 +289,9 @@ hosting paradigm doesn't work for some reason, this might be a good solution!
 
 ## Video SEO FAQ
 
-Video SEO is tough, but valuable. Customers have lots of questions around how
-to use our Video SEO tool for their business video. We'll attempt to compile
-them here.
+Video SEO is tough, but valuable. Customers have asked us lots of questions
+about using our Video SEO tool for their video. We'll attempt to compile them
+here.
 
 ### Do I still need to create an sitemap, or submit something to Google Webmaster Tools?
 
@@ -291,7 +331,9 @@ for more.
 
 ### It's been several days, when can I expect to see my video ranked in SERPs?
 
-This is a good question. Because Google can be a bit of a black box, it's not
+It can take up to 2 weeks for Google to index new content.
+
+Because Google can be a bit of a black box, it's not
 possible to determine exactly when new content will be indexed for video
 results. In our experience, a waiting period of **10 - 15 days** is not uncommon.
 
