@@ -634,6 +634,7 @@ requirePassword (optional)  | If this parameter is “1” (no quotes), which is
 canShare (optional) | Set this parameter to “1” (no quotes) to allow the user to share the project with others.
 canDownload (optional)  | Set this parameter to “1” (no quotes) to allow the user to download files from the project.
 canUpload (optional)  | Set this parameter to “1” (no quotes) to allow the user to upload files to the project.
+sendEmailNotification (optional) | Set this parameter to "1" (no quotes) to send a sharing notification on creation.
 
 
 #### The Response
