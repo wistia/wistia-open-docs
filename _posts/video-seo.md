@@ -62,7 +62,7 @@ For even more information on embedding, review the [embedding a video]({{ '/embe
 
 ## Creating a Video Sitemap
 
-{% wistia_embed hashed_id: 38bcf1939d %}
+{% wistia_embed hashed_id: 38bcf1939d, embedType: iframe %}
 
 Video Sitemaps are a metadata document that must follow a pretty rigid syntax
 ([here's an example](http://app.wistia.com/sitemaps/4721.xml)). They
@@ -382,4 +382,4 @@ For more on building SEO links using for your content,
 **Yes!** Our Video SEO expert, Ben, got up-close with the camera to talk about
 the business benefits of using Video SEO properly:
 
-{% wistia_embed hashed_id: b96bdea4c2 %}
+{% wistia_embed hashed_id: b96bdea4c2, embedType: iframe %}
