@@ -33,7 +33,7 @@ If you currently have the pre-Universal Analytics version of Google Analytics se
 Integrating with Google Analytics is very simple thanks to the 
 [Embed Shepherd]({{ '/embed-shepherd' | post_url }}).
 All you need to do is paste this little snippet of code anywhere on your website,
-preferably right before the `&lt;/body&gt;` tag (meaning at the bottom of your page's body).
+preferably right before the `</body>` tag (meaning at the bottom of your page's body).
 
 You'll need to add the following code snippet to every page that contains a video you want to track.
 Or better yet, if you have a layout file or a footer that's shared across pages, 
@@ -95,25 +95,19 @@ what's possible.
 
 Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Analytics Dashboard.
 
-{% post_image hashed_id: 'd65c31e1c319b67c41664711dc64faa2cd92078b', width: 320, class: 'float_right' %} 
+{% post_image hashed_id: 'd65c31e1c319b67c41664711dc64faa2cd92078b', width: 620, class: 'float_right' %} 
 
-The first step is to navigate to the Event Tracking section.  Click the "Behavior" area of the left hand nav bar, and then select "Event Tracking".  The Event Tracking section will show the total number of events, the average number of events per visit, and the Top Events.  To see just the video events, select "Categories".
+The first step is to navigate to the Event Tracking section.  Click the "Behavior" area of the left hand nav bar, and then select "Event Tracking" from the list.  The Event Tracking section will show the total number of events, the average number of events per visit, and the Top Events.  Select "Categories" to see just the video events.
 
-----
-
-{% post_image hashed_id: '95e8b116efde2bb9f055e6b50af5a7d8c3f6e816', width: 320, class: 'float_right' %} 
+{% post_image hashed_id: '95e8b116efde2bb9f055e6b50af5a7d8c3f6e816', width: 620, class: 'float_right' %} 
 
 The "Categories" events will now contain a "Video" section, which you defined in the Javascript earlier.  Click "video" to drill into the specific event descriptions.
 
-----
+{% post_image hashed_id: '9833481aa5a9e6a38c077c7cd365518248e87b65', width: 620, class: 'float_right' %} 
 
-{% post_image hashed_id: '9833481aa5a9e6a38c077c7cd365518248e87b65', width: 320, class: 'float_right' %} 
+The "Video" section page will show the total number of plays and the total number of complete plays, which we defined in separate Javascript functions earlier. Click on "Play" or "Complete" to see the plays or completes for a specific video (if you have started tracking multiple videos through UA or GA).
 
-The "Video" section page will show the total number of plays and the total number of complete plays, which we defined in separate Javascript functions earlier.  To see the plays or completes for a specific video (if you have started tracking multiple videos through UA or GA) click on "Play" or "Complete".
-
-----
-
-{% post_image hashed_id: '6617f95f699a9e84a28d25e33ea199c0219a5158', width: 320, class: 'float_right' %} 
+{% post_image hashed_id: '6617f95f699a9e84a28d25e33ea199c0219a5158', width: 620, class: 'float_right' %} 
 
 The final drill down shows what specific video titles (defined in the javascript function above) were played.
 
