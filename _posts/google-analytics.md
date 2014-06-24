@@ -2,7 +2,7 @@
 title: Google Analytics
 layout: post
 category: Integrations
-post_intro: <div class="post_image intro_image float_right"><img src="http://embed.wistia.com/deliveries/85df32f894f2b308139bd9feb49c8c04aed6efbd.png" width="250px" alt="google-analytics2" /></div><p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic 'video play' stats in Google Analytics can give you a better picture of your web visit metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
+post_intro: <div class="post_image intro_image float_right"><img src="https://embed-ssl.wistia.com/deliveries/da85542f62701762023c8a73ab86e7968ee66022/googleanalytics.jpg" width="400px" alt="google-analytics2" /></div><p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic 'video play' stats in Google Analytics can give you a better picture of your web visit metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
 description: Learn how to use Wistia and Google Analytics together to track video plays.
 footer: 'for_intermediates'
 
@@ -12,25 +12,36 @@ footer: 'for_intermediates'
 
 We realize that sometimes these things can get a bit complex, so to save you some time we built out the Google Analytics Labs. It actually does all of the stuff mentioned below for you! You can check it out [here.](http://wistia.com/labs/google-analytics/)
 
-If you are still committed to doing it yourself, read on!
+We __strongly__ recommend this route if you're not looking for more than the video play, 25/50/75/100% watched and turnstile conversion evens. 
+
+If you are still committed to doing it yourself to code out some sweet other alerts, read on!
+
+{{ "This lab also works with Universal Analytics, so no worries about compatibility there unless you've changed to a custom analytics variable other than `ga` or `_gaq`." | note }}
+
 ---
 
 ## Before You Get Started
 
 Make sure you have installed the [Google Analytics tracking scripts](https://support.google.com/analytics/bin/answer.py?hl=en&answer=1008080). These are necessary for any custom tracking we do below.
 
-If you'd like to save yourself a little time and effort, have a look at our [Google Analytics Lab](http://wistia.com/labs/google-analytics/). It's designed to make adding the Google Analytics intrgration to your Wistia embeds super easy. All you need to do is setup the aforementioned Google Analytics tracking scripts, grab an embed and head over to the lab to configure it.
+It's worth noting that if you have Universal Analytics, things might be a bit different for you. In that case, you'll want to see this __other__ [Google help document](https://support.google.com/analytics/answer/2817075?hl=en) where they explain how to set that one up.
+
+If you currently have the pre-Universal Analytics version of Google Analytics setup, we recommend checking out [the Universal Analytics Upgrade Center](https://developers.google.com/analytics/devguides/collection/upgrade/) to get all the info you need to know about converting to the shiny new Universal Analytics style of things.
 
 ## Modify Your Wistia Embed Codes
 
-Integrating with Google Analytics is actually extremely simple thanks to the 
+Integrating with Google Analytics is very simple thanks to the 
 [Embed Shepherd]({{ '/embed-shepherd' | post_url }}).
 All you need to do is paste this little snippet of code anywhere on your website,
-preferably right before the `&lt;/body&gt;` tag.
+preferably right before the `&lt;/body&gt;` tag (meaning at the bottom of your page's body).
 
-You'll need to add this to every page that contains a video you want to track.
+You'll need to add the following code snippet to every page that contains a video you want to track.
 Or better yet, if you have a layout file or a footer that's shared across pages, 
 just put it in there and you'll be good to go!
+
+Due to changes made when Universal Analytics was released, you'll use different code depending on which version you use. The easiest way to do this is to see if you have the `_gaq` or `ga` variable defined on your website. 
+
+### Pre-Universal Analytics snippet
 
 {% codeblock playlist_api.js %}
 <script src="http://fast.wistia.net/static/embed_shepherd-v1.js"></script>
@@ -47,8 +58,29 @@ just put it in there and you'll be good to go!
 </script>
 {% endcodeblock %}
 
-This code fires a 'Play' event to Google Analytics whenever a video on your 
-website is played. It also fires a 'Complete' event when a viewer reaches the 
+### Post-Universal Analytics snippet
+
+{% codeblock playlist_api.js %}
+<script src="http://fast.wistia.net/static/embed_shepherd-v1.js"></script>
+<script>
+  wistiaEmbeds.onFind(function(video){
+    video.bind("play", function(){
+      ga('send', 'event', 'Video', 'Play', video.name());
+      return this.unbind;
+    }).bind("end", function(){
+      ga('send', 'event', 'Video', 'Complete', video.name());
+      return this.unbind;
+    });
+  });
+</script>
+{% endcodeblock %}
+
+You'll notice that not only has the variable changed from `_gaq` to `ga` but that the format between Google Analytics and Universal Analytics is slightly different. Instead of using `.push([...])` you're using `ga('send', ...)` to push along that data. Everything else stays the same!
+
+## What those snippets do
+
+These snippets fire a 'Play' event to Google Analytics whenever a video on your 
+website is played. They also fires a 'Complete' event when a viewer reaches the 
 end of a video. 
 
 We only fire each of these events once per video per page load (that's what the
@@ -59,10 +91,9 @@ You can extend what we've done here to pipe many more events to Google
 Analytics if you like. Take a look at the [Player API]({{ '/player-api' | post_url }}) to see
 what's possible.
 
-
 ## Track viewing in Google Analytics Dashboard
 
-Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Google Analytics Dashboard.
+Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Analytics Dashboard.
 
 {% post_image hashed_id: 'd65c31e1c319b67c41664711dc64faa2cd92078b', width: 320, class: 'float_right' %} 
 
@@ -78,7 +109,7 @@ The "Categories" events will now contain a "Video" section, which you defined in
 
 {% post_image hashed_id: '9833481aa5a9e6a38c077c7cd365518248e87b65', width: 320, class: 'float_right' %} 
 
-The "Video" section page will show the total number of plays and the total number of complete plays, which we defined in separate Javascript functions earlier.  To see the plays or completes for a specific video (if you have started tracking multiple videos through GA) click on "Play" or "Complete".
+The "Video" section page will show the total number of plays and the total number of complete plays, which we defined in separate Javascript functions earlier.  To see the plays or completes for a specific video (if you have started tracking multiple videos through UA or GA) click on "Play" or "Complete".
 
 ----
 
