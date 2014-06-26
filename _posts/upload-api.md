@@ -97,6 +97,13 @@ The *file* parameter must be multipart-form encoded into the request body.
     </td>
   </tr>
   <tr>
+    <td>description</td>
+    <td> 
+      Optional. A description to use for the media in Wistia. You can use basic
+      HTML here, but note that both HTML and CSS will be sanitized.
+    </td>
+  </tr>
+  <tr>
     <td>contact_id</td>
     <td> 
       A Wistia contact id, an integer value. If omitted, it will default to the
