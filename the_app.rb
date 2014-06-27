@@ -103,7 +103,7 @@ class TheApp < Sinatra::Base
 
   # 404 page
   not_found do
-    send_file(File.join(File.dirname(__FILE__), '_site', '404.html'), {:status => 404})
+    send_error_file(File.join(File.dirname(__FILE__), '_site', '404.html'))
   end
 
   # DevHQ page
@@ -118,6 +118,16 @@ class TheApp < Sinatra::Base
 
   get "/wistia-basics" do
     send_file(File.join(File.dirname(__FILE__), '_site', 'wistia-basics.html'))
+  end
+
+  def send_error_file(path)
+    [ 404,
+      {
+        'Content-Length' => ::File.size(path).to_s,
+        'Content-Type'   => Rack::Mime.mime_type(::File.extname(path))
+      },
+      [::File.read(path)]
+    ]
   end
 
 end
