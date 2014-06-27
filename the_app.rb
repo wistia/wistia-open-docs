@@ -121,7 +121,7 @@ class TheApp < Sinatra::Base
   end
 
   def send_error_file(path)
-    [ 404,
+    [404,
       {
         'Content-Length' => ::File.size(path).to_s,
         'Content-Type'   => Rack::Mime.mime_type(::File.extname(path))
@@ -129,5 +129,4 @@ class TheApp < Sinatra::Base
       [::File.read(path)]
     ]
   end
-
 end
