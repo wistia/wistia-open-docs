@@ -9,7 +9,7 @@ description: Wistia makes it easy to privately share your videos with people. In
 <div id="bumper_test" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
-  var testArray = ['ghu5huofk1','zqrde007oo']
+  var testArray = ['rz17xouyzk','418xma6o6q']
   var randHashedId = testArray[Math.floor(Math.random() * testArray.length)];
   wistiaEmbed = Wistia.embed(randHashedId, {
     container: 'bumper_test'  
