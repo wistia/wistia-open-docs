@@ -12,7 +12,7 @@ footer: 'for_intermediates'
 
 We realize that sometimes these things can get a bit complex, so to save you some time we built out the Google Analytics Labs. It actually does all of the stuff mentioned below for you! You can check it out [here.](http://wistia.com/labs/google-analytics/)
 
-We __strongly__ recommend this route if you're not looking for more than the video play, 25/50/75/100% watched and turnstile conversion evens. 
+We __strongly__ recommend this route if you're not looking for more than the video play, 25/50/75/100% watched and turnstile conversion events. 
 
 If you are still committed to doing it yourself to code out some sweet other alerts, read on!
 
