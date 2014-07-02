@@ -72,7 +72,7 @@ you to move media to other accounts. For videos with stats, however, the stats
 will not transfer between accounts.
 
 **If you move a video between accounts accidentally**, and need the stats back,
-moving the video to it's original account and project will automatically
+moving the video to its original account and project will automatically
 restore the stats. Phew.
 
 ## Embed Video
