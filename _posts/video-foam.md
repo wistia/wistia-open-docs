@@ -27,6 +27,33 @@ In the [Embed & Share modal]({{ '/embedding' | post_url }}), select the *Use
 Video Foam* checkbox. Then, you can copy your embed code and paste it into your
 site!
 
+## Setting bounds for videoFoam
+
+You can set maximum or minimum widths and heights that videoFoam will honor.
+
+For example, when setting the videoFoam option on an API embed, you can change
+this:
+
+    { videoFoam: true }
+
+to this:
+
+    {
+      videoFoam: {
+        minWidth: 400,
+        maxWidth: 960
+      }
+    }
+
+or using height instead:
+
+    {
+      videoFoam: {
+        minHeight: 300,
+        maxHeight: 450
+      }
+    }
+
 ## videoFoam Tips
 
 We'll leave most of the tips for responsive design to the

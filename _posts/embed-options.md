@@ -57,7 +57,7 @@ stillUrl              | string  | The still image that should appear before the 
 stillSnap             | boolean | For thumbnails that are different aspect ratio than the video, set to *false*. Default is *true*.
 time                  | float   | Set a starting time for the video on load. If you'd like the video to also play immediately, use the autoPlay parameter.
 trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
-videoFoam             | boolean | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. [Check out the demo!](http://wistia.com/labs/videofoam)
+videoFoam             | boolean/object | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. For iframes, requires the iframe API scripts. API/SEO embeds don't need any modifications. See the [video-foam docs]({{ '/video-foam' | post_url }}) for more options.
 videoQuality          | string  | Specify the starting video quality. options: **sd-only**, **md**, **hd-only**, **auto** (default)
 videoWidth            | integer | The original width of the video.
 videoHeight           | integer | The original height of the video.
