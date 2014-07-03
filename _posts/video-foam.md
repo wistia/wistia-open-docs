@@ -49,22 +49,30 @@ You can set maximum or minimum widths and heights that videoFoam will honor.
 For example, when setting the videoFoam option on an API embed, you can change
 this:
 
-    { videoFoam: true }
+    Wistia.embed("hashedid", { videoFoam: true });
 
 to this:
 
-    {
+    Wistia.embed("hashedid", {
       videoFoam: {
         minWidth: 400,
         maxWidth: 960
       }
-    }
+    });
 
 or using height instead:
 
-    {
+    Wistia.embed("hashedid", {
       videoFoam: {
         minHeight: 300,
         maxHeight: 450
       }
-    }
+    });
+
+For iframes, you can change this:
+
+    //fast.wistia.net/embed/iframe/hashedid?videoFoam=true
+
+to this:
+
+    //fast.wistia.net/embed/iframe/hashedid?videoFoam%5BmaxHeight%5D=540&videoFoam%5BminHeight%5D=300
