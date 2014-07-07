@@ -3,6 +3,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
+    <title>
+      {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
+    </title>
+    {% if page.description %}
+    <meta content='{{ page.description }}' name='description' />
+    {% endif %}
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
     <link href="{{ '/stylesheets/screen' | stylesheet_url }}" rel='stylesheet' type='text/css' />
     <script src="{{ '/javascripts/jquery.min' | javascript_url }}" type='text/javascript'></script>
@@ -15,9 +21,6 @@
         var basepath = "{{ '' | post_url }}";
       //]]>
     </script>
-    <title>
-      {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
-    </title>
   </head>
   <body class='{{ page.type }}_layout'>
     {% include wgh_config.html %}

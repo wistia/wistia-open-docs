@@ -4,6 +4,13 @@
 !!! Strict
 %html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', :lang => 'en' }
   %head
+    %title
+      {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
+
+    {% if page.description %}
+    %meta{ name: 'description', content: "{{ page.description }}"}
+    {% endif %}
+    
     %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
     %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/screen' | stylesheet_url }}" }
     %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
@@ -13,11 +20,7 @@
     {% endif %}
 
     :javascript
-      var basepath = "{{ '' | post_url }}";
-
-    %title
-      {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
-    
+      var basepath = "{{ '' | post_url }}";    
   %body{ class: "{{ page.type }}_layout" }
     {% include wgh_config.html %}
     {% include header.html %}
