@@ -37,9 +37,10 @@ However, it is possible to get an async SEO embed code via the [oembed
 endpoint]({{ '/construct-an-embed-code#using_the_oembed_endpoint' | post_url }}).
 To do that, simply make your oembed request with query params
 `embedType=seo&async=true`. It will return an SEO embed code with an additional
-property: `"meta_tags_for_head"`.  These tags can be modified or dropped, but
-we have found that including them improves the speed and accuracy of being
-indexed with Google.
+property: `"meta_tags_for_head"`. You should put these tags in the `<head>` of
+the page where the video is embedded. They can technically be modified or
+dropped, but we have found that including them improves the speed and accuracy
+of being indexed with Google.
 
 The process for fetching and using this kind of embed code is highly technical,
 so __if you are not a programmer, we recommend NOT using async SEO embed
