@@ -34,7 +34,7 @@ complex for most users and environments, we do not allow the async option in
 the Wistia user interface.
 
 However, it is possible to get an async SEO embed code via the [oembed
-endpoint]({{ '/construct-an-embed-code#using-the-oembed-endpoint' | post_url }}).
+endpoint]({{ '/construct-an-embed-code#using_the_oembed_endpoint' | post_url }}).
 To do that, simply make your oembed request with query params
 `embedType=seo&async=true`. It will return an SEO embed code with an additional
 property: `"meta_tags_for_head"`.  These tags can be modified or dropped, but
