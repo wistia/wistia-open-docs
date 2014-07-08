@@ -10,7 +10,8 @@ description:
 post_intro: <em>Private Sharing</em> is a super useful workflow if you need to
   control who can view your video content. It's great for reviews & approvals,
   sensitive content, and any other content that you lock down to a specific set
-  of viewers.
+  of viewers. Check out our documentation on Private Sharing [here]({{ '/private-sharing' | post_url }}).
+  
 video_hashed_id: fwnwv2d361
 ---
 

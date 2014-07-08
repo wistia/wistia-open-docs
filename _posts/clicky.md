@@ -41,7 +41,7 @@ using Clicky!
 
 It's time to start tracking video views in your Clicky dashboard.  We've created 
 a simple Javascript function to help you do this. This code should follow each 
-Wistia embed on your page, updated with the ID #, URL, and title of the video.
+Wistia embed on your page, updated with the hashed ID, URL, and title of the video. The hashed ID for your video can be found by navigating to the video's page in Wistia, and selecting the last 10 characters of the URL. Those 10 characters are the Hashed ID of the video, and are what identify it as unique in Wistia's system.
 	
 {% codeblock playlist_api.js %}
 <script type="text/javascript">
@@ -51,7 +51,20 @@ wistiaEmbed.bind("play", function() {
 </script>
 {% endcodeblock %}
 
-**Bonus:** to track the finish viewing stats as well, use `wistiaEmbed.bind("end", yourFunction)`.
+In this codeblock, the `0` signifies where you should place the hashed ID, the placeholder URL `http://www.mysite.com/mypage/#video` should be replaced with the URL of the webpage where your video is embedded, and the `Test Video` should be replaced with the title of the video you are trying to track.
+
+**Bonus:** to track the finish viewing stats as well, use `wistiaEmbed.bind("end", yourFunction)`. It should look like this:
+
+{% codeblock playlist_api.js %}
+<script type="text/javascript">
+wistiaEmbed.bind("play", function() {
+  clicky.video('play',0, 'http://www.mysite.com/mypage/#video', 'Test Video');
+});
+wistiaEmbed.bind("end", function() {
+  clicky.video('end',0, 'http://www.mysite.com/mypage/#video', 'Test Video');
+});
+</script>
+{% endcodeblock %}
 
 ## Check Your Stats!
 
