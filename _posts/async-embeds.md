@@ -22,11 +22,28 @@ work.  However, when you turn Video Foam on, it adds the iframe-api-v1.js
 script, which is not async. In the future, we will be replacing
 iframe-api-v1.js with E-v1.js and making it async too.
 
-Unfortunately, __there is currently no good way to make SEO embeds async__
-because Google's crawler will only process javascript that is executed
-synchronously on page load.
-
 __Popover embeds and playlists will also be made async when the time comes.__
+
+## Async SEO Embed Codes
+
+The standard Wistia SEO embed codes must be synchronous because they include
+a script specific to the video--metadata.js--which must be run synchronously
+during page load. This is the best solution for most people because it's a
+single Copy &amp; Paste operation. Because alternative workflows are too
+complex for most users and environments, we do not allow the async option in
+the Wistia user interface.
+
+However, it is possible to get an async SEO embed code via the [oembed
+endpoint]({{ '/construct-an-embed-code#using-the-oembed-endpoint' | post_url }}).
+To do that, simply make your oembed request with query params
+`embedType=seo&async=true`. It will return an SEO embed code with an additional
+property: `"meta_tags_for_head"`.  These tags can be modified or dropped, but
+we have found that including them improves the speed and accuracy of being
+indexed with Google.
+
+The process for fetching and using this kind of embed code is highly technical,
+so __if you are not a programmer, we recommend NOT using async SEO embed
+codes__.
 
 ## The Composition of an Async API Embed
 
