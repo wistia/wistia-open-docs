@@ -24,28 +24,6 @@ iframe-api-v1.js with E-v1.js and making it async too.
 
 __Popover embeds and playlists will also be made async when the time comes.__
 
-## Async SEO Embed Codes
-
-The standard Wistia SEO embed codes must be synchronous because they include
-a script specific to the video--metadata.js--which must be run synchronously
-during page load. This is the best solution for most people because it's a
-single Copy &amp; Paste operation. Because alternative workflows are too
-complex for most users and environments, we do not allow the async option in
-the Wistia user interface.
-
-However, it is possible to get an async SEO embed code via the [oembed
-endpoint]({{ '/construct-an-embed-code#using_the_oembed_endpoint' | post_url }}).
-To do that, simply make your oembed request with query params
-`embedType=seo&async=true`. It will return an SEO embed code with an additional
-property: `"meta_tags_for_head"`. You should put these tags in the `<head>` of
-the page where the video is embedded. They can technically be modified or
-dropped, but we have found that including them improves the speed and accuracy
-of being indexed with Google.
-
-The process for fetching and using this kind of embed code is highly technical,
-so __if you are not a programmer, we recommend NOT using async SEO embed
-codes__.
-
 ## The Composition of an Async API Embed
 
 Here's an example async API embed, straight out of the embed modal:
@@ -280,6 +258,29 @@ window.wistiaInit = function(W) {
   W.options({ playerColor: "ff0000" });
 };
 {% endcodeblock %}
+
+
+## Async SEO Embed Codes
+
+The standard Wistia SEO embed codes must be synchronous because they include
+a script specific to the video--metadata.js--which must be run synchronously
+during page load. This is the best solution for most people because it's a
+single Copy &amp; Paste operation. Because alternative workflows are too
+complex for most users and environments, we do not allow the async option in
+the Wistia user interface.
+
+However, it is possible to get an async SEO embed code via the [oembed
+endpoint]({{ '/construct-an-embed-code#using_the_oembed_endpoint' | post_url }}).
+To do that, simply make your oembed request with query params
+`embedType=seo&async=true`. It will return an SEO embed code with an additional
+property: `"meta_tags_for_head"`. You should put these tags in the `<head>` of
+the page where the video is embedded. They can technically be modified or
+dropped, but we have found that including them improves the speed and accuracy
+of being indexed with Google.
+
+The process for fetching and using this kind of embed code is highly technical,
+so __if you are not a programmer, we recommend NOT using async SEO embed
+codes__.
 
 
 ## How async embeds are initialized (for the curious)
