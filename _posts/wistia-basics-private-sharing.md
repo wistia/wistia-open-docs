@@ -10,9 +10,11 @@ description:
 post_intro: <em>Private Sharing</em> is a super useful workflow if you need to
   control who can view your video content. It's great for reviews & approvals,
   sensitive content, and any other content that you lock down to a specific set
-  of viewers. Check out our documentation on Private Sharing [here](http://wistia.com/doc/private-sharing).
+  of viewers. 
 video_hashed_id: fwnwv2d361
 ---
 
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(22).play(); return false;"><i class="icon-play"></i>(0:22)</a> Just your classic dimple-off.
 * <a href="#" class="chapter_link" onclick="wistiaEmbed.time(120).play(); return false;"><i class="icon-play"></i>(2:00)</a> James' first appearance in a video!
+
+Check out our documentation on Private Sharing [here](http://wistia.com/doc/private-sharing).
