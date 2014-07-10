@@ -36,4 +36,4 @@ Managers can:
 
 ## Contact-Level Permissions
 
-"Contacts" must be created by the Account owners or Managers.  The access that contacts have can be limited to viewing a specific Project, and the videos contained therein.  When a contact is created, their access can also include things like the ability to upload new content, download content, and share content.  Contacts by default are required to create a password to access the system, however this can be turned off as well.
+"Contacts" must be created by the Account owners or Managers.  The access that contacts have can be limited to viewing a specific Project, and the videos contained therein.  When a contact is created, their access can also include things like the ability to upload new content, download content, and share content.  Contacts are required to create a password to access the system.
