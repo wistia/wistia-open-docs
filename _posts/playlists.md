@@ -12,6 +12,9 @@ Wistia playlists are representative of a Project's contents within your Wistia a
 
 Embedded playlists automatically show the videos contained in the project.  If videos are added to the project, those videos will automatically show up in the playlist.  If the videos are re-ordered in the project, the videos in the playlist will be re-ordered accordingly.  If the titles of the videos in the project are changed....you guessed it, the titles of the videos in the playlist will change as well.
 
+{{ "Playlists can only be made from projects, they can not be made from sections of projects or only selected videos from within a project." | note }}
+
+
 <div class="video_embed">
 <iframe src="//fast.wistia.net/embed/playlists/aodt9etokc?media_0_0%5BautoPlay%5D=false&media_0_0%5BcontrolsVisibleOnLoad%5D=false&theme=tab&version=v1&videoOptions%5BautoPlay%5D=true&videoOptions%5BplayerColor%5D=54bbff&videoOptions%5BvideoHeight%5D=371&videoOptions%5BvideoWidth%5D=660&videoOptions%5BvolumeControl%5D=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_playlist" name="wistia_playlist" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="660" height="371"></iframe>
 </div>
