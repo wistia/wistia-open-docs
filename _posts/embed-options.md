@@ -241,7 +241,7 @@ options.
 
 Option Name        | Type      | Description
 -----------        | ----      | ------------------------------
-badgeImg           | string    | The src attribute of the logo image.
+badgeImage         | string    | The src attribute of the logo image.
 badgeUrl           | string    | The URL that the logo launches when you click on it.
 buttons            | string    | Dash-delimited list of buttons to display, e.g. "playCount-embed-facebook-twitter".
 downloadType       | string    | If the download button is available, this determines the quality of video that is downloaded. Possible values are **sd_mp4**, **hd_mp4**, and **original**. **hd_mp4** will only be used if it exists for the video. If it does not, it falls back to **sd_mp4**.
