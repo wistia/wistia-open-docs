@@ -3,7 +3,7 @@ title: Contact Management
 layout: post
 category: Private Sharing
 description: Contacts are the individual folks you invite in to your Wistia account to privately view your content. Learn all about creating contacts and managing their permissions here.
-post_intro: <p><b>Contacts</b> are viewers that you have given certain permissions to (the most basic being the ability to view videos in your Wistia account).</p><p>Contacts can also be given permission to download content, upload new videos, or invite other viewers on a project-by-project basis. All contact activity is recorded and viewable within the “User Sessions” portion of Wistia Stats.</p><p>When to use contacts:</p><ul><li>When you want people to view content privately within Wistia</li><li>When you want to be able to track viewing of your content (in your Wistia account)</li></ul>
+post_intro: <p><b>Contacts</b> are viewers that you have given certain permissions to (the most basic being the ability to view videos in your Wistia account).</p><p>Contacts can also be given permission to download content, upload new videos, or invite other viewers on a project-by-project basis. All contact activity is recorded and viewable within the “Private User Sessions” portion of Wistia Stats.</p><p>When to use contacts:</p><ul><li>When you want people to view content privately within Wistia</li><li>When you want to be able to track viewing of your content (in your Wistia account)</li></ul>
 footer: 'for_intermediates'
 ---
 
@@ -19,10 +19,10 @@ the contacts are automatically created in your account if they did not
 previously exist.
 
 Alternatively, contacts can be created without sharing projects.  To do this, 
-choose the "Contacts" item in the Account tab on any page in your Wistia account.
+choose the "Users" item in the Account tab on any page in your Wistia account.
 This will take you to your "My Contacts" page.
 
-From here, choose *Create Contacts* from the <span class="action_menu">Actions</span> menu.
+From here, choose *Create User* from the <span class="action_menu">Actions</span> menu.
 A dialog will appear that will let you either create a single new contact 
 (the "New Contact" tab) or create many new contacts simultaneously 
 (the "Advanced Add" tab).  Choose whichever method is appropriate based on the 
@@ -51,8 +51,8 @@ the contact from your account entirely.
 
 {% post_image hashed_id: 'd0bfab05474351f90b5bfb9281ed051119c9111b', width: 320, class: 'float_right' %}
 
-To remove a contact from a project, go to the project page and select "Manage 
-permissions" from the Project Actions menu.  This will bring up the permission
+To remove a contact from a project, go to the project page and select "Sharing & Privacy" 
+from the Project Actions menu.  This will bring up the permission
 management dialog.  To remove the contact, click the trashcan icon on the far 
 right-hand side of the line for that contact.  This will completely remove the 
 contact's access to the project materials.  
@@ -83,7 +83,7 @@ access to all of the appropriate content.
 
 ## How to create contact groups
 
-Contact groups are created and managed from the Contacts area of the Wistia 
+Contact groups are created and managed from the Users area of the Wistia 
 application.  To get to this area, choose "Contacts" from the Account tab on 
 any page in your Wistia account.
 
