@@ -48,3 +48,5 @@ Total Storage     | 10GB    | unlimited     | unlimited   | unlimited
 [Custom CNAME account address]({{ '/account-setup#set_a_custom_domain_cname' | post_url }})  | | | x | x
 [Whitelisted Domain Restrictions]({{ '/domain-restrictions' | post_url }}) | | | x | x
 [Marketing Automation System Integrations]({{ '/integrations' | post_url }})  | | | x | x
+
+<a class='button' href='http://wistia.com/free/new'>Try the Wistia Free Plan!</a>
