@@ -1,0 +1,9 @@
+table { border: 1px solid rgba(62, 169, 245, 0.2); }
+table span.category { font-weight: bold; white-space: nowrap; }
+table th { white-space: nowrap; font-weight: bold; }
+table td { padding: 10px 20px; background: none; border-bottom: 1px solid rgba(62, 169, 245, 0.2); }
+table thead th { padding: 20px; text-align: center; }
+table thead th a { color: white; }
+table td:not(:first-child) { text-align: center; }
+
+.button { background-color: #3ea9f5; display: block; margin: 0 auto; width: 30%; text-align: center; color: white; padding: 5px; font-weight: bold; }
