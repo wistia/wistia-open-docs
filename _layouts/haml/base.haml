@@ -10,9 +10,11 @@
     {% if page.description %}
     %meta{ name: 'description', content: "{{ page.description }}"}
     {% endif %}
-    
     %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
     %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/screen' | stylesheet_url }}" }
+    {% if page.plans_comparison %}
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/plans_comparison' | stylesheet_url }}" }
+    {% endif %}
     %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
     {% if page.developers %}
     %script{ type: "text/javascript", src: "//use.typekit.net/pft0gev.js" } 
