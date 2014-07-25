@@ -16,7 +16,7 @@ Total Storage     | 10GB    | unlimited     | unlimited   | unlimited
 [Personalized thumbnail selection]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }})  | x | x | x | x
 <span class='category'>Social Network Sharing</span> |    |   |   |
 [Social sharing bar]({{ '/customizing-your-video#social_bar' | post_url }}) | x | x | x| x
-[Twitter and facebook support]({{ '/social-sharing' | post_url }})  | x   | x  | x | x
+[Twitter and Facebook support]({{ '/social-sharing' | post_url }})  | x   | x  | x | x
 <span class='category'>Embedded Video Design</span> | | | |
 [Muti-video playlists]({{ '/playlists' | post_url }}) | x | x | x | x
 [Responsive embeds]({{ '/video-foam' | post_url }}) | x | x | x | x
