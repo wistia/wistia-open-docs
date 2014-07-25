@@ -6,7 +6,7 @@ post_intro: <p>The primary difference between Wistia pricing plans is the featur
 ---
 
 
-  | Free Plan     | Small Business    | Teams             | High Volume
+  | [Free Plan](http://wistia.com/free/new) | [Small Business](http://wistia.com/trials/new)  | [Teams](http://wistia.com/trials/new) | [High Volume](http://wistia.com/pricing/highvolume)
 --|---------------|-------------------|-------------------|-----------
 Monthly Price     | Free    | $25/mo        | $100/mo     | $300+/mo
 Monthly Bandwidth | 50GB/mo | 200GB/mo      | 200GB/mo    | 1TB+/mo
