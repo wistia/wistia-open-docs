@@ -14,6 +14,12 @@ post_intro:
   href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
 ---
 
+## Add Turnstile to Your Video
+
+To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select Turnstile. There you will be able to change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider.
+
+{% post_image hashed_id: "df0983a7a38675157e5e5668cf89884d954630d9", class: 'center' %}
+
 ## Setup Your Email Provider Integration
 
 {% post_image hashed_id: "73af93a7120e830cdc02912871b2ea4ed353cf6c", class: 'center' %}
