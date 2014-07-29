@@ -4,7 +4,7 @@ layout: post
 plans_comparison: true
 post_intro: |
   <p>The primary difference between Wistia pricing plans is the
-  features which are offered. The table below lists the features on each plan, so
+  features they include. The table below lists the features on each plan, so
   that you can choose one that is right for you from both a pricing and value
   perspective.</p>
   <p>Wistia's premium feature Test Drive includes two weeks of access to all 
