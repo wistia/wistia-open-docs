@@ -9,7 +9,7 @@ footer: 'for_intermediates'
 
 ## Embed Your Video
 
-The first step is embedding your video on your webpage (or blog, e-commerce site, etc.)  For more info on this, please check out our documentation on [embedding]({{ '/embedding' | post_url }}).  For Clicky and your video to be able to interact, **you must choose the API embed code** from the Embed Type section of the Embed & Share Modal.
+The first step to making Clicky work with Wistia is embedding your video on your webpage (or blog, e-commerce site, etc.)  For more info on this, please check out our documentation on [embedding]({{ '/embedding' | post_url }}).  For Clicky and your video to be able to interact, **you must choose the API embed code** from the Embed Type section of the Embed & Share Modal.
 
 ## Add Clicky Tracking
 
