@@ -434,7 +434,7 @@ Parameter | Description
 media_id  | An optional parameter specifying the video for which you would like to retrieve events.
 visitor_key | An optional parameter specifying the visitor for which you would like to retrieve events.
 per_page | The maximum number of events to retrieve. This number is capped at 100. If you need to get more than 100 events, please issue multiple requests.
-page | The page of events to get data from, based on the page_size parameter.
+page | The page of events to get data from, based on the per_page parameter.
 start_date | An optional parameter indicating that events should only be returned after the given date. Takes the format '2012-11-25'.
 end_date | An optional parameter indicating that events should only be returned before the given date. Takes the format '2012-11-25'.
 
