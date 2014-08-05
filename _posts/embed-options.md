@@ -135,8 +135,8 @@ bottomText         | string    | The text displayed below the input field. Usual
 buttonBackground   | string    | The hex color of the button. Defaults to the player color.
 errorColor         | string    | The hex color of the error text that can displayed. Yellow by default.
 emailExampleText   | string    | The text that is displayed when the email input field is empty.
-firstExampleText   | string    | The text that is displayed when the first name input field is empty. Only applicable when `askName` is `true`.
-lastExampleText    | string    | The text that is displayed when the last name input field is empty. Only applicable when `askName` is `true`.
+firstNameExampleText | string    | The text that is displayed when the first name input field is empty. Only applicable when `askName` is `true`.
+lastNameExampleText | string    | The text that is displayed when the last name input field is empty. Only applicable when `askName` is `true`.
 sectionIndex       | integer   | Only applies to playlists. Used in conjunction with `videoIndex` option to determine which video to begin gating. Defaults to 0.
 style              | object    | The styles to be applied to the root turnstile element.
 time               | string    | The point in the video when Turnstile displays. A value of "before" shows Turnstile before the video starts. "end" shows it at the end. You can also supply a time in seconds (e.g. 130) and it will appear when the viewer reaches that point in the video (or tries to skip past that point).
