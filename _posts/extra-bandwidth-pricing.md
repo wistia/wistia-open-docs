@@ -8,6 +8,8 @@ post_intro: |
   account might use in a given month.</p>
   <p>We've also updated the extra bandwidth costs for our legacy (previous to
   July 2014) plans, to make sure everyone gets in on the fun.</p>
+  <p>See the <a href='http://wistia.com/doc/plans-comparison'>plans comparison</a>
+  for in-depth feature breakdowns on each of the new plans.</p>
 ---
 
 Bandwidth Usage (per month)   | Price per GB
