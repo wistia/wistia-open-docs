@@ -18,7 +18,17 @@ post_intro:
 
 To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select Turnstile. There you will be able to change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider.
 
-{% post_image hashed_id: "df0983a7a38675157e5e5668cf89884d954630d9", class: 'center' %}
+{% post_image hashed_id: "6bcb52f9234a2c11df350cca45bab41e28b4bfa6", class: 'center' %}
+
+## Collect First and Last Names
+
+By default, Turnstile will only ask people to enter an email address. "But Wistia!" you exclaim. "I want to ask for first and last names so I can personalize my follow up emails!" Fear not, fellow marketer. Turnstile has you covered: 
+
+{% wistia_embed hashed_id: qmdaw5lke0, embedType: iframe %}
+
+To enable the First Name and Last Name fields, select the "Ask for First and Last Name" option right there in the Turnstile section of Customize. You'll instantly see an updated preview of Turnstile on your video.
+
+{{ "Note: Your viewers' first names and last names will _not_ be displayed in your Wistia stats. Those get passed on directly to your email list in your email marketing service. For details on setting up an email provider integration, read onwards!" | note }}
 
 ## Setup Your Email Provider Integration
 
