@@ -30,7 +30,7 @@ To enable the First Name and Last Name fields, select the "Ask for First and Las
 
 {{ "Note: Your viewers' first names and last names will _not_ be displayed in your Wistia stats. Those get passed on directly to your email list in your email marketing service. For details on setting up an email provider integration, read onwards!" | note }}
 
-## Setup Your Email Provider Integration
+## Set Up Your Email Provider Integration
 
 {% post_image hashed_id: "73af93a7120e830cdc02912871b2ea4ed353cf6c", class: 'center' %}
 
