@@ -22,7 +22,7 @@ To enable Turnstile on a video in your account, open the [Customize]({{ '/custom
 
 ## Collect First and Last Names
 
-By default, Turnstile will only ask people to enter an email address. "But Wistia!" you exclaim. "I want to ask for first and last names so I can personalize my follow up emails!" Fear not, fellow marketer. Turnstile has you covered: 
+By default, Turnstile will only ask people to enter an email address. "But Wistia!" you exclaim, "I want to ask for first and last names so I can personalize my follow up emails!" Fear not, fellow marketer. Turnstile has you covered: 
 
 {% wistia_embed hashed_id: qmdaw5lke0, embedType: iframe %}
 
