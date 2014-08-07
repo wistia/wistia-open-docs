@@ -5,6 +5,8 @@ description: The upload widget is a simple yet powerful tool for uploading video
 post_intro: <p>Upload widgets are perfect for consumer generated content (ie. your viewers upload content they created directly to a Wistia project). Using Wistia Upload Widgets creates an "upload button" on a public page you specify. Upload widgets aren't enabled by default, but give us a shout if you want them activated!</p><p>For more technical information on how Upload Widgets work, read on here:<a href="/doc/upload-widget-specs"> upload widgets tech specs</a>.</p>
 ---
 
+{{ "Note: Upload Widgets are Flash-based, and require Flash in order to function. They will not work across all environments." | note }}
+
 To generate an upload widget embed code for a project, follow these steps:
 
 Login to Wistia and navigate to the project for which you would like to create an upload widget
