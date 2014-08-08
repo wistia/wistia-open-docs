@@ -48,7 +48,7 @@ doNotTrack            | boolean | When true, embed will not track views.
 endVideoBehavior      | string  | flash only. Behavior when the video ends: default/reset/loop.
 fullscreenButton      | boolean | Show fullscreen button. Default is true.
 pageUrl               | string  | The page that the embed thinks it's embedded on. Defaults to the current page.
-playerPreference    | string  | Accepts: 'flash', 'html5', or 'auto'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'auto'.
+playerPreference      | string  | Accepts: 'flash', 'html5', or 'auto'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'auto'.
 playButton            | boolean | flash/external only. When true, display play button over video poster.
 playbar               | boolean | Show playbar. Default is true.
 playerColor           | string  | Set custom color on play button/controls. HTML5 player has access to custom play button color only.
@@ -130,10 +130,13 @@ Option Name        | Type      | Description
 -----------        | ----      | ----------------------------------------------------------------------------------------------------
 allowSkip          | boolean   | Determines whether to display a "Skip" button in the lower right for a gate at the beginning or middle. Defaults to false.
 alwaysShow         | boolean   | Determines whether to display the Turnstile gate even if the email has already been collected. Defaults to false.
+askName            | boolean   | Determines whether to require first and last name in addition to email. Defaults to false.
 bottomText         | string    | The text displayed below the input field. Usually information about what you'll do with the email
 buttonBackground   | string    | The hex color of the button. Defaults to the player color.
 errorColor         | string    | The hex color of the error text that can displayed. Yellow by default.
-exampleText        | string    | The text that is displayed when the input field is empty.
+emailExampleText   | string    | The text that is displayed when the email input field is empty.
+firstNameExampleText | string    | The text that is displayed when the first name input field is empty. Only applicable when `askName` is `true`.
+lastNameExampleText | string    | The text that is displayed when the last name input field is empty. Only applicable when `askName` is `true`.
 sectionIndex       | integer   | Only applies to playlists. Used in conjunction with `videoIndex` option to determine which video to begin gating. Defaults to 0.
 style              | object    | The styles to be applied to the root turnstile element.
 time               | string    | The point in the video when Turnstile displays. A value of "before" shows Turnstile before the video starts. "end" shows it at the end. You can also supply a time in seconds (e.g. 130) and it will appear when the viewer reaches that point in the video (or tries to skip past that point).
