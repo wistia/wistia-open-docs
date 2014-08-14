@@ -96,7 +96,7 @@ callback | string | Only applicable to JSON requests. When specified, JSON is wr
 embedType | string | Only applicable to videos and playlists. Accepts `iframe`, `api`, `seo`, `popover`, `playlist_iframe`, `playlist_api`, and `open_graph_tags` (videos only).
 width | integer | The requested width of the video embed. Defaults to the native size of the video or 360, whichever is smaller.
 height | integer | The requested height of the video embed. Defaults to the native size of the video or 640, whichever is smaller.
-handle | string | Only applicable to "api", "seo", and "playlist_api" embed types. Sets the javascript handle. Default is "wistiaEmbed" for medias and "wistiaPlaylist" for playlists.
+handle | string | Only applicable to "api", "seo", and "playlist_api" embed types. Sets the javascript handle. Default is `wistiaEmbed` for medias and `wistiaPlaylist` for playlists.
 popoverHeight | integer | Only applicable to "popover" embed type. The requested height of the popover. Defaults to maintain the correct aspect ratio, with respect to the width.
 popoverWidth | integer | Only applicable to "popover" embed type. The requested width of the popover. Defaults to 150.
 
