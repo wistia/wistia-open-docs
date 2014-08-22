@@ -15,7 +15,7 @@ post_intro: |
 
 ## How overages work
 
-In the change to feature-based plans, we've changed the way that overages work. Formerly, it was a flexible schedule that changed based on usage (which was very complex). The new overage pricing is a flat-pricing model that provides advantages for plans in the form of more concrete and easily predictable pricing.
+In the change to feature-based plans, we've changed the way that additional bandwidth works. Formerly, it was a flexible schedule that changed based on usage (which was very complex). The new additional bandwidth pricing is a flat-pricing model that provides advantages for plans in the form of more concrete and easily predictable pricing.
 
 ## Legacy Plans (video limited plans)
 
