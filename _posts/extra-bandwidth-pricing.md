@@ -13,22 +13,26 @@ post_intro: |
   for in-depth feature breakdowns on each of the new plans.</p>
 ---
 
+## How overages work
+
+In the change to feature-based plans, we've changed the way that overages work. Formerly, it was a flexible schedule that changed based on usage (which was very complex). The new overage pricing is a flat-pricing model that provides advantages for plans in the form of more concrete and easily predictable pricing.
+
 ## Legacy Plans (video limited plans)
 
 Bandwidth Usage (per month)   | Price per GB
 ------------------------------|-----------
 All usage up to 1 TB          | $0.25
-Next 4 TB                     | $0.18
-Next 10 TB                    | $0.12
-Next 35 TB                    | $0.08
-Beyond 50 TB (whoa!)          | $0.06
+Next 4 TB of usage                    | $0.18
+Next 10 TB  of usage                  | $0.12
+Next 35 TB  of usage                  | $0.08
+Beyond 50 TB of usage (whoa!)          | $0.06
 
 ## Super Pricing Plans (feature limited plans)
 
 Bandwidth Usage (per month)   | Price per GB
 ------------------------------|-------------
-All usage up to 1 TB          | $0.33
-Next 4 TB                     | $0.18
-Next 10 TB                    | $0.15
-Next 35 TB                    | $0.10
-Beyond 50 TB (geez!)          | $0.06
+Sub-1 TB plans         | $0.33
+1 TB Plan                   | $0.18
+5 TB Plan                   | $0.15
+15 TB                    | $0.10
+50 TB (geez!)          | $0.06
