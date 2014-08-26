@@ -5,69 +5,50 @@ category: Getting Set Up
 description: Questions about admin type stuff? Account Dashboards? Billing statements? Don't worry, we've got it all covered right here.
 footer: 'for_intermediates'
 ---
-
-{% wistia_embed hashed_id: b0778cb217 %}
-
----
-
 ## Opening Your Account Dashboard
 
-{% post_image hashed_id: '55c81b1270231d7c31d6a460425e425ad595641a', width: 600, class: 'center' %}
-
-Most of the important Wistia settings for your Account are housed in the
+Most of the important settings for your Wistia Account are housed in the
 *Account Dashboard*. Many of the tips below require you to open the Account
 Dashboard as well.
 
-First, you will need to be logged in as the Account Owner. Find the *Account*
-drop-down menu in the upper-right hand corner of your account. Next, select the
-*Account Dashboard* option.
+To access your Account Dashboard, you will need to be logged in as the Account Owner. Once you're logged in as the Account Owner, find the *Account* drop-down menu in the upper-right hand corner. Next, select the
+*Account Dashboard* option seen here:
 
-{% post_image hashed_id: '528df9cc390e92c0a6198a267175ecc33f2b6b61', width: 600, class: 'center' %}
+{% post_image hashed_id: '9e3f2f8b857f2511cd2e5ce74b5664d82a511c2f', width: 600, class: 'float_left' %}
+
+That will bring you straight to the Overview section of your Account Dashboard. Hooray!
 
 ---
 
 ## Uploading Your Logo
-From the *Account Dashboard*, choose
-<span class="faux_button">Upload your logo</span>.  The Upload Your Logo dialog
-will guide you through the process of uploading and displaying your company
-logo in your Wistia account.
+From the *Account Dashboard*, choose the Account Settings tab on the right. In there, you will see your current account logo (it's the Wistia logo by default) and have the option to upload a new one.  Your logo will be displayed on the upper left of every page in your account area, and on your public video pages. 
 
-{% post_image hashed_id: '4ea0e2a40e66c31af1d275deafd1cfbfa91ae9f4', width: 600, class: 'center' %}
+{% post_image hashed_id: '2ffdd3b216f7df82533d6806c3278284f5e3a895', width: 600, class: 'center' %}
+
+If you'd like to place your logo below an embedded video, check out the Social Bar section in [Customize]({{ '/customizing-your-video' | post_url }}).
 
 ---
 
 ## Filtering Out Internal Stats
 
-{% post_image hashed_id: '9feebb84249cac542f9f66a43c321d0c04c87f17', width: 600, class: 'center' %}
+Want to make sure you're not skewing the stats during testing? Good news! You can filter out your own viewing activity (and the viewing activity of anyone else on your team) from your Wistia stats based on IP address. 
 
-You can filter out your own views, and those of the other testers you might
-have looking at your Wistia videos before launch, based on IP.
+In the Account Dashboard, click the *Embed Settings* option - this contains an IP filtering section where you can enter comma-separated IP addresses. You can find your IP address by <a href="https://www.google.com/search?q=ip">searching for "ip" in Google</a>. Google will tell you what yours is at the top of the search results.
 
-In the Account Dashboard, click the *Embed Settings* option - this contains an
-IP filtering section where you can enter comma-separated IP addresses.
+{% post_image hashed_id: 'cfe898a99193efcdbd57809e89967e022da3769b', width: 600, class: 'center' %}
 
-At this time, we do not support wildcards - only the full IP address.
-
-
-{{ "The IP Filtering tool is only available on the Account Dashboard, so you will need owner-level permissions to access it." | note }}
-
-<div class="clear"></div>
+{{ "Activitating IP filtering will not remove any historical data – it will, however, keep your activity from getting tracked in the stats going forward." | note }}
 
 
 ---
 
 ## Change the Subdomain (URL) of your Wistia Account
-To change your Wistia account URL, you must be logged in as the account owner.
-Click <span class="faux_button">Settings</span> on the *Account Dashboard*.
-A dialog box like the one shown below will appear.
 
-{% post_image hashed_id: 'f7cccd88af9bfe8ac2ab39061bfebbae29fcd93e', width: 600, class: 'center' %}
+By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the account owner. Click the Account Settings tab in the *Account Dashboard*, and scroll down to find the *Wistia URL* section shown here:
 
-In the section labeled "Address", you will see a text box showing the current
-URL of your Wistia account (in the case of the above picture,
-`http://jeff.wistia.com`).  Simply type the name you wish to use instead in the
-text box (only letters, numbers, and hyphens) and press
-<span class="faux_button">Save settings</span> at the bottom.
+{% post_image hashed_id: 'd7c990eae0b25edb92baa376a1f1ae658043808a', width: 600, class: 'center' %}
+
+In the section labeled "Wistia Subdomain", you will see a text box showing the current URL of your Wistia account (in the case of the above picture,`http://dave.wistia.com`).  Type the name you wish to use instead in the text box (only letters, numbers, and hyphens) and press <span class="faux_button">Update Account Settings</span> at the bottom to save your changes.
 
 {{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
 
@@ -82,7 +63,7 @@ If you have your own domain name, re-naming your Wistia account is no problem.
 
 Once that is set up, the CNAME gets propagated (which can take a couple hours,
 so grab some coffee or a good book). To test if it is complete: open the
-*Settings* area in your *Account Dashboard*, change the "Address" to CNAME,
+*Account Settings* area in your *Account Dashboard*, change the "Address" to CNAME,
 and enter your new hostname.
 
 Once you save, everything should be switched over for you, and you are now
@@ -96,61 +77,56 @@ rocking a custom URL!
 
 ## Monthly Usage
 
-{% post_image hashed_id: '32960b1e0af49064c948759d8d30378277258daa', class: 'center' %}
+To see the storage and bandwidth usage on your account, you must be logged in as the Account Owner. Select the *Usage* tab in your Account Dashboard.
 
-To see account limits, you must be logged in as the account owner. Select
-the <span class="faux_button">Usage</span> option from your Account Dashboard.
-This will show you how much bandwidth you have used, along with
-your current account limits. If you have a video limit on your account, that will be
-included as well.
+{% post_image hashed_id: 'f4e18fa2aa0d3d6388f6903745cfa18d1eabd3a7', class: 'center' %}
 
-Along the right-hand side of the Account Dashboard page, you will see usage and
-limit information within the panel labeled "Current Subscription".
+This will show you how much bandwidth you have used, along with your current account limits. If you have a storage limit on your account, that will be displayed as well.
+
+
 
 ---
 
 ## Billing Statements
 
 To see billing statements, you must be logged in as the account owner.
-Click the  "Billing statements" button on your Account Dashboard.  This will
-bring up a dialog box showing a list of all the receipts for your transactions.
+Click the  "Billing statements" tab in your Account Dashboard.  This will display a complete history of the payment activity on your account.
 
-{% post_image hashed_id: 'ab90b75617a960e658aa84c3eb8e17a8e8f0d70f', width: 600, class: 'center' %}
+{% post_image hashed_id: '52c72ff4dac1868a4be0871faf2ce02fecfe230b', width: 600, class: 'center' %}
 
 
 ---
 
 ## Updating your Credit Card
 
-To update your credit card, you must be the Account Owner. Once logged in, head
-to your [Account Dashboard](#opening_your_account_dashboard) and select the
-"Update Credit Card" option.
+To update your credit card, you must be the Account Owner. Once logged in, head to your [Account Dashboard](#opening_your_account_dashboard) and select the "Update Credit Card" tab on the right. 
 
-{% post_image hashed_id: '33974be9ddfbba1ec140cab539d53d7d7d9b1367' %}
+{% post_image hashed_id: 'c7e9260645112f76a7512cc0eabe38fc17056e45', width: 600, class: 'center' %}
+
+After updating your credit card, you can check to make sure that your recent payments went through successfully by heading to the [Billing Statements](#billing_statements) section.
 
 ---
 
 ## Adding & Removing Managers
 
-From your *Account Dashboard*, click the "Add / remove managers" button on the
-Accounts page. A dialog will appear.  To add managers, enter the new manager's
-email address into the text box and click <span class="faux_button">Add</span>.
+From your *Account Dashboard*, click the "Managers" tab on the Account Dashboard page. To add a manager, enter the new manager's
+email address into the text box and click <span class="faux_button">ADD AS MANAGER</span>.
 
-To remove existing managers, click <span class="faux_button">Remove</span>.
+{% post_image hashed_id: '5010fa4e016c7a0d7146cfb75668401840316fcb', width: 600, class: 'center' %}
 
-{% post_image hashed_id: '1ac3c146ef56721d5e8718229243ba6c66158cf3', width: 600, class: 'center' %}
+To remove existing managers, click *Remove* next to their email address in the Current Managers list.
 
 ---
 
 ## API Password and Public Token
 
-{% post_image hashed_id: '655da9c9b7addebc9d935a02a987d9332bd5f3c1', class: 'center' %}
+An API Password is used for interacting with the [Wistia APIs]({{ '/developers' | post_url }}), and the Public Token is used mostly for 3rd party integrations (like Pardot and HubSpot).
 
-From your *Account Dashboard*, select the *API* tab.
+To access those credentials for your account, select the API Access tab From your *Account Dashboard*: 
 
-The API Username and Password are used most for interacting with the [Wistia
-Data API]({{ '/data-api' | post_url }}), and the Public Token is used mostly
-for 3rd party service (like Pardot).
+{% post_image hashed_id: '3dbfa77fa08b1ae1a1d6484fd66cdf4c1199f533', class: 'center' %}
+
+
 
 ---
 
@@ -160,12 +136,12 @@ If you need to set someone else up as the owner of your account, the first step
 is to [add them as a manager](#adding__removing_managers).
 
 Once the new owner is a manager (or maybe they already were, you are so sneaky
-efficient!), select the *Settings* area in your *Account Dashboard*.
+efficient!), select the *Account Settings* tab in your *Account Dashboard*.
 
-{% post_image hashed_id: '5c77e94fb77ee33eb1b25afcc138ef6fec82930a', class: 'center' %}
+{% post_image hashed_id: 'fb4bdfef31a76000a97bcaa30a7cbf2df08ebd75', class: 'center' %}
 
 Select the new owner from the *Account Owner* menu, and then <span
-class='faux_button'>SAVE SETTINGS</span>. Ownership will be transferred
+class='faux_button'>UPDATE ACCOUNT SETTINGS</span>. Ownership will be transferred
 immediately.
 
 ---
