@@ -13,9 +13,15 @@ post_intro:
 
 {% post_image hashed_id: 'bc351c1a288572c40abec4bf40959af6ddbaa19f', class: 'center' %}
 
-Domain restrictions apply to all videos in your account. To get started with
-video embed domain restrictions:
+Domain restrictions apply to all videos in your account. Here's how to set up
+Domain restrictions for your account:
 
-1. Head to to your Wistia Account Dashboard and click on the new button titled "Embed Settings".
-2. A dialog box will open where you can configure your domain restrictions (see image below).  Click the "Enabled" radio button and type the domains that you wish to use for your embeds into the box (comma separated).  Press the "Save Embed Settings" button when finished.
-3. Put your embed on a webpage hosted on a domain you entered in Step #2 and you are good to go!
+1. Open to the Embed Settings area of your Account Dashboard (will need account
+  owner privileges to do so.)
+2. Select the "Enabled" radio button, and enter the domains you wish to whitelist.
+  Don't forget to save your updates!
+3. When you embed your videos onto a website you allow, it will appear
+  properly. If the video was embedded on a webpage **not** in your whitelist,
+  it would appear as it does below.
+
+{% post_image hashed_id: '76dbe0fb4f1d3373bc1e307446218d11742f2590', class: 'center' %}
