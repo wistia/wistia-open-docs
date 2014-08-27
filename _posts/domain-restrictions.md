@@ -16,8 +16,8 @@ post_intro:
 Domain restrictions apply to all videos in your account. Here's how to set up
 Domain restrictions for your account:
 
-1. Open to the Embed Settings area of your Account Dashboard (will need account
-  owner privileges to do so.)
+1. Open to the Embed Settings area of your Account Dashboard (which requires
+  account owner privileges).
 2. Select the "Enabled" radio button, and enter the domains you wish to whitelist.
   Don't forget to save your updates!
 3. When you embed your videos onto a website you allow, it will appear
