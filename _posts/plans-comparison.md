@@ -27,7 +27,7 @@ Total Video Count     | unlimited | unlimited       | unlimited | unlimited
 [Social sharing bar]({{ '/customizing-your-video#social_bar' | post_url }}) | &#10003; | &#10003; | &#10003;| &#10003;
 [Twitter and Facebook support]({{ '/social-sharing' | post_url }})  | &#10003;   | &#10003;  | &#10003; | &#10003;
 <span class='category'>Embedded Video Design</span> |  |  |  |
-[Muti-video playlists]({{ '/playlists' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Multi-video playlists]({{ '/playlists' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
 [Responsive embeds]({{ '/video-foam' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
 [Video popover lightbox]({{ '/embedding#popover_embed' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
 [Player API access]({{ '/player-api' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
