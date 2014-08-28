@@ -41,7 +41,7 @@ Total Video Count     | unlimited | unlimited       | unlimited | unlimited
 [Email marketing merge tag generation]({{ '/email-marketing' | post_url }})  | &#8211; | &#10003; | &#10003; | &#10003;
 <span class='category'>Advanced Customization Options</span>  |  |  |  |
 [Calls-to-action]({{ '/customizing-your-video#call_to_action' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
-[Turnstile email gate]({{ '/customizing-your-video#turnstile_email_gate' | post_url }})  | &#8211; | &#10003; | &#10003; | &#10003;
+[Turnstile email gate & integrations]({{ '/customizing-your-video#turnstile_email_gate' | post_url }})  | &#8211; | &#10003; | &#10003; | &#10003;
 [Captions]({{ '/customizing-your-video#captions' | post_url }})  | &#8211; | &#10003; | &#10003; | &#10003;
 <span class='category'>Advanced Viewer Analytics</span>  |  |  |  |
 [Engagement graphs]({{ '/audience-engagement-graph' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
@@ -57,6 +57,6 @@ Total Video Count     | unlimited | unlimited       | unlimited | unlimited
 [Invite additional managers]({{ '/account-setup#adding__removing_managers' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Custom CNAME account address]({{ '/account-setup#set_a_custom_domain_cname' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Whitelisted Domain Restrictions]({{ '/domain-restrictions' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Marketing Automation System Integrations]({{ '/integrations' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+[Advanced Marketing Automation System Integrations]({{ '/integrations' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 
 <a class='button' href='http://wistia.com/free/new'>Try the Wistia Free Plan!</a>
