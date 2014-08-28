@@ -42,6 +42,7 @@ Total Video Count     | unlimited | unlimited       | unlimited | unlimited
 <span class='category'>Advanced Customization Options</span>  |  |  |  |
 [Calls-to-action]({{ '/customizing-your-video#call_to_action' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
 [Turnstile email gate]({{ '/customizing-your-video#turnstile_email_gate' | post_url }})  | &#8211; | &#10003; | &#10003; | &#10003;
+[Captions]({{ '/customizing-your-video#captions' | post_url }})  | &#8211; | &#10003; | &#10003; | &#10003;
 <span class='category'>Advanced Viewer Analytics</span>  |  |  |  |
 [Engagement graphs]({{ '/audience-engagement-graph' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
 [Live viewer stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})  | &#8211; | &#10003; | &#10003; | &#10003;
