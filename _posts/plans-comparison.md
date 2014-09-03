@@ -52,7 +52,7 @@ Total Video Count     | unlimited | unlimited       | unlimited | unlimited
 [SEO Embed Code Type]({{ '/video-seo#using_the_video_seo_embed_type' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
 <span class='category'>Private Sharing Functionality</span>  |  |  |  |
 [Private user session tracking]({{ '/private-sharing#review_your_viewers_activity' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Project privacy ability]({{ '/private-sharing#privately_share_video_by_link' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
+[Share video privately with multiple user logins]({{ '/private-sharing' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Collaboration Tools</span>  |  |  |  |
 [Invite additional managers]({{ '/account-setup#adding__removing_managers' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Custom CNAME account address]({{ '/account-setup#set_a_custom_domain_cname' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
