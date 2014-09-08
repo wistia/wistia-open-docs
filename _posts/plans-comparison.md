@@ -57,6 +57,7 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 <span class='category'>Collaboration Tools</span>  |  |  |  |
 [Invite additional managers]({{ '/account-setup#adding__removing_managers' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Custom CNAME account address]({{ '/account-setup#set_a_custom_domain_cname' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+[Filter out internal stats]({{ '/account-setup#filtering_out_internal_stats' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [Whitelisted Domain Restrictions]({{ '/domain-restrictions' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [Advanced Marketing Automation System Integrations]({{ '/integrations' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 
