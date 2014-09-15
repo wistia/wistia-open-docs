@@ -31,8 +31,6 @@ For more information about how that works, see this guide from the WordPress doc
 
 ## Using an oEmbed URL
 
-{{ "If your account uses a [custom domain name](../account-setup#set_a_custom_domain_cname), this will not work. You'll need to [join the myaccount.wistia.com party](../account-setup#change_the_subdomain_url_of_your_wistia_account) first." | note }}
-
 An oEmbed URL is a simple link that tells WordPress how to embed content from third-party sources (like that cool video hosting platform for businesses you're so fond of). 
 
 To create an oEmbed URL for a video in your Wistia account, select the "Use oEmbed" option under _Advanced Options_ on the [_Embed & Share_](../embedding) screen. Take a look-see:
@@ -44,6 +42,8 @@ That'll give you an oEmbed URL like this example:
 `http://dave.wistia.com/medias/azmurdmroz?embedType=api&videoWidth=640`. 
 
 If you copy and paste that URL into a WordPress post, WordPress will recognize it as a special instruction to use a full Wistia embed code there when your post is published.
+
+{{ "If your account uses a [custom domain name](../account-setup#set_a_custom_domain_cname), this will not work. You'll need to [use a wistia.com subdomain](../account-setup#change_the_subdomain_url_of_your_wistia_account) like &quot;myawesomecompany.wistia.com&quot; for your account URL instead." | note }}
 
 If you're curious about the technical details behind oEmbed's sneaky magic, check out [oEmbed.com](http://oembed.com).
 
