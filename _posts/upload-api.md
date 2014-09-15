@@ -47,70 +47,16 @@ body or included as part of the query string.
 
 The *file* parameter must be multipart-form encoded into the request body.
 
-<div><table>
-  <tr>
-    <th>Parameter</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>api_password</td>
-    <td> 
-      <b>Required unless access_token is specified</b>.
-      A 40 character hex string. This parameter can be found on the API page 
-      in your Account Dashboard.
-    </td>
-  </tr>
-  <tr>
-    <td>access_token</td>
-    <td> 
-      <b>Required unless api_password is specified</b>.
-      The token you received from authenticating via [OAuth2]({{ '/oauth2' | post_url }}).
-    </td>
-  </tr>
-  <tr>
-    <td>file</td>
-    <td> 
-      <b>Required unless `url` is specified</b>.
-      The media file, multipart-form encoded into the request body.
-    </td>
-  </tr>
-  <tr>
-      <td>url</td>
-      <td>
-        <b>Required unless `file` is specified</b>.
-        The web or FTP location of the media file to import.
-      </td>
-    </tr>
-  <tr>
-    <td>project_id</td>
-    <td> 
-      The hashed id of the project to upload media into. If omitted, a new
-      project will be created and uploaded to. The naming convention used for
-      such projects is <i>Uploads_YYYY-MM-DD</i>.
-    </td>
-  </tr>
-  <tr>
-    <td>name</td>
-    <td> 
-      A display name to use for the media in Wistia. If omitted, the filename
-      will be used instead.
-    </td>
-  </tr>
-  <tr>
-    <td>description</td>
-    <td> 
-      Optional. A description to use for the media in Wistia. You can use basic
-      HTML here, but note that both HTML and CSS will be sanitized.
-    </td>
-  </tr>
-  <tr>
-    <td>contact_id</td>
-    <td> 
-      A Wistia contact id, an integer value. If omitted, it will default to the
-      contact_id of the account's owner.
-    </td>
-  </tr>
-</table></div>
+Parameter   | Description
+------------|-------------
+api_password  | **Required unless access_token is specified**. A 40 character hex string. This parameter can be found on your [API access page]({{ '/account-setup#api_password_and_public_token' | post_url }}).
+access_token  | **Required unless api_password is specified**. The token you received from authenticating via [OAuth2]({{ '/oauth2' | post_url }}).
+file          | **Required unless `url` is specified**. The media file, multipart-form encoded into the request body.
+url           | **Required unless `file` is specified**. The web or FTP location of the media file to import.
+project_id    | The hashed id of the project to upload media into. If omitted, a new project will be created and uploaded to. The naming convention used for such projects is *Uploads_YYYY-MM-DD*.
+name          | A display name to use for the media in Wistia. If omitted, the filename will be used instead.
+description   | A description to use for the media in Wistia. You can use basic HTML here, but note that both HTML and CSS will be sanitized.
+contact_id    | A Wistia contact id, an integer value. If omitted, it will default to the contact_id of the account's owner.
 
 
 
