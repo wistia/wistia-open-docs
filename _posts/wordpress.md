@@ -35,7 +35,7 @@ An oEmbed URL is a simple link that tells WordPress how to embed content from th
 
 To create an oEmbed URL for a video in your Wistia account, select the "Use oEmbed" option under _Advanced Options_ on the [_Embed & Share_](../embedding) screen. Take a look-see:
 
-{% wistia_embed hashed_id: zg5hiuupli %}
+{% wistia_embed hashed_id: 930hwszdyh %}
 
 That'll give you an oEmbed URL like this example: 
 
