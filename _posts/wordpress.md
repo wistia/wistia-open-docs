@@ -12,7 +12,7 @@ temper: true
 
 ## The Wistia WordPress Plugin
 
-With the [Wistia WordPress Plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed, you can add your embed codes to posts and they will be protected by the mighty _anti-mangler_. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background as <a href="//fast.wistia.net/embed/iframe/yr4ecy1p28?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">a silent guardian.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>.
+With the [Wistia WordPress Plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed, you can add your embed codes to posts and they will be protected by the mighty _anti-mangler_. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background as <a href="//fast.wistia.net/embed/iframe/yr4ecy1p28?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">a silent guardian</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>.
 
 The Wistia WordPress plugin also adds support for [Wistia oEmbed URLs](#using_an_oembed_url) to WordPress by automatically including the `wp_oembed_add_provider` function, like this:
 
