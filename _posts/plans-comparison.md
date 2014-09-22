@@ -7,8 +7,7 @@ post_intro: |
   features they include. The table below lists the features on each plan, so
   that you can choose one that is right for you from both a pricing and value
   perspective.</p>
-  <p>Wistia's premium feature Test Drive includes two weeks of access to all 
-  features listed below.</p>
+  <p>Wistia's premium feature Test Drive includes two weeks of access to <em>nearly</em> all the features listed below, with just a small handful of exceptions: Domain Restriction, IP Filtering, and CNAME-ing your account URL. Disabling those features after they're turned on would be pretty hairy, but they work just like you'd expect!</p>
 ---
 
 ## Features Comparison
