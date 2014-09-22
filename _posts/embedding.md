@@ -18,23 +18,11 @@ Basics]({{ '/wistia-basics' | post_url }}) series.
 Below are the specific steps required to embed a video covered in a bit more
 detail.
 
-## Upload Your Video
+## Pre-Embedding
 
-{% post_image hashed_id: 'e1fe1bdde534d154ea0b2aaa73aa8224055aa483', width: 600, class: 'center' %}
+Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Hooray! 
 
-Before you can embed your video, you need to upload it to your account. Haven't
-done that yet? Check out our [guide to uploading]({{ '/upload-video' | post_url }})
-for more info.
-
-Once uploading is complete, Wistia transcodes several versions of your video -
-perfect for serving on multiple browsers and mobile devices.  After transcoding
-wraps up, your video is ready to be embedded onto your site.
-
-## Customizing Your Video
-
-If you want to change the player color, update the thumbnail, or change the
-controls that are available on your video embed, please refer to the [customize
-documentation]({{ '/customizing-your-video' | post_url }}).
+Fun Fact: Even after you embed a video on your website, you can make changes to it in [Customize](../customizing-your-video). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video](../media#moving_and_copying_media).
 
 ## Generate the Embed Code
 
