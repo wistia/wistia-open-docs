@@ -120,11 +120,9 @@ To remove existing managers, click *Remove* next to their email address in the C
 
 ## API Password and Public Token
 
-An API Password is used for interacting with the [Wistia APIs]({{ '/developers' | post_url }}), and the Public Token is used mostly for 3rd party integrations (like Pardot and HubSpot).
+An API token and password can be used for interacting with the [Wistia APIs]({{ '/developers' | post_url }}), and for setting up 3rd party integrations (like Pardot and HubSpot).
 
-To access those credentials for your account, select the API Access tab From your *Account Dashboard*: 
-
-{% post_image hashed_id: '3dbfa77fa08b1ae1a1d6484fd66cdf4c1199f533', class: 'center' %}
+To access those credentials for your account, select the API Access tab From your *Account Dashboard*. 
 
 
 
