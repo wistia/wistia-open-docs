@@ -11,14 +11,11 @@ post_intro: <p><a href="http://wistia.com">Wistia</a> is a video hosting solutio
 
 ## Getting Started
 
-#### Generating an API Password
+#### Creating and Managing Access Tokens
 
-Generate an API password for your account from the *API* area in your
-[Account Dashboard]({{ '/account-setup#api_password_and_public_token' | post_url }}).
+When your Wistia account is created, a master token will automatically be geneated for you account, which you can find in the _API Access_ area of your [_Account Dashboard_](../doc/account-setup). This master token has full read/write permissions on your account. You can generate additional access tokens with various permissions right there as well. Huzzah!
 
-**Note:** The user name is always `api`.
-
-{% post_image hashed_id: '655da9c9b7addebc9d935a02a987d9332bd5f3c1', class: 'center' %}
+{% post_image hashed_id: '4416c4e4205d1e1048fb48a887691e3d1adb9157', class: 'center' %}
 
 #### Versions and Updates
 
