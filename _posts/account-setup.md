@@ -118,7 +118,7 @@ To remove existing managers, click *Remove* next to their email address in the C
 
 ---
 
-## API Password and Public Token
+## API Access
 
 An API token and password can be used for interacting with the [Wistia APIs]({{ '/developers' | post_url }}), and for setting up 3rd party integrations (like Pardot and HubSpot).
 
