@@ -36,12 +36,31 @@ To generate an embed code for your video, start by selecting the *Embed & Share*
 
 The dimensions of your embed code will automatically scale with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically. If you would like to make your video responsive, check out Video Foam.
 
-## iframe Embed
+### iframe Embed
 
 The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
 
-An iframe is an HTML element that lets you display content from another webpage in a special box on your page.
+An iframe is an HTML element that lets you display content from one webpage in a special box on another page. Think of it as a cut-out box on a piece of paper. If you cut a rectangle into one page and place another page behind it, it will look like all of the content is right there in the main page:
 
+{% post_image hashed_id: 'e1a58a32d8eeec16df926836f7527e0c3b43a52a', width: 600, class: 'center' %}
+
+Here's an example iframe embed code:
+
+{% codeblock iframe_example.html %}
+<iframe src="//fast.wistia.net/embed/iframe/j6xdcseia9" 
+allowtransparency="true" frameborder="0" scrolling="no" 
+class="wistia_embed" name="wistia_embed" allowfullscreen 
+mozallowfullscreen webkitallowfullscreen oallowfullscreen 
+msallowfullscreen width="640" height="388"></iframe>
+{% endcodeblock %}
+
+The `<iframe> ... </iframe>` part there is what tells a person's web browser, _"Hey! Let's show some content from another web page here!"_ It then pulls in the content from [`fast.wistia.net/embed/iframe/j6xdcseia9`](http://fast.wistia.net/embed/iframe/j6xdcseia9), identified in the `src` (or "source") attribute, and displays it in a box with the dimensions specified by the `width` and `height` attributes.
+
+When you insert an iframe embed code like that into a webpage, the video will display inline like this:
+
+{% wistia_embed hashed_id: j6xdcseia9 %}
+
+If you have a video in your account already, trying generating an iframe embed code for it and [paste it into your webpage](#pasting_your_embed_code_onto_your_page).
 
 ### Inline Embed
 
