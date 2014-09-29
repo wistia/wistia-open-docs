@@ -22,7 +22,7 @@ detail.
 
 Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Hooray! 
 
-Fun Fact: Even after you embed a video on your website, you can make changes to it in [Customize](../customizing-your-video). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video](../media#moving_and_copying_media).
+Fun Fact: Even after you embed a video on your website, you can make changes to it in [Customize](../customizing-your-video). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video](../media#moving_and_copying_media) or use advanced [embed options]({{ '/embed-options' | post_url }}) in your embed codes.
 
 ## Generate the Embed Code
 
