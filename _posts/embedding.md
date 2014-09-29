@@ -220,3 +220,16 @@ analytics to see how your viewers are interacting with the content.
 [Read up on Wistia viewing stats and analytics]({{ '/embedded-video-analytics' | post_url }}).
 
 **If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!**
+
+<script src="//fast.wistia.com/assets/external/embed_shepherd-v1.js"></script>
+<script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
+<script>
+  wistiaEmbeds.onFind(function(video) {
+    if (video.hashedId() !== 'g7uyjp24c6') {
+      video.addPlugin('playWhenVisible', {
+        src: '//fast.wistia.com/labs/play-when-visible/plugin.js',
+        outsideIframe: true
+      });
+    }
+  });
+</script>
