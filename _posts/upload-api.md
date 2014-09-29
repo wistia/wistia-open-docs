@@ -169,35 +169,3 @@ def post_video_to_wistia(name, path_to_video)
   return response
 end
 {% endcodeblock %}
-
-## Upload Via FTP
-
-Do you have an FTP client? One that is awesome? I use [Transmit](http://panic.com/transmit/) for Mac, or [Filezilla](https://filezilla-project.org/download.php) for PC. 
-
-We've been quietly testing upload via FTP, for folks who want to move a large 
-library over to Wistia. The bugs have not been worked out, and some of our requirements
-means not all FTP clients can support it, but for certain use cases it may help.
-
-Here's the workflow for Transit:
-
-* Load up transmit, and enter the following settings:
-  * Server: ftp.wistia.com
-  * User Name: wistia
-  * Password: your account's API password
-  * and make sure to select *FTP with TLS/SSL* from the security options.
-* Your projects list will appear. 
-* Upload into the Project's folder, not the `_assets` dir  
-<br>
-<br>
-Here's the workflow for Filezilla:
-
-* Load up Filezilla, and use these settings:
-  * Host: ftp.wistia.com
-  * Protocol: FTP — File Transfer Protocol
-  * Encryption: Require explicit FTP over TLS
-  * Logon Type: Normal
-  * User: wistia
-  * Password: your account's API password
-  * Your projects list will appear. 
-  * Upload into the Project's folder, not the `_assets` dir
-
