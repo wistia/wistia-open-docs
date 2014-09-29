@@ -26,17 +26,22 @@ Fun Fact: Even _after_ you embed a video on your website, you can make changes t
 
 ## Generate an Embed Code
 
-{% post_image hashed_id: '9f6b506677bd26f2ea10ef98b9e7a205fa1305dd', width: 600, class: 'center' %}
+An **embed code** is a snippet of code that you can use to add content (like a video!) to a web page. When a person visits your website, their web browser will interpret the embed code as a set of instructions to display your video on the page.
 
-**Embed codes** are snippets of code pasted on your web page that are useful
-for serving up content (i.e. video).  To generate the embed code for your video,
-start by selecting the *&lt;/&gt; Embed & Share* option under the
-<span class='action_menu'>Video Actions</span> menu.
+Wistia embed codes come in a few flavors, and they each are great for different purposes. The best type of embed code to get started with is an [iframe embed](#iframe_embed). For more advanced embedding, check out the [API](#api_embed), [SEO](seo_embed), and [popover](popover_embed) embed code types.
 
+To generate an embed code for your video, start by selecting the *Embed & Share* option under the <span class='action_menu'>Video Actions</span> menu. That will open the Embed & Share screen, where you can choose from one of several embed code types and set the dimensions (in pixels) for your video: 
 
-The Embed & Share Screen is where you can make some basic changes to the look
-and feel of your video presentation. If you are looking for customizations like
-calls-to-action and Turnstile, [read up on customization]({{ '/customizing-your-video' | post_url }}).
+{% wistia_embed hashed_id: j3a6v2cblf %}
+
+The dimensions of your embed code will automatically scale with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically. If you would like to make your video responsive, check out Video Foam.
+
+## iframe Embed
+
+The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
+
+An iframe is an HTML element that lets you display content from another webpage in a special box on your page.
+
 
 ### Inline Embed
 
