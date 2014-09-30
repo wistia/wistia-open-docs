@@ -39,7 +39,9 @@ For media other than video, No PDF reader is required, as we convert documents
 to a Flash format as well.
 
 We also work with all of the major browsers and versions of Internet Explorer
-(as far back as IE7), Firefox, Safari, Chrome, Opera, etc.
+(as far back as IE7), Firefox, Safari, Chrome, Opera, etc. 
+
+{{ "In browsers where HTML5 video is not supported, a Flash plugin will be required to play Wistia videos." | note }}
 
 <div class='browser_images'>
   <img src='https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_128x128.png' width="80px" />
