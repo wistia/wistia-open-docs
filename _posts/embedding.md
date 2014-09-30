@@ -60,32 +60,7 @@ When you insert an iframe embed code like that into a webpage, the video will di
 
 {% wistia_embed hashed_id: j6xdcseia9 %}
 
-If you have a video in your account already, trying generating an iframe embed code for it and [paste it into your webpage](#pasting_your_embed_code_onto_your_page).
-
-### Inline Embed
-
-{% post_image hashed_id: '2d50bbdcb6d8cbc4de46d35b008d96e74d215cbb', width: 600, class: 'center' %}
-
-The **Inline Embed** type is the standard, video-playing-on-your-website embed
-type.
-
-The **Embed Code** box at the top contains the HTML and javascript snippet you
-will place on your website to add the video. Before you copy it for pasting
-into your webpage markup, review the options below.
-
-The **Video Size** option allows you to choose the dimensions your video will
-be displayed at on the page (in pixels).
-
-The **Embed Type** option is for choosing between three basic types:
-
-* **iframe:** the default embedding option, because it works with most website
-  building applications.
-* **API:** if you will be using the [Player API]({{ '/player-api' | post_url }})
-  with your video, use the API option.
-* **SEO:** SEO-optimized embed codes. Because of Google requirements, this
-  embed code is not always as easy to use as iframe embeds.
-
-Once you have your settings dialed in, you can *copy* the embed code at the top.
+If you have a video in your account already, trying generating an iframe embed code for it and then [add it to your website](#pasting_your_embed_code_onto_your_page).
 
 {{ "A quick note on our embeds. We use protocol relative URLs as part of our embed codes. This means they will work on SSL-enabled websites without any additional tinkering. They can look a bit funky without the `http` or `https` you might be expecting, but it can save you headaches when placing your video on your website." | note }}
 
