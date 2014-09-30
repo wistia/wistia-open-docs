@@ -9,9 +9,8 @@ footer: 'for_intermediates'
 
 ## How to Create a Contact
 
-While there are several ways to create a contact within Wistia, the easiest way 
-is to simply share a project with someone.  To do this, you will need the person's 
-email address.  Directions on sharing a project via email can be found in the 
+There are several ways to create a contact within Wistia. One option 
+is to share your project with someone by email. Directions on sharing a project via email can be found in the 
 [Private Sharing doc article]({{ '/private-sharing' | post_url }}).  
 
 When you share a Wistia project with an individual (or group of individuals), 
