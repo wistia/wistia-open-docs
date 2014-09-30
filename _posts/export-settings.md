@@ -17,7 +17,7 @@ Wistia does have a few specifications and guidelines we recommend following in o
 <ul>
 <li>Codec: <span class="answer">h.264</span></li>
 <li>Resolution: <span class="answer">between 640px and 1280px wide</span></li>
-<li>Bitrate: <span class="answer">2,000 - 5,000kbps</span></li>
+<li>Bitrate: <span class="answer">5,000 - 10,000 kbps</span></li>
 <li>Aspect Ratio: <span class="answer">Get Crazy! We accept videos of any aspect ratio.</span></li>
 </ul>
 </div>
