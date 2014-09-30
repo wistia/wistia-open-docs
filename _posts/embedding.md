@@ -36,6 +36,8 @@ To generate an embed code for your video, start by selecting the *Embed & Share*
 
 The dimensions of your embed code will automatically scale with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically. If you would like to make your video responsive, check out Video Foam.
 
+## Inline Embed Types
+
 ### iframe Embed
 
 The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
@@ -63,6 +65,12 @@ When you insert an iframe embed code like that into a webpage, the video will di
 If you have a video in your account already, trying generating an iframe embed code for it and then [add it to your website](#pasting_your_embed_code_onto_your_page).
 
 {{ "A quick note on our embeds. We use protocol relative URLs as part of our embed codes. This means they will work on SSL-enabled websites without any additional tinkering. They can look a bit funky without the `http` or `https` you might be expecting, but it can save you headaches when placing your video on your website." | note }}
+
+### API Embed
+
+Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out fancy functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
+
+{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](../customizing-your-video) first!" | note }}
 
 ### Inline Embed Advanced Options
 
