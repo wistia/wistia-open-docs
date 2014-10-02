@@ -140,8 +140,8 @@ width(w)                | Sets the width of the embed. The video will be resized
 Use these events when working with the `bind` and `unbind` methods.
 
 Name          | Arguments               | Description
-----          | ---------               | -----------j
-conversion    | type, value             | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. Value will be an object with keys 'email' and, if names are required, 'first\_name' and 'last\_name'
+----          | ---------               | -----------
+conversion    | type, email, firstName, lastName | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. `email`, `firstName`, and `lastName` are the viewer's submitted details. The name fields will be undefined if not requested by the video (i.e. disabled in [Customize](../customizing-your-video)).
 end           |                         | Fired when the video's state changes from anything to "ended".
 heightchange  | height                  | Fired when the height of the embed code changes.
 pause         |                         | Fired when the video's state changes from anything to "paused".
@@ -264,14 +264,14 @@ entered - including passing that email on to another service!
 
 {% codeblock wistia_js.js %}
 <script type="text/javascript">
-wistiaEmbed.bind("conversion", function(type, val) {
+wistiaEmbed.bind("conversion", function(type, email, firstName, lastName) {
   // function to be executed
 });
 </script>
 {% endcodeblock %}
 
 At this time, the `type` of conversion can be "pre-roll-email",
-"mid-roll-email", or "post-roll-email", and the `val` is an object with keys 'email' for the viewer's email address and 'first\_name' and 'last\_name' if the viewer's name was required.
+"mid-roll-email", or "post-roll-email". The arguments `email`, `firstName`, and `lastName` are the viewer's details as entered into turnstile, where `firstName` and `lastName` are undefined if not required.
 
 ---
 
