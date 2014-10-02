@@ -141,7 +141,7 @@ Use these events when working with the `bind` and `unbind` methods.
 
 Name          | Arguments               | Description
 ----          | ---------               | -----------
-conversion    | type, email, firstName, lastName | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. `email`, `firstName`, and `lastName` are the viewer's submitted details. The name fields will be undefined if not requested by the video (i.e. disabled in the customizer).
+conversion    | type, email, firstName, lastName | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. `email`, `firstName`, and `lastName` are the viewer's submitted details. The name fields will be undefined if not requested by the video (i.e. disabled in [Customize](../customizing-your-video)).
 end           |                         | Fired when the video's state changes from anything to "ended".
 heightchange  | height                  | Fired when the height of the embed code changes.
 pause         |                         | Fired when the video's state changes from anything to "paused".
