@@ -140,8 +140,8 @@ width(w)                | Sets the width of the embed. The video will be resized
 Use these events when working with the `bind` and `unbind` methods.
 
 Name          | Arguments               | Description
-----          | ---------               | -----------
-conversion    | type, value             | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. Value will be the email entered. There may be more types and values in the future, so watch out!
+----          | ---------               | -----------j
+conversion    | type, value             | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. Value will be an object with keys 'email' and, if names are required, 'first\_name' and 'last\_name'
 end           |                         | Fired when the video's state changes from anything to "ended".
 heightchange  | height                  | Fired when the height of the embed code changes.
 pause         |                         | Fired when the video's state changes from anything to "paused".
@@ -259,7 +259,7 @@ wistiaEmbed.bind("end", function () {
 
 With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require
 your viewers to enter an email address to view video content on your webpage.
-Using the "conversion" event, you can trigger actions based on the email being
+Using the "conversion" event, you can trigger actions based on the email and name being
 entered - including passing that email on to another service!
 
 {% codeblock wistia_js.js %}
@@ -271,8 +271,7 @@ wistiaEmbed.bind("conversion", function(type, val) {
 {% endcodeblock %}
 
 At this time, the `type` of conversion can be "pre-roll-email",
-"mid-roll-email", or "post-roll-email", and the `val` is the viewers email
-address.
+"mid-roll-email", or "post-roll-email", and the `val` is an object with keys 'email' for the viewer's email address and 'first\_name' and 'last\_name' if the viewer's name was required.
 
 ---
 
