@@ -59,7 +59,8 @@ If you have your own domain name, re-naming your Wistia account is no problem.
 
 * First, you will need to select a subdomain for your account
   (ie. `videos.yourdomain.com`).
-* Then, have the CNAME for that subdomain point to: **app.wistia.com**
+* Next, have the CNAME for that subdomain point to: **app.wistia.com**
+* Then, make sure to add the CNAME under the Wistia URL heading, as found in the Account Settings page of your Account Dashboard.
 
 Once that is set up, the CNAME gets propagated (which can take a couple hours,
 so grab some coffee or a good book). To test if it is complete: open the
@@ -69,9 +70,7 @@ and enter your new hostname.
 Once you save, everything should be switched over for you, and you are now
 rocking a custom URL!
 
-{{ "Any links previously shared or videos embedded from your account will still operate as normal." | note }}
-
-{{ "CNAMEing your domain won't change the name in the embed codes. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos.  This choice was made because of effect it would have on video loading - essentially, our focus is on your video loading fast." | note }}
+{{ "CNAMEing your domain won't change the name in the embed codes. As such, Any links previously shared or videos embedded from your account will still operate as normal. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos." | note }}
 
 ---
 
