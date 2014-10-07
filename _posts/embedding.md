@@ -72,6 +72,10 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
 
 {{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](../customizing-your-video) first!" | note }}
 
+### SEO Embed
+
+The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website.
+
 ### Inline Embed Advanced Options
 
 {% post_image hashed_id: 'ea30ecdbaf3536db58a046ec8b7805ceabcef452', class: 'center' %}
