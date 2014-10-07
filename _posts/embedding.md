@@ -72,6 +72,18 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
 
 {{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](../customizing-your-video) first!" | note }}
 
+Let's check out an example API embed code, shall we?
+
+{% codeblock api_example.js %}
+<div id="wistia_j6xdcseia9" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("j6xdcseia9");
+</script>
+{% endcodeblock %}
+
+
+
 ### SEO Embed
 
 The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website.
