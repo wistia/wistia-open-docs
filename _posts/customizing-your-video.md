@@ -160,7 +160,7 @@ Turnstile is an easy email gate for your video content. It's great for lead
 generation, and connects with [a bunch of great email providers]({{ '/turnstile' | post_url }}) to make
 tracking new leads easy. [Read more on setting up Turnstile]({{ '/turnstile' | post_url }}).
 
-{% post_image hashed_id: 'ea97dc0aae108a11c2f098b7d712b2a7d73ce210', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '2e45d0c67f1e99b430335b73c9a8fea3f0471534', class: 'center' %}
 
 There are three options for when you request viewer emails:
 

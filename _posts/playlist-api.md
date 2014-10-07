@@ -96,7 +96,7 @@ pause         | sectionIndex, videoIndex        | When the state of any video in
 play          | sectionIndex, videoIndex        | When the state of any video in the playlist changes to "playing". This can fire multiple times per video if the user pauses.
 timechange    | sectionIndex, videoIndex, time  | Fired multiple times per second while the video is playing, or if the user seeks.
 
-To control a specific video with the [Player API](/player-api.html), you'll probably want to use "afterembed". Here's a quick example.
+To control a specific video with the [Player API](/player-api), you'll probably want to use "afterembed". Here's a quick example.
 
 {% codeblock playlist_api.js %}
 wistiaPlaylist.bind("afterembed", function(sectionIndex, videoIndex) {

@@ -141,7 +141,7 @@ Use these events when working with the `bind` and `unbind` methods.
 
 Name          | Arguments               | Description
 ----          | ---------               | -----------
-conversion    | type, value             | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. Value will be the email entered. There may be more types and values in the future, so watch out!
+conversion    | type, email, firstName, lastName | Fired when an email is entered in Turnstile. Type will be: 'pre-roll-email', 'mid-roll-email', or 'post-roll-email'. `email`, `firstName`, and `lastName` are the viewer's submitted details. The name fields will be undefined if not requested by the video (i.e. disabled in [Customize](../customizing-your-video)).
 end           |                         | Fired when the video's state changes from anything to "ended".
 heightchange  | height                  | Fired when the height of the embed code changes.
 pause         |                         | Fired when the video's state changes from anything to "paused".
@@ -259,20 +259,19 @@ wistiaEmbed.bind("end", function () {
 
 With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require
 your viewers to enter an email address to view video content on your webpage.
-Using the "conversion" event, you can trigger actions based on the email being
+Using the "conversion" event, you can trigger actions based on the email and name being
 entered - including passing that email on to another service!
 
 {% codeblock wistia_js.js %}
 <script type="text/javascript">
-wistiaEmbed.bind("conversion", function(type, val) {
+wistiaEmbed.bind("conversion", function(type, email, firstName, lastName) {
   // function to be executed
 });
 </script>
 {% endcodeblock %}
 
 At this time, the `type` of conversion can be "pre-roll-email",
-"mid-roll-email", or "post-roll-email", and the `val` is the viewers email
-address.
+"mid-roll-email", or "post-roll-email". The arguments `email`, `firstName`, and `lastName` are the viewer's details as entered into turnstile, where `firstName` and `lastName` are undefined if not required.
 
 ---
 

@@ -67,6 +67,8 @@ If you set your captions to show by default, you can now go through the
 [embedding process]({{ '/embedding' | post_url }}) and your captions will
 appear automatically on your site!
 
+{{ "Captions currently do not work inline on Facebook." | note }}
+
 ## Captions...on an iPhone!
 
 {% post_image hashed_id: '78f0bb5247659ba1b4ba067b62ddb1124c312994', class: 'center' %}
