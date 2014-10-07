@@ -74,7 +74,7 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
 
 Let's check out an example API embed code, shall we?
 
-{% codeblock api_example.js %}
+{% codeblock api_example.html %}
 <div id="wistia_j6xdcseia9" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
