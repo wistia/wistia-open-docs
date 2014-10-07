@@ -63,7 +63,7 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 <a class='button' href='http://wistia.com/free/new'>Try the Wistia Free Plan!</a>
 
 <script type="text/javascript">
-var ebSession = '[SessionID]';
+var ebSession = '5254235432543252345';
 var ebRand = Math.random()+'';
 ebRand = ebRand * 1000000;
 //<![CDATA[ 
@@ -71,5 +71,5 @@ document.write('<scr'+'ipt src="//bs.serving-sys.com/Serving/ActivityServer.bs?c
 //]]>
 </script>
 <noscript>
-<img width="1" height="1" style="border:0" src="//bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=541308&amp;Session=[SessionID]&amp;ns=1"/>
+<img width="1" height="1" style="border:0" src="//bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=541308&amp;Session=5254235432543252345&amp;ns=1"/>
 </noscript>
