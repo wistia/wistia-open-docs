@@ -40,10 +40,13 @@ If you're curious about the technical details behind oEmbed's sneaky magic, chec
 
 ## Tips for Using WordPress
 
+### oEmbed URL not converting into an embedded video?
 When inserting an oEmbed URL, make sure you are in HTML editing mode, and leave a line open above and below the URL. If you switch from HTML to Visual mode it can add formatting tags around your oEmbed URL, which may cause it to break. Be careful of that!
 
+### Video appearing smaller than it should be?
 If you have larger resolution videos and they are appearing smaller or squished, access the WordPress admin control panel (Settings -> Media -> Maximum Video Embed Size) and set the max to the largest size of your video ('no limit' setting doesn't work, must be actual size). Some WordPress themes will also set a maximum width for content embedded with oEmbed. If you want to change that, check out [How to Set oEmbed Max Width in WordPress 3.5 with $content_width](http://www.wpbeginner.com/wp-themes/how-to-set-oembed-max-width-in-wordpress-3-5-with-content_width/).
 
+### Video not centered?
 If you want to **center** your video inside a `div` or column on your website,
 and you are using an oEmbed URL to embed your video, please use a second div with the
 style `display: inline-block;`, as seen here:
