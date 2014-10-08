@@ -31,7 +31,7 @@ That'll give you an oEmbed URL like this example:
 
 `http://dave.wistia.com/medias/azmurdmroz?embedType=api&videoWidth=640`. 
 
-If you copy and paste that URL into a WordPress post, WordPress will recognize it as a special instruction to use a full Wistia embed code there when your post is published.
+If you copy and paste that URL into a WordPress post and you have the Wistia WordPress plugin installed, WordPress will convert the oEmbed URL into an embedded video.
 
 {{ "If your account uses a [custom domain name](../account-setup#set_a_custom_domain_cname), this will not work. You'll need to [use a wistia.com subdomain](../account-setup#change_the_subdomain_url_of_your_wistia_account) like &quot;myawesomecompany.wistia.com&quot; for your account URL instead." | note }}
 
