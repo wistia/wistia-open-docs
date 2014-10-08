@@ -70,3 +70,5 @@ devices.
 
 Basically, if you can view videos on YouTube or any other major video site,
 you (and your viewers) should be all set to use Wistia.
+
+{{ "The minimum viable connection speed is about 768 kilobits per second (equal to .768 megabits per second) to stream Wistia video reliably. We recommend a connection speed of at least 5 megabits per second for an optimal experience." | note }}
