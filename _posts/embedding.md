@@ -10,14 +10,6 @@ post_intro:
 temper: true
 ---
 
-To get started, check out this *embedding video guide*, part III of our [Wistia
-Basics]({{ '/wistia-basics' | post_url }}) series.
-
-{% wistia_embed hashed_id: g7uyjp24c6 %}
-
-Below are the specific steps required to embed a video covered in a bit more
-detail.
-
 ## Pre-Embedding
 
 Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Hooray! 
