@@ -74,6 +74,7 @@ wistiaEmbed = Wistia.embed("j6xdcseia9");
 </script>
 {% endcodeblock %}
 
+An API embed code works by first creating a blank rectangular box on the page (that's the `<div ...> ... </div>` element at the top), and then executing a little script that puts a video in the box. Neato!
 
 
 ### SEO Embed
