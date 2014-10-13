@@ -97,6 +97,30 @@ Two Inline Embed advanced options:
 * **Use Videofoam:** If your site is built to be responsive, your videos should be too! Enabling this setting will make your videos responsive.
 
 
+## Popover Embed
+
+{% post_image hashed_id: 'c33b48a797eee9e15d9020b9be23d656111bbf21', class: 'center' %}
+
+The **Popover Embed** type is the lightbox video experience. The popover embed code
+creates either an image or text link. When clicked it will launch the lightbox
+with your video inside.
+
+{{ "Popover embeds cannot be used for SEO purposes, as Google will not index them." | note }}
+
+The **Embed Code** box at the top contains the HTML and javascript snippet you
+will place on your website to add the popover video link.
+
+The **Video Size** option controls how large the video will appear inside the
+lightbox.
+
+The **Launch with** option toggles between a *thumbnail image* and a *text
+link* for launching your popover video.
+
+The **Thumbnail Size** option, when you are using an image as your popover
+launch link, controls the dimensions of the thumbnail image that will appear on
+your site.
+
+
 ## Pasting your Embed Code onto Your Page
 
 Once you have copied the embed code, the next step is to paste it into your web
@@ -161,30 +185,6 @@ inline-block;`, as seen here:
   </div>
 </div>
 {% endcodeblock %}
-
-
-## Popover Embed
-
-{% post_image hashed_id: 'c33b48a797eee9e15d9020b9be23d656111bbf21', class: 'center' %}
-
-The **Popover Embed** type is the lightbox video experience. The popover embed code
-creates either an image or text link. When clicked it will launch the lightbox
-with your video inside.
-
-{{ "Popover embeds cannot be used for SEO purposes, as Google will not index them." | note }}
-
-The **Embed Code** box at the top contains the HTML and javascript snippet you
-will place on your website to add the popover video link.
-
-The **Video Size** option controls how large the video will appear inside the
-lightbox.
-
-The **Launch with** option toggles between a *thumbnail image* and a *text
-link* for launching your popover video.
-
-The **Thumbnail Size** option, when you are using an image as your popover
-launch link, controls the dimensions of the thumbnail image that will appear on
-your site.
 
 
 ## Link in Email Campaign & Social Sharing
