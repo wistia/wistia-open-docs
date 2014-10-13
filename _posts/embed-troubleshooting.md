@@ -10,6 +10,8 @@ temper: true
 
 While Wistia embed codes should work properly out of the box, it can definitely be tricky to make them work _just right_ in certain situations. Here are some common challenges, and how to overcome them. Never give up. Never surrender.
 
+## Our Go-To Troubleshooting Tools & Processes
+
 
 ## Popover embed taking over the full browser window
 
