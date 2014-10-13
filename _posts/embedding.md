@@ -14,7 +14,7 @@ temper: true
 
 Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Hooray! 
 
-Fun Fact: Even _after_ you embed a video on your website, you can make changes to it in [Customize](../customizing-your-video). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video](../media#moving_and_copying_media) or use advanced [embed options]({{ '/embed-options' | post_url }}) in your embed codes.
+Fun Fact: Even _after_ you embed a video on your website, you can make changes to it in [Customize]({{ '/customizing-your-video' | post_url }}). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video]({{ '/media#moving_and_copying_media' | post_url }}) or use advanced [embed options]({{ '/embed-options' | post_url }}) in your embed codes.
 
 ## Generate an Embed Code
 
@@ -62,7 +62,7 @@ If you have a video in your account already, trying generating an iframe embed c
 
 Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your own custom functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
 
-{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](../customizing-your-video) first!" | note }}
+{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize]({{ '/customizing-your-video' | post_url }}) first!" | note }}
 
 Let's check out an example API embed code, shall we?
 
@@ -81,7 +81,7 @@ An API embed code works by first creating a blank rectangular box on the page (t
 
 The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website. 
 
-Certain aspects of your video (like the [thumbnail image](../customizing-your-video#changing_the_thumbnail) and [captions](../captions)) will be hard-coded into the text of your SEO embed code so search engines can find that information and use it to improve the search results. For this reason, it's important to follow a specific process when using an SEO embed code. Be sure to review the [Video SEO documentation](../video-seo) if you're getting started with video SEO.
+Certain aspects of your video (like the [thumbnail image]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}) and [captions]({{ '/captions' | post_url }})) will be hard-coded into the text of your SEO embed code so search engines can find that information and use it to improve the search results. For this reason, it's important to follow a specific process when using an SEO embed code. Be sure to review the [Video SEO documentation]({{ '/video-seo' | post_url }}) if you're getting started with video SEO.
 
 ### Inline Embed Advanced Options
 
