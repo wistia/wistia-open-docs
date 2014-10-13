@@ -193,6 +193,10 @@ These options are covered in-depth in the [email marketing]({{ '/email-marketing
 sharing]({{ '/social-sharing' | post_url }}) documentation pages respectively.
 
 
+## Protecting Your Embeds
+
+Want to make sure your videos can only be played on _your_ website (and of course, within your Wistia account)? Check out [Domain Restrcitions]({{ '/domain-restrictions' | post_url }}) for that. For more information on keeping your videos secure, see the [Security]({{ '/security' | post_url }}) guide.
+
 
 ## Embedded Video Stats
 
