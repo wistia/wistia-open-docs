@@ -5,6 +5,7 @@ category: Getting Set Up
 description: Questions about admin type stuff? Account Dashboards? Billing statements? Don't worry, we've got it all covered right here.
 footer: 'for_intermediates'
 ---
+
 ## Opening Your Account Dashboard
 
 Most of the important settings for your Wistia Account are housed in the
@@ -16,7 +17,7 @@ To access your Account Dashboard, you will need to be logged in as the Account O
 
 {% post_image hashed_id: '9e3f2f8b857f2511cd2e5ce74b5664d82a511c2f', width: 600, class: 'float_left' %}
 
-That will bring you straight to the Overview section of your Account Dashboard. Hooray!
+That will bring you straight to the Overview section of your Account Dashboard. Hooray!!!
 
 ---
 
