@@ -186,17 +186,6 @@ The **Thumbnail Size** option, when you are using an image as your popover
 launch link, controls the dimensions of the thumbnail image that will appear on
 your site.
 
-### Popover Embed Advanced Options
-
-{% post_image hashed_id: '7b8528b966fc9d722fe0452b9eafc1bd47374a0b', class: 'center' %}
-
-Popover Embed advanced options:
-
-* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use
-  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link
-  to your site/blog post markup, and generating an embed code (hence it doesn't
-  break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
-  Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
 
 ## Link in Email Campaign & Social Sharing
 
