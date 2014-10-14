@@ -62,7 +62,7 @@ If you have a video in your account already, trying generating an iframe embed c
 
 Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your own custom functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
 
-{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize]({{ '/customizing-your-video' | post_url }}) first!" | note }}
+{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](/doc/customizing-your-video) first!" | note }}
 
 {% wistia_embed hashed_id: r122hvserp %}
 
