@@ -52,7 +52,7 @@ The `<iframe> ... </iframe>` part there is what tells a person's web browser, _"
 
 When you insert an iframe embed code like that into a webpage, the video will display inline like this:
 
-{% wistia_embed hashed_id: j6xdcseia9 %}
+{% wistia_embed hashed_id: owlu99fmph %}
 
 If you have a video in your account already, trying generating an iframe embed code for it and then [add it to your website](#pasting_your_embed_code_onto_your_page).
 
@@ -63,6 +63,8 @@ If you have a video in your account already, trying generating an iframe embed c
 Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your own custom functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
 
 {{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize]({{ '/customizing-your-video' | post_url }}) first!" | note }}
+
+{% wistia_embed hashed_id: r122hvserp %}
 
 Let's check out an example API embed code, shall we?
 
@@ -80,6 +82,8 @@ An API embed code works by first creating a blank rectangular box on the page (t
 ### SEO Embed
 
 The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website. 
+
+{% wistia_embed hashed_id: bzu7ulqlh5 %}
 
 Certain aspects of your video (like the [thumbnail image]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}) and [captions]({{ '/captions' | post_url }})) will be hard-coded into the text of your SEO embed code so search engines can find that information and use it to improve the search results. For this reason, it's important to follow a specific process when using an SEO embed code. Be sure to review the [Video SEO documentation]({{ '/video-seo' | post_url }}) if you're getting started with video SEO.
 
@@ -104,6 +108,8 @@ Two Inline Embed advanced options:
 The **Popover Embed** type is the lightbox video experience. The popover embed code
 creates either an image or text link. When clicked it will launch the lightbox
 with your video inside.
+
+{% wistia_embed hashed_id: jfro85f3sx %}
 
 {{ "Popover embeds cannot be used for SEO purposes, as Google will not index them." | note }}
 
