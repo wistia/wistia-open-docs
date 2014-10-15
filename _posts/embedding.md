@@ -65,7 +65,7 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
 <div id="wistia_r122hvserp" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 
-<script src="/doc/javascripts/jquery.js"></script>
+<script src="/doc/raptorize/jquery.js"></script>
 <script src='/doc/raptorize/jquery.raptorize.1.0.js'></script>
 
 <script>
