@@ -30,6 +30,8 @@ The dimensions of your embed code will scale proportionally with the dimensions 
 
 ## Inline Embed Types
 
+There are three types of inline embed code types: [iframe](#iframe_embed), [API](#api_embed), and [SEO](#seo_embed). They all display "in line" on the page and look exactly the same. So why would you use one type of inline embed over another? Read on to find out!
+
 ### iframe Embed
 
 The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
