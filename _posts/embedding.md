@@ -62,9 +62,39 @@ If you have a video in your account already, trying generating an iframe embed c
 
 Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your own custom functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
 
-{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](/doc/customizing-your-video) first!" | note }}
+<div id="wistia_r122hvserp" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 
-{% wistia_embed hashed_id: r122hvserp %}
+<script src="/doc/javascripts/jquery.js"></script>
+<script src='/doc/raptorize/jquery.raptorize.1.0.js'></script>
+
+<script>
+(function($) {
+  wistiaEmbedSME = Wistia.embed("r122hvserp");
+  function onFirstEnd() {
+    wistiaEmbedSME.unbind('end', onFirstEnd);
+    wistiaEmbedSME.bind('play', onSecondPlay);
+  }
+  function onSecondPlay() {
+    wistiaEmbedSME.unbind('play', onSecondPlay);
+    $("#wistia_r122hvserp").raptorize({
+      enterOn: "timer",
+      delayTime: 2,
+      raptorImage: "/doc/raptorize/raptor.png",
+      raptorSoundMp3: "/doc/raptorize/raptor-sound.mp3",
+      raptorSoundOgg: "/doc/raportize/raptor-sound.ogg"
+    });
+    wistiaEmbedSME.pause();
+    setTimeout(function() {
+      wistiaEmbedSME.play();
+    }, 2800);
+  }
+  wistiaEmbedSME.bind('end', onFirstEnd);
+}(jQuery));
+</script>
+
+
+{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](/doc/customizing-your-video) first!" | note }}
 
 Let's check out an example API embed code, shall we?
 
@@ -226,3 +256,4 @@ analytics to see how your viewers are interacting with the content.
   });
 </script>
 -->
+
