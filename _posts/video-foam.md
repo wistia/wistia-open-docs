@@ -21,7 +21,7 @@ it's parent container. [Check out the videoFoam demo](http://wistia.github.io/de
 
 ## Using videoFoam
 
-{% post_image hashed_id: '86f031ad77e13cd74f00027b2df4e2ec69a6ead0', class: 'center' %}
+{% post_image hashed_id: '16ae3e32df1353119e21a61f17d95a4e629ed14e', class: 'center' %}
 
 In the [Embed & Share modal]({{ '/embedding' | post_url }}), select the *Use
 Video Foam* checkbox. Then, you can copy your embed code and paste it into your
