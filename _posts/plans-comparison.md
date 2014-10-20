@@ -15,10 +15,9 @@ post_intro: |
   | Free Plan | Small Business  | Teams     | High Volume
 ----------------------|-----------|-----------------|-----------|-----------
 Monthly Price         | Free      | $25/mo          | $100/mo   | $300+/mo
-Monthly Bandwidth     | 50GB/mo   | 200GB/mo        | 200GB/mo  | 1TB+/mo
-Extra Bandwidth Price | $0.33/GB  | $0.33/GB        | $0.33/GB  | [starts at $0.18/GB](http://wistia.com/pricing/highvolume)
-Total Storage         | 10GB      | unlimited       | unlimited | unlimited
-Total Video Count     | unlimited | unlimited       | unlimited | unlimited
+Monthly Bandwidth     | 200GB/mo   | 200GB/mo        | 200GB/mo  | 1TB+/mo
+Extra Bandwidth Price | &#8211;  | $0.33/GB        | $0.33/GB  | [starts at $0.18/GB](http://wistia.com/pricing/highvolume)
+Total Video Count     | 50 | unlimited       | unlimited | unlimited
 Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 <span class='category'>Core Video Player Features</span> |    |   |   |
 [Player and controls customization]({{ '/customizing-your-video#appearance' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
@@ -51,14 +50,16 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 [Generate SEO sitemaps]({{ '/video-seo#creating_a_video_sitemap' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
 [SEO Embed Code Type]({{ '/video-seo#using_the_video_seo_embed_type' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
 <span class='category'>Private Sharing Functionality</span>  |  |  |  |
+[Whitelisted Domain Restrictions]({{ '/domain-restrictions' | post_url }}) | &#8211; | &#10003; | &#10003; | &#10003;
+[Custom CNAME account address]({{ '/account-setup#set_a_custom_domain_cname' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Private user session tracking]({{ '/private-sharing#review_your_viewers_activity' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [Share video privately with multiple user logins]({{ '/private-sharing' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Collaboration Tools</span>  |  |  |  |
 [Invite additional managers]({{ '/account-setup#adding__removing_managers' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
-[Custom CNAME account address]({{ '/account-setup#set_a_custom_domain_cname' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Filter out internal stats]({{ '/account-setup#filtering_out_internal_stats' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Whitelisted Domain Restrictions]({{ '/domain-restrictions' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [Advanced Marketing Automation System Integrations]({{ '/integrations' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+
+
 
 <a class='button' href='http://wistia.com/free/new'>Try the Wistia Free Plan!</a>
 
