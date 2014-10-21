@@ -138,13 +138,12 @@ Two Inline Embed advanced options:
 
 ## Popover Embed
 
-{% post_image hashed_id: 'c33b48a797eee9e15d9020b9be23d656111bbf21', class: 'center' %}
-
 The **Popover Embed** type is the lightbox video experience. The popover embed code
 creates either an image or text link. When clicked it will launch the lightbox
-with your video inside.
+with your video inside, like this:
 
-{% wistia_embed hashed_id: jfro85f3sx %}
+<a href="//fast.wistia.net/embed/iframe/jfro85f3sx?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 
 {{ "Popover embeds cannot be used for SEO purposes, as Google will not index them." | note }}
 
