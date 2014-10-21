@@ -49,6 +49,10 @@ Are you using Video Foam already, but your video is not responding correctly? Ch
 
 ## Video not displaying on mobile devices
 
+Do you see a blank white box or a message that says "missing plugin" where your video should be? That can happen if your embed code (usually and API or SEO embed code) is getting modified after you copy it from Wistia.
+
+Chekc to make sure the embed code on your website looks exactly like the embed code you generated in Wistia. If it's different, try re-embedding it to see if that helps! Certain website building tools (like a CMS) can often make changes to embedded code that will cause it to malfunction. Your embed code will need to be intact in order to work properly.
+
 ## Video not collecting stats
 
 ## Video not showing up in search results
