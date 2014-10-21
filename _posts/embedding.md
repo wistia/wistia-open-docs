@@ -148,6 +148,20 @@ with your video inside, like this:
 
 {{ "Popover embeds cannot be used for video SEO purposes. [Google generally will not index them](https://support.google.com/webmasters/answer/34445?hl=en), because they're not really **on** the page – they're in front of it!" | note }}
 
+Here's an example popover embed code:
+
+{% codeblock popover_example.html %}
+<a href="//fast.wistia.net/embed/iframe/jfro85f3sx?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+{% endcodeblock %}
+
+The popover embed code has three components:
+
+* Either a piece of text or an image. In the example above, this automatically generated thumbnail image: 
+`https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169`
+* Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/jfro85f3sx?popover=true`
+* A script, `fast.wistia.com/assets/external/popover-v1.js`, which causes the link to open in a popover lightbox instead of opening as a separate page
+
 
 ## Pasting your Embed Code onto Your Page
 
