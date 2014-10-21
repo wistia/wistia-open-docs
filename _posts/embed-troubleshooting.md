@@ -55,6 +55,8 @@ Chekc to make sure the embed code on your website looks exactly like the embed c
 
 ## Video not collecting stats
 
+This can happen for the same reason as "[Video not displaying on mobile devices](#video_not_displaying_on_mobile_devices)" above. Is your video working on mobile? If it's looking good there but it's still not collecting stats, [send us a link](http://wistia.com/support/contact) and we'll be happy to help.
+
 ## Video not showing up in search results
 
 First things first: It's important to know that even if you everything right from an "SEO Best Practices" standpoint, sometimes Google may choose to not feature your video in the search results. As a private company, Google has full control over the content and user experience on the websites it operates, and Google does not publicly disclose the details behind how it constructs search reuslts – that's their secret sauce!
