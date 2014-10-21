@@ -36,11 +36,13 @@ There are three types of inline embed code types: [iframe](#iframe_embed), [API]
 
 The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
 
+{% wistia_embed hashed_id: owlu99fmph %}
+
 An iframe is an HTML element that lets you display content from one webpage in a special box on another page. Think of it as a cut-out box on a piece of paper. If you cut a rectangle into one page and place another page behind it, it will look like all of the content is right there in the main page:
 
 {% post_image hashed_id: 'e1a58a32d8eeec16df926836f7527e0c3b43a52a', width: 600, class: 'center' %}
 
-Here's an example iframe embed code:
+Here's an example Wistia iframe embed code:
 
 {% codeblock iframe_example.html %}
 <iframe src="//fast.wistia.net/embed/iframe/j6xdcseia9" 
@@ -52,9 +54,7 @@ msallowfullscreen width="640" height="388"></iframe>
 
 The `<iframe> ... </iframe>` part there is what tells a person's web browser, _"Hey! Let's show some content from another web page here!"_ It then pulls in the content from [`fast.wistia.net/embed/iframe/j6xdcseia9`](http://fast.wistia.net/embed/iframe/j6xdcseia9), identified in the `src` (or "source") attribute, and displays it in a box with the dimensions specified by the `width` and `height` attributes.
 
-When you insert an iframe embed code like that into a webpage, the video will display inline like this:
-
-{% wistia_embed hashed_id: owlu99fmph %}
+When you insert an iframe embed code like that into a webpage, the video will display inline as seen above.
 
 If you have a video in your account already, trying generating an iframe embed code for it and then [add it to your website](#pasting_your_embed_code_onto_your_page).
 
