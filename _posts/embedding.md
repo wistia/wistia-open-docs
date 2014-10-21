@@ -122,19 +122,6 @@ The SEO embed code type is what you should use if you want to help search engine
 
 Certain aspects of your video (like the [thumbnail image]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}) and [captions]({{ '/captions' | post_url }})) will be hard-coded into the text of your SEO embed code so search engines can find that information and use it to improve the search results. For this reason, it's important to follow a specific process when using an SEO embed code. Be sure to review the [Video SEO documentation]({{ '/video-seo' | post_url }}) if you're getting started with video SEO.
 
-### Inline Embed Advanced Options
-
-{% post_image hashed_id: 'ea30ecdbaf3536db58a046ec8b7805ceabcef452', class: 'center' %}
-
-Two Inline Embed advanced options:
-
-* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use
-  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link
-  to your site/blog post markup, and generating an embed code (hence it doesn't
-  break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
-  Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
-* **Use Videofoam:** If your site is built to be responsive, your videos should be too! Enabling this setting will make your videos responsive.
-
 
 ## Popover Embed
 
