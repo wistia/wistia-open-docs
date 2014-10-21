@@ -41,9 +41,13 @@ Are you (or your customers) experiencing slow loading, or seeing a "Loading..." 
 
 If your Internet connection is super speedy but you're still having playback issues, [send us a link](http://wistia.com/support/contact) to the page you're seeing the problem on, and we'll help you figure out what's happening there.
 
-## Video not displaying on mobile devices
-
 ## Video not resizing correctly
+
+[Video Foam]({{ '/video-foam' | post_url }}) is the best way to make a video responsive. 
+
+Are you using Video Foam already, but your video is not responding correctly? Check to make sure that the parent container around your video is set to the correct width – that's what Video Foam will use to determine how wide the video should be.
+
+## Video not displaying on mobile devices
 
 ## Video not collecting stats
 
