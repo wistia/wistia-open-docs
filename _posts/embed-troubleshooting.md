@@ -8,7 +8,7 @@ post_intro:
 temper: true
 ---
 
-While Wistia embed codes should work properly out of the box, it can definitely be tricky to make them work _just right_ in certain situations. Here are some common challenges, and how to overcome them. Never give up. Never surrender.
+While Wistia embed codes should work properly out of the box, it can definitely be tricky to make them work _just right_ in certain situations. Here are some common challenges, and how to overcome them. <a href="//fast.wistia.net/embed/iframe/jfgvzbaxu2?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">Never give up. Never surrender.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
 
 ## Our Go-To Troubleshooting Tools & Processes
 
@@ -51,3 +51,12 @@ Now with that said, there are a _bunch_ of things you can do to help Google find
 
 If your videos still are not showing up in the video search results despite your best efforts, check out Google's [Video Best Practices](https://support.google.com/webmasters/answer/156442?hl=en) and [Troubleshooting](https://support.google.com/webmasters/answer/1093493?hl=en) guides for more helpful tips.
 
+
+
+<script>
+  wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
+    iframe.wistiaApi.bind("end", function() {
+      wistiaJQuery.fancybox.close();
+    });
+  });
+</script>
