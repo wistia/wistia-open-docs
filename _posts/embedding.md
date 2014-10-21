@@ -138,14 +138,15 @@ Two Inline Embed advanced options:
 
 ## Popover Embed
 
-The **Popover Embed** type is the lightbox video experience. The popover embed code
-creates either an image or text link. When clicked it will launch the lightbox
+The popover embed code type displays your video in a popover lightbox in front 
+of the main content on your page. You can launch a popover video with either a 
+text link or thumbnail image link. When clicked, that link will open a lightbox
 with your video inside, like this:
 
 <a href="//fast.wistia.net/embed/iframe/jfro85f3sx?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 
-{{ "Popover embeds cannot be used for SEO purposes, as Google will not index them." | note }}
+{{ "Popover embeds cannot be used for video SEO purposes. [Google generally will not index them](https://support.google.com/webmasters/answer/34445?hl=en), because they're not really **on** the page – they're in front of it!" | note }}
 
 The **Embed Code** box at the top contains the HTML and javascript snippet you
 will place on your website to add the popover video link.
