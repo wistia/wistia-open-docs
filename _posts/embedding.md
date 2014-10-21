@@ -238,9 +238,9 @@ analytics to see how your viewers are interacting with the content.
 
 <script src="//fast.wistia.com/assets/external/embed_shepherd-v1.js"></script>
 <script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
-<!--<script>
+<script>
   wistiaEmbeds.onFind(function(video) {
-    if ((video.hashedId() !== 'g7uyjp24c6') && (video.hashedId() !=='j6xdcseia9')) {
+    if (video.hashedId() == 'j3a6v2cblf') {
       video.addPlugin('playWhenVisible', {
         src: '//fast.wistia.com/labs/play-when-visible/plugin.js',
         outsideIframe: true
@@ -248,5 +248,5 @@ analytics to see how your viewers are interacting with the content.
     }
   });
 </script>
--->
+
 
