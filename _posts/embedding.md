@@ -79,7 +79,7 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
   }
   function onSecondPlay() {
     wistiaEmbedSME.unbind('play', onSecondPlay);
-    $("#wistia_r122hvserp").raptorize({
+    $("#wistia_8v4v86fl7l").raptorize({
       enterOn: "timer",
       delayTime: 2,
       raptorImage: "/doc/raptorize/raptor.png",
