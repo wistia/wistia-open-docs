@@ -148,19 +148,6 @@ with your video inside, like this:
 
 {{ "Popover embeds cannot be used for video SEO purposes. [Google generally will not index them](https://support.google.com/webmasters/answer/34445?hl=en), because they're not really **on** the page – they're in front of it!" | note }}
 
-The **Embed Code** box at the top contains the HTML and javascript snippet you
-will place on your website to add the popover video link.
-
-The **Video Size** option controls how large the video will appear inside the
-lightbox.
-
-The **Launch with** option toggles between a *thumbnail image* and a *text
-link* for launching your popover video.
-
-The **Thumbnail Size** option, when you are using an image as your popover
-launch link, controls the dimensions of the thumbnail image that will appear on
-your site.
-
 
 ## Pasting your Embed Code onto Your Page
 
