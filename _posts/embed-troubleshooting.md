@@ -37,6 +37,10 @@ While there are many possible causes for this, one common reason is that the Soc
 
 ## Loading...
 
+Are you (or your customers) experiencing slow loading, or seeing a "Loading..." message on your videos? The most common cause of that problem is that the viewer's Internet connection speed is not fast enough to support video playback reliably. While we take many steps to optimize the playback experience for each viewer, there are some [minimum requirements]({{ '/viewer-requirements#internet_connection_speed' | post_url }}) for a smooth playback experience.
+
+If your Internet connection is super speedy but you're still having playback issues, [send us a link](http://wistia.com/support/contact) to the page you're seeing the problem on, and we'll help you figure out what's happening there.
+
 ## Video not displaying on mobile devices
 
 ## Video not resizing correctly
