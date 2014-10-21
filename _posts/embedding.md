@@ -26,7 +26,7 @@ To generate an embed code for your video, start by selecting the *Embed & Share*
 
 {% wistia_embed hashed_id: j3a6v2cblf %}
 
-The dimensions of your embed code will scale proportionally with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically. If you would like to make your video responsive, check out Video Foam.
+The dimensions of your embed code will scale proportionally with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically. If you would like to make your video responsive, check out [Video Foam]({{ '/video-foam' | post_url }}).
 
 ## Inline Embed Types
 
