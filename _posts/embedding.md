@@ -98,7 +98,7 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
 
 {{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](/doc/customizing-your-video) first!" | note }}
 
-Let's check out an example API embed code, shall we?
+Let's check out an example API embed code:
 
 {% codeblock api_example.html %}
 <div id="wistia_j6xdcseia9" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
@@ -108,7 +108,10 @@ wistiaEmbed = Wistia.embed("j6xdcseia9");
 </script>
 {% endcodeblock %}
 
-An API embed code works by first creating a blank rectangular box on the page (that's the `<div ...> ... </div>` element at the top), and then executing a little script that puts a video in the box. Neato!
+
+An API embed code works by first creating a blank rectangular box on the page (that's the `<div ...> ... </div>` element at the top), and then executing a script that puts a video into the box. The script knows which div to put the video in, because the hashed ID passed into `Wistia.embed` matches the ID assigned to the `div` – in the example above, `j6xdcseia9`.
+
+The API embed code is extensively configurable. For more detail on using API embed codes, check out the [Player API documentation]({{ '/player-api' | }}).
 
 
 ### SEO Embed
