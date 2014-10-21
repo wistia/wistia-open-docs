@@ -18,7 +18,6 @@ gem 'unicorn'
 group :test do
   gem 'rspec', '~> 2.13.0'
   gem 'rack-test', '~> 0.6.2'
-  gem 'psych', '~> 1.3.4'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'tddium'
   gem 'pry', '~> 0.9.12.6'
