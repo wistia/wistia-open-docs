@@ -62,14 +62,6 @@ Still having trouble getting that video to play on a mobile device? [Send us a l
 
 This can happen for the same reason as "[Video not displaying on mobile devices](#video_not_displaying_on_mobile_devices)" above. Is your video working on mobile? If it's looking good there but it's still not collecting stats, [send us a link](http://wistia.com/support/contact) and we'll be happy to help.
 
-## Video not showing up in search results
-
-First things first: It's important to know that even if you everything right from an "SEO Best Practices" standpoint, sometimes Google may choose to not feature your video in the search results. As a private company, Google has full control over the content and user experience on the websites it operates, and Google does not publicly disclose the details behind how it constructs search reuslts – that's their secret sauce!
-
-Now with that said, there are a _bunch_ of things you can do to help Google find your videos and increase your chances. If you've followed each step in the Video SEO Documentation, you have done everything Wistia recommends for video SEO.
-
-If your videos still are not showing up in the video search results despite your best efforts, check out Google's [Video Best Practices](https://support.google.com/webmasters/answer/156442?hl=en) and [Troubleshooting](https://support.google.com/webmasters/answer/1093493?hl=en) guides for more helpful tips.
-
 
 
 <script>
