@@ -56,6 +56,8 @@ Do you see a blank white box or a message that says "missing plugin" where your 
 
 Check to make sure the embed code on your website looks exactly like the embed code you generated in Wistia. If it's different, try re-embedding it to see if that helps! Certain website building tools (like a CMS) can often make changes to embedded code that will cause it to malfunction. Your embed code will need to be intact in order to work properly.
 
+Still having trouble getting that video to play on a mobile device? [Send us a link to the page](http://wistia.com/support/contact) and we'll help you fix it up right.
+
 ## Video not collecting stats
 
 This can happen for the same reason as "[Video not displaying on mobile devices](#video_not_displaying_on_mobile_devices)" above. Is your video working on mobile? If it's looking good there but it's still not collecting stats, [send us a link](http://wistia.com/support/contact) and we'll be happy to help.
