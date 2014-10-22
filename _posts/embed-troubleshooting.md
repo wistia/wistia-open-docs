@@ -41,9 +41,14 @@ If your Internet connection is super speedy but you're still having playback iss
 
 ## Video not resizing correctly
 
-[Video Foam]({{ '/video-foam' | post_url }}) is the best way to make a video responsive. 
+There are generally two ways in which a video might not display at the size you'd expect: 
 
-Are you using Video Foam already, but your video is not responding correctly? Check to make sure that the parent container around your video is set to the correct width – that's what Video Foam will use to determine how wide the video should be.
+1. You're [embedding in WordPress with oEmbed]({{ "/wordpress#using_an_oembed_url" | post_url }}), but your video is displaying at smaller dimensions than what you set on the _Embed & Share_ screen. If that's happening, it's possible that your WordPress theme specifies a maximum width for content embedded with oEmbed. See [this tip in the Wistia WordPress docs]({{ "/wordpress#video_appearing_smaller_than_it_should_be" | post_url }}) for details on fixing that.
+
+2. You'd like your video to be responsive, but it's not changing size when it should. First things first, make sure you're using [Video Foam]({{ '/video-foam' | post_url }})! Video Foam is the best way to make a video responsive. 
+If you're using Video Foam already but your video is not responding correctly, check to make sure that the parent container (that's the HTML element surrounding your video, like a set of `<div>` tags) is set to the width you'd like. That's what Video Foam will use to determine how wide the video should be.
+
+If you're having a problem with the size of your video and the tips above don't do the trick, [send us a link to the video](http://wistia.com/support/contact) and we'll help you get it looking great!
 
 ## Video not displaying on mobile devices
 
