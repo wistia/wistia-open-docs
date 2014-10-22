@@ -8,7 +8,7 @@ post_intro:
 temper: true
 ---
 
-While Wistia embed codes should work properly out of the box, it can definitely be tricky to make them work _just right_ in certain situations. Here are some common challenges, and how to overcome them. <a href="//fast.wistia.net/embed/iframe/jfgvzbaxu2?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">Never give up. Never surrender.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
+We're always working hard to make Wistia-hosted videos function properly, no extra tinkering required. That being said, it can be tricky to make them display _just right_ in certain situations. Here are some common challenges, and how to overcome them. <a href="//fast.wistia.net/embed/iframe/jfgvzbaxu2?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">Never give up. Never surrender.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
 
 
 ## Popover embed taking over the full browser window
