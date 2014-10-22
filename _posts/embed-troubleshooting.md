@@ -31,7 +31,7 @@ wistiaEmbed = Wistia.embed("hj6gi4rn4g");
 
 Those lines on the left and right sides of your video (or perhaps top and bottom) are the worst! That can happen if the dimensions of your embed code don't match the dimensions of your video. 
 
-While there are many possible causes for this, one common reason is that the Social Bar was either added or removed _after_ the video was embedded. Since the Social Bar takes up some extra space below the video, the embed code's dimensions need to adjust to accomodate for it. Try re-embedding your video to see if that helps!
+While there are many possible causes for this, one common reason is that the [Social Bar]({{ "/customizing-your-video#social_bar" | post_url }}) was either added or removed _after_ the video was embedded. Since the Social Bar takes up some extra space below the video, the embed code's dimensions need to adjust to accomodate for it. Try re-embedding your video to see if that helps!
 
 ## Loading...
 
