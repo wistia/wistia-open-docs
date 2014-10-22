@@ -10,85 +10,146 @@ post_intro:
 temper: true
 ---
 
-To get started, check out this *embedding video guide*, part III of our [Wistia
-Basics]({{ '/wistia-basics' | post_url }}) series.
+## Pre-Embedding
 
-{% wistia_embed hashed_id: g7uyjp24c6 %}
+Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Hooray! 
 
-Below are the specific steps required to embed a video covered in a bit more
-detail.
+Fun Fact: Even _after_ you embed a video on your website, you can make changes to it in [Customize]({{ '/customizing-your-video' | post_url }}). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video]({{ '/media#moving_and_copying_media' | post_url }}) or use advanced [embed options]({{ '/embed-options' | post_url }}) in your embed codes.
 
-## Upload Your Video
+## Generate an Embed Code
 
-{% post_image hashed_id: 'e1fe1bdde534d154ea0b2aaa73aa8224055aa483', width: 600, class: 'center' %}
+An **embed code** is a snippet of code that you can use to add content (like a video!) to a web page. When a person visits your website, their web browser will interpret the embed code as a set of instructions to display your video on the page.
 
-Before you can embed your video, you need to upload it to your account. Haven't
-done that yet? Check out our [guide to uploading]({{ '/upload-video' | post_url }})
-for more info.
+Wistia embed codes come in a few flavors, and they each are great for different purposes. The best type of embed code to get started with is an [iframe embed](#iframe_embed). For more advanced embedding, check out the [API](#api_embed), [SEO](seo_embed), and [popover](popover_embed) embed code types.
 
-Once uploading is complete, Wistia transcodes several versions of your video -
-perfect for serving on multiple browsers and mobile devices.  After transcoding
-wraps up, your video is ready to be embedded onto your site.
+To generate an embed code for your video, start by selecting the *Embed & Share* option under the <span class='action_menu'>Video Actions</span> menu from your video's page in Wistia. That will open the Embed & Share screen, where you can choose from one of several embed code types and set the dimensions (in pixels) for your video: 
 
-## Customizing Your Video
+{% wistia_embed hashed_id: j3a6v2cblf %}
 
-If you want to change the player color, update the thumbnail, or change the
-controls that are available on your video embed, please refer to the [customize
-documentation]({{ '/customizing-your-video' | post_url }}).
+The dimensions of your embed code will scale proportionally with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically. 
 
-## Generate the Embed Code
+{{ "To make your video responsive, check out [Video Foam](http://wistia.com/doc/video-foam)." | note }}
 
-{% post_image hashed_id: '9f6b506677bd26f2ea10ef98b9e7a205fa1305dd', width: 600, class: 'center' %}
+## Inline Embed Types
 
-**Embed codes** are snippets of code pasted on your web page that are useful
-for serving up content (i.e. video).  To generate the embed code for your video,
-start by selecting the *&lt;/&gt; Embed & Share* option under the
-<span class='action_menu'>Video Actions</span> menu.
+There are three types of inline embed code types: [iframe](#iframe_embed), [API](#api_embed), and [SEO](#seo_embed). They all display "in line" on the page and look exactly the same. So why would you use one type of inline embed over another? Read on to find out!
 
+### iframe Embed
 
-The Embed & Share Screen is where you can make some basic changes to the look
-and feel of your video presentation. If you are looking for customizations like
-calls-to-action and Turnstile, [read up on customization]({{ '/customizing-your-video' | post_url }}).
+The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
 
-### Inline Embed
+{% wistia_embed hashed_id: cgj76ev158 %}
 
-{% post_image hashed_id: '2d50bbdcb6d8cbc4de46d35b008d96e74d215cbb', width: 600, class: 'center' %}
+An iframe is an HTML element that lets you display content from one webpage in a special box on another page. Think of it as a cut-out box on a piece of paper. If you cut a rectangle into one page and place another page behind it, it will look like all of the content is right there in the main page:
 
-The **Inline Embed** type is the standard, video-playing-on-your-website embed
-type.
+{% post_image hashed_id: 'e1a58a32d8eeec16df926836f7527e0c3b43a52a', width: 600, class: 'center' %}
 
-The **Embed Code** box at the top contains the HTML and javascript snippet you
-will place on your website to add the video. Before you copy it for pasting
-into your webpage markup, review the options below.
+Here's an example Wistia iframe embed code:
 
-The **Video Size** option allows you to choose the dimensions your video will
-be displayed at on the page (in pixels).
+{% codeblock iframe_example.html %}
+<iframe src="//fast.wistia.net/embed/iframe/cgj76ev158" 
+allowtransparency="true" frameborder="0" scrolling="no" 
+class="wistia_embed" name="wistia_embed" allowfullscreen 
+mozallowfullscreen webkitallowfullscreen oallowfullscreen 
+msallowfullscreen width="640" height="388"></iframe>
+{% endcodeblock %}
 
-The **Embed Type** option is for choosing between three basic types:
+The `<iframe> ... </iframe>` part there is what tells a person's web browser, _"Hey! Let's show some content from another web page here!"_ It then pulls in the content from [`fast.wistia.net/embed/iframe/cgj76ev158`](http://fast.wistia.net/embed/iframe/cgj76ev158), identified in the `src` (or "source") attribute, and displays it in a box with the dimensions specified by the `width` and `height` attributes.
 
-* **iframe:** the default embedding option, because it works with most website
-  building applications.
-* **API:** if you will be using the [Player API]({{ '/player-api' | post_url }})
-  with your video, use the API option.
-* **SEO:** SEO-optimized embed codes. Because of Google requirements, this
-  embed code is not always as easy to use as iframe embeds.
+When you insert an iframe embed code like that into a webpage, the video will display inline as seen above.
 
-Once you have your settings dialed in, you can *copy* the embed code at the top.
+If you have a video in your account already, trying generating an iframe embed code for it and then [add it to your website](#pasting_your_embed_code_onto_your_page).
 
 {{ "A quick note on our embeds. We use protocol relative URLs as part of our embed codes. This means they will work on SSL-enabled websites without any additional tinkering. They can look a bit funky without the `http` or `https` you might be expecting, but it can save you headaches when placing your video on your website." | note }}
 
-### Inline Embed Advanced Options
+### API Embed
 
-{% post_image hashed_id: 'ea30ecdbaf3536db58a046ec8b7805ceabcef452', class: 'center' %}
+Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your own custom functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
 
-Two Inline Embed advanced options:
+<div id="wistia_8v4v86fl7l" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 
-* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use
-  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link
-  to your site/blog post markup, and generating an embed code (hence it doesn't
-  break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
-  Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
-* **Use Videofoam:** If your site is built to be responsive, your videos should be too! Enabling this setting will make your videos responsive.
+<script src="/doc/raptorize/jquery.js"></script>
+<script src='/doc/raptorize/jquery.raptorize.1.0.js'></script>
+
+<script>
+(function($) {
+  wistiaEmbedSME = Wistia.embed("8v4v86fl7l");
+  function onFirstEnd() {
+    wistiaEmbedSME.unbind('end', onFirstEnd);
+    wistiaEmbedSME.bind('play', onSecondPlay);
+  }
+  function onSecondPlay() {
+    wistiaEmbedSME.unbind('play', onSecondPlay);
+    $("#wistia_8v4v86fl7l").raptorize({
+      enterOn: "timer",
+      delayTime: 2,
+      raptorImage: "/doc/raptorize/raptor.png",
+      raptorSoundMp3: "/doc/raptorize/raptor-sound.mp3",
+      raptorSoundOgg: "/doc/raportize/raptor-sound.ogg"
+    });
+    wistiaEmbedSME.pause();
+    setTimeout(function() {
+      wistiaEmbedSME.play();
+    }, 2800);
+  }
+  wistiaEmbedSME.bind('end', onFirstEnd);
+}(jQuery));
+</script>
+
+
+{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](/doc/customizing-your-video) first!" | note }}
+
+Let's check out an example API embed code:
+
+{% codeblock api_example.html %}
+<div id="wistia_8v4v86fl7l" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("8v4v86fl7l");
+</script>
+{% endcodeblock %}
+
+
+An API embed code works by first creating a blank rectangular box on the page (that's the `<div ...> ... </div>` element at the top), and then executing a script that puts a video into the box. The script knows which div to put the video in, because the hashed ID passed into `Wistia.embed` matches the ID assigned to the `div` – in the example above, `8v4v86fl7l`.
+
+The API embed code is extensively configurable. For more detail on using API embed codes, check out the [Player API documentation]({{ '/player-api' | }}).
+
+
+### SEO Embed
+
+The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website. 
+
+{% wistia_embed hashed_id: d93se4je75 %}
+
+Certain aspects of your video (like the [thumbnail image]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}) and [captions]({{ '/captions' | post_url }})) will be hard-coded into the text of your SEO embed code so search engines can find that information and use it to improve the search results. For this reason, it's important to follow a specific process when using an SEO embed code. Be sure to review the [Video SEO documentation]({{ '/video-seo' | post_url }}) if you're getting started with video SEO.
+
+
+## Popover Embed
+
+The popover embed code type displays your video in a popover lightbox in front 
+of the main content on your page. You can launch a popover video with either a 
+text link or thumbnail image link. When clicked, that link will open a lightbox
+with your video inside, like this:
+
+<a href="//fast.wistia.net/embed/iframe/eidfyzff5k?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+
+{{ "Popover embeds cannot be used for video SEO purposes. [Google generally will not index them](https://support.google.com/webmasters/answer/34445?hl=en), because they're not really **on** the page – they're in front of it!" | note }}
+
+Here's an example popover embed code:
+
+{% codeblock popover_example.html %}
+<a href="//fast.wistia.net/embed/iframe/eidfyzff5k?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+{% endcodeblock %}
+
+The popover embed code has three components:
+
+* Either a piece of text or an image. In the example above, this automatically generated thumbnail image: 
+`https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169`
+* Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/eidfyzff5k?popover=true`
+* A script, `fast.wistia.com/assets/external/popover-v1.js`, which causes the link to open in a popover lightbox instead of opening as a separate page
 
 
 ## Pasting your Embed Code onto Your Page
@@ -157,47 +218,15 @@ inline-block;`, as seen here:
 {% endcodeblock %}
 
 
-## Popover Embed
-
-{% post_image hashed_id: 'c33b48a797eee9e15d9020b9be23d656111bbf21', class: 'center' %}
-
-The **Popover Embed** type is the lightbox video experience. The popover embed code
-creates either an image or text link. When clicked it will launch the lightbox
-with your video inside.
-
-{{ "Popover embeds cannot be used for SEO purposes, as Google will not index them." | note }}
-
-The **Embed Code** box at the top contains the HTML and javascript snippet you
-will place on your website to add the popover video link.
-
-The **Video Size** option controls how large the video will appear inside the
-lightbox.
-
-The **Launch with** option toggles between a *thumbnail image* and a *text
-link* for launching your popover video.
-
-The **Thumbnail Size** option, when you are using an image as your popover
-launch link, controls the dimensions of the thumbnail image that will appear on
-your site.
-
-
-### Popover Embed Advanced Options
-
-{% post_image hashed_id: '7b8528b966fc9d722fe0452b9eafc1bd47374a0b', class: 'center' %}
-
-Popover Embed advanced options:
-
-* **Use oEmbed:** [oEmbed protocol]({{ '/oembed' | post_url }}) is a way to use
-  a URL as an embed code. CMS suites like Wordpress support adding an oEmbed link
-  to your site/blog post markup, and generating an embed code (hence it doesn't
-  break!). To use Wistia oEmbed with Wordpress, you must have the [Wistia
-  Wordpress plugin](http://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed.
-
 ## Link in Email Campaign & Social Sharing
 
 These options are covered in-depth in the [email marketing]({{ '/email-marketing' | post_url }}) and [social
 sharing]({{ '/social-sharing' | post_url }}) documentation pages respectively.
 
+
+## Protecting Your Embeds
+
+Want to make sure your videos can only be played on _your_ website (and of course, within your Wistia account)? Check out [Domain Restrcitions]({{ '/domain-restrictions' | post_url }}) for that. For more information on keeping your videos secure, see the [Security]({{ '/security' | post_url }}) guide.
 
 
 ## Embedded Video Stats
@@ -207,4 +236,22 @@ analytics to see how your viewers are interacting with the content.
 
 [Read up on Wistia viewing stats and analytics]({{ '/embedded-video-analytics' | post_url }}).
 
-**If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!**
+## Troubleshooting Embed Issues
+Embedding can be tough! If you're stuck, check out the [Embed Troubleshooting]({{ '/embed-troubleshooting' | post_url }}) documentation.
+
+If something seems fishy on Wistia's side of things, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!
+
+<script src="//fast.wistia.com/assets/external/embed_shepherd-v1.js"></script>
+<script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
+<script>
+  wistiaEmbeds.onFind(function(video) {
+    if (video.hashedId() == 'j3a6v2cblf') {
+      video.addPlugin('playWhenVisible', {
+        src: '//fast.wistia.com/labs/play-when-visible/plugin.js',
+        outsideIframe: true
+      });
+    }
+  });
+</script>
+
+
