@@ -17,7 +17,7 @@ Instead of "popping over" the rest of the page in a lightbox, does your video ta
 
 <a href="//fast.wistia.net/embed/iframe/9oee4njvs1?popover=true"><img src="https://embed-ssl.wistia.com/deliveries/3277caba75e6b99c184b4546a1b240133bb47158.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
 
-This can happen when the popover script, `fast.wistia.com/assets/external/popover-v1.js"`, has either been removed from the page, or is unable to function properly due to a conflict with other code. Check the page source to make sure that script is present. If it's there but your video still isn't quite _popping_, [send us a link](http://wistia.com/support/contact) and we'll help you figure it out!
+This can happen when the popover script, `fast.wistia.com/assets/external/popover-v1.js`, has either been removed from the page, or is unable to function properly due to a conflict with other code. Check the page source to make sure that script is present. If it's there but your video still isn't quite _popping_, [send us a link](http://wistia.com/support/contact) and we'll help you figure it out!
 
 ## Black bars on the top and bottom or sides of the video
 
