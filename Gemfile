@@ -16,6 +16,7 @@ gem 'rack-rewrite', '~> 1.5.0'
 gem 'unicorn'
 
 group :test do
+  gem 'psych', '~> 2.0.6'
   gem 'rspec', '~> 2.13.0'
   gem 'rack-test', '~> 0.6.2'
   gem 'rb-fsevent', '~> 0.9.1'
