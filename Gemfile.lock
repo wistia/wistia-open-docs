@@ -66,6 +66,7 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    psych (2.0.6)
     pygments.rb (0.5.2)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
@@ -133,6 +134,7 @@ DEPENDENCIES
   json
   nokogiri (~> 1.5.5)
   pry (~> 0.9.12.6)
+  psych (~> 2.0.6)
   rack-rewrite (~> 1.5.0)
   rack-test (~> 0.6.2)
   rb-fsevent (~> 0.9.1)
