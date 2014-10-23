@@ -38,7 +38,7 @@ There are three types of inline embed code types: [iframe](#iframe_embed), [API]
 
 The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
 
-{% wistia_embed hashed_id: cgj76ev158 %}
+<iframe src="//fast.wistia.net/embed/iframe/cgj76ev158" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="730" height="411"></iframe>
 
 An iframe is an HTML element that lets you display content from one webpage in a special box on another page. Think of it as a cut-out box on a piece of paper. If you cut a rectangle into one page and place another page behind it, it will look like all of the content is right there in the main page:
 
