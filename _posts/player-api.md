@@ -159,7 +159,7 @@ widthchange   | width                   | Fired when the width of the embed code
 
 To get you making video magic as fast as possible, here are some examples of
 common JavaScript player API projects. We have also moved many of the more
-involved examples over to our [demobin](http://wistia.github.com/demobin) for
+involved examples over to our [Demobin](http://wistia.github.com/demobin) for
 your review.
 
 ### Start Video Playback at a Specific Time
