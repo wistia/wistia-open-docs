@@ -34,7 +34,7 @@ The **player color** should reflect your branding, to encourage more consistency
 your viewer's experience.
 
 Finally - you can choose whether visitors to the video page will have the
-option to [leave comments]('#disable-comments').
+option to [leave comments](#disable_comments).
 
 {{ "Changes to the thumbnail won't apply to popover embeds without re-embedding due to them referencing the exact image that was the thumbnail when you embedded the video." | note }}
 
