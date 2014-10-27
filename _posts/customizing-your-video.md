@@ -28,7 +28,7 @@ video. Let's walk through the customization options, along with some of the
 The *Appearance* options are about getting your video looking *sharp*.
 
 Make sure the **thumbnail** is the one you want (we choose one for you from the middle
-of the video by default, so you may want to [change it]('#changing-the-thumbnail')).
+of the video by default, so you may want to [change it](#changing_the_thumbnail)).
 
 The **player color** should reflect your branding, to encourage more consistency in
 your viewer's experience.
