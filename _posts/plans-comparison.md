@@ -59,7 +59,7 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 <span class='category'>Collaboration Tools</span>  |  |  |  |
 [Invite additional managers]({{ '/account-setup#adding__removing_managers' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Filter out internal stats]({{ '/account-setup#filtering_out_internal_stats' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Advanced Marketing Automation System Integrations]({{ '/integrations' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+Advanced [HubSpot]({{ '/hubspot' | post_url }}) & [Pardot]({{ '/pardot' | post_url }}) Integrations  | &#8211; | &#8211; | &#10003; | &#10003;
 
 
 
