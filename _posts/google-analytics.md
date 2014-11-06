@@ -2,7 +2,7 @@
 title: Google Analytics
 layout: post
 category: Integrations
-post_intro: <div class="post_image intro_image float_right"><img src="https://embed-ssl.wistia.com/deliveries/da85542f62701762023c8a73ab86e7968ee66022/googleanalytics.jpg" width="400px" alt="google-analytics2" /></div><p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic 'video play' stats in Google Analytics can give you a better picture of your web visit metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
+post_intro: <div class="post_image intro_image float_right"><img src="https://embed-ssl.wistia.com/deliveries/d58a3c905ae6da99e9c159ecce888e47cea56aeb.jpg" width="400px" alt="google-analytics2" /></div><p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic 'video play' stats in Google Analytics can give you a better picture of your web visit metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
 description: Learn how to use Wistia and Google Analytics together to track video plays.
 footer: 'for_intermediates'
 
@@ -93,7 +93,9 @@ what's possible.
 
 ## Making analytics work with Google Tag Manager
 
-[Google Tag Manager](http://www.google.com/tagmanager/) is a tool created by the folks over at Google to more easily manage what data you're tracking, and to ease the burden of tweaking a bunch of code on a bunch of web pages to alter what sort of data you're tracking. Because that system is very different from the above workflows, there's some extra work involved in setting this up to work with Google Tag Manager.
+[Google Tag Manager](http://www.google.com/tagmanager/) is a tool created by the folks over at Google to more easily manage what data you're tracking without having to tweak code constantly to do so. 
+
+Tag Manager is quite different from simply setting up Google Analytics or Universal Analytics, and as such requires a few extra steps to make it happen.
 
 In a basic sense, Google Tag Manager wraps everything in a container and doesn't allow the video to send messages directly to Google Analytics and instead requires the events be sent to a data layer in-between the video and GA.
 
@@ -116,7 +118,7 @@ Depending on how many types of events you have in your installation, you may see
 
 {% post_image hashed_id: '31f49a31653f2f827e57e1de9f1c7325e1f9d05b', width: 730, class: 'float_right' %} 
 
-In here, you'll see a list of the events available to you, which are the things that we push using the stuff we covered earlier. There are some defaults included, but here's where your custom events would also appear if you configured any.
+In here, you'll see a list of the events available to you, which are the things that we push using the stuff we covered earlier. There are some defaults included, but here's where your custom events would also appear if you configured any. The default events are: played, 25% watched, 50% watched, 75% watched, 100% watched, and conversion.
 
 {% post_image hashed_id: 'a1699c22a42332d8bcf09555a19b3febf0e9f3db', width: 730, class: 'float_right' %} 
 
