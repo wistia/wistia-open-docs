@@ -2,7 +2,7 @@
 title: Google Analytics
 layout: post
 category: Integrations
-post_intro: <div class="post_image intro_image float_right"><img src="https://embed-ssl.wistia.com/deliveries/da85542f62701762023c8a73ab86e7968ee66022/googleanalytics.jpg" width="400px" alt="google-analytics2" /></div><p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic 'video play' stats in Google Analytics can give you a better picture of your web visit metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
+post_intro: <div class="post_image intro_image float_right"><img src="https://embed-ssl.wistia.com/deliveries/d58a3c905ae6da99e9c159ecce888e47cea56aeb.jpg" width="400px" alt="google-analytics2" /></div><p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic 'video play' stats in Google Analytics can give you a better picture of your web visit metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
 description: Learn how to use Wistia and Google Analytics together to track video plays.
 footer: 'for_intermediates'
 
@@ -91,25 +91,42 @@ You can extend what we've done here to pipe many more events to Google
 Analytics if you like. Take a look at the [Player API]({{ '/player-api' | post_url }}) to see
 what's possible.
 
+## Making analytics work with Google Tag Manager
+
+[Google Tag Manager](http://www.google.com/tagmanager/) is a tool created by the folks over at Google to more easily manage what data you're tracking without having to tweak code constantly to do so. 
+
+Tag Manager is quite different from simply setting up Google Analytics or Universal Analytics, and as such requires a few extra steps to make it happen.
+
+In a basic sense, Google Tag Manager wraps everything in a container and doesn't allow the video to send messages directly to Google Analytics and instead requires the events be sent to a data layer in-between the video and GA.
+
+The change is to move from using the GA within Tag Manager to using a Custom HTML Tag within Tag Manager where you paste the GA code. This allows the video to talk with GA directly.
+
+Here's an example of what that looks like within your Tag Manager installation:
+
+{% post_image hashed_id: 'cd392eb254c7539f46d4a0118c40e4cc06112b35', width: 730, class: 'float_right' %} 
+
+
 ## Track viewing in Google Analytics Dashboard
 
 Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Analytics Dashboard.
 
-{% post_image hashed_id: 'd65c31e1c319b67c41664711dc64faa2cd92078b', width: 620, class: 'float_right' %} 
+The first step is to navigate to the Event Tracking section. Click the "Behavior" area of the left hand nav bar, and then select "Events" from the list. The Events section will show the total number of events, the average number of events per visit, and the Top Events. The easiest way to get to the specific stuff is by the "Top Events" view, pictured below.
 
-The first step is to navigate to the Event Tracking section.  Click the "Behavior" area of the left hand nav bar, and then select "Event Tracking" from the list.  The Event Tracking section will show the total number of events, the average number of events per visit, and the Top Events.  Select "Categories" to see just the video events.
+{% post_image hashed_id: '3bde9a976530cdf76ccfc8f6b60687ed9b032e9d', width: 730, class: 'float_right' %} 
 
-{% post_image hashed_id: '95e8b116efde2bb9f055e6b50af5a7d8c3f6e816', width: 620, class: 'float_right' %} 
+Depending on how many types of events you have in your installation, you may see a lot of things here. By default all ours use the "Video" type, so let's look into that category of events.
 
-The "Categories" events will now contain a "Video" section, which you defined in the Javascript earlier.  Click "video" to drill into the specific event descriptions.
+{% post_image hashed_id: '31f49a31653f2f827e57e1de9f1c7325e1f9d05b', width: 730, class: 'float_right' %} 
 
-{% post_image hashed_id: '9833481aa5a9e6a38c077c7cd365518248e87b65', width: 620, class: 'float_right' %} 
+In here, you'll see a list of the events available to you, which are the things that we push using the stuff we covered earlier. There are some defaults included, but here's where your custom events would also appear if you configured any. The default events are: played, 25% watched, 50% watched, 75% watched, 100% watched, and conversion.
 
-The "Video" section page will show the total number of plays and the total number of complete plays, which we defined in separate Javascript functions earlier. Click on "Play" or "Complete" to see the plays or completes for a specific video (if you have started tracking multiple videos through UA or GA).
+{% post_image hashed_id: 'a1699c22a42332d8bcf09555a19b3febf0e9f3db', width: 730, class: 'float_right' %} 
 
-{% post_image hashed_id: '6617f95f699a9e84a28d25e33ea199c0219a5158', width: 620, class: 'float_right' %} 
+Let's take a look at the data for the "play event" for this case. You'll see here that this data comes in the form of video titles, which is a way to see in your analytics dash which of your videos got events for being played (the same is true for the other events). Below is an example of what that looks like.
 
-The final drill down shows what specific video titles (defined in the javascript function above) were played.
+{% post_image hashed_id: '1ef890a9af475643ea37b1bd048a7574ef589dee', width: 730, class: 'float_right' %} 
 
-Using Wistia and Google Analytics is a good way to get all your top-level video analytics data in the same place you already get your other website tracking information.
+Using Wistia and Google Analytics is a good way to get all your top-level video analytics data in the same place you already get your other website tracking information. The screenshots above may not be _exactly_ like you see, since there are a few different versions of Google Analtics, Universal Analytics, etc.
+
+
 
