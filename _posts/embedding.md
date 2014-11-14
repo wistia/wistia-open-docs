@@ -47,14 +47,14 @@ An iframe is an HTML element that lets you display content from one webpage in a
 Here's an example Wistia iframe embed code:
 
 {% codeblock iframe_example.html %}
-<iframe src="//fast.wistia.net/embed/iframe/cgj76ev158" 
+<iframe src="//fast.wistia.net/embed/iframe/es7g1ii56j" 
 allowtransparency="true" frameborder="0" scrolling="no" 
 class="wistia_embed" name="wistia_embed" allowfullscreen 
 mozallowfullscreen webkitallowfullscreen oallowfullscreen 
 msallowfullscreen width="640" height="388"></iframe>
 {% endcodeblock %}
 
-The `<iframe> ... </iframe>` part there is what tells a person's web browser, _"Hey! Let's show some content from another web page here!"_ It then pulls in the content from [`fast.wistia.net/embed/iframe/cgj76ev158`](http://fast.wistia.net/embed/iframe/cgj76ev158), identified in the `src` (or "source") attribute, and displays it in a box with the dimensions specified by the `width` and `height` attributes.
+The `<iframe> ... </iframe>` part there is what tells a person's web browser, _"Hey! Let's show some content from another web page here!"_ It then pulls in the content from [`fast.wistia.net/embed/iframe/es7g1ii56j`](http://fast.wistia.net/embed/iframe/es7g1ii56j), identified in the `src` (or "source") attribute, and displays it in a box with the dimensions specified by the `width` and `height` attributes.
 
 When you insert an iframe embed code like that into a webpage, the video will display inline as seen above.
 
@@ -103,15 +103,15 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
 Let's check out an example API embed code:
 
 {% codeblock api_example.html %}
-<div id="wistia_8v4v86fl7l" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<div id="wistia_iigvmw8e2a" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 <script>
-wistiaEmbed = Wistia.embed("8v4v86fl7l");
+wistiaEmbed = Wistia.embed("iigvmw8e2a");
 </script>
 {% endcodeblock %}
 
 
-An API embed code works by first creating a blank rectangular box on the page (that's the `<div ...> ... </div>` element at the top), and then executing a script that puts a video into the box. The script knows which div to put the video in, because the hashed ID passed into `Wistia.embed` matches the ID assigned to the `div` – in the example above, `8v4v86fl7l`.
+An API embed code works by first creating a blank rectangular box on the page (that's the `<div ...> ... </div>` element at the top), and then executing a script that puts a video into the box. The script knows which div to put the video in, because the hashed ID passed into `Wistia.embed` matches the ID assigned to the `div` – in the example above, `iigvmw8e2a`.
 
 The API embed code is extensively configurable. For more detail on using API embed codes, check out the [Player API documentation]({{ '/player-api' | }}).
 
@@ -140,7 +140,7 @@ with your video inside, like this:
 Here's an example popover embed code:
 
 {% codeblock popover_example.html %}
-<a href="//fast.wistia.net/embed/iframe/eidfyzff5k?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
+<a href="//fast.wistia.net/embed/iframe/o3x7owvb7l?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 {% endcodeblock %}
 
@@ -148,7 +148,7 @@ The popover embed code has three components:
 
 * Either a piece of text or an image. In the example above, this automatically generated thumbnail image: 
 `https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169`
-* Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/eidfyzff5k?popover=true`
+* Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/o3x7owvb7l?popover=true`
 * A script, `fast.wistia.com/assets/external/popover-v1.js`, which causes the link to open in a popover lightbox instead of opening as a separate page
 
 
