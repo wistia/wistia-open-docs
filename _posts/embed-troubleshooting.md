@@ -71,3 +71,5 @@ This can happen for the same reason as "[Video not displaying on mobile devices]
     });
   });
 </script>
+
+<script src="//fast.wistia.net/labs/fresh-url/v1.js" async></script>
