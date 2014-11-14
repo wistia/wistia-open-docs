@@ -20,6 +20,7 @@ Monthly Price         | Free      | $25/mo          | $100/mo   | $300+/mo
 Monthly Bandwidth     | 200GB/mo   | 200GB/mo        | 200GB/mo  | 1TB+/mo
 Extra Bandwidth Price | &#8211;  | $0.33/GB        | $0.33/GB  | [starts at $0.18/GB](http://wistia.com/pricing/highvolume)
 Total Video Count     | 50 | unlimited       | unlimited | unlimited
+Number of Users       | 1 | 1 | unlimited | unlimited
 Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 <span class='category'>Core Video Player Features</span> |    |   |   |
 [Player and controls customization]({{ '/customizing-your-video#appearance' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
