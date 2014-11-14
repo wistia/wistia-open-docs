@@ -38,7 +38,7 @@ There are three types of inline embed code types: [iframe](#iframe_embed), [API]
 
 The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
 
-<iframe src="//fast.wistia.net/embed/iframe/cgj76ev158" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="730" height="411"></iframe>
+<iframe src="//fast.wistia.net/embed/iframe/fw1qhcu1vx" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="730" height="411"></iframe>
 
 An iframe is an HTML element that lets you display content from one webpage in a special box on another page. Think of it as a cut-out box on a piece of paper. If you cut a rectangle into one page and place another page behind it, it will look like all of the content is right there in the main page:
 
@@ -66,7 +66,7 @@ If you have a video in your account already, trying generating an iframe embed c
 
 Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your own custom functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
 
-<div id="wistia_8v4v86fl7l" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
+<div id="wistia_zhvmbbowqp" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
 
 <script src="/doc/raptorize/jquery.js"></script>
@@ -74,14 +74,14 @@ Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' |
 
 <script>
 (function($) {
-  wistiaEmbedSME = Wistia.embed("8v4v86fl7l");
+  wistiaEmbedSME = Wistia.embed("zhvmbbowqp");
   function onFirstEnd() {
     wistiaEmbedSME.unbind('end', onFirstEnd);
     wistiaEmbedSME.bind('play', onSecondPlay);
   }
   function onSecondPlay() {
     wistiaEmbedSME.unbind('play', onSecondPlay);
-    $("#wistia_8v4v86fl7l").raptorize({
+    $("#wistia_zhvmbbowqp").raptorize({
       enterOn: "timer",
       delayTime: 2,
       raptorImage: "/doc/raptorize/raptor.png",
@@ -120,7 +120,7 @@ The API embed code is extensively configurable. For more detail on using API emb
 
 The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website. 
 
-{% wistia_embed hashed_id: d93se4je75 %}
+{% wistia_embed hashed_id: 8gyuqtj6hr %}
 
 Certain aspects of your video (like the [thumbnail image]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}) and [captions]({{ '/captions' | post_url }})) will be hard-coded into the text of your SEO embed code so search engines can find that information and use it to improve the search results. For this reason, it's important to follow a specific process when using an SEO embed code. Be sure to review the [Video SEO documentation]({{ '/video-seo' | post_url }}) if you're getting started with video SEO.
 
@@ -132,7 +132,7 @@ of the main content on your page. You can launch a popover video with either a
 text link or thumbnail image link. When clicked, that link will open a lightbox
 with your video inside, like this:
 
-<a href="//fast.wistia.net/embed/iframe/eidfyzff5k?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
+<a href="//fast.wistia.net/embed/iframe/f1vvtyo4mn?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 
 {{ "Popover embeds cannot be used for video SEO purposes. [Google generally will not index them](https://support.google.com/webmasters/answer/34445?hl=en), because they're not really **on** the page – they're in front of it!" | note }}
