@@ -28,8 +28,6 @@ By default, Turnstile will only ask people to enter an email address. "But Wisti
 
 To enable the First Name and Last Name fields, select the "Ask for First and Last Name" option right there in the Turnstile section of Customize. You'll instantly see an updated preview of Turnstile on your video.
 
-{{ "Note: Your viewers' first names and last names will _not_ be displayed in your Wistia stats. Those get passed on directly to your email list in your email marketing service. For details on setting up an email provider integration, read onwards!" | note }}
-
 ## Set Up Your Email Provider Integration
 
 Once enabled, a video using Turnstile will automatically track the emails entered 
