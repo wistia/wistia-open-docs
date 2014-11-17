@@ -32,24 +32,20 @@ To enable the First Name and Last Name fields, select the "Ask for First and Las
 
 ## Set Up Your Email Provider Integration
 
-{% post_image hashed_id: "73af93a7120e830cdc02912871b2ea4ed353cf6c", class: 'center' %}
-
 Once enabled, a video using Turnstile will automatically track the emails entered 
 by your viewers in [Wistia analytics]({{ '/embedded-video-analytics' | post_url}}),
 but it is most powerful when connected to your favorite email provider.
 
-To set up the connection, first open your [Account Dashboard]({{ '/account-setup#open_your_account_dashboard' | post_url }}).
+To set up the connection, open your [Account Dashboard]({{ '/account-setup#open_your_account_dashboard' | post_url }}) and head to the *Email Integrations* section.
 
-Find the *Setup an Email Provider* option.
+{{ "In order to access the Account Dashboard, you will need to be logged in as the Owner of the account." | note }}
 
-{{ "In order to access the Integrations area, you will need to be logged in as the Owner of the account." | note }}
-
-{% post_image hashed_id: "b286fc2ece8b1cf5898b8bf7b274e315522f505d", class: 'center' %}
+{% post_image hashed_id: "11f3f7ed85895f893cb77c593cd9aa7eb8462fad", class: 'center' %}
 
 Select your provider from the list, and select <span
 class="faux_button">Configure</span>. For this example, we will be using Emma.
 
-{% post_image hashed_id: "a5bcdfb0e55cc4fb608a8300c3903d2afc3aa39d", class: 'center' %}
+{% post_image hashed_id: "db5bd91cf2e3ff05efdc90ac67a21c9476e2e91f", class: 'center' %}
 
 Each provider needs a different set of information - you can see what info is
 required on the configuration page. Emma, for example, requires the following
