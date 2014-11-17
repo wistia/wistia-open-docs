@@ -19,7 +19,7 @@ Oh, and creating an email campaign including a Wistia video with Campaign Monito
 
 The first step is choosing the video you'd like to show off in your campaign.
 
-Start by embedding the video on the landing page you'll be using (or, if you're having it point to your Wistia Media Page, you're all set).  Follow the embedding steps if you have any trouble: [Embedding Your Video]({{ '/public-sharing' | post_url }}).
+Start by embedding the video on the landing page you'll be using (or, if you're having it point to your Wistia Media Page, you're all set).  Follow the embedding steps if you have any trouble: [Embedding Your Video]({{ '/embedding' | post_url }}).
 
 ----
 
