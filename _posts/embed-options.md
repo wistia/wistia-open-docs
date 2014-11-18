@@ -5,7 +5,6 @@ layout: post
 title: Embed Options and Plugins
 description: Learn more about the embed options and plugins available for your embedded videos.
 category: Developers
-temper: true
 ---
 
 Embed options and Plugins are useful when building an embed code or customizing your embeds

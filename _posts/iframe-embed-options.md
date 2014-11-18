@@ -6,7 +6,6 @@ title: Iframe Embed Options
 description: Learn how to use deeply nested options in your iframe embeds.
 post_intro: "<p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p>"
 category: Developers
-temper: true
 ---
 
 Before going on, note that <strong>we do not advise you to use this
