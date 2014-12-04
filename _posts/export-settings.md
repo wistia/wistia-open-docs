@@ -43,8 +43,8 @@ The largest resolution we create is 720p, or *1280px by 720px*.  If you upload a
 
 Derivative | Bitrate
 -----------|---------
-1280px wide HD | 2,000 kbps
-960px wide MD | 1,000 kbps
+1280px wide HD | 2,500 kbps
+960px wide MD | 1,200 kbps
 640px wide SD | 700 kbps
 iPhone | 800 kbps
 HD iPhone (for iPad3) | 1,200 kbps
