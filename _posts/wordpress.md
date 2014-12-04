@@ -3,7 +3,7 @@ title: WordPress &amp; Wistia
 layout: post
 category: Integrations
 description: WordPress is one of the most popular blog/website platforms out there, and Wistia videos work quite well in the WordPress environment.
-post_intro: <p>WordPress is a wonderful platform that you can use to create powerful websites, but it can sometimes strip out important parts of Wistia embed codes. Foruntately, there's an easy fix for that!</p> <p>To use Wistia and WordPress together in harmony, check out the <a href="#the_wistia_wordpress_plugin">Wistia WordPress plugin</a>. </p>
+post_intro: <p>WordPress is a wonderful platform that you can use to create powerful websites, but it can sometimes strip out important parts of Wistia embed codes. Fortunately, there's an easy fix for that!</p> <p>To use Wistia and WordPress together in harmony, check out the <a href="#the_wistia_wordpress_plugin">Wistia WordPress plugin</a>. </p>
 ---
 
 {{ "Wistia embed codes can only be used with WordPress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between WordPress.com hosted blogs and WordPress.org installs</a>." | note }}
