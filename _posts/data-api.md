@@ -1620,3 +1620,7 @@ Using the Data API or [oEmbed endpoint]({{ '/oembed' | post_url }}), you can obt
 You can also extract thumbnails from a video by modify the URL of that video 
 asset. Pretty sneaky, right? Here's how to do it: 
 [Extracting Thumbnails]({{ '/extracting-thumbnails' | post_url }})
+
+### SSL
+
+If you have an asset that's served over HTTP and you'd like to get it served over HTTPS instead, you'll need to change the subdomain from `embed` to `embed-ssl`. We  use different subdomains for SSL and non-SSL assets because they're sometimes served through different CDNs for performance reasons.
