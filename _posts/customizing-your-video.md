@@ -55,7 +55,7 @@ Below is a quick screencast to show you the thumbnail update moves.
 
 {% wistia_embed hashed_id: oo6cr5kz8p %}
 
-## Disable Comments
+## Turn off Comments
 
 {% post_image hashed_id: '22e89f019b63d4c71b84843aad9f5e5c418b1857', class: 'center' %}
 
@@ -63,7 +63,7 @@ By default, viewers of your content will be able to leave comments. To disable
 this functionality, open the Customize panel, and under the Appearance tab,
 un-check the *Enable comments* checkbox.
 
-To disable comments across all videos, see the 
+To disable comments across all videos, see the
 [project defaults](#set_project_defaults) section.
 
 ## Controls
