@@ -90,8 +90,10 @@ class TheApp < Sinatra::Base
       }
     end
 
+    results = { results: results }
+
     if params[:callback]
-      "#{params[:callback]}(#{results.to_json});"
+      "#{params[:callback]}(#{results.to_json})"
     else
       results.to_json
     end
