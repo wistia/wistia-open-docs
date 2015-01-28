@@ -38,7 +38,7 @@ In the Account Dashboard, click the *Embed Settings* option - this contains an I
 
 {% post_image hashed_id: 'cfe898a99193efcdbd57809e89967e022da3769b', width: 600, class: 'center' %}
 
-{{ "Activitating IP filtering will not remove any historical data – it will, however, keep your activity from getting tracked in the stats going forward." | note }}
+{{ "Activating IP filtering will not remove any historical data – it will, however, keep your activity from getting tracked in the stats going forward." | note }}
 
 
 ---
