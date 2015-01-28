@@ -90,7 +90,11 @@ class TheApp < Sinatra::Base
       }
     end
 
-    results.to_json
+    if params[:callback]
+      "#{params[:callback]}(#{results.to_json});"
+    else
+      results.to_json
+    end
   end
 
   # TODO: Properly re-initialize the server.
