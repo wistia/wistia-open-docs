@@ -6,3 +6,4 @@ _config.local.rb
 .pygments-cache/
 .tddium*
 .bundle/
+.idea/*
