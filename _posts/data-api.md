@@ -756,7 +756,7 @@ Field     |  Description
 id  | A unique numeric identifier for the media within the system.
 name  | The display name of the media.  
 type | A string representing what type of media this is. Values can be **Video**, **Audio**, **Image**, **PdfDocument**, **MicrosoftOfficeDocument**, **Swf**, or **UnknownType**.  
-status | [Post upload processing status](#post_processing_status). There are four statuses: **queued**, **processing**, **ready**, and **failed**. 
+status | [Post upload processing status](#media_status). There are four statuses: **queued**, **processing**, **ready**, and **failed**. 
 progress (if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.  
 section | The title of the section in which the media appears. This attribute is omitted if the media is not in a section (default).
 thumbnail | An object representing the thumbnail for this media. The attributes are **URL**, **width**, and **height**.  
@@ -1620,3 +1620,7 @@ Using the Data API or [oEmbed endpoint]({{ '/oembed' | post_url }}), you can obt
 You can also extract thumbnails from a video by modify the URL of that video 
 asset. Pretty sneaky, right? Here's how to do it: 
 [Extracting Thumbnails]({{ '/extracting-thumbnails' | post_url }})
+
+### SSL
+
+If you have an asset that's served over HTTP and you'd like to get it served over HTTPS instead, you'll need to change the subdomain from `embed` to `embed-ssl`. We  use different subdomains for SSL and non-SSL assets because they're sometimes served through different CDNs for performance reasons.

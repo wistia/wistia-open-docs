@@ -63,7 +63,11 @@ If you have a video in your account already, trying generating an iframe embed c
 
 ### API Embed
 
-Want to spice up your embed with [Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your own custom functionality with the [Player API]({{ '/player-api' | }})? You and the API embed code type should be friends. 
+Want to spice up your embed with
+[Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your
+own custom functionality with the
+[Player API]({{ '/player-api' | post_url}})? You and the API embed code type
+should be friends.
 
 <div id="wistia_zhvmbbowqp" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>

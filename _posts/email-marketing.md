@@ -199,18 +199,19 @@ Constant Contact | `$SUBSCRIBER.EMAIL$`
 Emailvision  |  `[EMV FIELD]EMAIL[EMV /FIELD]`
 Emma  | `[[email]]`
 GetResponse  |  `[email]`
-Hubspot  | {`{ contact.email }`}
+Hubspot  | `{ contact.email }`
 iContact  |  `[email]`
 Infusionsoft  |  `~Contact.Email~`
 Mad Mimi | `(email)`
 MailChimp  |  `*|URL:EMAIL|*`
-Marketo  |  {`{lead.Email Address:default=noemail}`}
-Ontraport | {`[E-mail]`}
+Marketo  |  `{lead.Email Address:default=noemail}`
+Ontraport v2.4 | `[E-mail]`
+Ontraport v3.0+ | `[Email]`
 Pardot  |  `%%email%%`
 Vertical Response  |  `{EMAIL_ADDRESS}`
 ExactTarget  |  `%%Email Address%%`
 Convio Luminate | `[[S1:primary_email]]`
-Streamsend | `{`{`{email_address}`}`}`
+Streamsend | `{email_address}`
 INinbox | `##email##`
 SendGrid | [see more](#email_merge_tags_with_sendgrid)
 

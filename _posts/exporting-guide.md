@@ -71,12 +71,12 @@ you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 ## Adobe Premiere Pro
 
 To export a video from Adobe Premiere Pro for use in Wistia, place your video 
-clip in the Premiere timeline. Choose *File &gt; Export &gt; Adobe Media Encoder*. 
+clip in the Premiere timeline. Choose *File &gt; Export &gt; Media*. 
 
 The Export Settings window will appear. 
 
-Choose QuickTime from the Format drop-down menu. Click OK. Choose a filename and 
-location. Your video will be saved to your computer as a MOV file which you can 
+Choose H.264 from the Format drop-down menu. Click OK. Choose a filename and 
+location. Your video will be saved to your computer as an MP4 file which you can 
 then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ---

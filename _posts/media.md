@@ -67,7 +67,7 @@ Watch the video to see Move & Copy in action.
 
 ### Moving Videos Between Accounts
 
-If you are an admin on multiple accounts, the *Move & Copy panel* will allow
+If you are an Account Owner or Manager on multiple accounts, the *Move & Copy panel* will allow
 you to move media to other accounts. For videos with stats, however, the stats
 will not transfer between accounts.
 
