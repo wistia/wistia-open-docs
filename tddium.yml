@@ -1,5 +1,0 @@
-:tddium:
-  :hooks:
-    :worker: bundle exec jekyll build
-  :elasticsearch:
-    :version: '0.19'
