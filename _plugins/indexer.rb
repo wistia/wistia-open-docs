@@ -34,7 +34,8 @@ module Jekyll
         port: 9200
       )
 
-      Dir["/users/maxschnur/Wistia/wistia-doc/_posts/*.md"].each do |post_path|
+      root_dir = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+      Dir["#{root_dir}/_posts/*.md"].each do |post_path|
         post_body = File.read(post_path)
 
         split_post = post_body.split("---\n")
