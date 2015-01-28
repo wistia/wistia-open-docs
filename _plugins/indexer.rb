@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'nokogiri'
-require 'tire'
+require 'elasticsearch'
 
 # Adapted from https://raw.github.com/PascalW/jekyll_indextank/master/indexer.rb && 
 #              https://github.com/jaysoo/jaysoo.ca/blob/master/_plugins/indexer.rb
@@ -12,10 +12,6 @@ module Jekyll
 
     def initialize(config = {})
       super(config)
-
-      Tire.configure do
-        url config['elasticsearch_host']
-      end
     end
 
 
@@ -32,31 +28,37 @@ module Jekyll
               select{ |post| post.data['category'] != exclude_from_search }.
               map { |post| hash_for_post(post) }
 
-      Tire.index 'posts' do
+      elasticsearch = Elasticsearch::Client.new(
+        log: true,
+        host: '127.0.0.1',
+        port: 9200
+      )
 
-        # clear 'em all
-        delete
+      Dir["/users/maxschnur/Wistia/wistia-doc/_posts/*.md"].each do |post_path|
+        post_body = File.read(post_path)
 
-        # some config stuff
-        create :mappings => {
-          :post => { 
-            :properties => {
-              :id           =>  { type: 'integer', index: 'not_analyzed', include_in_all: false },
-              :title        =>  { type: 'string', analyzer: 'snowball', boost: '2.0' },
-              :text         =>  { type: 'string', analyzer: 'snowball' },
-              :description  =>  { type: 'string', analyzer: 'snowball', boost: '1.5' } 
-            } 
-          } 
-        }
+        split_post = post_body.split("---\n")
+        metadata = split_post[1]
+        parsed_metadata = YAML.load(metadata)
+        real_body = split_post[2]
+        post_id = File.basename(post_path, '.*')
 
-        # add all posts to index
-        import all_posts
+        real_body.gsub!(/\{\%.*?\%\}/, '') if real_body
+        real_body.gsub!(/\{\{.*?\}\}/, '') if real_body
 
-        # stay cool
-        refresh 
+        elasticsearch.index(
+          body: {
+            title: parsed_metadata['title'],
+            category: parsed_metadata['category'],
+            url: "/#{$config.basepath}/#{post_id}",
+            description: parsed_metadata['description'],
+            body: real_body
+          },
+          id: post_id,
+          index: 'docs',
+          type: 'post'
+        )
       end
-
-      puts 'done!'
 
     rescue Errno::ECONNREFUSED => e
       puts "elasticsearch isn't running FYI you idiot"

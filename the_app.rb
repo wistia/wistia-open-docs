@@ -4,6 +4,7 @@
 
 require 'pp'
 require 'rack/rewrite'
+require 'elasticsearch'
 require_relative './_config'
 
 # fix so foreman gets logging
@@ -57,35 +58,39 @@ class TheApp < Sinatra::Base
 
   use SuperStatic
 
-  get "/search/:q" do
-    q = params[:q]
+  get '/search/:q' do
+    text = params[:q]
 
-    q.gsub!("_", " ")
+    text.gsub!('_', ' ')
 
-    s = Tire.search 'posts' do
-      query do
-        string q
-      end
-    end
+    query = {
+      query: {
+        fuzzy_like_this: {
+          fields: ['body', 'title', 'url', 'description', 'category'],
+          like_text: text
+        }
+      }
+    }
 
-    Tire.configure do
-      logger 'elasticsearch.log'
-    end
 
-    results_list = s.results.map do |result|
+    elasticsearch = Elasticsearch::Client.new(
+      log: true,
+      host: '127.0.0.1',
+      port: 9200
+    )
+    result = elasticsearch.search(index: 'docs', body: query)
+
+    hits = (result['hits'] && result['hits']['hits']) or []
+
+    results = hits.map do |hit|
       {
-        :title => result.title,
-        :url => result.url,
-        :description => result.description
+        title: hit['_source']['title'],
+        description: hit['_source']['description'],
+        url: hit['_source']['url'],
       }
     end
-    
-    result = { :results => results_list }.to_json
-    if params[:callback]
-      "#{params[:callback]}(#{result});"
-    else
-      result
-    end
+
+    results.to_json
   end
 
   # TODO: Properly re-initialize the server.
