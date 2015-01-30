@@ -27,16 +27,14 @@ Before you can perform the OAuth protocol, you need to register an oauth
 application with us. By doing this, your users will be able to verify that
 your app is genuine, and that they authorize whatever permissions you request.
 
-1. Go to Account > Account Dashboard.
-2. Click API to launch the API Settings modal.
-3. Click the "register your app" link at the bottom. This opens the OAuth
-   Applications page.
-4. Go to Actions > New Application.
-5. Enter a name, a brief description, a Redirect URI (also known as a
+1. Go to Account > Settings.
+2. Click the Oauth Applications tab in the sidebar.
+3. Click on New Application.
+4. Enter a name, a brief description, a Redirect URI (also known as a
    Callback URL in some circles), and Permissions for your app.
    These can be changed later, so don't fret too much over them. Click Save.
-6. Your app should now be visible in the list of OAuth Applications.
-7. Click the name of your app, or Edit, to get credentials and update your
+5. Your app should now be visible in the list of OAuth Applications.
+6. Click the name of your app, or Edit, to get credentials and update your
    app's information.
 
 

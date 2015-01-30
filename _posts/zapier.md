@@ -21,7 +21,7 @@ Here's what you'll need:
 
 ### Getting Your Accounts Ready
 
-To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Dashboard -> API Access.
+To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Settings -> API tab.
 
 ### Integrating Wistia and Zapier
 
@@ -56,7 +56,7 @@ Here's what you need:
  
 ### Getting Your Accounts Ready
 
-To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Dashboard -> API Access.
+To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Settings -> API tab.
 
 For Google Docs, you'll want to create the spreadsheet that will hold your leads. Make sure that there are column headers in Row 1, and that there's data under the column headers in Row 2.  Check out [this link](https://zapier.com/help/how-setup-your-google-spreadsheet-work-zapier/) for more on setting up your spreadsheet with Zapier.
 
@@ -98,7 +98,7 @@ Here's what you need:
 
 ### Getting Your Accounts Ready
 
-To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Dashboard -> API Access.
+To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Settings -> API tab.
 
 ### Integrating Wistia with Salesforce
 
@@ -134,7 +134,7 @@ Here's what you'll need:
 
 ### Getting Your Accounts Ready
 
-To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Dashboard -> API Access.
+To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Settings -> API tab.
 
 ### Integrating Wistia and Gmail
 

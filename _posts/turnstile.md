@@ -34,11 +34,11 @@ Once enabled, a video using Turnstile will automatically track the emails entere
 by your viewers in [Wistia analytics]({{ '/embedded-video-analytics' | post_url}}),
 but it is most powerful when connected to your favorite email provider.
 
-To set up the connection, open your [Account Dashboard]({{ '/account-setup#open_your_account_dashboard' | post_url }}) and head to the *Email Integrations* section.
+To set up the connection, open your [Account Settings]({{ '/account-setup#open_your_account_setings' | post_url }}) and head to the *Email Integrations* section.
 
-{{ "In order to access the Account Dashboard, you will need to be logged in as the Owner of the account." | note }}
+{{ "In order to access the Account Settings, you will need to be logged in as the Owner of the account." | note }}
 
-{% post_image hashed_id: "11f3f7ed85895f893cb77c593cd9aa7eb8462fad", class: 'center' %}
+{% post_image hashed_id: "f4bfd58d7cc4ea18b91853449931b8dc0efcbbf3", class: 'center' %}
 
 Select your provider from the list, and select <span
 class="faux_button">Configure</span>. For this example, we will be using Emma.

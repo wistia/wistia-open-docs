@@ -9,7 +9,7 @@ post_intro: <p>Each contact in your Wistia account has a set of permissions.</p>
 
 ## Owner-Level Permissions
 
-The Owner of the Wistia Account has the highest permissions of any user.  There is only one Owner-level Contact on each Account, which can be set from the "Settings" screen of the Account Dashboard.
+The Owner of the Wistia Account has the highest permissions of any user.  There is only one Owner-level Contact on each Account, which can be set from the "Account" tab of the Account Settings.
 
 Owners have access to anything a manager or contact does, but in addition, they can:
 

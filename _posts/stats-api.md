@@ -595,7 +595,7 @@ heatmap you would like to see. You can get the `<event-key>` value from
 other parts of this API or from the Wistia player itself.
 
 Make sure you also provide your account's `<public_token>` as a parameter. You 
-can find your `<public_token>` by clicking on **API** in your Account Dashboard.
+can find your `<public_token>` by clicking on **API** in your Account Settings.
 
 This URL is meant to be used as the target of an iframe which can then be used 
 to render the heatmap within your own pages.

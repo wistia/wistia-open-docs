@@ -66,10 +66,10 @@ Add the JavaScript snippet above to the *Site Footer HTML* area, as shown in the
 
 {% post_image hashed_id: "d6166e343c3cebdda782d3b8a8370a8d782d9a90", class: 'center' %}
 
-Open your [Account Dashboard]({{ '/account-setup#open_your_account_dashboard' | post_url }}),
+Open your [Account Settings]({{ '/account-setup#open_your_account_settings' | post_url }}),
 and select *Setup An Email Provider*.
 
-{{ "Just as a reminder, only the Account Owner can open the Dashboard" | note }}
+{{ "Just as a reminder, only the Account Owner can open the Account Settings" | note }}
 
 {% post_image hashed_id: "1a41347bfeb5390f3ed666167b39b751e565fe2b", class: 'center' %}
 

@@ -13,7 +13,7 @@ post_intro: <p><a href="http://wistia.com">Wistia</a> is a video hosting solutio
 
 #### Creating and Managing Access Tokens
 
-When your Wistia account is created, a master token will automatically be geneated for you account, which you can find in the _API Access_ area of your [_Account Dashboard_]({{ '/account-setup' | post_url }}). This master token has full read/write permissions on your account. You can generate additional access tokens with various permissions right there as well. Huzzah!
+When your Wistia account is created, a master token will automatically be geneated for you account, which you can find in the _API_ tab of your [_Account Settings_]({{ '/account-setup' | post_url }}). This master token has full read/write permissions on your account. You can generate additional access tokens with various permissions right there as well. Huzzah!
 
 {% post_image hashed_id: '4416c4e4205d1e1048fb48a887691e3d1adb9157', class: 'center' %}
 
