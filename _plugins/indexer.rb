@@ -51,7 +51,7 @@ module Jekyll
           body: {
             title: parsed_metadata['title'],
             category: parsed_metadata['category'],
-            url: "/#{$config.basepath}/#{post_id}",
+            url: "#{$config.basepath}/#{post_id}",
             description: parsed_metadata['description'],
             body: real_body
           },
