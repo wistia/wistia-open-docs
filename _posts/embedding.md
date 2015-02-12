@@ -19,7 +19,7 @@ Fun Fact: Even _after_ you embed a video on your website, you can make changes t
 
 An **embed code** is a snippet of code that you can use to add content (like a video!) to a web page. When a person visits your website, their web browser will interpret the embed code as a set of instructions to display your video on the page.
 
-Wistia embed codes come in a few flavors, and they each are great for different purposes. The best type of embed code to get started with is an [iframe embed](#iframe_embed). For more advanced embedding, check out the [API](#api_embed), [SEO](seo_embed), and [popover](popover_embed) embed code types.
+Wistia embed codes come in a few flavors, and they each are great for different purposes. The best type of embed code to get started with is an [iframe embed](#iframe_embed). For more advanced embedding, check out the [API](#api_embed), [SEO](#seo_embed), and [popover](#popover_embed) embed code types.
 
 To generate an embed code for your video, start by selecting the *Embed & Share* option under the <span class='action_menu'>Video Actions</span> menu from your video's page in Wistia. That will open the Embed & Share screen, where you can choose from one of several embed code types and set the dimensions (in pixels) for your video: 
 
