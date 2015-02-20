@@ -39,8 +39,9 @@ The video description can help set context to your video or link viewers to your
 The description will also be passed through to services 
 like Facebook ([see more on social sharing]({{ '/social-sharing' | post_url }})).
 
-You can type plain text into the markdown field or you can use markdown to style the text or put images or links into
-your description. Clicking the link "Formatting with Markdown" will open a guide explaining more about markdown. 
+You can type plain text into the description field or you can use markdown to style the text and put 
+images or links into your description. Clicking the link "Formatting with Markdown" 
+will open a guide explaining more about markdown. 
 
 {{ "Embedding elements via HTML in video descriptions is currently not recommended and can cause issues with the page displaying." | note }} 
 

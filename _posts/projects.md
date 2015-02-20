@@ -32,29 +32,26 @@ Projects. Choosing one from the drop-down will create a duplicate of the Project
 The title of the Project is how you will find it in your Account. By default,
 the title is *Untitled Project*, but that's not what you want!
 
-{% post_image hashed_id: '9dcd74438c70331a580f16a2f9c7d6e102899c48', class: 'center' %}
+{% post_image hashed_id: 'cbce9f0535fb89126b318d20db60d6bc338014d0', class: 'center' %}
+
+To edit the title, hover over it with your mouse, and click the
+Edit button. Edit the title text, and click the Save button at the bottom of the form
+to finish editing.
 
 Changing the title of the Project won't affect embed codes or links, either.
 
-To edit the title, hover over it with your mouse, and click the
-<span class="edit_tag">&nbsp;</span> tag. Edit the title text, and press the
-`return` key to finish editing.
-
 ## Add a description to your Project
 
-{% post_image hashed_id: '61046a0f8885a423432827723d15b0c5ea65e274', class: 'center' %}
 
-The space to add a description to your Project is just under the title. Move
-your mouse under the title, and click the *Add a Description* text that
-appears.
+To add a description to your project, hover over the project title,
+and click the Edit button that appears. Add your description text
+to the second field in the form and click Save to publish your changes.
 
-A new description element will now show up below the title. Start typing to add
-your description.
+{% post_image hashed_id: '654501f8da59ccbbe89e0cb9d1dc8744e995a434', class: 'center' %}
 
-{% post_image hashed_id: '9248c99096631f71e6721cf29a96a5a39a85e6d1', class: 'center' %}
-
-When you are finished, click <span class="faux_button">SAVE</span> and your
-changes will be viewable by all.
+You can type plain text into the description field or you can use markdown to style the text 
+and put images or links into your description. Clicking the link "Formatting with Markdown" 
+will open a guide explaining more about markdown. 
 
 ## Sharing Access to Projects
 
