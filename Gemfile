@@ -14,6 +14,7 @@ gem 'sass', '~> 3.2'
 gem 'sinatra', '~> 1.3.3'
 gem 'rack-rewrite', '~> 1.5.0'
 gem 'unicorn'
+gem 'rake'
 
 group :test do
   gem 'psych', '~> 2.0.6'
