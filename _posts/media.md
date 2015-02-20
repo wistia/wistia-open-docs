@@ -22,11 +22,27 @@ the title is the name of the media you uploaded, but can be updated anytime
 (doesn't have to be set before uploading). Changing the title of the video won't
 affect embed codes or links, either.
 
-{% post_image hashed_id: 'ef21edd3c495688fb104d461e202109812afce5a', class: 'center' %}
+{% post_image hashed_id: '96baa9af41a004daabe3376ccb28e5e0790f925f', class: 'center' %}
 
 To edit the title, hover over it with your mouse, and click the 
-<span class="edit_tag"></span> tag. Edit the title text, and press the 
-<span class="code">return</span> key to finish editing.
+Edit button. Edit the title text, and press the Save button at the bottom of the form.
+
+## Video Description
+
+Adding or editing your video description is done in the same way that you edit the title.
+Hover your mouse over the Media title and click the Edit button. Add a description 
+in the second field of the form and click the Save button to submit your changes.
+
+{% post_image hashed_id: 'ee71741ced9ef389792fb9a0489d922959ae790d', class: 'center' %}
+
+The video description can help set context to your video or link viewers to your homepage or another video. 
+The description will also be passed through to services 
+like Facebook ([see more on social sharing]({{ '/social-sharing' | post_url }})).
+
+You can type plain text into the markdown field or you can use markdown to style the text or put images or links into
+your description. Clicking the link "Formatting with Markdown" will open a guide explaining more about markdown. 
+
+{{ "Embedding elements via HTML in video descriptions is currently not recommended and can cause issues with the page displaying." | note }} 
 
 ## Change the Thumbnail
 
@@ -100,43 +116,30 @@ time in the video.  The timecode is captured and stored with the comment such
 that when another user views the comment, they can click on the time code, the 
 video will skip directly to the point in the video where the comment was made.
 
-{% post_image hashed_id: '05da00993fead0c4d20ab2914f415ee4200d7e87', class: 'center' %}
+{% post_image hashed_id: 'f26b3184c9e982fd383a4f6498d760d7431a7109', class: 'center' %}
 
 ### How to make a timecoded comment
 
 To make a timecoded comment, pause the video at the time to which you wish the 
-comment to be linked.  Then, simply check the box next to the Post Comment button 
+comment to be linked.  Then, simply check the box below the text field 
 which says *Link comment to current time in video*.
 
 Once the box is checked and the comment has been written, click the 
 <span class="faux_button">Post comment</span> and your comment will be saved.
 
-{% post_image hashed_id: '98a66b9660a799dc284bcf3d0b97f8b4c7bc9176', class: 'center' %}
+{% post_image hashed_id: 'e3f557e99d74f221e806d97772e257b359dab2fa', class: 'center' %}
 
 ### Delete Comment
 
-To delete comments, hover over the comment you'd like to delete, and the trash
-can icon will appear. Select the trash can to remove the comment permanently.
+To delete comments, hover over the comment you'd like to delete, and click
+the Delete button to remove the comment permanently.
 
-{% post_image hashed_id: '53ca66ac5b6fb55713c9b3b274be578c9f3fd59e', class: 'center' %}
+{% post_image hashed_id: 'f169174d471ec77cae3451c44872421ade294efb', class: 'center' %}
 
 ### Disable Comments
 
 Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video#disable_comments' | post_url }}) 
 covers this in further detail.
-
-## Video Description
-
-To add a description to your video, hover your mouse under the Media title.
-Click the *Add a Description* text that appears.
-
-{% post_image hashed_id: '7123835d053afbb27a3408f292348575f5dfe8f6', class: 'center' %}
-
-Descriptions are most helpful for sharing links to view video in your Wistia
-account (where viewers need additional context). Your video description will
-also be passed through to services like Facebook ([see more on social sharing]({{ '/social-sharing' | post_url }})).
-
-{{ "Embedding elements via HTML in video descriptions is currently not recommended and can cause issues with the page displaying." | note }} 
 
 ## Replace Your Video
 
