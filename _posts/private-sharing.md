@@ -103,7 +103,7 @@ Now that you have invited some viewers in to view your private content, it's
 time to see if they actually watched!  This is especially helpful for reviews
 and approvals and training or educational content.
 
-{% post_image hashed_id: '86e39f1df9b0f303ffe02f55e2f1b39f38f46315', class: 'center' %}
+{% post_image hashed_id: '70e3ae974308c831aac30ad9979aa6056d3bf43a', class: 'center' %}
 
 To view the individual user statistics for people you invited into Wistia,
 select the *User sessions* option under the *Stats* tab at the top of any page
