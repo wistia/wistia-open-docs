@@ -9,7 +9,7 @@ category: Analytics
 
 ----
 
-{% post_image hashed_id: 'ae3b054854debbdfb5249ee42b11184d3c6a1b39', width: 320, class: 'float_right' %} 
+{% post_image hashed_id: 'b6676aa1ad4f127311313aa53c7c7441985603c6', width: 600, class: 'center' %} 
 
 
 Audience Engagement Graphs show how the audience as a whole has viewed your video, whereas heatmaps show how an individual watched your video. 
