@@ -322,6 +322,14 @@ markup, we've seen videos get indexed without the need for a sitemap. While the
 sitemap is still considered a *best practice*, it is no longer a must-have for
 Video SEO.
 
+### Can I use popover (lightbox) or playlist embeds?
+
+At this time, we don't provide search engine optimized embed codes for the
+popover (lightbox) or playlist player types. We made that decision because in
+our tests it seemed required for the Google bots to have direct access to the
+video on the page, and immediately accessible to the visitor, in order to reap
+the benefits of video on page rankings.
+
 ### Is hosting my video sitemap with Wistia ok? Will Google accept it?
 
 **Yes.** Google has made cross-submission support via a robots.txt file an
