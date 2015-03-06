@@ -361,27 +361,6 @@ See the full demo on our
 
 ---
 
-### Creating HTML5-only Embed Codes
-
-Every single Wistia embed code type automatically supports HTML5 when it
-detects a device that requires it (ie. iPhones, iPads).  There is no extra work
-needed - standard HTML embed codes will work on your iOS device out-of-the-box.
-
-That being said, there are (potentially) some instances where HTML5 only is
-advisable. This is easy using the playerPreference parameter:
-
-`&playerPreference=html5`
-
-So a full HTML5 player embed code would look like this:
-
-<code class="full_width">&lt;iframe
-src="http://fast.wistia.net/embed/medias/e71f9baf4d?playerPreference=html5"
-width="960" height="450" frameborder="0"&gt;&lt;/iframe&gt;</code>
-
-HTML5 player instances are still controllable through the normal Player API
-methods.
-
----
 
 ### Set the background of your video to transparent
 
