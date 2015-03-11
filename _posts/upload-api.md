@@ -26,13 +26,6 @@ standard form-url encoded **POST** to **https://upload.wistia.com/**.
 Imported media will always require some processing time, which varies depending
 on the file size and connection speed.
 
-## There's a Gem For That
-
-To make using the Upload API even easier, we created a [Ruby
-gem](https://github.com/wistia/wistia-uploader) that lets you use it via the
-command line! Even if you're not a Ruby developer, you can use this command line
-tool for uploading to Wistia.
-
 ## Authentication
 
 * All upload requests must use **SSL** (*https://*, not *http://*).
@@ -62,19 +55,26 @@ contact_id    | A Wistia contact id, an integer value. If omitted, it will defau
 
 ## Examples
 
+cURL (http://curl.haxx.se/) is a great way to try out the Upload API and an
+excellent method of uploading files to Wistia via the command line.
+
 **Uploading a media file with cURL**
 
 <code class="full_width">$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/</code>
 
-We expect a multipart/form-data POST to the server, with both **file** and
-**api_password** params.
+We expect a `multipart/form-data` POST to the server, with both `file` and
+`api_password` parameters. Feel free to tack on additional parameters, like
+`name` and `project_id`:
+
+<code class="full_width">$ curl -i -F api_password=&lt;YOUR_API_PASSWORD&gt; -F name=&lt;NAME&gt; -F project_id=&lt;PROJECT_ID&gt; -F file=@&lt;LOCAL_FILE_PATH&gt; https://upload.wistia.com/</code>
+
 
 **Importing a media file via URL with cURL**
 
 <code class="full_width">$ curl -i -d "api_password=&lt;YOUR_API_PASSWORD&gt;&amp;url=&lt;REMOTE_FILE_PATH&gt;" https://upload.wistia.com/</code>
 
 We expect an `application/x-www-form-urlencoded` POST to the server, with both
-**url** and **api_password** params.
+` url` and `api_password` params.
 
 ### Using the OAuth2 Access Token
 
@@ -169,3 +169,9 @@ def post_video_to_wistia(name, path_to_video)
   return response
 end
 {% endcodeblock %}
+
+### There's a Gem For That
+
+To make using the Upload API even easier, we created a [Ruby
+gem](https://github.com/wistia/wistia-uploader) that lets you use it via the
+command line!
