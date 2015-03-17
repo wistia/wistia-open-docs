@@ -37,7 +37,7 @@ First, create a Page View Tag:
 
 Then, create an Event Trigger Tag:
 
-{% post_image hashed_id: '1cc502d1677b7559594fb3eb535332e46fd18814', width: 730, class: 'float_right' %}
+{% post_image hashed_id: '705b009cf2041e12ba3001fd56f90ad73c2e314c', width: 730, class: 'float_right' %}
 
 Lastly, add a Firing Rule to the Event Trigger Tag:
 
