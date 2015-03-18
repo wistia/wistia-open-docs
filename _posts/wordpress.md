@@ -6,16 +6,13 @@ description: WordPress is one of the most popular blog/website platforms out the
 post_intro: <p>WordPress is a wonderful platform that you can use to create powerful websites, but it can sometimes strip out important parts of Wistia embed codes. Fortunately, there's an easy fix for that!</p> <p>To use Wistia and WordPress together in harmony, check out the <a href="#the_wistia_wordpress_plugin">Wistia WordPress plugin</a>. </p>
 ---
 
-{{ "Wistia embed codes can only be used with WordPress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between WordPress.com hosted blogs and WordPress.org installs</a>." | note }}
-
+{{ "WordPress.com sites now work easily with Wistia! We're a default oEmbed provider, so it's as simple as pasting the media URL of your video. Check out their documentation <a href='https://en.support.wordpress.com/videos/wistia/'>here</a>. Wahoo!" | note }}
 
 ## The Wistia WordPress Plugin
 
 With the [Wistia WordPress Plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed, you can add your embed codes to posts and they will be protected by the mighty _anti-mangler_. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background as <a href="//fast.wistia.net/embed/iframe/yr4ecy1p28?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">a silent guardian</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>.
 
 The Wistia WordPress plugin also adds support for [Wistia oEmbed URLs](#using_an_oembed_url) to WordPress. For more information about how that works, see this guide from the WordPress documentation: [Embeds in WordPress](http://codex.wordpress.org/Embeds).
-
-{{ "If you'd love to see Wistia included as an oEmbed provider in WordPress by default, please let our friends at WordPress know!" | tip }}
 
 
 ## Using an oEmbed URL
