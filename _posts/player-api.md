@@ -49,22 +49,9 @@ As an example, if the following JS code is executed, the video will start to pla
 
 ### Using iframes and the Player API
 
-There is a script that can be used to access the player API from
-outside the iframe. It has the same interface as the normal player API,
-but with the caveat that it won't work in IE7 and below (it won't break
-anything, it just doesn't work). If you aren't too concerned with outdated
-browsers, this is the recommended way to access the player API.
+If you're using an [iframe embed]({{ '/embedding#iframe_embed' | post_url }}), you can access the API by getting the `wistiaApi` property from the iframe element.
 
-Put the following anywhere in the HTML document:
-
-{% codeblock wistia_js.js %}
-<script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
-{% endcodeblock %}
-
-{{ "The iframe-api script should be placed after all the iframe embeds on your page (ie near the bottom). Once it has run, all Wistia iframes on the page will have the `wistiaApi` property." | note }}
-
-Now you can access the API by getting the `wistiaApi` property from the iframe element.
-You can assign an ID to each wistia iframe so you can get an easy handle to it.
+By assigning an ID to each wistia iframe, you can get an easy handle to it.
 Take a look:
 
 {% codeblock wistia_js.js %}
