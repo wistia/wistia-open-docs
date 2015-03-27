@@ -74,6 +74,11 @@ The API has a rate limit at 100 requests per minute.  If there are more than
 with HTTP `error 503 Service Unavailable` and the Retry-After HTTP header will
 be set with a number of seconds to wait before trying again.
 
+"But Wistia!" you ask, "What _counts_ as an API request?" Excellent question,
+friend. You're only working towards that 100 requests/minute limit when you 
+submit an HTTP request to `upload.wistia.com` or `api.wistia.com`. Simply 
+accessing a media asset (like a `.bin` file) does not count.
+
 
 ## Paging and Sorting Responses
 
