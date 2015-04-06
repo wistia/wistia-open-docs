@@ -66,7 +66,7 @@ Posting a video on an Expression Engine page can be accomplished using any embed
 
 {% post_image hashed_id: '5bc3046a0b10664ef4c5bc96b4cd18ad3c056215', width: 200, class: 'integration_logo' %}
 
-With Wistia and Squarespace, embedding a video is as easy as pasting in your embed codes.
+With Wistia and Squarespace, embedding a video is as easy as pasting in your URL.
 
 <a href="{{ '/squarespace' | post_url }}">Get the details on how it all works.</a>
 
