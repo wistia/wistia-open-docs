@@ -13,9 +13,7 @@ post_intro: "<p>The Wistia video player has a JavaScript API which supports a nu
 ## Using the API
 
 It is possible to access the JavaScript API using any embed type: *API*, *SEO*,
-or *iframe*. If you are using iframe embeds, you will need to insert the
-[iframe player API script](#using_iframes_and_the_player_api) at the bottom of 
-your page.
+or *iframe*.
 
 If you are also looking to construct embed codes, refer to
 the [construct an embed code]({{ '/construct-an-embed-code' | post_url }})
