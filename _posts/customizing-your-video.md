@@ -305,12 +305,6 @@ A: Management of captions and transcriptions is now all done from within the
 Customize Panel under the [Captions tab](#captions).
 
 
-**Q: What is “Public Preview”?**
-
-A: *Public Preview* allows you to see your video as a viewer would see it when 
-clicking through from a link you may have shared via email, twitter, or Facebook.
-
-
 **Q: You said customizations would show up on Twitter, but what about
 Facebook?**
 
