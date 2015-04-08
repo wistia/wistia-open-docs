@@ -198,18 +198,6 @@ to include them by default.
 If your video does not have captions, you will instead be presented with the
 option to order a transcript or upload your own captions SRT file.
 
-## Public Preview
-
-See that lonely button at the bottom of your Customize Panel? 
-
-Once your video is looking the way you want, the 
-<span class="faux_button">Public Preview</span> button will
-allow you to see the video as your viewers will see it.
-
-Selecting the <span class="faux_button">Public Preview</span> mode will
-temporarily close the customization panel and you will see exactly what your
-viewers will experience on your Wistia page!
-
 ## Advanced Customize Features
 
 There are a few powerful customization features we've added to make consistency
