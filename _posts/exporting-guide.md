@@ -179,9 +179,7 @@ the iMovie Project Library and choose *Share &gt; Export Movie*.
 
 {% post_image hashed_id: 'd9fed1664fce966debccdefec84b9f564a94d6cb', class: 'center' %}
 
-You will be prompted to select the size that you want your video to be exported at.  
-For situations where most users will be viewing the video within your Wistia 
-page, a 'medium size' video will work perfectly.  
+You will be prompted to select the size that you want your video to be exported at. For situations where most users will be viewing the video within your Wistia page, a 'medium size' video will work perfectly.  
 
 If you are confident that most of your viewers will be using higher-speed internet 
 connections, or if you would like to display the video at a larger resolution 
@@ -219,7 +217,7 @@ MOV file which you can then easily [upload]({{ '/upload-video' | post_url }}) to
 
 ## Handbrake
 
-Handbrake is a great free solution for smoothing out problems with weird video files.
+Handbrake is a great, free solution for smoothing out problems with weird video files.
 To export a video for Wistia from Handbrake, click *Source* in the top right 
 corner and select the file that you'd like to convert. Some of the fields will 
 auto-populate. We recommend making sure that:
@@ -232,7 +230,7 @@ auto-populate. We recommend making sure that:
 Then, click "Start" at the top right and your video will begin encoding to the 
 Destination folder you chose!
 
-{% post_image hashed_id: 'f0a6babc82c298496ded58eb218dfc1d5eab0ba4', class: 'center' %}
+{% post_image hashed_id: 'e3fd26ae960a419c75c933421fa22e4aa4fc1fb2', class: 'center' %}
 
 ---
 
