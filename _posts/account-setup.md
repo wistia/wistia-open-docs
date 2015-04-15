@@ -45,7 +45,7 @@ In *Settings*, click the Account tab on the right - this contains an IP filterin
 
 ## Change the Subdomain (URL) of your Wistia Account
 
-By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the account owner. Click the Account tab in *Settings*, and scroll down to find the *Wistia URL* section shown here:
+By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the Account Owner. Click the Account tab in *Settings*, and scroll down to find the *Wistia URL* section shown here:
 
 {% post_image hashed_id: 'd7c990eae0b25edb92baa376a1f1ae658043808a', width: 600, class: 'center' %}
 
@@ -89,7 +89,7 @@ This will show you how much bandwidth you have used, along with your current acc
 
 ## Billing Statements
 
-To see billing statements, you must be logged in as the account owner.
+To see billing statements, you must be logged in as the Account Owner.
 Click the  "Billing" tab in your Account Settings.  This will display a complete history of the payment activity on your account.
 
 {% post_image hashed_id: 'b00b87b48826ed1a31d96b045bf6579a79c3a7b3', width: 600, class: 'center' %}
