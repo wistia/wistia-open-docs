@@ -300,7 +300,7 @@ Create a new project in your Wistia account.
 Parameter Name  | Description
 ----------------|--------------
 name (required) | The name of the project you want to create (*required*).  
-adminEmail | The email address of the person you want to set as the owner of this project.  Defaults to the Wistia account owner.
+adminEmail | The email address of the person you want to set as the owner of this project.  Defaults to the Wistia Account Owner.
 anonymousCanUpload (optional) | A flag indicating whether or not anonymous users may upload files to this project.  Set to “1” to enable and “0” to disable.
 anonymousCanDownload (optional) | A flag indicating whether or not anonymous users may download files from this project.  Set to “1” to enable and “0” to disable.  
 public (optional) | A flag indicating whether or not the project is enabled for public access.  Set to “1” to enable and “0” to disable.
@@ -440,7 +440,7 @@ The person you specify must be a manager in the account.
 
 Parameter Name   | Description
 -----------------|----------------
-adminEmail (optional) | The email address of the account manager that will be the owner of the new project.  Defaults to the account owner if invalid or omitted.
+adminEmail (optional) | The email address of the account manager that will be the owner of the new project.  Defaults to the Account Owner if invalid or omitted.
 
 #### The Response
 
