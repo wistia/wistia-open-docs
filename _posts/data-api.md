@@ -436,11 +436,11 @@ Copy a project, including all media and sections.
 #### Parameters
 
 You can specify the owner of the new project by passing an optional parameter.  
-The person you specify must be a manager in the account.
+The person you specify must be a Manager in the account.
 
 Parameter Name   | Description
 -----------------|----------------
-adminEmail (optional) | The email address of the account manager that will be the owner of the new project.  Defaults to the Account Owner if invalid or omitted.
+adminEmail (optional) | The email address of the account Manager that will be the owner of the new project.  Defaults to the Account Owner if invalid or omitted.
 
 #### The Response
 

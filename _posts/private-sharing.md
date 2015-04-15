@@ -75,13 +75,13 @@ To disable access to your project through the link, set the sharing level to
 
 {% post_image hashed_id: 'b7f77d7e188bc953dfd491ae12d9476ee44f5c2c', class: 'center' %}
 
-Wistia accounts include permissions and access controls for managers, to set
+Wistia accounts include permissions and access controls for Managers, to set
 who can view media and what they can view.  To manage permissions for contacts
 on a Project, click the *Sharing and Privacy* option under Project Actions. 
 
-The share screen shows which users currently have access to the Project, and what permissions they have.  From here, managers can add permissions like:
+The share screen shows which users currently have access to the Project, and what permissions they have.  From here, Managers can add permissions like:
 
-*  **Admin**, which gives the user manager-level permissions for that
+*  **Admin**, which gives the user Manager-Level permissions for that
    particular Project.
 *  **Upload**, which allows the viewer to upload new content.
 *  **Download**, which allows the viewer to download content.

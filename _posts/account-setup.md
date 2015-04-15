@@ -110,12 +110,12 @@ After updating your credit card, you can check to make sure that your recent pay
 
 ## Adding & Removing Managers
 
-From your *Account Settings*, click the "Managers" tab on the sidebar. To add a manager, enter the new manager's
+From your *Account Settings*, click the "Managers" tab on the sidebar. To add a Manager, enter the new Manager's
 email address into the text box and click <span class="faux_button">ADD AS MANAGER</span>.
 
 {% post_image hashed_id: 'd9c181f32c331c7aa16a98632025f0ebca9c916b', width: 600, class: 'center' %}
 
-To remove existing managers, click *Remove* next to their email address in the Current Managers list.
+To remove existing Managers, click *Remove* next to their email address in the Current Managers list.
 
 ---
 
@@ -132,9 +132,9 @@ To access those credentials for your account, select the API tab from your *Acco
 ## Transferring Ownership of Your Account
 
 If you need to set someone else up as the owner of your account, the first step
-is to [add them as a manager](#adding__removing_managers).
+is to [add them as a Manager](#adding__removing_managers).
 
-Once the new owner is a manager (or maybe they already were, you are so sneaky
+Once the new owner is a Manager (or maybe they already were, you are so sneaky
 efficient!), select the *Account* tab in your Account Settings.
 
 {% post_image hashed_id: 'aa398787f771bec9d8d92b4a566f364da6bcbf44', class: 'center' %}
