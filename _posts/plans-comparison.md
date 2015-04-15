@@ -3,7 +3,7 @@ title: Plans Comparison
 layout: post
 plans_comparison: true
 category: Getting Set Up
-description: Compare Wistia plans, their feature sets, and choose the one that is right for you on the plans comparison page.
+description: Compare Wistia plans and their feature sets; choose the one that is right for you on the plans comparison page.
 post_intro: |
   <p>The primary difference between Wistia pricing plans is the
   features they include. The table below lists the features on each plan, so

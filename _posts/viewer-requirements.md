@@ -3,7 +3,7 @@ title: Wistia Video Viewing Requirements
 layout: post
 category: Getting Set Up
 description:
-  Wistia videos work pretty much everywhere on the web, and if you want to
+  Wistia videos work pretty much everywhere on the web, but if you want to
   double check this is the right place to look!
 post_intro:
   <p>As you begin to add Wistia-hosted video to your marketing materials, you
