@@ -13,7 +13,7 @@ task :pre_jekyll do
 
   print "  Getting the Official Wistia Header/Footer ... "
   system %{
-    wget -q -O _includes/header.html http://wistia.com/common/header;
+    wget -q -O _includes/header.html http://wistia.com/common/navigation.html;
     wget -q -O _includes/footer.html http://wistia.com/common/footer
   }
   puts "done."
