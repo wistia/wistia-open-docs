@@ -11,7 +11,8 @@ post_intro: <p>We know just enough to be dangerous about most video export softw
 
 There are three ways to export video for use on Wistia from Final Cut Pro: 
 
-* using QuickTime conversion, using Compressor as a standalone application, or 
+* using QuickTime conversion, 
+* using Compressor as a standalone application, or 
 * sending from Final Cut Pro to Compressor.
 
 ### Using QuickTime conversion
@@ -33,9 +34,9 @@ Here's a quick guide from Chris on exporting in FCP using Quicktime conversion:
 
 To use Compressor as a standalone application, you must first create a QuickTime 
 movie file to submit to Compressor. Since this will only be a temporary 
-intermediate file, we recommend creating a QuickTime reference movie, which can 
-be created quicker and takes up less space than a standard QuickTime movie 
-because the video refers to your sequence's original media files when possible 
+intermediate file, we recommend creating a QuickTime reference movie. These can 
+be created quicker and takes up less space than a standard QuickTime movie; 
+the video refers to your sequence's original media files when possible, 
 instead of storing all of the media in the file itself. However, since this file 
 simply references other media stored on your computer, it will not work on other
 computers that don't have all the required media.
@@ -141,8 +142,7 @@ Click *Next*, and save the file in a useful location.
 
 If you are adding your After Effects export back into an editor like Avid or 
 Final Cut (our normal workflow), match the native sequence settings you are using 
-in your edit.  
-Make sure you match codec (*ProRes, ProRes LT, HDV*), frame size (*1920x1080, 1440x1080*), 
+in your edit. Make sure you match codec (*ProRes, ProRes LT, HDV*), frame size (*1920x1080, 1440x1080*), 
 and frame rate (*24, 23.98, 29.97*).
 
 If you are exporting out of After Effects for upload to Wistia, 
