@@ -27,32 +27,6 @@ Wistia automatically publishes the basic video metrics listed below to your Goog
 
 You can disable our integration for all your videos by default by changing the configuration on the Account Settings page. You can also disable the integration for an individual video by modifying the initialization parameter for an API embed: `Wistia.embed("8cexf3sjf3", { "googleAnalytics": false });`.
 
-## Google Tag Manager
-
-If you also use [Google Tag Manager](http://www.google.com/tagmanager/) in addition Google Analytics, there are a few extra steps you need to complete. Tag Manager acts as a middleman in front of the webpage and doesn't allow any videos to send data directly to Google Analytics. In order for Wistia to publish events to Google Analytics, data must be sent to a data layer managed by Tag Manager. Then, this data layer uses two Tags in your Tag Manager account to publish events to Google Analytics.
-
-First, create 3 Data Layer Variable Macro:
-
-{% post_image hashed_id: '6160bbe4c6542ebd2b2ebe8478e08ea00f91a049', width: 730, class: 'float_right' %}
-
-{% post_image hashed_id: '89dbbb7acbd2b210b2c97cad5666c1c2cdd9b6bf', width: 730, class: 'float_right' %}
-
-{% post_image hashed_id: 'eb1ac9c9edfde0ac664973de2b4bd5ba0a133f52', width: 730, class: 'float_right' %}
-
-Then, create a Page View Tag:
-
-{% post_image hashed_id: '0176d75819d8b4940f01376bbf2196d137a914a5', width: 730, class: 'float_right' %}
-
-Then, create an Event Trigger Tag:
-
-{% post_image hashed_id: '705b009cf2041e12ba3001fd56f90ad73c2e314c', width: 730, class: 'float_right' %}
-
-Lastly, add a Firing Rule to the Event Trigger Tag:
-
-{% post_image hashed_id: '829bde1ea63cf7d1c626f6506b780673de845399', width: 730, class: 'float_right' %}
-
-The tracking parameters are: `wistiaEventCategory`, `wistiaEventAction`, `wistiaEventlabel`, and the Firing Rule event is `wistiaTriggerEvent`. Make sure you label the event tracking parameters with the exact spelling and capitalization. Once you've completed the above steps, video metrics should publish directly to your Google Analytics account through Tag Manager.
-
 ## Track viewing in Google Analytics Dashboard
 
 Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Analytics Dashboard.
