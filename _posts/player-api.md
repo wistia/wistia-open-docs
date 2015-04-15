@@ -13,9 +13,7 @@ post_intro: "<p>The Wistia video player has a JavaScript API which supports a nu
 ## Using the API
 
 It is possible to access the JavaScript API using any embed type: *API*, *SEO*,
-or *iframe*. If you are using iframe embeds, you will need to insert the
-[iframe player API script](#using_iframes_and_the_player_api) at the bottom of 
-your page.
+or *iframe*.
 
 If you are also looking to construct embed codes, refer to
 the [construct an embed code]({{ '/construct-an-embed-code' | post_url }})
@@ -49,22 +47,9 @@ As an example, if the following JS code is executed, the video will start to pla
 
 ### Using iframes and the Player API
 
-There is a script that can be used to access the player API from
-outside the iframe. It has the same interface as the normal player API,
-but with the caveat that it won't work in IE7 and below (it won't break
-anything, it just doesn't work). If you aren't too concerned with outdated
-browsers, this is the recommended way to access the player API.
+If you're using an [iframe embed]({{ '/embedding#iframe_embed' | post_url }}), you can access the API by getting the `wistiaApi` property from the iframe element.
 
-Put the following anywhere in the HTML document:
-
-{% codeblock wistia_js.js %}
-<script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
-{% endcodeblock %}
-
-{{ "The iframe-api script should be placed after all the iframe embeds on your page (ie near the bottom). Once it has run, all Wistia iframes on the page will have the `wistiaApi` property." | note }}
-
-Now you can access the API by getting the `wistiaApi` property from the iframe element.
-You can assign an ID to each wistia iframe so you can get an easy handle to it.
+By assigning an ID to each wistia iframe, you can get an easy handle to it.
 Take a look:
 
 {% codeblock wistia_js.js %}
@@ -110,21 +95,23 @@ wistiaJQuery(document).bind("wistia-popover-close", function() {
 
 Method                  | Description
 ------                  | -----------
-bind(event, function)   | This lets you execute a function when a video event occurs. `event` expects a string. Refer to the _Player API Events_ section below to see possible values.
+bind(event, fn)   | This lets you execute a function when a video event occurs. `event` expects a string. Refer to the _Player API Events_ section below to see possible values.
 duration()              | Returns the length of the video in seconds
 email(email)            | Associates the email string with this view of the video.
+embedded(fn)            | A video's markup can be injected into the page before the video is ready to be played. If you have code that should run after the video exists on the page, use embedded(). This is fired after hasData() but before ready().
+hasData(fn)             | Before a video is embedded, information about the media like its name, duration, and assets are fetched from Wistia. Functions called via hasData() are guaranteed to be run only after this data has been fetched. This is fired before embedded().
 hashedId()              | Returns the hashedId of the video
 height()                | Gets the current height of the embed (the video plus any plugins above or below).
 height(h)               | Sets the height of the embed. The video will be resized to fit with the plugins fully visible.
 name()                  | Returns the name of the video
 pause()                 | This causes the video player to pause the video if it is currently playing.
 play()                  | This causes the video player to start (or continue playing from a paused state) playing the video.
-ready(function)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.
+ready(fn)         | This method is only necessary for advanced use cases. It lets you run a function as soon as the video is loaded and ready to be played.
 remove()                | Removes the video from the page and cancels any asynchronous operations.
 state()                 | This returns the current state of the video player: "beforeplay", "ended", "playing", "paused".
 time()                  | This returns the viewer's current position in the video (in seconds).
 time(t)                 | This causes the video player to seek to time specified by the ''t'' parameter (in seconds).
-unbind(event, function) | Lets you remove a previously binded function from an event. If function is not specified, all bindings for the event will be removed.
+unbind(event, fn) | Lets you remove a previously binded function from an event. If function is not specified, all bindings for the event will be removed.
 videoHeight()           | Gets the current height of the video, excluding any plugins.
 videoHeight(h)          | Sets the height of the video. The height of the embed will be automatically resized to fit the plugins.
 videoWidth()            | Gets the current width of the video, excluding any plugins.
