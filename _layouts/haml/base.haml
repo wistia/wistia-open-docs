@@ -21,6 +21,8 @@
     %script{ type: "text/javascript" } try{Typekit.load();}catch(e){}
     {% endif %}
 
+    %link{href: "//cloud.typography.com/6901872/779304/css/fonts.css", rel: "stylesheet", type: "text/css"}/
+
     :javascript
       var basepath = "{{ '' | post_url }}";    
   %body{ class: "{{ page.type }}_layout" }
