@@ -71,7 +71,7 @@ and enter your new hostname.
 Once you save, everything should be switched over for you, and you are now
 rocking a custom URL!
 
-{{ "CNAMEing your domain won't change the name in the embed codes. As such, Any links previously shared or videos embedded from your account will still operate as normal. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos." | note }}
+{{ "CNAMEing your domain won't change the name in the embed codes. As such, any links previously shared or videos embedded from your account will still operate as normal. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos." | note }}
 
 ---
 
@@ -123,7 +123,7 @@ To remove existing managers, click *Remove* next to their email address in the C
 
 An API token and password can be used for interacting with the [Wistia APIs]({{ '/developers' | post_url }}), and for setting up 3rd party integrations (like Pardot and HubSpot).
 
-To access those credentials for your account, select the API tab From your *Account Settings*.
+To access those credentials for your account, select the API tab from your *Account Settings*.
 
 
 
