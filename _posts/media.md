@@ -62,14 +62,14 @@ copy and then re-embed).
 called "Active Videos" and another called "Archive". Moving an old video to the
 "Archive" project means you can reference the stats for that video later, but
 it doesn't clutter up the "Active Videos" project. Or maybe we're just
-obsessive compulsive when it comes to organization :).
+persnickety when it comes to organization. :)
 
 {% post_image hashed_id: 'cf7972e5b6055eb26078644ea9a99a40a79d1df2', class: 'center' %}
 
 Select *Move & Copy* from the <span class="action_menu">Project Actions</span>
 menu. This will open up the *Move & Copy panel*.
 
-{{ "You must be an admin on the project to view and open the Move & Copy panel." | note }}
+{{ "You must be an admin on the project to view and open the *Move & Copy panel*." | note }}
 
 {% post_image hashed_id: '2c91018f45702bfc159e5659f5815398d8ffbcc7', class: 'center' %}
 
@@ -157,7 +157,7 @@ created for the original video.
 
 {% post_image hashed_id: '4fdffd1137f199d42da517826c99b7b4142b3e88', class: 'center' %}
 
-Open the video in your account that you want to replacing.
+Open the video in your account that you want to replace.
 
 Select the "Replace Video" option under the *Video Actions* menu.
 
