@@ -201,6 +201,54 @@ If you need more fine-grained control, try binding to the `timechange` event ins
 
 ---
 
+### Pause Other Videos When Another is Played
+
+Don't like the barage of sound that comes from three different videos playing in the same
+page? Sounds like you might need our trusty `pauseAllOthers` function.
+
+{% codeblock wistia_js.js %}
+<div id="wistia_9kksns1ede" class="wistia_embed" style="width:480px;height:270px;">&nbsp;</div>
+<div id="wistia_oh34zbesuh" class="wistia_embed" style="width:480px;height:270px;">&nbsp;</div>
+<div id="wistia_2jvt3wqkye" class="wistia_embed" style="width:480px;height:270px;">&nbsp;</div>
+
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+
+<script>
+wistiaEmbedA = Wistia.embed("9kksns1ede");
+wistiaEmbedB = Wistia.embed("oh34zbesuh");
+wistiaEmbedC = Wistia.embed("2jvt3wqkye");
+</script>
+
+<script>
+// grabs all other embeds on the page and pauses them
+var i;
+function pauseAllOthers(thisId) {
+  for (i = 0; i < wistiaEmbeds.length; i++) {
+    if (wistiaEmbeds[i].hashedId() != thisId) {
+      wistiaEmbeds[i].pause();
+    }
+  }
+}
+// binds pauseAllOthers() to the play() event for every embed
+wistiaEmbeds.onFind(function(video) {
+  video.bind('play', function() {
+    pauseAllOthers(this.hashedId());
+  });
+});
+</script>
+{% endcodeblock %}
+
+
+The `pauseAllOthers` function runs through the array of Wistia embeds on a page and pauses
+everything except for the video currently playing. It does this by comparing the `hashedId` of 
+`wistiaEmbed[i]` to the `hashedId` of the video that just started playing (which the function knows
+as `thisId`).
+
+The second half of the code binds this function to the play event for each video by passing in the 
+`hashedId` of that video. This way, your video doesn't pause the second it's played. Yippee!
+
+---
+
 ### A/B testing videos against each other
 
 Using an API embed code as a template, we can switch out hashed ID's for multiple
