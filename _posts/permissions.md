@@ -9,9 +9,9 @@ post_intro: <p>Each contact in your Wistia account has a set of permissions.</p>
 
 ## Owner-Level Permissions
 
-The Owner of the Wistia Account has the highest permissions of any user.  There is only one Owner-level Contact on each Account, which can be set from the "Account" tab of the Account Settings.
+The Owner of the Wistia Account has the highest permissions of any user.  There is only one Owner-Level Contact on each Account, which can be set from the "Account" tab of the Account Settings.
 
-Owners have access to anything a manager or contact does, but in addition, they can:
+Owners have access to anything a Manager or contact does, but in addition, they can:
 
 *  Check the Stats of Any Project
 *  Monitor the Usage of the Account (bandwidth & storage)
@@ -36,4 +36,4 @@ Managers can:
 
 ## Contact-Level Permissions
 
-"Contacts" must be created by the Account owners or Managers.  The access that contacts have can be limited to viewing a specific Project, and the videos contained therein.  When a contact is created, their access can also include things like the ability to upload new content, download content, and share content.  Contacts are required to create a password to access the system.
+"Contacts" must be created by the Account Owners or Managers.  The access that contacts have can be limited to viewing a specific Project, and the videos contained therein.  When a contact is created, their access can also include things like the ability to upload new content, download content, and share content.  Contacts are required to create a password to access the system.

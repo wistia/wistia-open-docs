@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Importing From a GoPro"
-description: The GoPro is a great way to capture beautiful HD video for your videos. In this guide, we'll walk through how to take video from your GoPro, to your Wistia account.
+description: The GoPro is a great way to capture beautiful HD shots for your videos. In this guide, we'll walk through how to move video from your GoPro to your Wistia account.
 category: Getting Set Up
 post_intro: <p>GoPro is the undisputed king of cool when it comes to consistent content that looks great and communicates a mission.</p><p>In this guide, we'll show you how you can import video from your GoPro into your Wistia account.</p>
 ---

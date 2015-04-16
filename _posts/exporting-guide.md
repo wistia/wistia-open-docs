@@ -11,7 +11,8 @@ post_intro: <p>We know just enough to be dangerous about most video export softw
 
 There are three ways to export video for use on Wistia from Final Cut Pro: 
 
-* using QuickTime conversion, using Compressor as a standalone application, or 
+* using QuickTime conversion, 
+* using Compressor as a standalone application, or 
 * sending from Final Cut Pro to Compressor.
 
 ### Using QuickTime conversion
@@ -33,9 +34,9 @@ Here's a quick guide from Chris on exporting in FCP using Quicktime conversion:
 
 To use Compressor as a standalone application, you must first create a QuickTime 
 movie file to submit to Compressor. Since this will only be a temporary 
-intermediate file, we recommend creating a QuickTime reference movie, which can 
-be created quicker and takes up less space than a standard QuickTime movie 
-because the video refers to your sequence's original media files when possible 
+intermediate file, we recommend creating a QuickTime reference movie. These can 
+be created quicker and takes up less space than a standard QuickTime movie; 
+the video refers to your sequence's original media files when possible, 
 instead of storing all of the media in the file itself. However, since this file 
 simply references other media stored on your computer, it will not work on other
 computers that don't have all the required media.
@@ -141,8 +142,7 @@ Click *Next*, and save the file in a useful location.
 
 If you are adding your After Effects export back into an editor like Avid or 
 Final Cut (our normal workflow), match the native sequence settings you are using 
-in your edit.  
-Make sure you match codec (*ProRes, ProRes LT, HDV*), frame size (*1920x1080, 1440x1080*), 
+in your edit. Make sure you match codec (*ProRes, ProRes LT, HDV*), frame size (*1920x1080, 1440x1080*), 
 and frame rate (*24, 23.98, 29.97*).
 
 If you are exporting out of After Effects for upload to Wistia, 
@@ -179,9 +179,7 @@ the iMovie Project Library and choose *Share &gt; Export Movie*.
 
 {% post_image hashed_id: 'd9fed1664fce966debccdefec84b9f564a94d6cb', class: 'center' %}
 
-You will be prompted to select the size that you want your video to be exported at.  
-For situations where most users will be viewing the video within your Wistia 
-page, a 'medium size' video will work perfectly.  
+You will be prompted to select the size that you want your video to be exported at. For situations where most users will be viewing the video within your Wistia page, a 'medium size' video will work perfectly.  
 
 If you are confident that most of your viewers will be using higher-speed internet 
 connections, or if you would like to display the video at a larger resolution 
@@ -219,7 +217,7 @@ MOV file which you can then easily [upload]({{ '/upload-video' | post_url }}) to
 
 ## Handbrake
 
-Handbrake is a great free solution for smoothing out problems with weird video files.
+Handbrake is a great, free solution for smoothing out problems with weird video files.
 To export a video for Wistia from Handbrake, click *Source* in the top right 
 corner and select the file that you'd like to convert. Some of the fields will 
 auto-populate. We recommend making sure that:
@@ -232,7 +230,7 @@ auto-populate. We recommend making sure that:
 Then, click "Start" at the top right and your video will begin encoding to the 
 Destination folder you chose!
 
-{% post_image hashed_id: 'f0a6babc82c298496ded58eb218dfc1d5eab0ba4', class: 'center' %}
+{% post_image hashed_id: 'e3fd26ae960a419c75c933421fa22e4aa4fc1fb2', class: 'center' %}
 
 ---
 

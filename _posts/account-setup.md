@@ -45,7 +45,7 @@ In *Settings*, click the Account tab on the right - this contains an IP filterin
 
 ## Change the Subdomain (URL) of your Wistia Account
 
-By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the account owner. Click the Account tab in *Settings*, and scroll down to find the *Wistia URL* section shown here:
+By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the Account Owner. Click the Account tab in *Settings*, and scroll down to find the *Wistia URL* section shown here:
 
 {% post_image hashed_id: 'd7c990eae0b25edb92baa376a1f1ae658043808a', width: 600, class: 'center' %}
 
@@ -71,7 +71,7 @@ and enter your new hostname.
 Once you save, everything should be switched over for you, and you are now
 rocking a custom URL!
 
-{{ "CNAMEing your domain won't change the name in the embed codes. As such, Any links previously shared or videos embedded from your account will still operate as normal. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos." | note }}
+{{ "CNAMEing your domain won't change the name in the embed codes. As such, any links previously shared or videos embedded from your account will still operate as normal. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos." | note }}
 
 ---
 
@@ -89,7 +89,7 @@ This will show you how much bandwidth you have used, along with your current acc
 
 ## Billing Statements
 
-To see billing statements, you must be logged in as the account owner.
+To see billing statements, you must be logged in as the Account Owner.
 Click the  "Billing" tab in your Account Settings.  This will display a complete history of the payment activity on your account.
 
 {% post_image hashed_id: 'b00b87b48826ed1a31d96b045bf6579a79c3a7b3', width: 600, class: 'center' %}
@@ -110,12 +110,12 @@ After updating your credit card, you can check to make sure that your recent pay
 
 ## Adding & Removing Managers
 
-From your *Account Settings*, click the "Managers" tab on the sidebar. To add a manager, enter the new manager's
+From your *Account Settings*, click the "Managers" tab on the sidebar. To add a Manager, enter the new Manager's
 email address into the text box and click <span class="faux_button">ADD AS MANAGER</span>.
 
 {% post_image hashed_id: 'd9c181f32c331c7aa16a98632025f0ebca9c916b', width: 600, class: 'center' %}
 
-To remove existing managers, click *Remove* next to their email address in the Current Managers list.
+To remove existing Managers, click *Remove* next to their email address in the Current Managers list.
 
 ---
 
@@ -123,7 +123,7 @@ To remove existing managers, click *Remove* next to their email address in the C
 
 An API token and password can be used for interacting with the [Wistia APIs]({{ '/developers' | post_url }}), and for setting up 3rd party integrations (like Pardot and HubSpot).
 
-To access those credentials for your account, select the API tab From your *Account Settings*.
+To access those credentials for your account, select the API tab from your *Account Settings*.
 
 
 
@@ -132,9 +132,9 @@ To access those credentials for your account, select the API tab From your *Acco
 ## Transferring Ownership of Your Account
 
 If you need to set someone else up as the owner of your account, the first step
-is to [add them as a manager](#adding__removing_managers).
+is to [add them as a Manager](#adding__removing_managers).
 
-Once the new owner is a manager (or maybe they already were, you are so sneaky
+Once the new owner is a Manager (or maybe they already were, you are so sneaky
 efficient!), select the *Account* tab in your Account Settings.
 
 {% post_image hashed_id: 'aa398787f771bec9d8d92b4a566f364da6bcbf44', class: 'center' %}

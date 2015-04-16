@@ -75,7 +75,7 @@ users with similar content access and permissions much easier.
 
 As another example, let's say there are three projects that make up new employee 
 training for a company using Wistia.  Furthermore, let's say that the company's
-Wistia manager had created a "New Hire" group which had been shared on the projects 
+Wistia Manager had created a "New Hire" group which had been shared on the projects 
 with specific permissions.  Now, when the company hires a new employee, they can 
 simply add the new contact to the "New Hire" group and the new contact will have 
 access to all of the appropriate content. 

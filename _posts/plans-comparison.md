@@ -3,7 +3,7 @@ title: Plans Comparison
 layout: post
 plans_comparison: true
 category: Getting Set Up
-description: Compare Wistia plans, their feature sets, and choose the one that is right for you on the plans comparison page.
+description: Compare Wistia plans and their feature sets; choose the one that is right for you on the plans comparison page.
 post_intro: |
   <p>The primary difference between Wistia pricing plans is the
   features they include. The table below lists the features on each plan, so
@@ -58,7 +58,7 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 [Private user session tracking]({{ '/private-sharing#review_your_viewers_activity' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [Share video privately with multiple user logins]({{ '/private-sharing' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Collaboration Tools</span>  |  |  |  |
-[Invite additional managers]({{ '/account-setup#adding__removing_managers' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+[Invite additional Managers]({{ '/account-setup#adding__removing_managers' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Filter out internal stats]({{ '/account-setup#filtering_out_internal_stats' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 Advanced [HubSpot]({{ '/hubspot' | post_url }}) & [Pardot]({{ '/pardot' | post_url }}) Integrations  | &#8211; | &#8211; | &#10003; | &#10003;
 

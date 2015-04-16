@@ -71,7 +71,7 @@ area under the <span class='action_menu'>Project Actions</span> menu.
 {{ "Shortcut! You can access this screen by clicking the <i class='icon-lock'></i> icon next to the Project title." | note }}
 
 If you want to share your project, and all the videos within it,
-you would set your project to *public*, and then share the
+you would set your project to *unlocked*, and then share the
 URL with viewers. That link would look something like:
 
 `mydomain.wistia.com/projects/xGFHnn33`

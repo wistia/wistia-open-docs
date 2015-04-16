@@ -9,17 +9,17 @@ description: When sharing videos privately within Wistia, you can set up email a
 
 ## What are email alerts? ##
 
-Email alerts are automated emails sent to Wistia managers (and, in limited cases, other users) that alert them to particular events that have occurred in their Wistia account.  Alerts can be received for the following events:
+Email alerts are automated emails sent to Wistia Managers (and, in limited cases, other users) that alert them to particular events that have occurred in their Wistia account.  Alerts can be received for the following events:
 
-*  **New media** - Alert manager when media is uploaded or copied into a project
-*  **New comment** - Alert manager when new comments are made
-*  **Sharing** - Alert manager when someone invites new contacts to view my projects
-*  **Download** - Alert manager when someone downloads media
-*  **Activation** - Alert manager when a contact activates their account
-*  **Login** - Alert manager when a contact logs in to Wistia
-*  **Failed login** - Alert manager when someone tries to login to Wistia but enters an incorrect email or password
+*  **New media** - Alert Manager when media is uploaded or copied into a project
+*  **New comment** - Alert Manager when new comments are made
+*  **Sharing** - Alert Manager when someone invites new contacts to view my projects
+*  **Download** - Alert Manager when someone downloads media
+*  **Activation** - Alert Manager when a contact activates their account
+*  **Login** - Alert Manager when a contact logs in to Wistia
+*  **Failed login** - Alert Manager when someone tries to login to Wistia but enters an incorrect email or password
 
-If a manager is receiving login alerts, when one of their users logs into their Wistia account, they will receive an email that looks like the following:
+If a Manager is receiving login alerts, when one of their users logs into their Wistia account, they will receive an email that looks like the following:
 
 {% post_image hashed_id: 'c22979b067d1d27a52f6ec7877dfaa2eca3b2a0f', class: 'center' %}
 

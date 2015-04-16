@@ -247,5 +247,5 @@ A user can revoke access to your app by going to Account > My Settings.
 
 - The wistia-api ruby gem currently does __not__ support oauth. We will be
   updating this in the future.
-- Only managers and owners of an account can authorize an application at this
+- Only Managers and owners of an account can authorize an application at this
   time.
