@@ -27,6 +27,10 @@ Wistia automatically publishes the basic video metrics listed below to your Goog
 
 You can disable our integration for all your videos by default by changing the configuration on the Account Settings page. You can also disable the integration for an individual video by modifying the initialization parameter for an API embed: `Wistia.embed("8cexf3sjf3", { "googleAnalytics": false });`.
 
+## Google Tag Manager
+
+If you're also using [Google Tag Manager](http://www.google.com/tagmanager/) along with Google Analytics, this integration will work automatically as long as you're using version 2 of Tag Manager. We recommend you migrate your Tag Manager account to version 2 as soon as possible if you have not done so already.
+
 ## Track viewing in Google Analytics Dashboard
 
 Now that we have all the back-end coding out of the way, it's time to monitor how the videos are performing on your Analytics Dashboard.
