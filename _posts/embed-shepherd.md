@@ -47,7 +47,7 @@ into the page--whether iframe, API, SEO, or popover--it will be available in `wi
 
 The `wistiaEmbeds` variable is based on a normal Javascript Array. As such, 
 you can loop over the embeds, each of which has methods as defined in the 
-[Player API](/player-api).
+[Player API]({{ '/player-api' | post_url }}).
 
 {% codeblock playlist_api.js %}
 console.log("List of Wistia embeds on the page, by name:");
