@@ -201,7 +201,7 @@ If you need more fine-grained control, try binding to the `timechange` event ins
 
 ---
 
-### Pause Video When Another is Played
+### Pause Other Videos When Another is Played
 
 Don't like the barage of sound that comes from three different videos playing in the same
 page? Sounds like you might need our trusty `pauseAllOthers` function.
