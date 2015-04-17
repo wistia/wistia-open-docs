@@ -130,15 +130,21 @@ instructions).
 Once that is done, save your customizations. Open the [Embed & Share]({{'/embedding#generate_an_embed_code' | post_url}})
 window, and make sure to select an SEO embed code.
 
-## Call to Action
+## Timed Events
 
-A call-to-action (or CTA) is a clickable message or image that appears
-immediately after your video, and lets your viewers know what you want them to
+Timed Events is an easy way to increase your conversion rate and connect your
+viewers with your product. Here we house all sorts of fun tools--like email gates,
+full-frame links, and callout links.
+
+### Full-Frame Link
+
+A Full-Frame link is a clickable message, image or HTML that appears
+anywhere in your video, and lets your viewers know what you want them to
 do next.
 
 {% post_image hashed_id: '09bfc5c29c924a7bbd1b08e6125f65b4054e3927', class: 'float_right', width: 300 %}
 
-There are three types of CTAs:
+There are three types of Full-Frame links:
 
 * **Text:** add a quick, customizable message and link to direct your viewers.
 * **Image:** use an image instead of a text link to direct viewers.
@@ -146,14 +152,22 @@ There are three types of CTAs:
 
 {{ "When adding your link, make sure you include the `http://`" | note }}
 
-### Custom HTML Calls to Action
+### Custom HTML Full-Frame Links
 
-You can build custom HTML calls to action that take on-page or inline styles.
+You can build custom HTML full-frame link that take on-page or inline styles.
 Where possible, use on-page styles (i.e. including them in a `<style>` tag in
 the head of your page), because they *may* be stripped out during the
 customization process.
 
-## Turnstile Email Gate
+### Callout Link
+
+A callout link is a great option for notifying your viewers without interrupting
+the video. The callout link, when added, will appear in the upper right corner of
+the video frame. It can be as long or as short as you'd like. You can adjust the 
+time by updating the time stamp, or dragging the waypoint. To make your callout link
+longer or shorter adjust the ripple by clicking and dragging.
+
+### Email Gate
 
 Turnstile is an easy email gate for your video content. It's great for lead
 generation, and connects with [a bunch of great email providers]({{ '/turnstile' | post_url }}) to make
@@ -161,11 +175,8 @@ tracking new leads easy. [Read more on setting up Turnstile]({{ '/turnstile' | p
 
 {% post_image hashed_id: '2e45d0c67f1e99b430335b73c9a8fea3f0471534', class: 'center' %}
 
-There are three options for when you request viewer emails:
-
-* Before they click play
-* At the end of the video
-* At a specific time in the video
+You can place an email gate at any point of your video by adjusting the time stamp or dragging the
+waypoint to the exact frame you'd like it to appear on. Neato!
 
 ### Integrate Turnstile with an Email Provider
 
@@ -312,3 +323,4 @@ A: Unfortunately, because of the limitations of Facebook embedding, we are not
 able to push all of your awesome video customizations over there. That being 
 said, we are hopeful that Facebook will start to update their methods for 
 pulling video information so that we can get the customizations flowing!
+
