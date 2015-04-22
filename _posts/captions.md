@@ -3,16 +3,18 @@ title: Captions
 layout: post
 category: Embedding
 description:
-  Closed captioning makes content easier for
-  viewers to digest, and has awesome SEO benefits.
+  Closed captioning makes content that’s easier for viewers
+  to digest and read (even in different languages), and has
+  awesome SEO benefits.
 post_intro:
-  <p>Captions make it easy for viewers to digest the content of 
-  your video. We've found them especially useful for longer form and educational
-  content, but for accessibility purposes they are critical as well.</p>
+  <p>Captions make it easy for viewers to digest the content of your
+   videos. They’re awesome for longer form and educational content in 
+   any language, but they’re great of accessibility purposes too.</p>
 ---
 
-Whether you're just trying to make sure people can get the message of your video, even without 
-the sound, or if you're just looking for a little more love in the video SEO department, 
+Whether you're trying to make sure people can get the message of your video (even without 
+the sound), looking to expand your viewer base with multilingual captions,
+ or just looking for a little more love in the video SEO department, 
 **Wistia Captions** can help!
 
 Let's jump in to creating and using your captions!
