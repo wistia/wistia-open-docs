@@ -18,7 +18,7 @@ Account (perhaps all the videos across your website).
 
 
 
-{% post_image hashed_id: 'a1d4328e0f493dc9b1f9b27b4bf97c199093e713', class: 'center' %}
+{% post_image hashed_id: '8bce8936310d94e3753cc9306b8712cb338101a2', class: 'center' %}
 
 Starting from the Projects List page of your Account 
 (i.e. *myaccount.wistia.com/projects*), access your high level stats by 
@@ -31,7 +31,7 @@ for public stats performance.
 
 ### Trends Graph
 
-{% post_image hashed_id: 'd1b8faf732de501e12a8de159977b3f949373f2d', class: 'center' %}
+{% post_image hashed_id: 'ec70a6f8e594e214c618915200e388d01d8bf3ce', class: 'center' %}
 
 The graph at the top shows the Projects in your Account according to views over 
 time. Using your mouse, choose to either see all views across the account or 
@@ -45,7 +45,7 @@ Drag either end to change the range to be displayed in the graph.
 
 ### Sorting Bar
 
-{% post_image hashed_id: '5dd55877066a7d812356daefbacd63559f84e8bf', class: 'center' %}
+{% post_image hashed_id: 'b66fd0ae079e9bb5606b1b21f4705dd4e6b64b97', class: 'center' %}
 
 The Sorting Bar within Wistia analytics pages helps sort analytics data in the 
 way most useful for you, showing Projects or Videos, selecting by date ranges 
@@ -57,14 +57,14 @@ account and project levels.
 
 ### Customizing the View
 
-{% post_image hashed_id: 'ceef4c36013cf3d2dcd0b83a2de5a64202319a54', class: 'center' %}
+{% post_image hashed_id: '9c6a9e7ad8ea8cdfa32d7020a30a673a6aacc376', class: 'center' %}
 
 By default, the Trends page will show you stats for all Projects in your account.
 This allows you to see all the views by time as you move your cursor around on 
 the map.  The details for the views across the account will appear in the upper 
 two rows of the Trends table.
 
-{% post_image hashed_id: '7af3115ff6f5b97d1549f8a0463874c978ad1fd2', class: 'center' %}
+{% post_image hashed_id: 'd837244783e1939f83c46b3903190526a512c856', class: 'center' %}
 
 To see the data for a specific Project compared to the others, use the selection 
 tool functionality.  Clicking on one specific Project in either the list view 
@@ -75,7 +75,7 @@ the Project more specifically.
 
 ### Projects/Media List
 
-{% post_image hashed_id: 'cbc708bfaab19ab4ac6d30b69b9bbbb863eeb281', class: 'center' %}
+{% post_image hashed_id: '8ff07e87c7ccfc2f8a229138363a0ec1e147e517', class: 'center' %}
 
 Underneath the Trends graph is the list of Projects or Media that is 
 represented in the graph.  To drill down to the Project or Media level, 
@@ -85,7 +85,7 @@ click the title of the Project/Media.
 
 ## Project-Level Trends
 
-{% post_image hashed_id: 'ca06679fead9ffaa80b99d8f231a8e270d7653a5', class: 'center' %}
+{% post_image hashed_id: 'ffdd61bf9673313b2c052bfafd907c09fd51c71e', class: 'center' %}
 
 The Trends graph for projects is very similar to the aggregate Account-level 
 graph.  Moving your cursor along the graph will show information on the 
