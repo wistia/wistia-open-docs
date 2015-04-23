@@ -8,8 +8,8 @@ description:
   awesome SEO benefits.
 post_intro:
   <p>Captions make it easy for viewers to digest the content of your
-   videos. They’re awesome for longer form and educational content in 
-   any language, but they’re great of accessibility purposes too.</p>
+   videos. They're a critical part of content accessibility, but they
+   are also helpful for longer form and educational content in any language.</p>
 ---
 
 Whether you're trying to make sure people can get the message of your video (even without 
