@@ -55,26 +55,6 @@ In the section labeled "Wistia Subdomain", you will see a text box showing the c
 
 ---
 
-## Set a custom domain (CNAME)
-If you have your own domain name, re-naming your Wistia account is no problem.
-
-* First, you will need to select a subdomain for your account
-  (ie. `videos.yourdomain.com`).
-* Next, have the CNAME for that subdomain point to: **app.wistia.com**
-* Then, make sure to add the CNAME under the Wistia URL heading, as found in the Account tab of your Account Settings.
-
-Once that is set up, the CNAME gets propagated (which can take a couple hours,
-so grab some coffee or a good book). To test if it is complete: open the
-*Account* tab in your *Settings*, change the "Address" to CNAME,
-and enter your new hostname.
-
-Once you save, everything should be switched over for you, and you are now
-rocking a custom URL!
-
-{{ "CNAMEing your domain won't change the name in the embed codes. As such, any links previously shared or videos embedded from your account will still operate as normal. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos." | note }}
-
----
-
 ## Monthly Usage
 
 To see the storage and bandwidth usage on your account, you must be logged in as the Account Owner. Select the *Usage* tab in your Account Settings.
