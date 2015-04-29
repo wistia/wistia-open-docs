@@ -130,16 +130,18 @@ instructions).
 Once that is done, save your customizations. Open the [Embed & Share]({{'/embedding#generate_an_embed_code' | post_url}})
 window, and make sure to select an SEO embed code.
 
-## Timed Interactions
+## Timeline Actions
 
-Timed Interactions is an easy way to increase your conversion rate and connect your
-viewers with your product. Here we house all sorts of fun tools--like Turnstile email gate,
-Calls to Action, and Annotation links.
+Timeline Actions are an easy way to increase your conversion rate and connect your
+viewers with your product. They're sort of like the sprinkles on top of your 
+(already fabulous) video cake. Within the Timeline Actions drop down menu we house 
+all sorts of great tools--like Turnstile email gate, Calls to Action, and 
+Annotation links.
 
 ### Call to Action
 
 A Call to Action is a clickable message, image, or HTML script that appears
-anywhere in your video, and lets your viewers know what you want them to
+anywhere in your video, and it lets your viewers know what you want them to
 do next.
 
 {% post_image hashed_id: '09bfc5c29c924a7bbd1b08e6125f65b4054e3927', class: 'float_right', width: 300 %}
@@ -154,17 +156,17 @@ There are three types of Calls to Action:
 
 ### Custom HTML Call to Action
 
-You can build custom HTML Call to Action that take on-page or inline styles.
+You can build custom HTML Calls to Action that take on-page or inline styles.
 Where possible, use on-page styles (i.e. including them in a `<style>` tag in
 the head of your page), because they *may* be stripped out during the
 customization process.
 
 ### Annotation Link
 
-An annotation link is a great option for notifying your viewers without interrupting
+An annotation link is a great option to notify your viewers without interrupting
 the video. The annotation link, when added, will appear in the upper right corner of
 the video frame. It can be as long or as short as you'd like. You can adjust the 
-time by updating the time stamp, or dragging the droplet. To make your annotation link
+time by updating the time stamp, or dragging the waypoint. To make your annotation link
 longer or shorter adjust the ripple by clicking and dragging.
 
 ### Turnstile Email Gate
