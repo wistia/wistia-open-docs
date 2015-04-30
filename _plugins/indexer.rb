@@ -37,7 +37,11 @@ module Jekyll
       # delete existing docs index
       # TODO: by removing index here, 0 results will be returned for searches
       # while the index is being built. This is suboptimal, but OK.
-      elasticsearch.indices.delete(index: 'docs')
+      begin
+        elasticsearch.indices.delete(index: 'docs')
+      rescue
+        print "Won't delete existing docs index, since none were found"
+      end
 
       root_dir = File.expand_path(File.join(File.dirname(__FILE__), '..'))
       Dir["#{root_dir}/_posts/*.md"].each do |post_path|
