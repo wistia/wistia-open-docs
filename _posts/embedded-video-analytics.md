@@ -104,7 +104,8 @@ Clicking the title of an individual media will move you to the Media-level Trend
 
 The media level provides detailed insight into how the video was viewed, both 
 at an aggregate level through an engagement graph, and individually through 
-heatmaps.
+heatmaps. It's also a great place to track viewer actions from Annotations, 
+Calls to Action, and Turnstile.
 
 To access the media-level trends page, first open up the Media Page for your 
 video (where you can watch the video in your account).  Under the *Media Actions* 
@@ -119,6 +120,13 @@ summary stats, and [individual viewer heatmaps](#heatmaps).
 Embedding your video on your public webpage?  Wistia Media Stats will tell you 
 how it is performing (and [Wistia trends](#accountlevel_trends_view) will show 
 you how it is performing compared to your other video initiatives).
+
+### Actions
+
+Actions are an easy way to track conversions from Calls to Action, Annotations, and
+Turnstile email gate. Clicking on a waypoint below the engagement graph will show what
+percentage of viewers took action during your videos--from entering an email to clicking
+a link.
 
 ---
 
