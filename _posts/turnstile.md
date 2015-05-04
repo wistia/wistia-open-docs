@@ -16,7 +16,7 @@ post_intro:
 
 ## Add Turnstile to Your Video
 
-To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select Turnstile. There you will be able to change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider.
+To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select Timeline Actions. There you will be prompted to choose an action. To add an email gate select Turnstile. Here you'll be able change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider. Easy peasy, lemon squeezy!
 
 {% post_image hashed_id: "6bcb52f9234a2c11df350cca45bab41e28b4bfa6", class: 'center' %}
 
@@ -26,7 +26,7 @@ By default, Turnstile will only ask people to enter an email address. "But Wisti
 
 {% wistia_embed hashed_id: qmdaw5lke0, embedType: iframe %}
 
-To enable the First Name and Last Name fields, select the "Ask for First and Last Name" option right there in the Turnstile section of Customize. You'll instantly see an updated preview of Turnstile on your video.
+To enable the First Name and Last Name fields, select the "Ask for First and Last Name" option right there in the Turnstile section of Timeline Actions. You'll instantly see an updated preview of Turnstile on your video.
 
 ## Set Up Your Email Provider Integration
 
@@ -62,9 +62,9 @@ email list (group) you want the email to be added to when viewers submit their
 email. If you're integrating with HubSpot or Marketo, there's no need to select
 a list; once enabled, captured emails will go straight into your linked account!
 
-Watch your lists grow! It's a thing of beauty :) 
+Watch your lists grow! It's a thing of beauty. :) 
 
-{{ "Once a user has entered an email into the turnstile for a specific video, it will not ask them for their email again. If you never want them to have to enter an email again once they've done so once, check out our Golden Ticket Lab." | note }}
+{{ "Once a user has entered an email into the turnstile for a specific video, it will not ask them for their email again. If you never want them to have to enter an email again once they've done so once, check out our [Golden Ticket Lab](http://wistia.com/labs/turnstile-golden-ticket/)." | note }}
 
 ## How To Use Turnstile Without an Integrated Email Provider
 
