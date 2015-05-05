@@ -132,11 +132,16 @@ window, and make sure to select an SEO embed code.
 
 ## Timeline Actions
 
-Timeline Actions are an easy way to increase your conversion rate and connect your
-viewers with your product. They're sort of like the sprinkles on top of your 
+Timeline Actions are an easy way to get your viewers to take action with your video
+connect with your product. They're sort of like the sprinkles on top of your 
 (already fabulous) video cake. Within the Timeline Actions drop down menu we house 
 all sorts of great tools--like Turnstile email gate, Calls to Action, and 
 Annotation links.
+
+Any action added to your video will appear as a waypoint below your video
+timeline. All actions can be placed at any time within a video. To change when 
+these actions show up you can simply adjust the time stamps under the Timeline 
+Actions menu or drag the waypoints to the exact frames they're to appear.
 
 ### Call to Action
 
@@ -166,8 +171,11 @@ customization process.
 An annotation link is a great option to notify your viewers without interrupting
 the video. The annotation link, when added, will appear in the upper right corner of
 the video frame. It can be as long or as short as you'd like. You can adjust the 
-time by updating the time stamp, or dragging the waypoint. To make your annotation link
-longer or shorter adjust the ripple by clicking and dragging.
+time by updating the time stamp, or dragging the waypoint below the video timeline. 
+To make your annotation link longer or shorter adjust the length bar by clicking
+and dragging.
+
+{{ "If you'd like to create an annotation without a click-through link simply leave the URL line blank." | note }}
 
 ### Turnstile Email Gate
 
@@ -177,8 +185,9 @@ tracking new leads easy. [Read more on setting up Turnstile]({{ '/turnstile' | p
 
 {% post_image hashed_id: '2e45d0c67f1e99b430335b73c9a8fea3f0471534', class: 'center' %}
 
-You can place a Turnstile email gate at any point of your video by adjusting the time stamp or dragging the
-droplet to the exact frame you'd like it to appear on. Neato!
+You can place a Turnstile email gate at any point of your video by adjusting the
+time stamp or dragging the waypoint to the exact frame you'd like it to appear 
+on. Neato!
 
 ### Integrate Turnstile with an Email Provider
 
