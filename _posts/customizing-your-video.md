@@ -263,7 +263,7 @@ forward.
 If your videos *across* Projects share common settings, this one will save you
 lots of time.
 
-{% post_image hashed_id: '67a73a2a473ff11373d1dcc7217758c3ebee7f07', class: 'center' %}
+{% post_image hashed_id: '59604c54d44a302334b952c55db51d2c7d553173', class: 'float_right', width: 500 %}
 
 If you've just uploaded a new video, or want to add the customizations from one
 video onto another video, you should *load settings*. Inside the 
