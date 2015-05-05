@@ -14,7 +14,7 @@ After uploading a new video, the *customization* step gets it ready for the big
 time. Open the customization panel by selecting *Customize* from the
 <span class="action_menu">Video Actions</span> menu.
 
-{% post_image hashed_id: '1cb27f6a4d8a302de3f2e6fc72c44b2ff15236a1', class: 'center' %}
+{% post_image hashed_id: 'f400b4292bf2bf88052126113611635da29e4648', class: 'center' %}
 
 The customize panel slides out to reveal an array of different options for your
 video. Let's walk through the customization options, along with some of the
@@ -68,18 +68,17 @@ To disable comments across all videos, see the
 
 ## Controls
 
-{% post_image hashed_id: '27d9df9224bd47f11b58ca0ea3aebe6aeeda1ee5', class: 'float_right', width: 300 %}
+{% post_image hashed_id: 'ff915dcff4a37c3d3d85062bb9e7ab4b1307fdc9', class: 'float_right', width: 300 %}
 
 The *Control* area includes the different control options you can add to your
-video. Remove the play button, remove the full screen button, or make the video
-autoplay.
+video. Customize your video however you'd like--by adding or removing any buttons.
 
 ## Social Bar
 
 The *Social Bar* is our nickname for the group of social buttons that sit below 
 the video and make it easy to share the video in social networks.
 
-{% post_image hashed_id: '9f47519fd807ec8436a030b32d97f1649f88ac99', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '424d41e6cdde8bedcb33c5bdaad88cdcc40a7221', class: 'float_right', width: 300 %}
 
 The Social Bar has a bunch of options, from social networks like Twitter and
 Facebook to actions like *share stats* and *download*.
@@ -132,16 +131,37 @@ window, and make sure to select an SEO embed code.
 
 ## Timeline Actions
 
-Timeline Actions are an easy way to get your viewers to take action with your video
-connect with your product. They're sort of like the sprinkles on top of your 
-(already fabulous) video cake. Within the Timeline Actions drop down menu we house 
-all sorts of great tools--like Turnstile email gate, Calls to Action, and 
-Annotation links.
+Timeline Actions are an easy way to get your viewers to take action with your videos. 
+They're sort of like the sprinkles on top of your (already amazing) video cake.
+Within the Timeline Actions drop down menu we house all sorts of great tools--like
+Turnstile email gate, Calls to Action, and Annotation links.
+
+{% post_image hashed_id: '983a220538b127659d67228b50bc1040ee18648c', class: 'float_right', width: 300 %}
 
 Any action added to your video will appear as a waypoint below your video
 timeline. All actions can be placed at any time within a video. To change when 
 these actions show up you can simply adjust the time stamps under the Timeline 
 Actions menu or drag the waypoints to the exact frames they're to appear.
+
+{% post_image hashed_id: 'ab4efc1f613f79a1bf8a4438a4a525ad2354fc73', class: 'center' %}
+
+### Annotation Link
+
+An annotation link is a great option to notify your viewers without interrupting
+the video. 
+
+{% post_image hashed_id: '0dc1db4a6f46dceeeb41af933e9a62406773bcc0', class: 'float_right', width: 300 %}
+
+The annotation link, when added, will appear in the upper right corner of
+the video frame. It can be as long or as short as you'd like. You can adjust the 
+time by updating the time stamp, or dragging the waypoint below the video timeline. 
+To make your annotation link longer or shorter adjust the length bar by clicking
+and dragging.
+
+{% post_image hashed_id: 'bd5e724bda5b6cbfcadf7390dd0206951ae337b9', class: 'center' %}
+
+{{ "If you'd like to create an annotation without a click-through link simply leave the URL line blank." | note }}
+
 
 ### Call to Action
 
@@ -149,7 +169,7 @@ A Call to Action is a clickable message, image, or HTML script that appears
 anywhere in your video, and it lets your viewers know what you want them to
 do next.
 
-{% post_image hashed_id: '09bfc5c29c924a7bbd1b08e6125f65b4054e3927', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '990daa651616ab00874025abab13fa4d80fd1b0e', class: 'float_right', width: 300 %}
 
 There are three types of Calls to Action:
 
@@ -166,28 +186,19 @@ Where possible, use on-page styles (i.e. including them in a `<style>` tag in
 the head of your page), because they *may* be stripped out during the
 customization process.
 
-### Annotation Link
-
-An annotation link is a great option to notify your viewers without interrupting
-the video. The annotation link, when added, will appear in the upper right corner of
-the video frame. It can be as long or as short as you'd like. You can adjust the 
-time by updating the time stamp, or dragging the waypoint below the video timeline. 
-To make your annotation link longer or shorter adjust the length bar by clicking
-and dragging.
-
-{{ "If you'd like to create an annotation without a click-through link simply leave the URL line blank." | note }}
-
-### Turnstile Email Gate
+### Turnstile
 
 Turnstile is an easy email gate for your video content. It's great for lead
 generation, and connects with [a bunch of great email providers]({{ '/turnstile' | post_url }}) to make
 tracking new leads easy. [Read more on setting up Turnstile]({{ '/turnstile' | post_url }}).
 
-{% post_image hashed_id: '2e45d0c67f1e99b430335b73c9a8fea3f0471534', class: 'center' %}
+{% post_image hashed_id: '9a0c105070fb69e6377f272571a6087e805b821a', class: 'float_right', width: 300 %}
 
 You can place a Turnstile email gate at any point of your video by adjusting the
 time stamp or dragging the waypoint to the exact frame you'd like it to appear 
 on. Neato!
+
+{% post_image hashed_id: '28400a9a5247cda7b312e1fce2c5e932552df901', class: 'center' %}
 
 ### Integrate Turnstile with an Email Provider
 
