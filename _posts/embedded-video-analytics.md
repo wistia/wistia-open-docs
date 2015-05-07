@@ -190,7 +190,7 @@ Do international viewers tune out quicker than local ones?  When are the most
 engaged viewers watching your videos?  This information and more can be derived 
 from heatmaps.
 
-{% post_image hashed_id: '1fcbc10400a8a32f36d577ba3b6a30a13e5c253a', class: 'center' %}
+{% post_image hashed_id: '8084860b23f6bf980f867d5b6002d2d3347eb094', class: 'center' %}
 
 The time to the left of the heatmap displays when the viewer watched the video.  
 Next to the time is the information Wistia gathers automatically, like their 
@@ -199,7 +199,7 @@ will show up in a bubble next to their name.  Scrolling over the name will
 reveal the IP address of the viewer, along with where they viewed the video 
 (on your blog, on your homepage, etc.).
 
-{% post_image hashed_id: '566e0d9b6ed538351413bc95e363e331c1ef20f2', class: 'center' %}
+{% post_image hashed_id: '073bef93c3b8b595d1a48f428fa0c74703085926', class: 'center' %}
 
 Clicking on the name link on the heatmap will take you to the Viewer page for 
 that viewer.  The Viewer page is part of the **Viewer Stream**.
@@ -216,7 +216,7 @@ drilled down into the individual viewer.
 
 ### The Viewer Stream Page
 
-{% post_image hashed_id: '8084860b23f6bf980f867d5b6002d2d3347eb094', class: 'center' %}
+{% post_image hashed_id: '03c8bea4fb026b228e84f54244c57d14d5cb4975', class: 'center' %}
 
 To open the Viewers Stream page, select "Viewers" from under the Stats drop-down 
 menu.
@@ -225,7 +225,7 @@ menu.
 The Viewers Stream is a snapshot of the viewers of your publicly embedded videos.  
 These will appear as a list of viewers, with their most recent heatmaps.
 
-{% post_image hashed_id: '073bef93c3b8b595d1a48f428fa0c74703085926', class: 'center' %}
+{% post_image hashed_id: '22099a789375018ff43301596779000fa85f602b', class: 'center' %}
 
 Use the sorting bar to specify which group of viewers you'd like to see, or use 
 the search box to find a specific viewer.  The number bubbles next to each name 
