@@ -216,7 +216,7 @@ drilled down into the individual viewer.
 
 ### The Viewer Stream Page
 
-{% post_image hashed_id: '03c8bea4fb026b228e84f54244c57d14d5cb4975', class: 'center' %}
+{% post_image hashed_id: '8084860b23f6bf980f867d5b6002d2d3347eb094', class: 'center' %}
 
 To open the Viewers Stream page, select "Viewers" from under the Stats drop-down 
 menu.
@@ -225,7 +225,7 @@ menu.
 The Viewers Stream is a snapshot of the viewers of your publicly embedded videos.  
 These will appear as a list of viewers, with their most recent heatmaps.
 
-{% post_image hashed_id: '22099a789375018ff43301596779000fa85f602b', class: 'center' %}
+{% post_image hashed_id: '073bef93c3b8b595d1a48f428fa0c74703085926', class: 'center' %}
 
 Use the sorting bar to specify which group of viewers you'd like to see, or use 
 the search box to find a specific viewer.  The number bubbles next to each name 
