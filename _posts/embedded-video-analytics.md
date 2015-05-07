@@ -3,19 +3,18 @@ title: Embedded Video Analytics
 layout: post
 category: Analytics
 description: Wistia's analytics are designed to help you understand how your audience engages with your content. Dive in to everything you could dream of knowing about Wistia's all time favorite subject, Statistics. 
-post_intro: <p>Wistia stats are the best way to get a complete view of who is watching your video, how they are watching your video, and how your video initiatives are performing.</p><p>This guide will show you how to approach the two parts of Wistia analytics, <b>Stats Trends</b> and the <b>Viewer Stream</b>.</p>
+post_intro: <p>Wistia stats are the best way to get a complete view of who is watching your video, and how they are watching and interacting with it.</p><p>This guide will show you how to approach the two parts of Wistia analytics, <b>Stats Trends</b> and the <b>Viewer Stream</b>.</p>
 
 
 ---
 
-{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about that more in our Private Analytics Documentation."| note }}
+{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about that more in our Private Analytics Documentation." | note }}
 
 ## Account-Level Trends View
 
-Wistia provides you sight into performance from the single video, to a Project 
-(perhaps a collection of your tutorial or marketing videos), to the entire 
+Wistia provides detailed insights into the performance of a single video, a Project 
+(perhaps a collection of your tutorial or marketing videos), or the entire 
 Account (perhaps all the videos across your website).
-
 
 
 {% post_image hashed_id: 'a1d4328e0f493dc9b1f9b27b4bf97c199093e713', class: 'center' %}
@@ -115,24 +114,18 @@ This will open the page with viewing stats specifically for that media.  You
 can see the [overall engagement graph]({{ '/audience-engagement-graph' | post_url }}), 
 summary stats, and [individual viewer heatmaps](#heatmaps).
 
-{% post_image hashed_id: '12ba4ab2ca59f3616215f091bb9b3ae60f22c5b3', class: 'center' %}
+{% post_image hashed_id: '23c6296528bb296de6e2ed9b1eee73e2fc8c4425', class: 'center' %}
 
 Embedding your video on your public webpage?  Wistia Media Stats will tell you 
 how it is performing (and [Wistia trends](#accountlevel_trends_view) will show 
 you how it is performing compared to your other video initiatives).
 
-### Actions
-
-Actions are an easy way to track conversions from Calls to Action, Annotations, and
-Turnstile email gate. Clicking on a waypoint below the engagement graph will show what
-percentage of viewers took action during your videos--from entering an email to clicking
-a link.
 
 ---
 
 ### Engagement Graph
 
-{% post_image hashed_id: '9c58bf6c6fa2fb25986a93ec4acf5779554be733', class: 'center' %}
+{% post_image hashed_id: '650eecd5f9571392744d720e7cfaf539eb7b80cd', class: 'center' %}
 
 The blue section of the engagement graph shows the engagement of viewers who 
 clicked play on the video.  The orange section on top shows the number of times 
@@ -143,28 +136,34 @@ to that point in the video.
 
 More on [Audience Engagement Graphs]({{ '/audience-engagement-graph' | post_url }}).
 
----
-
-### Plays by Date
-
-{% post_image hashed_id: '40a5d3c0af039607eab984bfb5911f4b91325ae1', class: 'center' %}
-
-Select the 'plays by date' tab above the engagement graph to see Trends-type 
-data for the video. Moving the yellow tabs below the graph will change the date 
-range, while hovering over the graph will display specific view count data for 
-that date. 
 
 ---
 
 ### Summary Bar
 
-The summary bar underneath the engagement graph displays overall data for the 
+The summary bar next to the engagement graph displays overall data for the 
 viewers of the video.  This is extremely useful high-level data for comparison, 
-such as % of viewers who clicked play, % viewed, and total time watched.
+such as % of viewers who clicked play, % viewed, and total time watched. We also house
+information on actions taken by your viewers--from entering an email into Turnstile to
+clicking an Annotation Link. Simply click "Show Details" for a deeper explation of this
+information.
+
+{% wistia_embed hashed_id: rgpz87ssi3 %}
 
 
 Under the engagement graph area and summary bar are a list of the individual 
-viewers who have watched your video, along with their **heatmaps**.
+viewers who have watched your video, along with their [**heatmaps**]({{ '/embedded-video-analytics/#heatmaps' | post_url }}).
+
+---
+
+### Actions
+
+Actions are an easy way to track viewer engagement from Calls to Action, Annotations, and
+Turnstile email gate. Clicking on a waypoint below the engagement graph will show what
+percentage of viewers took action during your videos--from entering an email to clicking
+a link.
+
+{% post_image hashed_id: 'db8a3dfcc3ef0f81d7d428e7b3e7396f29ebfed6', class: 'center' %}
 
 ---
 
@@ -191,7 +190,7 @@ Do international viewers tune out quicker than local ones?  When are the most
 engaged viewers watching your videos?  This information and more can be derived 
 from heatmaps.
 
-{% post_image hashed_id: 'b57596e1a038566c08cde1d24ee51ddc34435414', class: 'center' %}
+{% post_image hashed_id: '1fcbc10400a8a32f36d577ba3b6a30a13e5c253a', class: 'center' %}
 
 The time to the left of the heatmap displays when the viewer watched the video.  
 Next to the time is the information Wistia gathers automatically, like their 
@@ -200,7 +199,7 @@ will show up in a bubble next to their name.  Scrolling over the name will
 reveal the IP address of the viewer, along with where they viewed the video 
 (on your blog, on your homepage, etc.).
 
-{% post_image hashed_id: '32dc5478cccff81172cca1b053d924e7c01121c5', class: 'center' %}
+{% post_image hashed_id: '566e0d9b6ed538351413bc95e363e331c1ef20f2', class: 'center' %}
 
 Clicking on the name link on the heatmap will take you to the Viewer page for 
 that viewer.  The Viewer page is part of the **Viewer Stream**.
@@ -215,8 +214,6 @@ It begins a list of the latest viewers of any videos in the account, but can be
 drilled down into the individual viewer.
 
 
-
-
 ### The Viewer Stream Page
 
 {% post_image hashed_id: '03c8bea4fb026b228e84f54244c57d14d5cb4975', class: 'center' %}
@@ -228,7 +225,7 @@ menu.
 The Viewers Stream is a snapshot of the viewers of your publicly embedded videos.  
 These will appear as a list of viewers, with their most recent heatmaps.
 
-{% post_image hashed_id: '5f63b2b98f7ccd437736c253a822fe5355c0b5c2', class: 'center' %}
+{% post_image hashed_id: '22099a789375018ff43301596779000fa85f602b', class: 'center' %}
 
 Use the sorting bar to specify which group of viewers you'd like to see, or use 
 the search box to find a specific viewer.  The number bubbles next to each name 
@@ -239,7 +236,7 @@ take you to the Viewer Page.
 
 ### Viewer Page
 
-{% post_image hashed_id: '66e78052b6d6e4d4fe4708d84bd5bf1e80e1be62', class: 'center' %}
+{% post_image hashed_id: '31ca09fd5a6da334c0a1e03c269aec1b14c2677b', class: 'center' %}
 
 From the Viewer Page, you can track activity for a specific viewer.  Want to 
 'tag' this viewer for future tracking?  Edit their name as you would a Wistia 
@@ -279,7 +276,7 @@ First, head to the stats page for one of your videos (it has a link like
 On the right hand side of the bar that separates the aggregate statistics from 
 the video heatmaps, a link is shown which says `Export as CSV`.
 
-{% post_image hashed_id: 'aea76162b72d95f66c647bd748d348100732f9a3', class: 'center' %}
+{% post_image hashed_id: '803732dcd4895f85f30062bf8589e5cea2ba0a73', class: 'center' %}
 
 Click on the link and a dialog box will appear. Get your filters right, and 
 then select the <span class="faux_button">EXPORT</span> button.
