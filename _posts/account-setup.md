@@ -47,31 +47,11 @@ In *Settings*, click the Account tab on the right - this contains an IP filterin
 
 By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the Account Owner. Click the Account tab in *Settings*, and scroll down to find the *Wistia URL* section shown here:
 
-{% post_image hashed_id: 'd7c990eae0b25edb92baa376a1f1ae658043808a', width: 600, class: 'center' %}
+{% post_image hashed_id: '1d3b8b8cc903d5df0a3dd9432dd6933428e305b3', width: 600, class: 'center' %}
 
 In the section labeled "Wistia Subdomain", you will see a text box showing the current URL of your Wistia account (in the case of the above picture,`http://dave.wistia.com`).  Type the name you wish to use instead in the text box (only letters, numbers, and hyphens) and press <span class="faux_button">Update Account Settings</span> at the bottom to save your changes.
 
 {{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
-
----
-
-## Set a custom domain (CNAME)
-If you have your own domain name, re-naming your Wistia account is no problem.
-
-* First, you will need to select a subdomain for your account
-  (ie. `videos.yourdomain.com`).
-* Next, have the CNAME for that subdomain point to: **app.wistia.com**
-* Then, make sure to add the CNAME under the Wistia URL heading, as found in the Account tab of your Account Settings.
-
-Once that is set up, the CNAME gets propagated (which can take a couple hours,
-so grab some coffee or a good book). To test if it is complete: open the
-*Account* tab in your *Settings*, change the "Address" to CNAME,
-and enter your new hostname.
-
-Once you save, everything should be switched over for you, and you are now
-rocking a custom URL!
-
-{{ "CNAMEing your domain won't change the name in the embed codes. As such, any links previously shared or videos embedded from your account will still operate as normal. Our system isn't designed for customizable embed hosts.  This will merely change the address where you/viewers can see your Wistia account videos." | note }}
 
 ---
 
