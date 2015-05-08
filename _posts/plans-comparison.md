@@ -24,20 +24,21 @@ Total Video Count     | 25 | 100       | 1000 | unlimited
 Number of Managers       | unlimited | unlimited | unlimited | unlimited
 Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 <span class='category'>Core Video Player Features</span> |    |   |   |
-[Player and controls customization]({{ '/customizing-your-video#appearance' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
-[Personalized thumbnail selection]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }})  | &#10003; | &#10003; | &#10003; | &#10003;
-[Filter out internal stats]({{ '/account-setup#filtering_out_internal_stats' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Player and Controls Customization]({{ '/customizing-your-video#appearance' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Personalized Thumbnail Selection]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }})  | &#10003; | &#10003; | &#10003; | &#10003;
+[IP Filtering]({{ '/account-setup#filtering_out_internal_stats' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
 [Whitelisted Domain Restrictions]({{ '/domain-restrictions' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Captions]({{ '/captions' | post_url }})  | &#10003; | &#10003; | &#10003; | &#10003;
 <span class='category'>Social Network Sharing</span> |    |   |   |
-[Social sharing bar]({{ '/customizing-your-video#social_bar' | post_url }}) | &#10003; | &#10003; | &#10003;| &#10003;
+[Social Sharing Bar]({{ '/customizing-your-video#social_bar' | post_url }}) | &#10003; | &#10003; | &#10003;| &#10003;
 [Twitter and Facebook support]({{ '/social-sharing' | post_url }})  | &#10003;   | &#10003;  | &#10003; | &#10003;
 <span class='category'>Embedded Video Design</span> |  |  |  |
-[Multi-video playlists]({{ '/playlists' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
-[Responsive embeds]({{ '/video-foam' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
-[Video popover lightbox]({{ '/embedding#popover_embed' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
-[Player API access]({{ '/player-api' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Multi-Video Playlists]({{ '/playlists' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Responsive Embeds]({{ '/video-foam' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Video Popover Lightbox]({{ '/embedding#popover_embed' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
+[Player API Access]({{ '/player-api' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
 <span class='category'>Basic Analytics</span> |   |   |   |
-[Viewer heatmaps]({{ '/embedded-video-analytics#heatmaps' | post_url }})  | &#10003;  | &#10003;  | &#10003;  | &#10003;
+[Viewer Heatmaps]({{ '/embedded-video-analytics#heatmaps' | post_url }})  | &#10003;  | &#10003;  | &#10003;  | &#10003;
 [Plays by Date]({{ '/embedded-video-analytics#accountlevel_trends_view' | post_url }})  | &#10003; | &#10003; | &#10003; | &#10003;
 <span class='category'>Account Organization<span class='category'>  |   |   |   |
 [Replace Live Videos]({{ '/replace-video' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
@@ -46,21 +47,18 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 [Email Marketing Integration]({{ '/email-marketing' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Google Analytics Integration]({{ '/google-analytics' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Advanced Customization Options</span>  |  |  |  |
-[Calls-to-action]({{ '/customizing-your-video#call_to_action' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Midroll links]({{ '/customizing-your-video#midroll-link' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Turnstile email gate & integrations]({{ '/customizing-your-video#turnstile_email_gate' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
-[Captions]({{ '/captions' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+[Calls To Action]({{ '/customizing-your-video#call_to_action' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
+[Turnstile Email Gate & Integrations]({{ '/customizing-your-video#turnstile_email_gate' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Advanced Viewer Analytics</span>  |  |  |  |
-[Engagement graphs]({{ '/audience-engagement-graph' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Live viewer stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
-[Viewer history]({{ '/embedded-video-analytics#viewer_stream' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
-[Conversion tracking]({{ '/embedded-video-analytics#conversion-tracking' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+[Engagement Graphs]({{ '/audience-engagement-graph' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
+[Live Viewer Stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+[Viewer History]({{ '/embedded-video-analytics#viewer_stream' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Video SEO Tools</span>  |  |  |  |
-[Generate SEO sitemaps]({{ '/video-seo#creating_a_video_sitemap' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
+[Generate SEO Sitemaps]({{ '/video-seo#creating_a_video_sitemap' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [SEO Embed Code Type]({{ '/video-seo#using_the_video_seo_embed_type' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Private Sharing Functionality</span>  |  |  |  |
-[Private user session tracking]({{ '/private-sharing#review_your_viewers_activity' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Share video privately with multiple user logins]({{ '/private-sharing' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
+[Private User Session Tracking]({{ '/private-sharing#review_your_viewers_activity' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
+[Share Video Privately with Multiple User Logins]({{ '/private-sharing' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Collaboration Tools</span>  |  |  |  |
 Advanced [HubSpot]({{ '/hubspot' | post_url }}) & [Pardot]({{ '/pardot' | post_url }}) Integrations  | &#8211; | &#8211; | &#10003; | &#10003;
 
