@@ -30,7 +30,7 @@ Wistia does have a few specifications and guidelines we recommend following in o
 </h3>
 <ul>
 <li>Codec: <span class="answer">AAC (Advanced Audio Codec)</span></li>
-<li>Sample Rate: <span class="answer">44.1mhz</span></li>
+<li>Sample Rate: <span class="answer">44.1 kHz</span></li>
 <li>Channels: <span class="answer">2-channel Stereo <em>(not surround)</em></span></li>
 </ul>
 </div>
