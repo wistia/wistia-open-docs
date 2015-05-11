@@ -18,7 +18,7 @@ time. Open the customization panel by selecting *Customize* from the
 
 The customize panel slides out to reveal an array of different options for your
 video. Let's walk through the customization options, along with some of the
-*advanced level* tools for customization.
+[*advanced level*](#advanced_customize_features) tools for customization.
 
 ## Appearance
 
@@ -33,17 +33,17 @@ The **player color** should reflect your branding, to encourage more consistency
 your viewer's experience.
 
 Finally - you can choose whether visitors to the video page will have the
-option to [leave comments](#disable_comments).
+option to [leave comments](#turn_off_comments).
 
-{{ "Changes to the thumbnail won't apply to popover embeds without re-embedding due to them referencing the exact image that was the thumbnail when you embedded the video." | note }}
+{{ "Changes to the thumbnail won't apply to popover embeds without re-embedding. Since popovers reference the exact image used when they're first embedded, you'll want to update their embed codes out in the wild." | note }}
 
-## Changing the Thumbnail
+### Changing the Thumbnail
 
-Video still, poster image, first frame...we've heard all sorts of terms for the
-image that appears when the page loads, before your viewer's begin watching.
+Video still, poster image, first frame... we've heard all sorts of terms for the
+image that appears when the page loads, before your viewers begin watching.
 We call it the **thumbnail**.
 
-By default, we select the middle frame of the video. But sometimes this can
+By default, our system selects the middle frame of the video. But sometimes this can
 catch the speaker in mid-sentence, or can reveal something about the content
 you want to keep a secret!
 
@@ -53,9 +53,9 @@ frame that is currently showing in your video to the right.
 
 Below is a quick screencast to show you the thumbnail update moves.
 
-{% wistia_embed hashed_id: oo6cr5kz8p %}
+{% wistia_embed hashed_id: k0pzw56jh8 %}
 
-## Turn off Comments
+### Turn off Comments
 
 {% post_image hashed_id: '22e89f019b63d4c71b84843aad9f5e5c418b1857', class: 'center' %}
 
@@ -70,8 +70,9 @@ To disable comments across all videos, see the
 
 {% post_image hashed_id: 'ff915dcff4a37c3d3d85062bb9e7ab4b1307fdc9', class: 'float_right', width: 300 %}
 
-The *Control* area includes the different control options you can add to your
-video. Customize your video however you'd like--by adding or removing any buttons.
+The *Control* area includes options to tweak the video controls on your media. 
+Don't want viewers skipping important parts of your video? Adios, **Play Bar**! 
+Customize your video however you'd like--by adding or removing any buttons.
 
 ## Social Bar
 
@@ -136,11 +137,13 @@ They're sort of like the sprinkles on top of your (already amazing) video cake.
 Within the Timeline Actions drop down menu we house all sorts of great tools--like
 Turnstile email gate, Calls to Action, and Annotation links.
 
+{{ "For more information on tracking Action analytics, check out our [Embedded Video Analytics](http://wistia.com/doc/embedded-video-analytics#actions) docs." | note }}
+
 {% post_image hashed_id: '983a220538b127659d67228b50bc1040ee18648c', class: 'float_right', width: 300 %}
 
-Any action added to your video will appear as a waypoint below your video
-timeline. All actions can be placed at any time within a video. To change when 
-these actions show up you can simply adjust the time stamps under the Timeline 
+Any Action added to your video will appear as a waypoint below your video
+timeline. All Actions can be placed at any time within a video. To change when 
+these Actions show up you can simply adjust the time stamps under the Timeline 
 Actions menu or drag the waypoints to the exact frames they're to appear.
 
 {% post_image hashed_id: 'ab4efc1f613f79a1bf8a4438a4a525ad2354fc73', class: 'center' %}
@@ -148,14 +151,14 @@ Actions menu or drag the waypoints to the exact frames they're to appear.
 ### Annotation Link
 
 An annotation link is a great option to notify your viewers without interrupting
-the video. 
+the video.
 
 {% post_image hashed_id: '0dc1db4a6f46dceeeb41af933e9a62406773bcc0', class: 'float_right', width: 300 %}
 
 The annotation link, when added, will appear in the upper right corner of
-the video frame. It can be as long or as short as you'd like. You can adjust the 
-time by updating the time stamp, or dragging the waypoint below the video timeline. 
-To make your annotation link longer or shorter adjust the length bar by clicking
+the video. Plus, it can stick around for as long as you'd like. You can adjust the 
+time by updating the time stamps, or dragging the waypoint below the video timeline. 
+To make your annotation links longer or shorter adjust the length bar by clicking
 and dragging.
 
 {% post_image hashed_id: 'bd5e724bda5b6cbfcadf7390dd0206951ae337b9', class: 'center' %}
@@ -175,7 +178,7 @@ There are three types of Calls to Action:
 
 * **Text:** add a quick, customizable message and link to direct your viewers.
 * **Image:** use an image instead of a text link to direct viewers.
-* **HTML:** write your own custom call-to-action *(advanced users only)*.
+* **HTML:** write your own custom Call To Action *(advanced users only)*.
 
 {{ "When adding your link, make sure you include the `http://`" | note }}
 
@@ -189,12 +192,12 @@ customization process.
 ### Turnstile
 
 Turnstile is an easy email gate for your video content. It's great for lead
-generation, and connects with [a bunch of great email providers]({{ '/turnstile' | post_url }}) to make
+generation, and connects with [a bunch of great email providers]({{ '/turnstile#set_up_your_email_provider_integration' | post_url }}) to make
 tracking new leads easy. [Read more on setting up Turnstile]({{ '/turnstile' | post_url }}).
 
 {% post_image hashed_id: '9a0c105070fb69e6377f272571a6087e805b821a', class: 'float_right', width: 300 %}
 
-You can place a Turnstile email gate at any point of your video by adjusting the
+You can place a Turnstile at any point of your video by adjusting the
 time stamp or dragging the waypoint to the exact frame you'd like it to appear 
 on. Neato!
 
