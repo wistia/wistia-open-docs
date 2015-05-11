@@ -193,7 +193,7 @@ customization process.
 
 Turnstile is an easy email gate for your video content. It's great for lead
 generation, and connects with [a bunch of great email providers]({{ '/turnstile#set_up_your_email_provider_integration' | post_url }}) to make
-tracking new leads easy. [Read more on setting up Turnstile]({{ '/turnstile' | post_url }}).
+tracking new leads simple. [Read more on setting up Turnstile]({{ '/turnstile' | post_url }}).
 
 {% post_image hashed_id: '9a0c105070fb69e6377f272571a6087e805b821a', class: 'float_right', width: 300 %}
 
