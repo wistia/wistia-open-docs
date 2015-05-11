@@ -27,7 +27,7 @@ Wistia automatically publishes the basic video metrics listed below to your Goog
 
 If you changed the analytics variable to something other than `ga` or `gaTracker`, you need to add the following snippet after your custom analytics variable is created. In this example, the custom analytics variable is `__ga`. Thank you [@lkraav](https://twitter.com/lkraav) for pointing this out.
 
-```html
+```
 <script>
   __ga(function(){
     window.ga = __ga;
