@@ -27,13 +27,11 @@ Wistia automatically publishes the basic video metrics listed below to your Goog
 
 If you changed the analytics variable to something other than `ga` or `gaTracker`, you need to add the following snippet after your custom analytics variable is created. In this example, the custom analytics variable is `__ga`. Thank you [@lkraav](https://twitter.com/lkraav) for pointing this out.
 
-```
-<script>
-  __ga(function(){
-    window.ga = __ga;
-  });
-</script>
-```
+{% codeblock custom-analytics-variable.js %}
+__ga(function(){
+  window.ga = __ga;
+});
+{% endcodeblock %}
 
 You can disable our integration for all your videos by default by changing the configuration on the Account Settings page. You can also disable the integration for an individual video by modifying the initialization parameter for an API embed: `Wistia.embed("8cexf3sjf3", { "googleAnalytics": false });`.
 
