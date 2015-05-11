@@ -16,7 +16,7 @@ If you currently have the pre-Universal Analytics version of Google Analytics se
 
 ## Default Configuration
 
-Wistia automatically publishes the basic video metrics listed below to your Google Analytics account. If you have multiple Wistia videos on the page, each video will have its own set of metrics in Google Analytics. Our integration also works with Universal Analytics, so no worries about compatibility issues there unless you've changed to a custom analytics variable other than `ga` or `_gaq`.
+Wistia automatically publishes the basic video metrics listed below to your Google Analytics account. If you have multiple Wistia videos on the page, each video will have its own set of metrics in Google Analytics. If you have multiple GA trackers on your website, each tracker will have its own set of metrics.
 
 - Play
 - 25% watched
@@ -24,6 +24,16 @@ Wistia automatically publishes the basic video metrics listed below to your Goog
 - 75% watched
 - 100% watched
 - Turnstile email conversion
+
+If you changed the analytics variable to something other than `ga` or `gaTracker`, you need to add the following snippet after your custom analytics variable is created. In this example, the custom analytics variable is `__ga`. Thank you [@lkraav](https://twitter.com/lkraav) for pointing this out.
+
+```html
+<script>
+  __ga(function(){
+    window.ga = __ga;
+  });
+</script>
+```
 
 You can disable our integration for all your videos by default by changing the configuration on the Account Settings page. You can also disable the integration for an individual video by modifying the initialization parameter for an API embed: `Wistia.embed("8cexf3sjf3", { "googleAnalytics": false });`.
 
