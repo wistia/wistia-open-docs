@@ -6,7 +6,7 @@ description: Projects are where you store, organize, and access media. Projects 
 post_intro: <p>A <strong>project</strong> is Wistia's method for grouping related media. It's our way of helping you stay organized and happy.</p><p>A project could contain all the training videos for your organization, all the sales materials related to a specific product, or just a bunch of your upcoming content.</p>
 ---
 
-{% post_image hashed_id: 'bc1a513148629df6d5e9271f5b3ba6a06f3701d0', class: 'center' %}
+{% wistia_embed hashed_id: pkaapem031 %}
 
 ## Create a new Project
 

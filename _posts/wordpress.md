@@ -29,8 +29,6 @@ That'll give you an oEmbed URL like this example:
 
 If you copy and paste that URL into a WordPress post and you have the Wistia WordPress plugin installed, WordPress will convert the oEmbed URL into an embedded video.
 
-{{ "If your account uses a [custom domain name](/doc/account-setup#set_a_custom_domain_cname), this will not work. You'll need to [use a wistia.com subdomain](/doc/account-setup#change_the_subdomain_url_of_your_wistia_account) like &quot;myawesomecompany.wistia.com&quot; for your account URL instead." | note }}
-
 If you're curious about the technical details behind oEmbed's sneaky magic, check out [oEmbed.com](http://oembed.com).
 
 
