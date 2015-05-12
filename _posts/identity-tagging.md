@@ -24,7 +24,7 @@ assistance.
 
 ## Tagging Viewers by Name
 
-{% post_image hashed_id: '6c1f8ce3a1b55fd528903c7fe7c172816a601164', class: 'center' %}
+{% post_image hashed_id: 'd389d8ed179aa56e93472c3feccf3c0841daed77', class: 'center' %}
 
 Sometimes, you know who is viewing your videos.  Maybe you sent a client a link
 through an email, or you speak to a prospective customer by phone and recommend
@@ -32,24 +32,24 @@ they review a video.  Opening the
 [analytics for that video]({{ '/embedded-video-analytics' | post_url }}), 
 you see an IP, location, and time that makes sense to be someone you recognize.
 
-{% post_image hashed_id: '414795a39fb1cfaef24874c56b2355fdb3ad94af', class: 'center' %}
+{% post_image hashed_id: '161dbcc8aafa0dbe9ea1b558e4a534aa66f899f1', class: 'center' %}
 
-{% post_image hashed_id: 'e4342b916b739158f578fe1b545f51eb2670dc3f', class: 'center' %}
+{% post_image hashed_id: 'f55944fc5d5fe3a066143052c17c1279528bb107', class: 'center' %}
 
-Clicking through the name (currently "Verizon Internet Services") will bring
+Clicking through the name (currently "Comcast Cable") will bring
 you to this viewer's page.  Once they are named, this page will accumulate
 their future video viewings as well.
 
-{% post_image hashed_id: 'aec09549631ba0450c630c5c2bcaf5c9bc9fb4bd', class: 'center' %}
+{% post_image hashed_id: 'b9c544648e64eada03e8dd963a435faed0b26b1c', class: 'center' %}
 
-Next to the current name is a green "edit" tag.  Selecting that (or clicking
+Hovering over the current name will reveal an "edit" option.  Selecting that (or clicking
 anywhere in the name) will allow you to re-name the viewer.  Enter their name,
-and press 'return'.
+and press enter.
 
 In the future, you can check in on your viewer by opening the 
 [viewer stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }}) 
 and searching for their name on the sorting bar.  You can also sort by "named"
 viewer.
 
-{% post_image hashed_id: '9624d8a4e4b3c484c72d04bfa2bde57b89813437', class: 'center' %}
+{% post_image hashed_id: 'e4ed7ab2f9d30aeebaade5a16e5370cf7669571a', class: 'center' %}
 
