@@ -132,10 +132,15 @@ window, and make sure to select an SEO embed code.
 
 ## Timeline Actions
 
+Want your video to autoplay on page load, or loop when it's done? Need a sweet email
+gate to capture leads? Then you need Timeline Actions, my friend!
+
+{% wistia_embed hashed_id: kh5w16gm6f %}
+
 Timeline Actions are an easy way to get your viewers to take action with your videos. 
 They're sort of like the sprinkles on top of your (already amazing) video cake.
 Within the Timeline Actions drop down menu we house all sorts of great tools--like
-Turnstile email gate, Calls to Action, and Annotation links.
+start and end behaviors, Turnstile email gate, Calls to Action, and Annotation links.
 
 {{ "For more information on tracking Action analytics, check out our [Embedded Video Analytics](http://wistia.com/doc/embedded-video-analytics#actions) docs." | note }}
 
@@ -157,8 +162,8 @@ the video.
 
 The annotation link, when added, will appear in the upper right corner of
 the video. Plus, it can stick around for as long as you'd like. You can adjust the 
-time by updating the time stamps, or dragging the waypoint below the video timeline. 
-To make your annotation links longer or shorter adjust the length bar by clicking
+time by updating the time stamps or dragging the waypoint below the video timeline. 
+To make your annotation links longer or shorter, adjust the length bar by clicking
 and dragging.
 
 {% post_image hashed_id: 'bd5e724bda5b6cbfcadf7390dd0206951ae337b9', class: 'center' %}
