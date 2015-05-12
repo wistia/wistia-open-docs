@@ -6,9 +6,9 @@ description:
   Turnstile makes it easy to add email capture to any video. Build a better email
   list with Wistia Turnstile.
 post_intro: 
-  <p>Turnstile is a great way to identify high-quality leads using video. Connect
+  <p>Turnstile is a great way to identify high-quality leads with video. Connect
   your account to your favorite email provider, then add an email capture gate to
-  any point in your video.</p><p>Setting up Turnstile is a breeze, we'll show
+  any point.</p><p>Setting up Turnstile is a breeze, we'll show
   you how!</p><p>If you use an email provider or marketing automation system
   that rocks but isn't on our current Turnstile list, submit them using <a
   href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
@@ -16,7 +16,7 @@ post_intro:
 
 ## Add Turnstile to Your Video
 
-To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select Timeline Actions. There you will be prompted to choose an action. To add an email gate select Turnstile. Here you'll be able change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider. Easy peasy, lemon squeezy!
+To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select Timeline Actions. There you will be prompted to choose an Action; to add an email gate select Turnstile. Here you'll be able change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider. Easy peasy, lemon squeezy!
 
 {% post_image hashed_id: "28400a9a5247cda7b312e1fce2c5e932552df901", class: 'center' %}
 
@@ -43,7 +43,7 @@ To set up the connection, open your [Account Settings]({{ '/account-setup#open_y
 Select your provider from the list, and select <span
 class="faux_button">Configure</span>. For this example, we will be using Emma.
 
-{% post_image hashed_id: "db5bd91cf2e3ff05efdc90ac67a21c9476e2e91f", class: 'center' %}
+{% post_image hashed_id: "e39ddd1b274b3813524914d7df01c36452bd343e", class: 'center' %}
 
 Each provider needs a different set of information - you can see what info is
 required on the configuration page. Emma, for example, requires the following
@@ -56,7 +56,7 @@ Once your account is set up to use an email provider with Turnstile, you can set
 up a Turnstile-enabled embed to collect email addresses, and pass them directly
 into a specific group in your connected email provider.
 
-Inside the [Customize screen]({{ '/embed-screen' | post_url }}), find the 
+Inside the [Customize screen]({{ '/customizing-your-video' | post_url }}), find the 
 *Turnstile Email Capture* options area. Then select the 
 email list (group) you want the email to be added to when viewers submit their 
 email. If you're integrating with HubSpot or Marketo, there's no need to select
