@@ -13,13 +13,13 @@ post_intro: "<p>Ever looked at your Wistia heatmaps and wished you could show th
 
 ### Account: Show
 
-The stats API allows you to retrieve some account-wide information. Don't buy a 
-nice car to overcompensate; instead, show off how many hours of your video have 
+The stats API allows you to retrieve some account-wide information. Don't buy a
+nice car to overcompensate; instead, show off how many hours of your video have
 been played! Or, celebrate when you reach a certain landmark.
 
 #### The Request
 
-In order to tell Wistia that you want stats for your account, issue a **GET** 
+In order to tell Wistia that you want stats for your account, issue a **GET**
 request to the following URL:
 
 <code class="full_width">GET https://api.wistia.com/v1/stats/account.json</code>
@@ -46,12 +46,12 @@ hours_watched | The total amount of time spent watching all of the videos in thi
 
 ### Account: By Date
 
-You can also get account-wide stats for a particular date range. No, not _that_ kind 
+You can also get account-wide stats for a particular date range. No, not _that_ kind
 of date -- you'll still have to figure those out for yourself. Neeeerd.
 
 #### The Request
 
-In order to tell Wistia that you want account-wide stats for a particular date range, 
+In order to tell Wistia that you want account-wide stats for a particular date range,
 issue a **GET** request to the following URL:
 
 <code class="full_width">GET https://api.wistia.com/v1/stats/account/by_date.json?start_date=[start date]&end_date=[end date]</code>
@@ -65,7 +65,7 @@ end_date       | The end of the date range for which you would like to receive s
 
 #### The Response
 
-The response will come back as an array of objects, with each object representing the stats 
+The response will come back as an array of objects, with each object representing the stats
 for a particular day.
 
 The fields available for each day are as follows:
@@ -102,7 +102,7 @@ hours_watched | The total amount of time spent watching videos in this account o
 
 ### Project: Show
 
-The stats API allows you to retrieve information about all of the videos in a 
+The stats API allows you to retrieve information about all of the videos in a
 particular project. We know you like it when we let you get specific.
 
 #### The Request
@@ -138,11 +138,11 @@ number_of_videos | The total number of videos in this project.
 
 ### Project: By Date
 
-You can use the stats API to get information about a project for a specific date range. 
+You can use the stats API to get information about a project for a specific date range.
 
 #### The Request
 
-In order to get stats for a project during a range of dates, issue a **GET** request 
+In order to get stats for a project during a range of dates, issue a **GET** request
 to the following URL:
 
 <code class="full_width">GET https://api.wistia.com/v1/stats/projects/[project-id]/by_date.json</code>
@@ -190,10 +190,10 @@ hours_watched | The total amount of time spent watching all of videos in the pro
 
 ### Media: Show
 
-The Wistia stats API can be used to retrieve stats for any given video. Ever wanted 
-to entice that special someone (or those hundreds of special someones viewing your page) 
-to watch your video? Win their heart by displaying impressive data like your engagement 
-rate. Or, give away a puppy to the thousandth viewer of your video. We heard you can 3D 
+The Wistia stats API can be used to retrieve stats for any given video. Ever wanted
+to entice that special someone (or those hundreds of special someones viewing your page)
+to watch your video? Win their heart by displaying impressive data like your engagement
+rate. Or, give away a puppy to the thousandth viewer of your video. We heard you can 3D
 print those now.
 
 #### The Request
@@ -213,6 +213,7 @@ play_rate | The percentage of visitors who clicked play (between 0 and 1).
 hours_watched | The total time spent watching this video.
 engagement | The average percentage of the video that gets viewed (between 0 and 1).
 visitors | The total number of unique people that have loaded this video.
+interactions | The stats for this video's Turnstile, Annotation, and Call to Action.
 
 #### Example JSON Response
 
@@ -225,7 +226,8 @@ visitors | The total number of unique people that have loaded this video.
   "play_rate": 0.54,
   "hours_watched": 21.9,
   "engagement": 0.89,
-  "visitors": 94
+  "visitors": 94,
+  "interactions": [{ "type": "Call to Action", "interaction_count": 24, "impression_count": 84, "rate": 0.286 }]
 }
 {% endcodeblock %}
 
@@ -244,7 +246,7 @@ end_date | The end of the date range for which you want to retrieve data.
 
 #### The Response
 
-Each object in the response array will give the stats for 1 day worth of data. 
+Each object in the response array will give the stats for 1 day worth of data.
 The objects' fields are listed below:
 
 Field | Description
@@ -277,7 +279,7 @@ hours_watched | The total time spent watching this video on the given day.
 
 ### Media: Engagement
 
-Using the stats API, you can retrieve the data used to construct the engagement 
+Using the stats API, you can retrieve the data used to construct the engagement
 graphs at the top of the stats page for any video in Wistia.
 
 #### The Request
@@ -331,7 +333,7 @@ search | If this parameter is specified, only visitors whose name or email addre
 
 #### The Response
 
-The response will be an array of objects. Each object represents a single visitor 
+The response will be an array of objects. Each object represents a single visitor
 with the following fields:
 
 #### Fields
@@ -383,12 +385,12 @@ This method allows you to retrieve the information for a single visitor.
 
 #### Parameters
 
-This method does not take any parameters besides the visitor-key that is already 
+This method does not take any parameters besides the visitor-key that is already
 specified in the URL.
 
 #### The Response
 
-The response will be a single object representing the visitor's information. 
+The response will be a single object representing the visitor's information.
 It contains the following fields:
 
 Field | Description
@@ -440,7 +442,7 @@ end_date | An optional parameter indicating that events should only be returned 
 
 #### The Response
 
-The response will be an array of objects. Each one represents a single viewing 
+The response will be an array of objects. Each one represents a single viewing
 session (event) and has the following fields:
 
 Field | Description
@@ -544,8 +546,8 @@ This method does not take any parameters other than the event key already specif
 
 #### The Response
 
-The response will be a single object representing the information about the event. 
-The format and fields of this object will be the same as can be found in the 
+The response will be a single object representing the information about the event.
+The format and fields of this object will be the same as can be found in the
 Events: List method.
 
 #### Example JSON Response
@@ -590,14 +592,14 @@ You can get the heatmap for any event by constructing the following URL:
 
 <code class="full_width">GET https://api.wistia.com/v1/stats/events/[event-key]/iframe.html?public_token=[public_token]</code>
 
-Replace the `<event-key>` token with the event_key that indicates which 
-heatmap you would like to see. You can get the `<event-key>` value from 
+Replace the `<event-key>` token with the event_key that indicates which
+heatmap you would like to see. You can get the `<event-key>` value from
 other parts of this API or from the Wistia player itself.
 
-Make sure you also provide your account's `<public_token>` as a parameter. You 
+Make sure you also provide your account's `<public_token>` as a parameter. You
 can find your `<public_token>` by clicking on **API** in your Account Settings.
 
-This URL is meant to be used as the target of an iframe which can then be used 
+This URL is meant to be used as the target of an iframe which can then be used
 to render the heatmap within your own pages.
 
 Here is an example heatmap embedded right into this page:
