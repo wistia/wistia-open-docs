@@ -102,8 +102,8 @@ Clicking the title of an individual media will move you to the Media-level Trend
 
 The media level provides detailed insight into how the video was viewed, both 
 at an aggregate level through an engagement graph, and individually through 
-heatmaps. It's also a great place to track viewer actions from Annotations, 
-Calls to Action, and Turnstile.
+heatmaps. It's also a great place to track viewer actions from [Annotations]({{ '/customizing-your-video#annotation_link' | post_url }}), 
+[Calls to Action]({{ '/customizing-your-video#call_to_action' | post_url }}), and [Turnstile]({{ 'customizing-your-video#turnstile' | post_url }}).
 
 To access the media-level trends page, first open up the Media Page for your 
 video (where you can watch the video in your account).  Under the *Media Actions* 
