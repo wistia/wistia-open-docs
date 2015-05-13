@@ -194,6 +194,8 @@ Where possible, use on-page styles (i.e. including them in a `<style>` tag in
 the head of your page), because they *may* be stripped out during the
 customization process.
 
+{{ "Since HTML Calls to Action allow for advanced customizations (which could lead viewers away from our stats servers), they won't collect any Action stats." | note }}
+
 ### Turnstile
 
 Turnstile is an easy email gate for your video content. It's great for lead
