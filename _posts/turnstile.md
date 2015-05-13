@@ -16,7 +16,7 @@ post_intro:
 
 ## Add Turnstile to Your Video
 
-To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select Timeline Actions. There you will be prompted to choose an Action; to add an email gate select Turnstile. Here you'll be able change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider. Easy peasy, lemon squeezy!
+To enable Turnstile on a video in your account, open the [Customize]({{ '/customizing-your-video' | post_url}}) panel and select [Timeline Actions]({{ '/customizing-your-video#timeline_actions' | post_url}}). There you will be prompted to choose an Action; to add an email gate select Turnstile. Here you can change the text of the Turnstile prompt, decide when it should appear on your video, and connect Turnstile with your Email Marketing provider. Easy peasy, lemon squeezy!
 
 {% post_image hashed_id: "28400a9a5247cda7b312e1fce2c5e932552df901", class: 'center' %}
 

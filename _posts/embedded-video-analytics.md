@@ -46,9 +46,9 @@ Drag either end to change the range to be displayed in the graph.
 {% post_image hashed_id: 'b66fd0ae079e9bb5606b1b21f4705dd4e6b64b97', class: 'center' %}
 
 The Sorting Bar within Wistia analytics pages helps sort analytics data in the 
-way most useful for you, showing Projects or Videos, selecting by date ranges 
-(Months, Weeks, Days) and sorting by attributes like amount of videos, date 
-created, or number of plays.  The sorting bar is slightly different at the 
+way most useful for you. Here you can show Projects or Videos, select date ranges 
+(Months, Weeks, Days) or sort by attributes like amount of videos, date 
+created, or number of plays. The sorting bar is slightly different at the 
 account and project levels.
 
 ---
@@ -107,7 +107,7 @@ heatmaps. It's also a great place to track viewer actions from [Annotations]({{ 
 
 To access the media-level trends page, first open up the Media Page for your 
 video (where you can watch the video in your account).  Under the *Media Actions* 
-drop-down menu, select "Stats."
+drop-down menu, select **Stats**.
 
 This will open the page with viewing stats specifically for that media.  You 
 can see the [overall engagement graph]({{ '/audience-engagement-graph' | post_url }}), 
@@ -143,7 +143,7 @@ More on [Audience Engagement Graphs]({{ '/audience-engagement-graph' | post_url 
 The summary bar next to the engagement graph displays overall data for the 
 viewers of the video.  This is extremely useful high-level data for comparison, 
 such as % of viewers who clicked play, % viewed, and total time watched. We also house
-information on actions taken by your viewers--from entering an email into Turnstile to
+information on Actions taken by your viewers--from entering an email into Turnstile to
 clicking an Annotation Link. Click **Show Details** for a deeper explation of this
 information.
 

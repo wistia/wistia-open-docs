@@ -22,7 +22,7 @@ video. Let's walk through the customization options, along with some of the
 
 ## Appearance
 
-{% post_image hashed_id: 'ce7c8e288eadec78f049a63a4ed6660e09123dc9', width: 300, class: 'float_left' %}
+{% post_image hashed_id: 'baf0069f5b737c8ad2115273cd4730cfaf51e2e1', width: 300, class: 'float_left' %}
 
 The *Appearance* options are about getting your video looking *sharp*.
 
@@ -47,8 +47,8 @@ By default, our system selects the middle frame of the video. But sometimes this
 catch the speaker in mid-sentence, or can reveal something about the content
 you want to keep a secret!
 
-To change it, select one of two options: **Upload a custom image** (one you
-have carefully crafted) or **Use current frame** - which means you want the
+To change it, select one of two options: **Upload a new image** (one you
+have carefully crafted) or **Use the current frame** - which means you want the
 frame that is currently showing in your video to the right.
 
 Below is a quick screencast to show you the thumbnail update moves.
@@ -57,7 +57,7 @@ Below is a quick screencast to show you the thumbnail update moves.
 
 ### Turn off Comments
 
-{% post_image hashed_id: '22e89f019b63d4c71b84843aad9f5e5c418b1857', class: 'center' %}
+{% post_image hashed_id: '2d95bb55b1657393cdd8b401dc3b41c50f3e13f2', class: 'center' %}
 
 By default, viewers of your content will be able to leave comments. To disable
 this functionality, open the Customize panel, and under the Appearance tab,
@@ -133,14 +133,14 @@ window, and make sure to select an SEO embed code.
 ## Timeline Actions
 
 Want your video to autoplay on page load, or loop when it's done? Need a sweet email
-gate to capture leads? Then you need Timeline Actions, my friend!
+gate to capture leads? Then you need Timeline Actions, friend!
 
 {% wistia_embed hashed_id: kh5w16gm6f %}
 
 Timeline Actions are an easy way to get your viewers to take action with your videos. 
 They're sort of like the sprinkles on top of your (already amazing) video cake.
 Within the Timeline Actions drop down menu we house all sorts of great tools--like
-start and end behaviors, Turnstile email gate, Calls to Action, and Annotation links.
+start and end behaviors, [Turnstile email gate](#turnstile), [Calls to Action](#call_to_action), and [Annotation links](#annotation_link).
 
 {{ "For more information on tracking Action analytics, check out our [Embedded Video Analytics](http://wistia.com/doc/embedded-video-analytics#actions) docs." | note }}
 
@@ -168,7 +168,7 @@ and dragging.
 
 {% post_image hashed_id: 'bd5e724bda5b6cbfcadf7390dd0206951ae337b9', class: 'center' %}
 
-{{ "If you'd like to create an annotation without a click-through link simply leave the URL line blank." | note }}
+{{ "If you want to create an annotation without a click-through link just leave the URL line blank." | note }}
 
 
 ### Call to Action
@@ -203,8 +203,7 @@ tracking new leads simple. [Read more on setting up Turnstile]({{ '/turnstile' |
 {% post_image hashed_id: '9a0c105070fb69e6377f272571a6087e805b821a', class: 'float_right', width: 300 %}
 
 You can place a Turnstile at any point of your video by adjusting the
-time stamp or dragging the waypoint to the exact frame you'd like it to appear 
-on. Neato!
+time stamp or dragging the waypoint to the exact frame you'd like it to appear. Neato!
 
 {% post_image hashed_id: '28400a9a5247cda7b312e1fce2c5e932552df901', class: 'center' %}
 
