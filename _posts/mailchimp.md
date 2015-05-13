@@ -50,7 +50,7 @@ Once your viewers receive their emails, they will start clicking your video!
 
 The great part about MailChimp and Wistia together is that the merge tag has your recipient's email address built in - so when tracking the stats you can see exactly which emails watched the video, and up to the second how much they watched.  Now how cool is that? Make sure you check in the "Public and Embed Stats" for the viewing stats.
 
-{% post_image hashed_id: '3ba4d0fc4e006abdda10a46bd8ed061a07211b21', class: 'center' %}
+{% post_image hashed_id: '091ac92bd056e6225274e586b7426e8b87ee61dd', class: 'center' %}
 
 {{ "If you would like to keep the email campaign separate from the other embedded viewings of the video, set up a separate project specifically for the email version of the video." | tip }}
 

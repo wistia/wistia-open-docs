@@ -14,15 +14,15 @@ After uploading a new video, the *customization* step gets it ready for the big
 time. Open the customization panel by selecting *Customize* from the
 <span class="action_menu">Video Actions</span> menu.
 
-{% post_image hashed_id: '1cb27f6a4d8a302de3f2e6fc72c44b2ff15236a1', class: 'center' %}
+{% post_image hashed_id: 'f400b4292bf2bf88052126113611635da29e4648', class: 'center' %}
 
 The customize panel slides out to reveal an array of different options for your
 video. Let's walk through the customization options, along with some of the
-*advanced level* tools for customization.
+[*advanced level*](#advanced_customize_features) tools for customization.
 
 ## Appearance
 
-{% post_image hashed_id: 'ce7c8e288eadec78f049a63a4ed6660e09123dc9', width: 300, class: 'float_left' %}
+{% post_image hashed_id: 'baf0069f5b737c8ad2115273cd4730cfaf51e2e1', width: 300, class: 'float_left' %}
 
 The *Appearance* options are about getting your video looking *sharp*.
 
@@ -33,31 +33,31 @@ The **player color** should reflect your branding, to encourage more consistency
 your viewer's experience.
 
 Finally - you can choose whether visitors to the video page will have the
-option to [leave comments](#disable_comments).
+option to [leave comments](#turn_off_comments).
 
-{{ "Changes to the thumbnail won't apply to popover embeds without re-embedding due to them referencing the exact image that was the thumbnail when you embedded the video." | note }}
+{{ "Changes to the thumbnail won't apply to popover embeds without re-embedding. Since popovers reference the exact image used when they're first embedded, you'll want to update their embed codes out in the wild." | note }}
 
-## Changing the Thumbnail
+### Changing the Thumbnail
 
-Video still, poster image, first frame...we've heard all sorts of terms for the
-image that appears when the page loads, before your viewer's begin watching.
+Video still, poster image, first frame... we've heard all sorts of terms for the
+image that appears when the page loads, before your viewers begin watching.
 We call it the **thumbnail**.
 
-By default, we select the middle frame of the video. But sometimes this can
+By default, our system selects the middle frame of the video. But sometimes this can
 catch the speaker in mid-sentence, or can reveal something about the content
 you want to keep a secret!
 
-To change it, select one of two options: **Upload a custom image** (one you
-have carefully crafted) or **Use current frame** - which means you want the
+To change it, select one of two options: **Upload a new image** (one you
+have carefully crafted) or **Use the current frame** - which means you want the
 frame that is currently showing in your video to the right.
 
 Below is a quick screencast to show you the thumbnail update moves.
 
-{% wistia_embed hashed_id: oo6cr5kz8p %}
+{% wistia_embed hashed_id: k0pzw56jh8 %}
 
-## Turn off Comments
+### Turn off Comments
 
-{% post_image hashed_id: '22e89f019b63d4c71b84843aad9f5e5c418b1857', class: 'center' %}
+{% post_image hashed_id: '2d95bb55b1657393cdd8b401dc3b41c50f3e13f2', class: 'center' %}
 
 By default, viewers of your content will be able to leave comments. To disable
 this functionality, open the Customize panel, and under the Appearance tab,
@@ -68,18 +68,18 @@ To disable comments across all videos, see the
 
 ## Controls
 
-{% post_image hashed_id: '27d9df9224bd47f11b58ca0ea3aebe6aeeda1ee5', class: 'float_right', width: 300 %}
+{% post_image hashed_id: 'ff915dcff4a37c3d3d85062bb9e7ab4b1307fdc9', class: 'float_right', width: 300 %}
 
-The *Control* area includes the different control options you can add to your
-video. Remove the play button, remove the full screen button, or make the video
-autoplay.
+The *Control* area includes options to tweak the video controls on your media. 
+Don't want viewers skipping important parts of your video? Adios, **Play Bar**! 
+Customize your video however you'd like--by adding or removing any buttons.
 
 ## Social Bar
 
 The *Social Bar* is our nickname for the group of social buttons that sit below 
 the video and make it easy to share the video in social networks.
 
-{% post_image hashed_id: '9f47519fd807ec8436a030b32d97f1649f88ac99', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '424d41e6cdde8bedcb33c5bdaad88cdcc40a7221', class: 'float_right', width: 300 %}
 
 The Social Bar has a bunch of options, from social networks like Twitter and
 Facebook to actions like *share stats* and *download*.
@@ -130,42 +130,82 @@ instructions).
 Once that is done, save your customizations. Open the [Embed & Share]({{'/embedding#generate_an_embed_code' | post_url}})
 window, and make sure to select an SEO embed code.
 
-## Call to Action
+## Timeline Actions
 
-A call-to-action (or CTA) is a clickable message or image that appears
-immediately after your video, and lets your viewers know what you want them to
+Want your video to autoplay on page load, or loop when it's done? Need a sweet email
+gate to capture leads? Then you need Timeline Actions, friend!
+
+{% wistia_embed hashed_id: kh5w16gm6f %}
+
+Timeline Actions are an easy way to get your viewers to take action with your videos. 
+They're sort of like the sprinkles on top of your (already amazing) video cake.
+Within the Timeline Actions drop down menu we house all sorts of great tools--like
+start and end behaviors, [Turnstile email gate](#turnstile), [Calls to Action](#call_to_action), and [Annotation links](#annotation_link).
+
+{{ "For more information on tracking Action analytics, check out our [Embedded Video Analytics](http://wistia.com/doc/embedded-video-analytics#actions) docs." | note }}
+
+{% post_image hashed_id: '983a220538b127659d67228b50bc1040ee18648c', class: 'float_right', width: 300 %}
+
+Any Action added to your video will appear as a waypoint below your video
+timeline. All Actions can be placed at any time within a video. To change when 
+these Actions show up you can simply adjust the time stamps under the Timeline 
+Actions menu or drag the waypoints to the exact frames they're to appear.
+
+{% post_image hashed_id: 'ab4efc1f613f79a1bf8a4438a4a525ad2354fc73', class: 'center' %}
+
+### Annotation Link
+
+An annotation link is a great option to notify your viewers without interrupting
+the video.
+
+{% post_image hashed_id: '0dc1db4a6f46dceeeb41af933e9a62406773bcc0', class: 'float_right', width: 300 %}
+
+The annotation link, when added, will appear in the upper right corner of
+the video. Plus, it can stick around for as long as you'd like. You can adjust the 
+time by updating the time stamps or dragging the waypoint below the video timeline. 
+To make your annotation links longer or shorter, adjust the length bar by clicking
+and dragging.
+
+{% post_image hashed_id: 'bd5e724bda5b6cbfcadf7390dd0206951ae337b9', class: 'center' %}
+
+{{ "If you want to create an annotation without a click-through link just leave the URL line blank." | note }}
+
+
+### Call to Action
+
+A Call to Action is a clickable message, image, or HTML script that appears
+anywhere in your video, and it lets your viewers know what you want them to
 do next.
 
-{% post_image hashed_id: '09bfc5c29c924a7bbd1b08e6125f65b4054e3927', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '990daa651616ab00874025abab13fa4d80fd1b0e', class: 'float_right', width: 300 %}
 
-There are three types of CTAs:
+There are three types of Calls to Action:
 
 * **Text:** add a quick, customizable message and link to direct your viewers.
 * **Image:** use an image instead of a text link to direct viewers.
-* **HTML:** write your own custom call-to-action *(advanced users only)*.
+* **HTML:** write your own custom Call To Action *(advanced users only)*.
 
 {{ "When adding your link, make sure you include the `http://`" | note }}
 
-### Custom HTML Calls to Action
+### Custom HTML Call to Action
 
-You can build custom HTML calls to action that take on-page or inline styles.
+You can build custom HTML Calls to Action that take on-page or inline styles.
 Where possible, use on-page styles (i.e. including them in a `<style>` tag in
 the head of your page), because they *may* be stripped out during the
 customization process.
 
-## Turnstile Email Gate
+### Turnstile
 
 Turnstile is an easy email gate for your video content. It's great for lead
-generation, and connects with [a bunch of great email providers]({{ '/turnstile' | post_url }}) to make
-tracking new leads easy. [Read more on setting up Turnstile]({{ '/turnstile' | post_url }}).
+generation, and connects with [a bunch of great email providers]({{ '/turnstile#set_up_your_email_provider_integration' | post_url }}) to make
+tracking new leads simple. [Read more on setting up Turnstile]({{ '/turnstile' | post_url }}).
 
-{% post_image hashed_id: '2e45d0c67f1e99b430335b73c9a8fea3f0471534', class: 'center' %}
+{% post_image hashed_id: '9a0c105070fb69e6377f272571a6087e805b821a', class: 'float_right', width: 300 %}
 
-There are three options for when you request viewer emails:
+You can place a Turnstile at any point of your video by adjusting the
+time stamp or dragging the waypoint to the exact frame you'd like it to appear. Neato!
 
-* Before they click play
-* At the end of the video
-* At a specific time in the video
+{% post_image hashed_id: '28400a9a5247cda7b312e1fce2c5e932552df901', class: 'center' %}
 
 ### Integrate Turnstile with an Email Provider
 
@@ -230,7 +270,7 @@ forward.
 If your videos *across* Projects share common settings, this one will save you
 lots of time.
 
-{% post_image hashed_id: '67a73a2a473ff11373d1dcc7217758c3ebee7f07', class: 'center' %}
+{% post_image hashed_id: '59604c54d44a302334b952c55db51d2c7d553173', class: 'float_right', width: 500 %}
 
 If you've just uploaded a new video, or want to add the customizations from one
 video onto another video, you should *load settings*. Inside the 
@@ -312,3 +352,4 @@ A: Unfortunately, because of the limitations of Facebook embedding, we are not
 able to push all of your awesome video customizations over there. That being 
 said, we are hopeful that Facebook will start to update their methods for 
 pulling video information so that we can get the customizations flowing!
+

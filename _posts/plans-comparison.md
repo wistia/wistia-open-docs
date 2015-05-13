@@ -47,10 +47,12 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 [Email Marketing Integration]({{ '/email-marketing' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Google Analytics Integration]({{ '/google-analytics' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Advanced Customization Options</span>  |  |  |  |
+[Annotation Links]({{ '/customizing-your-video#annotation_link' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [Calls To Action]({{ '/customizing-your-video#call_to_action' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
-[Turnstile Email Gate & Integrations]({{ '/customizing-your-video#turnstile_email_gate' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
+[Turnstile Email Gate & Integrations]({{ '/customizing-your-video#turnstile' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Advanced Viewer Analytics</span>  |  |  |  |
 [Engagement Graphs]({{ '/audience-engagement-graph' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
+[Actions Analytics]({{ '/embedded-video-analytics#actions' | post_url }}) | &#8211; | &#8211; | &#10003; | &#10003;
 [Live Viewer Stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 [Viewer History]({{ '/embedded-video-analytics#viewer_stream' | post_url }})  | &#8211; | &#8211; | &#10003; | &#10003;
 <span class='category'>Video SEO Tools</span>  |  |  |  |

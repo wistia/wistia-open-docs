@@ -58,7 +58,7 @@ To customize your video with transcription or captions, select *Customize*
 from the <span class='action_menu'>Video Actions</span> menu. Open the
 *Captions* customization area.
 
-{% post_image hashed_id: 'afd727efc19ee2923393848bea8e87a9d14e6179', class: 'center' %}
+{% post_image hashed_id: '0660cffb4daeeb71fa7e710e18c12b32e7c65358', class: 'center' %}
 
 Inside the Captions customization area, you can choose to *Edit* your SRT file, 
 *Download* your SRT file, and *Delete* your SRT file.
