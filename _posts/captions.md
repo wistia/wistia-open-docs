@@ -26,7 +26,7 @@ Let's jump in to creating and using your captions!
 ## Select Your Video
 
 First, navigate to the media page for the video you'd like captions for (the
-page where you can play the video itself).
+page where you can play the video in your Wistia account).
 
 Under the <span class='action_menu'>Video Actions</span> menu, select the
 *Customize* option.
@@ -42,11 +42,6 @@ From the Customize Panel, select the *Captions* settings area.
 * If you already have an [SRT file](http://en.wikipedia.org/wiki/SubRip) ready
   to upload, select the *Upload SRT* option.
 
-<!--- 
-Either way, you can use the single transcription to create an interactive
-transcript OR to add closed captioning to your video.
--->
-
 ## Use Your Captions
 
 {% post_image hashed_id: 'dde5fb7fb4af6297e92e6bcdfe9c911417563b88', class: 'center' %}
@@ -56,6 +51,8 @@ button will appear to all viewers who view the video within your account. The
 captions will now be included with your embed codes, if you are using the SEO 
 embed code type.
 
+{{ "Only captions ordered through Wistia will appear in your SEO embed code." | note }}
+
 To customize your video with transcription or captions, select *Customize*
 from the <span class='action_menu'>Video Actions</span> menu. Open the
 *Captions* customization area.
@@ -64,10 +61,6 @@ from the <span class='action_menu'>Video Actions</span> menu. Open the
 
 Inside the Captions customization area, you can choose to *Edit* your SRT file, 
 *Download* your SRT file, and *Delete* your SRT file.
-
-If you set your captions to show by default, you can now go through the
-[embedding process]({{ '/embedding' | post_url }}) and your captions will
-appear automatically on your site!
 
 {{ "Captions currently do not work inline on Facebook." | note }}
 
@@ -84,7 +77,7 @@ player controls bar when being played on an iPhone.
 {% post_image hashed_id: '5e53d8e082ddd821f60d67561aa412c4b554c7e6', class: 'center' %}
 
 If you select the button, the captions options screen will show up. Select the
-language of your captions (probably English) and then hit *Done*.
+language of your captions and then hit *Done*.
 
 {% post_image hashed_id: '69cc3861c18634b79ae9c1d1de9bc2d3532dfdc8', class: 'center' %}
 
