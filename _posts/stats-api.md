@@ -213,7 +213,7 @@ play_rate | The percentage of visitors who clicked play (between 0 and 1).
 hours_watched | The total time spent watching this video.
 engagement | The average percentage of the video that gets viewed (between 0 and 1).
 visitors | The total number of unique people that have loaded this video.
-interactions | The stats for this video's Turnstile, Annotation, and Call to Action.
+actions | The stats for this video's Turnstile, Annotation, and Call to Action.
 
 #### Example JSON Response
 
@@ -227,7 +227,7 @@ interactions | The stats for this video's Turnstile, Annotation, and Call to Act
   "hours_watched": 21.9,
   "engagement": 0.89,
   "visitors": 94,
-  "interactions": [{ "type": "Call to Action", "interaction_count": 24, "impression_count": 84, "rate": 0.286 }]
+  "actions": [{ "type": "Call to Action", "action_count": 24, "impression_count": 84, "rate": 0.286 }]
 }
 {% endcodeblock %}
 
