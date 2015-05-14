@@ -25,7 +25,7 @@ Let's jump in to creating and using your captions!
 
 ## Select Your Video
 
-First, navigate to the video page for the video you'd like captions for (the
+First, navigate to the media page for the video you'd like captions for (the
 page where you can play the video itself).
 
 Under the <span class='action_menu'>Video Actions</span> menu, select the
@@ -60,7 +60,7 @@ To customize your video with transcription or captions, select *Customize*
 from the <span class='action_menu'>Video Actions</span> menu. Open the
 *Captions* customization area.
 
-{% post_image hashed_id: '0660cffb4daeeb71fa7e710e18c12b32e7c65358', class: 'center' %}
+{% post_image hashed_id: 'b2765a9518f593c22d4c1c9f0087914a5d07d4e0', class: 'center' %}
 
 Inside the Captions customization area, you can choose to *Edit* your SRT file, 
 *Download* your SRT file, and *Delete* your SRT file.
