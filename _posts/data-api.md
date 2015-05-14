@@ -1451,18 +1451,14 @@ captions | The text of the captions for the specified language in SRT format.
 [
   {
     "captions": {
-      "english_name": "English",
-      "native_name": "English",
       "language": "eng",
       "text": "English SRT file contents here."
     }
   },
   {
     "captions": {
-      "english_name": "French".
-      "native_name": "Français",
-      "language": "fra",
-      "text": "Contenu du fichier SRT Français ici."
+      "language": "tlh",
+      "text": "Klingon SRT file contents here."
     }
   }
 ]
@@ -1525,11 +1521,9 @@ captions | The text of the captions for the specified language in SRT format.
 {% codeblock example_json_response.json %}
 
 {
-   "captions": {
-      "english_name": "English",
-      "native_name": "English",
-      "language": "eng",
-      "text": "English SRT file contents here."
+  "captions": {
+    "language": "eng",
+    "text": "English SRT file contents here."
   }
 }
 
