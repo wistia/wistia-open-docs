@@ -42,7 +42,7 @@ The *file* parameter must be multipart-form encoded into the request body.
 
 Parameter   | Description
 ------------|-------------
-api_password  | **Required unless access_token is specified**. A 40 character hex string. This parameter can be found on your [API access page]({{ '/account-setup#api_password_and_public_token' | post_url }}).
+api_password  | **Required unless access_token is specified**. A 40 character hex string. This parameter can be found on your [API access page]({{ '/data-api#getting_started' | post_url }}).
 access_token  | **Required unless api_password is specified**. The token you received from authenticating via [OAuth2]({{ '/oauth2' | post_url }}).
 file          | **Required unless `url` is specified**. The media file, multipart-form encoded into the request body.
 url           | **Required unless `file` is specified**. The web or FTP location of the media file to import.
