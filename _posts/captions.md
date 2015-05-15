@@ -21,7 +21,7 @@ Let's jump in to creating and using your captions!
 
 ## Video Overview
 
-{% wistia_embed hashed_id: pqmkpbr89t, videoWidth: 600, videoHeight: 337 %}
+{% wistia_embed hashed_id: pqmkpbr89t %}
 
 ## Select Your Video
 
@@ -35,7 +35,7 @@ Under the <span class='action_menu'>Video Actions</span> menu, select the
 
 From the Customize Panel, select the *Captions* settings area.
 
-{% post_image hashed_id: 'b1909f6eb16dba8bd49786323e2d34c1d459b5b8', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '3b64c15892efcbfb070529fa15704f0d81e683b1', class: 'float_right', width: 300 %}
 
 * If you'd like to have us create the transcript for your video, select the 
   *Order Captions* option. The transcription should be ready within five business days.
