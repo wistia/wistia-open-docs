@@ -220,25 +220,28 @@ linked.
 
 ## Captions
 
-Captions are a must for the hearing impaired. They are also
-useful for educational content, to make sure the audience is able to follow the
-instructor. 
+Captions are essential if you’re communicating with a multilingual audience. They’re 
+great for educators and instructors--making sure your audience is able follow along 
+in any language. Multilingual captions help to break down language barriers, 
+getting your awesome content to more viewers.
 
-The captions for a video can also help boost SEO ranking of your video content,
-since the script of your video likely contains words related to your ranking terms.
+They’re also a great boost for SEO ranking as the script for your video likely
+contains words related to your ranking terms.
 
 [Read more about captions with Wistia]({{ '/captions' | post_url }}).
 
-{% post_image hashed_id: '53bec864330fdd48fdfde29d74b46c817c3734d4', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '3b64c15892efcbfb070529fa15704f0d81e683b1', class: 'float_right', width: 300 %}
+
+If your video does not have captions, you'll be presented with the
+option to order a transcript (currently only available in English) 
+or upload your own captions SRT file. You can upload as many SRT 
+files as you'd like, in whatever languages you choose.
+
+{% post_image hashed_id: 'a2578d27e3a446cb352c3b723f88c1127eafe5eb', class: 'float_right', width: 300 %}
 
 If your video already has captions, the Captions customize area will allow you
-to *edit*, *download*, or *delete* the captions, as well as choose if you want
-to include them by default.
-
-{% post_image hashed_id: 'd3306d81104947e4c9a4a3954cf418053ef20c56', class: 'float_right', width: 300 %}
-
-If your video does not have captions, you will instead be presented with the
-option to order a transcript or upload your own captions SRT file.
+to *edit*, *download*, or *delete* the captions. You'll also see an option to
+order or upload another SRT file.
 
 ## Advanced Customize Features
 
