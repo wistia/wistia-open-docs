@@ -166,9 +166,11 @@ time by updating the time stamps or dragging the waypoint below the video timeli
 To make your annotation links longer or shorter, adjust the length bar by clicking
 and dragging.
 
+{{ "If you want to create an annotation without a click-through link just leave the URL line blank." | tip }}
+
 {% post_image hashed_id: 'bd5e724bda5b6cbfcadf7390dd0206951ae337b9', class: 'center' %}
 
-{{ "If you want to create an annotation without a click-through link just leave the URL line blank." | note }}
+{{ "Since iPhones use their native player for videos, Annotations do not currently work on the iPhone." | note }}
 
 
 ### Call to Action
