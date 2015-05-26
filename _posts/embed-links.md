@@ -123,6 +123,20 @@ wistiaEmbed = Wistia.embed("30q7n48g4f", { container: "wistia_30q7n48g4f_3" });
 <a href="#wistia_30q7n48g4f?time=20">Make French Toast @ 20</a><br/>
 <a href="#wistia_30q7n48g4f?time=30">Make French Toast @ 30</a><br/>
 
+## Watch Another Video in CTA/Annotation
+
+You can easily add "Watch Another Video" functionality using embed links. In a
+CTA or annotation, just make the URL `#wistia_{hashedid}`, where "{hashedid}"
+is the video you want to play next.
+
+To get the hashed ID for a video, refer to the URL of the page in Wistia. The
+alphanumeric characters following "/medias/" are what you want. For example, in
+the previous examples, the hashed ID is `30q7n48g4f`.
+
+Beware: Testing this while the Customize Panel is open confuses things quite a
+bit. To make sure it works, you'll need to save your customization then reload
+the page.
+
 ## Special Embed Link Options
 
 ### autoPlay
