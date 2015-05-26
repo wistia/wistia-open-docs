@@ -87,10 +87,10 @@ wistiaEmbed = Wistia.embed("30q7n48g4f", {
   playlistLinks: "playlist_links_1"
 });
 </script>
-<div id="playlist_links_1" class="wistia_playlist_links">
+<p id="playlist_links_1" class="wistia_playlist_links">
   <a href="#wistia_30q7n48g4f">Make French Toast</a><br/>
   <a href="#wistia_342jss6yh5">Wistia Team Intro</a><br/>
-</div>
+</p>
 
 ## Simple Chaptering Example
 
