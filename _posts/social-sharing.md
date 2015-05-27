@@ -16,7 +16,7 @@ Read more about that and more on the [Twitter Integration page]({{ '/twitter' | 
 
 ## Facebook
 
-{{ "Many of the features of Customize (such as the Turnstile, Call to Action and Captions) do not work inline in Facebook. Sorry about that!" | note }}
+{{ "Due to Facebook's limits on javascript, many of the features of Customize (such as Turnstile, Call to Action, and Captions) do not work inline in Facebook." | note }}
 
 Facebook embeds show up right in your news feed.  Your followers can click to play the video in the feed, or click through the link to watch the video in your Wistia account.
 
@@ -41,9 +41,11 @@ The video thumbnail and description will be pulled in and ready to share!
 Once you share the update, viewers can watch the video inline in the Facebook
 news feed.
 
+{{ "Wistia videos won't play inline in the Facebook mobile app; they'll open in a web page in a new panel." | note }}
+
 ## Posting to Facebook from your website
 
-{{ "Be aware, this is technical territory!" | note }}
+{{ "Be aware, this is technical territory!" | alert }}
 
 Maybe you want to post to Facebook, but you want it to point back to your website?
 If so, you can use the OpenGraph tags we produce for 'public' videos to accomplish 
