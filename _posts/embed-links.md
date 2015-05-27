@@ -129,9 +129,14 @@ You can easily add "Watch Another Video" functionality using embed links. In a
 CTA or annotation, just make the URL `#wistia_{hashedid}`, where "{hashedid}"
 is the video you want to play next.
 
+<img src="https://embed-ssl.wistia.com/deliveries/e7303526447445f6d0f74283ea5771e3c7c65161.jpg?image_resize=294" style="vertical-align:top;width:294px;" />
+<img src="https://embed-ssl.wistia.com/deliveries/c7ad228d79d0ffd834a64887331902f9bc7815e8.jpg?image_resize=293" style="vertical-align:top;width:293px;" />
+
 To get the hashed ID for a video, refer to the URL of the page in Wistia. The
 alphanumeric characters following "/medias/" are what you want. For example, in
-the previous examples, the hashed ID is `30q7n48g4f`.
+the example below, the hashed ID is `z1fxq584qr`.
+
+<img src="https://embed-ssl.wistia.com/deliveries/49a921c8ed5e0978f80aca37a59836f91871cca7.jpg?image_resize=367" style="width:367px;" />
 
 Beware: Testing this while the Customize Panel is open confuses things quite a
 bit. To make sure it works, you'll need to save your customization then reload
