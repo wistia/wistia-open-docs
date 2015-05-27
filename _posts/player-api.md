@@ -292,7 +292,7 @@ wistiaEmbed.bind("end", function () {
 
 ### Return the Email from Turnstile
 
-With [Wistia Turnstile](http://wistia.com/product/turnstile), you can require
+With [Wistia Turnstile]({{ '/turnstile' | post_url }}), you can require
 your viewers to enter an email address to view video content on your webpage.
 Using the "conversion" event, you can trigger actions based on the email and name being
 entered - including passing that email on to another service!
