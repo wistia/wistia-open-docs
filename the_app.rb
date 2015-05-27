@@ -49,7 +49,8 @@ class TheApp < Sinatra::Base
       [ 200,
         {
           'Content-Length' => ::File.size(path).to_s,
-          'Content-Type'   => Rack::Mime.mime_type(::File.extname(path))
+          'Content-Type'   => Rack::Mime.mime_type(::File.extname(path)),
+          'Surrogate-Key'  => 'docbox'
         },
         [::File.read(path)]
       ]
