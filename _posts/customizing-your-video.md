@@ -82,7 +82,7 @@ the video and make it easy to share the video in social networks.
 {% post_image hashed_id: '424d41e6cdde8bedcb33c5bdaad88cdcc40a7221', class: 'float_right', width: 300 %}
 
 The Social Bar has a bunch of options, from social networks like Twitter and
-Facebook to actions like *share stats* and *download*.
+Facebook to actions like *Email* and *Download*.
 
 ### Configuring the Social Bar Buttons
 
