@@ -53,15 +53,6 @@ This was updated by dev-god [Travis Carden](http://drupal.org/user/236758), than
 
 {{ "Wistia embeds have only been tested and verified through Drupal v6. Compatibility beyond v6 is not yet guaranteed." | note }}
 
-## Expression Engine
-
-{% post_image hashed_id: 'aaffdd3319f6a532ecb071811f2fd071e57a0a46', width: 200, class: 'integration_logo' %}
-
-Posting a video on an Expression Engine page can be accomplished using any embed code, or through oEmbed links through a special plug-in lovingly designed by user [Antenna](http://devot-ee.com/add-ons/antenna).
-
-[See this guide]({{ '/expression-engine' | post_url }}) to embedding Wistia video in your Expression Engine template.
-
-
 ## Squarespace
 
 {% post_image hashed_id: '5bc3046a0b10664ef4c5bc96b4cd18ad3c056215', width: 200, class: 'integration_logo' %}
