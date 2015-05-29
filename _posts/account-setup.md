@@ -12,7 +12,9 @@ Most of the important settings for your Wistia Account are housed in the
 *Account Settings*. Many of the tips below require you to open the Account
 Settings as well.
 
-To access your Account Settings, you will need to be logged in as the Account Owner. Once you're logged in as the Account Owner, find the *Account* drop-down menu in the upper-right hand corner. Next, select the
+{{ "Account Settings is an Account Owner privilege. You'll need to be logged in as the Account Owner to access these menus." | alert}}
+
+Once you're logged in as the Account Owner, find the *Account* drop-down menu in the upper-right hand corner. Next, select the
 *Settings* option seen here:
 
 {% post_image hashed_id: '3ec494cfbab90a33f10773c437fc58e72f28b752', width: 600, class: 'float_left' %}
