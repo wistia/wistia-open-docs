@@ -72,7 +72,7 @@ wistiaEmbed.time(30).play();
 
 ### Using Popovers and the Player API
 
-Wistia Popovers are just iframes that are injected into the page. If you include the `iframe API` script as detailed above, you can bind to a special jQuery event to get at it. Note, you'll need to use `wistiaJQuery` (it's included in our popover code) to catch the `wistia-popover` event.
+Wistia Popovers are just iframes that are injected into the page. If you include E-v1.js (AKA the Wistia library: `<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>`) on the page, you can bind to a special jQuery event to get at it. Note, you'll need to use `wistiaJQuery` (it's included in our popover code) to catch the `wistia-popover` event.
 
 {% codeblock wistia_js.js %}
 wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
