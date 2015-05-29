@@ -18,9 +18,7 @@ Open the Advanced Options section and put a check next to `Async [BETA]`.
 Simple!
 
 Note that __iframe embeds are already async__ because that's just how iframes
-work.  However, when you turn Video Foam on, it adds the iframe-api-v1.js
-script, which is not async. In the future, we will be replacing
-iframe-api-v1.js with E-v1.js and making it async too.
+work.
 
 __Popover embeds and playlists will also be made async when the time comes.__
 
