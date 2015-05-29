@@ -141,8 +141,8 @@ From there you can very easily change the email that you use to log in to Wistia
 
 We understand, sometimes it just isn't meant to be.
 
-If you'd like to Cancel your account you must be logged in as the Account Owner.
-After logging in, navigate to the Account Settings dashboard and choose "Cancel" from the
+If you'd like to cancel your account you must be logged in as the Account Owner.
+After logging in, navigate to your Account Settings and choose "Cancel" from the
 side menu. We'll ask you to fill out a few questions about your experience, 
 and you're good to go.
 
