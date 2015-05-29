@@ -144,6 +144,18 @@ Changes to posts, javascript, and sass will take effect dynamically
 **Note:** Changes to layouts, includes, config files, and static pages 
 (anything in HAML) need to be re-converted. Re-run `rake preview` to see updates.
 
+### How to Delete Pages
+
+Did you find something tragically old in the docs? Yeah, me too. Here's how to delete that bad boy.
+
+1. Delete the markdown file locally, and remove any references to it in the 
+site index.
+2. After you've pushed changes to master and deployed, make sure that ish is
+gone by heading to the page. Hard refresh, friend--don't forget!
+3. if it isn't, purge the page in Fastly's cache from skycrank with 
+`curl -X PURGE http://wistia.com/doc/thepageurl`
+4. last but not least, [ask Google to remove it from the interwebs/search](https://www.google.com/webmasters/tools/removals?pli=1)
+
 ### Style / Frameworks
 
 Wistia Doc uses Sass and Compass. See more about Compass: http://compass-style.org/
