@@ -277,9 +277,7 @@ the advantage of resizing the video with no delay.
 
 ### Video Foam
 
-Playlists do not officially support Video Foam, but they still kind of work
-with it. We need to update our Playlist API--when we do that, we will add more
-complete support for playlists.
+Playlists do not officially support Video Foam.
 
 ### Pure CSS Approach
 
