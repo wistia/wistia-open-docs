@@ -18,7 +18,7 @@ post_intro: |
   | Free Plan | Professional  | Business     | High Volume
 ----------------------|-----------|-----------------|-----------|-----------
 Monthly Price         | Free      | $25/mo          | $100/mo   | $300+/mo
-Monthly Bandwidth     | 200GB/mo   | 200GB/mo        | 200GB/mo  | 1TB+/mo
+<a href="//fast.wistia.net/embed/iframe/rt2nx2862m?popover=true" class="wistia-popover[height=405,playerColor=3ea9f5,width=720]">Monthly Bandwidth</a>    | 200GB/mo   | 200GB/mo        | 200GB/mo  | 1TB+/mo
 Extra Bandwidth Price | &#8211;  | $0.33/GB        | $0.33/GB  | [starts at $0.18/GB](http://wistia.com/pricing/highvolume)
 Total Video Count     | 25 | 100       | 1000 | unlimited
 Number of Managers       | unlimited | unlimited | unlimited | unlimited
@@ -67,6 +67,8 @@ Advanced [HubSpot]({{ '/hubspot' | post_url }}) & [Pardot]({{ '/pardot' | post_u
 
 
 <a class='button' href='http://wistia.com/free/signup'>Try the Wistia Free Plan!</a>
+
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 
 <script type="text/javascript">
 var ebSession = '5254235432543252345';
