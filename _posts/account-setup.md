@@ -134,3 +134,20 @@ If you would like to change the email address associated with your user account,
 {% post_image hashed_id: '71ead07ca1c43264669608f037bdc00216abe6ba', class: 'center' %}
 
 From there you can very easily change the email that you use to log in to Wistia and receive notifications to!
+
+---
+
+## Canceling Your Account
+
+We understand, sometimes it just isn't meant to be.
+
+If you'd like to Cancel your account you must be logged in as the Account Owner.
+After logging in, navigate to the Account Settings dashboard and choose "Cancel" from the
+side menu. We'll ask you to fill out a few questions about your experience, 
+and you're good to go.
+
+Godspeed, fellow video friend.
+
+{% post_image hashed_id: '4b245e3c8a2acb7722fd4234d260e68e92fdca27', class: 'center' %}
+
+{{ "Accidentally cancel? You can re-activate your account by logging in as the Account Owner. Hooray!" | tip }}
