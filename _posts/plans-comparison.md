@@ -66,7 +66,7 @@ Advanced [HubSpot]({{ '/hubspot' | post_url }}) & [Pardot]({{ '/pardot' | post_u
 
 
 
-<a class='button' href='http://wistia.com/free/signup'>Try the Wistia Free Plan!</a>
+<a class='button' href='http://wistia.com/free/signup'>Get started with a 2 week free trial</a>
 
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 
