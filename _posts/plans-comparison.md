@@ -39,7 +39,7 @@ Wistia Branded Player  | &#10003; | &#8211;         | &#8211;   | &#8211;
 [Player API Access]({{ '/player-api' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
 <span class='category'>Basic Analytics</span> |   |   |   |
 [Viewer Heatmaps]({{ '/embedded-video-analytics#heatmaps' | post_url }})  | &#10003;  | &#10003;  | &#10003;  | &#10003;
-[Plays by Date]({{ '/embedded-video-analytics#accountlevel_trends_view' | post_url }})  | &#10003; | &#10003; | &#10003; | &#10003;
+[Account Trends]({{ '/embedded-video-analytics#accountlevel_trends_view' | post_url }})  | &#10003; | &#10003; | &#10003; | &#10003;
 <span class='category'>Account Organization<span class='category'>  |   |   |   |
 [Replace Live Videos]({{ '/replace-video' | post_url }}) | &#10003; | &#10003; | &#10003; | &#10003;
 [Set Account Logo]({{ '/account-setup#uploading_your_logo' | post_url }})  | &#10003; | &#10003; | &#10003; | &#10003;
