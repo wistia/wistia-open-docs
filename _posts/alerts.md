@@ -21,13 +21,15 @@ Email alerts are automated emails sent to Wistia Managers (and, in limited cases
 
 If a Manager is receiving login alerts, when one of their users logs into their Wistia account, they will receive an email that looks like the following:
 
-{% post_image hashed_id: 'c22979b067d1d27a52f6ec7877dfaa2eca3b2a0f', class: 'center' %}
+{% post_image hashed_id: 'ba21026edfdca9755f85dd80e6aa9f6f3bf6465a', class: 'center' %}
 
 ## How do I adjust my email alert settings?
 
-{% post_image hashed_id: '78f98c321a07bdf4dba2ec03e3cb7fdc57f4bfeb', width: 320, class: 'float_right' %}
+{% post_image hashed_id: '1f5b91baa8ca7941421f5a31ff1ee37b461834e6', class: 'center' %}
 
-While logged into your Wistia account, choose the “My Settings” option under the “Account” tab at the top of any page in your Wistia account. You will be taken to a page where you can manage your own personal Wistia settings.  Scroll down the page to the section labeled "Email Alerts".
+While logged into your Wistia account, choose the **Settings** option under the **Account** tab at the top of any page in your Wistia account. You will be taken to a page where you can manage your own personal Wistia settings.  Scroll down the page to the section labeled "Email Notifications."
 
-Here you can set which events you would like to receive alerts for and which events you don't wish to be notified about.
+Need to know when someone uploads new content or adds users to a project? Bogged down with too many emails? Adjust your settings here!
+
+{{ "Are you an Account Owner? To access your notifications you'll want to head into your Account Settings and choose the Personal tab." | alert}}
 
