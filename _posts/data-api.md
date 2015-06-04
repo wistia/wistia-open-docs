@@ -93,7 +93,7 @@ the number of pages that you want to see, use the following query parameters:
 Parameter | Description
 ----------|------------
 page | Specifies which page of the results you want to see. Defaults to 1 (not 0).
-per_page | The number of results you want to get back per request. The maximum value of this parameter is 100. Defaults to 100.
+per_page | The number of results you want to get back per request. The maximum value of this parameter is 100. Defaults to 10.
 
 #### Sorting
 
