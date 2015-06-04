@@ -38,7 +38,7 @@ From the Customize Panel, select the *Captions* settings area.
 {% post_image hashed_id: '3b64c15892efcbfb070529fa15704f0d81e683b1', class: 'float_right', width: 300 %}
 
 * If you'd like to have us create the transcript for your video, select the 
-  *Order Captions* option. The transcription should be ready within five business days.
+  *Order Captions* option. The transcription should be ready within one business day.
 * If you already have an [SRT file](http://en.wikipedia.org/wiki/SubRip) ready
   to upload, select the *Upload SRT* option.
 
