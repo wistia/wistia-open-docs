@@ -79,7 +79,7 @@ Customize your video however you'd like--by adding or removing any buttons.
 The *Social Bar* is our nickname for the group of social buttons that sit below 
 the video and make it easy to share the video in social networks.
 
-{% post_image hashed_id: '424d41e6cdde8bedcb33c5bdaad88cdcc40a7221', class: 'float_right', width: 300 %}
+{% post_image hashed_id: '6315a5aa70d7d5aa1d672fc6453f0115ed3127c9', class: 'float_right', width: 300 %}
 
 The Social Bar has a bunch of options, from social networks like Twitter and
 Facebook to actions like *Email* and *Download*.
