@@ -53,7 +53,7 @@ frame that is currently showing in your video to the right.
 
 Below is a quick screencast to show you the thumbnail update moves.
 
-{% wistia_embed hashed_id: k0pzw56jh8 %}
+{% wistia_embed hashed_id: dthrz8ewm0 %}
 
 ### Turn off Comments
 
@@ -360,3 +360,16 @@ able to push all of your awesome video customizations over there. That being
 said, we are hopeful that Facebook will start to update their methods for 
 pulling video information so that we can get the customizations flowing!
 
+
+<script src="//fast.wistia.com/assets/external/embed_shepherd-v1.js"></script>
+<script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
+<script>
+  wistiaEmbeds.onFind(function(video) {
+    if (video.hashedId() == 'dthrz8ewm0') {
+      video.addPlugin('playWhenVisible', {
+        src: '//fast.wistia.com/labs/play-when-visible/plugin.js',
+        outsideIframe: true
+      });
+    }
+  });
+</script>
