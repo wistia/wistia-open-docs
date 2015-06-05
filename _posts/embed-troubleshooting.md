@@ -51,7 +51,7 @@ If you're having a problem with the size of your video and the tips above don't 
 
 ## Video not displaying on mobile devices
 
-Do you see a blank white box or a message that says "missing plugin" where your video should be? That can happen if your embed code (usually and API or SEO embed code) is getting modified after you copy it from Wistia.
+Do you see a blank white box or a message that says "missing plugin" where your video should be? That can happen if your embed code (usually an API or SEO embed code) is getting modified after you copy it from Wistia.
 
 Check to make sure the embed code on your website looks exactly like the embed code you generated in Wistia. If it's different, try re-embedding it to see if that helps! Certain website building tools (like a CMS) can often make changes to embedded code that will cause it to malfunction. Your embed code will need to be intact in order to work properly.
 
