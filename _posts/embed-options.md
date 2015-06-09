@@ -294,33 +294,6 @@ This example is a bit more involved - it specifies the `pageUrl` and
 {% endcodeblock %}
 
 
-## Captions Plugin
-
-The Captions plugin enables the Wistia captions functionality for your player.
-
-If you want to programmatically set the text for the captions of a video, check
-out the [Captions API]({{ '/data-api#captions' | post_url }})
-
-Option Name    | Type    | Description
------------    | ----    | ----------------------------------------------------------------------------------------------------------------------------
-onByDefault    | boolean | Determines whether captions should be visible by default, or if they need to click the CC button first to see them. Defaults to false--they need to click the CC button, which is visible when the mouse is over the video.   
-
-Note that, for `onloadCollapse` to work, `canCollapse` must also be true.
-
-### Using the Captions Plugin
-
-{% codeblock captions-params.html %}
-<script>
-  wistiaEmbed = Wistia.embed("abcde12345", {
-    plugin: {
-      "captions-v1": {
-        onByDefault: false
-      }
-    }
-  });
-</script>
-{% endcodeblock %}
-
 ### iOS Oddities
 
 The iPhone and iPad use a slightly different mechanism to show captions. For the iphone, captions can only be turned on when the video is already playing and it's in landscape mode. For the iPad, captions can only be turned on when the video is in fullscreen mode, though they will continue to show when not in fullscreen.
