@@ -150,15 +150,15 @@ Here's an example popover embed code:
 The popover embed code has three components:
 
 * Either a piece of text or an image. In the example above, this automatically generated thumbnail image: 
-`https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169`
-* Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/o3x7owvb7l?popover=true`
-* A script, `fast.wistia.com/assets/external/popover-v1.js`, which causes the link to open in a popover lightbox instead of opening as a separate page
+`https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169`.
+* Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/o3x7owvb7l?popover=true`.
+* A script, `fast.wistia.com/assets/external/popover-v1.js`, which causes the link to open in a popover lightbox instead of opening as a separate page.
 
 
 ## Pasting your Embed Code onto Your Page
 
 Once you have copied the embed code, the next step is to paste it into your web
-page editor (which could be a CMS, blog, HTML document, etc.) This is where it
+page editor (which could be a CMS, blog, HTML document, etc.). This is where it
 gets complicated to talk in specifics, since each website management system is
 different, but here are some tips:
 
@@ -206,7 +206,7 @@ Add the `margin: 0 auto` to the existing style settings, like this:
 
 ### Centering oEmbed Codes in Wordpress
 
-For using Wordpress and oEmbed codes, first add an outer div with the style
+When using Wordpress and oEmbed codes, first add an outer div with the style
 `text-align: center;`. Then, add a second div with the style `display:
 inline-block;`, as seen here:
 
