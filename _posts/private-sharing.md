@@ -55,7 +55,7 @@ Once you have uploaded your videos to your project, from within the project
 hover over the *Project Actions* menu and choose the *Sharing and Privacy*
 option.
 
-When the sharing window appears, the privacy of that project will display be
+When the sharing window appears, the privacy of that project will be
 displayed at the top (see image below). To create a link that can be sent out
 and viewed anonymously, switch the account over to **unlocked** and then
 **save**.  
