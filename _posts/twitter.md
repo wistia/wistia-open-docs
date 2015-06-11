@@ -8,7 +8,7 @@ post_intro: <p>Twitter is recognized as one of the most powerful social sharing 
 
 ## Twitter Follow Lab
 
-The [Twitter Follow lab](http://wistia.com/labs/twitter-follows) is for adding an
+The [Twitter Follow Lab](http://wistia.com/labs/twitter-follows) is for adding an
 interactive mid-roll link to your video that prompts viewers to *follow* the Twitter
 handle you've specified.
 
@@ -20,7 +20,7 @@ So when a speaker is on screen, you can add the follow button prompt. Viewers
 can start following the handle you specified, and the video will just keep on 
 playing without interruption.
 
-To use the Twitter Follow lab, head to your account and open the video you would
+To use the Twitter Follow Lab, head to your account and open the video you would
 like to use. First, get it [customized]({{ '/customizing-your-video' | post_url }}) 
 the way you want. Next, select *Embed & Share* from the <span class="action_menu">Video Actions</span> menu.
 
@@ -28,16 +28,16 @@ the way you want. Next, select *Embed & Share* from the <span class="action_menu
 
 In the **Inline Embed** area, copy the Embed Code.
 
-{{ "The Twitter Follow lab uses a Post-Roll call-to-action, so you cannot use a customize call-to-action and the Twitter Follow lab (it will be overwritten if you do)." | note }}
+{{ "The Twitter Follow Lab uses a Post-Roll call-to-action, so you cannot use a customize call-to-action and the Twitter Follow Lab (it will be overwritten if you do)." | note }}
 
 {% post_image hashed_id: 'd6cccb65c6f27bb6735bf1372c126075172910cd', class: 'center' %}
 
-Now that you have your embed code copied, open the [Twitter Follow lab](http://wistia.com/labs/twitter-follows)
+Now that you have your embed code copied, open the [Twitter Follow Lab](http://wistia.com/labs/twitter-follows)
 paste your embed code into the box labeled *Paste embed code* (aren't we good with names?).
 
 {% post_image hashed_id: '659f7172c9ccd9eb8634462f8983dda2d7f2d41c', class: 'center' %}
 
-Update the *Mid-Rolls* area with the twitter handles you want to highlight, and 
+Update the *Mid-Rolls* area with the Twitter handles you want to highlight, and 
 the timing of when they should appear.  You can also add a *Post-Roll*, which can
 give viewers an handle to follow (i.e. we used `@brendan`, `@csavage`, and then 
 `@wistia` at the end). You can also check the *recap names at end* option, which
@@ -60,21 +60,21 @@ approval? These guys!
 
 {% post_image hashed_id: '0747172f115e050285cb96d7cc5ec3b49586d303', class: 'center' %}
 
-So, you're asking, how can I take advantage of this awesome-ness.  Here we go:
+So, you're asking, how can I take advantage of this awesome-ness?  Here we go:
 
 Open up the media in your account that you want to share in your Twitter feed.
 From the <span class="action_menu">Video Actions</span> menu, select *Embed & Share*.
 
 {% post_image hashed_id: 'c184782eab1ae24589872575580f084bd1de6bca', class: 'center' %}
 
-In the *Share & Embed* window, select the *Social Sharing* area at the top. 
+In the *Embed & Share* window, select the *Social Sharing* area at the top. 
 If you don't have a description for your video yet, we will include a line 
 recommending you do so. Descriptions show up on the Twitter cards, which makes 
 them pretty useful for setting context for your viewers and piquing their interest.
 
-{{ "If your Project is currently set to Private, you will be prompted to switch it to Public. This means viewers who click through the link will be able to watch your video." | note }} 
+{{ "If your Project is currently set to Locked, you will be prompted to switch it to Unlocked. This means viewers who click through the link will be able to watch your video." | note }} 
 
-{% post_image hashed_id: '7834d139a11867813ded24d2bc75c67597d7754f', class: 'center' %}
+{% post_image hashed_id: '26530356cf2434c93116210cbda12187bd44e603', class: 'center' %}
 
 After you click the *Tweet* button, the Twitter tweet modal will appear (you may
 be asked to login). The default tweet text is the name of the media and the 
