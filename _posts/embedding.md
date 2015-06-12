@@ -242,7 +242,7 @@ analytics to see how your viewers are interacting with the content.
 ## Troubleshooting Embed Issues
 Embedding can be tough! If you're stuck, check out the [Embed Troubleshooting]({{ '/embed-troubleshooting' | post_url }}) documentation.
 
-If something seems fishy on Wistia's side of things, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!
+If something seems fishy on Wistia's side of things, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? [Contact us](http://wistia.com/support/contact). We'd be more than happy to help you out!
 
 <script src="//fast.wistia.com/assets/external/embed_shepherd-v1.js"></script>
 <script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>

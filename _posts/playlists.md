@@ -34,4 +34,4 @@ Once you have selected the "Get Playlist" option, you will be taken to a page wh
 
 Choose the **theme** you want to use, the **size** for the embedded playlist, and other customization settings here. These settings will override any customizations you may have applied to the individual videos in your playlist with [Customize]({{ '/customizing-your-video' | post_url }}). 
 
-{{ "There are some functionalities in our app that don't work as fully as we'd like them to with Playlists. If you have questions about any of them, just drop us a line at support@wistia.com." | note }}
+{{ "There are some functionalities in our app that don't work as fully as we'd like them to with Playlists. If you have questions about any of them, [contact us](http://wistia.com/support/contact)." | note }}

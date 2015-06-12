@@ -309,5 +309,5 @@ There are also a variety of options of how to filter the data.  These include:
 *  Number of events to return and offset in the total set
 *  Date range for the events to retrieve
 
-**If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? Shoot us an email at support@wistia.com. We'd be more than happy to help you out!**
+**If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? [Contact us](http://wistia.com/support/contact). We'd be more than happy to help you out!**
 

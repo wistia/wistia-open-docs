@@ -17,8 +17,7 @@ not sure, check out [the official OAuth2 resource](http://oauth.net/2/).
 
 ## Get Approved
 
-OAuth2 is not yet available for all accounts. Until it is, send an email to
-<a href="mailto:support@wistia.com">support@wistia.com</a> to get it enabled.
+OAuth2 is not yet available for all accounts. Until it is, [contact us](http://wistia.com/support/contact) to get it enabled.
 
 
 ## Create an OAuth Application
@@ -53,8 +52,7 @@ those permissions change.
 ### Available Scopes
 
 If you think you have a use case that is not covered by one or a combination of
-these scopes, please send an email to
-<a href="mailto:support@wistia.com">support@wistia.com</a> and explain your
+these scopes, [contact us](http://wistia.com/support/contact) and explain your
 situation to us. Maybe we can help you out!
 
 #### all:all

@@ -95,4 +95,4 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * [Weebly](http://kb.weebly.com/embed-audio-and-video.html)
 * [WildApricot](http://help.wildapricot.com/display/DOC/Adding+video+clips)
 
-{{ "If you know of a service that plays well with Wistia that is not on this list, send it along! Just e-mail support@wistia.com and we'll give you a high five for it or something!" | alert }}
+{{ "If you know of a service that plays well with Wistia that is not on this list, send it along! [Contact us](http://wistia.com/support/contact) and we'll give you a high five for it or something!" | alert }}

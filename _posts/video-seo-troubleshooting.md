@@ -77,4 +77,4 @@ Nothing ruins your mood like an error message you can't fix. We're here to help!
 
 *  *to solve:* select the appropriate domain from the drop down menu for the target location.
 
-**Still no luck? Shoot us an email: <a href="mailto:support@wistia.com">support@wistia.com</a>. We're happy to help you out!**
+**Still no luck? [Contact us](http://wistia.com/support/contact). We're happy to help you out!**
