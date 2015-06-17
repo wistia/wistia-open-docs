@@ -3,7 +3,7 @@ title: Optimal Export Settings
 layout: post
 category: Getting Set Up
 description: Get the low down on our recommended file settings when finishing up your videos.
-post_intro: <p>Before you start uploading to your Wistia account, get familiar with our recommendations for video resolution, settings, and formats.</p><p>This will make uploading a painless experience, and you will end up with top quality web encodes for your videos!</p>
+post_intro: <p>Before you start uploading to your Wistia account, get familiar with our recommendations for video resolution, settings, and formats. This will make uploading a painless experience, and you will end up with top quality web encodes for your videos!</p>
 ---
 
 Wistia does have a few specifications and guidelines we recommend following in order to obtain the best performance using our service.
@@ -15,7 +15,7 @@ Wistia does have a few specifications and guidelines we recommend following in o
 </h3>
 <ul>
 <li>Codec: <span class="answer">h.264</span></li>
-<li>Resolution: <span class="answer">between 640px and 1280px wide</span></li>
+<li>Resolution: <span class="answer">between 640px and 3840px (4K) wide</span></li>
 <li>Bitrate: <span class="answer">5,000 - 10,000 kbps</span></li>
 <li>Aspect Ratio: <span class="answer">Get Crazy! We accept videos of any aspect ratio.</span></li>
 </ul>
@@ -37,19 +37,20 @@ Wistia does have a few specifications and guidelines we recommend following in o
 
 **And now, a little more explanation on why these settings are preferable:**
 
-After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like iOS devices) and we also get these versions ready to stream on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
+After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like iOS devices) and we also get these versions ready to play on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
 
-The largest resolution we create is 720p, or *1280px by 720px*.  If you upload any video larger than 1280px wide, we're going to create the following derivatives:
+The largest resolution we create is 4K, or *3840px by 2160px*.  If you upload a 3840px wide video, we're going to create the following derivatives:
 
 Derivative | Bitrate
 -----------|---------
+3840px wide 4K | 7,500 kbps
+1920px wide HD | 3,750 kbps
 1280px wide HD | 2,500 kbps
 960px wide MD | 1,200 kbps
 640px wide SD | 700 kbps
 iPhone | 800 kbps
 HD iPhone (for iPad3) | 1,200 kbps
 
-We recommend uploading video at 1280px wide because it is the most efficient approach - your original files won't be taking up extra space in your account, and your uploading/processing times will be as speedy as possible as well.
 
 ----
 ## How Wistia Does HD
@@ -58,7 +59,9 @@ Because the way we do HD is a little different than most, it bears mentioning.
 
 When your viewers watch a video at 'embedding' size (640px - 960px wide) it is a waste of bandwidth to show them HD - at that size, the difference in picture is nearly imperceptible.  The HD files are also much *much* larger, which means the viewer can also have that stuttering playback experience. Not good. Instead, we have chosen smart standard definition defaults (what we call *Smart Encoding*) based on your video type (i.e. screencast, action, interview) and that is the version that is shown.
 
-Auto-HD takes over when the viewer 'full screens' the video.  At the larger size, the quality difference is definitely apparent.  We do a background bandwidth test, to make sure the viewer's download speed is fast enough to support the HD video smoothly, and if so, the stream automatically switches over.
+_Auto-HD_ takes over when the viewer 'full screens' the video.  At the larger size, the quality difference is definitely apparent.  We do a background bandwidth test to make sure the viewer's download speed is fast enough to support the HD video smoothly, and if so, the stream automatically switches over.
+
+Currently, the highest resolution Wistia will display by default (when we detect that a person's Internet connection speed will support it well enough) is 720p HD. Viewers who want even higher quality can right-click on the video to manually select a higher resolution. If you'd like to have your videos _automatically_ play at higher quality, check out the Video Quality section in the Account tab of your settings. (And note that only the Account Owner can access that area!) 
 
 {{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, and we have created a Retina-friendly version for the iPad 3." | note }}
 
