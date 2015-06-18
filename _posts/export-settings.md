@@ -17,7 +17,7 @@ Wistia does have a few specifications and guidelines we recommend following in o
 <li>Codec: <span class="answer">h.264</span></li>
 <li>Resolution: <span class="answer">between 640px and 3840px (4K) wide</span></li>
 <li>Bitrate: <span class="answer">5,000 - 10,000 kbps</span></li>
-<li>Aspect Ratio: <span class="answer">Get Crazy! We accept videos of any aspect ratio.</span></li>
+<li>Aspect Ratio: <span class="answer">Get crazy! We accept videos of any aspect ratio.</span></li>
 </ul>
 </div>
 
@@ -37,19 +37,22 @@ Wistia does have a few specifications and guidelines we recommend following in o
 
 **And now, a little more explanation on why these settings are preferable:**
 
-After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like iOS devices) and we also get these versions ready to play on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
+After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like mobile devices) and we also get these versions ready to play on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
 
-The largest resolution we create is 4K, or *3840px by 2160px*.  If you upload a 3840px wide video, we're going to create the following derivatives:
+The largest resolution we create is 4K, or 3840px by 2160px.  If you upload a 4K video, we're going to create the following derivatives:
 
 Derivative | Bitrate
 -----------|---------
-3840px wide 4K | 7,500 kbps
-1920px wide HD | 3,750 kbps
-1280px wide HD | 2,500 kbps
-960px wide MD | 1,200 kbps
-640px wide SD | 700 kbps
-iPhone | 800 kbps
-HD iPhone (for iPad3) | 1,200 kbps
+3840p x 2160p | 7,500 kbps
+1080 x 1920p | 3,750 kbps
+720 x 1280p | 2,500 kbps
+720 x 1280p (flash) | 2,500 kbps
+540 x 960p | 1,200 kbps
+540 x 960p (flash) | 1,200 kbps
+360 x 640p | 700 kbps
+360 x 640p (flash) | 700 kbps
+224 x 400p | 200 kbps
+
 
 
 ----
@@ -63,12 +66,12 @@ _Auto-HD_ takes over when the viewer 'full screens' the video.  At the larger si
 
 Currently, the highest resolution Wistia will display by default (when we detect that a person's Internet connection speed will support it well enough) is 720p HD. Viewers who want even higher quality can right-click on the video to manually select a higher resolution. If you'd like to have your videos _automatically_ play at higher quality, check out the Video Quality section in the Account tab of your settings. (And note that only the Account Owner can access that area!) 
 
-{{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, and we have created a Retina-friendly version for the iPad 3." | note }}
+{{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, so we'll be able to deliver an HD asset." | note }}
 
 ----
 ## Formats Wistia Supports
 
-Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in MP4 format*. 
+Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but **for most consistent performance we generally recommend exporting files in MP4 format**. 
 
 If a file type is not supported (or recognized), users will simply be able to download the file.
 
@@ -78,6 +81,8 @@ Video | MOV, MPG, AVI, FLV, F4V, MP4, M4V, ASF, WMV, VOB, MOD, 3GP, MKV, DIVX, X
 Audio | MP3, WAV, AIF, AU, M4A
 Documents | PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
 Images | JPG, PNG, GIF, TIFF, BMP, DCM
+
+{{ "Only videos are embeddable. You're welcome to upload different file types, but we only supply embed codes for videos." | note }}
 
 
 ----
