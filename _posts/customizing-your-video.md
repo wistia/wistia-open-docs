@@ -176,13 +176,13 @@ and dragging.
 
 Call To Action and Turnstile will work properly on pretty much every mobile device (all the environments we've tested at least... which is a _bunch_).
 
-Annotation Links are a bit different, because they appear over the video while it's playing. They'll work properly on any device where the Wistia player controls are able to function, which includes many Android devices and pretty much every desktop environemtn. iOS is a little more complicated, since videos played in browser in iOS must always must play in the iOS video player.
+Annotation Links are a bit different, because they appear over the video while it's playing. They'll work properly on any device where the Wistia player controls are able to function, which includes many Android devices and pretty much every desktop environment. iOS is a little more complicated, since videos played in browser in iOS must always must play in the iOS video player.
 
 In iOS 8 on the iPad, where videos will appear "inline" by default (that is, they won't take over the full browser window), Annotation Links will work fully. Woo!
 
-On earlier versions of iOS (still talking about iPads and inline playback) they'll display, but can't be clicked due to a weird bug that existed in iOS until quite recently that caused any clicks within the area of a video to get swallowed into the inescapable darkness of a black hole. That was no beuno.
+On earlier versions of iOS (still talking about iPads and inline playback) they'll display, but can't be clicked due to a weird bug that existed in iOS until quite recently that caused any clicks within the area of a video to get swallowed into the inescapable darkness of a black hole. That was no bueno.
 
-When the iOS video player takes over the full screen however, (which it always does on iPhones, and will do on iPads when the user chooses to), Annotation Links cannot appear. That's simply because nothing can be displayed in front of the native iOS player when it's in fullscreen mode.
+When the iOS video player takes over the full screen however, (which it always does on iPhones, and will do on iPads when the viewer chooses to), Annotation Links cannot appear. That's simply because nothing can be displayed in front of the native iOS player when it's in fullscreen mode.
 
 
 ### Call to Action
