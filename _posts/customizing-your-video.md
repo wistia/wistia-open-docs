@@ -176,7 +176,7 @@ and dragging.
 
 Call To Action and Turnstile will work properly on pretty much every mobile device (all the environments we've tested at least... which is a _bunch_).
 
-Annotation Links are a bit different, because they appear over the video while it's playing. They'll work properly on any device where the Wistia player controls are able to function, which includes many Android devices and pretty much every desktop environment. iOS is a little more complicated, since videos played in browser in iOS must always must play in the iOS video player.
+Annotation Links are a bit different, because they appear over the video while it's playing. They'll work properly on any device where the Wistia player controls are able to function, which includes many Android devices and pretty much every desktop environment. iOS is a little more complicated, since videos played in the browser in iOS must always must play in the iOS video player.
 
 In iOS 8 on the iPad, where videos will appear "inline" by default (that is, they won't take over the full browser window), Annotation Links will work fully. Woo!
 
