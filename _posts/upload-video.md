@@ -58,6 +58,6 @@ Uploader instead! (Heads up, this upload process doesn't show a progress bar.)
 The Simple Uploader can be accessed by opening the Project page help bubble,
 as seen in the image below.
 
-{% post_image hashed_id: 'e323c42f49b45ab302c9791900fbcf429ebb298b', class: 'center'%}
+{% post_image hashed_id: 'e323c42f49b45ab302c9791900fbcf429ebb298b', width: 500, class: 'float_center' %}
 
 **If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? [Contact us](http://wistia.com/support/contact). We'd be more than happy to help you out!**
