@@ -71,7 +71,7 @@ Currently, the highest resolution Wistia will display by default (when we detect
 ----
 ## Formats Wistia Supports
 
-Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but **for most consistent performance we generally recommend exporting files in MP4 format**. 
+Our bakery (where the encoding magic happens) accepts many common file formats (see a partial list below), but **for the most consistent performance we recommend exporting files in MP4 format**. 
 
 If a file type is not supported (or recognized), users will simply be able to download the file.
 
