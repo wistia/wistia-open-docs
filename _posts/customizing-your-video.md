@@ -153,6 +153,8 @@ Actions menu or drag the waypoints to the exact frames they're to appear.
 
 {% post_image hashed_id: 'ab4efc1f613f79a1bf8a4438a4a525ad2354fc73', class: 'center' %}
 
+{{ "Looking to make your video autoplay? Make sure to choose <strong>Autoplay video</strong> as your <strong>Start</strong> action from the dropdown menu." | tip }}
+
 ### Annotation Link
 
 An annotation link is a great option to notify your viewers without interrupting
