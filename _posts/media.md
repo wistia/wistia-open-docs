@@ -139,7 +139,7 @@ the Delete button to remove the comment permanently.
 
 ### Disable Comments
 
-Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video#disable_comments' | post_url }}) 
+Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video#turn_off_comments' | post_url }}) 
 covers this in further detail.
 
 ## Replace Your Video
