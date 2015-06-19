@@ -11,8 +11,42 @@ post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles 
 ## Twitter
 
 Twitter is, frankly, the bee's knees. We've developed a bunch of cool functionality
-around Twitter, like our Twitter Follow Lab and Sharing to Twitter functionality. 
-Read more about that and more on the [Twitter Integration page]({{ '/twitter' | post_url }}).
+around Twitter, like our [Twitter Follow Lab](http://wistia.com/labs/twitter-follows/) and Sharing to Twitter functionality.
+
+## Sharing Wistia Content from Your Account With Twitter Cards
+
+Twitter's Twitter Card functionality is pretty slick - you can now play media from
+accepted sites inside of the Twitter stream. Super useful, as it doesn't require
+leaving the Twitter stream to view your video. Well guess who got Twitter Card
+approval? These guys!
+
+{% post_image hashed_id: '0747172f115e050285cb96d7cc5ec3b49586d303', class: 'center' %}
+
+So, you're asking, how can I take advantage of this awesome-ness?  Here we go:
+
+Open up the media in your account that you want to share in your Twitter feed.
+From the <span class="action_menu">Video Actions</span> menu, select *Embed & Share*.
+
+{% post_image hashed_id: 'c184782eab1ae24589872575580f084bd1de6bca', class: 'center' %}
+
+In the *Embed & Share* window, select the *Social Sharing* area at the top. 
+If you don't have a description for your video yet, we will include a line 
+recommending you do so. Descriptions show up on the Twitter cards, which makes 
+them pretty useful for setting context for your viewers and piquing their interest.
+
+{{ "If your Project is currently set to Locked, you will be prompted to switch it to Unlocked. This means viewers who click through the link will be able to watch your video." | note }} 
+
+{% post_image hashed_id: '26530356cf2434c93116210cbda12187bd44e603', class: 'center' %}
+
+After you click the *Tweet* button, the Twitter tweet modal will appear (you may
+be asked to login). The default tweet text is the name of the media and the 
+description.
+
+Once you confirm that you want to tweet the link out, check your feed! It's like
+Christmas morning, except instead of presents you get your video content in your
+Twitter feed.
+
+{% post_image hashed_id: 'a2255839136f83fdde7f87dc924e5361404d8491', class: 'center' %}
 
 ## Facebook
 
