@@ -103,7 +103,6 @@ The following Embed Plugins are available for Wistia videos:
   it]({{ '/turnstile' | post_url }}) to pass emails to your Email Marketing platform.
 * [Post-Roll Call-to-Action](#postroll_calltoaction_plugin) - Suggest an action after viewing.
 * [Socialbar](#socialbar_plugin) - Add social sharing buttons to your video player.
-* [Captions](#captions_plugin) - Enable captions for your video.
 
 
 
