@@ -80,6 +80,9 @@ Choose H.264 from the Format drop-down menu. Click OK. Choose a filename and
 location. Your video will be saved to your computer as an MP4 file which you can 
 then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
+Want to be extra fancy? [Download the Wistia preset for Premiere Pro](https://support.wistia.com/medias/w737c75ueq/download?media_file_id=80944554). We know, you're
+welcome. :)
+
 ---
 
 ## Adobe Captivate
