@@ -11,24 +11,31 @@ post_intro: <p>We know just enough to be dangerous about most video export softw
 
 There are three ways to export video for use on Wistia from Final Cut Pro: 
 
-* using QuickTime conversion, 
-* using Compressor as a standalone application, or 
-* sending from Final Cut Pro to Compressor.
+* [Sharing from Final Cut Pro](#sharing_from_final_cut_pro), 
+* [using Compressor as a standalone application](#using_compressor_as_a_standalone_application), or 
+* sending from [Final Cut Pro to Compressor](final_cut_pro_to_compressor).
 
-### Using QuickTime conversion
+# Sharing From Final Cut Pro
 
-When we are making videos, we export them from Final Cut Pro using QuickTime 
-conversion. Select a clip or sequence in the Browser or open a sequence in the 
-Timeline, then choose *File &gt; Export &gt;* Using QuickTime Conversion. 
+/// insert video
 
-Choose a name and location for the file. From the Format pop-up menu choose 
-QuickTime Movie. Choose Default Settings from the Use pop-up menu and click Save. 
-Your video will be saved to your computer as a MOV file which you can then 
-easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
+Select a clip or sequence in the Browser or open a sequence in the Timeline, 
+then choose File > Share > Export File.
 
-Here's a quick guide from Chris on exporting in FCP using Quicktime conversion:
+If Export File isn't in the Share list, you'll have to add it as a destination.
+ To do that, go to File > Share > "Add Destination". Once here, double click 
+ "Export File" in the list of options and close the window.
 
-{% wistia_embed hashed_id: kwj96ld3tc, videoWidth: 600, videoHeight: 337 %}
+In the Export File menu, Under settings, change the format from Video & Audio 
+to Computer. This will change the codec to an H.264 MP4 file.
+
+Next, make sure the resolution is set to 1080p, and that the Video Codec is 
+set to "Better Quality" and not Faster Encode. This will export at a higher 
+bit rate instead of a lower bit rate.
+
+Then, click Next, and choose where you want this file to export to. After it's 
+done exporting, you're good to go for uploading to Wistia.
+
 
 ### Using Compressor as a standalone application
 

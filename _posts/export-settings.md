@@ -82,7 +82,7 @@ Audio | MP3, WAV, AIF, AU, M4A
 Documents | PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
 Images | JPG, PNG, GIF, TIFF, BMP, DCM
 
-{{ "Only videos are embeddable. You're welcome to upload different file types, but we only supply embed codes for videos." | note }}
+{{ "Only videos are embeddable. You're welcome to upload different file types, but we'll only supply embed codes for videos." | note }}
 
 
 ----
@@ -90,7 +90,7 @@ Images | JPG, PNG, GIF, TIFF, BMP, DCM
 
 The standard Wistia upload function supports files up to **2 Gigabytes** in size. It is possible to upload larger files using the [Simple Uploader]({{ '/upload-video#simple_uploader' | post_url }}), but this is not recommended. Wistia transcodes all video before it can be shared, so that your viewers have the best playback experience possible. Part of the transcoding process is compressing the video using an efficient codec like FLV and MP4. As a result, the quality of your original upload matters only up to a certain point.
 
-**We recommend adhering to 1280px wide and 5,000 - 10,000 kbps as the max settings for upload, as it will reduce the likeliness of upload errors**. If you find yourself with a short video (under 2 hours) that is larger than 2GB, it's likely something has gone wrong or a compression step was missed.
+**We recommend adhering to 1080px and 5,000 - 10,000 kbps as the max settings for upload, as it will reduce the likeliness of upload errors**. If you find yourself with a short video (under 2 hours) that is larger than 2GB, it's likely something has gone wrong or a compression step was missed.
 
 ----
 ## Exporting Guides
