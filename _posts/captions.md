@@ -51,8 +51,6 @@ button will appear to all viewers who view the video within your account. The
 captions will now be included with your embed codes, if you are using the SEO 
 embed code type.
 
-{{ "Only captions ordered through Wistia will appear in your SEO embed code." | note }}
-
 To customize your video with transcription or captions, select *Customize*
 from the <span class='action_menu'>Video Actions</span> menu. Open the
 *Captions* customization area.
