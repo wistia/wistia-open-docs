@@ -13,7 +13,7 @@ post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles 
 Twitter is, frankly, the bee's knees. We've developed a bunch of cool functionality
 around Twitter, like our [Twitter Follow Lab](http://wistia.com/labs/twitter-follows/) and Sharing to Twitter functionality.
 
-## Sharing Wistia Content from Your Account With Twitter Cards
+### Sharing Wistia Content from Your Account With Twitter Cards
 
 Twitter's Twitter Card functionality is pretty slick - you can now play media from
 accepted sites inside of the Twitter stream. Super useful, as it doesn't require
@@ -48,6 +48,25 @@ Twitter feed.
 
 {% post_image hashed_id: 'a2255839136f83fdde7f87dc924e5361404d8491', class: 'center' %}
 
+### Twitter Handle
+
+Want to make sure your videos always get the Twitter credit they deserve? Of course you do!
+
+If you'd like to associate Wistia account with your Twitter handle, just head into **Account
+Settings** and then click **Account**. Head up, you'll need to be logged in as the Account Owner
+to pull this off!
+
+Scroll to the Twitter Handle heading and enter your username.
+
+{% post_image hashed_id: '947b6123f5eb307133a58c586f8b286ce9392461', class: 'center' %}
+
+Make sure you scroll all the way down to the bottom of the Account page and hit **Save Settings**.
+
+Now any time anyone tweets one of Bobby's videos, his Twitter account will be reference. More Twitter
+follows for Bobby! Yay!
+
+{% post_image hashed_id: '84a23b87f9d693d5d56745ca8d60eb3880b808e7', class: 'center' %}
+
 ## Facebook
 
 {{ "Unfortunately, many of the features of Customize (such as Turnstile, Call to Action, and Captions) do not work inline in Facebook." | note }}
@@ -77,7 +96,7 @@ news feed.
 
 {{ "Wistia videos won't play inline in the Facebook mobile app; they'll open in a web page in a new panel." | note }}
 
-## Posting to Facebook from your website
+### Posting to Facebook from your website
 
 {{ "Be aware, this is technical territory!" | alert }}
 
