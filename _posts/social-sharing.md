@@ -11,16 +11,17 @@ post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles 
 ## Twitter
 
 Twitter is, frankly, the bee's knees. We've developed a bunch of cool functionality
-around Twitter, like our [Twitter Follow Lab](http://wistia.com/labs/twitter-follows/) and Sharing to Twitter functionality.
+around Twitter, like our [Twitter Follow Lab](http://wistia.com/labs/twitter-follows/) 
+and Sharing to Twitter functionality.
 
 ### Sharing Wistia Content from Your Account With Twitter Cards
 
 Twitter's Twitter Card functionality is pretty slick - you can now play media from
 accepted sites inside of the Twitter stream. Super useful, as it doesn't require
 leaving the Twitter stream to view your video. Well guess who got Twitter Card
-approval? These guys!
+approval? That's right. We did!
 
-{% post_image hashed_id: '0747172f115e050285cb96d7cc5ec3b49586d303', class: 'center' %}
+{% post_image hashed_id: 'dc366333466662150fb1bf87b32270f958c4d34a', class: 'center' %}
 
 So, you're asking, how can I take advantage of this awesome-ness?  Here we go:
 
@@ -38,7 +39,7 @@ them pretty useful for setting context for your viewers and piquing their intere
 
 {% post_image hashed_id: '26530356cf2434c93116210cbda12187bd44e603', class: 'center' %}
 
-After you click the *Tweet* button, the Twitter tweet modal will appear (you may
+After you click the *Tweet* button, the Twitter modal will appear (you may
 be asked to login). The default tweet text is the name of the media and the 
 description.
 
@@ -46,15 +47,15 @@ Once you confirm that you want to tweet the link out, check your feed! It's like
 Christmas morning, except instead of presents you get your video content in your
 Twitter feed.
 
-{% post_image hashed_id: 'a2255839136f83fdde7f87dc924e5361404d8491', class: 'center' %}
+{% post_image hashed_id: '0e7c6be2dfc7eaadda1c3fee7bd68b902714b4e0', class: 'center' %}
 
 ### Twitter Handle
 
 Want to make sure your videos always get the Twitter credit they deserve? Of course you do!
 
-If you'd like to associate Wistia account with your Twitter handle, just head into **Account
-Settings** and then click **Account**. Head up, you'll need to be logged in as the Account Owner
-to pull this off!
+If you'd like to associate your Wistia account with your Twitter handle, just head into 
+**Account Settings** and then click **Account**. Heads up, you'll need to be logged in as 
+the Account Owner to pull this off!
 
 Scroll to the Twitter Handle heading and enter your username.
 
@@ -62,8 +63,8 @@ Scroll to the Twitter Handle heading and enter your username.
 
 Make sure you scroll all the way down to the bottom of the Account page and hit **Save Settings**.
 
-Now any time anyone tweets one of Bobby's videos, his Twitter account will be reference. More Twitter
-follows for Bobby! Yay!
+Now any time anyone tweets one of Bobby's videos, his Twitter account will be reference. 
+More Twitter follows for Bobby! Yay!
 
 {% post_image hashed_id: '84a23b87f9d693d5d56745ca8d60eb3880b808e7', class: 'center' %}
 
@@ -71,13 +72,14 @@ follows for Bobby! Yay!
 
 {{ "Unfortunately, many of the features of Customize (such as Turnstile, Call to Action, and Captions) do not work inline in Facebook." | note }}
 
-Facebook embeds show up right in your news feed.  Your followers can click to play the video in the feed, or click through the link to watch the video in your Wistia account.
+Facebook embeds show up right in your news feed.  Your followers can click to play the 
+video in the feed, or click through the link to watch the video in your Wistia account.
 
 {% post_image hashed_id: '9326ce283fa05001610a85440a19531ad3230c7e', class: 'center' %}
 
 First, open the media in your account and make sure it has a description! If it
-doesn't currently have a description, hover under the title and select *Add a
-Description* to get started.
+doesn't currently have a description, hover under the title and select **Add a Description** 
+to get started.
 
 {% post_image hashed_id: '117bb6cb93218c3779224bfc8ab5b3a4ca0e7591', class: 'center' %}
 
@@ -124,3 +126,15 @@ video (and are putting the OpenGraph tags).
 Add these to the `head` of your website, and then share the URL of that page on Facebook.
 
 You're good to go!
+
+## Link to a Specific Time
+
+Want your video to start a specific time? Leo's here to help!
+
+{% wistia_embed hashed_id: 25hefujn0n?wtime=7s %}
+
+To share your video at a specific time navigate to the *Embed and Share* modal under
+the <span class="action_menu">Video Actions</span> menu. In the *Embed & Share* window, 
+select the *Social Sharing* option at the top. Under the URL you'll see an option to 
+"Link to a specific time." Clicking the box will automatically link to wherever you've
+paused the video. You can also manually edit the time stamp.
