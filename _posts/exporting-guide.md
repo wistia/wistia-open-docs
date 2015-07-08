@@ -19,9 +19,9 @@ To make things even easier, we've also put together an awesome
 [Wistia preset](#the_wistia_final_cut_pro_preset) for you to download. We know. 
 You're welcome. :)
 
-### Sharing From Final Cut Pro
+### Sharing From Final Cut Pro X
 
->> insert video 
+{% wistia_embed hashed_id: 931387hlwv %}
 
 Exporting videos for Wistia from Final Cut Pro is pretty straightforward.
 
@@ -64,7 +64,7 @@ and click **Save**. Then follow the directions for exporting video from Compress
 
 ### Final Cut Pro to Compressor
 
->> insert video
+{% wistia_embed hashed_id: s84nyir64o %}
 
 You can also send a video to Compressor by exporting a Browser clip or sequence 
 directly from Final Cut Pro to Compressor. Exporting a video from Final Cut Pro 
@@ -103,7 +103,7 @@ Check it out!
 
 ### Exporting From Premiere Pro
 
->>insert video
+{% wistia_embed hashed_id: 7hcz3z4myi %}
 
 To export a video from Adobe Premiere Pro for use in Wistia, place your video clip in
 the Premiere timeline. Choose **File** > **Export** > **Media**. In the export settings,
@@ -119,8 +119,6 @@ This will be encoded as an MP4 file which you can then easily upload to Wistia.
 
 ### The Wistia Premiere Pro Preset
 
->>insert download button
-
 Want to be extra snazzy? [Download the Wistia preset for Premiere Pro](https://support.wistia.com/medias/w737c75ueq/download?media_file_id=80944554).
 It's a custom preset we've made for exporting 1080p videos, that look and upload great 
 to Wistia.
@@ -128,7 +126,7 @@ to Wistia.
 Once it's downloaded, in Premiere head over to **File** > **Export** > **Media**. Look 
 for the **Import Preset** icon, and navigate to the downloaded preset to install it. 
 
->>insert graphic screenshot
+{% post_image hashed_id: '631354422ab294af89bf7eab678f593e9085c907', class: 'center' %}
 
 Then click **Export** at the bottom of the window and the video will be encoded as an 
 MP4 file which you can then easily upload to Wistia.
@@ -191,7 +189,7 @@ settings and 1920x1080 frame size.
 
 ## Garageband
 
->>insert screenshot
+{% post_image hashed_id: '08a47dbedab502db694b2aad5f4d797b15051781', class: 'center' %}
 
 To export your video + audio track/score from Garageband, start by clicking on the **File**
  option and under **Movie** select **Export Audio to Movie**.
@@ -200,13 +198,15 @@ You will then be prompted with a dropdown menu for Video Presets. Select **Full 
 and click the **Save** button (this will save it as the same file format as the original 
 movie).
 
+{% post_image hashed_id: 'a16135a4db46763498899ff510c5d255b627a39a', class: 'center' %}
+
 Your video will be saved to your computer as an .mov file that you can easily [upload]({{ '/upload-video' | post_url }})
  into your Wistia account.
 
 ---
 ## iMovie
 
->>insert video
+{% wistia_embed hashed_id: 3eq4hglk4k %}
 
 To export your iMovie video project, select the project you wish to export from the iMovie 
 Project Library and choose **File** > **Share** > **File**.
@@ -222,7 +222,7 @@ to your Wistia account.
 
 ## QuickTime Pro
 
->>insert screenshot
+{% post_image hashed_id: 'a440ec9c8aa6b63d04e6cfcc328ee6119b65721c', class: 'center' %}
 
 To easily export a video from QuickTime Pro, open the movie you wish to export and choose 
 **File** > **Export** > **1080p**. In the Export pop-up menu, choose a filename and location, 
@@ -233,7 +233,7 @@ then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ## ScreenFlow
 
->>insert video
+{% wistia_embed hashed_id: 5hhxo0jyck %}
 
 Wistia has an awesome integration with Screenflow 5 that allows you to publish a video right 
 from Screenflow to Wistia. In the editor, head up to **File** > **Publish to** > **Wistia**.

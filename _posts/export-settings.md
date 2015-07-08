@@ -82,7 +82,7 @@ Audio | MP3, WAV, AIF, AU, M4A
 Documents | PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
 Images | JPG, PNG, GIF, TIFF, BMP, DCM
 
-{{ "Only videos are embeddable. You're welcome to upload different file types, but we'll only supply embed codes for videos." | note }}
+{{ "Just a heads up, only videos are embeddable. You're welcome to upload different file types, but we'll only supply embed codes for videos." | tip }}
 
 
 ----
