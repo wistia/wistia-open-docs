@@ -31,7 +31,7 @@ Click the "Add Connector" button. Find **Wistia** under the *Video Connectors* l
 {% post_image hashed_id: 'ae4f214b7f96282748dbfd9edf5b0beed6c5bcde', class: 'center' %}
 
 Check the "Show Video Play Heatmaps" box, and then fill in your API Password
-and Public Token from Wistia ([here's a guide on how to find those]({{ '/account-setup#api_password_and_public_token' | post_url }})).
+and Public Token from Wistia ([here's a guide on how to find those]({{ '/account-setup#api_access' | post_url }})).
 
 
 Select the *verify connector* link.
