@@ -37,8 +37,7 @@ to **Computer**. This will change the codec to an H.264 MP4 file. (AKA, Wistia's
 setting.)
 
 Next, make sure the resolution is set to **1080p**, and that the Video Codec is 
-set to **Better Quality** and not Faster Encode. This means the video will export at 
-a higher bit rate.
+set to **Better Quality** and not Faster Encode.
 
 Then, click **Next**, and choose where you want this file to export to. After it's 
 done exporting, you're good to upload it to Wistia. Look at you go!
@@ -75,12 +74,22 @@ To send a sequence or clip from Final Cut Pro to Compressor, select the sequence
 or clip in the Browser and choose **File** > **Send To** > **Compressor**. 
 
 Compressor will open and you will see the sequence (or clip) appear in a Compressor 
-Batch window. In the **Settings** tab, drag the MPEG-4 setting from Apple/Formats to 
-the job in the Batch window. Choose where the video will be saved by dragging a 
-destination preset from the Destinations tab to your job in the Batch window. 
+Batch window. Create a new custom setting, and under **File Format**, 
+choose **Quicktime Export Components**.
 
-Click **Submit** in the Batch window. The video will be encoded as an MP4 file which 
-you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
+Set the destination of your file, and then change the Encoder Type to **MP4**.
+
+Then, under **Advanced Settings**, head into **Configure** (this launches a modal). 
+Choose **MP4** as the file format and change the video format to **H.264**.
+
+Bump the image size up to **1080p**, update the data range to **15,000 kbps**, and keep the 
+frame rate at current. In the **Audio** section, change the Data Rate to **256 kbps**, and 
+the sample rate to **48k**. 
+
+Save these settings, and drag your new Custom Preset to the queued video.
+
+Then click **Start Batch**. This will be encoded as an MP4 file that looks great and 
+is ready to [upload]({{ '/upload-video' | post_url }}) to Wistia.
 
 ###The Wistia Final Cut Pro Preset
 
