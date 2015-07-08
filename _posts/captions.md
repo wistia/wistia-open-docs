@@ -21,7 +21,7 @@ Let's jump in to creating and using your captions!
 
 ## Video Overview
 
-{% wistia_embed hashed_id: pqmkpbr89t %}
+{% wistia_embed hashed_id: dez9wbqxn8 %}
 
 ## Select Your Video
 
