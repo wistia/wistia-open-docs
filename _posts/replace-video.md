@@ -5,7 +5,7 @@ description: Sometimes, it just takes too much effort to replace an embed code i
 category: Public Sharing
 ---
 
-There are two ways to replace a video in Wistia--overwrite and swap. An overwrite
+There are two ways to replace a video in Wistia--**overwrite** and **swap**. An overwrite
 for a video is intended for slight editing tweaks (caught that typo too late!) and
 quick fixes. Videos that are overwritten will keep their stats--so you won't 
 lose a second of data.
