@@ -28,7 +28,7 @@ For both **Swap** and **Overwrite** all customizations will transfer (including
 the thumbnail) with the replacement. Captions, Timeline Actions, and any player
 customizations will remain the same.
 
-{{ "This won't replace any copies of the video you've made in your account, only the original." | note }}
+{{ "Replacing a video does not replace any other copies of that video you've made in your account." | note }}
 
 Let's dive in.
 
