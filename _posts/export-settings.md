@@ -17,7 +17,7 @@ Wistia does have a few specifications and guidelines we recommend following in o
 <li>Codec: <span class="answer">h.264</span></li>
 <li>Resolution: <span class="answer">between 640px and 3840px (4K) wide</span></li>
 <li>Bitrate: <span class="answer">5,000 - 10,000 kbps</span></li>
-<li>Aspect Ratio: <span class="answer">Get Crazy! We accept videos of any aspect ratio.</span></li>
+<li>Aspect Ratio: <span class="answer">Get crazy! We accept videos of any aspect ratio.</span></li>
 </ul>
 </div>
 
@@ -37,19 +37,19 @@ Wistia does have a few specifications and guidelines we recommend following in o
 
 **And now, a little more explanation on why these settings are preferable:**
 
-After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like iOS devices) and we also get these versions ready to play on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
+After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like mobile devices and Flash) and we also get these versions ready to play on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
 
-The largest resolution we create is 4K, or *3840px by 2160px*.  If you upload a 3840px wide video, we're going to create the following derivatives:
+The largest resolution we create is 4K, or 3840px by 2160px.  If you upload a 4K video, we're going to create the following derivatives (some of which is have Flash duplicates):
 
 Derivative | Bitrate
 -----------|---------
-3840px wide 4K | 7,500 kbps
-1920px wide HD | 3,750 kbps
-1280px wide HD | 2,500 kbps
-960px wide MD | 1,200 kbps
-640px wide SD | 700 kbps
-iPhone | 800 kbps
-HD iPhone (for iPad3) | 1,200 kbps
+3840p x 2160p | 7,500 kbps
+1080 x 1920p | 3,750 kbps
+720 x 1280p | 2,500 kbps
+540 x 960p | 1,200 kbps
+360 x 640p | 700 kbps
+224 x 400p | 200 kbps
+
 
 
 ----
@@ -61,14 +61,14 @@ When your viewers watch a video at 'embedding' size (640px - 960px wide) it is a
 
 _Auto-HD_ takes over when the viewer 'full screens' the video.  At the larger size, the quality difference is definitely apparent.  We do a background bandwidth test to make sure the viewer's download speed is fast enough to support the HD video smoothly, and if so, the stream automatically switches over.
 
-Currently, the highest resolution Wistia will display by default (when we detect that a person's Internet connection speed will support it well enough) is 720p HD. Viewers who want even higher quality can right-click on the video to manually select a higher resolution. If you'd like to have your videos _automatically_ play at higher quality, check out the Video Quality section in the Account tab of your settings. (And note that only the Account Owner can access that area!) 
+Currently, the highest resolution Wistia will display by default (when we detect that a person's Internet connection speed will support it well enough) is 720p HD. Viewers who want even higher quality can right-click on the video to manually select a higher resolution. If you'd like to have your videos _automatically_ play at higher quality, check out the [Video Quality]({{ '/account-setup#video_quality' | post_url }}) section in the Account tab of your settings. (And note that only the Account Owner can access that area!) 
 
-{{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, and we have created a Retina-friendly version for the iPad 3." | note }}
+{{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, so we'll be able to deliver an HD asset." | note }}
 
 ----
 ## Formats Wistia Supports
 
-Our bakery (where the encoding magic happens) accepts most of the common file formats (see a partial list below), but *for most consistent performance we generally recommend exporting files in MP4 format*. 
+Our bakery (where the encoding magic happens) accepts many common file formats (see a partial list below), but **for the most consistent performance we recommend exporting files in MP4 format**. 
 
 If a file type is not supported (or recognized), users will simply be able to download the file.
 
@@ -79,15 +79,17 @@ Audio | MP3, WAV, AIF, AU, M4A
 Documents | PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX
 Images | JPG, PNG, GIF, TIFF, BMP, DCM
 
+{{ "Just a heads up, only videos are embeddable. You're welcome to upload different file types, but we'll only supply embed codes for videos." | tip }}
+
 
 ----
 ## A Note on File Sizes
 
 The standard Wistia upload function supports files up to **2 Gigabytes** in size. It is possible to upload larger files using the [Simple Uploader]({{ '/upload-video#simple_uploader' | post_url }}), but this is not recommended. Wistia transcodes all video before it can be shared, so that your viewers have the best playback experience possible. Part of the transcoding process is compressing the video using an efficient codec like FLV and MP4. As a result, the quality of your original upload matters only up to a certain point.
 
-**We recommend adhering to 1280px wide and 5,000 - 10,000 kbps as the max settings for upload, as it will reduce the likeliness of upload errors**. If you find yourself with a short video (under 2 hours) that is larger than 2GB, it's likely something has gone wrong or a compression step was missed.
+**We recommend adhering to 1080px and 5,000 - 10,000 kbps as the max settings for upload, as it will reduce the likeliness of upload errors**. If you find yourself with a short video (under 2 hours) that is larger than 2GB, it's likely something has gone wrong or a compression step was missed.
 
 ----
 ## Exporting Guides
 
-Looking for help exporting from software like Final Cut Pro, Screenflow, or Camtasia? Head over to our [exporting guides]({{ '/exporting-guide' | post_url }}).
+Looking for help exporting from software like Final Cut Pro X, Screenflow, or Camtasia? Head over to our [exporting guides]({{ '/exporting-guide' | post_url }}).
