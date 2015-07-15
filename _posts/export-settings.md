@@ -39,7 +39,7 @@ Wistia does have a few specifications and guidelines we recommend following in o
 
 After you upload a video, we perform encoding on it - creating multiple derivatives for different use cases and environments (like mobile devices and Flash) and we also get these versions ready to play on the web. We have video type detection and encoding settings (what we call *Smart Encoding*) so that live-action videos look great, and longer videos that require fine detail (like Webinars) will be as efficient a file-size as possible (for smooth playback).
 
-The largest resolution we create is 4K, or 3840px by 2160px.  If you upload a 4K video, we're going to create the following derivatives (some of which have Flash duplicates):
+The largest resolution we create is 4K, or 3840px by 2160px. We'll create derivatives based on the *width* of the original file. If you upload a 4K video with a 16:9 aspect ratio (the most common here) we're going to create the following derivatives (as well as some Flash counterparts):
 
 Derivative | Bitrate
 -----------|---------
