@@ -82,7 +82,11 @@ Select **Overwrite the original content, build on top of its stats** from the
 Replace Video modal and then click *Choose Replace Video*. Pick the video you'd
 like to update it with, and sit back!
 
+{% post_image hashed_id: 'f88e33d44b852631779398cd8a8ed07462244e6e', class: 'center' %}
+
 Your video will begin uploading and processing.
+
+{% post_image hashed_id: 'd9daa5d9c19ce90cd74e85c26c21a616b7639423', class: 'center' %}
 
 Once it's done, you're all set! The video will update in the wild--no new embed
 code needed.
