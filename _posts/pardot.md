@@ -1,7 +1,7 @@
 ---
-title: Using the Wistia / Pardot Connector
+title: Using Wistia and Pardot Together
 layout: post
-description: A guide to using the powerful Wistia / Pardot connector.
+description: How to use Wistia and Pardot together for superpowered video marketing
 post_intro: Use <a href="http://pardot.com">Pardot</a>? Use Wistia? Want to meld them together to execute a video-driven marketing automation strategy the likes of which this world has never seen? You're in the right place, friend.
 footer: 'for_intermediates'
 category: integrations
