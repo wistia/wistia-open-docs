@@ -2,9 +2,45 @@
 title: Using the Wistia / Pardot Connector
 layout: post
 description: A guide to using the powerful Wistia / Pardot connector.
+post_intro: Use <a href="http://pardot.com">Pardot</a>? Use Wistia? Want to meld them together to execute a video-driven marketing automation strategy the likes of which this world has never seen? You're in the right place, friend.
 footer: 'for_intermediates'
 category: integrations
 ---
+
+## Get Set Up
+
+First things first, let's connect the puzzle pieces.
+
+What you'll need:
+
+- A Pardot account
+- A Wistia account on the Enterprise plan ('cause you're a rather enterprising individual)
+- a video embedded on your website
+
+In Wistia, go to the Integrations sections of your account settings. Enter the credentials you use to login to Pardot, along with your Pardot API key. Save to complete the integration.
+
+Read on for details about what you can do with your newfound powers.
+
+## Track video-related events from your website in Pardot
+
+If you have a video embedded in your website, you can see in Pardot...
+
+Just be sure that you have Pardot's tracking code on the page, and that your Wistia embed code has the `wistia_embed` class (as it should by default).
+
+## Collect contact information with Turnstile
+
+With just a Wistia account, you've always been able to generate new leads and identify existing viewers... but now that you have the Wistia+Pardot integration set up, your life just got way easier.
+
+Now when a person enters their email address (or _name_ and email address) into Turnstile, that information will automatically go into Pardot. Cool.
+
+## Add Video to your email campaigns
+
+Get some free & fancy email design templates
+
+
+## Automagically send the right emails to the right people
+
+## Configure the Wistia Pardot Connector
 
 [Pardot](http://pardot.com) is a very powerful marketing automation system. We
 worked with them to develop a Wistia/Pardot connector, so that Wistia data can
