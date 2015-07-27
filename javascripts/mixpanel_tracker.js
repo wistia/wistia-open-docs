@@ -8,7 +8,7 @@ MixPanelTracker.PAGE_VIEWS_TO_TRACK = ['doc'];
 MixPanelTracker.registerPageViewEvent = function() {
   var pageLocation = window.location.pathname.substring(1);// strip off initial slash and then use the url path, or replace '/' with 'doc' when on localhost, 
   if (MixPanelTracker.PAGE_VIEWS_TO_TRACK.indexOf(pageLocation) > -1) {
-    mixpanel.track('Page Viewed', { 'page': pageLocation } );
+    mixpanel.track('page viewed', { 'page': pageLocation } );
   }
 };
 
