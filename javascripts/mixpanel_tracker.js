@@ -1,4 +1,4 @@
-mixpanel.init("4e7e88b81388d28277d7834a7e930a94"); // this is the dev api key
+mixpanel.init('4e7e88b81388d28277d7834a7e930a94'); // this is the dev api key
 
 var MixPanelTracker = {};
 
@@ -10,6 +10,6 @@ MixPanelTracker.registerPageViewEvent = function() {
   if (MixPanelTracker.PAGE_VIEWS_TO_TRACK.indexOf(pageLocation) > -1) {
     mixpanel.track('Page Viewed', { 'page': pageLocation } );
   }
-}
+};
 
 MixPanelTracker.registerPageViewEvent(); 
