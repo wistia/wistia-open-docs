@@ -1,4 +1,4 @@
-mixpanel.init('4e7e88b81388d28277d7834a7e930a94'); // this is the dev api key
+mixpanel.init('8e806db62ec25dd1e81478b8bb80e1bf'); // this is the prod api key
 
 var MixPanelTracker = {};
 
