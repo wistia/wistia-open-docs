@@ -38,6 +38,8 @@
 
     / scripts and such
     %script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }
+    %script{ src: "{{ '/javascripts/mixpanel' | javascript_url }}" }
+    %script{ src: "{{ '/javascripts/mixpanel_tracker' | javascript_url }}" }
     %script{ src: "{{ '/javascripts/selective_autoplay' | javascript_url }}" }
     :plain
       <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSJ3B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
