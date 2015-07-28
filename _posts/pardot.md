@@ -41,9 +41,15 @@ Check the "Show Video Play Heatmaps" box, and then fill in your API Password and
 
 ## Collect contact information with Turnstile
 
-With just a Wistia account, you've always been able to generate new leads and identify existing viewers... but now that you have the Wistia+Pardot integration set up, your life just got way easier.
+With [Turnstile]({{ '/turnstile' | post_url }}), you can ask people to enter their names and email addresses at the beginning, middle, or end of your videos. And now that you have Wistia connected to Pardot, that information will automatically create a new Prospect record in your Pardot Account. Woo!
 
-Now when a person enters their email address (or _name_ and email address) into Turnstile, that information will automatically go into Pardot. Cool.
+"Hold on, Wistia. What if the person is already an existing Prospect in Pardot" you ask? In that case, [WHAT HAPPENS IN THAT CASE?].
+
+Here's an example Turnstile on one of our videos:
+
+{% wistia_embed hashed_id: 5jbejtwgwi %}
+
+If that was _your_ video, you'd be generating new leads right this very moment. So, go ahead and [embed your own video]({{ '/embedding' | post_url }}) to get started! You can find Turnstile in the [Timeline Actions]({{ '/customizing-your-video#timeline_actions' | post_url }}) section of the Customize panel.
 
 ## Track video-related events from your website in Pardot
 
