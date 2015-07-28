@@ -1,8 +1,8 @@
 ---
 title: Using Wistia and Pardot Together
 layout: post
-description: How to use Wistia and Pardot together for superpowered video marketing
-post_intro: Use <a href="http://pardot.com">Pardot</a>? Use Wistia? Want to meld them together to execute a video-driven marketing automation strategy the likes of which this world has never seen? You're in the right place, friend.
+description: How to use Wistia and Pardot together for super-powered video marketing
+post_intro: <p>Use <a href="http://pardot.com">Pardot</a>? Use Wistia? Want to meld them together to execute a video-driven marketing automation strategy the likes of which this world has never seen? You're in the right place, friend.</p>
 footer: 'for_intermediates'
 category: integrations
 ---
@@ -56,7 +56,9 @@ If that was _your_ video, you'd be generating new leads right this very moment. 
 
 With the [Wistia Connector enabled in Pardot](#get_set_up), data about how every person watches the videos on your website will feed directly into your Pardot account. You'll see:
 
--
+- stuff
+- things
+- other really quite wonderful things
 
 ### The Video Report
 
@@ -77,9 +79,10 @@ In the Video report, you can see:
 Want to adjust prospect scores based on video data? Me too. Let's do this.
 
 First, check out Pardot's overall guide on setting up [Custom Scoring](http://www.pardot.com/faqs/administration/custom-scoring-rules/). Now with the Wistia-Pardot integration set up, you're able to use three specific video-related events to adjust a Prospect's score:
-- Video Play: Simply, the person began playing a video.
-- Video Watched 75%+: The person watched _at least_ 75% of the video.
-- Video Conversion: The person entered their contact information into [Turnstile]({{ '/turnstile' | post_url }}) on the video.
+
+- **Video Play**: Simply, the person began playing a video.
+- **Video Watched 75%+**: The person watched _at least_ 75% of the video.
+- **Video Conversion**: The person entered their contact information into [Turnstile]({{ '/turnstile' | post_url }}) on the video.
 
 Score!
 
@@ -92,7 +95,7 @@ To add a video thumbnail link to an email campaign, just follow this quick proce
 1. Open the video's page in your Wistia account.
 2. Click on the Video Actions menu, and choose Embed & Share.
 3. On the Link In Email Campaign tab, select Pardot as your email provider.
-4. Adjust the thumbnail image size, Choose where you want people to watch the video. It can be the video's page in your account, or anywhere you have it embedded.
+4. Adjust the thumbnail image size and choose the URL where you want people to watch the video. It can be the video's page in your Wistia account, or anywhere you have it embedded.
 5. Copy the Email Merge Tag from Wistia and paste it into your email in Pardot.
 6. Profit!
 
