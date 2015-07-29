@@ -89,6 +89,8 @@ Score!
 
 Email is a great way to nurture leads and stay engaged with your growing audience. Then add a little video to the mix, stir in some tracking & analytics, and baby, you got a stew goin'!
 
+{% post_image hashed_id: '62256023e4a148d0e684a90646628bdb0a3396f6', width: 300, class: 'float_left' %}
+
 To add a video thumbnail link to an email campaign, just follow this quick process:
 
 1. Open the video's page in your Wistia account.
@@ -97,6 +99,8 @@ To add a video thumbnail link to an email campaign, just follow this quick proce
 4. Adjust the thumbnail image size and choose the URL where you want people to watch the video. It can be the video's page in your Wistia account, or anywhere you have it embedded.
 5. Copy the Email Merge Tag from Wistia and paste it into your email in Pardot.
 6. Profit!
+
+Fun fact: When people receive your email and click through to watch the video, their email addresses will automatically pass through to the Wistia stats.
 
 [Learn more about video+email marketing with Wistia]({{ '/email-marketing' post_url }}).
 
