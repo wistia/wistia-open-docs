@@ -23,14 +23,14 @@ See this video for more:
 
 ## Setting Everything Up
 
-Three Steps to getting fully integrated:
+There atre three steps to getting fully integrated:
 
 1. Enable the integration inside your HubSpot account.
 2. Add the integration JavaScript snippet to your website.
 3. Set up Turnstile to work with HubSpot.
 
 
-## Enable the integration inside HubSpot
+### Enable the Integration in HubSpot
 
 To enable the integration within HubSpot, log into your HubSpot account, 
 click on your name in the upper right of the screen, and go to **Settings**.
@@ -41,7 +41,7 @@ Follow the instructions! Note that some of their instructions, notably the
 part related to the JavaScript snippet, overlap with the instructions below.
 
 
-## Add the integration JavaScript
+### Add the Integration JavaScript
 
 If you build and maintain your own website (without using HubSpot's COS), add 
 this code snippet after HubSpot's analytics JavaScript:
@@ -61,8 +61,7 @@ Open the Content > Content Settings area in your account.
 
 Add the JavaScript snippet above to the *Site Footer HTML* area, as shown in the image above.
 
-
-## Set up Turnstile
+## Turnstile
 
 {% post_image hashed_id: "d6166e343c3cebdda782d3b8a8370a8d782d9a90", class: 'center' %}
 
@@ -92,10 +91,7 @@ HubSpot's [Smart Lists](http://help.hubspot.com/articles/How_To_Doc/how-to-creat
 to group and organize your contacts. This is far more flexible and powerful than
 having to select a list for each video and forcing the contacts into that one list!
 
-For a more in-depth guide see the [Turnstile doc page]({{ '/turnstile' | post_url }}).
-
-
-## How it works
+For a more in-depth guide see the [Turnstile page]({{ '/turnstile' | post_url }}).
 
 Now that everything's setup, let's see how this thing actually works!
 
@@ -127,7 +123,7 @@ conversion actions from the *Forms* area.
 Awesome!
 
 
-## Segmenting based on viewing behavior
+## Segmenting Based on Viewing Behavior
 
 If you're a HubSpot Enterprise customer you have access to their powerful 
 events engine. Once you have this integration set up, we'll automatically send
@@ -149,8 +145,53 @@ Some cool things you can do with this:
 - Know who your most engaged viewers are. 
 - Follow up with people who entered their email to watch a video but never finished it.
 
+## Email Merge Tags
 
-## Getting wildly advanced
+With the Hubspot-Wistia integration you can easily embed a thumbnail of your video in your email
+campaign. When visitors click the video image with the play button, they'll be
+sent to your website to watch the video.
+
+When you use this integration, your recipients email addresses are automatically
+piped through to your Wistia and Hubspot stats. So for everyone who clicks through on the
+email, you'll be able to see who they are and what parts of the video they've watched!
+
+First you'll want to grab the Email Merge Tag from Wistia.
+
+{% post_image hashed_id: 'c73f6e28514a8ce52e59636069fc7418e6d61c6c', width: 1067, height: 807 %}
+
+Navigate to a video in your account and click *Embed & Share* from the *Video Actions* menu, then select *Link in Email Campaign*.
+Change the size, play button color, and page the video links to. Then copy the email merge tag.
+I've highlighted the embed code in that pretty pink box.
+
+**[UPDATE RIDICULOUSLY OLD SCREENSHOTS]**
+
+Next head over to HubSpot's Email Builder.
+
+{% post_image hashed_id: '441a85383456dac91881885259a11a892cdf3448', width: 1386, height: 874 %}
+
+When you're editing your email in HubSpot, click the *HTML* button in the *Main Body Text* editor.
+This will ensure that the editor won't mess with the code that we paste in.
+
+Paste in the email merge tag.
+
+{% post_image hashed_id: '3d7952a3bc67d57598f7fc46102173093ad9ece5', width: 1386, height: 874 %}
+
+Now just paste in the code from Wistia. You should see the thumbnail of your video appear in the 
+preview window. Pretty cool, eh?
+
+At this point, it's safe to switch back to the Visual editing mode if you like.
+
+Then send that email! 
+
+You're all set to send the email. It's always good to send a test message to yourself
+first to make sure everything's linked up right. Note that when HubSpot sends the test message
+it will pass through "EMAIL" to our tracking system instead of your actual email address.
+
+When you send the actual email, it will substitute the recipients emails in instead.
+
+May your click-through rates be high and your video engagements long!
+
+## Getting Wildly Advanced
 
 Using Hubspot's JavaScript events API and our player API, you can accomplish 
 some awe-inspiring feats of sales and marketing automation.
