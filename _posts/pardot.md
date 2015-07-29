@@ -7,6 +7,8 @@ footer: 'for_intermediates'
 category: integrations
 ---
 
+{% post_image hashed_id: '98d1f2e9c8025c5f2424aefff8dd52f8a2741bcf', class: 'integration_logo' %}
+
 With the Wistia-Pardot integration you can:
 
 - Generate new leads from your videos
@@ -18,11 +20,13 @@ Sound fun? That's because it **_is_** fun. And it's easy! This page will give yo
 
 ## Get Set Up
 
-First things first, let's connect the puzzle pieces. What you'll need:
+First things first, let's connect the puzzle pieces. You'll need:
 
 - A [Pardot](http://pardot.com) account
 - A Wistia account on the [Enterprise](http://wistia.com/pricing) plan ('cause you're a rather enterprising individual)
-<br/>
+- Gumption
+
+If you have all of that, here's how to get started:
 
 **1. Add your Pardot account in Wistia**
 
@@ -36,7 +40,7 @@ In your Pardot account, click the Admin menu at the top of the page, and choose 
 
 {% post_image hashed_id: 'ebbf9841c910fea77bb16b74ea03430d95213ef1', class: 'center' %}
 
-Check the "Show Video Play Heatmaps" box, and then fill in your API Password and Public Token from Wistia. [Here's a guide on how to find those]({{ '/account-setup#api_access' | post_url }}). Then click *Create Connector*, and do <a href="//fast.wistia.net/embed/iframe/0ojtk98of1?popover=true" class="wistia-popover[height=480,playerColor=78a8eb,width=640]">the "My Wistia and Pardot accounts are connected at last!" dance</a>. Read on for details about what you can do with your newfound powers.
+Check the "Show Video Play Heatmaps" box, and then fill in your API Password and Public Token from Wistia. [Here's a guide on how to find those]({{ '/account-setup#api_access' | post_url }}). Then save the connector, and do <a href="//fast.wistia.net/embed/iframe/0ojtk98of1?popover=true" class="wistia-popover[height=480,playerColor=78a8eb,width=640]">the "My Wistia and Pardot accounts are connected at last!" dance</a>. Read on for details about what you can do with your newfound powers.
 
 ## Collect contact information with Turnstile
 
@@ -54,26 +58,21 @@ If that was _your_ video, you'd be generating new leads right this very moment. 
 
 ## Track video-related events from your website in Pardot
 
-With the [Wistia Connector enabled in Pardot](#get_set_up), data about how every person watches the videos on your website will feed directly into your Pardot account. You'll see:
-
-- stuff
-- things
-- other really quite wonderful things
-
-### The Video Report
+With the [Wistia Connector enabled in Pardot](#get_set_up), data about how every person watches the videos on your website will feed directly into your Pardot account.
 
 Know that _Email_ report in Pardot, where you can track the performance of all your email campaigns? Well, now you've got a report _just like that one_, but for all of your embedded Wistia videos.
 
+Behold, the Video report:
+
 {% post_image hashed_id: 'b9fd61e0f1befe34ec2fc3332ebff37f957d2b65', class: 'center' %}
 
-In the Video report, you can see:
+In the Video report you can see how your videos are performing across the board, and drill down to measure the activity on each one. For each video, you can see every prospect or visitor that watched it:
 
-- How your videos are performing across the board
-- How many prospects have watched each video
-- Every individual person who watched each video
-- How they watched it, second-by-second.
+{% post_image hashed_id: 'fd465c2e6e5abddfdffc0f243ba4fcbbc8b12656', class: 'center' %}
 
+Then for each prospect and visitor, you can see a full record of which videos they've watched, and even how _much_ of the video they watched, down to the second:
 
+{% post_image hashed_id: '6edff3dd501f556bdbb8c4447526d65b019eb9d7', class: 'center' %}
 
 ## Using video events to score leads
 Want to adjust prospect scores based on video data? Me too. Let's do this.
@@ -109,9 +108,11 @@ Having trouble? Shoot! Let's troubleshoot. Here are some common issues, and how 
 
 ### Wistia video views not tracking in Pardot
 
-First things first, it's important to know that only videos embedded on your website will show activity in your Pardot account. When a person watches a video from the video's page in your Wistia account, that activity will not appear in Pardot.
+First things first, it's important to know that _only_ videos embedded on your website will show activity in your Pardot account. When a person watches a video from the video's page in your Wistia account, that activity will not appear in Pardot.
 
 If the video _is_ embedded on your website but it's still not showing activity in Pardot, make sure that you have [Pardot's tracking code](http://www.pardot.com/faqs/campaigns/tracking-code/) on the page, and that your Wistia embed code has the `wistia_embed` class (as it should by default).
+
+Still having trouble? Our Customer Happiness team is here to help: **[Contact Us](http://wistia.com/support/contact)**.
 
 
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
