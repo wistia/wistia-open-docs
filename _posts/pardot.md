@@ -32,7 +32,7 @@ If you have all of that, here's how to get started:
 
 In Wistia, go to the Email Provider section of your account settings. Enter the credentials you use to login to Pardot, along with your Pardot API User Key (which you can find in [your Pardot settings](https://pi.pardot.com/account)).
 
-Click that blue "Connect Pardot" button, and you're halfway set up! Proceed to step 2 👇
+Click that blue "Connect Pardot" button, and you're halfway set up! Proceed to step 2. 👇
 
 **2. Enable the Wistia Connector in Pardot**
 
@@ -42,7 +42,7 @@ In your Pardot account, click the Admin menu at the top of the page, and choose 
 
 Check the "Show Video Play Heatmaps" box, and then fill in your API Password and Public Token from Wistia. [Here's a guide on how to find those]({{ '/account-setup#api_access' | post_url }}). Then save the connector, and do <a href="//fast.wistia.net/embed/iframe/0ojtk98of1?popover=true" class="wistia-popover[height=480,playerColor=78a8eb,width=640]">the "My Wistia and Pardot accounts are connected at last!" dance</a>. Read on for details about what you can do with your newfound powers.
 
-## Collect contact information with Turnstile
+## Collect Contact Information with Turnstile
 
 With [Turnstile]({{ '/turnstile' | post_url }}), you can ask people to enter their names and email addresses at any point in your videos. And now that you have Wistia connected to Pardot, that information will automatically create a new Prospect record in your Pardot Account. Woo!
 
@@ -54,9 +54,9 @@ Here's an example Turnstile on one of the videos made here at Wistia HQ:
 
 If that was _your_ video, you'd be generating new leads right this very moment. So go ahead and [embed your own video]({{ '/embedding' | post_url }}) to get started! You can find Turnstile in the [Timeline Actions]({{ '/customizing-your-video#timeline_actions' | post_url }}) section of the Customize panel.
 
-{{ "Here's a handy blog post by Ezra about how to use Turnstile most effectively: <a href='http://wistia.com/blog/collect-more-emails-with-video'>Collect More Emails With Video</a>" | tip }}
+{{ "Here's a handy blog post by Ezra about how to use Turnstile most effectively: <a href='http://wistia.com/blog/collect-more-emails-with-video'>Collect More Emails With Video</a>." | tip }}
 
-## Track video-related events from your website in Pardot
+## Track Video-Related Events from Your Website in Pardot
 
 With the [Wistia Connector enabled in Pardot](#get_set_up), data about how every person watches the videos on your website will feed directly into your Pardot account.
 
@@ -74,7 +74,7 @@ Then for each prospect and visitor, you can see a full record of which videos th
 
 {% post_image hashed_id: '6edff3dd501f556bdbb8c4447526d65b019eb9d7', class: 'center' %}
 
-## Using video events to score leads
+## Use Video Events in Prospect Scoring
 Want to adjust prospect scores based on video data? Me too. Let's do this.
 
 First, check out Pardot's overall guide on setting up [Custom Scoring](http://www.pardot.com/faqs/administration/custom-scoring-rules/). Now with the Wistia-Pardot integration set up, you're able to use three specific video-related events to adjust a Prospect's score:
@@ -85,7 +85,7 @@ First, check out Pardot's overall guide on setting up [Custom Scoring](http://ww
 
 Score!
 
-## Add Video to your email campaigns
+## Add Video to Your Email Campaigns
 
 Email is a great way to nurture leads and stay engaged with your growing audience. Then add a little video to the mix, stir in some tracking & analytics, and baby, you got a stew goin'!
 
@@ -110,7 +110,7 @@ Fun fact: When people receive your email and click through to watch the video, t
 
 Having trouble? Shoot! Let's troubleshoot. Here are some common issues, and how to fix them:
 
-### Wistia video views not tracking in Pardot
+### Wistia video views aren't tracking in Pardot
 
 First things first, it's important to know that _only_ videos embedded on your website will show activity in your Pardot account. When a person watches a video from the video's page in your Wistia account, that activity will not appear in Pardot.
 
