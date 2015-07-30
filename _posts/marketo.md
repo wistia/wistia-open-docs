@@ -10,24 +10,17 @@ category: integrations
 
 With the Wistia-Marketo integration you can:
 
-
 - Generate new leads with [Turnstile]({{ '/turnstile' | post_url }})
 - Score leads based on video interaction
 - Pipe leads into Smart Lists based on viewing data
 - Send emails with integrated video links
 - Be a video marketing superstar
 
-
-Wistia supplies you with lots of video viewing data, but there's so much potential!
-With the Wistia-Marketo Integration you can put the rubber to the road, and use
-Wistia's stats to better inform your email marketing campaigns. Let's go!
-
-
 ## Get Set Up
 
-To set up _most_ of the Wistia-Marketo integration, you only need to do, well... pretty much nothing at all. If you're on the Wistia Enterprise plan and have a video embedded on your website with [Marketo's Munchkin tracking script enabled](http://developers.marketo.com/documentation/websites/lead-tracking-munchkin-js/), then data is already flowing from Wistia into your Marketo account. Go look! Or, get on [the Enterprise plan](http://wistia.com/pricing) (if you're feeling enterprisey today 🚀).
+To set up _most_ of the Wistia-Marketo integration, you only need to do, well... pretty much nothing at all. If you're on the Wistia Enterprise plan and have a video embedded on your website with [Marketo's Munchkin tracking script](http://developers.marketo.com/documentation/websites/lead-tracking-munchkin-js/) enabled, then data about how people are watching your videos is already flowing from Wistia into your Marketo account. Go look! Or, get on [the Enterprise plan](http://wistia.com/pricing) if you're feeling enterprisey today. <a href="//fast.wistia.net/embed/iframe/3ipzw811en?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=640]">🚀</a>
 
-If you also want to use Turnstile with Marketo though (which we'd definitely _not_ recommend if you _don't_ want more leads), just follow these quick steps:
+Now, if you want to use Turnstile with Marketo (which we'd definitely _not_ recommend if you _don't_ want more leads), just follow these quick steps:
 
 1. In your Wistia account, open the Account menu and click on Settings.
 2. Switch to the Email Integrations tab.
@@ -35,18 +28,27 @@ If you also want to use Turnstile with Marketo though (which we'd definitely _no
 4. Follow those handy on-screen instructions.
 5. Call an old friend and catch up. It's been too long, hasn't it?
 
-Congrats, you're all set up! (But if for one reason or another you're _not_ set up, [contact us](http://wistia.com/support/contact) and we'll help you out).
+Congrats, you're all set up!
+
+{{ "If for one reason or another you're <em>not</em> set up after following the steps above, <a href='http://wistia.com/support/contact'>contact us</a> and we'll help you out." | note }}
 
 Want to learn how to put your fancy new Wistia-Marketo integration to work? The sections that follow contain the information you seek.
 
-
 ## Collect Leads with Turnstile
 
-With the Wistia-Marketo integration you can gather leads with [Turnstile]({{ '/turnstile' | post_url }}),
-and slot them right into your Marketo [Smart Lists](#smart_lists).
+Remember [that time you configured Turnstile to connect to your Marketo account](#get_set_up)? Well now when people enter their names and email addresses (or just email addresses, if you'd prefer) into Turnstile, they'll automatically get passed from Wistia to Marketo as new leads with the lead source set to "Wistia Video – (name of the video here)". Here's what Turnstile looks like:
 
-After you've set up your Wistia-Marketo integration you can add a Turnstile to
-any of your videos. You'll find Turnstile in the
+{% wistia_embed hashed_id: 06rv6jh26m %}
+
+So that video was just an example, but if that was _your_ video, you'd probably have a brand new lead right about now. That would be cool.
+
+"But Wistia," you ask, "what if that person was already an identified lead in my Marketo account?" Glad you asked. In that case the lead source will remain untouched, like a pristine wilderness.
+
+**Fun fact:** All of the actions a person took on your website _before_ they entered their information into Turnstile will be associated with their lead record, so you can see exactly what the path to conversion was in [the lead's Activity Log in Marketo](https://docs.marketo.com/display/public/DOCS/Locate+the+Activity+Log+for+a+Lead).
+
+**Yet another fun fact:** That data will live in Wistia too! Anytime you get a new lead through Turnstile, the person's info will appear in right in your Wistia stats along all their viewing activity – even from before they used Turnstile.
+
+To get started with Turnstile, go to a video page in your Wistia account and open the
 [Timeline Actions]({{ '/customizing-your-video#timeline_actions' | post_url }})
 section of the Customize panel.
 
