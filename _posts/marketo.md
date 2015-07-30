@@ -52,29 +52,20 @@ To get started with Turnstile, go to a video page in your Wistia account and ope
 [Timeline Actions]({{ '/customizing-your-video#timeline_actions' | post_url }})
 section of the Customize panel.
 
-## Smart Lists
+## Setting Up Marketing Automation Based on Video Viewing Data
 
-Not only will Wistia be able to track how much of a video was watched, but with
-the Marketo Integration you'll be able to add leads to Smart Lists after a
-viewer has:
+Wouldn't it be cool if when a person watches at least 50% of a certain video on your website, you could automatically set them up to get an email about that product a few days later? Or if a person watched 75% of a video, you could have a salesperson get notified to follow up?
 
-- watched 25% of the video
-- 50%
-- 75%
-- 100%
-- clicked a link
+"Why yes, yes that would be quite cool indeed," you say? Phew! Good thing we built this integration. Here's how to do stuff like that:
 
-Want a list that's just for leads who clicked to download the sales material?
-Or want to nudge viewers who only watched 25% of the video? Set up a Smart List
-and score leads based on Wistia analytics. You can even send alerts to Lead Owners
-when viewers have taken specific actions with your Wistia videos. 🎉
-
-## Activity Log
-
-"But Wistia," you say, "what if a viewer filled out another Marketo form?" Fear
-not, friend! The Wistia-Marketo Integration will automatically convert previous
-visitors into new leads.
-
+1. Head to the Marketing Activities section in your Marketo account.
+2. Create a new Smart Campaign. Choose a folder, and give the campaign a name. A description too, if you'd like.
+3. In the campaign screen, go to the Triggers section in the panel on the right.
+4. Find the Visits Web Page trigger, and drag that little guy into the "Drag triggers and filters from the right" area.
+  {% post_image hashed_id: 'b13848f78c7bdffb0bb590caf6e8254efbdd927b', class: 'center' %}
+5. Now here's where it gets a _little_ weird, but hey, that's what this tutorial is here for. All of events related to how people interact with your videos are recorded as a web page visits in Marketo. So if you wanted the trigger to be when a person watches 75% of a video called "<a href="//fast.wistia.net/embed/iframe/nto1tvx7mz?popover=true" class="wistia-popover[height=360,playerColor=1789ce,width=640]">Making French Toast at Wistia</a>", you'd tell Marketo to set the trigger to be _Web Page --> is --> Wistia Video: "Making French Toast at Wistia" 75% Watched_
+  {% post_image hashed_id: 'd64c0b0cfa51632198e2380c43ec6faef28f0371', class: 'center' %}
+6. Once you've picked the right event for the right video, move onto the Flow step. That's all Marketo's domain, so [check out the Marketo documentation](https://docs.marketo.com/display/public/DOCS/Add+a+Flow+Step+to+a+Smart+Campaign) for details.
 
 ## Add Video Thumbnail Links to Your Emails
 
