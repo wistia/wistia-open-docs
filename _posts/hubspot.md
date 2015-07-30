@@ -23,23 +23,30 @@ See this video for more:
 
 ## Setting Everything Up
 
-There atre three steps to getting fully integrated:
+There are three steps to getting fully integrated:
 
 1. Enable the integration inside your HubSpot account.
 2. Add the integration JavaScript snippet to your website.
 3. Set up Turnstile to work with HubSpot.
+4. Send emails using Email Merge Tags
 
 
 ### Enable the Integration in HubSpot
 
 To enable the integration within HubSpot, log into your HubSpot account, 
-click on your name in the upper right of the screen, and go to **Settings**.
+click on your beautiful face (or your profile picture) in the upper right of the screen, and go to **Integrations**.
 
-In Settings, click **Wistia Integration** under the *Integrations* headline.
+{% post_image hashed_id: '7d06e29a791a7387630c66994f78d802a63a952b', width: 300, class: 'float_left' %}
 
-Follow the instructions! Note that some of their instructions, notably the 
-part related to the JavaScript snippet, overlap with the instructions below.
+In Integrations, you'll see Wistia right at the top! Click **Integrate with Hubspot**.
 
+{% post_image hashed_id: '7c955798a057931c0ccb2d43a3146778b76318f9', class: 'class' %}
+
+Hubspot will request the API password from your Wistia account (which you can find [here]({{ '/account-setup#api_access' | post_url }})). Pop that into Hubspot and you're nearly ready.
+
+Jump back to your Wistia account, and head into Account Settings. (Keep in mind, only the *Account Owner* can get into Account Settings.) Once you're there head to *Email Integrations* under the *Integrations* menu. Select Hubspot from the list and enter your [Hubspot ID](http://help.hubspot.com/articles/KCS_Article/Account/Where-can-I-find-my-HUB-ID).
+
+You're almost done--next you'll need to add the Integration JavaScript.
 
 ### Add the Integration JavaScript
 
@@ -55,7 +62,7 @@ add this snippet to the *Site Footer HTML* in your HubSpot Account.
 
 {% post_image hashed_id: 'b83e5159698404b5e57695caee83ced2b5a2de87', class: 'center' %}
 
-Open the Content > Content Settings area in your account. 
+Open the Content > Content Settings area in  your account. 
 
 {% post_image hashed_id: '22f0e988ac098330f63651a96c03dd821ff20073', class: 'center' %}
 
@@ -78,7 +85,7 @@ Select HubSpot from the list, and then click <span class='faux_button'>Configure
 
 For HubSpot configuration, you will need your *Hub ID*, *username*, and
 *password*. Your *Hub ID* can be found in the lower-right-hand corner of any
-page in your HubSpot account (see [this HubSpot doc](http://help.hubspot.com/articles/How_To_Doc/How-to-find-your-hub-id) for more).
+page in your HubSpot account (see [this HubSpot doc](http://help.hubspot.com/articles/How_To_Doc/How-to-find-your-hub-id) for more) [DEAD LINK].
 
 Once you've entered all your HubSpot info and configured it, you are ready to
 use the HubSpot Turnstile with your next Wistia video (look for it under
@@ -86,8 +93,8 @@ use the HubSpot Turnstile with your next Wistia video (look for it under
 
 Note that unlike the many of the other Turnstile integrations, with the HubSpot
 integration you don't choose a list for the emails to be pushed to. Instead,
-we automatically create a Form for you in HubSpot for each video. You can use
-HubSpot's [Smart Lists](http://help.hubspot.com/articles/How_To_Doc/how-to-create-a-smart-list-in-hubspot)
+we automatically create a Form for you in HubSpot for each video. You can use 
+HubSpot's [Smart Lists](http://help.hubspot.com/articles/How_To_Doc/how-to-create-a-smart-list-in-hubspot) [BROKEN LIKE]
 to group and organize your contacts. This is far more flexible and powerful than
 having to select a list for each video and forcing the contacts into that one list!
 
@@ -95,7 +102,7 @@ For a more in-depth guide see the [Turnstile page]({{ '/turnstile' | post_url }}
 
 Now that everything's setup, let's see how this thing actually works!
 
-
+[PROFESSIONAL PLAN - Basic integration -- enterprise events]
 ## Heatmaps in the Contact Timeline
 
 One of the coolest things about this integration is that you'll see video 
@@ -171,6 +178,8 @@ Next head over to HubSpot's Email Builder.
 
 When you're editing your email in HubSpot, click the *HTML* button in the *Main Body Text* editor.
 This will ensure that the editor won't mess with the code that we paste in.
+
+[SOURCE CODE INSTEAD]
 
 Paste in the email merge tag.
 
