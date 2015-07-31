@@ -74,6 +74,14 @@ Then for each prospect and visitor, you can see a full record of which videos th
 
 {% post_image hashed_id: '6edff3dd501f556bdbb8c4447526d65b019eb9d7', class: 'center' %}
 
+## Target Your Marketing Based on Which Videos People Watch
+
+From the Video report (see above 👆), you can add all the prospects who watched a certain video to a [list](http://www.pardot.com/faqs/videos/lists/) in your Pardot account. You can also give them all [tags](http://www.pardot.com/faqs/segmentation/tags/) if you'd like. Or heck, do both!
+
+From a specific video's page in Pardot (from the full list in the Video report), click the Tools menu on the upper right:
+
+{% post_image hashed_id: 'b7f056f4f65a5d8eac51c1ebbe2f3d238a9ebda6', width: 300px, class: 'float_left' %}
+
 ## Use Video Events in Prospect Scoring
 Want to adjust prospect scores based on video data? Me too. Let's do this.
 
