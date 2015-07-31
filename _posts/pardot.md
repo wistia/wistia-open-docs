@@ -80,7 +80,9 @@ From the Video report (see above 👆), you can add all the prospects who watche
 
 From a specific video's page in Pardot (from the full list in the Video report), click the Tools menu on the upper right:
 
-{% post_image hashed_id: 'b7f056f4f65a5d8eac51c1ebbe2f3d238a9ebda6', width: 300px, class: 'float_left' %}
+{% post_image hashed_id: 'b7f056f4f65a5d8eac51c1ebbe2f3d238a9ebda6', width: 200, class: 'float_left' %}
+
+From there just choose what you'd like to do with the prospects who watched your video, and let Pardot work its magic.
 
 ## Use Video Events in Prospect Scoring
 Want to adjust prospect scores based on video data? Me too. Let's do this.
