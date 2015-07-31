@@ -78,7 +78,7 @@ Then for each prospect and visitor, you can see a full record of which videos th
 
 From the Video report (see above 👆), you can add all the prospects who watched a certain video to a [list](http://www.pardot.com/faqs/videos/lists/) in your Pardot account. You can also give them all [tags](http://www.pardot.com/faqs/segmentation/tags/) if you'd like. Or heck, do both!
 
-From a specific video's page in Pardot (from the full list in the Video report), click the Tools menu on the upper right:
+On a specific video's page in Pardot (which you can access from the full list in the Video report), click the Tools menu on the upper right:
 
 {% post_image hashed_id: 'b7f056f4f65a5d8eac51c1ebbe2f3d238a9ebda6', width: 200, class: 'float_left' %}
 
