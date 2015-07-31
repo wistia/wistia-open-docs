@@ -6,7 +6,7 @@ description:
 category: integrations
 ---
 
-{% post_image hashed_id: 'baa410e5f85c4a749f40f29679ad49f901f1975e', class: 'class' %}
+{% post_image hashed_id: 'baa410e5f85c4a749f40f29679ad49f901f1975e', class: 'integration_logo' %}
 
 
 [HubSpot](http://hubspot.com) is marketing software designed to help increase
@@ -31,13 +31,13 @@ There are three steps to getting fully integrated:
 1. Enable the integration inside your HubSpot account.
 2. Add the integration JavaScript snippet to your website.
 3. Set up Turnstile to work with HubSpot.
-4. Send emails using Email Merge Tags
+4. Send emails using Email Merge Tags.
 
 
 ### Enable the Integration in HubSpot
 
 To enable the integration within HubSpot, log into your HubSpot account, 
-click on your beautiful face (or your profile picture) in the upper right of the screen, and go to **Integrations**.
+click on your beautiful face (your profile picture) in the upper right of the screen, and go to **Integrations**.
 
 {% post_image hashed_id: '7d06e29a791a7387630c66994f78d802a63a952b', width: 300, class: 'float_left' %}
 
@@ -81,29 +81,19 @@ Jump back to your Wistia account, and head into [Account Settings]({{ '/account-
 
 {% post_image hashed_id: "64dceeb28808f56e263a89d4e0650205740b9505", class: 'center' %}
 
-HubSpot will ask you to login to your account, and verify that you're cool with authorizing Wistia to use your data.
+HubSpot will ask you to login to your account, and verify that you're cool with authorizing Wistia.
 
 Once you've entered all your HubSpot info and configured it, you are ready to
-use the HubSpot Turnstile with your next Wistia video (look for it in [Timeline Actions]({{ '/customizing_your_videos#timeline-actions' | post_url }})).
+use the HubSpot Turnstile with your next Wistia video (look for it in [Timeline Actions]({{ '/customizing-your-video#timeline_actions' | post_url }})).
 
 Note that unlike many of the other Turnstile integrations, with the HubSpot
 integration you don't choose a list for the emails to be pushed to. Instead,
 we automatically create a Form for you in HubSpot for each video. You can use 
-HubSpot's [Smart Lists](http://knowledge.hubspot.com/contacts-user-guide/how-to-create-a-smart-list) to group and organize your contacts. This is far more flexible and powerful than
-having to select a list for each video and forcing the contacts into that one list!
+HubSpot's [Smart Lists](http://knowledge.hubspot.com/contacts-user-guide/how-to-create-a-smart-list) to group and organize your contacts. This is far more flexible and powerful than having to select a list for each video and forcing the contacts into that one list!
 
 For a more in-depth guide see the [Turnstile page]({{ '/turnstile' | post_url }}).
 
 Now that everything's setup, let's see how this thing actually works!
-
-[PROFESSIONAL PLAN - Basic integration -- enterprise events]
-## Heatmaps in the Contact Timeline
-
-One of the coolest things about this integration is that you'll see video 
-heatmaps in your contacts' timelines. It will look like this:
-
-{% post_image hashed_id: "dd8819f1ea04968e26e6ff87b091fda357ef9674", class: 'center' %}
-
 
 ## Turnstile as Form Submissions
 
@@ -111,7 +101,7 @@ So now you have your HubSpot Turnstile integration set up, and you've shared
 (or embedded) a video with turnstile turned on. Here's a quick guide to
 tracking those submissions in HubSpot.
 
-{% post_image hashed_id: 'd37a1ea780c75bcdb925551f1684e0f9bbd3fef6', class: 'center' %}
+{% post_image hashed_id: '7615d57622023abae0ea1342a746ea32bb432e8b', class: 'center' %}
 
 From under the *Contacts* menu in your HubSpot account, select *Forms*.
 
@@ -123,6 +113,13 @@ conversion actions from the *Forms* area.
 
 Awesome!
 
+## Heatmaps in Contact Timeline
+
+One of the coolest things about this integration is that you'll see video 
+heatmaps in your contacts' timelines. It will look like this:
+
+{% post_image hashed_id: "dd8819f1ea04968e26e6ff87b091fda357ef9674", class: 'center' %}
+
 
 ## Segmenting Based on Viewing Behavior
 
@@ -131,7 +128,8 @@ events engine. Once you have this integration set up, we'll automatically send
 the following events for every Wistia video on your site:
 
 - Video played
-- Video 100% watched
+- Video 25% watched, 50% watched, 75% watched and 100% watched
+- Links clicked
 
 This means that you can segment your contacts based on this viewing data.
 Here's what it looks like if I wanted to segment based on everyone who's watched
@@ -143,8 +141,9 @@ Some cool things you can do with this:
 
 - Find everyone who loaded a particular video but didn't play it and send that
   video out to them in an email.
+- Nudge viewers who've only watched 25% of a video.
 - Know who your most engaged viewers are. 
-- Follow up with people who entered their email to watch a video but never finished it.
+- Follow up with users to clicked on [annotation links]({{ '/customizing-your-video#annotation_link' | post_url }}) and [Calls to Action]({{ '/customizing-your-video#call_to_action' | post_url }}).
 
 ## Email Merge Tags
 
@@ -156,37 +155,32 @@ When you use this integration, your recipients email addresses are automatically
 piped through to your Wistia and HubSpot stats. So for everyone who clicks through on the
 email, you'll be able to see who they are and what parts of the video they've watched!
 
-First you'll want to grab the Email Merge Tag from Wistia.
+First you'll want to grab the [email merge tag]({{ '/email-marketing#select_your_video' | post_url }}) from Wistia. Pick the video you'd like to share, and select *Embed & Share* from the *Video Actions* drop down menu. The select *Link in Email Campaign*, and make sure HubSpot is chosen at the Email Provider.
 
-{% post_image hashed_id: 'c73f6e28514a8ce52e59636069fc7418e6d61c6c', width: 1067, height: 807 %}
+{% post_image hashed_id: '5db146143f379d6b79228b42ada298c105f07b42', class: 'center' %}
 
-Navigate to a video in your account and click *Embed & Share* from the *Video Actions* menu, then select *Link in Email Campaign*.
 Change the size, play button color, and page the video links to. Then copy the email merge tag.
-I've highlighted the embed code in that pretty pink box.
 
-**[UPDATE RIDICULOUSLY OLD SCREENSHOTS]**
+For HubSpot it should look something like this:
+
+`<a href="https://home.wistia.com/medias/6hnsww6aua?wemail={{contact.email}}"><img src="https://embed-ssl.wistia.com/deliveries/e4113de89c7e483bd720ee893e619c96275e4a01.jpg?image_play_button=true&image_play_button_color=31b0dde0&image_crop_resized=500x281" alt="Wistiafest is Coming" width="500" height="281" /></a>`
 
 Next head over to HubSpot's Email Builder.
 
-{% post_image hashed_id: '441a85383456dac91881885259a11a892cdf3448', width: 1386, height: 874 %}
+{% post_image hashed_id: '804910911137433746c0335188bfb40d5031cc93', class: 'center' %}
 
-When you're editing your email in HubSpot, click the *HTML* button in the *Main Body Text* editor.
+When you're editing your email in HubSpot, click the *Source Code* button in the *Main Body Text* editor.
 This will ensure that the editor won't mess with the code that we paste in.
-
-[SOURCE CODE INSTEAD]
 
 Paste in the email merge tag.
 
-{% post_image hashed_id: '3d7952a3bc67d57598f7fc46102173093ad9ece5', width: 1386, height: 874 %}
+{% post_image hashed_id: '966d1ba37c07ea63a6a45692f870d978ce1d872c', class: 'center' %}
 
-Now just paste in the code from Wistia. You should see the thumbnail of your video appear in the 
-preview window. Pretty cool, eh?
+And then you should see the thumbnail of your video appear in the preview window. Pretty cool, eh?
 
-At this point, it's safe to switch back to the Visual editing mode if you like.
+Once you've got that beauty ready to go, send that email!
 
-Then send that email! 
-
-You're all set to send the email. It's always good to send a test message to yourself
+It's always good to send a test message to yourself
 first to make sure everything's linked up right. Note that when HubSpot sends the test message
 it will pass through "EMAIL" to our tracking system instead of your actual email address.
 
@@ -245,12 +239,23 @@ the following sections:
 Ta da! Automation bliss! Segment on these events, see them in your timeline, 
 the sky's the limit.
 
-## Shoot the Trouble
+## Troubleshooting
 
-- can't see a heatmap -- hubSpot does batch pulls
+Got issues? Not seeing the magic? We're here to help!
 
-- don't forget the tracking code
+### I can't see my heatmaps!
 
-- views not piping in on the media page? we don't have the code in there, silly
+HubSpot will batch-pull data from Wistia, so heatmaps might not be piped in immediately--but they'll be there soon. 
 
-Don't forget the [tracking code](http://knowledge.hubspot.com/getting-started-with-hubspot/how-to-install-the-tracking-code-on-a-generic-website)
+Additionally, you'll want to make sure the Wistia icon in your contact's timeline is the vibrant, Wistia blue (it will be grey if its not turned on). This is usually turned on by default in HubSpot, but if you've deselected the option, you won't be able to see the nifty heatmaps.
+
+{% post_image hashed_id: '85bfb59048d8bda8b6ad3663ffc4b1eb4353cf3e', class: 'center' %}
+
+### Turnstile isn't pulling in heatmaps!
+
+If you've built your own webpage you'll want to make sure the HubSpot tracking code is in there. Without it, Wistia and HubSpot are just two ships passing in the night--we won't be able to communicate properly.
+
+Here's HubSpot's guide on adding your [tracking code](http://knowledge.hubspot.com/getting-started-with-hubspot/how-to-install-the-tracking-code-on-a-generic-website).
+
+
+Still not working? We're happy to help! [Give us a holler](http://wistia.com/support/contact), and we'll jump on the case. :)
