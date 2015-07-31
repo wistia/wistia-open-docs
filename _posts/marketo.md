@@ -24,7 +24,7 @@ Does that sound like you? Well then, data about how people are watching your vid
 
 If that _doesn't_ sound like you yet, and you're feeling enterprisey today <a href="//fast.wistia.net/embed/iframe/3ipzw811en?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=640]">🚀</a>, get on [the Enterprise plan](http://wistia.com/pricing).
 
-Now, if you want to [use Turnstile with Marketo](#collect_leads_with_turnstile) (which we'd definitely not recommend if you don't want more leads), just follow these quick steps:
+After choosing the Enterprise plan, the one thing you'll need to configure on the Wistia side is the [Turnstile]({{ '/turnstile' | post_url }}) connection to pass leads from Wistia into Marketo. Just follow these quick steps:
 
 1. In your Wistia account, open the Account menu and click on Settings.
 2. Switch to the Email Integrations tab.
@@ -48,7 +48,7 @@ So that video was just an example, but if that was _your_ video, you'd probably 
 
 "But Wistia," you ask, "what if that person was already an identified lead in my Marketo account?" Glad you asked. In that case the lead source will remain untouched, like a pristine wilderness.
 
-**Fun fact:** All of the actions a person took on your website _before_ they entered their information into Turnstile will be associated with their lead record, so you can see exactly what the path to conversion was in [the lead's Activity Log in Marketo](https://docs.marketo.com/display/public/DOCS/Locate+the+Activity+Log+for+a+Lead).
+**Fun fact:** All of a person's video viewing activity from _before_ they entered their information into Turnstile will be associated with their lead record, so you can see exactly what the path to conversion was in [the lead's Activity Log in Marketo](https://docs.marketo.com/display/public/DOCS/Locate+the+Activity+Log+for+a+Lead).
 
 **Yet another fun fact:** Their historical viewing data will live in Wistia too! Anytime you get a new lead through Turnstile, the person's info will appear in right in your Wistia stats along all their viewing activity – even from before they used Turnstile.
 
@@ -58,7 +58,7 @@ section of the Customize panel.
 
 ## Setting Up Marketing Automation Based on Video Viewing Data
 
-Wouldn't it be cool if when a person watches at least 50% of a certain video on your website, you could automatically set them up to get an email about that product a few days later? Or if a person watched 75% of a video, you could have a salesperson get notified to follow up?
+Wouldn't it be cool if when a person watches at least 50% of a certain video on your website, you could automatically send them an email about that product a few days later? Or if a person watched 75% of a video, you could have a salesperson get notified to follow up?
 
 "Why yes, yes that would be quite cool indeed," you say? Phew! Good thing we built this integration. Here's how to do stuff like that:
 
@@ -69,7 +69,16 @@ Wouldn't it be cool if when a person watches at least 50% of a certain video on 
   {% post_image hashed_id: 'b13848f78c7bdffb0bb590caf6e8254efbdd927b', class: 'center' %}
 5. Now it's time to define the specific video event trigger. If you wanted to run automation when a person watches 75% of a video called "<a href="//fast.wistia.net/embed/iframe/nto1tvx7mz?popover=true" class="wistia-popover[height=360,playerColor=1789ce,width=640]">Making French Toast at Wistia</a>", you'd tell Marketo to set the trigger to _Web Page --> is --> Wistia Video: "Making French Toast at Wistia" 75% Watched_.
   {% post_image hashed_id: 'd64c0b0cfa51632198e2380c43ec6faef28f0371', class: 'center' %}
-6. Once you've picked the right event for the right video, move onto the Flow step. That's all Marketo's domain, so [check out the Marketo documentation](https://docs.marketo.com/display/public/DOCS/Add+a+Flow+Step+to+a+Smart+Campaign) for details.
+6. Once you've picked the right event for the right video, move onto the Flow step. That's all Marketo's domain, so **[check out the Marketo documentation](https://docs.marketo.com/display/public/DOCS/Add+a+Flow+Step+to+a+Smart+Campaign)** for details.
+
+There are a bunch of other things you can automate too, like:
+
+- [Adding the lead to a list](https://docs.marketo.com/display/public/DOCS/Add+to+List)
+- [Changing the lead score](https://docs.marketo.com/display/public/DOCS/Change+Score)
+- [Sending an alert to the lead owner](https://docs.marketo.com/display/public/DOCS/Send+Alert)
+
+Bravo, Marketo. 👏
+
 
 ## Add Video Thumbnail Links to Your Emails
 
