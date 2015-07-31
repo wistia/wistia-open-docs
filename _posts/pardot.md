@@ -116,7 +116,13 @@ First things first, it's important to know that _only_ videos embedded on your w
 
 If the video _is_ embedded on your website but it's still not showing activity in Pardot, make sure that you have [Pardot's tracking code](http://www.pardot.com/faqs/campaigns/tracking-code/) on the page, and that your Wistia embed code has the `wistia_embed` class (as it should by default).
 
-Still having trouble? Our Customer Happiness team is here to help: **[Contact Us](http://wistia.com/support/contact)**.
+### Can't connect Pardot account in Wistia
+
+Followed the steps in [this section](#get_set_up) but you're getting an error message? Check to see if you have Pardot's [IP Location Activation](http://www.pardot.com/faqs/administration/ip-location-activation/) option enabled. If you do, you'll need to disable that in order to use the integration.
+
+### Your problem isn't covered there 👆 ?
+
+If you're still having trouble, our Customer Happiness team is here to help: **[Contact Us](http://wistia.com/support/contact)**.
 
 
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
