@@ -69,6 +69,25 @@ Wouldn't it be cool if when a person watches at least 50% of a certain video on 
 
 ## Add Video Thumbnail Links to Your Emails
 
+Email is a wonderful way to engage with your customers (and future-customers)... but email _with video_ is an even <a href="http://i.imgur.com/xVW3EK8.gif" class="wistia-popover[height=250,playerColor=78a8eb,width=500]">wonderfuller</a> way.
+
+{% post_image hashed_id: '8083525cca03bbeba8a7b23eee82063171c00726', width: 300, class: 'float_left' %}
+
+To add a video thumbnail link to an email campaign, just follow this quick process:
+
+1. Open the video's page in your Wistia account.
+2. Click on the Video Actions menu, and choose Embed & Share.
+3. On the Link In Email Campaign tab, select Marketo as your email provider.
+4. Adjust the thumbnail image size and choose the URL where you want people to watch the video. It can be the video's page in your Wistia account, or anywhere you have it embedded.
+5. Copy the Email Merge Tag from Wistia and [paste it into your email in Marketo](https://docs.marketo.com/display/public/DOCS/Edit+an+Email%27s+HTML).
+6. Profit.
+
+Fun fact: When people receive your email and click through to watch the video, their email addresses will automatically pass through to your Wistia stats.
+
+[Learn more about video+email marketing with Wistia]({{ '/email-marketing' post_url }}).
+
+{{ "<a href='http://wistia.com/library/using-video-in-email#templates'>Get some fancy (and free) video-centric email design templates</a>." | tip }}.
+
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 <script>
   wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
