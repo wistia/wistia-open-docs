@@ -112,7 +112,7 @@ To add a video thumbnail link to an email campaign, just follow this quick proce
 
 Fun fact: When people receive your email and click through to watch the video, their email addresses will automatically pass through to the Wistia stats.
 
-[Learn more about video+email marketing with Wistia]({{ '/email-marketing' post_url }}).
+[Learn more about video+email marketing with Wistia]({{ '/email-marketing' | post_url }}).
 
 {{ "<a href='http://wistia.com/library/using-video-in-email#templates'>Get some fancy (and free) video-centric email design templates</a>." | tip }}.
 
