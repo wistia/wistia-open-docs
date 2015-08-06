@@ -259,6 +259,17 @@ If your video already has captions, the Captions customize area will allow you
 to *edit*, *download*, or *delete* the captions. You'll also see an option to
 order or upload another SRT file.
 
+### Captions on by Default
+
+If you'd like your captions to be turned on permanently, now's your chance!
+Just choose **captions on by default** from the Captions menu in Customize.
+
+{% post_image hashed_id: 'd55365dbb5778e9d1bdc9c36a48c86f33519b7ce', class: 'float_right', width: 300 %}
+
+If you're working with multilingual captions, we'll supply the captions
+that match the language of your viewer's browser. If those captions aren't
+available, we'll serve the first SRT file uploaded (the first in the list).
+
 ## Advanced Customize Features
 
 There are a few powerful customization features we've added to make consistency
