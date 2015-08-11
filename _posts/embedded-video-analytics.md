@@ -267,6 +267,22 @@ Stream by clicking the "With Emails" option on the sorting bar.
 
 ---
 
+## Reset Stats
+
+If you're building a site with video, or just testing things out, you've 
+probably loaded (and played) your videos a few (dozen) times. This means your 
+stats might be a bit skewed. Nobody likes to start with bogus stats, so 
+reset those bad boys before your launch.
+
+At the media stats page, scroll down to the bottom. There you'll see an options to
+**Reset Stats**. Go for it! Just confirm that you absolutely, definitely want to reset
+them (there's <a href="//fast.wistia.net/embed/iframe/kmoo4abbal?popover=true" class="wistia-popover[height=450,playerColor=7b796a,width=800]">no going back</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>), and you're good to go.
+
+{% post_image hashed_id: '3331f6350bbb631db8a4503db9bfa2d9237aed1c', class: 'float_right', width: 500 %}
+
+
+---
+
 ## Exporting Analytics Data
 
 While we work hard on making our analytics interface powerful yet easy-to-use, 
@@ -280,7 +296,7 @@ First, head to the stats page for one of your videos (it has a link like
 On the right hand side of the bar that separates the aggregate statistics from 
 the video heatmaps, a link is shown which says `Export as CSV`.
 
-{% post_image hashed_id: '803732dcd4895f85f30062bf8589e5cea2ba0a73', class: 'center' %}
+{% post_image hashed_id: '803732dcd4895f85f30062bf8589e5cea2ba0a73', class: 'float_right', width: 500 %}
 
 Click on the link and a dialog box will appear. Get your filters right, and 
 then select the <span class="faux_button">EXPORT</span> button.
@@ -310,4 +326,13 @@ There are also a variety of options of how to filter the data.  These include:
 *  Date range for the events to retrieve
 
 **If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? [Contact us](http://wistia.com/support/contact). We'd be more than happy to help you out!**
+
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+<script>
+  wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
+    iframe.wistiaApi.bind("end", function() {
+      wistiaJQuery.fancybox.close();
+    });
+  });
+</script>
 
