@@ -28,8 +28,8 @@ Mac OS, Windows, and Linux.
 
 ## Browsers Supported
 
-Wistia will work on any browser that supports Adobe Flash and/or HTML5.
-The only requirement for viewing Flash content is Flash Player 9 or greater.
+Wistia will work on any browser that supports Adobe Flash and/or HTML5 (in the form of MP4 video with and h.264).
+The requirement for viewing Flash content is Flash Player 9 or greater, and a browser that supports Flash.
 To check which version of Flash you are running, head to their
 [download page](http://www.adobe.com/support/flash/downloads.html).
 To ensure the best play-back, we typically recommend remaining up to date with
@@ -41,7 +41,7 @@ to a Flash format as well.
 We also work with all of the major browsers and versions of Internet Explorer
 (as far back as IE7), Firefox, Safari, and Chrome.
 
-{{ "In browsers where HTML5 video is not supported, a Flash plugin will be required to play Wistia videos. We will prompt viewers to install a Flash plugin if they do not already have one installed." | note }}
+{{ "In browsers where HTML5 video in the form of MP4 video with and h.264 is not supported, a Flash plugin will be required to play Wistia videos. We will prompt viewers to install a Flash plugin if they do not already have one installed." | note }}
 
 <div class='browser_images'>
   <img src='https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_128x128.png' width="80px" />
@@ -66,9 +66,6 @@ We have found the most consistent support on all **iOS** devices, and
 Blackberry at this point supports neither HTML5 or Flash. As a result, there
 is not a consistently available way to deliver video via the web to Blackberry
 devices.
-
-Basically, if you can view videos on YouTube or any other major video site,
-you (and your viewers) should be all set to use Wistia.
 
 ## Internet Connection Speed
 
