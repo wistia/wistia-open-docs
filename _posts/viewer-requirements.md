@@ -41,7 +41,7 @@ to a Flash format as well.
 We also work with all of the major browsers and versions of Internet Explorer
 (as far back as IE7), Firefox, Safari, and Chrome.
 
-{{ "In browsers where HTML5 video in the form of MP4 video with and h.264 is not supported, a Flash plugin will be required to play Wistia videos. We will prompt viewers to install a Flash plugin if they do not already have one installed." | note }}
+{{ "In browsers where HTML5 video in the form of MP4 files encoded with h.264 are not supported, a Flash plugin will be required to play Wistia videos. We will prompt viewers to install a Flash plugin if they do not already have one installed." | note }}
 
 <div class='browser_images'>
   <img src='https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_128x128.png' width="80px" />
