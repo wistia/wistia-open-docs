@@ -80,7 +80,7 @@ Here is what the embed code should look like:
 {% endcodeblock %}
 
 To use our embed options, we will append them as a hash to the `wistiaEmbed`
-declaration. 
+declaration.
 
 For example, let's make this video autoplay on page load, and change the color
 of the player to <span style="color:#ff69b4;">hot pink</span> (#ff69b4):
@@ -187,8 +187,8 @@ text               | string  | The text for the call to action.
 The link param can be used with either text or image calls to action. If a raw
 param is given, it will be used instead of text/image/link.
 
-Our links use `target="\_blank"` to pop open a new window when you click. This 
-is so that iframe embeds don't open a new link inside the iframe! If you're 
+Our links use `target="\_blank"` to pop open a new window when you click. This
+is so that iframe embeds don't open a new link inside the iframe! If you're
 using an API embed and raw HTML, you can omit `target="\_blank"` safely.
 
 ### Call-to-Action Plugin Example
@@ -248,7 +248,7 @@ buttons            | string    | Dash-delimited list of buttons to display, e.g.
 downloadType       | string    | If the download button is available, this determines the quality of video that is downloaded. Possible values are **sd_mp4**, **hd_mp4**, and **original**. **hd_mp4** will only be used if it exists for the video. If it does not, it falls back to **sd_mp4**.
 height             | integer   | The height of the socialbar. Not required, but simplifies resizing operations. Defaults to 23. The total height of the socialbar is always this value plus 5 (for margin and padding).
 ignoreQueryParams  | boolean   | If pageUrl is not specified, this determines if we should include the query params in the pageUrl. Defaults to false.
-includeLinkback    | boolean   | When set to true, embed codes produced by the Embed button will also include a link 
+includeLinkback    | boolean   | When set to true, embed codes produced by the Embed button will also include a link
 logo               | boolean   | When true, float the badge to the right side of the socialbar.
 on                 | boolean   | Whether to show the social bar. Default is true. Can be set to false to override Customize options.
 pageTitle          | string    | The specific pageTitle to be promoted when liked or shared.
@@ -291,10 +291,3 @@ This example is a bit more involved - it specifies the `pageUrl` and
   });
 </script>
 {% endcodeblock %}
-
-
-### iOS Oddities
-
-The iPhone and iPad use a slightly different mechanism to show captions. For the iphone, captions can only be turned on when the video is already playing and it's in landscape mode. For the iPad, captions can only be turned on when the video is in fullscreen mode, though they will continue to show when not in fullscreen.
-
-
