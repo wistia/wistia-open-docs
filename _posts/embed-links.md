@@ -76,8 +76,8 @@ find all the embed links on the page and make them part of a playlist. The
 order of the playlist is the same as the order that the links appear in the
 markup.
 
-If you watch to the end of "Make French Toast", then the "Wistia Team Intro @
-30" should start playing immediately.
+If you watch to the end of "Make French Toast", then the "Wistia Team Intro"
+should start playing immediately.
 
 <div id="wistia_30q7n48g4f_2" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
