@@ -26,10 +26,10 @@ Now we're ready to upload a video.
 
 ## Upload Your Video
 
-Select *Upload Media* under the
+Select **Upload** under the
 <span class="action_menu">Project Actions</span> menu.
 
-{% post_image hashed_id: '9c8a26c0465c898b525716a9e673f042310a93d9', class: 'center'%}
+{% post_image hashed_id: 'd830cb9fdbf566a0a8d823343a677b831189de77', class: 'center'%}
 
 From the upload dialogue box, choose the file to upload from your computer.
 
@@ -70,6 +70,9 @@ URL.
 So from a project URL like `https://support.wistia.com/projects/qdybaq78y0`, you'd
 navigate to `https://support.wistia.com/projects/qdybaq78y0?backup_uploader` to
 get to the backup uploader. It's like a secret clubhouse.
+
+From there just select **Upload** from the <span class="action_menu">Project Actions</span>
+menu, and you're sitting pretty.
 
 {% post_image hashed_id: 'e047724b81ecb66924dafb596ce2d58d439c4ea9', class: 'center' %}
 

@@ -24,12 +24,15 @@ sure you [update that browser](http://browsehappy.com/) for the best experience.
 Maybe it's time to try our Backup Uploader instead. Just a heads up, this upload
  process doesn't show a progress bar.
 
-The Backup Uploader can be accessed by adding `?backup_uploader` to a Project
+The Backup Uploader can be accessed by adding `?backup_uploader` to a project
 URL.
 
 So from a project URL like `https://support.wistia.com/projects/qdybaq78y0`, you'd
 navigate to `https://support.wistia.com/projects/qdybaq78y0?backup_uploader` to
 get to the backup uploader.
+
+From there just select **Upload** from the <span class="action_menu">Project Actions</span>
+menu, and you're good to go!
 
 ## Reset Your Internet Connection
 
