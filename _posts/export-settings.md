@@ -61,14 +61,14 @@ When your viewers watch a video at 'embedding' size (640px - 960px wide) it is a
 
 _Auto-HD_ takes over when the viewer 'full screens' the video.  At the larger size, the quality difference is definitely apparent.  We do a background bandwidth test to make sure the viewer's download speed is fast enough to support the HD video smoothly, and if so, the stream automatically switches over.
 
-Currently, the highest resolution Wistia will display by default (when we detect that a person's Internet connection speed will support it well enough) is 720p HD. Viewers who want even higher quality can right-click on the video to manually select a higher resolution. If you'd like to have your videos _automatically_ play at higher quality, check out the [Video Quality]({{ '/account-setup#video_quality' | post_url }}) section in the Account tab of your settings. (And note that only the Account Owner can access that area!) 
+Currently, the highest resolution Wistia will display by default (when we detect that a person's Internet connection speed will support it well enough) is 720p HD. Viewers who want even higher quality can right-click on the video to manually select a higher resolution. If you'd like to have your videos _automatically_ play at higher quality, check out the [Video Quality]({{ '/account-setup#video_quality' | post_url }}) section in the Account tab of your settings. (And note that only the Account Owner can access that area!)
 
 {{ "<strong>Quick sidebar on mobile devices:</strong> Because of the way iPhones handle 'streaming media' (i.e. playing them all full screen), we do not show HD files on iPhones or Android devices.  iPads, on the other hand, do support HD media, so we'll be able to deliver an HD asset." | note }}
 
 ----
 ## Formats Wistia Supports
 
-Our bakery (where the encoding magic happens) accepts many common file formats (see a partial list below), but **for the most consistent performance we recommend exporting files in MP4 format**. 
+Our bakery (where the encoding magic happens) accepts many common file formats (see a partial list below), but **for the most consistent performance we recommend exporting files in MP4 format**.
 
 If a file type is not supported (or recognized), users will simply be able to download the file.
 
@@ -85,11 +85,11 @@ Images | JPG, PNG, GIF, TIFF, BMP, DCM
 ----
 ## A Note on File Sizes
 
-The standard Wistia upload function supports files up to **2 Gigabytes** in size. It is possible to upload larger files using the [Simple Uploader]({{ '/upload-video#simple_uploader' | post_url }}), but this is not recommended. Wistia transcodes all video before it can be shared, so that your viewers have the best playback experience possible. Part of the transcoding process is compressing the video using an efficient codec like FLV and MP4. As a result, the quality of your original upload matters only up to a certain point.
+The standard Wistia upload function supports files up to **8 Gigabytes** in size. Wistia transcodes all video before it can be shared, so that your viewers have the best playback experience possible. Part of the transcoding process is compressing the video using an efficient codec like FLV and MP4. As a result, the quality of your original upload matters only up to a certain point.
 
-**We recommend adhering to 1080px and 5,000 - 10,000 kbps as the max settings for upload, as it will reduce the likeliness of upload errors**. If you find yourself with a short video (under 2 hours) that is larger than 2GB, it's likely something has gone wrong or a compression step was missed.
+**We recommend adhering to 1080px and 5,000 - 10,000 kbps as the max settings for upload, as it will reduce the likeliness of upload errors**. If you find yourself with a short video (under 2 hours) that is larger than 8GB, it's likely something has gone wrong or a compression step was missed.
 
 ----
 ## Exporting Guides
 
-Looking for help exporting from software like Final Cut Pro X, Screenflow, or Camtasia? Head over to our [exporting guides]({{ '/exporting-guide' | post_url }}).
+Looking for help exporting from software like Final Cut Pro X, ScreenFlow, or Camtasia? Head over to our [exporting guides]({{ '/exporting-guide' | post_url }}).
