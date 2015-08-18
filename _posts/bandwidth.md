@@ -58,7 +58,7 @@ see your bandwidth usage over the course of the month. You'll also see when it's
 slated to reset, and if you're likely to go over.
 
 Here you can check out the last three months of bandwidth--and decide if moving
-up a tier is the right choice. More on that in [a minute]().
+up a tier is the right choice. More on that in [a minute](#conversion-chart).
 
 Not sure? Give us [a shout](http://wistia.com/support/contact)! We'll be happy to walk you through our plans.
 
@@ -68,53 +68,108 @@ Want help gauging how much bandwidth your videos will use? Check out our
 [Bandwidth Predictor Tool](http://wistia.com/pricing/bandwidth_predictor).
 
 Keep in mind, while this thing is pretty sweet (if I do say so myself), it *is*
-just a predictor tool. What you end up using could be different. [Here's a bit more]() about file sizes and the magic of encoding.
+just a predictor tool. What you end up using could be different.
 
----
+## Overage Pricing
+
+Most Wistia accounts are billed at **$0.33/GB** for overages over 200GB. High
+Volume plans are a bit different. [Read about that pricing here.](http://wistia.com/pricing/highvolume)
+
+Let's walk through a fairly standard overage bill.
+
+If you're on the $100/mo plan, and you end up using 350GB of bandwidth this
+month, here's what your bill would look like:
+  * $100 for the plan
+  * 150GB of overage at $0.33/GB = $49.50
+  * This month's bill: **$149.50**
+
+Still not sure if you're in the right spot? [Talk to us.](http://wistia.com/support/contact)
+We're happy to chat math. (Though, we *might* need to use a calculator.)
 
 ## How to Cut Down Bandwidth
 
 Constantly hitting or exceeding your bandwidth limits? That's the pits! Here's
-some tips of staving off big overage bills.
+some tips for avoiding big overage bills.
 
 ### Video Quality
 
-One of the easiest ways to help conserve bandwidth is to change your Video Quality in
+One of the easiest ways to help conserve bandwidth is to change the Video Quality in
 Account Settings. This is a universal change for all of your videos, everywhere
-they live on the internet.
+they live on the internet--in your account, on Twitter, embedded online--everywhere.
 
-To conserve bandwidth you'll want to lower the Video Quality. [Here's a quick overview about how ]
+To conserve bandwidth you'll want to lower the Video Quality. You can change
+this setting in Account Settings when you're logged in as the **Account Owner**.
+Choose "Account" from the sidebar and scroll to the bottom. The default option
+for Video Quality is set to *Auto*, but knocking it down to 360p will help to
+conserve bandwidth. This change will take effect immediately, and can always be
+undone.
+
+{% post_image hashed_id: 'ea44a976046fcb4b3f31c1c4b795cadfe076ae4a', class: 'center' %}
+
+Just remember to **Save Settings**, and you're good to go!
 
 ### What about Long Videos?
 
 When someone starts watching your video, we'll begin loading the entire video
 asset to ensure smooth playback. If the viewer, under a sufficiently fast
 internet connection, were to press pause or stop watching after only a few
-minutes, it is still possible that the entire derivative would have been loaded
-within the time that they are on the page where the video is embedded, and so
-bandwidth is consumed.
+minutes of an hour long video, it is still possible that the entire derivative
+would have been loaded within the time that they are on the page where the video
+is embedded, and so bandwidth is consumed.
 
-If you've got a lot of long videos (but some
-[low engagement]({{ '/audience-engagement-graph' | post_url }})), it'll help to
+If you've got a lot of long videos, but some
+[low engagement]({{ '/audience-engagement-graph' | post_url }}), it'll help to
 alleviate your bandwidth usage by breaking them up into smaller videos.
 
----
+From there you can use our [Embed Links]({{ '/embed-links' | post_url }}) to
+make an easy playlist of the videos in your series.
 
-## Overages
+### Quick Tips
 
----
+* Minimize your own views -- your views count toward bandwidth, so if you're
+building your site, it's best not to have your video set to autoplay right off
+the bat.
+
+* Avoid having videos set on autoplay. Once a video starts autoplaying, it will
+automatically start using bandwidth. To turn this off head into Timeline Actions
+in the [Customize panel]({{ '/customizing-your-video#timeline_actions' | post_url }}).
+
+* In the same vein, avoid having your videos set to loop upon finish. Looping
+autoplay is a major bandwidth suck.
+
+* If you're not a fan of the universal Video Quality option, you can change one
+specific embed code to always uses a lower-resolution derivative (such as the SD
+derivative). That smaller video size would also correspond to less bandwidth.
+(This is heading into technical territory, so grab a developer friend if you're
+not comfortable in this realm.) This can be done by using the "videoQuality"
+[embed option]({{'/embed-options#embed_options_list' | post_url}}).
 
 ## Where is it coming from?
 
----
+At this point, it isn't possible to gauge which video is causing a hike in
+bandwidth usage if you're seeing one. But if you have a video that's getting a
+lot of traffic (you can check that quickly in the [Viewer Stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})), that's
+probably your culprit.
 
-## How can I check my bandwidth?
+You can always see the size of the files we're delivering from your account.
+Head to any video in your account and choose **Download** from the **Video Actions**
+menu. There you'll see the size of the original file, and the size of the files
+Wistia has created for streaming.
 
----
+## Conversion Chart
 
-## Conversion chart/when to switch!
+Are you exceeding your bandwidth limit on the regular? Here's a nifty chart we
+put together to show you the breaking point when you should jump up to the next
+plan.
 
----
+Plan | GB | Overage
+-----|----|--------
+Basic|200GB |
+
+
+
+Still not sure? [Talk to us.](http://wistia.com/support/contact) We weren't all
+Calculus majors, but we can figure our way around a TI-83.
 
 Still confused? We'd love to chat with you about bandwidth, or anything to do
 with Wistia. [Contact us](http://wistia.com/support/contact) for more information.
