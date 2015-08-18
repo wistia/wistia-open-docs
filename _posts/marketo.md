@@ -69,6 +69,7 @@ Wouldn't it be cool if when a person watches at least 50% of a certain video on 
   {% post_image hashed_id: 'b13848f78c7bdffb0bb590caf6e8254efbdd927b', class: 'center' %}
 5. Now it's time to define the specific video event trigger. If you wanted to run automation when a person watches 75% of a video called "<a href="//fast.wistia.net/embed/iframe/nto1tvx7mz?popover=true" class="wistia-popover[height=360,playerColor=1789ce,width=640]">Making French Toast at Wistia</a>", you'd tell Marketo to set the trigger to _Web Page --> is --> Wistia Video: "Making French Toast at Wistia" 75% Watched_.
   {% post_image hashed_id: 'd64c0b0cfa51632198e2380c43ec6faef28f0371', class: 'center' %}
+  Don't see the event that you want to use as a trigger? That's probably because Wistia has never reported that event to Marketo before. To fix that, go onto your website and do the thing you want to use as a trigger (like watch 75% of your video, or click an Annotation Link) just like regular visitor to your website would. Then Marketo will let you use it as a trigger.
 6. Once you've picked the right event for the right video, move onto the Flow step. That's all Marketo's domain, so **[check out the Marketo documentation](https://docs.marketo.com/display/public/DOCS/Add+a+Flow+Step+to+a+Smart+Campaign)** for details.
 
 There are a bunch of other things you can automate too, like:
