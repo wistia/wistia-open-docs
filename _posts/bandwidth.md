@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Bandwidth
-description: Bandwidth is kind of like that Joni Mitchell song -- you don't know what you've got 'til it's gone. Easy to ignore until it's all used up! But we're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and how to avoid using it all up!
+description: Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save your from overages!
 category: Getting Set Up
-post_intro: <p>Bandwidth is kind of like that Joni Mitchell song -- you don't know what you've got 'til it's gone. Easy to ignore until it's all used up! But we're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and how to avoid using it all up!</p>
+post_intro: <p>Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save your from overages!</p>
 ---
 
 ## Understanding Bandwidth
@@ -16,11 +16,8 @@ But just pressing play isn't the only way to use bandwidth. A few things other
 than plays count toward your monthly bandwidth usage too--like video downloads
 and the thumbnail image.
 
-But, Wistia, you ask, what does this mean to me, really? Yeah, I understand
-bandwidth as an abstract concept (like how space has no edge), but give it
-to me straight. How do *you* use my bandwidth?
-
-Oh, dear video friend. Let's go on a magic journey together.
+But, Wistia, you ask, what does this mean to me, really? How do *you* use my
+bandwidth?
 
 ## How It All Works
 
@@ -56,10 +53,9 @@ We'll send you a heads up email if you're on track to go over your bandwidth for
 the month, but you can always check on your usage inside your account. Just make
 sure you're logged in as the **Account Owner**.
 
-Head into Account Settings, and select *Usage* from the sidebar. There
-(coincidentally) you'll see your bandwidth usage over the course of the
-month. (Get out of town!) You'll also see when it's slated to reset, and if you're
-likely to go over.
+Head into Account Settings, and select *Usage* from the sidebar. There you'll
+see your bandwidth usage over the course of the month. You'll also see when it's
+slated to reset, and if you're likely to go over.
 
 Here you can check out the last three months of bandwidth--and decide if moving
 up a tier is the right choice. More on that in [a minute]().
@@ -78,16 +74,14 @@ just a predictor tool. What you end up using could be different. [Here's a bit m
 
 ## How to Cut Down Bandwidth
 
-*Finally, the part you're all waiting for! (I know you scrolled here first.)*
-
 Constantly hitting or exceeding your bandwidth limits? That's the pits! Here's
-some tips of staving off the disaster that can be overage bills.
+some tips of staving off big overage bills.
 
 ### Video Quality
 
 One of the easiest ways to help conserve bandwidth is to change your Video Quality in
 Account Settings. This is a universal change for all of your videos, everywhere
-they live in the vastness of space--I mean the Internet.
+they live on the internet.
 
 To conserve bandwidth you'll want to lower the Video Quality. [Here's a quick overview about how ]
 
