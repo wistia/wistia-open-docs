@@ -58,9 +58,13 @@ section of the Customize panel.
 
 ## Setting Up Marketing Automation Based on Video Viewing Data
 
-Wouldn't it be cool if when a person watches at least 50% of a certain video on your website, you could automatically send them an email about that product a few days later? Or if a person watched 75% of a video, you could have a salesperson get notified to follow up?
+Wouldn't it be cool if when a person watches at least 50% of a certain video on your website, you could automatically send them an email about that product a few days later? Or if a person entered their email address into Turnstile, you could have a salesperson get notified to follow up?
 
-"Why yes, yes that would be quite cool indeed," you say? Phew! Good thing we built this integration. Here's how to do stuff like that:
+"Why yes, yes that would be quite cool indeed," you say? Phew! Good thing we built this integration.
+
+{{ "Before you can trigger automation in Marketo based on a Wistia video event on your website, that event will need to occur at least once. So before anything else, go onto your website and do the thing you want to use as a trigger in the embedded video (like watch 50% of the video, or click an Annotation Link) – just like regular visitor to your website would. Then Marketo will let you select it as a trigger." | note }}
+
+Have you read the super important note above and done the thing you'd like to use as a trigger? Alrighty then, carry on! Here's how to set the automation up:
 
 1. Head to the Marketing Activities section in your Marketo account.
 2. Create a new Smart Campaign. Choose a folder, and give the campaign a name. A description too, if you'd like.
