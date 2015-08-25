@@ -136,12 +136,15 @@ down on your own views while customizing or testing.
  automatically start using bandwidth. To turn this off head into Timeline
  Actions in the [Customize panel]({{ '/customizing-your-video#timeline_actions' | post_url }}).
 
-3. If you're not a fan of the universal [Video Quality](#video_quality) option,
+3. In the same vein, avoid having your videos set to loop upon finish. Looping
+autoplay is a major bandwidth suck.
+
+4. If you're not a fan of the universal [Video Quality](#video_quality) option,
 you can change a single embed code to always use a lower-resolution
 derivative (such as the SD derivative) to use less bandwidth. This can be done
 by using the "videoQuality" [embed option]({{ '/embed-options#embed_options_list' | post_url }}).
 
-4. Giving viewers the option to *Download* your video via the
+5. Giving viewers the option to *Download* your video via the
 [Social Bar]({{ '/customizing-your-video#social_bar' | post_url }}) also uses
 bandwidth. You can cut down on bandwidth by removing the download button
 entirely, or by changing the configuration. In the Customize panel select the
