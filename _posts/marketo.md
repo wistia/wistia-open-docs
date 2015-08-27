@@ -18,13 +18,13 @@ With the Wistia-Marketo integration you can:
 
 ## Get Set Up
 
-To get most of the Wistia-Marketo integration working, you simply need to be on the Wistia Enterprise plan and have a video embedded on your website with [Marketo's Munchkin tracking script](http://developers.marketo.com/documentation/websites/lead-tracking-munchkin-js/) enabled.
+To get the Wistia-Marketo integration working, you need to be on the Wistia Enterprise plan, have [Turnstile]({{ '/turnstile' | post_url }}) configured, and have a video embedded on your website with [Marketo's Munchkin tracking script](http://developers.marketo.com/documentation/websites/lead-tracking-munchkin-js/) enabled.
 
 Does that sound like you? Well then, data about how people are watching your videos is already flowing from Wistia into your Marketo account. Go look!
 
 If that _doesn't_ sound like you yet, and you're feeling enterprisey today <a href="//fast.wistia.net/embed/iframe/3ipzw811en?popover=true" class="wistia-popover[height=480,playerColor=7b796a,width=640]">🚀</a>, get on [the Enterprise plan](http://wistia.com/pricing).
 
-After choosing the Enterprise plan, the one thing you'll need to configure on the Wistia side is the [Turnstile]({{ '/turnstile' | post_url }}) connection to pass leads from Wistia into Marketo. Just follow these quick steps:
+After choosing the Enterprise plan, you'll need to configure Turnstile to pass leads from Wistia into Marketo. Just follow these quick steps:
 
 1. In your Wistia account, open the Account menu and click on Settings.
 2. Switch to the Email Integrations tab.
