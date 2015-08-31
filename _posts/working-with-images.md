@@ -116,21 +116,21 @@ ampersand.
 ## Using the Wistia Data API Ruby Gem
 
 When making a request against the [Data API]({{ '/data-api' | post_url }}), the
-media assets includes a still image (the thumbnail!).
+media assets includes an array of assets.
 
 {% codeblock ruby_gem.rb %}
 m = Wistia::Media.first
-m.assets.select{ |a| a.attributes["type"] == "StillImageFile" }.first
+m.assets.select{ |a| a.attributes["type"] == "OriginalFile" }.first
 => #<Wistia::Media::Asset:0x007fa67caced68 @attributes={
     "url"=>"http://embed.wistia.com/deliveries/b300126144f62ba2942ec4a4f29e949a47e16f12.bin",
-    "width"=>640, "height"=>360, "fileSize"=>48442, "contentType"=>"image/jpeg", 
-    "type"=>"StillImageFile"
+    "width"=>640, "height"=>360, "fileSize"=>48442, "contentType"=>"video/mp4", 
+    "type"=>"OriginalFile"
   }, @prefix_options={}, @persisted=false>
 url = _.url
 => "http://embed.wistia.com/deliveries/b300126144f62ba2942ec4a4f29e949a47e16f12.bin"
 {% endcodeblock %}
 
-You can then apply the same geometry strings to the thumbnail URL.
+You can then apply the same geometry strings to this URL.
 You'll also have to change that `.bin` extension to `.jpg`.
 
 {% codeblock ruby_gem.rb %}
