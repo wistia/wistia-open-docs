@@ -1,7 +1,7 @@
 ---
 title: Integrate HubSpot and Wistia
 layout: post
-description: 
+description:
   HubSpot is a suite of popular marketing tools for driving more leads and better engagment. See how Wistia works with HubSpot to give it special powers!
 category: integrations
 ---
@@ -36,7 +36,7 @@ There are three steps to getting fully integrated:
 
 ### Enable the Integration in HubSpot
 
-To enable the integration within HubSpot, log into your HubSpot account, 
+To enable the integration within HubSpot, log into your HubSpot account,
 click on your beautiful face (your profile picture) in the upper right of the screen, and go to **Integrations**.
 
 {% post_image hashed_id: '7d06e29a791a7387630c66994f78d802a63a952b', width: 300, class: 'float_left' %}
@@ -51,19 +51,19 @@ You're almost done--next you'll need to add the Integration JavaScript.
 
 ### Add the Integration JavaScript
 
-If you build and maintain your own website (without using HubSpot's COS), add 
+If you build and maintain your own website (without using HubSpot's COS), add
 this code snippet after HubSpot's analytics JavaScript:
 
 {% codeblock hubspot_integration.html %}
 <script src="//fast.wistia.com/assets/external/integrations-hubspot-v1.js" async></script>
 {% endcodeblock %}
 
-If you use HubSpot's COS or make landing pages with HubSpot, you'll want to also 
+If you use HubSpot's COS or make landing pages with HubSpot, you'll want to also
 add this snippet to the *Site Footer HTML* in your HubSpot Account.
 
 {% post_image hashed_id: 'b83e5159698404b5e57695caee83ced2b5a2de87', class: 'center' %}
 
-Open the **Content** > **Content Settings** area in your account. 
+Open the **Content** > **Content Settings** area in your account.
 
 {% post_image hashed_id: '22f0e988ac098330f63651a96c03dd821ff20073', class: 'center' %}
 
@@ -77,9 +77,9 @@ Once you've entered your [HubSpot ID](http://help.hubspot.com/articles/KCS_Artic
 
 {% wistia_embed hashed_id: cuvw05s7qb %}
 
-Jump back to your Wistia account, and head into [Account Settings]({{ '/account-setup#account_settings' | post_url }}). (Keep in mind, only the **Account Owner** can get into Account Settings.) Once you're there head to *Email Integrations* under the *Integrations* menu. Select HubSpot from the list and enter your [HubSpot ID](http://help.hubspot.com/articles/KCS_Article/Account/Where-can-I-find-my-HUB-ID).
+Jump back to your Wistia account, and head into [Account Settings]({{ '/account-setup#account_settings' | post_url }}). (Keep in mind, only the **Account Owner** can get into Account Settings.) Once you're there head to **Data Integrations** under the *Integrations* menu. Enter your [HubSpot ID](http://help.hubspot.com/articles/KCS_Article/Account/Where-can-I-find-my-HUB-ID) and click **Connect**.
 
-{% post_image hashed_id: "64dceeb28808f56e263a89d4e0650205740b9505", class: 'center' %}
+{% post_image hashed_id: "10ffed086dc13b7475fe1788eaa173397e23c93d", class: 'center' %}
 
 HubSpot will ask you to login to your account, and verify that you're cool with authorizing Wistia.
 
@@ -88,7 +88,7 @@ use the HubSpot Turnstile with your next Wistia video (look for it in [Timeline 
 
 Note that unlike many of the other Turnstile integrations, with the HubSpot
 integration you don't choose a list for the emails to be pushed to. Instead,
-we automatically create a Form for you in HubSpot for each video. You can use 
+we automatically create a Form for you in HubSpot for each video. You can use
 HubSpot's [Smart Lists](http://knowledge.hubspot.com/contacts-user-guide/how-to-create-a-smart-list) to group and organize your contacts. This is far more flexible and powerful than having to select a list for each video and forcing the contacts into that one list!
 
 For a more in-depth guide see the [Turnstile page]({{ '/turnstile' | post_url }}).
@@ -115,7 +115,7 @@ Awesome!
 
 ## Heatmaps in Contact Timeline
 
-One of the coolest things about this integration is that you'll see video 
+One of the coolest things about this integration is that you'll see video
 heatmaps in your contacts' timelines. It will look like this:
 
 {% post_image hashed_id: "dd8819f1ea04968e26e6ff87b091fda357ef9674", class: 'center' %}
@@ -123,7 +123,7 @@ heatmaps in your contacts' timelines. It will look like this:
 
 ## Segmenting Based on Viewing Behavior
 
-If you're a HubSpot Enterprise customer you have access to their powerful 
+If you're a HubSpot Enterprise customer you have access to their powerful
 events engine. Once you have this integration set up, we'll automatically send
 the following events for every Wistia video on your site:
 
@@ -133,7 +133,7 @@ the following events for every Wistia video on your site:
 
 This means that you can segment your contacts based on this viewing data.
 Here's what it looks like if I wanted to segment based on everyone who's watched
-100% of my 2011 Recap video. 
+100% of my 2011 Recap video.
 
 {% post_image hashed_id: "277c974271e1f88309b2edb57a013f5f5125f751", class: 'center' %}
 
@@ -142,7 +142,7 @@ Some cool things you can do with this:
 - Find everyone who loaded a particular video but didn't play it and send that
   video out to them in an email.
 - Nudge viewers who've only watched 25% of a video.
-- Know who your most engaged viewers are. 
+- Know who your most engaged viewers are.
 - Follow up with users to clicked on [annotation links]({{ '/customizing-your-video#annotation_link' | post_url }}) and [Calls to Action]({{ '/customizing-your-video#call_to_action' | post_url }}).
 
 ## Email Merge Tags
@@ -190,11 +190,11 @@ May your click-through rates be high and your video engagements long!
 
 ## Getting Wildly Advanced
 
-Using HubSpot's JavaScript events API and our player API, you can accomplish 
+Using HubSpot's JavaScript events API and our player API, you can accomplish
 some awe-inspiring feats of sales and marketing automation.
 
-Consider this: you sell self-driving cars. You have a video that's part of your 
-sales funnel, and you want to know if a prospect has watched key areas of that 
+Consider this: you sell self-driving cars. You have a video that's part of your
+sales funnel, and you want to know if a prospect has watched key areas of that
 video.
 
 You could set up code like this to report to HubSpot when a prospect has watched
@@ -236,7 +236,7 @@ the following sections:
 })();
 {% endcodeblock %}
 
-Ta da! Automation bliss! Segment on these events, see them in your timeline, 
+Ta da! Automation bliss! Segment on these events, see them in your timeline,
 the sky's the limit.
 
 ## Troubleshooting
@@ -245,7 +245,7 @@ Got issues? Not seeing the magic? We're here to help!
 
 ### I can't see my heatmaps!
 
-HubSpot will batch-pull data from Wistia, so heatmaps might not be piped in immediately--but they'll be there soon. 
+HubSpot will batch-pull data from Wistia, so heatmaps might not be piped in immediately--but they'll be there soon.
 
 Additionally, you'll want to make sure the Wistia icon in your contact's timeline is the vibrant, Wistia blue (it will be grey if its not turned on). This is usually turned on by default in HubSpot, but if you've deselected the option, you won't be able to see the nifty heatmaps.
 
