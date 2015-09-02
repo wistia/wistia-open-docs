@@ -34,7 +34,7 @@ In Wistia, head to *Account Settings* and select **Data Integrations** from the 
 
 {% post_image hashed_id: '92bbedd45bb361804d6a7a5d35b4ab33b3009a70', class: 'center' %}
 
-Click that "Connect" button, and you're halfway set up! Proceed to step 2. 👇
+Connect and you're halfway set up! Proceed to step 2. 👇
 
 **2. Enable the Wistia Connector in Pardot**
 

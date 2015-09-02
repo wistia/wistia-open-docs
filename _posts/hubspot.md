@@ -77,7 +77,7 @@ Once you've entered your [HubSpot ID](http://help.hubspot.com/articles/KCS_Artic
 
 {% wistia_embed hashed_id: cuvw05s7qb %}
 
-Jump back to your Wistia account, and head into [Account Settings]({{ '/account-setup#account_settings' | post_url }}). (Keep in mind, only the **Account Owner** can get into Account Settings.) Once you're there head to **Data Integrations** under the *Integrations* menu. Enter your [HubSpot ID](http://help.hubspot.com/articles/KCS_Article/Account/Where-can-I-find-my-HUB-ID) and click **Connect**.
+Jump back to your Wistia account, and head into [Account Settings]({{ '/account-setup#account_settings' | post_url }}). (Keep in mind, only the **Account Owner** can get into Account Settings.) Once you're there head to **Data Integrations** under *Integrations*. Enter your [HubSpot ID](http://help.hubspot.com/articles/KCS_Article/Account/Where-can-I-find-my-HUB-ID) and connect.
 
 {% post_image hashed_id: "10ffed086dc13b7475fe1788eaa173397e23c93d", class: 'center' %}
 

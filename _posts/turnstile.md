@@ -2,10 +2,10 @@
 title: Email Capture with Wistia Turnstile
 category: Public Sharing
 layout: post
-description: 
+description:
   Turnstile makes it easy to add email capture to any video. Build a better email
   list with Wistia Turnstile.
-post_intro: 
+post_intro:
   <p>Turnstile is a great way to identify high-quality leads with video. Connect
   your account to your favorite email provider, then add an email capture gate to
   any point.</p><p>Setting up Turnstile is a breeze, we'll show
@@ -22,7 +22,7 @@ To enable Turnstile on a video in your account, open the [Customize]({{ '/custom
 
 ## Collect First and Last Names
 
-By default, Turnstile will only ask people to enter an email address. "But Wistia!" you exclaim, "I want to ask for first and last names so I can personalize my follow up emails!" Fear not, fellow marketer. Turnstile has you covered: 
+By default, Turnstile will only ask people to enter an email address. "But Wistia!" you exclaim, "I want to ask for first and last names so I can personalize my follow up emails!" Fear not, fellow marketer. Turnstile has you covered:
 
 {% wistia_embed hashed_id: qmdaw5lke0, embedType: iframe %}
 
@@ -30,7 +30,7 @@ To enable the First Name and Last Name fields, select the "Ask for First and Las
 
 ## Set Up Your Email Provider Integration
 
-Once enabled, a video using Turnstile will automatically track the emails entered 
+Once enabled, a video using Turnstile will automatically track the emails entered
 by your viewers in [Wistia analytics]({{ '/embedded-video-analytics' | post_url}}),
 but it is most powerful when connected to your favorite email provider.
 
@@ -38,7 +38,7 @@ To set up the connection, open your [Account Settings]({{ '/account-setup#open_y
 
 {{ "In order to access the Account Settings, you will need to be logged in as the Owner of the account." | note }}
 
-{% post_image hashed_id: "cf1c0df4b45d8fdf1f7e7d63e65b4b5eda389d96", class: 'center' %}
+{% post_image hashed_id: "edcb195d8450ac3fb0663c2113cbc40e329a54fe", class: 'center' %}
 
 Select your provider from the list, and select <span
 class="faux_button">Configure</span>. For this example, we will be using Emma.
@@ -52,23 +52,23 @@ Account ID. We also try to include some pointers on where to find this info.
 
 ## Use Your Email Provider With Turnstile
 
-Once your account is set up to use an email provider with Turnstile, you can set 
+Once your account is set up to use an email provider with Turnstile, you can set
 up a Turnstile-enabled embed to collect email addresses, and pass them directly
 into a specific group in your connected email provider.
 
-Inside the [Customize screen]({{ '/customizing-your-video' | post_url }}), find the 
-*Turnstile Email Capture* options area. Then select the 
-email list (group) you want the email to be added to when viewers submit their 
+Inside the [Customize screen]({{ '/customizing-your-video' | post_url }}), find the
+*Turnstile Email Capture* options area. Then select the
+email list (group) you want the email to be added to when viewers submit their
 email. If you're integrating with HubSpot or Marketo, there's no need to select
 a list; once enabled, captured emails will go straight into your linked account!
 
-Watch your lists grow! It's a thing of beauty. :) 
+Watch your lists grow! It's a thing of beauty. :)
 
 {{ "Once a user has entered an email into the turnstile for a specific video, it will not ask them for their email again. If you never want them to have to enter an email again once they've done so once, check out our [Golden Ticket Lab](http://wistia.com/labs/turnstile-golden-ticket/)." | note }}
 
 ## How To Use Turnstile Without an Integrated Email Provider
 
-Unfortunately, we aren't able to integrate with all of the awesome email providers in the world. If that is the case for you, you can follow these simple steps to get the emails returned from Turnstile right into the lists of any provider you'd like. If you navigate to the Media that you want to gather emails from and select *Stats* from the *Video Actions* drop down, you will be brought to the Stats page for that project. 
+Unfortunately, we aren't able to integrate with all of the awesome email providers in the world. If that is the case for you, you can follow these simple steps to get the emails returned from Turnstile right into the lists of any provider you'd like. If you navigate to the Media that you want to gather emails from and select *Stats* from the *Video Actions* drop down, you will be brought to the Stats page for that project.
 
 {% post_image hashed_id: "863cb635f0fed31de15c07126bcde2ea76fb8845", class: 'center' %}
 

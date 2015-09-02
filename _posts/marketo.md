@@ -28,8 +28,8 @@ After choosing the Enterprise plan, you'll need to configure Turnstile to pass l
 
 1. In your Wistia account, open the Account menu and click on Settings.
 2. Switch to the Data Integrations tab.
-3. Enter your credentials for Marketo (SOAP Endpoint, User ID, and Encryption Key).
-4. Click that fancy "Connect" button.
+3. Enter your credentials for Marketo.
+4. Connect!
 5. Call an old friend and catch up. It's been too long, hasn't it?
 
 Congrats, you're all set up!
