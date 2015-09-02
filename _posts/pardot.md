@@ -30,9 +30,11 @@ If you have all of that, here's how to get started:
 
 **1. Add your Pardot account in Wistia**
 
-In Wistia, go to the Email Provider section of your account settings. Enter the credentials you use to login to Pardot, along with your Pardot API User Key (which you can find in [your Pardot settings](https://pi.pardot.com/account)).
+In Wistia, head to *Account Settings* and select **Data Integrations** from the side menu. Enter the credentials you use to login to Pardot, along with your Pardot API User Key (which you can find in [your Pardot settings](https://pi.pardot.com/account)).
 
-Click that blue "Connect Pardot" button, and you're halfway set up! Proceed to step 2. 👇
+{% post_image hashed_id: '92bbedd45bb361804d6a7a5d35b4ab33b3009a70', class: 'center' %}
+
+Connect and you're halfway set up! Proceed to step 2. 👇
 
 **2. Enable the Wistia Connector in Pardot**
 
