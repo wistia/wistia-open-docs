@@ -7,23 +7,22 @@ special_category_link: developers
 category: For Developers
 description: Get easy access to all the Wistia embeds on a page.
 footer: 'for_developers'
-post_intro: <p>Looking for simple, programmatic access to all the Wistia embeds on a page? Want to be notified anytime someone plays any Wistia video on your website?</p><p>The Embed Shepherd script provides a global list of all the Wistia embeds on the page, along with convenient functions to bind to all of them.</p>
+post_intro: <p>Looking for simple, programmatic access to all the Wistia embeds on a page? Want to be notified anytime someone plays any Wistia video on your website?</p><p>The Embed Shepherd provides a global list of all the Wistia embeds on the page, along with convenient functions to bind to all of them.</p>
 ---
 
 
 ## Including the Embed Shepherd
 
+The Embed Shepherd comes included with the javascript we have on _all_ Wistia embeds (though if your embeds are sort of old, this might not be the case). Here's that javascript, just for reference:
+
 {% codeblock thumbnail.html %}
-<script src="http://fast.wistia.net/static/embed_shepherd-v1.js"></script>
+<script src="//fast.wistia.net/assets/external/E-v1.js"></script>
 {% endcodeblock %}
 
-You can include that snippet anywhere on your page. Once it has run, any existing 
+If it's not included on your page/site already you can include that snippet anywhere on your page. Generally we recommend adding it to the `<head>` of your page. Once it has run, any existing 
 or future Wistia embeds will be included in the global array `window.wistiaEmbeds`.
 
-If you'd like, you can load the script asynchronously like so. Once Embed
-Shepherd loads, it will execute the `wistiaEmbedShepherdReady` function if it
-exists. Wrap whatever you need to do in this function and you can be assured
-that `window.wistiaEmbeds` is available! Check it out:
+If you'd like, you can load the script asynchronously like so. Once Embed Shepherd loads, it will execute the `wistiaEmbedShepherdReady` function if it exists. Wrap whatever you need to do in this function and you can be assured that `window.wistiaEmbeds` is available! Check it out:
 
 {% codeblock playlist_api.js %}
 <script>
@@ -31,7 +30,7 @@ that `window.wistiaEmbeds` is available! Check it out:
     console.log("The Shepherd is ready!");
   }
 </script>
-<script src="http://fast.wistia.net/static/embed_shepherd-v1.js" async></script>
+<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
 {% endcodeblock %}
 
 {{ "The Embed Shepherd automatically includes the iframe-api on the page. You do not need to include it separately to access iframe embeds or popovers." | note }}
