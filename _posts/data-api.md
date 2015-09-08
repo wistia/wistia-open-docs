@@ -75,8 +75,8 @@ with HTTP `error 503 Service Unavailable` and the Retry-After HTTP header will
 be set with a number of seconds to wait before trying again.
 
 "But Wistia!" you ask, "What _counts_ as an API request?" Excellent question,
-friend. You're only working towards that 1000 requests/minute limit when you 
-submit an HTTP request to `upload.wistia.com` or `api.wistia.com`. Simply 
+friend. You're only working towards that 1000 requests/minute limit when you
+submit an HTTP request to `upload.wistia.com` or `api.wistia.com`. Simply
 accessing a media asset (like a `.bin` file) does not count.
 
 
@@ -147,7 +147,7 @@ publicId  | If the project is public, this field contains a string representing 
 
 ### Projects: List
 
-Use the Projects#list method to request a list of Projects in your Wistia 
+Use the Projects#list method to request a list of Projects in your Wistia
 account. This request supports [paging and sorting](#organizing_for_list_methods).
 
 Projects#list requests look like this:
@@ -429,7 +429,7 @@ the project that was just deleted.
 
 Copy a project, including all media and sections.  
 
-{{ "This method does not copy the projects sharing information (i.e. users that could see the old project will not automatically be able to see the new one)." | note }} 
+{{ "This method does not copy the projects sharing information (i.e. users that could see the old project will not automatically be able to see the new one)." | note }}
 
     POST https://api.wistia.com/v1/projects/<project-hashed-id>/copy.json
 
@@ -444,13 +444,13 @@ adminEmail (optional) | The email address of the account Manager that will be th
 
 #### The Response
 
-If the project is copied successfully, the server will respond with HTTP 
+If the project is copied successfully, the server will respond with HTTP
 status **201 Created**.
 
-The HTTP `Location` header will be set to the URL where the newly created 
+The HTTP `Location` header will be set to the URL where the newly created
 project resource resides.
 
-The body of the response will contain an object representing the *new copy* of 
+The body of the response will contain an object representing the *new copy* of
 the project that was just created.
 
 #### Example Projects#Copy Request
@@ -484,7 +484,7 @@ the project that was just created.
 
 ## Project Sharings
 
-A **sharing** is an object that links either a contact or a contact group to a 
+A **sharing** is an object that links either a contact or a contact group to a
 project, including information about the contacts' permissions to that project.
 
 ### Methods
@@ -519,7 +519,7 @@ email     | If this object refers to a Contact, this field will be present, indi
 
 ### Project Sharings: List
 
-See a list of sharings on a project. 
+See a list of sharings on a project.
 This request supports [paging and sorting](#organizing_for_list_methods).
 
 <code class="full_width">
@@ -528,7 +528,7 @@ This request supports [paging and sorting](#organizing_for_list_methods).
 
 #### The Response
 
-The server responds with `HTTP status 200 OK`. The response body contains a 
+The server responds with `HTTP status 200 OK`. The response body contains a
 list of all sharings on the project.
 
 #### Example Project Sharings#list Request
@@ -581,12 +581,12 @@ See the details of a particular sharing on a project.
   GET https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings/&lt;sharing-id&gt;>.json
 </code>
 
-* `<project-id>` is the hashed ID of the project for which you would like to see sharings, 
+* `<project-id>` is the hashed ID of the project for which you would like to see sharings,
 * `<sharing-id>` is the ID of the specific sharing object that you want to see.
 
 #### The Response
 
-The server responds with `HTTP status 200 OK` and the response body contains 
+The server responds with `HTTP status 200 OK` and the response body contains
 the requested sharing on the project.
 
 
@@ -616,17 +616,17 @@ the requested sharing on the project.
 
 ### Project Sharings: Create
 
-Share a project with a user by email. Conceptually, you do this by creating a 
+Share a project with a user by email. Conceptually, you do this by creating a
 new sharing object for a project.
 
 <code class="full_width">
   POST https://api.wistia.com/v1/projects/&lt;project-id&gt;/sharings.json
 </code>
 
-This method can accept several parameters to customize the way that the sharing 
+This method can accept several parameters to customize the way that the sharing
 happens.
 
-The only required parameter is **with**, which specifies the email address of 
+The only required parameter is **with**, which specifies the email address of
 the person with whom you want to share the project.
 
 Parameter   | Description
@@ -641,11 +641,11 @@ sendEmailNotification (optional) | Set this parameter to "1" (no quotes) to send
 
 #### The Response
 
-The server responds with `HTTP status 201 Created`, and the `Location` HTTP 
+The server responds with `HTTP status 201 Created`, and the `Location` HTTP
 header is set to the API endpoint for the new sharing object.
 
 The response body contains either a link for the user to activate their account
-or a link for the user to access the project if they already have a 
+or a link for the user to access the project if they already have a
 username/password.
 
 #### Example Project Sharings#create Request
@@ -657,7 +657,7 @@ username/password.
 { "project": "http://myaccount.wistia.com/projects/13" }
 {% endcodeblock %}
 
-Here's an example of what the response body might look like if the user is not 
+Here's an example of what the response body might look like if the user is not
 yet activated:
 
 {% codeblock example_json_response.json %}
@@ -668,7 +668,7 @@ yet activated:
 
 ### Project Sharings: Update
 
-Update a sharing on a project. 
+Update a sharing on a project.
 
 #### The Request
 
@@ -715,7 +715,7 @@ Delete a sharing on a project.
 
 #### Response
 
-The server will respond with `HTTP status 200 OK`. The body of the response 
+The server will respond with `HTTP status 200 OK`. The body of the response
 will contain an object representing the sharing that was just deleted.
 
 
@@ -761,7 +761,7 @@ Field     |  Description
 id  | A unique numeric identifier for the media within the system.
 name  | The display name of the media.  
 type | A string representing what type of media this is. Values can be **Video**, **Audio**, **Image**, **PdfDocument**, **MicrosoftOfficeDocument**, **Swf**, or **UnknownType**.  
-status | [Post upload processing status](#media_status). There are four statuses: **queued**, **processing**, **ready**, and **failed**. 
+status | [Post upload processing status](#media_status). There are four statuses: **queued**, **processing**, **ready**, and **failed**.
 progress (if available) | This field is a floating point value between 0 and 1 that indicates the progress of the processing for this file. For instance, a value of 0.5 indicates we're about halfway done processing this file.  
 section | The title of the section in which the media appears. This attribute is omitted if the media is not in a section (default).
 thumbnail | An object representing the thumbnail for this media. The attributes are **URL**, **width**, and **height**.  
@@ -944,7 +944,7 @@ Get information about a specific piece of media that you have uploaded to your a
       "fileSize":23695556,
       "contentType":"video/mp4",
       "type":"OriginalFile"
-    }, 
+    },
     {
       "url":"http://embed.wistia.com/deliveries/c16c2ef4a87dc8147305637cc302f2e9f9c78977.bin",
       "width":960,
@@ -1030,7 +1030,7 @@ Delete a media from your account.
 
     DELETE https://api.wistia.com/v1/medias/<media-hashed-id>.json
 
-If the media is deleted successfully, the server will respond with HTTP status 
+If the media is deleted successfully, the server will respond with HTTP status
 **200 OK** to let you know that it worked.
 
 The body of the response will contain an object representing the piece of media
@@ -1249,7 +1249,7 @@ customizations for the video.
 
 #### Example JSON Response
 
-The embedding options are explained in the 
+The embedding options are explained in the
 [Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
 {% codeblock example_json_response.json %}
@@ -1288,13 +1288,13 @@ The Customize API lets you replace the customizations for a video.
 Make sure you replace `<media-id>` with the hashed ID of the video that you
 want to customize.
 
-The raw post data is JSON representing the customizations that should be 
-explicitly set for this video. These will replace the existing customizations 
+The raw post data is JSON representing the customizations that should be
+explicitly set for this video. These will replace the existing customizations
 for the video.
 
 #### Example JSON Request
 
-The embedding options are explained in the 
+The embedding options are explained in the
 [Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
 {% codeblock example_json_request.json %}
@@ -1333,7 +1333,7 @@ The Customize API allows you to do partial updates on a video's customizations.
 Make sure you replace `<media-id>` with the hashed ID of the video you want to
 customize.
 
-The raw post data should be JSON representing the customizations that should be 
+The raw post data should be JSON representing the customizations that should be
 explicitly set for this video.
 
 If a value is `null`, then that key will be deleted from the saved
@@ -1341,7 +1341,7 @@ customizations. If it is not `null`, that value will be set.
 
 #### Example JSON Request
 
-The embedding options are explained in the 
+The embedding options are explained in the
 [Embedding Options Documentation]({{ '/embed-options' | post_url }}).
 
 {% codeblock example_json_request.json %}
@@ -1358,10 +1358,10 @@ Form Data:
 
 #### The Response
 
-If the media update is successful, the server will respond with a status of 
+If the media update is successful, the server will respond with a status of
 **200 OK**, along with the saved customizations.
 
-Note that the saved customizations will all be strings. These are dynamically 
+Note that the saved customizations will all be strings. These are dynamically
 casted to the proper type on the client side.
 
 #### Example JSON Response
@@ -1384,7 +1384,7 @@ The Customize API allows you to delete a video's customizations.
 Make sure you replace `<media-id>` with the hashed ID of the media that you
 want to delete.
 
-This method will wipe out all explicit customizations for a video, and it will 
+This method will wipe out all explicit customizations for a video, and it will
 act like it has never been customized.
 
 #### Example JSON Request
@@ -1397,7 +1397,7 @@ Content-Type: application/json
 
 #### The Response
 
-If the media update is successful, the server will respond with a status of 
+If the media update is successful, the server will respond with a status of
 200 OK.
 
 
@@ -1415,8 +1415,6 @@ The Captions API allows you to manage the captions for a video.
 
 **Notes:**
 
-* You can only have 1 set of captions for each video. Support for
-multiple captions will be added later.
 * Captions API only supports JSON.
 * **<language-code>** denotes which language to get captions for and it should
 conform to [ISO-639-2](https://en.wikipedia.org/wiki/ISO_639-2).
@@ -1611,7 +1609,7 @@ Asset URLs in Wistia take this form:
 
     http://embed.wistia.com/deliveries/43500c9644e43068d8995dcb5ddea82440419eaf.bin
 
-The `.bin` extension at the URL is for binary. 
+The `.bin` extension at the URL is for binary.
 Certain ornery clients (iTunes, ahem) won't accept URLs that don't end in an
 extension that's familiar to them.  In this case, you can drop the `.bin`, add
 a slash, and append whatever filename and extension you like -– you'll still
@@ -1628,8 +1626,8 @@ Using the Data API or [oEmbed endpoint]({{ '/oembed' | post_url }}), you can obt
 
 ### Extracting Thumbnails
 
-You can also extract thumbnails from a video by modify the URL of that video 
-asset. Pretty sneaky, right? Here's how to do it: 
+You can also extract thumbnails from a video by modify the URL of that video
+asset. Pretty sneaky, right? Here's how to do it:
 [Extracting Thumbnails]({{ '/extracting-thumbnails' | post_url }})
 
 ### SSL
