@@ -138,6 +138,11 @@ the example below, the hashed ID is `z1fxq584qr`.
 
 <img src="https://embed-ssl.wistia.com/deliveries/49a921c8ed5e0978f80aca37a59836f91871cca7.jpg?image_resize=367" style="width:367px;" />
 
+Here's an example:
+
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_cox77memhr" style="width:640px;height:360px;">&nbsp;</div>
+
 Beware: Testing this while the Customize Panel is open confuses things quite a
 bit. To make sure it works, you'll need to save your customization then reload
 the page.
