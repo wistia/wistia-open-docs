@@ -404,7 +404,7 @@ video.ready(function() {
 
 Removes the video from the page cleanly. This will do garbage collection,
 cancel asynchronous operations, and stop the video from streaming, none of
-which are unreliable if the video is simply removed from the DOM, e.g.
+which are reliable if the video is simply removed from the DOM, e.g.
 `$(".wistia_embed").empty().remove()`.
 
 {% codeblock wistia_js.js %}
