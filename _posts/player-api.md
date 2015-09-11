@@ -332,7 +332,7 @@ $("#custom_pause_button").click(function() {
 
 Returns the percent of the video that has been watched as a decimal between 0
 and 1. This is equivalent to computing `video.secondsWatched() /
-video.duration()`.
+Math.floor(video.duration())`.
 
 {% codeblock wistia_js.js %}
 $("#next_page").click(function() {
