@@ -354,8 +354,8 @@ to "playing".
 NOTE: On iOS and other mobile devices, videos cannot be issued the "play"
 command outside the context of a user-driven or video event. For example,
 "click" and "touch" events are user-driven, and video events include "pause"
-and "end" (you can bind to these using `video.bind(eventType, callbackFn)
-described above`.  Because of this restriction, you should avoid calling
+and "end" (you can bind to these using `video.bind(eventType, callbackFn)`
+described above.  Because of this restriction, you should avoid calling
 `play()` within a `setTimeout` callback or other asynchronous functions like
 XHR or javascript promises.
 
