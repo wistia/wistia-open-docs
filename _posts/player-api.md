@@ -336,7 +336,7 @@ Math.floor(video.duration())`.
 
 {% codeblock wistia_js.js %}
 $("#next_page").click(function() {
-  if (video.percentWatched() > 0.9) {
+  if (video.percentWatched() > 0.9 && video.percentWatched() < 0.99) {
     if (confirm("But you're so closed to finishing the video -- there's a prize at the end! Move on anyway?")) {
       goToNextPage();
     }
