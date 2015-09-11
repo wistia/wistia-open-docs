@@ -429,9 +429,9 @@ overridden in the `options` object. This method can be used in conjunction with
 `addToPlaylist(hashedId, [options])` to create custom playlist implementations.
 
 In addition to the normal [embed options]({{ '/embed-options' | post_url }}),
-you can define the `transition` option, which defines how to visually
-transition to the new video. Available values are "slide", "fade", "crossfade",
-and "none". By default, "fade" is used.
+you can set the `transition` option, which defines how to visually transition
+to the new video. Available values are "slide", "fade", "crossfade", and
+"none". By default, "fade" is used.
 
 {% codeblock wistia_js.js %}
 $("#video_abcde12345").click(function() {
