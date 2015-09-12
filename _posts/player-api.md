@@ -242,6 +242,10 @@ video.hasData(function() {
 Returns the hashed ID associated with this video. The hashed ID is an
 alphanumeric string that uniquely identifies your video in Wistia.
 
+{% codeblock wistia_js.js %}
+recordPlayedVideo(video.hashedId(), video.name());
+{% endcodeblock %}
+
 ### height()
 
 Returns the current height of the video container.
