@@ -364,8 +364,8 @@ on mobile. This is because the iframe API makes use of javascript's
 `postMessage` API, which is by its nature asynchronous.
 
 Please refer to
-[https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html#//apple_ref/doc/uid/TP40009523-CH5-SW4](Apple's
-Documentation) for the reasons behind this behavior.
+[Apple's Documentation](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html#//apple_ref/doc/uid/TP40009523-CH5-SW4)
+for the reasons behind this behavior.
 
 ### ready()
 
