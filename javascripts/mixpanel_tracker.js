@@ -12,7 +12,7 @@ MixPanelTracker.registerPageViewEvent = function() {
     var eventName = 'viewed ' + pageLocation;
     eventData[eventName] = new Date().toJSON();
     mixpanel.people.set(eventData);
-    mixpanel.track('page viewed');
+    mixpanel.track('page viewed', {page: pageLocation});
   }
 };
 
