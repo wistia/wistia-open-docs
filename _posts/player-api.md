@@ -863,21 +863,22 @@ the viewer presses 'play'. This utilizes the `bind on play` functionality built
 into the API.
 
 {% codeblock wistia_js.js %}
-<div id="wistia_29b0fbf547" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_29b0fbf547" style="width:640px;height:360px;">&nbsp;</div>
 <script>
-wistiaEmbed = Wistia.embed("29b0fbf547", {
-  version: "v1",
-  videoWidth: 640,
-  videoHeight: 360,
-  playerColor: "688AAD"
-});
-// insert the 'bind on play' function
-wistiaEmbed.bind('play', function() {
-  // use the .time() method to jump ahead 10 seconds
-  wistiaEmbed.time(10);
-  return this.unbind;
-});
+window._wq = window._wq || [];
+
+// target our video by the first 3 characters of the hashed ID
+_wq.push({ 29b: function(video) {
+
+  // on play, seek the video to 10 seconds, then unbind so it
+  // only happens once.
+  video.bind('play', function() {
+    video.time(10);
+    return video.unbind;
+  });
+
+}});
 </script>
 {% endcodeblock %}
 
@@ -885,12 +886,14 @@ wistiaEmbed.bind('play', function() {
 
 ### Trigger an event at a specific time
 
-In this example, let's assume that we want to fire a JavaScript function when
+In this example, let's assume that we want to run some javascript when
 the viewer gets 60 seconds into the video. In order to accomplish this, we only
-need the bind method from the API.  The JavaScript code can be seen below:
+need the bind method from the API.
 
 {% codeblock wistia_js.js %}
-<script type="text/JavaScript">
+<script>
+window._wq = window._wq || [];
+
 wistiaEmbed.bind("secondchange", function (s) {
   if(s === 60) {
     // Insert code to be executed here
@@ -914,32 +917,23 @@ Don't like the barage of sound that comes from three different videos playing in
 page? Sounds like you might need our trusty `pauseAllOthers` function.
 
 {% codeblock wistia_js.js %}
-<div id="wistia_9kksns1ede" class="wistia_embed" style="width:480px;height:270px;">&nbsp;</div>
-<div id="wistia_oh34zbesuh" class="wistia_embed" style="width:480px;height:270px;">&nbsp;</div>
-<div id="wistia_2jvt3wqkye" class="wistia_embed" style="width:480px;height:270px;">&nbsp;</div>
-
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-
-<script>
-wistiaEmbedA = Wistia.embed("9kksns1ede");
-wistiaEmbedB = Wistia.embed("oh34zbesuh");
-wistiaEmbedC = Wistia.embed("2jvt3wqkye");
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_9kksns1ede" style="width:480px;height:270px;">&nbsp;</div>
+<div class="wistia_embed wistia_async_oh34zbesuh" style="width:480px;height:270px;">&nbsp;</div>
+<div class="wistia_embed wistia_async_2jvt3wqkye" style="width:480px;height:270px;">&nbsp;</div>
 
 <script>
-// grabs all other embeds on the page and pauses them
-var i;
-function pauseAllOthers(thisId) {
-  for (i = 0; i < wistiaEmbeds.length; i++) {
-    if (wistiaEmbeds[i].hashedId() != thisId) {
-      wistiaEmbeds[i].pause();
-    }
-  }
-}
-// binds pauseAllOthers() to the play() event for every embed
-wistiaEmbeds.onFind(function(video) {
-  video.bind('play', function() {
-    pauseAllOthers(this.hashedId());
+window._wq = window._wq || [];
+_wq.push(function(W) {
+  W.api(function(video) {
+    video.bind('play', function() {
+      var allVideos = Wistia.api.all();
+      for (var i = 0; i < allVideos.length; i++) {
+        if (allVideos[i].hashedId() !== video.hashedId()) {
+          allVideos[i].pause();
+        }
+      }
+    });
   });
 });
 </script>
