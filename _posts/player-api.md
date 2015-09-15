@@ -39,7 +39,7 @@ examples in these docs; these are all player API handles. Since Wistia embeds
 are initialized asynchronously, we recommend the following patterns to acquire
 player API handles for your videos.
 
-### window._wq to get a video handle
+### Use window._wq to get a video handle
 
 The first and easiest way is to push a function onto the initialization queue.
 The handle will be given as an argument of the callback function.
@@ -62,14 +62,15 @@ _wq.push({ abc: function(video) {
 Here's what's happening in that `<script>` block:
 
 1. We make sure `window._wq` is defined as an array.
-2. We push a matcher ("abc") and a callback function onto the queue.
+2. We push a matcher ("abc") associated with a callback function onto the
+   queue.
 3. E-v1.js loads and the video data is fetched in the background.
 4. The callback function runs when the video has data.
 
-Note that you can push functions onto `window._wq` at any time--including after
-`E-v1.js` has loaded--and expect it to be quickly executed.
+Note that you can push functions onto `window._wq` at any time&mdash;including after
+`E-v1.js` has loaded&mdash;and expect it to be quickly executed.
 
-### window._wq to get a handle to window.Wistia
+### Use window._wq to get a window.Wistia handle
 
 Alternately, if you want to get a handle to the `window.Wistia` object when it
 is available, you can use this syntax:
@@ -80,32 +81,32 @@ is available, you can use this syntax:
 <script>
 window._wq = window._wq || [];
 _wq.push(function(W) {
-  console.log(W, " is an alias for ", window.Wistia);
+  console.log(W, " is a reference to ", window.Wistia, ", which is defined" +
+    " when E-v1.js first loads.");
   W.api(function(video) {
-    console.log("Run this function on each video as it is initialized. Right now I'm running on", video);
+    console.log("Run this function on each video as it is initialized." +
+      " Right now I'm running on", video);
   });
 });
 </script>
 {% endcodeblock %}
 
-Note that you can push functions onto `window._wq` at any time--including after
-`E-v1.js` has loaded--and expect it to be quickly executed.
+Note that you can push functions onto `window._wq` at any time&mdash;including after
+`E-v1.js` has loaded&mdash;and expect it to be quickly executed.
 
 ### Wistia.api(matcher)
 
 If you're quite sure your video code will be running after the video has
 already loaded, you can use `Wistia.api(matcher)` to get a handle
-synchronously.
-
-If no match is found, `Wistia.api(matcher)` will return null.
+synchronously. If no match is found, `Wistia.api(matcher)` will return null.
 
 {% codeblock wistia_js.js %}
 var video = Wistia.api("abc");
 console.log("I got a handle to the video!", video);
 {% endcodeblock %}
 
-The `matcher` argument is defined as a container ID or the hashed ID of the
-video. Here's an example of an embed code with well-defined container ID:
+The `matcher` argument is looks at the container ID or the hashed ID of the
+video. Here's an example of an embed code with well defined container ID:
 
 {% codeblock wistia_html.html %}
 <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -134,16 +135,16 @@ _wq.push(function(W) {
 });
 {% endcodeblock %}
 
-If the same video appears several times on the page `Wistia.api("hashedid")`
-will only return the first instance. If you need a handle for both, you'll need
-to assign container IDs and reference those.
+If the same video appears several times on the page, `Wistia.api("hashedid")`
+will only return the first instance. If you need a handle for each instance,
+you'll need to assign unique container IDs and reference those.
 
-If the first 3 letters of the hashed ID are used, there is only a 1 in 5,800
-chance that you will have a collision with each other video on the page. To be
-safe, if you have many videos on a page, you may want to be more verbose. For
-example, increasing to 4 characters decreases the chance of collision to 1 in
-240,000. But short access is convenient and can be used on most pages where the
-number of videos is small.
+If the first 3 letters of the hashed ID are used, there is a 1 in 5,800 chance
+that you will have a collision with another video on the page. To be safe, if
+you have many videos on a page, you may want to be more verbose. For example,
+increasing your matcher to 4 characters decreases the chance of collision to 1
+in 240,000. But short access is convenient and can be used on most pages where
+the number of videos is small.
 
 ## Methods
 
