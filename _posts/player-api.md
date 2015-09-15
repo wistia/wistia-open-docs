@@ -190,7 +190,7 @@ associated, it will return null.
 An email can be associated with a viewing session by:
 
 - calling `video.email('the@email.com')`
-- setting the `email` embed options
+- setting the `email` embed option
 - entering their email via Turnstile
 - adding `wemail=the%40email.com` to the URL of the page.
 
@@ -265,7 +265,7 @@ recordPlayedVideo(video.hashedId(), video.name());
 
 ### height()
 
-Returns the current height of the video container.
+Returns the current height of the video container in pixels.
 
 {% codeblock wistia_js.js %}
 // e.g. set the height of <div id="next_to_video"> to match the video.
@@ -274,8 +274,8 @@ $("#next_to_video").height(video.height());
 
 ### height(val, [options])
 
-Sets the height of the video container to `val`. It is expected that `val` is
-an integer. Decimal or string values will be truncated.
+Sets the height of the video container to `val` in pixels. It is expected that
+`val` is an integer. Decimal or string values will be truncated.
 
 If `constrain: true` is passed as an option, then the width of the video will
 also be updated to maintain the correct aspect ratio.
@@ -416,8 +416,8 @@ $("#video_abcde12345").click(function() {
 });
 {% endcodeblock %}
 
-Before using this, you might want to consider if
-[embed and playlist links]({{ '/embed-links' | post_url }}) cover your use
+Before using this, you might want to see if
+[embed and playlist links]({{ '/embed-links' | post_url }}) covers your use
 case.
 
 ### secondsWatched()
@@ -500,11 +500,11 @@ decimal integer specified in seconds. This method will maintain the state of
 the video: if the video was playing, it will continue playing after seek. If it
 was not playing, the video will be paused.
 
-NOTE: On iOS, when seeking from the "beforeplay" state, `time(val)` is subject
-to the same restrictions as `video.play()`. However, there is a bit of nuance.
-If you call `video.time(30)` before play, the video will not play per the
-restrictions. But once the viewer clicks the video to play it, it will begin
-playing 30 seconds in.
+NOTE: On iOS, when seeking from the "beforeplay" state, `video.time(val)` is
+subject to the same restrictions as `video.play()`. However, there is a bit of
+nuance.  If you call `video.time(30)` before play, the video will not play per
+the restrictions. But once the viewer clicks the video to play it, it will
+begin playing 30 seconds in.
 
 ### unbind(eventType, callbackFn)
 
@@ -534,8 +534,8 @@ video.bind("timechange", function(t) {
 
 ### videoHeight()
 
-Returns the height of the video itself, without anything extra. For example, if
-the socialbar is enabled and `video.height()` returns 388, then
+Returns the height of the video itself in pixels, without anything extra. For
+example, if the socialbar is enabled and `video.height()` returns 388, then
 `video.videoHeight()` will return 360 because the height of the Social Bar is
 28px.
 
@@ -545,8 +545,8 @@ $("#video_matcher").height(video.videoHeight());
 
 ### videoHeight(val, [options])
 
-Sets the height of the video to `val`. It is expected that `val` is an integer.
-Decimal or string values will be truncated.
+Sets the height of the video to `val` in pixels. It is expected that `val` is
+an integer.  Decimal or string values will be truncated.
 
 If `constrain: true` is passed as an option, then the width of the video will
 also be updated to maintain the correct aspect ratio.
@@ -558,10 +558,10 @@ video.videoHeight(400, { constrain: true });
 
 ### videoWidth()
 
-Returns the width of the video itself, without anything extra. For example, if
-the Presentation Sync lab is enabled and `video.width()` returns 1166, then
-`video.videoWidth()` will return 640 because the width of the presentation is
-526px.
+Returns the width of the video itself in pixels, without anything extra. For
+example, if the Presentation Sync lab is enabled and `video.width()` returns
+1166, then `video.videoWidth()` will return 640 because the width of the
+presentation is 526px.
 
 {% codeblock wistia_js.js %}
 $("#video_matcher").width(video.videoWidth());
@@ -569,10 +569,10 @@ $("#video_matcher").width(video.videoWidth());
 
 ### videoWidth(val, [options])
 
-Sets the width of the video to `val`. It is expected that `val` is an integer.
-Decimal or string values will be truncated.
+Sets the width of the video to `val` in pixels. It is expected that `val` is an
+integer.  Decimal or string values will be truncated.
 
-If `constrain: true` is passed as an option, then the width of the video will
+If `constrain: true` is passed as an option, then the height of the video will
 also be updated to maintain the correct aspect ratio.
 
 {% codeblock wistia_js.js %}
@@ -602,7 +602,7 @@ $("#custom_volume_slider").on("change", function() {
 
 ### width()
 
-Returns the current width of the video container.
+Returns the current width of the video container in pixels.
 
 {% codeblock wistia_js.js %}
 // e.g. set the width of <div id="next_to_video"> to match the video.
@@ -611,8 +611,8 @@ $("#next_to_video").width(video.width());
 
 ### width(val)
 
-Sets the width of the video container to `val`. It is expected that `val` is
-an integer. Decimal or string values will be truncated.
+Sets the width of the video container to `val` in pixels. It is expected that
+`val` is an integer. Decimal or string values will be truncated.
 
 If `constrain: true` is passed as an option, then the width of the video will
 also be updated to maintain the correct aspect ratio.
@@ -1098,7 +1098,7 @@ height="360"></iframe>
 {% endcodeblock %}
 
 
-## Embedding Options
+## Embed Options
 
 If you just want to set some different options for your embed code, check out
 what's available in our
