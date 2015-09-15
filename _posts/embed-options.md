@@ -35,34 +35,149 @@ attribute will be used).
 These options are for use with the [Customize API](http://wistia.com/doc/data-api#customizations) and
 [Construct an Embed Code]({{ '/construct-an-embed-code' | post_url }}) guide.
 
-Option Name           | Type    | Description
------------           | ----    | -----------
-autoPlay              | boolean | flash/html5 only. Doesn't work on mobile. When true, the video plays as soon as it's ready.
-canonicalTitle        | string  | The title of the page, used for social features.
-canonicalUrl          | string  | The url of the page, used for social features.
-chromeless            | boolean | flash only. When true, player is created without controls.
-container             | string  | The element that should container the embed. Defaults to wistia_{hashed_id}
-controlsVisibleOnLoad | boolean | When true, controls are visible before you click play.
-doNotTrack            | boolean | When true, embed will not track views.
-endVideoBehavior      | string  | flash only. Behavior when the video ends: default/reset/loop.
-fullscreenButton      | boolean | Show fullscreen button. Default is true.
-pageUrl               | string  | The page that the embed thinks it's embedded on. Defaults to the current page.
-playerPreference      | string  | Accepts: 'flash', 'html5', or 'auto'. This specifies the preferred underlying video embed mechanism. If your specified type is not supported by a client it will seamlessly fallback to the other types. Defaults to 'auto'.
-playButton            | boolean | flash/external only. When true, display play button over video poster.
-playbar               | boolean | Show playbar. Default is true.
-playerColor           | string  | Set custom color on play button/controls. HTML5 player has access to custom play button color only.
-smallPlayButton       | boolean | Show small playbutton in the bottom left. Default is true.
-stillUrl              | string  | The still (thumbnail) image that should appear before the video is played.
-stillSnap             | boolean | For thumbnails that are different aspect ratio than the video, set to *false*. Default is *true*.
-time                  | float   | Set a starting time for the video on load. If you'd like the video to also play immediately, use the autoPlay parameter.
-trackEmail            | string  | flash/html5 only. The email address to associate with the viewing session.
-videoFoam             | boolean/object | The embed will conform to the width of the parent element, resizing to maintain the correct aspect ratio. See the [video-foam docs]({{ '/video-foam' | post_url }}) for more options.
-videoQuality          | string  | Specify the starting video quality. options: **sd-only**, **md**, **hd-only**, **auto** (default)
-videoWidth            | integer | The original width of the video.
-videoHeight           | integer | The original height of the video.
-volume                | float   | Set a starting volume for the video on load.
-volumeControl         | boolean | Show volume control. Default is true.
-wmode                 | string  | flash only. The flash window mode of the embed. window/direct/opaque/transparent/gpu.
+<div style="display:none" class="navigable_start"></div>
+
+### autoPlay
+
+If set to true, the video will play as soon as it's ready.
+
+NOTE: `autoPlay` will not work on iOS and other mobile devices due to
+restrictions on bandwidth on cellular networks. You can find more information
+on these restrictions in the
+[Player API Documentation]({{ '/player-api#play' | post_url }}).
+
+### controlsVisibleOnLoad
+
+If set to true, controls like the big play button, playbar, volume, etc. will
+be visible as soon as the video is embedded. Default is true.
+
+On mobile devices, this option has no effect (beyond hiding/showing the big
+play button) because the player will be using native controls.
+
+### doNotTrack
+
+By default, data for each viewing session is tracked and reported back to the
+Wistia servers for display in heatmaps and aggregation graphs. If you do not
+want to track viewing sessions, set `doNotTrack` to true.
+
+### endVideoBehavior
+
+This option determines what happens when the video ends.
+
+Possible values are:
+
+- "default": The video stays on the last frame.
+- "reset": The video shows the thumbnail and controls if they are set to be
+  visible on load.
+- "loop": The video plays again from the beginning.
+
+### fullscreenButton
+
+If set to true, the fullscreen button will be available as a video control.
+
+NOTE: iframe embeds must have "allowfullscreen" attributes for this option to
+be meaningful. If "allowfullscreen" attributes are missing, then the fullscreen
+button will not appear.
+
+NOTE: On mobile devices where we use native controls, this option has no
+effect.
+
+### playerPreference
+
+Possible values are "flash", "html5", and "auto". Default is "auto", which will
+use information about the video, device, and browser to determine the best
+option.
+
+For all options, if the desired preference cannot be used, the logic will
+default to "auto".
+
+### playButton
+
+If set to true, the big play button control will appear in the center of the
+video before play.
+
+### playbar
+
+If set to true, the playbar--which includes the playhead, current time, and
+scrubbing functionality--will be available. If set to false, it is hidden.
+
+NOTE: On mobile devices where we use native controls, this option has no
+effect.
+
+### playerColor
+
+Changes the base color of the player. Expects a hexadecimal rgb string like
+"ff0000" (red), "000000" (black), "ffffff" (white), or "0000ff" (blue).
+
+### playlistLoop
+
+When set to true and this video has a playlist, it will embed the first video
+once the last video has finished.
+
+### preload
+
+For html5 players, sets the video's preload property. Possible values are
+"metadata", "auto", and "none", true, and false. The values true and false are
+synonyms for "auto" and "none", respectively.
+
+### smallPlayButton
+
+If set to true, the small play button control will be available.
+
+NOTE: On mobile devices where we use native controls, this option has no
+effect.
+
+### stillUrl
+
+Overrides the image that appears before the video plays. Expects an absolute
+URL to an image. For best results, the image should match the exact aspect
+ratio of the video.
+
+### time
+
+Set the time at which the video should start. Expects an integer value in
+seconds or string values like "5m45s". This is equivalent to running
+`video.time(t)` immediately after initialization.
+
+### email
+
+Associate an email with this video's viewing session. This is equivalent to
+running `video.email(email)` immediately after initialization.
+
+### videoFoam
+
+When set to true, the video will monitor the width of its parent element. When
+that width changes, the video will match that width and modify its height to
+maintain the correct aspect ratio.
+
+### videoQuality
+
+Changes the default playback quality on load. Accepted values are:
+
+- "sd-only": Only play back the 640 width video asset.
+- "md": Default to the 960 width video asset when not in fullscreen.
+- "hd-only": Only play back the 1280 width video asset.
+- "auto": Determines the best asset to use based on heuristics and available
+  bandwidth.
+
+### volume
+
+Set the volume of the video. Expects an integer value between 0 and 1. This is
+equivalent to running `video.volume(v)` immediately after initialization.
+
+### volumeControl
+
+When set to true, a volume control is available over the video.
+
+NOTE: On mobile devices where we use native controls, this option has no
+effect.
+
+### wmode
+
+When set to "transparent", the black background of videos will be removed. When
+flash is used, it also sets the "wmode" flash param.
+
+<div style="display:none" class="navigable_end"></div>
 
 
 ## Using Embed Options
