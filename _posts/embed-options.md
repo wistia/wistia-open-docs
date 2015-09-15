@@ -32,7 +32,8 @@ attribute will be used).
 
 ## Embed Options List
 
-These options are for use with the [Customize API](http://wistia.com/doc/data-api#customizations) and
+These options are for use with the
+[Customize API](http://wistia.com/doc/data-api#customizations) and
 [Construct an Embed Code]({{ '/construct-an-embed-code' | post_url }}) guide.
 
 <div style="display:none" class="navigable_start"></div>
