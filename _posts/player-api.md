@@ -39,7 +39,7 @@ examples in these docs; these are all player API handles. Since Wistia embeds
 are initialized asynchronously, we recommend the following patterns to acquire
 player API handles for your videos.
 
-### window._wq
+### window._wq to get a video handle
 
 The first and easiest way is to push a function onto the initialization queue.
 The handle will be given as an argument of the callback function.
@@ -65,6 +65,31 @@ Here's what's happening in that `<script>` block:
 2. We push a matcher ("abc") and a callback function onto the queue.
 3. E-v1.js loads and the video data is fetched in the background.
 4. The callback function runs when the video has data.
+
+Note that you can push functions onto `window._wq` at any time--including after
+`E-v1.js` has loaded--and expect it to be quickly executed.
+
+### window._wq to get a handle to window.Wistia
+
+Alternately, if you want to get a handle to the `window.Wistia` object when it
+is available, you can use this syntax:
+
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_abcde12345" style="width:640px;height:360px;"></div>
+<script>
+window._wq = window._wq || [];
+_wq.push(function(W) {
+  console.log(W, " is an alias for ", window.Wistia);
+  W.api(function(video) {
+    console.log("Run this function on each video as it is initialized. Right now I'm running on", video);
+  });
+});
+</script>
+{% endcodeblock %}
+
+Note that you can push functions onto `window._wq` at any time--including after
+`E-v1.js` has loaded--and expect it to be quickly executed.
 
 ### Wistia.api(matcher)
 
