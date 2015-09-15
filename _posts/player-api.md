@@ -154,19 +154,6 @@ if (video.aspect() < 1) {
 }
 {% endcodeblock %}
 
-### betweenTimes(startTime, endTime, callbackFn)
-
-Run a callback function exactly once when the viewer is between the given times. This can run multiple times if the viewer leaves the time interval and re-enters it (either by seeking or by playing through from before).
-
-{% codeblock wistia_js.js %}
-video.betweenTimes(30, 45, function() {
-  console.log(
-    "Welcome to some time between 30 and 45 seconds! That's " + video.time() +
-    " seconds, to be more precise."
-  );
-});
-{% endcodeblock %}
-
 ### bind(eventType, callbackFn)
 
 Runs a callback function when a specific event is triggered. Refer to the
@@ -305,50 +292,6 @@ null until `hasData()` is true.
 
 {% codeblock wistia_js.js %}
 console.log("Thank you for watching " + video.name() + "!");
-{% endcodeblock %}
-
-### onCrossTime(time, callbackFn)
-
-Runs the callback function when the time of the video moves from _before_ `time`
-to _after_ `time`. It is expected that `time` is a decimal value specified in
-seconds.
-
-If the callback function has already fired and the viewer seeks _before_
-`time`, and allows the video to play until _after_ `time` again, the callback
-WILL fire again. If you only want this to fire once, consider using a boolean
-r `unbindOnCrossTime`.
-
-This method is meant to be used with "gates" or CTAs. For example, perhaps you
-have a call to action that should appear after the 30 second mark in your
-video. Code to show that might look like this:
-
-{% codeblock wistia_js.js %}
-video.onCrossTime(30, function() {
-  showMyCustomCTA();
-});
-{% endcodeblock %}
-
-To only show it once via boolean:
-
-{% codeblock wistia_js.js %}
-var showedCTA = false;
-video.onCrossTime(30, function() {
-  if (showedCTA) {
-    return;
-  }
-  showedCTA = true;
-  showMyCustomCTA();
-});
-{% endcodeblock %}
-
-To only show it once by unbinding:
-
-{% codeblock wistia_js.js %}
-var oneTimeCtaFunction = function() {
-  showMyCustomCTA();
-  video.unbindOnCrossTime(30, oneTimeCtaFunction);
-};
-video.onCrossTime(30, oneTimeCtaFunction);
 {% endcodeblock %}
 
 ### pause()
@@ -589,31 +532,6 @@ video.bind("timechange", function(t) {
 });
 {% endcodeblock %}
 
-### unbindBetweenTimes(startTime, endTime, callbackFn)
-
-Unbinds a callback that was setup with `betweenTimes(startTime, endTime,
-callbackFn)`.
-
-{% codeblock wistia_js.js %}
-var welcomeTo30To45 = function() {
-  console.log("Welcome to some time between 30 and 45 seconds! " + video.time() + " to be more precise.");
-  video.unbindBetweenTimes(30, 45, welcomeTo30To45);
-}
-video.betweenTimes(30, 45, welcomeTo30To45);
-{% endcodeblock %}
-
-### unbindOnCrossTime(time, callbackFn)
-
-Unbinds a callback that was setup with `onCrossTime(time, callbackFn)`.
-
-{% codeblock wistia_js.js %}
-var oneTimeCtaFunction = function() {
-  showMyCustomCTA();
-  video.unbindOnCrossTime(30, oneTimeCtaFunction);
-};
-video.onCrossTime(30, oneTimeCtaFunction);
-{% endcodeblock %}
-
 ### videoHeight()
 
 Returns the height of the video itself, without anything extra. For example, if
@@ -706,21 +624,102 @@ video.width(700, { constrain: true });
 
 <div style="display:none;" class="navigable_end"></div>
 
-## JavaScript Player API Events
+## Events
 
 Use these events when working with the `bind` and `unbind` methods.
 
 <div style="display:none;" class="navigable_start"></div>
 
-### conversion
+### betweentimes
 
-Fired when an email is entered in Turnstile.
+Fired once when the playhead enters the interval and once when it leaves it.
+This can run multiple times if the viewer leaves the time interval and
+re-enters it, either by seeking or by playing through. This event is useful if
+you have page elements that should be visible only for a specific time
+interval.
 
 {% codeblock wistia_js.js %}
-video.bind("conversion", function(email, firstName, lastName) {
+video.bind("betweentimes", 30, 60, function(withinInterval) {
+  if (withinInterval) {
+    showMyElement();
+  } else {
+    hideMyElement();
+  }
+});
+{% endcodeblock %}
+
+To only show it once using anonymous function unbinding:
+
+{% codeblock wistia_js.js %}
+video.bind("betweentimes", 30, 60, function(withinInterval) {
+  if (withinInterval) {
+    showMyElement();
+  } else {
+    hideMyElement();
+    return video.unbind;
+  }
+});
+{% endcodeblock %}
+
+To only show it once using explicit unbinding:
+
+{% codeblock wistia_js.js %}
+var showMyElementOnce = function() {
+  showMyElement();
+  video.unbind('betweentimes', 30, 60, showMyElementOnce);
+};
+video.bind("betweentimes", 30, 60, showMyElementOnce);
+{% endcodeblock %}
+
+NOTE: This event currently does not fire on iframe embeds.
+
+### conversion
+
+Fired when an email is entered in Turnstile. The `type` argument can be
+"pre-roll-email", "mid-roll-email", or "post-roll-email".
+
+{% codeblock wistia_js.js %}
+video.bind("conversion", function(type, email, firstName, lastName) {
   recordMyOwnData(email, firstName, lastName);
 })
 {% endcodeblock %}
+
+### crosstime
+
+Runs the callback function when the time of the video moves from _before_ `time`
+to _after_ `time`. It is expected that `time` is a decimal value specified in
+seconds.
+
+This event is meant to be used with "gates" or CTAs. For example, perhaps you
+have a call to action that should appear after the 30 second mark in your
+video. Code to show that might look like this:
+
+{% codeblock wistia_js.js %}
+video.bind("crosstime", 30, function() {
+  showMyCustomCTA();
+});
+{% endcodeblock %}
+
+To only show it once using anonymous function unbinding:
+
+{% codeblock wistia_js.js %}
+video.bind("crosstime", 30, function() {
+  showMyCustomCTA();
+  return video.unbind;
+});
+{% endcodeblock %}
+
+To only show it once using explicit unbinding:
+
+{% codeblock wistia_js.js %}
+var showMyCustomCTAOnce = function() {
+  showMyCustomCTA();
+  video.unbind('crosstime', 30, showMyCustomCTAOnce);
+};
+video.bind("crosstime", 30, showMyCustomCTAOnce);
+{% endcodeblock %}
+
+NOTE: This event currently does not fire on iframe embeds.
 
 ### heightchange
 
@@ -825,7 +824,7 @@ video.bind("widthchange", function() {
 
 ---
 
-## Player API Examples
+## Examples
 
 To get you making video magic as fast as possible, here are some examples of
 common JavaScript player API projects. We have also moved many of the more
