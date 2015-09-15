@@ -30,68 +30,97 @@ to the [Playlist API]({{ '/playlist-api' | post_url }}).
 If you are working with popovers, we've got a page setup specifically for that
 as well. Check out the [popover customization options]({{ '/popover-customization' | post_url }}).
 
-### The 'wistiaEmbed' Variable
+## Get a Player API handle
 
-The *API* version of the Wistia embed codes includes a variable `wistiaEmbed`
-to make this easy.
+To use the player API, you need a "handle" to it. When we use the term
+"handle", we mean a javascript variable that defines player API methods. You'll
+see the variable `video`--and other similar variables--used frequently in
+examples in these docs; these are all player API handles. Since Wistia embeds
+are initialized asynchronously, we recommend the following patterns to acquire
+player API handles for your videos.
 
-<code class="full_width">var wistiaEmbed = Wistia.embed("bfc34aa023", { ... options ... });</code>
+### window._wq
 
-You can reference the video object using the `wistiaEmbed` variable.  If you
-have multiple videos on your page, you should update this variable to something
-specific to this video.
+The first and easiest way is to push a function onto the initialization queue.
+The handle will be given as an argument of the callback function.
 
-As an example, if the following JS code is executed, the video will start to play:
+We push an object of the form `{ matcher: callback }` onto the queue. Embeds
+that match--as described in the `Wistia.api(matcher)` section below--will run
+the function.
 
-<code class="full_width">wistiaEmbed.play();</code>
-
-### Using iframes and the Player API
-
-If you're using an [iframe embed]({{ '/embedding#iframe_embed' | post_url }}), you can access the API by getting the `wistiaApi` property from the iframe element.
-
-By assigning an ID to each wistia iframe, you can get an easy handle to it.
-Take a look:
-
-{% codeblock wistia_js.js %}
-wistiaEmbed = document.getElementById("my_iframe").wistiaApi;
-wistiaEmbed.bind("end", function() {
-  alert("The video ended!");
-});
-wistiaEmbed.time(30).play();
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_abcde12345" style="width:640px;height:360px;"></div>
+<script>
+window._wq = window._wq || [];
+_wq.push({ abc: function(video) {
+  console.log("I got a handle to the video!", video);
+}});
+</script>
 {% endcodeblock %}
 
-or in jQuery:
+Here's what's happening in that `<script>` block:
+
+1. We make sure `window._wq` is defined as an array.
+2. We push a matcher ("abc") and a callback function onto the queue.
+3. E-v1.js loads and the video data is fetched in the background.
+4. The callback function runs when the video has data.
+
+### Wistia.api(matcher)
+
+If you're quite sure your video code will be running after the video has
+already loaded, you can use `Wistia.api(matcher)` to get a handle
+synchronously.
+
+If no match is found, `Wistia.api(matcher)` will return null.
 
 {% codeblock wistia_js.js %}
-wistiaEmbed = jQuery("#my_iframe")[0].wistiaApi;
-wistiaEmbed.bind("end", function() {
-  alert("The video ended!");
-});
-wistiaEmbed.time(30).play();
+var video = Wistia.api("abc");
+console.log("I got a handle to the video!", video);
 {% endcodeblock %}
 
-### Using Popovers and the Player API
+The `matcher` argument is defined as a container ID or the hashed ID of the
+video. Here's an example of an embed code with well-defined container ID:
 
-Wistia Popovers are just iframes that are injected into the page. If you include E-v1.js (AKA the Wistia library: `<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>`) on the page, you can bind to a special jQuery event to get at it. Note, you'll need to use `wistiaJQuery` (it's included in our popover code) to catch the `wistia-popover` event.
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div id="my_video" class="wistia_embed wistia_async_abcde12345" style="width:640px;height:360px;"></div>
+{% endcodeblock %}
+
+To access it, you can reference a portion of the video's container ID or hashed
+ID. For example, any of the following calls would get the same handle to the
+video:
 
 {% codeblock wistia_js.js %}
-wistiaJQuery(document).bind("wistia-popover", function(event, iframe) {
-  iframe.wistiaApi.time(30).play();
-  iframe.wistiaApi.bind("end", function() {
-    alert("The video ended!");
-  });
+window._wq = window._wq || [];
+_wq.push(function(W) {
+  var video1 = W.api("my_video");
+  var video2 = W.api("abcde12345");
+  var video3 = W.api("my_");
+  var video4 = W.api("abc");
+  var video5 = W.api("de12");
+  var video6 = W.api("vid");
+
+  console.log(video1 === video2); // true
+  console.log(video2 === video3); // true
+  console.log(video3 === video4); // true
+  console.log(video4 === video5); // true
+  console.log(video5 === video6); // true
 });
 {% endcodeblock %}
 
-You can also capture an event when a Wistia popover is closed.
+If the same video appears several times on the page `Wistia.api("hashedid")`
+will only return the first instance. If you need a handle for both, you'll need
+to assign container IDs and reference those.
 
-{% codeblock wistia_js.js %}
-wistiaJQuery(document).bind("wistia-popover-close", function() {
-  alert("A Wistia video was closed!");
-});
-{% endcodeblock %}
+If the first 3 letters of the hashed ID are used, there is only a 1 in 5,800
+chance that you will have a collision with each other video on the page. To be
+safe, if you have many videos on a page, you may want to be more verbose. For
+example, increasing to 4 characters decreases the chance of collision to 1 in
+240,000. But short access is convenient and can be used on most pages where the
+number of videos is small.
 
-## Player API Methods
+## Methods
 
 <div style="display:none;" class="navigable_start"></div>
 
@@ -107,8 +136,9 @@ video.addToPlaylist("abcde12345", {
 });
 {% endcodeblock %}
 
-Before using this, you might want to consider if [embed and playlist links]({{ '/embed-links' | post_url }})
-cover your use case.
+Before using this, you might want to see if
+[embed and playlist links]({{ '/embed-links' | post_url }}) covers your use
+case.
 
 ### aspect()
 
