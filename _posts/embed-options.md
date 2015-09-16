@@ -166,6 +166,8 @@ Changes the default playback quality on load. Accepted values are:
 Set the volume of the video. Expects an integer value between 0 and 1. This is
 equivalent to running `video.volume(v)` immediately after initialization.
 
+To mute the video on load, set this option to 0.
+
 ### volumeControl
 
 When set to true, a volume control is available over the video.
