@@ -1,105 +1,320 @@
 ---
 title: Popover Embed Customization
 layout: post
-category: Developers
+category: For Developers
 api_warning: true
 description: Customize your 'popover' embeds with these tips.
 footer: 'for_developers'
-post_intro: <p>Wistia's popover (lightbox) implementation utilizes <a href='http://fancybox.net/'>Fancybox</a>, a plug-in for jQuery. The Fancybox API gives access to all kinds of custom effects and settings that Wistia users can access. Here are a few of our favorites that we've helped customers implement.</p>
+post_intro: <p>Wistia's popover (lightbox) implementation is custom designed to make sure your viewers have the best playback experience possible. It has many options to make it comfortably fit it into your site.</p>
 ---
 
-## Using a custom thumbnail OR other website image
+## Popover Embeds
 
-Sometimes you want to use a custom graphical element (that may be already built
-into your site) to launch your popover. No problemo!
+In their most basic form, popover embeds look like this:
 
-First, here is the original embed code, straight from the Wistia embed generator:
-
-{% codeblock thumbnail.html %}
-<a href="http://fast.wistia.net/embed/iframe/sb22fqki3j?autoPlay=true&controlsVisibleOnLoad=true&playButton=false&playerColor=F36F36&popover=true&version=v1&videoHeight=360&videoWidth=640" class="wistia-popover[height=360,playerColor=F36F36,width=640]">
-
-<img src="http://embed.wistia.com/deliveries/34d01c07ff2da906b092c8ba1c75b0c345006340.jpg?image_play_button=false&image_play_button_color=F36F36e0&image_crop_resized=150x84" alt="" />
-
-</a>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=v2" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
-The `<img>` tag is what we will be altering here. We already have a new custom image
-picked out:
+That is, they are just a type of Async API embed with the option `popover=v2`.
+The popover options defined below would all be added into the `class`
+attribute, right after `popover=v2`. For example, if I wanted a thin border on
+my popovers, I'd modify the embed code to look like this:
 
-{% codeblock thumbnail.html %}
-<img src="http://wistia.com/doc/custom-image-for-example-purposes.jpg" />
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5
+popover=v2 popoverBorderWidth=2" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
-Now, we're going to insert that tag into the popover embed, and we're done!
+You can set any of the options listed below in exactly the same way.
 
-{% codeblock thumbnail.html %}
-<a href="http://fast.wistia.net/embed/iframe/sb22fqki3j?autoPlay=true&controlsVisibleOnLoad=true&playButton=false&playerColor=F36F36&popover=true&version=v1&videoHeight=360&videoWidth=640" class="wistia-popover[height=360,playerColor=F36F36,width=640]">
+## Options
 
-<img src="http://wistia.com/doc/custom-image-for-example-purposes.jpg" />
+For a list of all generic options, refer to the
+[Embed Options]({{ '/embed-options' | post_url }}) documentation.
+The options listed here are the ones specific to popovers or with special
+popover behavior.
 
-</a>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>
+<div style="display:none;" class="navigable_start"></div>
+
+### autoPlay
+
+The `autoPlay` option is true by default for popovers. Set it to false if you'd
+like the viewer to click again to play it.
+
+### popover=v2
+
+The `popover` option is important, but the value should always be the same.
+Setting the `popover=v2` will tell the embed code that it should behave like
+a popover.
+
+### popoverShowOnLoad
+
+Set this to true and the popover will immediately open the video as if it was
+clicked. This may be useful for landing pages where you want the video to be
+front and center but don't otherwise have the space.
+
+### playButton
+
+If `popoverContent` is set to "thumbnail", then `playButton` determines whether
+the big play button shows up over the thumbnail.
+
+This option also controls whether the big play button will show up over the
+video when the video loads, though it is usually not relevant to popovers in
+that form since they autoplay.
+
+### popoverContent
+
+When `popoverContent` is not set or explicitly set to "thumbnail", the video
+thumbnail will be rendered in the container, cropped to fit with no black bars.
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5
+popover=v2 popoverContent=thumbnail" style="width:300px;height:150px;">&nbsp;</div>
+{% endcodeblock %}
+
+When `popoverContent` is set to "html", the HTML inside the container is not
+modified. Clicking inside the container, however, will still launch the popover
+video.
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=v2 popoverContent=html"
+style="display:inline-block; white-space:nowrap;">
+  <a href="#">Launch the popover!</a>
+</div>
+{% endcodeblock %}
+
+Note that you do not need to use an `<a>` tag inside the popover, but it is
+used here because it conveniently uses native link styles.
+
+Here's a similar version where a custom image is also defined:
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=v2 popoverContent=html"
+style="display:inline-block; white-space:nowrap;">
+  <a href="#">
+    <img src="http://wistia.com/doc/custom-image-for-example-purposes.jpg" alt="" />
+  </a>
+</div>
+{% endcodeblock %}
+
+### popoverOverlayColor
+
+Use this to change the overlay's background color in RGB hexadecimal. By
+default this is set to "000000". To change it to white, use "ffffff".
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5
+popover=v2 popoverOverlayColor=ffffff" style="width:300px;height:150px;">&nbsp;</div>
+{% endcodeblock %}
+
+### popoverOverlayOpacity
+
+Use this to change the overlay's opacity. This expects a decimal value between
+0 and 1. The default value us 0.5.
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5
+popover=v2 popoverOverlayOpacity=0.8" style="width:300px;height:150px;">&nbsp;</div>
+{% endcodeblock %}
+
+### popoverAnimation
+
+Currently popovers have a few different launch animations. Possible values are:
+
+- none: Shows the popover with no animation and no delay.
+- fade: Fades in the popover along with the overlay.
+- slide: Fades in the overlay and slides/fades the video up into place.
+
+The default is "slide", though because of graphics card interaction issues,
+it will default to "fade" if the video uses the Flash player.
+
+### popoverPreventScroll
+
+By default, popovers render an overlay covering the entire document. But they
+do not stop the user from scrolling the content behind the video. Set this to
+true if you would like to prevent the user from scrolling content.
+
+Note: It accomplishes this by setting `height:100%;overflow:hidden` CSS
+properties on the `<body>` element. If you have a custom scrolling
+implementation, this will not prevent scrolling in it. To implement a custom
+solution, you may want to bind to the "popovershow" and "popoverhide" events.
+
+### popoverBorderWidth
+
+Popovers have no borders by default. Use this option to add a border around the
+video. It expects the width to be an integer defined in pixels.
+
+### popoverBorderColor
+
+Use this option to change the popover border color. By default this is set to
+"ffffff". To change it to black, use "000000".
+
+### popoverBorderRadius
+
+Popovers have 0 border radius&mdash;square borders&mdash;by default. If your
+website uses round borders, use this option to set a matching border radius. It
+expects a value in pixels.
+
+### popoverBoxShadow
+
+Popovers have a diffuse box shadow by default. If you don't want any box
+shadow, set this option to false.
+
+### popoverCaption
+
+Use this option to add some short text directly below the video. If there are
+spaces, the value must be percent-encoded, which you can do with the browser's
+`encodeURIComponent` function.
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5
+popover=v2 popoverCaption=This%20is%20a%20caption." style="width:300px;height:150px;">&nbsp;</div>
+{% endcodeblock %}
+
+### popoverCaptionContainer
+
+If you need longer text or more complex behavior and styling, use this option
+instead of `popoverCaption`. With `popoverCaptionContainer`, you specify the ID
+of a DOM element that should be shown below the caption. This DOM element will
+be moved&mdash;_not_ cloned&mdash; and displayed when the popover is launched,
+so any bindings or styles that target it will stay in tact.
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5
+popover=v2 popoverCaptionContent=caption_content1" style="width:300px;height:150px;">&nbsp;</div>
+<div id="caption_content1" style="display:none;">
+  I can have <em>complex markup</em> here,
+  <a href="#" onclick="alert('hi!'); return false;">setup bindings</a>, or
+  even define other embed codes to accompany it.
+</div>
+{% endcodeblock %}
+
+### videoFoam
+
+The `videoFoam` option is traditionally used with inline embed codes to match
+the width of the video to the width of the parent container and maintain the
+aspect ratio. However, since popovers take over the whole window, they operate
+slightly differently.
+
+When `videoFoam` is set to true, the popover video will fit to the screen,
+leaving minimum buffer of 80 pixels from the edge.
+
+The `videoFoam` option _does not_ affect the thumbnail: that is, the region you
+click to launch the popover.
+
+<div style="display:none;" class="navigable_end"></div>
+
+## Methods
+
+For a list of all methods, refer to the
+[Player API]({{ '/player-api#methods' | post_url }}).  The methods listed here
+are the ones specific to popovers. Popover methods are defined in the `popover`
+namespace of each player API handle.
+
+<div style="display:none;" class="navigable_start"></div>
+
+### height()
+
+Returns the current height of the popover container (usually the thumbnail) in
+pixels.
+
+{% codeblock wistia_js.js %}
+// e.g. set the height of <div id="next_to_video"> to match the video.
+$("#next_to_video").height(video.popover.height());
+{% endcodeblock %}
+
+### height(val, [options])
+
+Sets the height of the popover container to `val` in pixels. It is expected
+that `val` is an integer. Decimal or string values will be truncated.
+
+If `constrain: true` is passed as an option, then the width of the container
+will also be updated to maintain the correct aspect ratio.
+
+{% codeblock wistia_js.js %}
+video.popover.height(100);
+video.popover.height(150, { constrain: true });
+{% endcodeblock %}
+
+### hide()
+
+If the popover is open, this will hide it.
+
+{% codeblock wistia_js.js %}
+video.popover.hide()
+{% endcodeblock %}
+
+### show()
+
+If the popover is hidden, this will show it.
+
+{% codeblock wistia_js.js %}
+video.popover.show()
 {% endcodeblock %}
 
 
-## Adding a Border Around Your Video in a Popover
+### width()
 
-If you're shooting video with light-colored backgrounds, a border can add definition to the video. <a id="a141167104_videoPopup" href="//app.wistia.com/embed/medias/4e21ff57d7.html?width=640&height=290&autoplay=false&playbutton=true&controls_visible=false&end_video_behavior=default">See an example of this effect</a><script type="text/javascript" src="//static.wistia.com/popover/popover.js"></script><script type="text/javascript">Wistia.requireFancyBoxAssets(function() {Wistia.fancyBoxJQuery("#a141167104_videoPopup").fancybox({type: "iframe",width: 640,height: 290,});});</script>.
+Returns the current width of the popover container (usually the thumbnail) in
+pixels.
 
-Add this style to your CSS, or inline in between tags.
-
-{% codeblock fancybox_css.css %}
-#fancybox-content {
-  border: 5px solid black !important;
-}
-
-#fancybox-outer {
-  padding-right: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
+{% codeblock wistia_js.js %}
+// e.g. set the width of <div id="next_to_video"> to match the video.
+$("#next_to_video").width(video.popover.width());
 {% endcodeblock %}
 
----
+### width(val, [options])
 
-## Adding a Title or Captions to your Popover
+Sets the width of the popover container to `val` in pixels. It is expected
+that `val` is an integer. Decimal or string values will be truncated.
 
-Just like the color and opacity above, adding a title/caption to your popover involves the use of helpers.
+If `constrain: true` is passed as an option, then the height of the container
+will also be updated to maintain the correct aspect ratio.
 
-
-Let's start with the same embed code as above:
-
-{% codeblock thumbnail.html %}
-<a href="http://fast.wistia.net/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true"
-class="wistia-popover[width=640,height=360,playerColor=#636155]"><img src="http://embed.wistia.com/deliveries/d88b25fd28dda2795fa3c754f6d08221cfb8b206.jpg?image_play_button=true&image_crop_resized=150x84" /></a>
-<script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>
+{% codeblock wistia_js.js %}
+video.popover.width(100);
+video.popover.width(150, { constrain: true });
 {% endcodeblock %}
 
-Now, let's add the following to the 'class' area:
+<div style="display:none;" class="navigable_end"></div>
 
-<code class="full_width">title=&lt;center&gt;&lt;strong&gt;SuperEmbeds Rock!&lt;/strong&gt;&lt;/center&gt;,helpers.title.type=inside,</code>
+## Events
 
-We just added the title content (with the 'title=' entry) and set the title to display inside the popover frame (with the 'helpers.title.type=inside' entry).  Other options for the title type include 'float', 'outside', and 'over'.  Play around to see which you like best.
+For a list of all generic events, refer to the
+[Player API]({{ '/player-api#events' | post_url }}). The events listed here are
+the ones specific to popovers.
 
 
-To see what this looks like, check this <a href="http://fast.wistia.net/embed/iframe/19bd8cf131?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" class='wistia-popover[width=640,height=360,playerColor=#636155,helpers.overlay.css.backgroundColor=#000,helpers.overlay.opacity=1,title=<center><strong>SuperEmbeds Rock!</strong></center>,helpers.title.type=inside,padding=60,]'>Popover with Title example</a><script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>.
+<div style="display:none;" class="navigable_start"></div>
 
----
+### popovershow
 
-## Have Your Wistia Popover Appear on Page Load
+Fired when the popover becomes visible.
 
-You'd like to send viewers a URL that they can open, and the popover will automatically display.
-
-{% codeblock wistiaJQuery.js %}
-wistiaJQuery(document).ready( function() {
-  var url = window.location.href.toString();
-  if ( url.indexOf('launch-the-popover') != -1 )
-  {
-    wistiaJQuery('a[class^=wistia-popover]').first().click();
-  }
+{% codeblock wistia_js.js %}
+video.bind("popovershow", function() {
+  console.log("The popover for ", video.hashedId(), " is visible!");
 });
 {% endcodeblock %}
 
-If you have more than one popover on the page, you'll want to add an ID onto the link, so you can launch specific popovers.
+### popoverhide
+
+Fired when the popover is hidden.
+
+{% codeblock wistia_js.js %}
+video.bind("popoverhide", function() {
+  console.log("The popover for ", video.hashedId(), " is hidden!");
+});
+{% endcodeblock %}
+
+<div style="display:none;" class="navigable_end"></div>
