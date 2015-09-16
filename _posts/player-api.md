@@ -26,7 +26,7 @@ If you are working with a themed Playlist (i.e. multiple-video players), please
 refer to the [Playlist API]({{ '/playlist-api' | post_url }}).
 
 If you are creating a custom playlist from scratch, check out
-[embed and playlist links]({{ /embed-links | post_url }}), which allow you to
+[embed and playlist links]({{ '/embed-links' | post_url }}), which allow you to
 arbitrarily create a playlist of fully-customized Wistia videos by adding some
 `<a>` tags to your page.
 
@@ -997,7 +997,7 @@ automatically!
 ### Mute the Video on Load
 
 You can do this by setting the `volume`
-[embed option]({{ /embed-options | post_url }}) to 0. Check it out!
+[embed option]({{ '/embed-options' | post_url }}) to 0. Check it out!
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -1096,7 +1096,7 @@ _wq.push(function(W) {
 ### Playing a second video on Post Roll click
 
 You can now handle this behavior by using
-[embed links]({{ /embed-links#watch_another_video_in_ctaannotation | post_url }}).
+[embed links]({{ '/embed-links#watch_another_video_in_ctaannotation' | post_url }}).
 
 ---
 
