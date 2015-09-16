@@ -12,8 +12,8 @@ post_intro: "<p>The Wistia video player has a JavaScript API which supports a nu
 
 ## Using the API
 
-It is possible to access the JavaScript API using any embed type: *API*, *SEO*,
-or *iframe*.
+It is possible to access the javascript API using any embed type: *API*, *SEO*,
+or *iframe*, though not all methods work with iframe embeds.
 
 If you are also looking to construct embed codes, refer to
 the [construct an embed code]({{ '/construct-an-embed-code' | post_url }})
@@ -22,13 +22,19 @@ guide. Available options for embed codes are listed in
 
 **Playlists**
 
-If you are working with Playlists (i.e. multiple-video players), please refer
-to the [Playlist API]({{ '/playlist-api' | post_url }}).
+If you are working with a themed Playlist (i.e. multiple-video players), please
+refer to the [Playlist API]({{ '/playlist-api' | post_url }}).
+
+If you are creating a custom playlist from scratch, check out
+[embed and playlist links]({{ /embed-links | post_url }}), which allow you to
+arbitrarily create a playlist of fully-customized Wistia videos by adding some
+`<a>` tags to your page.
 
 **Popovers**
 
 If you are working with popovers, we've got a page setup specifically for that
-as well. Check out the [popover customization options]({{ '/popover-customization' | post_url }}).
+as well. Check out the
+[popover customization options]({{ '/popover-customization' | post_url }}).
 
 ## Get a Player API handle
 
