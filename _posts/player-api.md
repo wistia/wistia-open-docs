@@ -53,7 +53,7 @@ the function.
 <div class="wistia_embed wistia_async_abcde12345" style="width:640px;height:360px;"></div>
 <script>
 window._wq = window._wq || [];
-_wq.push({ abc: function(video) {
+_wq.push({ "abc": function(video) {
   console.log("I got a handle to the video!", video);
 }});
 </script>
@@ -150,11 +150,12 @@ the number of videos is small.
 
 <div style="display:none;" class="navigable_start"></div>
 
-### addToPlaylist(hashedId, [options])
+### addToPlaylist(hashedId, [options], [position])
 
-A video has a "playlist", which is a list of videos to play in sequence. Use
-this method to push more videos onto the queue. When a video is finished
-playing, it will play the next one in the playlist.
+A video has a "playlist", which is a list of videos to play in sequence. Each
+playlist must have a unique list of hashed IDs; a hashed ID cannot appear twice
+within the same playlist. Use this method to push more videos onto the queue.
+When a video is finished playing, it will play the next one in its playlist.
 
 {% codeblock wistia_js.js %}
 video.addToPlaylist("abcde12345", {
@@ -162,9 +163,27 @@ video.addToPlaylist("abcde12345", {
 });
 {% endcodeblock %}
 
+The `position` argument lets you define where in the playlist the video should
+be added. It can take any of these forms:
+
+{% codeblock wistia_js.js %}
+// Play abcde12345 before hashedid
+video.addToPlaylist("abcde12345", {}, { before: "hashedid" });
+
+// Play abcde12345 after hashedid
+video.addToPlaylist("abcde12345", {}, { after: "hashedid" });
+
+// Put abcde12345 in the first position
+// Note that this will not automatically replace the video too. To do that, you
+// should make use of `replaceWith`. See the pre-roll video example below.
+video.addToPlaylist("abcde12345", {}, { index: 0 });
+{% endcodeblock %}
+
 Before using this, you might want to see if
 [embed and playlist links]({{ '/embed-links' | post_url }}) covers your use
 case.
+
+NOTE: This method currently does not work with iframe embeds.
 
 ### aspect()
 
@@ -445,6 +464,8 @@ $("#video_abcde12345").click(function() {
 Before using this, you might want to see if
 [embed and playlist links]({{ '/embed-links' | post_url }}) covers your use
 case.
+
+NOTE: This method currently does not work with iframe embeds.
 
 ### secondsWatched()
 
@@ -870,7 +891,7 @@ into the API.
 window._wq = window._wq || [];
 
 // target our video by the first 3 characters of the hashed ID
-_wq.push({ 29b: function(video) {
+_wq.push({ "29b": function(video) {
 
   // on play, seek the video to 10 seconds, then unbind so it
   // only happens once.
@@ -914,8 +935,9 @@ If you need more fine-grained control, try binding to the `timechange` event ins
 
 ### Pause Other Videos When Another is Played
 
-Don't like the barage of sound that comes from three different videos playing in the same
-page? Sounds like you might need our trusty `pauseAllOthers` function.
+Don't like the barage of sound that comes from three different videos playing
+in the same page? This snippet will pause all videos that aren't currently
+playing:
 
 {% codeblock wistia_js.js %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -927,7 +949,10 @@ page? Sounds like you might need our trusty `pauseAllOthers` function.
 window._wq = window._wq || [];
 _wq.push(function(W) {
   W.api(function(video) {
+    // for all existing and future videos, run this function
     video.bind('play', function() {
+      // when one video plays, iterate over all the videos and pause each,
+      // unless it's the video that just started playing.
       var allVideos = Wistia.api.all();
       for (var i = 0; i < allVideos.length; i++) {
         if (allVideos[i].hashedId() !== video.hashedId()) {
@@ -939,15 +964,6 @@ _wq.push(function(W) {
 });
 </script>
 {% endcodeblock %}
-
-
-The `pauseAllOthers` function runs through the array of Wistia embeds on a page and pauses
-everything except for the video currently playing. It does this by comparing the `hashedId` of 
-`wistiaEmbed[i]` to the `hashedId` of the video that just started playing (which the function knows
-as `thisId`).
-
-The second half of the code binds this function to the play event for each video by passing in the 
-`hashedId` of that video. This way, your video doesn't pause the second it's played. Yippee!
 
 ---
 
@@ -965,69 +981,21 @@ for more on how this will work.
 
 ### Add Chaptering Links to your Embedded Video
 
-Using the `.time()` method from the Player API, you can add chapters quickly and easily.
-
-Check out the [Chaptering Demo](http://wistia.github.com/demobin/chaptering/)
-for more on how this works.
-
----
-
-### Take Action When the Video Ends
-
-Using the built-in bindings, you can "listen" for events like video end, and
-take action.
-
-In the example below, we send an alert AND redirect the viewer on video end.
-Redirecting a viewer after the video is over isn't something we recommend -
-unless you have given them a heads up it is going to happen, it can be a very
-jarring experience.
-
-{% codeblock wistia_js.js %}
-<script type="text/javascript">
-wistiaEmbed.bind("end", function () {
-  alert("Hello world!");
-  window.location.href == "http://newUrl.com";
-});
-</script>
-{% endcodeblock %}
-
-
-### Return the Email from Turnstile
-
-With [Wistia Turnstile]({{ '/turnstile' | post_url }}), you can require
-your viewers to enter an email address to view video content on your webpage.
-Using the "conversion" event, you can trigger actions based on the email and name being
-entered - including passing that email on to another service!
-
-{% codeblock wistia_js.js %}
-<script type="text/javascript">
-wistiaEmbed.bind("conversion", function(type, email, firstName, lastName) {
-  // function to be executed
-});
-</script>
-{% endcodeblock %}
-
-At this time, the `type` of conversion can be "pre-roll-email",
-"mid-roll-email", or "post-roll-email". The arguments `email`, `firstName`, and `lastName` are the viewer's details as entered into turnstile, where `firstName` and `lastName` are undefined if not required.
+You can do this yourself using the `time(val)` method described above, OR you
+could make your life easier and use
+[embed links]({{ '/embed-links' | post_url }}), which handles chaptering
+automatically!
 
 ---
 
 ### Mute the Video on Load
 
+You can do this by setting the `volume`
+[embed option]({{ /embed-options | post_url }}) to 0. Check it out!
+
 {% codeblock wistia_js.js %}
-<div id="wistia_tlb0v41zjd" class="wistia_embed" style="width:640px;height:360px;" data-video-width="640" data-video-height="360">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("tlb0v41zjd", {
-  version: "v1",
-  videoWidth: 640,
-  videoHeight: 360,
-  volumeControl: true,
-  controlsVisibleOnLoad: true,
-  playerColor: "688AAD",
-  volume: 0
-});
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5 volume=0" style="width:640px;height:360px;">&nbsp;</div>
 {% endcodeblock %}
 
 ---
@@ -1037,8 +1005,24 @@ wistiaEmbed = Wistia.embed("tlb0v41zjd", {
 Selective Autoplay will automatically play your embedded video based on the
 presence of a query string you specify.
 
-See more about how it works on the
-[Selective Autoplay Demo Page](http://wistia.github.com/demobin/selective-autoplay).
+{% codeblock wistia_js.js %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5" style="width:640px;height:360px;">&nbsp;</div>
+<script>
+_wq.push(function(W) {
+  var playedOnce = false;
+  W.api(function(video) {
+    if (!playedOnce && /[&?]autoplay/i.test(location.href)) {
+      playedOnce = true;
+      video.play();
+    }
+  });
+});
+</script>
+{% endcodeblock %}
+
+In this example, if "?autoplay" or "&autoplay" appears in the page URL, the
+first video that initializes will autoplay.
 
 ---
 
@@ -1050,13 +1034,13 @@ again. If you want to avoid your function being executed again, you need to
 unbind it.
 
 Our library contains a special unbinding pattern for convenience. In the
-callback function, just return `this.unbind`.
+callback function, just return `video.unbind`.
 
 {% codeblock wistia_js.js %}
-<script type="text/javascript">
-wistiaEmbed.bind("play", function() {
+<script>
+video.bind("play", function() {
   alert("Played the first time!");
-  return this.unbind;
+  return video.unbind;
 });
 </script>
 {% endcodeblock %}
@@ -1068,33 +1052,45 @@ unbinding, you can use the `unbind` method as shown below.
 <script type="text/javascript">
 function playFunc() {
   alert("Played the first time!");
-  wistiaEmbed.unbind("play", playFunc);
+  video.unbind("play", playFunc);
 }
 
-wistiaEmbed.bind("play", playFunc);
+video.bind("play", playFunc);
 </script>
 {% endcodeblock %}
 
 ---
+
 ### Add Custom Pre-Roll to Your Videos
 
-By binding the loading of a second video on the 'end' event of the first one,
-it is easy to create your own custom 'pre-roll' videos.
+You can leverage the `replaceWith` and `addToPlaylist` methods to add a
+pre-roll to any video.
 
-See the full demo on our
-[Custom Pre-Roll Demo Page](http://wistia.github.com/demobin/custom-pre-roll/).
+First we add the pre-roll to the playlist in the first position. We pass in
+`null` because we don't want to specify any plugin options, but we do want to
+pass position options.
+
+{% codeblock wistia_js.js %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_5bbw8l7kl5" style="width:640px;height:360px;">&nbsp;</div>
+<script>
+_wq.push(function(W) {
+  W.api("5bb", function(video) {
+    video.addToPlaylist("8r1r8hvj8n", {}, { index: 0 });
+    video.bind('play', function() {
+      video.replaceWith("8r1r8hvj8n", { autoPlay: true });
+    });
+  });
+});
+</script>
+{% endcodeblock %}
 
 ---
 
 ### Playing a second video on Post Roll click
 
-By binding a click event onto the video container and verifying that the post
-roll has run, you can play a second video in the same container (Post Roll:
-"Click here to watch your free video!" and then have the video actually play in
-the same video container).
-
-See the full demo on our
-[Post-Roll Video Play Demo Page](http://wistia.github.com/demobin/post-roll-video-play/).
+You can now handle this behavior by using
+[embed links]({{ /embed-links#watch_another_video_in_ctaannotation | post_url }}).
 
 ---
 
@@ -1110,13 +1106,19 @@ So a finished iframe embed code would look something like this:
 
 {% codeblock iframe_example.html %}
 <iframe src="http://fast.wistia.net/embed/iframe/e4a27b971d?
-controlsVisibleOnLoad=true&playerColor=688AAD&version=v1
-&videoHeight=360&videoWidth=640&wmode=transparent"
+controlsVisibleOnLoad=true&playerColor=688AAD&version=v1&wmode=transparent"
 allowtransparency="true" frameborder="0" scrolling="no"
 class="wistia_embed" name="wistia_embed" width="640"
 height="360"></iframe>
 {% endcodeblock %}
 
+Or an Async API embed would look like this:
+
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_abcde12345 wmode=transparent"
+style="width:640px;height:360px;"></div>
+{% endcodeblock %}
 
 ## Embed Options
 
