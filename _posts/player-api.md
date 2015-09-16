@@ -890,7 +890,7 @@ In this example, you want the video to skip ahead a certain amount of time when
 the viewer presses 'play'. This utilizes the `bind on play` functionality built
 into the API.
 
-{% codeblock wistia_js.js %}
+{% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_29b0fbf547" style="width:640px;height:360px;">&nbsp;</div>
 <script>
@@ -945,7 +945,7 @@ Don't like the barage of sound that comes from three different videos playing
 in the same page? This snippet will pause all videos that aren't currently
 playing:
 
-{% codeblock wistia_js.js %}
+{% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_9kksns1ede" style="width:480px;height:270px;">&nbsp;</div>
 <div class="wistia_embed wistia_async_oh34zbesuh" style="width:480px;height:270px;">&nbsp;</div>
@@ -999,7 +999,7 @@ automatically!
 You can do this by setting the `volume`
 [embed option]({{ /embed-options | post_url }}) to 0. Check it out!
 
-{% codeblock wistia_js.js %}
+{% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5 volume=0" style="width:640px;height:360px;">&nbsp;</div>
 {% endcodeblock %}
@@ -1011,7 +1011,7 @@ You can do this by setting the `volume`
 Selective Autoplay will automatically play your embedded video based on the
 presence of a query string you specify.
 
-{% codeblock wistia_js.js %}
+{% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5" style="width:640px;height:360px;">&nbsp;</div>
 <script>
@@ -1054,8 +1054,8 @@ video.bind("play", function() {
 If you are performing asynchronous operations or need more control over
 unbinding, you can use the `unbind` method as shown below.
 
-{% codeblock wistia_js.js %}
-<script type="text/javascript">
+{% codeblock wistia_html.html %}
+<script>
 function playFunc() {
   alert("Played the first time!");
   video.unbind("play", playFunc);
@@ -1076,7 +1076,7 @@ First we add the pre-roll to the playlist in the first position. We pass in
 `null` because we don't want to specify any plugin options, but we do want to
 pass position options.
 
-{% codeblock wistia_js.js %}
+{% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5" style="width:640px;height:360px;">&nbsp;</div>
 <script>
