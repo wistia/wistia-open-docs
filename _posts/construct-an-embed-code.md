@@ -72,12 +72,10 @@ endpoint, we recommend using this regular expression:
 
 Or if you don't speak regex, here's what we're matching:
 
-{% codeblock thumbnail.html %}
-http(s)://*wistia.com/medias/*
-http(s)://*wistia.com/embed/*
-http(s)://*wi.st/medias/*
-http(s)://*wi.st/embed/*
-{% endcodeblock %}
+    http(s)://*wistia.com/medias/*
+    http(s)://*wistia.com/embed/*
+    http(s)://*wi.st/medias/*
+    http(s)://*wi.st/embed/*
 
 Note, it's likely we'll add support for more URLs in the future so feel free to 
 use a more general regular expression so you don't miss out on future 
@@ -115,11 +113,6 @@ ssl | boolean | Determines whether the embed code should use https. Defaults to 
 If given a **width**, **height**, **maxwidth**, or **maxheight** parameter 
 (or any combination of those), the other dimensions in the resulting embed 
 code may change so that the video's aspect ratio is preserved.
-
-{{ "These parameters are attached to the Wistia media URL, and not the oEmbed call. So they must be URL-encoded to travel with the Wistia URL." | note }} 
-
-
-
 
 
 ## Troubleshooting
@@ -248,53 +241,38 @@ In this case we do the following:
 First, add a div container to the page with a unique ID attribute. In our
 standard embeds, we use the video's hashed ID as the unique ID.
 
-{% codeblock thumbnail.html %}
-<div id="wistia_abcde12345" style="height:387px;width:640px" data-video-width="640" data-video-height="360">
+{% codeblock wistia_html.html %}
+<div class="wistia_embed wistia_async_abcde12345" style="height:387px;width:640px">
   this is displayed if javascript is disabled
 </div>
 {% endcodeblock %}
 
 Next, include the Wistia library:
 
-{% codeblock playlist_api.js %}
-<script src="http://fast.wistia.net/static/E-v1.js"></script>
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
 {% endcodeblock %}
 
-Now initialize the embed and pass in the video parameters:
+Now let's set a few options on the embed code:
 
-{% codeblock playlist_api.js %}
-<script>
-wistiaEmbed = Wistia.embed("abcde12345", {
-  playerColor: "ff0000",
-  fullscreenButton: false,
-  container: "wistia_abcde12345"
-});
-</script>
+{% codeblock wistia_html.html %}
+<div class="wistia_embed wistia_async_abcde12345
+playerColor=ff0000 fullscreenButton=false" style="height:387px;width:640px">
+  this is displayed if javascript is disabled
+</div>
 {% endcodeblock %}
-
 
 Let's also include the socialbar in the embed code:
 
-{% codeblock playlist_api.js %}
-<script>
-wistiaEmbed = Wistia.embed("abcde12345", {
-  playerColor: "ff0000",
-  fullscreenButton: false,
-  container: "wistia_abcde12345",
-  plugin: {
-    "socialbar-v1": {
-      buttons: "embed-twitter-facebook"
-    }
-  }
-});
-</script>
+{% codeblock wistia_html.html %}
+<div class="wistia_embed wistia_async_abcde12345 playerColor=ff0000
+fullscreenButton=false plugin[socialbar-v1][buttons]=embed-twitter-facebook"
+style="height:387px;width:640px">
+  this is displayed if javascript is disabled
+</div>
 {% endcodeblock %}
 
 ---
-
-
-
-
 
 
 ## Video SEO Embed Tutorial
