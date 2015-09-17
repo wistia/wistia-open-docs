@@ -9,46 +9,21 @@ description: The Wistia player has a built-in JavaScript API, providing you with
 post_intro: "<p>The Wistia video player has a JavaScript API which supports a number of ways to interact with and control the video player. It uses the same interface for both Flash and HTML5 versions of the player, and provides convenience functions to accomplish common goals.</p>"
 ---
 
+## Get started
 
-## Using the API
-
-It is possible to access the javascript API using any embed type: *API*, *SEO*,
-or *iframe*, though not all methods work with iframe embeds.
-
-If you are also looking to construct embed codes, refer to
-the [construct an embed code]({{ '/construct-an-embed-code' | post_url }})
-guide. Available options for embed codes are listed in
-[Embedding Options Documentation]({{ '/embed-options' | post_url }}).
-
-**Playlists**
-
-If you are working with a themed Playlist (i.e. multiple-video players), please
-refer to the [Playlist API]({{ '/playlist-api' | post_url }}).
-
-If you are creating a custom playlist from scratch, check out
-[embed and playlist links]({{ '/embed-links' | post_url }}), which allow you to
-arbitrarily create a playlist of fully-customized Wistia videos by adding some
-`<a>` tags to your page.
-
-**Popovers**
-
-If you are working with popovers, we've got a page setup specifically for that
-as well. Check out the
-[popover customization options]({{ '/popover-customization' | post_url }}).
-
-## Get a Player API handle
-
-To use the player API, you need a "handle" to it. When we use the term
-"handle", we mean a javascript variable that defines player API methods. You'll
-see the variable `video`--and other similar variables--used frequently in
-examples in these docs; these are all player API handles. Since Wistia embeds
-are initialized asynchronously, we recommend the following patterns to acquire
-player API handles for your videos.
+To use the Player API, you need a "handle" to it. When we use the term
+"handle", we mean a javascript variable that is associated with a Wistia video
+and defines the Player API methods. You'll see the variable `video`--and other
+similar variables--used frequently in examples in these docs; these are all
+Player API handles. Since Wistia embeds are initialized asynchronously, we
+recommend the following patterns to acquire player API handles for your videos.
 
 ### Use window._wq to get a video handle
 
 The first and easiest way is to push a function onto the initialization queue.
 The handle will be given as an argument of the callback function.
+
+#### With API/SEO embeds
 
 We push an object of the form `{ matcher: callback }` onto the queue. Embeds
 that match--as described in the `Wistia.api(matcher)` section below--will run
@@ -65,7 +40,22 @@ _wq.push({ "abc": function(video) {
 </script>
 {% endcodeblock %}
 
-Here's what's happening in that `<script>` block:
+#### With iframe embeds
+
+The exact same syntax will work with iframe embeds too:
+
+{% codeblock wistia_html.html %}
+<iframe src="//fast.wistia.net/embed/iframe/abcde12345" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
+<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
+<script>
+window._wq = window._wq || [];
+_wq.push({ "abc": function(video) {
+  console.log("I got a handle to the video!", video);
+}});
+</script>
+{% endcodeblock %}
+
+#### Here's what's happening:
 
 1. We make sure `window._wq` is defined as an array.
 2. We push a matcher ("abc") associated with a callback function onto the
@@ -76,43 +66,34 @@ Here's what's happening in that `<script>` block:
 Note that you can push functions onto `window._wq` at any time&mdash;including after
 `E-v1.js` has loaded&mdash;and expect it to be quickly executed.
 
-### Use window._wq to get a window.Wistia handle
+#### You can also target all videos on the page
 
-Alternately, if you want to get a handle to the `window.Wistia` object when it
-is available, you can use this syntax:
+If you'd like to run your function on all videos on the page, you can use the
+special "_all" matcher:
 
-{% codeblock wistia_html.html %}
-<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_abcde12345" style="width:640px;height:360px;"></div>
-<script>
+{% codeblock wistia_js.js %}
 window._wq = window._wq || [];
-_wq.push(function(W) {
-  console.log(W, " is a reference to ", window.Wistia, ", which is defined" +
-    " when E-v1.js first loads.");
-  W.api(function(video) {
-    console.log("Run this function on each video as it is initialized." +
-      " Right now I'm running on", video);
-  });
-});
-</script>
+_wq.push({ "_all": function(video) {
+  console.log("This will run for every video on the page. Right now I'm on this one:", video);
+}});
 {% endcodeblock %}
 
-Note that you can push functions onto `window._wq` at any time&mdash;including after
-`E-v1.js` has loaded&mdash;and expect it to be quickly executed.
+This will run immediately on any videos that are currently on the page. It will
+also be run immediately on videos injected after the page loads.
 
 ### Wistia.api(matcher)
 
 If you're quite sure your video code will be running after the video has
 already loaded, you can use `Wistia.api(matcher)` to get a handle
-synchronously. If no match is found, `Wistia.api(matcher)` will return null.
+synchronously. If no match is found, `Wistia.api(matcher)` will return `null`.
 
 {% codeblock wistia_js.js %}
 var video = Wistia.api("abc");
 console.log("I got a handle to the video!", video);
 {% endcodeblock %}
 
-The `matcher` argument is looks at the container ID or the hashed ID of the
-video. Here's an example of an embed code with well defined container ID:
+The `matcher` argument is compared to the container ID or the hashed ID of the
+video.
 
 {% codeblock wistia_html.html %}
 <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -124,21 +105,18 @@ ID. For example, any of the following calls would get the same handle to the
 video:
 
 {% codeblock wistia_js.js %}
-window._wq = window._wq || [];
-_wq.push(function(W) {
-  var video1 = W.api("my_video");
-  var video2 = W.api("abcde12345");
-  var video3 = W.api("my_");
-  var video4 = W.api("abc");
-  var video5 = W.api("de12");
-  var video6 = W.api("vid");
+var video1 = Wistia.api("my_video");
+var video2 = Wistia.api("abcde12345");
+var video3 = Wistia.api("my_");
+var video4 = Wistia.api("abc");
+var video5 = Wistia.api("de12");
+var video6 = Wistia.api("vid");
 
-  console.log(video1 === video2); // true
-  console.log(video2 === video3); // true
-  console.log(video3 === video4); // true
-  console.log(video4 === video5); // true
-  console.log(video5 === video6); // true
-});
+console.log(video1 === video2); // true
+console.log(video2 === video3); // true
+console.log(video3 === video4); // true
+console.log(video4 === video5); // true
+console.log(video5 === video6); // true
 {% endcodeblock %}
 
 If the same video appears several times on the page, `Wistia.api("hashedid")`
@@ -152,6 +130,8 @@ increasing your matcher to 4 characters decreases the chance of collision to 1
 in 240,000. But short access is convenient and can be used on most pages where
 the number of videos is small.
 
+---
+
 ## Methods
 
 <div style="display:none;" class="navigable_start"></div>
@@ -160,8 +140,10 @@ the number of videos is small.
 
 A video has a "playlist", which is a list of videos to play in sequence. Each
 playlist must have a unique list of hashed IDs; a hashed ID cannot appear twice
-within the same playlist. Use this method to push more videos onto the queue.
-When a video is finished playing, it will play the next one in its playlist.
+within the same playlist.
+
+Use `addToPlaylist` to push more videos onto the queue. When a video is
+finished playing, it will play the next one in its playlist.
 
 {% codeblock wistia_js.js %}
 video.addToPlaylist("abcde12345", {
@@ -186,8 +168,8 @@ video.addToPlaylist("abcde12345", {}, { index: 0 });
 {% endcodeblock %}
 
 Before using this, you might want to see if
-[embed and playlist links]({{ '/embed-links' | post_url }}) covers your use
-case.
+[embed and playlist links]({{ '/embed-links#simple_playlist_link_example' | post_url }})
+covers your use case.
 
 NOTE: This method currently does not work with iframe embeds.
 
@@ -207,8 +189,8 @@ if (video.aspect() < 1) {
 
 ### bind(eventType, callbackFn)
 
-Runs a callback function when a specific event is triggered. Refer to the
-_Player API Events_ section below to see how to respond to different events.
+Runs a callback function when a specific event is triggered. [Refer to the
+Events section](#events) to see how to respond to the different types events.
 
 {% codeblock wistia_js.js %}
 video.bind("play", function() {
@@ -236,7 +218,7 @@ showVideoDurationOnMyPage(video.duration())
 ### email()
 
 Returns the email associated with this viewing session. If no email is
-associated, it will return null.
+associated, it will return `null`.
 
 An email can be associated with a viewing session by:
 
@@ -468,8 +450,8 @@ $("#video_abcde12345").click(function() {
 {% endcodeblock %}
 
 Before using this, you might want to see if
-[embed and playlist links]({{ '/embed-links' | post_url }}) covers your use
-case.
+[embed and playlist links]({{ '/embed-links#simple_video_replacement_example' | post_url }})
+covers your use case.
 
 NOTE: This method currently does not work with iframe embeds.
 
@@ -677,6 +659,8 @@ video.width(700, { constrain: true });
 
 <div style="display:none;" class="navigable_end"></div>
 
+---
+
 ## Events
 
 Use these events when working with the `bind` and `unbind` methods.
@@ -874,6 +858,14 @@ video.bind("widthchange", function() {
 
 <div style="display:none;" class="navigable_end"></div>
 
+---
+
+## Options
+
+Many behaviors can be defined by setting options instead of using Player API
+methods. Check out the [Embed Options]({{ '/embed-options' | post_url }}) page
+for a full list.
+
 
 ---
 
@@ -953,21 +945,19 @@ playing:
 
 <script>
 window._wq = window._wq || [];
-_wq.push(function(W) {
-  W.api(function(video) {
-    // for all existing and future videos, run this function
-    video.bind('play', function() {
-      // when one video plays, iterate over all the videos and pause each,
-      // unless it's the video that just started playing.
-      var allVideos = Wistia.api.all();
-      for (var i = 0; i < allVideos.length; i++) {
-        if (allVideos[i].hashedId() !== video.hashedId()) {
-          allVideos[i].pause();
-        }
+_wq.push({ "_all": function(video) {
+  // for all existing and future videos, run this function
+  video.bind('play', function() {
+    // when one video plays, iterate over all the videos and pause each,
+    // unless it's the video that just started playing.
+    var allVideos = Wistia.api.all();
+    for (var i = 0; i < allVideos.length; i++) {
+      if (allVideos[i].hashedId() !== video.hashedId()) {
+        allVideos[i].pause();
       }
-    });
+    }
   });
-});
+}});
 </script>
 {% endcodeblock %}
 
@@ -997,7 +987,7 @@ automatically!
 ### Mute the Video on Load
 
 You can do this by setting the `volume`
-[embed option]({{ '/embed-options' | post_url }}) to 0. Check it out!
+[embed option]({{ '/embed-options' | post_url }}) to 0, like so:
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -1006,7 +996,7 @@ You can do this by setting the `volume`
 
 ---
 
-### Selective Autoplay (Autoplay for viewers from specific sources)
+### Selective Autoplay
 
 Selective Autoplay will automatically play your embedded video based on the
 presence of a query string you specify.
@@ -1080,14 +1070,13 @@ pass position options.
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5" style="width:640px;height:360px;">&nbsp;</div>
 <script>
-_wq.push(function(W) {
-  W.api("5bb", function(video) {
-    video.addToPlaylist("8r1r8hvj8n", {}, { index: 0 });
-    video.bind('play', function() {
-      video.replaceWith("8r1r8hvj8n", { autoPlay: true });
-    });
+window._wq = window._wq || [];
+_wq.push({ "5bb": function(video) {
+  video.addToPlaylist("8r1r8hvj8n", {}, { index: 0 });
+  video.bind('play', function() {
+    video.replaceWith("8r1r8hvj8n", { autoPlay: true });
   });
-});
+}});
 </script>
 {% endcodeblock %}
 
@@ -1101,7 +1090,7 @@ You can now handle this behavior by using
 ---
 
 
-### Set the background of your video to transparent
+### Make the video background transparent
 
 If you are embedding a Wistia video on a website with a white background, the
 natural black background of the Wistia player can look a little out of place.
@@ -1125,9 +1114,3 @@ Or an Async API embed would look like this:
 <div class="wistia_embed wistia_async_abcde12345 wmode=transparent"
 style="width:640px;height:360px;"></div>
 {% endcodeblock %}
-
-## Embed Options
-
-If you just want to set some different options for your embed code, check out
-what's available in our
-[Embedding Options Documentation]({{ '/embed-options' | post_url }}).
