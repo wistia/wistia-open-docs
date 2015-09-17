@@ -23,8 +23,24 @@ That embed code is from back in the good ol' days. Ben used to type those by han
 
 **If you have a video on your website that looks like [the one above](#updating_embeds_created_before_2012) (and an embed code to match), your video will stop generating stats on December 10th, 2015** to make way for new & improved stats functionality. But fear not, your videos' historical stats will always be available, and you can continue generating _new_ stats by updating your embed codes. Here's how:
 
-1. Identify the embeds you need to update. If you only have a few Wistia videos embedded, you may know which videos they are already just by looking at them. If you're not sure, check out the list attached to the email you received from support@wistia.com with the subject "An Important Update About Your Wistia Embeds." If you're having trouble identifying the videos you need to update, please contact our support team.
-2. On each page, you will need to replace the existing embed code with a _new_ embed code for that video from your Wistia account. Find each video in your account, and then [generate an embed code]({{ '/embedding' | post_url }}) for each one. Once those new embed codes are on your website, your videos will all be ready to go. Nice job!
+### Step 1. Identify the embeds you need to update.
+
+If you only have a few Wistia videos embedded, you may know which videos they are already just by looking at them.
+
+If you don't know which videos to update off the top of your head, there are a few things you can do:
+
+1. If you received an email from support@wistia.com with the subject _"[Action needed] An Important Update About Your Wistia Embeds"_, check out the attachment in that email. The attached list should include most (if not all) of your affected embeds. Didn't receive such an email? No worries! There's another way to find the embeds 👇.
+2. Go to the Trends section in your account (found under the Stats menu), and check to see which of your Wistia videos have been played recently. When you click into the stats page for a specific video, you can export the video's stats to a CSV file which will include the URLs of all the pages the video is embedded on. Here's a guide with more info on how to get that data: [Exporting Analytics Data](http://wistia.com/doc/embedded-video-analytics#exporting_analytics_data). Once you have those URLs, you can check them to see if the embed code is outdated – that is, if it looks like the video at the top of this page.
+
+### Step 2. Generate new embed codes.
+
+On each page with an old embed code, you will need to replace the existing embed code with a _new_ embed code for that video from your Wistia account. Find each video in your account, and then [generate an embed code]({{ '/embedding' | post_url }}) for each one. Once those new embed codes are on your website, your videos will all be ready to go.
+
+### Step 3. Celebrate! Or, contact us and then celebrate shortly thereafter.
+
+If you were able to get those embeds updated without much trouble, there's nothing left to do but dance. Your videos are now ready for the wonderful functionality that the future will hold.
+
+If things didn't go smoothly though, please let us know. We're ready to help at support@wistia.com.
 
 ## Keeping E-v1.js up to date
 
@@ -39,6 +55,8 @@ Normally, E-v1.js is automatically kept up to date within 60 seconds. If your em
 The change we're making on Dec 12th will not be compatible with old versions of E-v1.js, so you'll need to switch to the Wistia-hosted version. You can do that by replacing your existing copy of E-v1.js with this:
 <pre><code class="langauge-html">&lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot;&gt;&lt;/script&gt;</code></pre>
 
-Or, just replace your existing embed code with a [new embed code from Wistia. It'll include the Wistia-hosted E-v1.js automatically.
+{{ "If you want to load E-v1.js asynchronously, be sure to include `async` at the end of that opening script tag." | tip }}
+
+You can always just replace your existing embed code with a [new embed code from Wistia]({{ '/embedding' | post_url }}), too. It'll include the Wistia-hosted E-v1.js automatically.
 
 {{ "If you have any questions about this, or have any difficulty with the transition and need assistance, please contact us at support@wistia.com. We're here to help!" | note }}
