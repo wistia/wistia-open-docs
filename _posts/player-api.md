@@ -969,8 +969,25 @@ Using an API embed code as a template, we can switch out hashed ID's for multipl
 videos easily. Comparing the viewer analytics in the background will tell you
 which video reigned supreme!
 
-Check out the [A/B Testing Demo](http://wistia.github.com/demobin/ab-testing-tool/)
-for more on how this will work.
+In this example, we create an array of hashed IDs for possible videos to embed,
+then randomly select one and embed the video with that hashed ID by adding to
+the class name of the embed's container. The Wistia library will monitor the DOM
+for changes like this, and automatically embed a video where it sees an element
+with the right class.
+
+{% codeblock wistia_html.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div id="thumbnail_test" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+
+<script>
+  var hashedIds = ["wfu7q0s0pf", "ck7avcilwk"];
+  var rand = Math.floor(Math.random() * hashedIds.length);
+  var autoPlay = false;
+  var hashedId = hashedIds[rand];
+
+  document.getElementById("thumbnail_test").className += " wistia_async_" + hashedId;
+</script>
+{% endcodeblock %}
 
 ---
 
