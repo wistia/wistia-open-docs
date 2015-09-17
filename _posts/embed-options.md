@@ -76,8 +76,6 @@ the video's hashed ID must be a `?`.
 <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
 {% endcodeblock %}
 
-<div id="percent_encoding" style="position:absolute;width:1px;height:1px;"></div>
-
 ### Percent encoding
 
 Need a quick way to percent encode some values? Look no further! Type your
