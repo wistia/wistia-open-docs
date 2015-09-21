@@ -6,10 +6,7 @@ description:
   Closed captioning makes content that’s easier for viewers
   to digest and read (even in different languages), and has
   awesome SEO benefits.
-post_intro:
-  <p>Captions make it easy for viewers to digest the content of your
-   videos. They're a critical part of content accessibility, but they
-   are also helpful for longer form and educational content in any language.</p>
+post_intro: <p>Captions make it easy for viewers to digest the content of your videos. They're a critical part of content accessibility, but they are also helpful for longer form and educational content in any language.</p>
 ---
 
 Whether you're trying to make sure people can get the message of your video
@@ -61,6 +58,19 @@ Inside the Captions customization area, you can choose to *Edit* your SRT file,
 *Download* your SRT file, and *Delete* your SRT file.
 
 {{ "Captions currently do not work inline on Facebook." | note }}
+
+## Multilingual Captions
+
+You can upload as many SRT files as you'd like to your video. Spanish, English,
+French, Croatian--the more the merrier!
+
+Wistia allows for multilingual captions, and you're only limited by your
+imagination (and maybe fiction--those Klingon captions won't work 👽).
+
+Right now Wistia only allows you to *order* captions in English, but if you have
+an SRT file in another language upload away!
+
+{{ "If you're using a right-to-left read language, you'll need to accommodate for the flip that takes place in many internet environments. Wistia flips right-to-left captions by default, so building captions to account for this is the easiest fix." | tip }}
 
 ## Captions on by Default
 
