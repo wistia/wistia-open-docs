@@ -26,7 +26,7 @@ See this video for more:
 
 ## Setting Everything Up
 
-There are three steps to getting fully integrated:
+There are four steps to getting fully integrated:
 
 1. Enable the integration inside your HubSpot account.
 2. Add the integration JavaScript snippet to your website.

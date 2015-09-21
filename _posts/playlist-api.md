@@ -5,7 +5,7 @@ api: true
 api_warning: true
 special_category_link: developers
 category: Developers
-description: Wistia Playlists have an API which give you access to its functionality and behavior! 
+description: Wistia Playlists have an API which give you access to its functionality and behavior!
 post_intro: <p>Wistia playlists have a javascript API which gives you control over its behavior, and gives you access to the Player API for the currently embedded video.</p>
 footer: 'for_developers'
 ---
@@ -14,7 +14,7 @@ footer: 'for_developers'
 
 Method | Description
 ----- | -----------
-bind(event, function)           | Lets you bind a function to a playlist event. Check out the [Playlist Events](#playlist-events) for more info.
+bind(event, function)           | Lets you bind a function to a playlist event. Check out the [Playlist Events](#playlist_events) for more info.
 currentVideo()                  | Return a handle to the currently embedded video, which lets you access the [Player API]({{ '/player-api' | post_url }}).
 embed(sectionIndex, videoIndex) | Embed the video in the playlist corresponding to the given indices.
 embedNext()                     | Embed the next video in the playlist.
@@ -26,7 +26,7 @@ pause()                         | Pause the current video.
 play()                          | Plays the current video.
 play(sectionIndex)              | Plays the first video in the specified section.
 play(sectionIndex, videoIndex)  | Plays a specific video by index.
-ready(fn)                       | Execute the function when the playlist is ready. A playlist may not be ready at various times during its lifecycle, usually while it's removing the current video and embedding the next. 
+ready(fn)                       | Execute the function when the playlist is ready. A playlist may not be ready at various times during its lifecycle, usually while it's removing the current video and embedding the next.
 setEmail(email)                 | Sets the email for all videos in the playlist.
 setPlayerColor(hexColor)        | Sets a custom color for the player and playlist.
 videoHeight()                   | Returns the height of the video.
@@ -47,10 +47,10 @@ var wistiaPlaylist = Wistia.playlist("abcde12345", { ... options ... });
 {% endcodeblock %}
 
 In this instance, you can reference the playlist object using the `wistiaPlaylist`
-variable. If you have multiple playlists on your page, you should update this 
+variable. If you have multiple playlists on your page, you should update this
 variable to something specific to this playlist.
 
-As an example, if the following JS code is executed, the email address 
+As an example, if the following JS code is executed, the email address
 "max@wistia.com" will be tracked for all the videos in the playlist.
 
 {% codeblock playlist_api.js %}
@@ -84,7 +84,7 @@ videoOptions    | object  | Specify embedding options for each video as specifie
 
 ## Playlist events
 
-By default, all the standard player API events are available at the playlist 
+By default, all the standard player API events are available at the playlist
 level too. But we also have some playlist-specific events to let you do cool stuff on a per-video basis.
 
 Event Name    | Arguments                       | Description
@@ -111,7 +111,7 @@ wistiaPlaylist.bind("afterembed", function(sectionIndex, videoIndex) {
 
 ### Use a Link to Start a Specific Video or Playlist Section
 
-Using the `play(sectionIndex, videoIndex)` method, you can build a link that 
+Using the `play(sectionIndex, videoIndex)` method, you can build a link that
 will start a specific Section or Video for you.
 
 Check out how to get it done in the [Demobin](http://wistia.github.com/demobin/playlist-control-links/).
@@ -120,7 +120,7 @@ Check out how to get it done in the [Demobin](http://wistia.github.com/demobin/p
 
 ### Load a random video on page load
 
-You can load a random video from your playlist on page load, and then play a 
+You can load a random video from your playlist on page load, and then play a
 random video after each video ends, using a the playlistData methods, and a bind on "end".
 
 Check out how it works in the [Demobin](http://wistia.github.com/demobin/random-playlist-video/).
