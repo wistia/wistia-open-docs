@@ -627,7 +627,7 @@ table tr td pre { margin: 0; padding: 0; }
 .randor_links ul { padding: 0; border: 0; }
 .randor_links ul li { margin-bottom: 10px; }
 
-.exporting_guide_box { padding: 34px; background-color: rgba(62, 169, 245, 0.2); margin: 50px 0; clear: both; padding: 34px 34px 45px 34px; margin: 45px 0px; }
+.exporting_guide_box { padding: 34px; background-color: rgba(62, 169, 245, 0.2); margin: 50px 0; clear: both; padding: 34px 34px 45px 34px; margin: 45px 0px 0px 20px; }
 .exporting_guide_box h4 { color: #3ea9f5; font-size: 16px; margin: 0; padding: 0; display: inline-block; *display: inline; vertical-align: top; zoom: 1; margin-top: 6px; }
 .exporting_guide_box p { font-size: 16px; margin-left: 40px; font-family: "Avenir", Futura, Helvetica, sans-serif; color: #3ea9f5; -webkit-font-smoothing: antialiased; font-weight: 400; }
 .exporting_guide_box h3 { margin: 0; color: #3ea9f5; }
@@ -919,6 +919,9 @@ strong { font-weight: 700; letter-spacing: 0px; -webkit-font-smoothing: antialia
 em { font-style: italic; }
 
 blockquote { background: #f8f8e1; border: 1px solid #daddad; font-size: 15px; padding: 20px; }
+
+ol li a { border-bottom: 1px solid #cbd0d6; }
+ol li a:hover { border-bottom: 1px solid #56be8e; text-decoration: none; }
 
 #container { background-color: white; border-top: 6px solid transparent; padding-bottom: 0px; }
 
