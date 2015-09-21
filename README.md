@@ -184,3 +184,22 @@ Contact
 
 Want to chat? Weird, me too. You can [email me](mailto:jeff@wistia.com), or 
 reach me on [twitter](http://twitter.com/jeffvincent).
+
+Swiftype
+--------
+
+Wistia-doc uses [Swiftype](https://swiftype.com/) search engine to crawl and index the Wistia Docs.
+
+The Wistia Docs indexes and stats can be found in the `wistia-doc` engine on Swiftype. There, one can configure the
+look & feel, search results, and other customizations.
+
+To add search functionality to a page, simply add the `.st-default-search-input` class to an `<input>` tag and run the
+Switype installer on the page:
+
+      <script>
+      (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+      })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+      _st('install','[KEY]','2.0.0');
+      </script>
