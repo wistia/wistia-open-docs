@@ -29,7 +29,7 @@ If you only have a few Wistia videos embedded, you may know which videos they ar
 
 If you don't know which videos to update off the top of your head, there are a few things you can do:
 
-1. If you received an email from support@wistia.com with the subject _"[Action needed] An Important Update About Your Wistia Embeds"_, check out the attachment in that email. The attached list should include most (if not all) of your affected embeds. Didn't receive such an email? No worries! There's another way to find the embeds 👇.
+1. If you received an email from support@wistia.com with the subject _"[Action needed] An Important Update About Your Wistia Embeds,"_ check out the attachment in that email. The attached list should include most (if not all) of your affected embeds. Didn't receive such an email? No worries! There's another way to find the embeds 👇.
 2. Go to the Trends section in your account (found under the Stats menu), and check to see which of your Wistia videos have been played recently. When you click into the stats page for a specific video, you can export the video's stats to a CSV file which will include the URLs of all the pages the video is embedded on. Here's a guide with more info on how to get that data: [Exporting Analytics Data](http://wistia.com/doc/embedded-video-analytics#exporting_analytics_data). Once you have those URLs, you can check them to see if the embed code is outdated – that is, if it looks like the video at the top of this page.
 
 ### Step 2. Generate new embed codes.
@@ -52,7 +52,7 @@ It's important to keep the Wistia Javascript library up to date. Our engineering
 
 Normally, E-v1.js is automatically kept up to date within 60 seconds. If your embed codes use a version of E-v1.js that _isn't_ hosted by Wistia though (like if you made a copy of it and are hosting it yourself), then that version of E-v1.js will become out of date as soon as the Wistia engineering team releases updates and improvements to it, which happens daily.
 
-The change we're making on Dec 12th will not be compatible with old versions of E-v1.js, so you'll need to switch to the Wistia-hosted version. You can do that by replacing your existing copy of E-v1.js with this:
+The change we're making on December 10th will not be compatible with old versions of E-v1.js, so you'll need to switch to the Wistia-hosted version. You can do that by replacing your existing copy of E-v1.js with this:
 <pre><code class="langauge-html">&lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot;&gt;&lt;/script&gt;</code></pre>
 
 {{ "If you want to load E-v1.js asynchronously, be sure to include `async` at the end of that opening script tag." | tip }}
