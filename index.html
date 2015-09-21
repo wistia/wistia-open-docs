@@ -32,8 +32,10 @@ no_nav: true
       </div>
       <div class='columnBig firstRow homepage-search' id='search'>
         <h2>Search</h2>
-        <input id='searchField' placeholder='What are you looking for?' type='text' />
-        <button></button>
+        <form>
+          <input class='st-default-search-input' id='searchField' placeholder='What are you looking for?' type='text' />
+          <button></button>
+        </form>
       </div>
     </div>
     <div class='section'>
@@ -49,7 +51,7 @@ no_nav: true
         <ul>
           <li>
             <a href="{{ '/plans-comparison' | post_url }}">
-              Choosing the Wistia plan for you
+              Plans & Pricing Details
             </a>
           </li>
           <li>
@@ -59,7 +61,7 @@ no_nav: true
           </li>
           <li>
             <a href="{{ '/viewer-rec' | post_url }}">
-              What Viewers Need to Watch Wistia Video
+              Viewer Requirements
             </a>
           </li>
           <li>
