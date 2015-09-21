@@ -70,13 +70,13 @@ To disable comments across all videos, see the
 
 {% post_image hashed_id: 'ff915dcff4a37c3d3d85062bb9e7ab4b1307fdc9', class: 'float_right', width: 300 %}
 
-The *Control* area includes options to tweak the video controls on your media. 
-Don't want viewers skipping important parts of your video? Adios, **Play Bar**! 
+The *Control* area includes options to tweak the video controls on your media.
+Don't want viewers skipping important parts of your video? Adios, **Play Bar**!
 Customize your video however you'd like--by adding or removing any buttons.
 
 ## Social Bar
 
-The *Social Bar* is our nickname for the group of social buttons that sit below 
+The *Social Bar* is our nickname for the group of social buttons that sit below
 the video and make it easy to share the video in social networks.
 
 {% post_image hashed_id: '6315a5aa70d7d5aa1d672fc6453f0115ed3127c9', class: 'float_right', width: 300 %}
@@ -110,7 +110,7 @@ Finally, update the *Logo Link* to point to a page of your choosing.
 
 ### Using Video Backlinks
 
-If you use the *embed* option on the Social Bar, you can add backlinks support - 
+If you use the *embed* option on the Social Bar, you can add backlinks support -
 which means if a viewer re-embeds your video, the embed will have a link to
 your original content. This is also valuable from a Video SEO perspective.
 
@@ -137,7 +137,7 @@ gate to capture leads? Then you need Timeline Actions, friend!
 
 {% wistia_embed hashed_id: kh5w16gm6f %}
 
-Timeline Actions are an easy way to get your viewers to take action with your videos. 
+Timeline Actions are an easy way to get your viewers to take action with your videos.
 They're sort of like the sprinkles on top of your (already amazing) video cake.
 Within the Timeline Actions drop down menu we house all sorts of great tools--like
 start and end behaviors, [Turnstile email gate](#turnstile), [Calls to Action](#call_to_action), and [Annotation links](#annotation_link).
@@ -147,8 +147,8 @@ start and end behaviors, [Turnstile email gate](#turnstile), [Calls to Action](#
 {% post_image hashed_id: '983a220538b127659d67228b50bc1040ee18648c', class: 'float_right', width: 300 %}
 
 Any Action added to your video will appear as a waypoint below your video
-timeline. All Actions can be placed at any time within a video. To change when 
-these Actions show up you can simply adjust the time stamps under the Timeline 
+timeline. All Actions can be placed at any time within a video. To change when
+these Actions show up you can simply adjust the time stamps under the Timeline
 Actions menu or drag the waypoints to the exact frames they're to appear.
 
 {% post_image hashed_id: 'ab4efc1f613f79a1bf8a4438a4a525ad2354fc73', class: 'center' %}
@@ -163,8 +163,8 @@ the video.
 {% post_image hashed_id: '0dc1db4a6f46dceeeb41af933e9a62406773bcc0', class: 'float_right', width: 300 %}
 
 The annotation link, when added, will appear in the upper right corner of
-the video. Plus, it can stick around for as long as you'd like. You can adjust the 
-time by updating the time stamps or dragging the waypoint below the video timeline. 
+the video. Plus, it can stick around for as long as you'd like. You can adjust the
+time by updating the time stamps or dragging the waypoint below the video timeline.
 To make your annotation links longer or shorter, adjust the length bar by clicking
 and dragging.
 
@@ -236,9 +236,9 @@ linked.
 
 ## Captions
 
-Captions are essential if you’re communicating with a multilingual audience. They’re 
-great for educators and instructors--making sure your audience is able follow along 
-in any language. Multilingual captions help to break down language barriers, 
+Captions are essential if you’re communicating with a multilingual audience. They’re
+great for educators and instructors--making sure your audience is able follow along
+in any language. Multilingual captions help to break down language barriers,
 getting your awesome content to more viewers.
 
 They’re also a great boost for SEO ranking as the script for your video likely
@@ -249,8 +249,8 @@ contains words related to your ranking terms.
 {% post_image hashed_id: '3b64c15892efcbfb070529fa15704f0d81e683b1', class: 'float_right', width: 300 %}
 
 If your video does not have captions, you'll be presented with the
-option to order a transcript (currently only available in English) 
-or upload your own captions SRT file. You can upload as many SRT 
+option to order a transcript (currently only available in English)
+or upload your own captions SRT file. You can upload as many SRT
 files as you'd like, in whatever languages you choose.
 
 {% post_image hashed_id: 'a2578d27e3a446cb352c3b723f88c1127eafe5eb', class: 'float_right', width: 300 %}
@@ -277,7 +277,7 @@ and organization a little easier.
 
 ### Set Project Defaults
 
-If you upload your videos in batches, or have lots of videos in your Projects, 
+If you upload your videos in batches, or have lots of videos in your Projects,
 this one is for you.
 
 {% post_image hashed_id: 'd61de26d6486aad9f0e455daccf69ca1d123cff1', class: 'center' %}
@@ -297,6 +297,8 @@ once you apply a set of customizations to a single video, you can apply them
 automatically to all the videos in the Project, and all the videos going
 forward.
 
+{{ "Just a heads up, project defaults can only be set for projects with less than 1,000 medias. If you're working with more, you should create a second project and use [Move & Copy](http://wistia.com/doc/media#moving_and_copying_media) to move your videos." | note }}
+
 ### Load Settings
 
 If your videos *across* Projects share common settings, this one will save you
@@ -305,7 +307,7 @@ lots of time.
 {% post_image hashed_id: '59604c54d44a302334b952c55db51d2c7d553173', class: 'float_right', width: 500 %}
 
 If you've just uploaded a new video, or want to add the customizations from one
-video onto another video, you should *load settings*. Inside the 
+video onto another video, you should *load settings*. Inside the
 [Customize Panel](#the_customize_panel), select the *Load Settings* link at the
 top.
 
@@ -332,11 +334,11 @@ own pace.
 
 **Q: I customized my video, but it isn’t updating on my website....why not?**
 
-A: Live updating of embedded videos is *only* available for embeds created using 
-the Customize & Embed paradigm. Previously embedded videos (before Customize) 
-will not auto-update when you customize them. 
+A: Live updating of embedded videos is *only* available for embeds created using
+the Customize & Embed paradigm. Previously embedded videos (before Customize)
+will not auto-update when you customize them.
 
-If you generate a new customized embed code, this will then auto-update the 
+If you generate a new customized embed code, this will then auto-update the
 next time you make changes to your customizations.
 
 **Q: What if I want my videos to appear differently (i.e. have different
@@ -349,40 +351,40 @@ will need to create a new instance of the video.
 The quickest way to do this is with the [Copy Media]({{ '/media#copy_video' | post_url}})
 tool. Create a copy of your video, and start applying new customizations to it!
 
-**Q: In the SuperEmbed Builder, I had an account-wide default profile for my 
+**Q: In the SuperEmbed Builder, I had an account-wide default profile for my
 embeds...where is that now?**
 
-A: We have made this functionality way more powerful with the ability to 
-[load settings](#advanced_customize_features) (found at the top of the Customize panel) 
-from any video in your account as well as the ability to create Project Default 
+A: We have made this functionality way more powerful with the ability to
+[load settings](#advanced_customize_features) (found at the top of the Customize panel)
+from any video in your account as well as the ability to create Project Default
 profiles (found under “Set Project Defaults” in the Video Actions menu).
 
 
 **Q: Where did “Change Thumbnail” go?**
 
-A: Change thumbnail is now found under the [Appearance tab](#appearance) in the 
+A: Change thumbnail is now found under the [Appearance tab](#appearance) in the
 Customize panel.
 
 
 **Q: Where did my *Email marketing* menu item go?**
 
-A: With Customize, we have centralized all embedding of all types in the *Embed* panel. 
+A: With Customize, we have centralized all embedding of all types in the *Embed* panel.
 Select click on *Embed* under the <span class='action_menu'>Video Actions</span>
 menu. [See more on embedding]({{ '/embedding' | post_url }}).
 
 
 **Q: Where did my *Captions* menu item go?**
 
-A: Management of captions and transcriptions is now all done from within the 
+A: Management of captions and transcriptions is now all done from within the
 Customize Panel under the [Captions tab](#captions).
 
 
 **Q: You said customizations would show up on Twitter, but what about
 Facebook?**
 
-A: Unfortunately, because of the limitations of Facebook embedding, we are not 
-able to push all of your awesome video customizations over there. That being 
-said, we are hopeful that Facebook will start to update their methods for 
+A: Unfortunately, because of the limitations of Facebook embedding, we are not
+able to push all of your awesome video customizations over there. That being
+said, we are hopeful that Facebook will start to update their methods for
 pulling video information so that we can get the customizations flowing!
 
 
