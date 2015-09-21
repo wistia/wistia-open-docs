@@ -26,7 +26,7 @@ See this video for more:
 
 ## Setting Everything Up
 
-There are four steps to getting fully integrated:
+There are three steps to getting fully integrated:
 
 1. [Enable the integration inside your HubSpot account](#enable_the_integration_in_hubspot).
 2. [Set up Turnstile to work with HubSpot](#turnstile).
