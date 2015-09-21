@@ -28,10 +28,9 @@ See this video for more:
 
 There are four steps to getting fully integrated:
 
-1. Enable the integration inside your HubSpot account.
-2. Add the integration JavaScript snippet to your website.
-3. Set up Turnstile to work with HubSpot.
-4. Send emails using Email Merge Tags.
+1. [Enable the integration inside your HubSpot account](#enable_the_integration_in_hubspot).
+2. [Set up Turnstile to work with HubSpot](#turnstile).
+3. Just kidding, there's no step 3. Woot!
 
 
 ### Enable the Integration in HubSpot
@@ -47,27 +46,7 @@ In Integrations, you'll see Wistia right at the top! Click **Integrate with HubS
 
 HubSpot will request the API password from your Wistia account (which you can find [here]({{ '/account-setup#api_access' | post_url }})). Pop that into HubSpot and you're nearly ready.
 
-You're almost done--next you'll need to add the Integration JavaScript.
-
-### Add the Integration JavaScript
-
-If you build and maintain your own website (without using HubSpot's COS), add
-this code snippet after HubSpot's analytics JavaScript:
-
-{% codeblock hubspot_integration.html %}
-<script src="//fast.wistia.com/assets/external/integrations-hubspot-v1.js" async></script>
-{% endcodeblock %}
-
-If you use HubSpot's COS or make landing pages with HubSpot, you'll want to also
-add this snippet to the *Site Footer HTML* in your HubSpot Account.
-
-{% post_image hashed_id: 'b83e5159698404b5e57695caee83ced2b5a2de87', class: 'center' %}
-
-Open the **Content** > **Content Settings** area in your account.
-
-{% post_image hashed_id: '22f0e988ac098330f63651a96c03dd821ff20073', class: 'center' %}
-
-Add the JavaScript snippet to the *Site Footer HTML* area, as shown in the image above, and you're off the the races! Sweet, sweet video statistic will begin getting piped into HubSpot. Woohoo!
+You're almost done! All you need to do now is set up HubSpot with Turnstile in your Wistia account.
 
 ## Turnstile
 
