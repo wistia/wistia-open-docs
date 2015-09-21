@@ -10,22 +10,21 @@ post_intro: <p>WordPress is a wonderful platform that you can use to create powe
 
 ## The Wistia WordPress Plugin
 
-With the [Wistia WordPress Plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) installed, you can add your embed codes to posts and they will be protected by the mighty _anti-mangler_. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background as <a href="//fast.wistia.net/embed/iframe/yr4ecy1p28?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">a silent guardian</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>.
+The [Wistia WordPress plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) adds support for [Wistia oEmbed URLs](#using_an_oembed_url) to WordPress, which make embedding videos in your posts super easy. For more information about how that works, see this guide from the WordPress documentation: [Embeds in WordPress](http://codex.wordpress.org/Embeds).
 
-The Wistia WordPress plugin also adds support for [Wistia oEmbed URLs](#using_an_oembed_url) to WordPress. For more information about how that works, see this guide from the WordPress documentation: [Embeds in WordPress](http://codex.wordpress.org/Embeds).
-
+[Install the Wistia WordPress plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/).
 
 ## Using an oEmbed URL
 
-An oEmbed URL is a simple link that tells WordPress how to embed content from third-party sources (like that cool video hosting platform for businesses you're so fond of). 
+An oEmbed URL is a simple link that tells WordPress how to embed content from third-party sources (like that cool video hosting platform for businesses you're so fond of).
 
 To create an oEmbed URL for a video in your Wistia account, select the "Use oEmbed" option under _Advanced Options_ on the [_Embed & Share_]({{ '/embedding' | post_url }}) screen. Take a look-see:
 
 {% wistia_embed hashed_id: 930hwszdyh %}
 
-That'll give you an oEmbed URL like this example: 
+That'll give you an oEmbed URL like this example:
 
-`http://dave.wistia.com/medias/azmurdmroz?embedType=api&videoWidth=640`. 
+`http://dave.wistia.com/medias/azmurdmroz?embedType=api&videoWidth=640`.
 
 If you copy and paste that URL into a WordPress post and you have the Wistia WordPress plugin installed, WordPress will convert the oEmbed URL into an embedded video.
 
@@ -83,3 +82,9 @@ The simplest way to help search engines find and index the Wistia videos on your
     });
   });
 </script>
+
+## The Anti-Mangler
+
+The Wistia WordPress plugin _also_ includes the Anti-Mangler, which (as the name implies) protects Wistia embed codes on your website from getting mangled by WordPress. It's disabled by default, and should only be enabled if you really don't want to use [the oEmbed approach](#using_an_oembed_url), which is the approach we strongly recommend. The anti-mangler is a decent fallback option though, so if you'd like to enable it, head to Settings in your WordPress admin panel, and choose Wistia WordPress. Or on the Plugins page, there's a Settings link right under the plugin name.
+
+{{ "The Anti-Mangler used to be enabled by default, but is optional (and no longer recommended) as of version 0.8 of the Wistia WordPress plugin." | note }}
