@@ -85,6 +85,6 @@ The simplest way to help search engines find and index the Wistia videos on your
 
 ## The Anti-Mangler
 
-The Wistia WordPress plugin _also_ includes the Anti-Mangler, which (as the name implies) protects Wistia embed codes on your website from getting mangled by WordPress. It's disabled by default, and should only be enabled if you really don't want to use [the oEmbed approach](#using_an_oembed_url), which is the approach we strongly recommend. The anti-mangler is a decent fallback option though, so if you'd like to enable it, head to Settings in your WordPress admin panel, and choose Wistia WordPress. Or on the Plugins page, there's a Settings link right under the plugin name.
+The Wistia WordPress plugin _also_ includes the Anti-Mangler, which (as the name implies) protects Wistia embed codes on your website from getting mangled by WordPress. It's disabled by default, and should only be enabled if you really don't want to use [the oEmbed approach](#using_an_oembed_url), which is the approach we strongly recommend. The Anti-Mangler is a decent fallback option though, so if you'd like to enable it, head to Settings in your WordPress admin panel, and choose Wistia WordPress. Or on the Plugins page, there's a Settings link right under the plugin name.
 
 {{ "The Anti-Mangler used to be enabled by default, but is optional (and no longer recommended) as of version 0.8 of the Wistia WordPress plugin." | note }}
