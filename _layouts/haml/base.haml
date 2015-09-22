@@ -7,8 +7,11 @@
     %title
       {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
 
+    {% if page.title %}
+    %meta.swift{ name: 'title', content: "{{ page.title }}", 'data-type' => 'string' }
+    {% endif %}
     {% if page.description %}
-    %meta{ name: 'description', content: "{{ page.description }}"}
+    %meta.swift{ name: 'description', content: "{{ page.description }}", 'data-type' => 'string' }
     {% endif %}
     %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
     %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/screen' | stylesheet_url }}" }
@@ -22,6 +25,15 @@
     {% endif %}
 
     %link{href: "//cloud.typography.com/6901872/779304/css/fonts.css", rel: "stylesheet", type: "text/css"}/
+
+    / Swiftype search
+    /  the Hash Change JQuery plugin is required for swiftype.search.js
+    :javascript
+      (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+      })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+      _st('install','o5Y5JWTyxXFZXRRuJ2KZ','2.0.0');
 
     :javascript
       var basepath = "{{ '' | post_url }}";    
@@ -37,10 +49,10 @@
     {% include getCookie.html %}
 
     / scripts and such
-    %script{ src: "{{ '/javascripts/search_text' | javascript_url }}" }
     %script{ src: "{{ '/javascripts/mixpanel' | javascript_url }}" }
     %script{ src: "{{ '/javascripts/mixpanel_tracker' | javascript_url }}" }
     %script{ src: "{{ '/javascripts/selective_autoplay' | javascript_url }}" }
+
     :plain
       <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSJ3B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

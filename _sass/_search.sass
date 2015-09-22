@@ -19,18 +19,12 @@
 
 .homepage-search
   @extend %search-basics
-  input
+  input.st-default-search-input
     font-size: 18px
-    padding-left: 10px
     width: 100%
-  button
-    padding: 0px
-    border: 0px solid white
-    background: url('http://wistia.com/doc/images/arrow.png')
-    width: 42px
-    height: 38px
-    top: -40px
-    left: 95%
+    padding-top: 10px 5px 10px 20px
+    background-image: none !important
+    background: none !important
 
 // doc nav search
 
@@ -42,77 +36,15 @@
   top: -5px
   text-align: right
   width: 26%
-  input
+  input.st-default-search-input
     font-size: 15px
     font-weight: 600
     margin: 0
-    padding: 3px 9px
+    padding: 3px 9px 0 10px
     position: relative
     width: 237px
     height: 1.6em
     border: 1px solid $gray2
-  button
-    font-size: 12px
-    margin: 0
-    padding: 0px 0px
-    background: url(http://wistia.com/doc/images/search.png) no-repeat
-    width: 25px
-    height: 16px
-    border: 0px solid white
-    right: 5px
-    top: -25px
-    background-position: center
-  &:focus
-    outline: none
+    background-image: none !important
+    background: none !important
 
-// search results
-
-#results
-  @extend #post
-  min-height: 350px
-  text-align: left
-  width: 848px
-.suggested-title
-  margin-bottom: $padding
-  font-size: 24px
-.results_header
-  border-bottom: 1px solid $gray2
-  margin: 53px 0px 27px 0px
-  padding-bottom: 16px
-  h1
-    font-size: 14px
-    font-weight: 700
-    text-transform: uppercase
-    color: $gray2
-    letter-spacing: 1px
-.result
-  margin: 23px 0 48px
-  font-family: $title-fonts
-  h2
-    margin: 0
-  a
-    font-size: 18px
-    letter-spacing: 0px
-    text-align: left
-    margin-bottom: 33px
-    color: $light_blue
-    font-weight: 600
-    font-family: $fonts
-    -webkit-font-smoothing: antialiased
-  p
-    font-size: 16px
-    line-height: 200%
-    font-weight: 400
-    +anti-alias
-    width: 600px
-    margin-top: 13px
-
-.no_result
-  p
-    font-size: 16px
-    line-height: 200%
-    font-weight: 400
-    +anti-alias
-    width: 600px
-  .query
-    color: #333
