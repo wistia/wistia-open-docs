@@ -25,7 +25,8 @@ no_nav: true
             %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } Wistia Analytics
       #search.columnBig.firstRow.homepage-search
         %h2 Search
-        %input#searchField.st-default-search-input{ type: "text", placeholder: 'What are you looking for?' }
+        %input#searchField{ type: "text", placeholder: 'What are you looking for?' }
+        %button
     .section
       {% include wistia-basics-thumbnails.html %}
 
