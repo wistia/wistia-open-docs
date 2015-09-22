@@ -7,8 +7,11 @@
     %title
       {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
 
+    {% if page.title %}
+    %meta.swift{ name: 'title', content: "{{ page.title }}", 'data-type' => 'string' }
+    {% endif %}
     {% if page.description %}
-    %meta{ name: 'description', content: "{{ page.description }}"}
+    %meta.swift{ name: 'description', content: "{{ page.description }}", 'data-type' => 'string' }
     {% endif %}
     %meta{ 'http-equiv' => 'Content-Type', :content => "text/html;charset=utf-8" }
     %link{ rel: 'stylesheet', type: 'text/css', href: "{{ '/stylesheets/screen' | stylesheet_url }}" }
