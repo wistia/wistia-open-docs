@@ -518,7 +518,7 @@ h1, h2, h3, h4, .seo_faq { color: #363945; font-family: "Avenir", Futura, Helvet
 .home_container .viewAll:hover, .category_container .viewAll:hover { color: #3ea9f5; }
 .home_container .viewAll:hover:before, .category_container .viewAll:hover:before { color: #3ea9f5; }
 
-#post, #results { width: 100%; background-color: white; clear: both; padding-bottom: 20px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+#post { width: 100%; background-color: white; clear: both; padding-bottom: 20px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
 
 .post_title { margin: 54px 0px 20px 0px; border-bottom: 1px solid #cbd0d6; padding-bottom: 15px; }
 
@@ -688,28 +688,10 @@ table tr td pre { margin: 0; padding: 0; }
 .homepage-search input.example, .doc_nav_search input.example { color: #cbd0d6; }
 .homepage-search button, .doc_nav_search button { position: relative; cursor: pointer; }
 
-.homepage-search input { font-size: 18px; padding-left: 10px; width: 100%; }
-.homepage-search button { padding: 0px; border: 0px solid white; background: url("http://wistia.com/doc/images/arrow.png"); width: 42px; height: 38px; top: -40px; left: 95%; }
+.homepage-search input.st-default-search-input { font-size: 18px; width: 100%; padding-top: 10px 5px 10px 20px; background-image: none !important; background: none !important; }
 
 .doc_nav_search { margin: 0; position: absolute; right: 0; top: -5px; text-align: right; width: 26%; }
-.doc_nav_search input { font-size: 15px; font-weight: 600; margin: 0; padding: 3px 9px; position: relative; width: 237px; height: 1.6em; border: 1px solid #cbd0d6; }
-.doc_nav_search button { font-size: 12px; margin: 0; padding: 0px 0px; background: url(http://wistia.com/doc/images/search.png) no-repeat; width: 25px; height: 16px; border: 0px solid white; right: 5px; top: -25px; background-position: center; }
-.doc_nav_search:focus { outline: none; }
-
-#results { min-height: 350px; text-align: left; width: 848px; }
-
-.suggested-title { margin-bottom: 0px; font-size: 24px; }
-
-.results_header { border-bottom: 1px solid #cbd0d6; margin: 53px 0px 27px 0px; padding-bottom: 16px; }
-.results_header h1 { font-size: 14px; font-weight: 700; text-transform: uppercase; color: #cbd0d6; letter-spacing: 1px; }
-
-.result { margin: 23px 0 48px; font-family: "Avenir", Futura, Helvetica, sans-serif; }
-.result h2 { margin: 0; }
-.result a { font-size: 18px; letter-spacing: 0px; text-align: left; margin-bottom: 33px; color: #3ea9f5; font-weight: 600; font-family: "Avenir", Futura, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
-.result p { font-size: 16px; line-height: 200%; font-weight: 400; -webkit-font-smoothing: antialiased; width: 600px; margin-top: 13px; }
-
-.no_result p { font-size: 16px; line-height: 200%; font-weight: 400; -webkit-font-smoothing: antialiased; width: 600px; }
-.no_result .query { color: #333333; }
+.doc_nav_search input.st-default-search-input { font-size: 15px; font-weight: 600; margin: 0; padding: 3px 9px 0 10px; position: relative; width: 237px; height: 1.6em; border: 1px solid #cbd0d6; background-image: none !important; background: none !important; }
 
 code, pre { background: #eceef1; border: 1px solid #cbd0d6; font-family: monospace; font-weight: 500; }
 
@@ -969,3 +951,5 @@ ol li a:hover { border-bottom: 1px solid #56be8e; text-decoration: none; }
 .video-info-container .description ul li:hover a:first-child, .video-info-container .description ul li:hover i { color: #40aaef; }
 .video-info-container .description h2 { font-size: 18px; margin: 15px 0; border: none; }
 .video-info-container .description h2 a { color: #363945; text-decoration: underline; }
+
+.st-ui-search-input .st-default-search-input { background: white; }
