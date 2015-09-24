@@ -10,7 +10,7 @@ Being short a cave, it lives here in this repo instead.
 Overview
 --------
 
-The Wistia Doc houses our app-specific notes and instructions on using Wistia. 
+The Wistia Doc houses our app-specific notes and instructions on using Wistia.
 
 We looked at a lot of *documentation software*, but it all felt
 very...impersonal. Like we wanted to get the doc out there as fast as we could,
@@ -45,6 +45,8 @@ If you don't have homebrew:
 
     ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
 
+You'll also need to install homebrew cask
+
 In a new window, run:
 
     brew install elasticsearch
@@ -60,7 +62,7 @@ Go back to your old window and run
 
 if you don't have node installed:
 
-    brew install node 
+    brew install node
 
 make sure this is in your `.bashrc`:
 
@@ -82,7 +84,7 @@ btw, wget is used to pull global Wistia header from `wistiacom`.
 
 ### How to Add/Update Content
 
-Update markdown files in `_posts` directory. Based on markdown syntax by 
+Update markdown files in `_posts` directory. Based on markdown syntax by
 [John Gruber](http://daringfireball.net/projects/markdown/).
 
 To add a new post, use:
@@ -105,7 +107,7 @@ Videos are generated using an oEmbed plugin:
 
     {% wistia_embed hashed_id: AAAAAAA, videoWidth: 660, videoHeight: 400 %}
 
-defaults: 
+defaults:
 
 * playerColor: "688AAD" # $accent_blue from screen.sass
 * width: "660"
@@ -116,7 +118,7 @@ defaults:
 * embedType: "seo"
 * controlsVisibleOnLoad: false
 
-### How to Add/Update Embedded Code 
+### How to Add/Update Embedded Code
 
 For single line code, use the `<code>` block with class "full_width".
 
@@ -138,21 +140,21 @@ Links also use a custom filter, so we can control the root path:
 * launch local server,
 * and track changes to site/styling (localhost:9292)
 
-Changes to posts, javascript, and sass will take effect dynamically 
+Changes to posts, javascript, and sass will take effect dynamically
 (you'll still need to re-load, you slacker).
 
-**Note:** Changes to layouts, includes, config files, and static pages 
+**Note:** Changes to layouts, includes, config files, and static pages
 (anything in HAML) need to be re-converted. Re-run `rake preview` to see updates.
 
 ### How to Delete Pages
 
 Did you find something tragically old in the docs? Yeah, me too. Here's how to delete that bad boy.
 
-1. Delete the markdown file locally, and remove any references to it in the 
+1. Delete the markdown file locally, and remove any references to it in the
 site index.
 2. After you've pushed changes to master and deployed, make sure that ish is
 gone by heading to the page. Hard refresh, friend--don't forget!
-3. if it isn't, purge the page in Fastly's cache from skycrank with 
+3. if it isn't, purge the page in Fastly's cache from skycrank with
 `curl -X PURGE http://wistia.com/doc/thepageurl`
 4. last but not least, [ask Google to remove it from the interwebs/search](https://www.google.com/webmasters/tools/removals?pli=1)
 
@@ -168,7 +170,7 @@ Production Commands
 Push code to github:
 
     git push origin master
-    
+
 From skycrank, update the docs box with master:
 
     ./crank docs deploy
@@ -176,13 +178,13 @@ From skycrank, update the docs box with master:
 ### Box Problems
 
 Restart Elasticsearch from skycrank
-  
+
     ./crank docs start_elasticsearch
 
 Contact
 -------
 
-Want to chat? Weird, me too. You can [email me](mailto:jeff@wistia.com), or 
+Want to chat? Weird, me too. You can [email me](mailto:jeff@wistia.com), or
 reach me on [twitter](http://twitter.com/jeffvincent).
 
 Swiftype
