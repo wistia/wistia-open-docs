@@ -38,14 +38,19 @@ Development
     git clone
     bundle install
 
+### Installing Bundler
+
+If you don't have bundler installed:
+
+    gem install bundler
 
 ### Installing and starting elasticsearch
 
 If you don't have homebrew:
 
-    ruby <(curl -fsSk https://raw.github.com/mxcl/homebrew/go)
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-You'll also need to install homebrew cask
+Follow the instructions to also download Cask.
 
 In a new window, run:
 
