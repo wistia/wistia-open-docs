@@ -953,3 +953,5 @@ ol li a:hover { border-bottom: 1px solid #56be8e; text-decoration: none; }
 .video-info-container .description h2 a { color: #363945; text-decoration: underline; }
 
 .st-ui-search-input .st-default-search-input { background: white; }
+
+#searchField { line-height: normal; padding-top: 7px; padding-right: 11px; padding-bottom: 7px; padding-left: 28px; border-radius: 5px; }
