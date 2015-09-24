@@ -4,7 +4,7 @@ layout: post
 api: true
 api_warning: true
 special_category_link: developers
-category: For Developers
+category: Developers
 description: Get easy access to all the Wistia embeds on a page.
 footer: 'for_developers'
 post_intro: <p>Looking for simple, programmatic access to all the Wistia embeds on a page? Want to be notified anytime someone plays any Wistia video on your website?</p><p>The Embed Shepherd provides a global list of all the Wistia embeds on the page, along with convenient functions to bind to all of them.</p>
@@ -19,7 +19,7 @@ The Embed Shepherd comes included with the javascript we have on _all_ Wistia em
 <script src="//fast.wistia.net/assets/external/E-v1.js"></script>
 {% endcodeblock %}
 
-If it's not included on your page/site already you can include that snippet anywhere on your page. Generally we recommend adding it to the `<head>` of your page. Once it has run, any existing 
+If it's not included on your page/site already you can include that snippet anywhere on your page. Generally we recommend adding it to the `<head>` of your page. Once it has run, any existing
 or future Wistia embeds will be included in the global array `window.wistiaEmbeds`.
 
 If you'd like, you can load the script asynchronously like so. Once Embed Shepherd loads, it will execute the `wistiaEmbedShepherdReady` function if it exists. Wrap whatever you need to do in this function and you can be assured that `window.wistiaEmbeds` is available! Check it out:
@@ -38,14 +38,14 @@ If you'd like, you can load the script asynchronously like so. Once Embed Shephe
 
 ## The wistiaEmbeds variable
 
-The Embed Shepherd immediately sets up a global variable called `wistiaEmbeds` 
-in the `window` scope. `wistiaEmbeds` is an array containing all active Wistia 
-embed handles on the page. If an embed code is hidden or removed from the page, 
-the corresponding handle will be removed. Similarly, when a new embed is injected 
+The Embed Shepherd immediately sets up a global variable called `wistiaEmbeds`
+in the `window` scope. `wistiaEmbeds` is an array containing all active Wistia
+embed handles on the page. If an embed code is hidden or removed from the page,
+the corresponding handle will be removed. Similarly, when a new embed is injected
 into the page--whether iframe, API, SEO, or popover--it will be available in `wistiaEmbeds`.
 
-The `wistiaEmbeds` variable is based on a normal Javascript Array. As such, 
-you can loop over the embeds, each of which has methods as defined in the 
+The `wistiaEmbeds` variable is based on a normal Javascript Array. As such,
+you can loop over the embeds, each of which has methods as defined in the
 [Player API]({{ '/player-api' | post_url }}).
 
 {% codeblock playlist_api.js %}
@@ -55,13 +55,13 @@ for (var i = 0; i < wistiaEmbeds.length; i++) {
 }
 {% endcodeblock %}
 
-Often times this is not what you want to do though, because it will only loop 
-over the embeds that exist at the time of execution. Instead, take a look 
+Often times this is not what you want to do though, because it will only loop
+over the embeds that exist at the time of execution. Instead, take a look
 below at the `bind` and `onFind` methods.
 
 ## Binding to all embeds on a page
 
-You might want to capture events such as "play" or "end" for any video on the 
+You might want to capture events such as "play" or "end" for any video on the
 page. The `wistiaEmbeds` variable provides a `bind` method to do just that.
 
 {% codeblock playlist_api.js %}
@@ -85,8 +85,8 @@ wistiaEmbeds.bind("play", function(video) {
 
 ## Access each active embed and all FUTURE embeds
 
-If you want to perform initialization logic for each video, including those 
-that are injected after the Embed Shepherd is first executed, then the `onFind` 
+If you want to perform initialization logic for each video, including those
+that are injected after the Embed Shepherd is first executed, then the `onFind`
 method will help you out.
 
 {% codeblock playlist_api.js %}

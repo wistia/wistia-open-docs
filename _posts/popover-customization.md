@@ -1,7 +1,7 @@
 ---
 title: Popover Embed Customization
 layout: post
-category: For Developers
+category: Developers
 api_warning: true
 description: Customize your 'popover' embeds with these tips.
 footer: 'for_developers'
@@ -72,7 +72,7 @@ Just like the color and opacity above, adding a title/caption to your popover in
 Let's start with the same embed code as above:
 
 {% codeblock thumbnail.html %}
-<a href="http://fast.wistia.net/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" 
+<a href="http://fast.wistia.net/embed/iframe/e6bfb5acbd?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true"
 class="wistia-popover[width=640,height=360,playerColor=#636155]"><img src="http://embed.wistia.com/deliveries/d88b25fd28dda2795fa3c754f6d08221cfb8b206.jpg?image_play_button=true&image_crop_resized=150x84" /></a>
 <script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>
 {% endcodeblock %}
@@ -86,7 +86,7 @@ We just added the title content (with the 'title=' entry) and set the title to d
 
 To see what this looks like, check this <a href="http://fast.wistia.net/embed/iframe/19bd8cf131?videoWidth=640&videoHeight=360&controlsVisibleOnLoad=true&autoPlay=true&popover=true" class='wistia-popover[width=640,height=360,playerColor=#636155,helpers.overlay.css.backgroundColor=#000,helpers.overlay.opacity=1,title=<center><strong>SuperEmbeds Rock!</strong></center>,helpers.title.type=inside,padding=60,]'>Popover with Title example</a><script charset="ISO-8859-1" src="http://fast.wistia.net/static/popover-v1.js"></script>.
 
---- 
+---
 
 ## Have Your Wistia Popover Appear on Page Load
 
@@ -103,4 +103,3 @@ wistiaJQuery(document).ready( function() {
 {% endcodeblock %}
 
 If you have more than one popover on the page, you'll want to add an ID onto the link, so you can launch specific popovers.
-
