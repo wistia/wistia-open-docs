@@ -133,17 +133,21 @@ the page.
 For embed links, this is `true` by default; that's why they play on click. If
 you just want to replace the video on click, but not play, set it to false.
 
-    <a href="#wistia_30q7n48g4f?autoPlay=false">Make French Toast</a>
+{% codeblock disable_autoplay.html %}
+<a href="#wistia_30q7n48g4f?autoPlay=false">Make French Toast</a>
+{% endcodeblock %}    
 
 ### container
 
 Set the specific video this embed link should connect to. This overrides all
 other strategies for connecting embed links to videos.
 
-    <a href="#wistia_lkjer09098?container=the_other_video">Other Video</a>
-    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-    <div id="the_video" class="wistia_async_986fe34j56 wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-    <div id="the_other_video" class="wistia_async_30q7n48g4f wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+{% codeblock set_embed_link_container.html %}
+<a href="#wistia_lkjer09098?container=the_other_video">Other Video</a>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<div id="the_video" class="wistia_async_986fe34j56 wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<div id="the_other_video" class="wistia_async_30q7n48g4f wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+{% endcodeblock %}
 
 ### includeInPlaylist
 
@@ -155,16 +159,20 @@ it to be included, use this option.
 When switching between videos, you can specify a transition animation. Allowed
 values are `fade`, `slide`, `crossfade`, and `none`. The default is `fade`.
 
-    <a href="#wistia_30q7n48g4f?transition=slide">Make French Toast</a>
-    <a href="#wistia_lkjer09098?transition=crossfade">Another Video</a>
+{% codeblock set_transition_type.html %}
+<a href="#wistia_30q7n48g4f?transition=slide">Make French Toast</a>
+<a href="#wistia_lkjer09098?transition=crossfade">Another Video</a>
+{% endcodeblock %}
 
 ### transitionTime
 
 To be used in conjunction with `transition`, set the total time in milliseconds
 it takes to perform the animation.
 
-    <a href="#wistia_30q7n48g4f?transition=slide&transitionTime=2000">Super Slow Slide</a>
-    <a href="#wistia_30q7n48g4f?transition=crossfade&transitionTime=150">Quick Crossfade</a>
+{% codeblock set_transition_time.html %}
+<a href="#wistia_30q7n48g4f?transition=slide&transitionTime=2000">Super Slow Slide</a>
+<a href="#wistia_30q7n48g4f?transition=crossfade&transitionTime=150">Quick Crossfade</a>
+{% endcodeblock %}
 
 ## Special Playlist Options
 
@@ -180,8 +188,10 @@ learn how to use this effectively.
 When the last video finishes, embed and play the first video again. Default is
 false.
 
-    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-    <div class="wistia_embed wistia_async_30q7n48g4f playlistLinks=auto playlistLoop=true" style="height:360px;width:640px">&nbsp;</div>
+{% codeblock loop_that_playlist.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_30q7n48g4f playlistLinks=auto playlistLoop=true" style="height:360px;width:640px">&nbsp;</div>
+{% endcodeblock %}
 
 ## Advanced Embed Links Targeting
 
