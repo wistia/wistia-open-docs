@@ -16,16 +16,13 @@ including in Wistia CTAs and Annotations.
 Embed Links are best illustrated by example. Check out the markup below.
 
 {% codeblock example_embed_link.html %}
-<div id="wistia_30q7n48g4f" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("30q7n48g4f");
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_30q7n48g4f" style="height:360px;width:640px">&nbsp;</div>
 <a href="#wistia_30q7n48g4f">Make French Toast</a><br/>
 <a href="#wistia_342jss6yh5">Wistia Team Intro</a><br/>
 {% endcodeblock %}
 
-Here we have a standard API embed code followed by two links. The links have
+Here we have an async API embed code followed by two links. The links have
 a particular format. They start with a `#`, which makes them "anchor tags".
 The `#` is followed by a video's 10 character hashed ID. A `?` separates the
 hashed ID from a list of optional
@@ -40,11 +37,8 @@ iframe embeds.
 
 Check out a live example!
 
-<div id="wistia_30q7n48g4f_1" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("30q7n48g4f", { container: "wistia_30q7n48g4f_1" });
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_30q7n48g4f" style="height:360px;width:640px">&nbsp;</div>
 <a href="#wistia_30q7n48g4f?replace=closestAbove">Make French Toast</a><br/>
 <a href="#wistia_342jss6yh5?replace=closestAbove">Wistia Team Intro</a><br/>
 
@@ -62,11 +56,8 @@ We can easily modify the markup of that code to add that functionality. Let's
 try it!
 
 {% codeblock example_playlist_link.html %}
-<div id="wistia_30q7n48g4f" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("30q7n48g4f", { playlistLinks: "auto" });
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_30q7n48g4f playlistLinks=auto" style="height:360px;width:640px">&nbsp;</div>
 <a href="#wistia_30q7n48g4f">Make French Toast</a><br/>
 <a href="#wistia_342jss6yh5?time=30">Wistia Team Intro</a><br/>
 {% endcodeblock %}
@@ -79,14 +70,8 @@ markup.
 If you watch to the end of "Make French Toast", then the "Wistia Team Intro"
 should start playing immediately.
 
-<div id="wistia_30q7n48g4f_2" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("30q7n48g4f", {
-  container: "wistia_30q7n48g4f_2",
-  playlistLinks: "playlist_links_1"
-});
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_30q7n48g4f playlistLinks=playlist_links_1" style="height:360px;width:640px">&nbsp;</div>
 <p id="playlist_links_1" class="wistia_playlist_links">
   <a href="#wistia_30q7n48g4f">Make French Toast</a><br/>
   <a href="#wistia_342jss6yh5">Wistia Team Intro</a><br/>
@@ -99,11 +84,8 @@ same format as Embed Links. Just make sure the hashed ID is the same as the
 embedded video. Check it out!
 
 {% codeblock example_embed_link.html %}
-<div id="wistia_30q7n48g4f" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("30q7n48g4f");
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_30q7n48g4f" style="height:360px;width:640px">&nbsp;</div>
 <a href="#wistia_30q7n48g4f?time=0">Make French Toast @ 0</a><br/>
 <a href="#wistia_30q7n48g4f?time=10">Make French Toast @ 10</a><br/>
 <a href="#wistia_30q7n48g4f?time=20">Make French Toast @ 20</a><br/>
@@ -113,11 +95,8 @@ wistiaEmbed = Wistia.embed("30q7n48g4f");
 Note that I've just modified the "time" embed option for each link, and the
 hashed ID __30q7n48g4f__ is the same as the video I initially embedded.
 
-<div id="wistia_30q7n48g4f_3" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("30q7n48g4f", { container: "wistia_30q7n48g4f_3" });
-</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_30q7n48g4f" style="height:360px;width:640px">&nbsp;</div>
 <a href="#wistia_30q7n48g4f?time=0">Make French Toast @ 0</a><br/>
 <a href="#wistia_30q7n48g4f?time=10">Make French Toast @ 10</a><br/>
 <a href="#wistia_30q7n48g4f?time=20">Make French Toast @ 20</a><br/>
@@ -201,14 +180,8 @@ learn how to use this effectively.
 When the last video finishes, embed and play the first video again. Default is
 false.
 
-    <div id="wistia_30q7n48g4f" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-    <script>
-    wistiaEmbed = Wistia.embed("30q7n48g4f", {
-      playlistLinks: "auto",
-      playlistLoop: true
-    });
-    </script>
+    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+    <div class="wistia_embed wistia_async_30q7n48g4f playlistLinks=auto playlistLoop=true" style="height:360px;width:640px">&nbsp;</div>
 
 ## Advanced Embed Links Targeting
 
