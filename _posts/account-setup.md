@@ -1,7 +1,7 @@
 ---
 title: Account Settings
 layout: post
-category: Getting Set Up
+category: Account
 description: Questions about admin type stuff? Account Settings? Billing statements? Don't worry, we've got it all covered right here.
 footer: 'for_intermediates'
 ---
@@ -60,9 +60,9 @@ In the section labeled "Wistia Subdomain", you will see a text box showing the c
 ## Video Quality
 
 By default, [Wistia will automatically determine]({{ '/export-settings#how_wistia_does_hd' | post_url }})
-the best way to deliver your video for the smoothest playback. If, 
-however, you'd like to choose your own Video Quality setting for your 
-account, you can do so in your Account Settings. Click the Account tab 
+the best way to deliver your video for the smoothest playback. If,
+however, you'd like to choose your own Video Quality setting for your
+account, you can do so in your Account Settings. Click the Account tab
 in *Settings*, and scroll down to find the *Video Quality* section.
 
 {% post_image hashed_id: 'd0246fca7aa6bf6753b1c47f5c5da479502ab63e', class: 'center' %}
@@ -157,7 +157,7 @@ We understand, sometimes it just isn't meant to be.
 
 If you'd like to cancel your account you must be logged in as the Account Owner.
 After logging in, navigate to your Account Settings and choose "Cancel" from the
-side menu. We'll ask you to fill out a few questions about your experience, 
+side menu. We'll ask you to fill out a few questions about your experience,
 and you're good to go.
 
 Godspeed, fellow video friend.

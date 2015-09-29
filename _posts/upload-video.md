@@ -2,6 +2,7 @@
 title: Uploading
 layout: post
 description: Learn how uploading with Wistia works.
+Category: Getting Started
 ---
 
 {% wistia_embed hashed_id: s1dmqzh5ua %}

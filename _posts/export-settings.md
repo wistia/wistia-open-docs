@@ -1,7 +1,7 @@
 ---
 title: Optimal Export Settings
 layout: post
-category: Getting Set Up
+category: Getting Started
 description: Get the low down on our recommended file settings when finishing up your videos.
 post_intro: <p>Before you start uploading to your Wistia account, get familiar with our recommendations for video resolution, settings, and formats. This will make uploading a painless experience, and you will end up with top quality web encodes for your videos!</p>
 ---

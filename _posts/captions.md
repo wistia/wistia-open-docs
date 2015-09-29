@@ -1,7 +1,7 @@
 ---
 title: Captions
 layout: post
-category: Embedding
+category: Customize
 description:
   Closed captioning makes content that’s easier for viewers
   to digest and read (even in different languages), and has

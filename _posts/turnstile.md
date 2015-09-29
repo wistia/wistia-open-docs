@@ -1,6 +1,6 @@
 ---
 title: Email Capture with Wistia Turnstile
-category: Public Sharing
+category: Customize
 layout: post
 description:
   Turnstile makes it easy to add email capture to any video. Build a better email

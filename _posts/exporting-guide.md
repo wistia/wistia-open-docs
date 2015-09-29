@@ -1,7 +1,7 @@
 ---
 title: Exporting from Video Editors
 layout: post
-category: Getting Set Up
+category: Getting Started
 description: Get the skinny on using specific software to export video for uploading to Wistia.
 post_intro: <p>We know just enough to be dangerous about most video export software. Here's our tips and tricks to using them.</p><p>Looking for a guide to optimal export <em>settings</em>? You should also see our <a href="/doc/export-settings">export settings</a> page.</p><p>If you're looking for free video transcoding software, we recommend <a href="#handbrake">Handbrake</a>.</p>
 ---

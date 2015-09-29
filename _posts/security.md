@@ -2,7 +2,7 @@
 title: Wistia Video Security
 layout: post
 description: Wistia provides multiple levels of security for your videos. Learn more here!
-category: Getting Set Up
+category: Account
 ---
 
 
@@ -31,6 +31,3 @@ With that said, **it is not possible to guarantee your videos will remain secure
 If you have critical content, don't allow viewers you are uncomfortable with to access the content. Putting it behind access walls is your best bet - not trying to put security on the video content.
 
 As we've posted in the past, [if you can see it, you can steal it](http://wistia.com/blog/dirty-web-video-secret-if-you-can-see-it-you-can-steal-it), and if you aren't comfortable sharing it by e-mail, you might not want to share it with web video.
-
-
-

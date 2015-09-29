@@ -1,7 +1,7 @@
 ---
 title: Video SEO
 layout: post
-category: Public Sharing
+category: Embed & Share
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
 post_intro: <p>Video SEO is the practice of providing the metadata (or "information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia provides both recommended approaches to Video SEO - using what's called a "video sitemap", and also utilizing specific markup in the on-page embed code. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
 ---
@@ -257,7 +257,7 @@ will cover the steps to hosting and submitting a Video Sitemap file yourself.
 
 In order for these steps to be useful, you must first go through the [normal
 Video SEO setup steps]('#getting_set_up'). You'll need to confirm your
-[Robots.txt file]('#robotstxt_file_setup'). Once that is complete, you can use 
+[Robots.txt file]('#robotstxt_file_setup'). Once that is complete, you can use
 the “Add to SEO Sitemap” function under the Media Actions menu to create new
 entries for your videos.
 
@@ -274,7 +274,7 @@ icon) on the Video SEO tool page. See the screenshot below.
 
 **Upload Video sitemap to your own host**
 
-Upload to your web host, the same way you might for a new web page or web page 
+Upload to your web host, the same way you might for a new web page or web page
 image. Doesn’t need to go anywhere in particular, just needs to be accessible
 by Google.
 
@@ -283,7 +283,7 @@ by Google.
 Follow [this guide](https://support.google.com/webmasters/answer/183669?hl=en)
 to make sure you submit your new Video Sitemap correctly.
 
-When you add a new video to your sitemap, you will need to re-export, replace 
+When you add a new video to your sitemap, you will need to re-export, replace
 the version you have on your end, and re-submit to Google. Annoying, but if our
 hosting paradigm doesn't work for some reason, this might be a good solution!
 
@@ -302,7 +302,7 @@ Tools, all automatically.
 ### I thought only YouTube got indexed on Google search results? Should I have my video on both platforms?
 
 Google has continued to support an open market, indexing videos that follow
-their SEO guidelines, regardless of where they are hosted. 
+their SEO guidelines, regardless of where they are hosted.
 
 That being said, you don't really want to have your video on YouTube *and* use
 Wistia Video SEO. Because YouTube videos are indexed by default, your content
@@ -370,8 +370,8 @@ There are a few practices that we have seen prevent indexing.
 ### Can I use Wistia embeds to build links for SEO?
 
 The *Social Bar* includes an *embed* button, which allows viewers to embed your
-video in other places. Wistia includes a 
-[customize option]({{ '/customizing-your-video' | post_url }}) for adding links 
+video in other places. Wistia includes a
+[customize option]({{ '/customizing-your-video' | post_url }}) for adding links
 that point back to the original site into the embed code your viewers can access.
 
 So if one of your viewers re-embeds the video, new viewers can track down the

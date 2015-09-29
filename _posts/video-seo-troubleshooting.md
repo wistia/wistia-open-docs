@@ -2,6 +2,7 @@
 title: Video SEO Troubleshooting
 layout: post
 description: Having trouble getting your Video SEO functionality up and running? Follow our simple troubleshooting guide to cure what ails you!
+Category: Troubleshooting
 ---
 
 Want a quick overview of the Video SEO workflow? Check out this video:
@@ -51,7 +52,7 @@ Nothing ruins your mood like an error message you can't fix. We're here to help!
 
 *  *issue:* you embedded the video correctly, but with an unsupported embed code type.
 
-*  *to solve:* make sure that the video has been embedded on your site using the "SEO" embed type. Note that popovers, iframes, and playlists are not supported. You can find the SEO embed type on the Embed & Share modal under the Embed Type option for an Inline Embed. 
+*  *to solve:* make sure that the video has been embedded on your site using the "SEO" embed type. Note that popovers, iframes, and playlists are not supported. You can find the SEO embed type on the Embed & Share modal under the Embed Type option for an Inline Embed.
 
 **2. The video hasn't been embedded on the page specified**
 

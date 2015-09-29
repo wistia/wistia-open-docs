@@ -1,7 +1,7 @@
 ---
 title: All About Projects
 layout: post
-category: Getting Set Up
+category: Account
 description: Projects are where you store, organize, and access media. Projects are the building blocks for Wistia organization.
 post_intro: <p>A <strong>project</strong> is Wistia's method for grouping related media. It's our way of helping you stay organized and happy.</p><p>A project could contain all the training videos for your organization, all the sales materials related to a specific product, or just a bunch of your upcoming content.</p>
 ---
@@ -49,9 +49,9 @@ to the second field in the form and click Save to publish your changes.
 
 {% post_image hashed_id: '654501f8da59ccbbe89e0cb9d1dc8744e995a434', class: 'center' %}
 
-You can type plain text into the description field or you can use markdown to style the text 
-and put images or links into your description. Clicking the link "Formatting with Markdown" 
-will open a guide explaining more about markdown. 
+You can type plain text into the description field or you can use markdown to style the text
+and put images or links into your description. Clicking the link "Formatting with Markdown"
+will open a guide explaining more about markdown.
 
 ## Sharing Access to Projects
 
@@ -86,15 +86,15 @@ on the [private sharing documentation page]({{ '/private-sharing' | post_url }})
 
 ## Playlists
 
-**Playlists** are a video player for multiple videos - all the videos in your 
-account. You can select `</> Embed Playlist` to get started, or head over to 
+**Playlists** are a video player for multiple videos - all the videos in your
+account. You can select `</> Embed Playlist` to get started, or head over to
 the [playlists doc page]({{ '/playlists' | post_url }}) for more information.
 
 ## Project Sections
 
 Project sections allow you to organize media within a project. Media can be put
 into project sections and the sections can then expanded or collapsed to provide
-a cleaner experience for projects with many media. 
+a cleaner experience for projects with many media.
 
 {% post_image hashed_id: '7832934fe67fb18882143b3532fb037d44fa529a', class: 'center' %}
 

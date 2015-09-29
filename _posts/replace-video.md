@@ -2,21 +2,21 @@
 title: Replace Your Video
 layout: post
 description: Sometimes, it just takes too much effort to replace an embed code in the wild. Calling your developer doesn't always need to happen though, with Wistia's replace video tool!
-category: Public Sharing
+category: Customize
 ---
 
 There are two ways to replace a video in Wistia--**overwrite** and **swap**. An overwrite
 for a video is intended for slight editing tweaks (caught that typo too late!) and
-quick fixes. Videos that are overwritten will keep their stats--so you won't 
+quick fixes. Videos that are overwritten will keep their stats--so you won't
 lose a second of data.
 
-A swap makes it easy to place a completely different video in the wild without 
-changing your embed code. When you swap a video we'll save the old version in 
-the same project with a new Hashed ID--that magical string of numbers and 
-letters at the end of a Wistia URL that keeps everything neatly organized 
-behind-the-scenes. 
+A swap makes it easy to place a completely different video in the wild without
+changing your embed code. When you swap a video we'll save the old version in
+the same project with a new Hashed ID--that magical string of numbers and
+letters at the end of a Wistia URL that keeps everything neatly organized
+behind-the-scenes.
 
-(So for this video `https://support.wistia.com/medias/sqzcdxvf9p` the Hashed ID 
+(So for this video `https://support.wistia.com/medias/sqzcdxvf9p` the Hashed ID
 would be `sqzcdxvf9p`.)
 
 The Replace Video functionality is designed to cause the least disruption
@@ -35,7 +35,7 @@ Let's dive in.
 
 ## Swap out Video Content
 
-Swapping a video makes it easy to change an already embedded video without 
+Swapping a video makes it easy to change an already embedded video without
 touching any code. If you're looking to change your homepage video, but don't
 have time or resources to change your embed code, then **swap** is for you!
 
@@ -55,13 +55,13 @@ you'd like to upload as your replacement.
 Your video will begin uploading and processing. You're almost there!
 
 Once the video is done processing you're good to go! Your new video will appear
-in the wild, and your old video (with all of its stats) will be safely archived 
+in the wild, and your old video (with all of its stats) will be safely archived
 in the same project.
 
 {% post_image hashed_id: '4728699cabd1c74119d78219a70a5bb4a62dd20a', class: 'center' %}
 
 You can update the title of either video by choosing the Edit button next to the
-video name. [Here's a bit more]({{ '/projects' | post_url }}) about staying 
+video name. [Here's a bit more]({{ '/projects' | post_url }}) about staying
 organized in your Wistia account.
 
 Keep in mind, swap will change all instances of your video--including any links
@@ -69,13 +69,13 @@ you've shared (something like: `https://support.wistia.com/medias/sqzcdxvf9p`).
 If you're still not sure of the best move for you, [give us a shout](http://wistia.com/support/contact)!
 We'll be happy to help.
 
-## Overwrite the Original 
+## Overwrite the Original
 
 Overwriting is intended for quick fixes and last minute updates. Spell the CEO's
 name wrong, or decide the logo should be a different color? Don't sweat! We've
 got you covered.
 
-First, navigate to the video you'd like to update and choose "Replace Video" 
+First, navigate to the video you'd like to update and choose "Replace Video"
 from the *Video Actions* menu.
 
 Select **Overwrite the original content, build on top of its stats** from the
@@ -92,4 +92,3 @@ Once it's done, you're all set! The video will update in the wild--no new embed
 code needed.
 
 {{ "Still not sure what's the right move? Got a use case that's got you in a jam? [Contact us](http://wistia.com/support/contact). We'd love to help you out. :)" | tip }}
-

@@ -1,8 +1,8 @@
 ---
 title: Embed Troubleshooting
 layout: post
-category: Embedding
-description: Does your embed look a bit funky? Is it inside out, backwards, or upside down? You've come to the right place. 
+category: Troubleshooting
+description: Does your embed look a bit funky? Is it inside out, backwards, or upside down? You've come to the right place.
 post_intro:
   <p>Does your embed look a bit funky? Is it inside out, backwards, or upside down? You've come to the right place.</p>
 ---
@@ -28,7 +28,7 @@ Does your video look sort of like this one?
 wistiaEmbed = Wistia.embed("hj6gi4rn4g");
 </script>
 
-Those lines on the left and right sides of your video (or perhaps top and bottom) are the worst! That can happen if the dimensions of your embed code don't match the dimensions of your video. 
+Those lines on the left and right sides of your video (or perhaps top and bottom) are the worst! That can happen if the dimensions of your embed code don't match the dimensions of your video.
 
 While there are many possible causes for this, one common reason is that the [Social Bar]({{ "/customizing-your-video#social_bar" | post_url }}) was either added or removed _after_ the video was embedded. Since the Social Bar takes up some extra space below the video, the embed code's dimensions need to adjust to accomodate for it. Try re-embedding your video to see if that helps!
 
@@ -40,11 +40,11 @@ If your Internet connection is super speedy but you're still having playback iss
 
 ## Video not resizing correctly
 
-There are generally two ways in which a video might not display at the size you'd expect: 
+There are generally two ways in which a video might not display at the size you'd expect:
 
 1. You're [embedding in WordPress with oEmbed]({{ "/wordpress#using_an_oembed_url" | post_url }}), but your video is displaying at smaller dimensions than what you set on the _Embed & Share_ screen. If that's happening, it's possible that your WordPress theme specifies a maximum width for content embedded with oEmbed. See [this tip in the Wistia WordPress docs]({{ "/wordpress#video_appearing_smaller_than_it_should_be" | post_url }}) for details on fixing that.
 
-2. You'd like your video to be responsive, but it's not changing size when it should. First things first, make sure you're using [Video Foam]({{ '/video-foam' | post_url }})! Video Foam is the best way to make a video responsive. 
+2. You'd like your video to be responsive, but it's not changing size when it should. First things first, make sure you're using [Video Foam]({{ '/video-foam' | post_url }})! Video Foam is the best way to make a video responsive.
 If you're using Video Foam already but your video is not responding correctly, check to make sure that the parent container (that's the HTML element surrounding your video, like a set of `<div>` tags) is set to the width you'd like. That's what Video Foam will use to determine how wide the video should be.
 
 If you're having a problem with the size of your video and the tips above don't do the trick, [send us a link to the video](http://wistia.com/support/contact) and we'll help you get it looking great!

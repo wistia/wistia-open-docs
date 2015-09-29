@@ -1,7 +1,7 @@
 ---
 title: Wistia Video Playlists
 layout: post
-category: Embedding
+category: Embed & Share
 description: Video playlists are a great way to embed multiple videos on your website through a single embed.  Playlists allow you to update content in your playlist without messing with embed codes (even after embedding!).
 post_intro: <p>Video playlists are a great way to embed multiple videos on your website through a single embed.  Playlists allow you to update content in your playlist without messing with embed codes (even after embedding!).</p><p>They take up less real estate than separate video embeds, while being easier to navigate.  In short, they are a super cool and useful embed type.</p>
 ---
@@ -32,6 +32,6 @@ Once you have selected the "Get Playlist" option, you will be taken to a page wh
 
 {% post_image hashed_id: '9aee4f07f093a07b72f70e8c2aa8439017043fd2', class: 'center' %}
 
-Choose the **theme** you want to use, the **size** for the embedded playlist, and other customization settings here. These settings will override any customizations you may have applied to the individual videos in your playlist with [Customize]({{ '/customizing-your-video' | post_url }}). 
+Choose the **theme** you want to use, the **size** for the embedded playlist, and other customization settings here. These settings will override any customizations you may have applied to the individual videos in your playlist with [Customize]({{ '/customizing-your-video' | post_url }}).
 
 {{ "There are some functionalities in our app that don't work as fully as we'd like them to with Playlists. If you have questions about any of them, [contact us](http://wistia.com/support/contact)." | note }}

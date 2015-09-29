@@ -1,8 +1,8 @@
 ---
 title: Domain Restrictions
 layout: post
-description: Lock videos down to be viewable in domains you specify using Domain Restrictions. 
-category: Embedding
+description: Lock videos down to be viewable in domains you specify using Domain Restrictions.
+category: Account
 footer: 'for_intermediates'
 post_intro:
   "<p>Video embed domain restrictions allows you to prevent a viewer

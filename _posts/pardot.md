@@ -4,7 +4,7 @@ layout: post
 description: How to use Wistia and Pardot together for super-powered video marketing
 post_intro: <p>Use <a href="http://pardot.com">Pardot</a>? Use Wistia? Want to meld them together to execute a video-driven marketing automation strategy the likes of which this world has never seen? You're in the right place, friend.</p>
 footer: 'for_intermediates'
-category: integrations
+category: Integrations
 ---
 
 {% post_image hashed_id: '98d1f2e9c8025c5f2424aefff8dd52f8a2741bcf', class: 'integration_logo' %}

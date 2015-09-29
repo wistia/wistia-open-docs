@@ -2,7 +2,7 @@
 title: Using Wistia with Campaign Monitor
 layout: post
 description: We love Campaign Monitor. Lucky for us, adding a Wistia video to an email campaign is pretty easy, too. Learn how here!
-category: Public Sharing
+category: Integrations
 ---
 
 {% post_image hashed_id: '53bf14a1c11bf428cfcec9dbebc40dee17823e76', width: 190, class: 'float_right intro_image' %}
@@ -43,4 +43,3 @@ Now it's time to fire up your Campaign Monitor account.  In the email you want t
 {% post_image hashed_id: '57225bfe428f0ea2136ee5b4769e0644bed7b4e4', class: 'center' %}
 
 Now your email is ready to send!!  As recipients open your email and click-through to view the video, their stats will be accumulated in Wistia and tagged with their email address.  How cool is that??
-

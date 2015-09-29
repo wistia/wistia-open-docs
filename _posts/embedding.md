@@ -1,7 +1,7 @@
 ---
 title: Embedding Video on Your Website
 layout: post
-category: Embedding
+category: Embed & Share
 description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
 post_intro:
   <p>Putting video on your website is the best way to get your message across.
@@ -11,7 +11,7 @@ post_intro:
 
 ## Pre-Embedding
 
-Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Huzzah! 
+Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Huzzah!
 
 Fun Fact: Even _after_ you embed a video on your website, you can make changes to it in [Customize]({{ '/customizing-your-video' | post_url }}). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video]({{ '/media#moving_and_copying_media' | post_url }}) or use advanced [embed options]({{ '/embed-options' | post_url }}) in your embed codes.
 
@@ -21,11 +21,11 @@ An **embed code** is a snippet of code that you can use to add content (like a v
 
 Wistia embed codes come in a few flavors, and they each are great for different purposes. The best type of embed code to get started with is an [iframe embed](#iframe_embed). For more advanced embedding, check out the [API](#api_embed), [SEO](#seo_embed), and [popover](#popover_embed) embed code types.
 
-To generate an embed code for your video, start by selecting the *Embed & Share* option under the <span class='action_menu'>Video Actions</span> menu from your video's page in Wistia. That will open the Embed & Share screen, where you can choose from one of several embed code types and set the dimensions (in pixels) for your video: 
+To generate an embed code for your video, start by selecting the *Embed & Share* option under the <span class='action_menu'>Video Actions</span> menu from your video's page in Wistia. That will open the Embed & Share screen, where you can choose from one of several embed code types and set the dimensions (in pixels) for your video:
 
 {% wistia_embed hashed_id: j3a6v2cblf %}
 
-The dimensions of your embed code will scale proportionally with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically. 
+The dimensions of your embed code will scale proportionally with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically.
 
 {{ "To make your video responsive, check out [Video Foam](http://wistia.com/doc/video-foam)." | note }}
 
@@ -46,10 +46,10 @@ An iframe is an HTML element that lets you display content from one webpage in a
 Here's an example Wistia iframe embed code:
 
 {% codeblock iframe_example.html %}
-<iframe src="//fast.wistia.net/embed/iframe/es7g1ii56j" 
-allowtransparency="true" frameborder="0" scrolling="no" 
-class="wistia_embed" name="wistia_embed" allowfullscreen 
-mozallowfullscreen webkitallowfullscreen oallowfullscreen 
+<iframe src="//fast.wistia.net/embed/iframe/es7g1ii56j"
+allowtransparency="true" frameborder="0" scrolling="no"
+class="wistia_embed" name="wistia_embed" allowfullscreen
+mozallowfullscreen webkitallowfullscreen oallowfullscreen
 msallowfullscreen width="640" height="388"></iframe>
 {% endcodeblock %}
 
@@ -121,7 +121,7 @@ The API embed code is extensively configurable. For more detail on using API emb
 
 ### SEO Embed
 
-The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website. 
+The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website.
 
 {% wistia_embed hashed_id: 8gyuqtj6hr %}
 
@@ -130,8 +130,8 @@ Certain aspects of your video (like the [thumbnail image]({{ '/customizing-your-
 
 ## Popover Embed
 
-The popover embed code type displays your video in a popover lightbox in front 
-of the main content on your page. You can launch a popover video with either a 
+The popover embed code type displays your video in a popover lightbox in front
+of the main content on your page. You can launch a popover video with either a
 text link or thumbnail image link. When clicked, that link will open a lightbox
 with your video inside, like this:
 
@@ -149,7 +149,7 @@ Here's an example popover embed code:
 
 The popover embed code has three components:
 
-* Either a piece of text or an image. In the example above, this automatically generated thumbnail image: 
+* Either a piece of text or an image. In the example above, this automatically generated thumbnail image:
 `https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169`.
 * Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/o3x7owvb7l?popover=true`.
 * A script, `fast.wistia.com/assets/external/popover-v1.js`, which causes the link to open in a popover lightbox instead of opening as a separate page.
@@ -256,5 +256,3 @@ If something seems fishy on Wistia's side of things, you can always check out ou
     }
   });
 </script>
-
-

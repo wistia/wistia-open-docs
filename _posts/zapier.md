@@ -1,9 +1,9 @@
 ---
 title: Integrate Zapier and Wistia
 layout: post
-description: 
+description:
   Zapier is a tool to help you boost efficiency and automatically handle tedious manual workflows between your online services, they also happen to work quite well with Wistia!
-category: integrations
+category: Integrations
 ---
 
 [Zapier](http://www.zapier.com) is a tool to help you boost efficiency and automatically handle tedious manual workflows between your online services, they also happen to work quite well with Wistia!
@@ -53,7 +53,7 @@ Here's what you need:
 * A [Zapier](https://zapier.com) account
 * A Wistia Account
 * A Google Docs Account
- 
+
 ### Getting Your Accounts Ready
 
 To connect your Wistia account to Zapier, you'll need to get your Wistia API Token, you can find that from your Account Settings -> API tab.
@@ -62,7 +62,7 @@ For Google Docs, you'll want to create the spreadsheet that will hold your leads
 
 ### Integrating Wistia with your Google Docs Spreadsheet
 
-All we have to do now is create a zap to send those Wistia leads to your spreadsheet.  Just click the "Use this Zap" button [here](https://zapier.com/zapbook/zaps/467/save-wistia-leads-to-a-google-spreadsheet/) to get started. 
+All we have to do now is create a zap to send those Wistia leads to your spreadsheet.  Just click the "Use this Zap" button [here](https://zapier.com/zapbook/zaps/467/save-wistia-leads-to-a-google-spreadsheet/) to get started.
 
 To start, you'll connect your Wistia account to Zapier. After clicking to 'Connect', you'll insert the API token from your Wistia account.  Once you've done that, select 'Yes, Continue'.
 
@@ -102,7 +102,7 @@ To connect your Wistia account to Zapier, you'll need to get your Wistia API Tok
 
 ### Integrating Wistia with Salesforce
 
-All we have to do now is create a zap to send those Wistia leads to Salesforce.  Just click the "Use this Zap" button [here](https://zapier.com/zapbook/zaps/466/save-wistia-video-leads-to-salesforce/) to get started. 
+All we have to do now is create a zap to send those Wistia leads to Salesforce.  Just click the "Use this Zap" button [here](https://zapier.com/zapbook/zaps/466/save-wistia-video-leads-to-salesforce/) to get started.
 
 To start, you'll connect your Wistia account to Zapier. After clicking to 'Connect', you'll insert the API token from your Wistia account.  Once you've done that, select 'Yes, Continue'.
 
@@ -158,4 +158,3 @@ Next you'll actually test the zap by clicking to send the email you configured. 
 NOTE: By clicking 'Continue + Send to Gmail', you will generate a real email that your visitor will receive.
 
 After testing, you're all set!  That zap will continue to check for new visitors and then send them an email from Gmail when they watch a video on your Wistia account.
-

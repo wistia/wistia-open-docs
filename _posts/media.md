@@ -1,7 +1,7 @@
 ---
 title: Media in Wistia
 layout: post
-category: Getting Set Up
+category: Account
 description: From changing the title, to embedding it on your website or blog, learn all the functionality for uploaded media here.
 
 ---
@@ -10,7 +10,7 @@ description: From changing the title, to embedding it on your website or blog, l
 
 ## Upload Video
 
-Before you can do anything awesome with your videos, you have to upload them! 
+Before you can do anything awesome with your videos, you have to upload them!
 
 Check out the [uploading documentation]({{ '/upload-video' | post_url }}) for
 more info on uploading.
@@ -18,32 +18,32 @@ more info on uploading.
 ## Update Video Title
 
 The title of the Media is how you will find it in your Account.  By default,
-the title is the name of the media you uploaded, but can be updated anytime 
+the title is the name of the media you uploaded, but can be updated anytime
 (doesn't have to be set before uploading). Changing the title of the video won't
 affect embed codes or links, either.
 
 {% post_image hashed_id: '96baa9af41a004daabe3376ccb28e5e0790f925f', class: 'center' %}
 
-To edit the title, hover over it with your mouse, and click the 
+To edit the title, hover over it with your mouse, and click the
 Edit button. Edit the title text, and press the Save button at the bottom of the form.
 
 ## Video Description
 
 Adding or editing your video description is done in the same way that you edit the title.
-Hover your mouse over the Media title and click the Edit button. Add a description 
+Hover your mouse over the Media title and click the Edit button. Add a description
 in the second field of the form and click the Save button to submit your changes.
 
 {% post_image hashed_id: 'ee71741ced9ef389792fb9a0489d922959ae790d', class: 'center' %}
 
-The video description can help set context to your video or link viewers to your homepage or another video. 
-The description will also be passed through to services 
+The video description can help set context to your video or link viewers to your homepage or another video.
+The description will also be passed through to services
 like Facebook ([see more on social sharing]({{ '/social-sharing' | post_url }})).
 
-You can type plain text into the description field or you can use markdown to style the text and put 
-images or links into your description. Clicking the link "Formatting with Markdown" 
-will open a guide explaining more about markdown. 
+You can type plain text into the description field or you can use markdown to style the text and put
+images or links into your description. Clicking the link "Formatting with Markdown"
+will open a guide explaining more about markdown.
 
-{{ "Embedding elements via HTML in video descriptions is currently not recommended and can cause issues with the page displaying." | note }} 
+{{ "Embedding elements via HTML in video descriptions is currently not recommended and can cause issues with the page displaying." | note }}
 
 ## Change the Thumbnail
 
@@ -94,16 +94,16 @@ restore the stats. Phew.
 
 ## Embed Video
 
-The ins-and-outs of embedding your video is the subject of our 
+The ins-and-outs of embedding your video is the subject of our
 [embedding documentation]({{ '/embedding' | post_url }}).
 
-## Downloading Media 
+## Downloading Media
 
 By default, contacts invited into Wistia are not permitted to download your
-media files. A contact's ability to download files is controlled via 
-permissions at the project level. 
+media files. A contact's ability to download files is controlled via
+permissions at the project level.
 
-To adjust a contact's permissions for a particular project, go into that 
+To adjust a contact's permissions for a particular project, go into that
 project and choose *Manage Viewers* from the
 <span class="action_menu">Project Actions</span> menu.
 
@@ -112,20 +112,20 @@ documentation.
 
 ## Timecoded Comments
 
-Timecoded comments allow the user to link a comment on a video to a particular 
-time in the video.  The timecode is captured and stored with the comment such 
-that when another user views the comment, they can click on the time code, the 
+Timecoded comments allow the user to link a comment on a video to a particular
+time in the video.  The timecode is captured and stored with the comment such
+that when another user views the comment, they can click on the time code, the
 video will skip directly to the point in the video where the comment was made.
 
 {% post_image hashed_id: 'f26b3184c9e982fd383a4f6498d760d7431a7109', class: 'center' %}
 
 ### How to make a timecoded comment
 
-To make a timecoded comment, pause the video at the time to which you wish the 
-comment to be linked.  Then, simply check the box below the text field 
+To make a timecoded comment, pause the video at the time to which you wish the
+comment to be linked.  Then, simply check the box below the text field
 which says *Link comment to current time in video*.
 
-Once the box is checked and the comment has been written, click the 
+Once the box is checked and the comment has been written, click the
 <span class="faux_button">Post comment</span> and your comment will be saved.
 
 {% post_image hashed_id: 'e3f557e99d74f221e806d97772e257b359dab2fa', class: 'center' %}
@@ -139,5 +139,5 @@ the Delete button to remove the comment permanently.
 
 ### Disable Comments
 
-Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video#turn_off_comments' | post_url }}) 
+Comments can be disabled for each video. The [Customize documentation]({{ '/customizing-your-video#turn_off_comments' | post_url }})
 covers this in further detail.

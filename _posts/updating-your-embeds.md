@@ -3,7 +3,7 @@ title: Keeping Your Embeds Up To Date
 layout: post
 description: Are your embedded Wistia videos looking a little dusty? Using an old version of the Wistia Javascript library? Here's how to keep your Wistia embeds fresh with the latest & greatest Wistia player technology.
 post_intro: Are your embedded Wistia videos looking a little dusty? Using an old version of the Wistia Javascript library? Here's how to keep your Wistia embeds fresh with the latest & greatest Wistia player technology.
-category: embedding
+category: Embed & Share
 ---
 
 ## Updating embeds created before 2012

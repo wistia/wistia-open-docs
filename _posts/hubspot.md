@@ -3,7 +3,7 @@ title: Integrate HubSpot and Wistia
 layout: post
 description:
   HubSpot is a suite of popular marketing tools for driving more leads and better engagment. See how Wistia works with HubSpot to give it special powers!
-category: integrations
+category: Integrations
 ---
 
 {% post_image hashed_id: 'baa410e5f85c4a749f40f29679ad49f901f1975e', class: 'integration_logo' %}

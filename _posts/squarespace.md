@@ -45,5 +45,3 @@ I'd also recommend that you uncheck the "Image Overlay" box. That way if you've 
 {% post_image hashed_id: 'aacb0ab9c708f79d5dd13b5fe30db32610360a99', width: 1151, height: 742 %}
 
 You're done. That was easy. :)
-
-

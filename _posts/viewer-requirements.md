@@ -1,7 +1,7 @@
 ---
 title: Wistia Video Viewing Requirements
 layout: post
-category: Getting Set Up
+category: Getting Started
 description:
   Wistia videos work pretty much everywhere on the web, but if you want to
   double check this is the right place to look!
@@ -52,7 +52,7 @@ We also work with all of the major browsers and versions of Internet Explorer
 
 ## Mobile OS Support
 
-At this point, there are basically two main methods to view video on the mobile 
+At this point, there are basically two main methods to view video on the mobile
 web: `Flash` and `HTML5`. Newer Android phones (4.1 and up) and iOS devices,
 such as iPhones and iPads, support HTML5.
 

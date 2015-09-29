@@ -1,7 +1,7 @@
 ---
 title: Identity Tagging
 layout: post
-category: Analytics
+category: Stats
 description: Want to tag a heat map with an email automatically? Or manually enter a name? Learn how here!
 post_intro: <p><b>Identity Tagging</b> is all about who is watching your videos, and watching their behavior over time.  Using emails and names, Wistia makes it easy to identify your most engaged viewers.</p>
 ---
@@ -18,7 +18,7 @@ viewers who click through from an email can be tagged, and this email tag will
 follow the viewer into the future.
 
 For Wistia customers with advanced web design know-how and resources, there are
-also programmatic options for tagging viewers by email.  Refer to the 
+also programmatic options for tagging viewers by email.  Refer to the
 [ID tagging player API]({{ '/player-id-tag' | post_url }}) documentation for more
 assistance.
 
@@ -28,8 +28,8 @@ assistance.
 
 Sometimes, you know who is viewing your videos.  Maybe you sent a client a link
 through an email, or you speak to a prospective customer by phone and recommend
-they review a video.  Opening the 
-[analytics for that video]({{ '/embedded-video-analytics' | post_url }}), 
+they review a video.  Opening the
+[analytics for that video]({{ '/embedded-video-analytics' | post_url }}),
 you see an IP, location, and time that makes sense to be someone you recognize.
 
 {% post_image hashed_id: '161dbcc8aafa0dbe9ea1b558e4a534aa66f899f1', class: 'center' %}
@@ -46,10 +46,9 @@ Hovering over the current name will reveal an "edit" option.  Selecting that (or
 anywhere in the name) will allow you to re-name the viewer.  Enter their name,
 and press enter.
 
-In the future, you can check in on your viewer by opening the 
-[viewer stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }}) 
+In the future, you can check in on your viewer by opening the
+[viewer stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})
 and searching for their name on the sorting bar.  You can also sort by "named"
 viewer.
 
 {% post_image hashed_id: 'e4ed7ab2f9d30aeebaade5a16e5370cf7669571a', class: 'center' %}
-

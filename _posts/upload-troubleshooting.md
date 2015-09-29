@@ -3,6 +3,7 @@ layout: post
 title: Uploads Troubleshooting
 description: Running into troubles with your upload? Follow our simple troubleshooting guide to get your uploads working again in no time!
 post_intro: <p>Getting an error message in the middle of your upload? We know, we're not fans of it either. While upload errors can throw a wrench into any awesome Wistia session, 99% of the time they can be fixed with a few simple measures. Whew! Follow these steps and you'll be uploading videos in no time.</p>
+Category: Troubleshooting
 ---
 
 ## Clear Your Browser's Cache

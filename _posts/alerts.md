@@ -2,7 +2,7 @@
 
 title: Wistia Tracking Alerts
 layout: post
-category: Private Sharing
+category: Account
 description: When sharing videos privately within Wistia, you can set up email alerts to stay in the know on how your contacts are navigating through your content. Learn more here!
 
 ---
@@ -32,4 +32,3 @@ While logged into your Wistia account, choose the **Settings** option under the 
 Need to know when someone uploads new content or adds users to a project? Bogged down with too many emails? Adjust your settings here!
 
 {{ "Are you an Account Owner? To access your notifications you'll want to head into your Account Settings and choose the Personal tab." | alert}}
-
