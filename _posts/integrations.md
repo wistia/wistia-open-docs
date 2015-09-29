@@ -3,6 +3,7 @@ title: Integrations
 layout: post
 description: Wistia plays well with lots of 3rd party services. See some of the best, and how to use them, in this article.
 post_intro: <p>As we update our embedding processes and APIs, Wistia will get better and better at integrating with other top-notch services. On this doc page, we'll do our best to keep track of places where Wistia works out-of-the-box for embedding, and also where deeper integrations have been built out by our awesome friends.</p><p>If you currently use a service that you think rocks, and would work well with Wistia, submit your request in <a href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
+category: integrations
 ---
 
 ## Pardot
@@ -45,7 +46,7 @@ On the Zapbook page for Wistia, Zapier has handily included a bunch of sample za
 
 {% post_image hashed_id: '97d57d4890140c3e6f529e7e58fe7b7d3610d9b5', width: 200, class: 'integration_logo' %}
 
-The [Media:Wistia Drupal Module](http://drupal.org/project/media_wistia) makes embedding both videos and playlists easy using either Wistia URLs or embed codes. 
+The [Media:Wistia Drupal Module](http://drupal.org/project/media_wistia) makes embedding both videos and playlists easy using either Wistia URLs or embed codes.
 
 This was updated by dev-god [Travis Carden](http://drupal.org/user/236758), thanks Travis!
 
@@ -85,7 +86,7 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * Google Sites
 * Lexblog
 * Medium
-* MotoCMS 
+* MotoCMS
 * Portfoliobox
 * [Sharepoint](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/embed-video-on-a-public-website-page-HA102828149.aspx)
 * [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)

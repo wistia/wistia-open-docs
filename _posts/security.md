@@ -2,7 +2,7 @@
 title: Wistia Video Security
 layout: post
 description: Wistia provides multiple levels of security for your videos. Learn more here!
-category: Account
+category: Getting Started
 ---
 
 

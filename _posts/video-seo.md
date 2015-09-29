@@ -1,7 +1,7 @@
 ---
 title: Video SEO
 layout: post
-category: Embed & Share
+category: embed and share
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
 post_intro: <p>Video SEO is the practice of providing the metadata (or "information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia provides both recommended approaches to Video SEO - using what's called a "video sitemap", and also utilizing specific markup in the on-page embed code. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
 ---
