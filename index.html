@@ -14,7 +14,7 @@ no_nav: true
         <h2>Greatest Hits</h2>
         <ul>
           <li>
-            <a href="{{ '/account-setup' | post_url }}">Account Setup</a>
+            <a href="{{ '/account-setup' | post_url }}">Account Set Up</a>
           </li>
           <li>
             <a href="{{ '/export-settings' | post_url }}">Optimal Export Settings</a>
@@ -32,17 +32,14 @@ no_nav: true
       </div>
       <div class='columnBig firstRow homepage-search' id='search'>
         <h2>Search</h2>
-        <form>
-          <input class='st-default-search-input' id='searchField' placeholder='What are you looking for?' type='text' />
-          <button></button>
-        </form>
+        <input class='st-default-search-input' id='searchField' placeholder='What are you looking for?' type='text' />
       </div>
     </div>
     <div class='section'>
       {% include wistia-basics-thumbnails.html %}
     </div>
     <div class='section'>
-      <div class='column left secondRow' id='gettingStarted'>
+      <div class='column left secondRow' id='gettingSetUp'>
         <h2>
           <a href="{{ 'getting-started' | category_url }}">
             Getting Started
@@ -56,7 +53,7 @@ no_nav: true
           </li>
           <li>
             <a href="{{ '/exporting-guide' | post_url }}">
-              Exporting From Video Editors
+              Exporting from Video Editors
             </a>
           </li>
           <li>
@@ -79,7 +76,7 @@ no_nav: true
           View All 6
         </a>
       </div>
-      <div class='column middle secondRow' id='account'>
+      <div class='column middle secondRow' id='embedding'>
         <h2>
           <a href="{{ 'account' | category_url }}">
             Account
@@ -108,7 +105,7 @@ no_nav: true
           </li>
           <li>
             <a href="{{ '/permissions' | post_url }}">
-              Permissions
+              User Permissions
             </a>
           </li>
         </ul>
@@ -116,16 +113,16 @@ no_nav: true
           View All 8
         </a>
       </div>
-      <div class='column right secondRow' id='customize'>
+      <div class='column right secondRow' id='privateSharing'>
         <h2>
-          <a href="{{ 'Customize' | category_url }}">
+          <a href="{{ 'customize' | category_url }}">
             Customize
           </a>
         </h2>
         <ul>
           <li>
             <a href="{{ '/customizing-your-video' | post_url }}">
-              Customize Your Video
+              Customizing your Video
             </a>
           </li>
           <li>
@@ -147,7 +144,7 @@ no_nav: true
       </div>
     </div>
     <div class='section'>
-      <div class='column left thirdRow' id='embedShare'>
+      <div class='column left thirdRow' id='analytics'>
         <h2>
           <a href="{{ 'embed-and-share' | category_url }}">Embed & Share</a>
         </h2>
@@ -158,7 +155,7 @@ no_nav: true
             </a>
           </li>
           <li>
-            <a href="{{ '/video-seo' | post_url }}">
+            <a href="{{ '/video-seo | post_url }}">
               Video SEO
             </a>
           </li>
@@ -211,12 +208,12 @@ no_nav: true
               Google Analytics
             </a>
           </li>
+          <a class='viewAll' href="{{ 'integrations' | category_url }}">
+            View All 13
+          </a>
         </ul>
-        <a class='viewAll' href="{{ 'integrations' | category_url }}">
-          View All 13
-        </a>
       </div>
-      <div class='column right thirdRow' id='stats'>
+      <div class='column right thirdRow' id='publicSharing'>
         <h2>
           <a href="{{ 'stats' | category_url }}">
             Stats
@@ -310,7 +307,7 @@ no_nav: true
 <script type='text/javascript'>
   //<![CDATA[
     var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false );
-
+    
     if (!iOS) {
       $('.post_list li').each( function() {
         var $this = $(this),
