@@ -41,19 +41,6 @@ We have some other information on using Wistia and WordPress, including styling 
 
 On the Zapbook page for Wistia, Zapier has handily included a bunch of sample zaps to help you get the ball rolling--just [head over to that zapbook](https://zapier.com/zapbook/wistia/) to get started!
 
-
-## Drupal
-
-{% post_image hashed_id: '97d57d4890140c3e6f529e7e58fe7b7d3610d9b5', width: 200, class: 'integration_logo' %}
-
-The [Media:Wistia Drupal Module](http://drupal.org/project/media_wistia) makes embedding both videos and playlists easy using either Wistia URLs or embed codes.
-
-This was updated by dev-god [Travis Carden](http://drupal.org/user/236758), thanks Travis!
-
-[Read more on using Wistia and Drupal]({{ '/drupal' | post_url }}).
-
-{{ "Wistia embeds have only been tested and verified through Drupal v6. Compatibility beyond v6 is not yet guaranteed." | note }}
-
 ## Squarespace
 
 {% post_image hashed_id: '5bc3046a0b10664ef4c5bc96b4cd18ad3c056215', width: 200, class: 'integration_logo' %}
