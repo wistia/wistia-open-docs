@@ -14,10 +14,10 @@ no_nav: true
         <h2>Greatest Hits</h2>
         <ul>
           <li>
-            <a href="{{ '/plans-comparison' | post_url }}">Comparing Wistia Plans</a>
+            <a href="{{ '/account-setup' | post_url }}">Account Set Up</a>
           </li>
           <li>
-            <a href="{{ '/account-setup' | post_url }}">Account Setup</a>
+            <a href="{{ '/export-settings' | post_url }}">Optimal Export Settings</a>
           </li>
           <li>
             <a href="{{ '/customizing-your-video' | post_url }}">Customizing Your Video</a>
@@ -32,10 +32,7 @@ no_nav: true
       </div>
       <div class='columnBig firstRow homepage-search' id='search'>
         <h2>Search</h2>
-        <form>
-          <input class='st-default-search-input' id='searchField' placeholder='What are you looking for?' type='text' />
-          <button></button>
-        </form>
+        <input class='st-default-search-input' id='searchField' placeholder='What are you looking for?' type='text' />
       </div>
     </div>
     <div class='section'>
@@ -44,26 +41,11 @@ no_nav: true
     <div class='section'>
       <div class='column left secondRow' id='gettingSetUp'>
         <h2>
-          <a href="{{ 'getting-set-up' | category_url }}">
-            Getting Set Up
+          <a href="{{ 'getting-started' | category_url }}">
+            Getting Started
           </a>
         </h2>
         <ul>
-          <li>
-            <a href="{{ '/plans-comparison' | post_url }}">
-              Plans & Pricing Details
-            </a>
-          </li>
-          <li>
-            <a href="{{ '/account-setup' | post_url }}">
-              Account Setup
-            </a>
-          </li>
-          <li>
-            <a href="{{ '/viewer-rec' | post_url }}">
-              Viewer Requirements
-            </a>
-          </li>
           <li>
             <a href="{{ '/export-settings' | post_url }}">
               Optimal Export Settings
@@ -71,7 +53,17 @@ no_nav: true
           </li>
           <li>
             <a href="{{ '/exporting-guide' | post_url }}">
-              Exporting From Video Editors
+              Exporting from Video Editors
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/upload-video' | post_url }}">
+              Uploading
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/viewer-requirements' | post_url }}">
+              Viewer Requirements
             </a>
           </li>
           <li>
@@ -80,35 +72,67 @@ no_nav: true
             </a>
           </li>
         </ul>
-        <a class='viewAll' href="{{ 'getting-set-up' | category_url }}">
-          View All 7
+        <a class='viewAll' href="{{ 'getting-started' | category_url }}">
+          View All 6
         </a>
       </div>
       <div class='column middle secondRow' id='embedding'>
         <h2>
-          <a href="{{ 'embedding' | category_url }}">
-            Customize & Embed
+          <a href="{{ 'account' | category_url }}">
+            Account
+          </a>
+        </h2>
+        <ul>
+          <li>
+            <a href="{{ '/account-setup' | post_url }}">
+              Getting Set Up
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/bandwidth' | post_url }}">
+              Bandwidth
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/media' | post_url }}">
+              Media in Wistia
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/projects' | post_url }}">
+              All About Projects
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/permissions' | post_url }}">
+              User Permissions
+            </a>
+          </li>
+        </ul>
+        <a class='viewAll' href="{{ 'account' | category_url }}">
+          View All 8
+        </a>
+      </div>
+      <div class='column right secondRow' id='privateSharing'>
+        <h2>
+          <a href="{{ 'customize' | category_url }}">
+            Customize
           </a>
         </h2>
         <ul>
           <li>
             <a href="{{ '/customizing-your-video' | post_url }}">
-              Customizing Your Video
+              Customizing your Video
             </a>
           </li>
           <li>
-            <a href="{{ '/embedding' | post_url }}">
-              Embedding Video on Your Website
+            <a href="{{ '/turnstile' | post_url }}">
+              Turnstile Email Capture
             </a>
           </li>
           <li>
-            <a href="{{ '/playlists' | post_url }}">
-              Video Playlists
-            </a>
-          </li>
-          <li>
-            <a href="{{ '/social-sharing' | post_url }}">
-              Social Sharing
+            <a href="{{ '/replace-video' | post_url }}">
+              Replace Video
             </a>
           </li>
           <li>
@@ -117,59 +141,37 @@ no_nav: true
             </a>
           </li>
         </ul>
-        <a class='viewAll' href="{{ 'embedding' | category_url }}">
-          View All 6
-        </a>
-      </div>
-      <div class='column right secondRow' id='privateSharing'>
-        <h2>
-          <a href="{{ 'private-sharing' | category_url }}">
-            Private Sharing
-          </a>
-        </h2>
-        <ul>
-          <li>
-            <a href="{{ '/private-sharing' | post_url }}">
-              Sharing Video Privately
-            </a>
-          </li>
-          <li>
-            <a href="{{ '/contacts' | post_url }}">
-              Contact Management
-            </a>
-          </li>
-          <li>
-            <a href="{{ '/permissions' | post_url }}">
-              Permission Types in Wistia
-            </a>
-          </li>
-          <li>
-            <a href="{{ '/alerts' | post_url }}">
-              Tracking Alerts
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
     <div class='section'>
       <div class='column left thirdRow' id='analytics'>
         <h2>
-          <a href="{{ 'analytics' | category_url }}">Analytics</a>
+          <a href="{{ 'embed-and-share' | category_url }}">Embed & Share</a>
         </h2>
         <ul>
           <li>
-            <a href="{{ '/embedded-video-analytics' | post_url }}">
-              Analytics for Public Video
+            <a href="{{ '/embedding' | post_url }}">
+              Embedding
             </a>
           </li>
           <li>
-            <a href="{{ '/private-analytics' | post_url }}">
-              Analytics for Private Video
+            <a href="{{ '/video-seo | post_url }}">
+              Video SEO
             </a>
           </li>
           <li>
-            <a href="{{ '/identity-tagging' | post_url }}">
-              Identity Tagging
+            <a href="{{ '/social-sharing' | post_url }}">
+              Social Sharing
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/email-marketing' | post_url }}">
+              Email Marketing and Wistia
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/playlists' | post_url }}">
+              Playlists
             </a>
           </li>
         </ul>
@@ -197,11 +199,6 @@ no_nav: true
             </a>
           </li>
           <li>
-            <a href="{{ '/pardot' | post_url }}">
-              Pardot
-            </a>
-          </li>
-          <li>
             <a href="{{ '/wordpress' | post_url }}">
               WordPress
             </a>
@@ -212,27 +209,35 @@ no_nav: true
             </a>
           </li>
         </ul>
+        <a class='viewAll' href="{{ 'integrations' | category_url }}">
+          View All 13
+        </a>
       </div>
       <div class='column right thirdRow' id='publicSharing'>
         <h2>
-          <a href="{{ 'public-sharing' | category_url }}">
-            Public Sharing
+          <a href="{{ 'stats' | category_url }}">
+            Stats
           </a>
         </h2>
         <ul>
           <li>
-            <a href="{{ '/email-marketing' | post_url }}">
-              Email Marketing
+            <a href="{{ '/embedded-video-analytics' | post_url }}">
+              Analytics Overview
             </a>
           </li>
           <li>
-            <a href="{{ '/video-seo' | post_url }}">
-              Video SEO
+            <a href="{{ '/audience-engagement-graph' | post_url }}">
+              Engagement Graphs
             </a>
           </li>
           <li>
-            <a href="{{ '/replaceable-video' | post_url }}">
-              Replaceable Video
+            <a href="{{ '/private-analytics' | post_url }}">
+              Private Analytics
+            </a>
+          </li>
+          <li>
+            <a href="{{ '/identity-tagging' | post_url }}">
+              Identity Tagging
             </a>
           </li>
         </ul>

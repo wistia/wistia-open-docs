@@ -1,7 +1,7 @@
 ---
 title: Embedding Video on Your Website
 layout: post
-category: Embed & Share
+category: embed and share
 description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
 post_intro:
   <p>Putting video on your website is the best way to get your message across.

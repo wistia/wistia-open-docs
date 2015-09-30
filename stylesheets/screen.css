@@ -503,7 +503,8 @@ h1, h2, h3, h4, .seo_faq { color: #363945; font-family: "Avenir", Futura, Helvet
 .home_container .section.last, .category_container .section.last { border-bottom: 0px solid #cbd0d6; }
 .home_container .column, .category_container .column { display: inline-block; *display: inline; vertical-align: top; zoom: 1; position: relative; }
 .home_container .column.developers, .category_container .column.developers { width: 50%; }
-.home_container .secondRow, .category_container .secondRow { height: 296px; margin-top: 6px; }
+.home_container .secondRow, .category_container .secondRow { height: 270px; margin-top: 6px; }
+.home_container .thirdRow, .category_container .thirdRow { height: 270px; margin-top: 6px; }
 .home_container .left, .category_container .left { width: 25%; padding-right: 9%; }
 .home_container .middle, .category_container .middle { width: 25%; padding-right: 9%; }
 .home_container .right, .category_container .right { width: 25%; padding-right: 5%; }
