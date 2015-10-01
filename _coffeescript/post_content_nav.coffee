@@ -78,3 +78,22 @@ $.sectionTitleToNavTitle = (text) ->
 
 $ ->
   window.navBar = new NavBar
+
+  # Use elements with classes navigable_start/navigable_end to denote sections
+  # where h3 elements should be rolled up into a nav. They will be created as
+  # an unordered list and inserted just before .navigable_start.
+  $('.navigable_start').each ->
+    $start = $(this)
+    $subHeaders = $start.nextUntil('.navigable_end', 'h3[id]')
+
+    $ul = $('<ul class="generated_nav">')
+    $subHeaders.each ->
+      $h3 = $(this)
+      $li = $('<li>')
+      $a = $('<a>').
+        attr('href', "##{$h3.attr('id')}").
+        text($h3.text().replace(/^#/, ''))
+      $li.append($a)
+      $ul.append($li)
+
+    $start.before($ul)

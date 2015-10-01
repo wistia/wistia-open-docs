@@ -36,10 +36,10 @@
         color: $light_blue
   h2
     margin: 55px 16px 13px 12px
-    font-size: 18px
+    font-size: 23px
     line-height: 30px
   h3
-    font-size: 18px
+    font-size: 23px
     margin-top: 55px
     font-weight: 600
     margin-left: 12px
@@ -78,7 +78,7 @@
       margin-left: 30px
   p
     margin-left: 0px
-    line-height: 32px
+    line-height: 2em
     position: relative
     font-size: 16px
     font-weight: 200
@@ -409,9 +409,9 @@ table
     position: absolute
   .post_content
     h2
-      font-size: 24px
+      font-size: 26px
     h3
-      font-size: 18px
+      font-size: 23px
       margin-top: 55px
       font-weight: 600
     h4
@@ -516,3 +516,17 @@ table
   font-size: 14px
   text-transform: uppercase
   +anti-alias
+
+.post_content ul.generated_nav
+  line-height: 1.4em
+
+  li
+    margin-bottom: 3px
+
+  a
+    border-bottom-width: 0
+    font-family: courier, arial, sans-serif
+    font-size: 13px
+
+    &:hover
+      border-bottom-width: 1px
