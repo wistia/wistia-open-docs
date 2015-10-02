@@ -25,7 +25,7 @@ Wistia automatically publishes the basic video metrics listed below to your Goog
 - 100% watched
 - Turnstile email conversion
 
-If you changed the analytics variable to something other than `ga` or `gaTracker`, you need to add the following snippet after your custom analytics variable is created. In this example, the custom analytics variable is `__ga`. Thank you [@lkraav](https://twitter.com/lkraav) for pointing this out.
+If you changed the analytics variable to something other than `ga`, `__gaTracker` or `gaTracker`, you need to add the following snippet after your custom analytics variable is created. In this example, the custom analytics variable is `__ga`. Thank you [@lkraav](https://twitter.com/lkraav) for pointing this out.
 
 {% codeblock custom-analytics-variable.js %}
 __ga(function(){
