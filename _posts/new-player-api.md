@@ -25,7 +25,7 @@ recommend the following patterns to acquire player API handles for your videos.
 The first and easiest way is to push a function onto the initialization queue.
 The handle will be given as an argument of the callback function.
 
-#### With API/SEO embeds
+#### With standard embeds (async JavaScript)
 
 We push an object of the form `{ matcher: callback }` onto the queue. Embeds
 that match--as described in the `Wistia.api(matcher)` section below--will run
