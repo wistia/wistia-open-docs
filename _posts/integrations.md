@@ -49,6 +49,14 @@ With Wistia and Squarespace, embedding a video is as easy as pasting in your URL
 
 <a href="{{ '/squarespace' | post_url }}">Get the details on how it all works.</a>
 
+## Drupal
+
+Right now Wistia embed codes have only been tested and verified through Drupal v6.
+
+Compatibility beyond v6 is not yet guaranteed.
+
+[Give us a shout](http://wistia.com/support/contact) if you'd like help setting
+that up.
 
 ## Wix
 
