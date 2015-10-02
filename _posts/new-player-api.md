@@ -440,7 +440,7 @@ Replaces the content of the current video with the video identified by
 overridden in the `options` object. This method can be used in conjunction with
 `addToPlaylist(hashedId, [options])` to create custom playlist implementations.
 
-In addition to the normal [embed options]({{ '/embed-options' | post_url }}),
+In addition to the normal [embed options]({{ '/new-embed-options' | post_url }}),
 you can set the `transition` option, which defines how to visually transition
 to the new video. Available values are "slide", "fade", "crossfade", and
 "none". By default, "fade" is used.
@@ -865,7 +865,7 @@ video.bind("widthchange", function() {
 ## Options
 
 Many behaviors can be defined by setting options instead of using Player API
-methods. Check out the [Embed Options]({{ '/embed-options' | post_url }}) page
+methods. Check out the [Embed Options]({{ '/new-embed-options' | post_url }}) page
 for a full list.
 
 
@@ -1006,7 +1006,7 @@ automatically!
 ### Mute the Video on Load
 
 You can do this by setting the `volume`
-[embed option]({{ '/embed-options' | post_url }}) to 0, like so:
+[embed option]({{ '/new-embed-options' | post_url }}) to 0, like so:
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>

@@ -140,7 +140,7 @@ If set to true, the video will play as soon as it's ready.
 NOTE: `autoPlay` will not work on iOS and other mobile devices due to
 restrictions on bandwidth on cellular networks. You can find more information
 on these restrictions in the
-[Player API Documentation]({{ '/player-api#play' | post_url }}).
+[Player API Documentation]({{ '/new-player-api#play' | post_url }}).
 
 ### controlsVisibleOnLoad
 
