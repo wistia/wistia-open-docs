@@ -3,6 +3,7 @@ title: Account Settings
 layout: post
 category: Account
 description: Questions about admin type stuff? Account Settings? Billing statements? Don't worry, we've got it all covered right here.
+post_intro: <p> Here's the lowdown on your Account Settings. Billing questions? Need to add a Manager? Just need some light reading? Let's do this. </p>
 footer: 'for_intermediates'
 ---
 
@@ -56,6 +57,25 @@ In the section labeled "Wistia Subdomain", you will see a text box showing the c
 {{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
 
 ---
+
+## Domain Restrictions
+
+Video embed domain restrictions allows you to prevent a viewer
+from copying your video embed codes and pasting them on their domain.
+When domain restriction is set up, the videos in your account will only
+display on the domains you specify.
+
+Domain restrictions apply to all videos in your account. Here's how to set up
+Domain restrictions for your account:
+
+1. Open to the Account tab in your Account Settings (which requires
+  Account Owner privileges).
+2. Scroll down to the **Domain Restrictions** section.
+3. Select the "Enabled" radio button, and enter the domains you wish to whitelist.
+  Don't forget to save your updates!
+4. When you embed your videos onto a website you allow, it will appear
+  properly. If the video was embedded on a webpage **not** in your whitelist,
+  it would appear as it does below.
 
 ## Video Quality
 
