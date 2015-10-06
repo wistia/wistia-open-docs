@@ -1,18 +1,13 @@
 ---
 title: Use Wistia With a MailChimp Email Campaign
 layout: post
-description: Have a MailChimp Campaign? Have a Wistia account? Combine their powers for all sorts of awesome.
-footer: 'for_intermediates'
 category: Integrations
+description: Have a MailChimp Campaign? Have a Wistia account? Combine their powers for all sorts of awesome.
+post_intro: <p><a href="http://mailchimp.com">MailChimp</a> provide some pretty neat tools for discovering how your email marketing funnel works. For our Wistia users, we wanted to create a seamless experience where they could send tailored email campaigns that included Wistia videos, and then track how their contacts interacted with the video itself. <br ></br>So let's dive in to how to create an email campaign with Wistia & MailChimp!
+footer: 'for_intermediates'
 ---
 
 {% post_image hashed_id: 'e298970f564442cd0fb182c592a2de140e283515', width: 200, class: 'intro_image float_right' %}
-
-[MailChimp](http://mailchimp.com) is our favorite email marketing system.  When we need to send an email to our wonderful customers, and don't want it to get stuck in spam filters, we use MailChimp.
-
-They also provide some pretty neat tools for discovering how your email marketing funnel works.  For our Wistia users, we wanted to create a seamless experience where they could send tailored email campaigns that included Wistia videos, and then track how their contacts interacted with the video itself.
-
-So let's dive in to how to create an email campaign with Wistia &amp; MailChimp!
 
 ## Prework
 
@@ -82,8 +77,8 @@ Give this a shot with your next MailChimp merge tag embed!
 
 ## Troubleshooting
 
-Sometimes you may run into a little trouble with not seeing emails appear in your Mailchimp lists. In our experience, there are a few reasons why this may happen.
+Sometimes you may run into a little trouble with not seeing emails appear in your MailChimp lists. In our experience, there are a few reasons why this may happen.
 
-* If you have previously had this email included in one of your lists in Mailchimp but have since deleted it, Mailchimp will not allow the email to be included in a list again. This is something that we often run into with test emails!
+* If you have previously had this email included in one of your lists in MailChimp but have since deleted it, MailChimp will not allow the email to be included in a list again. This is something that we often run into with test emails!
 
-* Mailchimp uses a double opt-in system. If the viewer that has checked out your video hasn't yet had the opportunity to confirm their opt-in for your email list, Mailchimp will not populate their email. You can read more about this [here](http://kb.mailchimp.com/article/how-does-confirmed-optin-or-double-optin-work). Thanks! Happy embedding!
+* MailChimp uses a double opt-in system. If the viewer that has checked out your video hasn't yet had the opportunity to confirm their opt-in for your email list, MailChimp will not populate their email. You can read more about this [here](http://kb.mailchimp.com/article/how-does-confirmed-optin-or-double-optin-work). Thanks! Happy embedding!

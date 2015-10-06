@@ -4,6 +4,7 @@ layout: post
 category: Integrations
 description: Easily add video to your Squarespace-powered website!
 post_intro: <p>Squarespace provides simple and easy tools to build great looking website!</p><p>With the integration between Wistia and Squarespace, you can easily add video to your website.</p>
+footer: 'for_intermediates'
 ---
 
 ## How it works

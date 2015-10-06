@@ -1,9 +1,10 @@
 ---
-layout: post
 title: The Wistia-Marketo Integration
+layout: post
+category: Integrations
 description: Wistia and Marketo go together like peanut butter and jelly -- like Sherlock and Watson! Want to get in on the fun? Here's our guide to getting the Wistia-Marketo integration working for you.
 post_intro: <p>Wistia and Marketo go together like peanut butter and jelly -- like Sherlock and Watson, like <a href="//fast.wistia.net/embed/iframe/4n068wv4j6?popover=true" class="wistia-popover[height=405,playerColor=7b796a,width=720]">Meredith and pugs</a>! Want to get in on the fun? Here's our guide to getting the Wistia-Marketo integration working for you.</p>
-category: Integrations
+footer: 'for_intermediates'
 ---
 
 {% post_image hashed_id: 'afa099a230c97dc5b1f7221df7fa715278c226f2', class: 'integration_logo' %}

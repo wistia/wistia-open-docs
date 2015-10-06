@@ -1,9 +1,10 @@
 ---
-layout: post
 title: Customizing Your Video
-description: Drive more interaction and better engagement with your content using Wistia video customization features.
+layout: post
 category: Customize
+description: Drive more interaction and better engagement with your content using Wistia video customization features.
 post_intro: <p>Your video content is truly powerful - and Wistia customization can ensure engagement with your audience, which drives business for you.</p><p>This article will cover the customization options for your video, and how to make them work for you.</p><p>Once you customize your video, you can also choose to <a href="http://wistia.com/doc/embedding">embed it</a> with your customizations.</p>
+footer: 'for_intermediates'
 ---
 
 ## The Customize Panel

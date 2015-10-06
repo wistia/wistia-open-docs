@@ -1,13 +1,11 @@
 ---
 title: Integrate Zapier and Wistia
 layout: post
-description:
-  Zapier is a tool to help you boost efficiency and automatically handle tedious manual workflows between your online services, they also happen to work quite well with Wistia!
 category: Integrations
+description: Zapier is a tool to help you boost efficiency and automatically handle tedious manual workflows between your online services, they also happen to work quite well with Wistia!
+post_intro: <p><a href="http://www.zapier.com">Zapier</a> is a tool to help you boost efficiency and automatically handle tedious manual workflows between your online services, they also happen to work quite well with Wistia! </p>
+footer: 'for_intermediates'
 ---
-
-[Zapier](http://www.zapier.com) is a tool to help you boost efficiency and automatically handle tedious manual workflows between your online services, they also happen to work quite well with Wistia!
-
 <img src="https://embed-ssl.wistia.com/deliveries/5072bdabf3c5a103d4bf017f6442bf3b97cc9cde/zapier-logo.jpg" width="730"/>
 
 ## Automatically Send a Thank You Email to Wistia Video Visitors

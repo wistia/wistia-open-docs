@@ -2,8 +2,8 @@
 title: Google Analytics
 layout: post
 category: Integrations
-post_intro: <p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic video metrics in Google Analytics can give you a better picture of how they tie together with your website's metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
 description: Learn how to use Wistia and Google Analytics together to track video plays.
+post_intro: <p>At Wistia, we love analytics.  While ours are pretty sweet, there are lots of tools out there, like <a href="http://google.com/analytics" title="google analytics">Google Analytics</a>. While Wistia's analytics give you more in-depth information on video plays, putting basic video metrics in Google Analytics can give you a better picture of how they tie together with your website's metrics.</p><p>This guide is here to help you get started integrating Wistia video tracking with your Google Analytics account.</p>
 footer: 'for_intermediates'
 
 ---
