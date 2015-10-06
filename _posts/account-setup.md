@@ -77,6 +77,8 @@ Domain restrictions for your account:
   properly. If the video was embedded on a webpage **not** in your whitelist,
   it would appear as it does below.
 
+{% post_image hashed_id: '76dbe0fb4f1d3373bc1e307446218d11742f2590', class: 'center' %}
+
 ## Video Quality
 
 By default, [Wistia will automatically determine]({{ '/export-settings#how_wistia_does_hd' | post_url }})
