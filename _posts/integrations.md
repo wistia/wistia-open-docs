@@ -51,12 +51,9 @@ With Wistia and Squarespace, embedding a video is as easy as pasting in your URL
 
 ## Drupal
 
-Right now Wistia embed codes have only been tested and verified through Drupal v6.
+Right now Wistia embed codes have only been tested and verified through Drupal v6. Using Drupal beyond v6? Safety not guaranteed.
 
-Compatibility beyond v6 is not yet guaranteed.
-
-[Give us a shout](http://wistia.com/support/contact) if you'd like help setting
-that up.
+The [Field Wistia](https://www.drupal.org/project/field_wistia) module for Drupal is actively maintained.
 
 ## Wix
 
