@@ -154,7 +154,17 @@ Actions menu or drag the waypoints to the exact frames they're to appear.
 
 {% post_image hashed_id: 'ab4efc1f613f79a1bf8a4438a4a525ad2354fc73', class: 'center' %}
 
-{{ "Looking to make your video autoplay? Make sure to choose <strong>Autoplay video</strong> as your <strong>Start</strong> action from the dropdown menu." | tip }}
+### Autoplay Your Videos
+
+Need to capture your viewer's attention right at page load? Can't wait for them
+to click play? Autoplay is your new best friend.
+
+To set your video to autoplay you'll want to navigate to Timeline Actions in the
+Customize panel. There you'll see an option to choose **Start** behavior, which
+is set to default on the thumbnail. Switch that to "Autoplay video," save your
+changes, and you're ready to rock and roll. 🎸
+
+{% post_image hashed_id: '90f3b0e1802a37c92d3746bec2935363c483b05c', class: 'float_right', width: 300 %}
 
 ### Annotation Link
 
