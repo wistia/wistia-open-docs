@@ -1,8 +1,10 @@
 ---
 title: Replace Your Video
 layout: post
-description: Sometimes, it just takes too much effort to replace an embed code in the wild. Calling your developer doesn't always need to happen though, with Wistia's replace video tool!
 category: Customize
+description: Sometimes, it just takes too much effort to replace an embed code in the wild. Calling your developer doesn't always need to happen though, with Wistia's replace video tool!
+post_intro: <p> Sometimes, it just takes too much effort to replace an embed code in the wild. Calling your developer doesn't always need to happen though, with Wistia's replace video tool! </p>
+footer: 'for_intermediates'
 ---
 
 There are two ways to replace a video in Wistia--**overwrite** and **swap**. An overwrite

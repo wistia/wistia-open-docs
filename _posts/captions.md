@@ -2,11 +2,9 @@
 title: Captions
 layout: post
 category: Customize
-description:
-  Closed captioning makes content that’s easier for viewers
-  to digest and read (even in different languages), and has
-  awesome SEO benefits.
+description: Closed captioning makes content that’s easier for viewers to digest and read (even in different languages), and has awesome SEO benefits.
 post_intro: <p>Captions make it easy for viewers to digest the content of your videos. They're a critical part of content accessibility, but they are also helpful for longer form and educational content in any language.</p>
+footer: 'for_beginners'
 ---
 
 Whether you're trying to make sure people can get the message of your video

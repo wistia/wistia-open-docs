@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Responsive Design with Video
-description:
-  So you want to put your video in a responsive design, eh? You can use this
-  page as your one-stop shop to find the best way to do it.
+description: So you want to put your video in a responsive design, eh? You can use this page as your one-stop shop to find the best way to do it.
 category: Developers
 ---
 

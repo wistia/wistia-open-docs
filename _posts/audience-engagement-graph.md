@@ -1,8 +1,10 @@
 ---
 title: What is an Audience Engagement Graph?
 layout: post
-description: Learn more about the engagement graph, a representation of how your audience as a whole has engaged with your video.
 category: Stats
+description: Learn more about the engagement graph, a representation of how your audience as a whole has engaged with your video.
+post_intro: <p> Ever wonder how to interpret the graphs Wistia provides? Want to know how your audience is engaging with your videos? Here's your one-stop shop. </p>
+footer: 'for_intermediates'
 ---
 
 {% wistia_embed hashed_id: tz9365hyot %}

@@ -1,8 +1,10 @@
 ---
 title: Uploading
 layout: post
+category: Getting Started
 description: Learn how uploading with Wistia works.
-Category: Getting Started
+post_intro: <p> The first step to getting started with Wistia is to upload your content. So let's do it! <p/>
+footer: 'for_beginners'
 ---
 
 {% wistia_embed hashed_id: s1dmqzh5ua %}

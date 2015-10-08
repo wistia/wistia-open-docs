@@ -3,17 +3,15 @@ title: Embedding Video on Your Website
 layout: post
 category: embed and share
 description: Want to add video to your website (embedding) but don't know where to start? Here's a quick guide to get you off the ground!
-post_intro:
-  <p>Putting video on your website is the best way to get your message across.
-  The act of putting a video on your website is called <strong>embedding</strong>,
-  and in this guide we'll show you how to get it done right.</p>
+post_intro: <p>Putting video on your website is the best way to get your message across. The act of putting a video on your website is called <strong>embedding</strong>, and in this guide we'll show you how to get it done right.</p>
+footer: 'for_intermediates'
 ---
 
 ## Pre-Embedding
 
 Once you've [uploaded]({{ '/upload-video' | post_url }}) and [customized]({{ '/customizing-your-video' | post_url }}) your video, you're ready to go ahead and embed. Huzzah!
 
-Fun Fact: Even _after_ you embed a video on your website, you can make changes to it in [Customize]({{ '/customizing-your-video' | post_url }}). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video]({{ '/media#moving_and_copying_media' | post_url }}) or use advanced [embed options]({{ '/embed-options' | post_url }}) in your embed codes.
+Fun fact: even _after_ you embed a video on your website, you can make changes to it in [Customize]({{ '/customizing-your-video' | post_url }}). Those changes will automatically apply anywhere your video is embedded. If you want to use _different_ customizations across multiple embeds of the same video, you can [make multiple copies of the video]({{ '/media#moving_and_copying_media' | post_url }}) or use advanced [embed options]({{ '/embed-options' | post_url }}) in your embed codes.
 
 ## Generate an Embed Code
 

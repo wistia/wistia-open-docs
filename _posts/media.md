@@ -3,6 +3,8 @@ title: Media in Wistia
 layout: post
 category: Account
 description: From changing the title, to embedding it on your website or blog, learn all the functionality for uploaded media here.
+post_intro: <p> From changing the title, to embedding it on your website or blog, learn all the functionality for uploaded media here.</p>
+footer: 'for_beginners'
 
 ---
 

@@ -2,7 +2,7 @@
 title: Video SEO Troubleshooting
 layout: post
 description: Having trouble getting your Video SEO functionality up and running? Follow our simple troubleshooting guide to cure what ails you!
-Category: Troubleshooting
+category: Troubleshooting
 ---
 
 Want a quick overview of the Video SEO workflow? Check out this video:

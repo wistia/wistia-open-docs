@@ -2,8 +2,9 @@
 title: Sharing Video Privately
 layout: post
 category: Private Sharing
-post_intro: <p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.</p><p>With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
 description: Wistia makes it easy to privately share your videos with people. Invite people via email, and track how they watch in a secure environment.
+post_intro: <p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.</p><p>With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
+footer: 'for_beginners'
 ---
 
 <div id="bumper_test" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
@@ -23,7 +24,7 @@ description: Wistia makes it easy to privately share your videos with people. In
 {% post_image hashed_id: 'b7f77d7e188bc953dfd491ae12d9476ee44f5c2c', class: 'center' %}
 
 
-Managers in your Wistia account can invite new viewers to view private content using the "Sharing and Privacy" feature.  From the Project screen, select "Sharing and Privacy" from under the green "Project Actions" drop-down menu. 
+Managers in your Wistia account can invite new viewers to view private content using the "Sharing and Privacy" feature.  From the Project screen, select "Sharing and Privacy" from under the green "Project Actions" drop-down menu.
 
 Enter the email addresses of contacts you would like to share this project privately with in the box where it says "Enter email addresses to add users." You can customize the text from the message they will receive to first access the content you've allowed them to view by clicking on "Add a personal message."
 
@@ -50,7 +51,7 @@ This is the best sharing method to use if you want to:
   them to view your video.
 * Track how people watch your video, but are less concerned about associating
   viewing with a viewer's email address.
- 
+
 Once you have uploaded your videos to your project, from within the project
 hover over the *Project Actions* menu and choose the *Sharing and Privacy*
 option.
@@ -77,7 +78,7 @@ To disable access to your project through the link, set the sharing level to
 
 Wistia accounts include permissions and access controls for Managers, to set
 who can view media and what they can view.  To manage permissions for contacts
-on a Project, click the *Sharing and Privacy* option under Project Actions. 
+on a Project, click the *Sharing and Privacy* option under Project Actions.
 
 The share screen shows which users currently have access to the Project, and what permissions they have.  From here, Managers can add permissions like:
 
@@ -111,7 +112,7 @@ in your Wistia account.
 
 You will see a list of all user sessions for the users that have logged into
 your Wistia account.  To see exactly what each user did in each session, click
-on the *Stats* magnifying glass next to the session. 
+on the *Stats* magnifying glass next to the session.
 
 {% post_image hashed_id: 'ac77964367e67b73d9cbc706538c0fe884cb9a60', class: 'center' %}
 
@@ -172,8 +173,8 @@ Some example scenarios:
 
 * Users who have been given *Admin* permissions for the project will be able
   to see every option under Project Actions, and will also be able to see all
-  other shared users on the project via the "Sharing and Privacy" screen. 
-* Users with the *Stats* permission will see the Stats option under 
+  other shared users on the project via the "Sharing and Privacy" screen.
+* Users with the *Stats* permission will see the Stats option under
   Project Actions.
 * Users with *Upload* permissions will see the Upload option under Project
   Actions.
@@ -183,6 +184,6 @@ permission) will see a slightly different Sharing screen. They will be able to
 add email addresses into the "Share with" box, and will only be able to give
 out the permissions that they currently have for that Project. They can also
 customize the email message that is sent out as well. Here is what that Sharing
-screen looks like: 
+screen looks like:
 
 {% post_image hashed_id: '2e2a22f2fa3ff9368c23c213d219030d2246a392', class: 'center' %}

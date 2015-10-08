@@ -1,9 +1,10 @@
 ---
-layout: post
 title: Bandwidth
-description: Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!
+layout: post
 category: Account
+description: Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!
 post_intro: <p>Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!</p>
+footer: 'for_beginners'
 ---
 
 ## Understanding Bandwidth

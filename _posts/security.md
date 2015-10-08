@@ -1,22 +1,18 @@
 ---
 title: Wistia Video Security
 layout: post
-description: Wistia provides multiple levels of security for your videos. Learn more here!
 category: Getting Started
+description: Wistia provides multiple levels of security for your videos. Learn more here!
+post_intro: <p>We know that keeping your data <b>safe, available, and backed up</b> is critical when trusting a service provider with your data. We don't expect anything less from our vendors and neither should you. Learn about Wistia security here.</p>
+footer: 'for_beginners'
 ---
 
+We've designed our external and internal security policies and procedures so
+that you can relax and focus on what you do best – running your business.
 
-We know that keeping your data **safe, available,
-and backed up** is critical when trusting a service provider with your data. We don't
-expect anything less from our vendors and neither should you.
-
-We've designed
-our external and internal security policies and procedures so that you can relax and
-focus on what you do best – running your business.
-
-From catastrophe planning to low level encryption of credentials, Wistia's focus on security allows your business to have peace of mind that your content is being protected. Work with confidence, Wistia has you covered.
-
-
+From catastrophe planning to low level encryption of credentials, Wistia's focus
+on security allows your business to have peace of mind that your content is
+being protected. Work with confidence, Wistia has you covered.
 
 We're continually taking steps to make your videos as secure as possible:
 
