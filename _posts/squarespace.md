@@ -1,5 +1,5 @@
 ---
-title: Squarespace &amp; Wistia
+title: Squarespace & Wistia
 layout: post
 category: Integrations
 description: Easily add video to your Squarespace-powered website!

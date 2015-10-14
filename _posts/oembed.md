@@ -1,5 +1,5 @@
 ---
-title: Wistia &amp; oEmbed
+title: Wistia & oEmbed
 layout: post
 category: Developers
 post_intro: <p>oEmbed is a simple API to get information about embedded content on a URL.</p><p>For Wistia, it's a great way to programmatically get embed codes for videos if you have their URLs.</p>
