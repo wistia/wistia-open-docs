@@ -12,18 +12,18 @@ post_intro: <p>The Plugin API provides a light framework for script loading and 
 
 ## The Components of a Wistia Plugin
 
-A Wistia plugin has two basic pieces. First, the embed code needs to define 
-the plugin script and options. Second, the plugin script needs to initialize 
+A Wistia plugin has two basic pieces. First, the embed code needs to define
+the plugin script and options. Second, the plugin script needs to initialize
 using the Wistia.plugin function.
 
 
 ### Defining plugins in an embed code
 
-For learning purposes, I'll be demonstrating with an API embed code type. 
-I've removed the HTML portion and left only the script, since that's what we 
+For learning purposes, I'll be demonstrating with an API embed code type.
+I've removed the HTML portion and left only the script, since that's what we
 care about.
 
-First, here's an embed code that references one of Wistia's internal plugins, 
+First, here's an embed code that references one of Wistia's internal plugins,
 "requireEmail-v1".
 
 {% codeblock plugin_api.js %}
@@ -45,7 +45,7 @@ wistiaEmbed = Wistia.embed("hashedId", {
 {% endcodeblock %}
 
 
-Third Party plugins can use the exact same syntax, but they must add a src 
+Third Party plugins can use the exact same syntax, but they must add a src
 attribute.
 
 {% codeblock plugin_api.js %}
@@ -64,7 +64,7 @@ wistiaEmbed = Wistia.embed("hashedId", {
 });
 {% endcodeblock %}
 
-The script file is executed asynchronously. And this is where the second part 
+The script file is executed asynchronously. And this is where the second part
 of Wistia plugins comes in...
 
 
@@ -82,26 +82,26 @@ Wistia.plugin("my-plugin-name", function(video, options) {
 });
 {% endcodeblock %}
 
-That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're 
+That's it! By calling `Wistia.plugin("my-plugin-name", myFunction)`, you're
 doing a few things:
 
-1. It caches the function so, if multiple videos on the page use the same 
+1. It caches the function so, if multiple videos on the page use the same
 script, we don't need to download it twice.
-2. It places the function in the Wistia.plugin namespace, callable like 
+2. It places the function in the Wistia.plugin namespace, callable like
 `Wistia.plugin["my-plugin-name"](video, options)`.
-3. It immediately executes the function with the originating video handle 
+3. It immediately executes the function with the originating video handle
 and plugin options as arguments.
 
-The `video` argument is a handle to the [Player API](player-api), which means 
+The `video` argument is a handle to the [Player API](player-api), which means
 you can now do anything that the normal javascript API can do.
 
 
 ## Using plugins with an iframe embed
 
-Wistia iframe embeds take the exact same JSON parameters as an API embed, but 
+Wistia iframe embeds take the exact same JSON parameters as an API embed, but
 they must be properly URL-encoded using a bracket syntax.
 
-For example, here's the plugin parameters for the API embed above, but 
+For example, here's the plugin parameters for the API embed above, but
 translated to be appended on an iframe src attribute.
 
 <code class="full_width">plugin%5Bmy-plugin-name%5D%5BcustomOption%5D=true&plugin%5Bmy-plugin-name%5D%5Bsrc%5D=http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js</code>
@@ -109,7 +109,7 @@ translated to be appended on an iframe src attribute.
 
 ## Using the Plugin Grid
 
-Wistia videos are embedded in a DOM framework called the grid, which provides 
+Wistia videos are embedded in a DOM framework called the grid, which provides
 some handy shortcuts to DOM elements around the video.
 
 Here is a list of all the available handles:
@@ -157,8 +157,8 @@ $(video.grid.right_inside).append($myElem);
 ### Use the grid to place an element beside the video.
 
 You can use the grid to put elements outside the video too. This is a good idea
-because, as long your DOM elements are a fixed width, they will work correctly 
-with our responsive solution, [Video Foam](http://wistia.github.com/demobin/video-foam/).
+because, as long your DOM elements are a fixed width, they will work correctly
+with [responsive embeds]({{ '/embedding#embedding_responsively' | post_url '}}).
 
 Here's an example that adds a plugin to the right of the video.
 
@@ -170,11 +170,11 @@ video.grid.right.appendChild(myElem);
 video.fit();
 {% endcodeblock %}
 
-Note the `fit()` method, which will cause the video to change its width and 
+Note the `fit()` method, which will cause the video to change its width and
 height such that all the plugins fit within the container.
 
-Because fitting can cause an incorrect aspect ratio, it's recommended that DOM 
-elements outside the video have fixed dimensions. Then, when the embed code is 
+Because fitting can cause an incorrect aspect ratio, it's recommended that DOM
+elements outside the video have fixed dimensions. Then, when the embed code is
 created, you can simply add these dimensions to the total width and height.
 
 For example, I might have a 640x272 video. The iframe embed code would look like this:
