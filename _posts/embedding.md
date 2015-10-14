@@ -15,23 +15,39 @@ Fun fact: even _after_ you embed a video on your website, you can make changes t
 
 ## Generate an Embed Code
 
-An **embed code** is a snippet of code that you can use to add content (like a video!) to a web page. When a person visits your website, their web browser will interpret the embed code as a set of instructions to display your video on the page.
+An **embed code** is a snippet of code that you can use to add content (like a video!) to a web page.
 
-Wistia embed codes come in a few flavors, and they each are great for different purposes. The best type of embed code to get started with is an [iframe embed](#iframe_embed). For more advanced embedding, check out the [API](#api_embed), [SEO](#seo_embed), and [popover](#popover_embed) embed code types.
+To generate an embed code for your video, start by selecting the *Embed & Share* option under the <span class='action_menu'>Video Actions</span> menu from your video's page in Wistia. That will open the Embed & Share screen, where you can choose your embed code type and make it _just right_ for your page.
 
-To generate an embed code for your video, start by selecting the *Embed & Share* option under the <span class='action_menu'>Video Actions</span> menu from your video's page in Wistia. That will open the Embed & Share screen, where you can choose from one of several embed code types and set the dimensions (in pixels) for your video:
+There are two main types of Wistia embed codes: [Inline embeds](#inline_embeds) and [Popover embeds](#popover_embeds). Read on to learn more about both!
 
-{% wistia_embed hashed_id: j3a6v2cblf %}
+## Inline Embeds
 
-The dimensions of your embed code will scale proportionally with the dimensions of your original video, so you only need to set the width – we'll make sure the height matches automatically.
+Inline embeds will place the video directly on the page, _inline_ with the rest of your content. Here's an example "standard" inline embed:
 
-{{ "To make your video responsive, check out [Video Foam](http://wistia.com/doc/video-foam)." | note }}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+<div class="wistia_embed wistia_async_78evdl8ycp" style="height:100%;width:100%">&nbsp;</div>
+</div></div>
 
-## Inline Embed Types
+This is what a standard inline embed code looks like:
 
-There are three types of inline embed code types: [iframe](#iframe_embed), [API](#api_embed), and [SEO](#seo_embed). They all display "in line" on the page and look exactly the same. So why would you use one type of inline embed over another? Read on to find out!
+{% codeblock standard_embed.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_wogyyxgk0n" style="height:349px;width:620px">&nbsp;</div>
+{% endcodeblock %}
 
-### iframe Embed
+### Embed Responsively
+
+All inline embed codes are responsive by default, meaning that your video will automatically resize itself to the width of its container. If you need to set the video to specific dimensions though, just switch to the Fixed Size option and choose a width or height. The dimension you _don't_ adjust will automatically change to maintain the aspect ratio of your video.
+
+{% wistia_embed hashed_id: eas86njrhu %}
+
+{{ 'Feel free to grab that embed code ⬆️ to try it out, or [go to your Wistia account](https://my.wistia.com) and generate one for you own video!' | tip }}
+
+### Fallback (iframe) Embed
+
+{{ 'The Fallback option should only be used if the Standard inline embed won't work on your website for some strange reason. Please [tell us](http://wistia.com/support/contact) if that happens!' | note }}
 
 The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
 
@@ -117,16 +133,15 @@ An API embed code works by first creating a blank rectangular box on the page (t
 The API embed code is extensively configurable. For more detail on using API embed codes, check out the [Player API documentation]({{ '/player-api' | post_url}}).
 
 
-### SEO Embed
+## Video SEO
 
-The SEO embed code type is what you should use if you want to help search engines identify and index the video content on your website.
+Video SEO is a set of tools and processes to help search engines identify and index your videos. Wistia's standard embed codes are automatically SEO-friendly, and they'll help people find your videos on _your_ website – not [someone else's](http://youtube.com).
 
-{% wistia_embed hashed_id: 8gyuqtj6hr %}
-
-Certain aspects of your video (like the [thumbnail image]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}) and [captions]({{ '/captions' | post_url }})) will be hard-coded into the text of your SEO embed code so search engines can find that information and use it to improve the search results. For this reason, it's important to follow a specific process when using an SEO embed code. Be sure to review the [Video SEO documentation]({{ '/video-seo' | post_url }}) if you're getting started with video SEO.
-
+Check out the [Video SEO help page]({{ '/video-seo' | post_url }}) for more detail 🔍, and tips on getting Video SEO done right.
 
 ## Popover Embed
+
+Popover embed codes make your videos _pop over_ the rest of your content <div class="wistia_embed wistia_async_5pflfiknw1 popover=true popoverContent=link" style="display:inline"><a href="#">like this</a></div> instead of playing inline.
 
 The popover embed code type displays your video in a popover lightbox in front
 of the main content on your page. You can launch a popover video with either a
@@ -222,12 +237,12 @@ inline-block;`, as seen here:
 ## Link in Email Campaign & Social Sharing
 
 These options are covered in-depth in the [email marketing]({{ '/email-marketing' | post_url }}) and [social
-sharing]({{ '/social-sharing' | post_url }}) documentation pages respectively.
+sharing]({{ '/social-sharing' | post_url }}) help pages respectively.
 
 
 ## Protecting Your Embeds
 
-Want to make sure your videos can only be played on _your_ website (and of course, within your Wistia account)? Check out [Domain Restrcitions]({{ '/domain-restrictions' | post_url }}) for that. For more information on keeping your videos secure, see the [Security]({{ '/security' | post_url }}) guide.
+Want to make sure your videos can only be played on _your_ website (and of course, within your Wistia account)? Check out [Domain Restrictions]({{ '/domain-restrictions' | post_url }}) for that. For more information on keeping your videos secure, see the [Security]({{ '/security' | post_url }}) guide.
 
 
 ## Embedded Video Stats
