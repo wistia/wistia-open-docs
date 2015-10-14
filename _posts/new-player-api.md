@@ -1133,3 +1133,112 @@ Or an Async API embed would look like this:
 <div class="wistia_embed wistia_async_abcde12345 wmode=transparent"
 style="width:640px;height:360px;"></div>
 {% endcodeblock %}
+
+
+## Legacy API Embeds
+
+This section exists to help customers transition from our Legacy API embeds to
+Standard (a.k.a. "async") embeds.
+
+If you have an embed code which look like this, then you have a Legacy API
+embed:
+
+{% codeblock wistia_html.html %}
+<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<script src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("abcde12345");
+</script>
+{% endcodeblock %}
+
+An equivalent Standard (a.k.a. "async") embed would look like this:
+
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_abcde12345" style="width:640px;height:360px;"></div>
+{% endcodeblock %}
+
+Going forward, it is recommended that you switch to a "Standard" (a.k.a.
+"async") embed for all new embed codes. Async embeds can do everything Legacy
+API embeds can do, but they never block page load, they are less susceptible to
+mangling, and they are easier to inject dynamically into html.
+
+There are no plans to remove the Legacy API embed syntax; if you have existing
+Legacy API embeds, they do not need to be re-embedded.
+
+### Embed Options Comparison
+
+In Legacy API embeds, options passed to the embed code might look like this:
+
+{% codeblock wistia_html.html %}
+<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<script src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("abcde12345", {
+  autoPlay: true,
+  controlsVisibleOnLoad: false
+});
+</script>
+{% endcodeblock %}
+
+The options there are specified as part of the `Wistia.embed` function call.
+
+With Standard (a.k.a. "async") embeds, an equivalent embed code would be:
+
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_abcde12345 autoPlay=true
+controlsVisibleOnLoad=false" style="width:640px;height:360px;"></div>
+{% endcodeblock %}
+
+The options there are specified as key/val pairs in the container's `class`
+attribute.
+
+For more information on setting options, check out the
+[docs on embed options]({{ '/new-embed-options' | post_url }}).
+
+### Player API Usage Comparison
+
+With Legacy API embeds, each embed code is assigned the `wistiaEmbed` variable
+by default. You could use this variable to set up bindings, play on load, etc.
+You can do the same things with Standard embeds, but they are always loaded
+asynchronously, so the flow to get Player API access is slightly different.
+
+Setting up bindings with a Legacy API embed:
+
+{% codeblock wistia_html.html %}
+<div id="wistia_abcde12345" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
+<script src="//fast.wistia.com/assets/external/E-v1.js"></script>
+<script>
+wistiaEmbed = Wistia.embed("abcde12345");
+wistiaEmbed.hasData(function() {
+  wistiaEmbed.bind("play", function() {
+    console.log("video played", wistiaEmbed.name());
+  });
+});
+</script>
+{% endcodeblock %}
+
+Equivalent code for Standard embeds:
+
+{% codeblock wistia_html.html %}
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_abcde12345" style="width:640px;height:360px;"></div>
+<script>
+window._wq = window._wq || [];
+_wq.push({ "abcde12345": function(video) {
+  video.bind("play", function() {
+    console.log("video played", video.name());
+  });
+});
+</script>
+{% endcodeblock %}
+
+The inline script syntax for Standard embeds makes it easier for javascript in
+external files to get a handle to each video. That is, instead of setting a global
+variable when the video is embedded, you can access the Player API by hashed ID
+or DOM ID. It also implicitly waits for data to be returned from the server, so
+you are guaranteed methods like `name()` and `duration()` will return
+meaningful values.
+
+For more information on using the Player API, scroll to the top of this page.
