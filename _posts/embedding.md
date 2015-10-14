@@ -23,12 +23,16 @@ There are two main types of Wistia embed codes: [Inline embeds](#inline_embeds) 
 
 ## Inline Embeds
 
+{% post_image hashed_id: '8b09b21713e40f738d70a43d66bac82acef32d51', width: 711, class: 'float_left' %}
+
 Inline embeds will place the video directly on the page, _inline_ with the rest of your content. Here's an example "standard" inline embed:
 
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
 <div class="wistia_embed wistia_async_78evdl8ycp" style="height:100%;width:100%">&nbsp;</div>
 </div></div>
+
+Nice.
 
 This is what a standard inline embed code looks like:
 
@@ -37,201 +41,58 @@ This is what a standard inline embed code looks like:
 <div class="wistia_embed wistia_async_wogyyxgk0n" style="height:349px;width:620px">&nbsp;</div>
 {% endcodeblock %}
 
-### Embed Responsively
+
+Feel free to grab that embed code to try it out, or [go to your Wistia account](https://my.wistia.com) and get an inline embed code for you own video!
+
+{{ 'Wistia embeds are extremely configurable, and lots of fun to work with (if we may say so ourselves). If you want to get fancy with our JavaScript API, [this link is for you](http://wistia.com/doc/player-api).' | tip }}
+
+
+### Fallback (iframe) Embed
+
+While the Standard inline embed code will work great in most cases, some websites can give it a little trouble. Luckily, there's a fallback option:
+
+{% post_image hashed_id: 'edf435f5c6927c7995943836170af3654b45ace5', width: 641, class: 'float_left' %}
+
+The fallback embed is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
+
+If you can't include JavaScript on your website, or something is making your Standard embed look a little... weird, give the Fallback option a try.
+
+{{ "The Fallback (iframe) embed should only be used if the Standard inline embed won't work on your website for some strange reason. Please [tell us](http://wistia.com/support/contact) if that happens!" | note }}
+
+## Popover Embeds
+
+{% post_image hashed_id: 'f8dea5aa0d84cafac432a23ee982f66cff819d0e', width: 711, class: 'float_left' %}
+
+Popover embed codes make your videos _pop over_ the rest of your content <div class="wistia_embed wistia_async_ftt9sor9hw popover=true popoverContent=link" style="display:inline"><a href="#">like this</a></div> instead of playing inline.
+
+You can launch a popover video with either a text link or thumbnail image link. When clicked, that link will open a lightbox
+with your video inside.
+
+<div class="wistia_embed wistia_async_ftt9sor9hw popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:169px;width:300px">&nbsp;</div>
+
+{{ "Popover embeds cannot be used for video SEO purposes. Google generally will not index them, because they don't really put a video **on** the page – they put one in front of it!" | note }}
+
+Here's an example popover embed code:
+
+{% codeblock popover_example.html %}
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="wistia_embed wistia_async_ftt9sor9hw popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:169px;width:300px">&nbsp;</div>
+{% endcodeblock %}
+
+{{ 'If you would like to modify the behavior of your popover embed beyond what the options in the Embed & Share screen provide, check out the [Popover Customization](http://wistia.com/doc/popover-customization) page.' | tip }}
+
+
+## Embed Responsively
 
 All inline embed codes are responsive by default, meaning that your video will automatically resize itself to the width of its container. If you need to set the video to specific dimensions though, just switch to the Fixed Size option and choose a width or height. The dimension you _don't_ adjust will automatically change to maintain the aspect ratio of your video.
 
 {% wistia_embed hashed_id: eas86njrhu %}
 
-{{ 'Feel free to grab that embed code ⬆️ to try it out, or [go to your Wistia account](https://my.wistia.com) and generate one for you own video!' | tip }}
-
-### Fallback (iframe) Embed
-
-{{ 'The Fallback option should only be used if the Standard inline embed won't work on your website for some strange reason. Please [tell us](http://wistia.com/support/contact) if that happens!' | note }}
-
-The iframe embed code type is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
-
-<iframe src="//fast.wistia.net/embed/iframe/fw1qhcu1vx" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="730" height="411"></iframe>
-
-An iframe is an HTML element that lets you display content from one webpage in a special box on another page. Think of it as a cut-out box on a piece of paper. If you cut a rectangle into one page and place another page behind it, it will look like all of the content is right there in the main page:
-
-{% post_image hashed_id: 'e1a58a32d8eeec16df926836f7527e0c3b43a52a', width: 600, class: 'center' %}
-
-Here's an example Wistia iframe embed code:
-
-{% codeblock iframe_example.html %}
-<iframe src="//fast.wistia.net/embed/iframe/es7g1ii56j"
-allowtransparency="true" frameborder="0" scrolling="no"
-class="wistia_embed" name="wistia_embed" allowfullscreen
-mozallowfullscreen webkitallowfullscreen oallowfullscreen
-msallowfullscreen width="640" height="388"></iframe>
-{% endcodeblock %}
-
-The `<iframe> ... </iframe>` part there is what tells a person's web browser, _"Hey! Let's show some content from another web page here!"_ It then pulls in the content from [`fast.wistia.net/embed/iframe/es7g1ii56j`](http://fast.wistia.net/embed/iframe/es7g1ii56j), identified in the `src` (or "source") attribute, and displays it in a box with the dimensions specified by the `width` and `height` attributes.
-
-When you insert an iframe embed code like that into a webpage, the video will display inline as seen above.
-
-If you have a video in your account already, trying generating an iframe embed code for it and then [add it to your website](#pasting_your_embed_code_onto_your_page).
-
-{{ "A quick note on our embeds. We use protocol relative URLs as part of our embed codes. This means they will work on SSL-enabled websites without any additional tinkering. They can look a bit funky without the `http` or `https` you might be expecting, but it can save you headaches when placing your video on your website." | note }}
-
-### API Embed
-
-Want to spice up your embed with
-[Embed Options & Plugins]({{ '/embed-options' | post_url }}) or build out your
-own custom functionality with the
-[Player API]({{ '/player-api' | post_url}})? You and the API embed code type
-should be friends.
-
-<div id="wistia_zhvmbbowqp" class="wistia_embed" style="width:730px;height:411px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-
-<script src="/doc/raptorize/jquery.js"></script>
-<script src='/doc/raptorize/jquery.raptorize.1.0.js'></script>
-
-<script>
-(function($) {
-  wistiaEmbedSME = Wistia.embed("zhvmbbowqp");
-  function onFirstEnd() {
-    wistiaEmbedSME.unbind('end', onFirstEnd);
-    wistiaEmbedSME.bind('play', onSecondPlay);
-  }
-  function onSecondPlay() {
-    wistiaEmbedSME.unbind('play', onSecondPlay);
-    $("#wistia_zhvmbbowqp").raptorize({
-      enterOn: "timer",
-      delayTime: 2,
-      raptorImage: "/doc/raptorize/raptor.png",
-      raptorSoundMp3: "/doc/raptorize/raptor-sound.mp3",
-      raptorSoundOgg: "/doc/raportize/raptor-sound.ogg"
-    });
-    wistiaEmbedSME.pause();
-    setTimeout(function() {
-      wistiaEmbedSME.play();
-    }, 2800);
-  }
-  wistiaEmbedSME.bind('end', onFirstEnd);
-}(jQuery));
-</script>
-
-
-{{ "There are many useful ways to customize your embed _without_ modifying the embed code. Check out [Customize](/doc/customizing-your-video) first!" | note }}
-
-Let's check out an example API embed code:
-
-{% codeblock api_example.html %}
-<div id="wistia_iigvmw8e2a" class="wistia_embed" style="width:640px;height:360px;">&nbsp;</div>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-<script>
-wistiaEmbed = Wistia.embed("iigvmw8e2a");
-</script>
-{% endcodeblock %}
-
-
-An API embed code works by first creating a blank rectangular box on the page (that's the `<div ...> ... </div>` element at the top), and then executing a script that puts a video into the box. The script knows which div to put the video in, because the hashed ID passed into `Wistia.embed` matches the ID assigned to the `div` – in the example above, `iigvmw8e2a`.
-
-The API embed code is extensively configurable. For more detail on using API embed codes, check out the [Player API documentation]({{ '/player-api' | post_url}}).
-
-
 ## Video SEO
 
-Video SEO is a set of tools and processes to help search engines identify and index your videos. Wistia's standard embed codes are automatically SEO-friendly, and they'll help people find your videos on _your_ website – not [someone else's](http://youtube.com).
+Video SEO is a set of tools and processes to help search engines identify and index your videos. Wistia's Standard embed codes are automatically SEO-friendly, and they'll help people find your videos on _your_ website – not [someone else's](http://youtube.com).
 
 Check out the [Video SEO help page]({{ '/video-seo' | post_url }}) for more detail 🔍, and tips on getting Video SEO done right.
-
-## Popover Embed
-
-Popover embed codes make your videos _pop over_ the rest of your content <div class="wistia_embed wistia_async_5pflfiknw1 popover=true popoverContent=link" style="display:inline"><a href="#">like this</a></div> instead of playing inline.
-
-The popover embed code type displays your video in a popover lightbox in front
-of the main content on your page. You can launch a popover video with either a
-text link or thumbnail image link. When clicked, that link will open a lightbox
-with your video inside, like this:
-
-<a href="//fast.wistia.net/embed/iframe/f1vvtyo4mn?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
-
-{{ "Popover embeds cannot be used for video SEO purposes. [Google generally will not index them](https://support.google.com/webmasters/answer/34445?hl=en), because they're not really **on** the page – they're in front of it!" | note }}
-
-Here's an example popover embed code:
-
-{% codeblock popover_example.html %}
-<a href="//fast.wistia.net/embed/iframe/o3x7owvb7l?popover=true" class="wistia-popover[height=540,playerColor=3ea9f5,width=960]"><img src="https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169" alt="" /></a>
-<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>
-{% endcodeblock %}
-
-The popover embed code has three components:
-
-* Either a piece of text or an image. In the example above, this automatically generated thumbnail image:
-`https://embed-ssl.wistia.com/deliveries/a5a4535537891abcdd5dd6f9c9bfe9426a6eaa87.jpg?image_play_button=true&image_play_button_color=3ea9f5e0&image_crop_resized=300x169`.
-* Code to turn that text or image into a link, pointing to a video URL like `fast.wistia.net/embed/iframe/o3x7owvb7l?popover=true`.
-* A script, `fast.wistia.com/assets/external/popover-v1.js`, which causes the link to open in a popover lightbox instead of opening as a separate page.
-
-
-## Pasting your Embed Code onto Your Page
-
-Once you have copied the embed code, the next step is to paste it into your web
-page editor (which could be a CMS, blog, HTML document, etc.). This is where it
-gets complicated to talk in specifics, since each website management system is
-different, but here are some tips:
-
-1. If you are using a CMS suite, make sure the settings will allow for *javascript* and will leave *HTML* alone, where possible.
-2. Choose the *HTML* editor setting where possible - not the *Visual* editor.
-3. Leave a line above and below your embed code, to make sure it doesn't conflict with other elements on the page.
-
-## Styling Your Embed
-
-### Centering Your Embedded Video
-
-<div style="text-align: center;">
-  <iframe src="//fast.wistia.net/embed/iframe/zmgfiw3ckj" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="450" height="253"></iframe>
-</div>
-
-There are several possible solutions for centering a video inside a `div` or
-column in your website. The solution that works best for you will depend on the
-*embed code type* you use, and the structure of your website.
-
-For an iframe embed, your embed code normally looks *something* like this:
-
-    <iframe src="//fast.wistia.net/embed/iframe/479268413a" width="960" height="540"></iframe>
-
-One possible solution is to add `display: block` and `margin: 0 auto` style
-attributes to the embed code, like this:
-
-    <iframe src="//fast.wistia.net/embed/iframe/479268413a" style="display: block; margin: 0 auto;" width="960" height="540"></iframe>
-
-Another solution for iframes is to set the `parent div` (which wraps around the
-video) to `text-align: center`, like this:
-
-{% codeblock center-text-align.html %}
-<div style="text-align: center;">
-  <iframe src="//fast.wistia.net/embed/iframe/479268413a" width="960" height="540"></iframe>
-</div>
-{% endcodeblock %}
-
-For an API embed, the original code might look like this:
-
-    <div id="wistia_479268413a" class="wistia_embed" style="width:960px;height:540px;">
-
-Add the `margin: 0 auto` to the existing style settings, like this:
-
-    <div id="wistia_479268413a" class="wistia_embed" style="margin: 0 auto;width:960px;height:540px;">
-
-### Centering oEmbed Codes in Wordpress
-
-When using Wordpress and oEmbed codes, first add an outer div with the style
-`text-align: center;`. Then, add a second div with the style `display:
-inline-block;`, as seen here:
-
-{% codeblock center-wordpress.html %}
-<div style="text-align: center;">
-  <div style="display: inline-block;">
-
-    http://dave.wistia.com/medias/mgdmzrzrm4?embedType=api&videoWidth=640
-
-  </div>
-</div>
-{% endcodeblock %}
 
 
 ## Link in Email Campaign & Social Sharing
@@ -247,25 +108,25 @@ Want to make sure your videos can only be played on _your_ website (and of cours
 
 ## Embedded Video Stats
 
-Now that your video is embedded on your webpage, you can use Wistia's tracking
+Now that your video is embedded on your webpage, you can use Wistia's
 analytics to see how your viewers are interacting with the content.
 
-[Read up on Wistia viewing stats and analytics]({{ '/embedded-video-analytics' | post_url }}).
+[Read up on Wistia's analytics functionality]({{ '/embedded-video-analytics' | post_url }}).
 
 ## Troubleshooting Embed Issues
 Embedding can be tough! If you're stuck, check out the [Embed Troubleshooting]({{ '/embed-troubleshooting' | post_url }}) documentation.
 
 If something seems fishy on Wistia's side of things, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? [Contact us](http://wistia.com/support/contact). We'd be more than happy to help you out!
 
-<script src="//fast.wistia.com/assets/external/embed_shepherd-v1.js"></script>
-<script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
+
+
 <script>
-  wistiaEmbeds.onFind(function(video) {
-    if (video.hashedId() == 'j3a6v2cblf') {
-      video.addPlugin('playWhenVisible', {
-        src: '//fast.wistia.com/labs/play-when-visible/plugin.js',
-        outsideIframe: true
-      });
-    }
+window._wq = window._wq || [];
+_wq.push({ "eas86njrhu": function(video) {
+  video.addPlugin('playWhenVisible', {
+    src: '//fast.wistia.com/labs/play-when-visible/plugin.js'
   });
+  $(video.container).css({"border":"1px solid #cbd0d6"});
+
+}});
 </script>
