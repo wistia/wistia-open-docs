@@ -891,7 +891,7 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .chapter_link { position: relative; }
 
-body { font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; color: #363945; text-align: left; -webkit-font-smoothing: antialiased; }
+body { font-family: "Avenir", Futura, Helvetica, sans-serif; color: #363945; text-align: left; -webkit-font-smoothing: antialiased; }
 body a { color: #161d25; text-decoration: none; }
 body a:hover { text-decoration: underline; }
 
