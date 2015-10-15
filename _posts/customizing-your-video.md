@@ -129,8 +129,7 @@ Configure the link location and link text using the *Buttons link to* and
 *Specific Page* options (the embed configuration window will also include those
 instructions).
 
-Once that is done, save your customizations. Open the [Embed & Share]({{'/embedding#generate_an_embed_code' | post_url}})
-window, and make sure to select an SEO embed code.
+Once that is done, save your customizations.
 
 ## Timeline Actions
 

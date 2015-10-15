@@ -57,12 +57,6 @@ style `display: inline-block;`, as seen here:
 
 For more info on centering your video, refer to our tips in the [embedding documentation]({{ '/embedding#styling_your_embed' | post_url }}).
 
-
-## Using Wistia Video SEO Embeds with WordPress
-
-The simplest way to help search engines find and index the Wistia videos on your WordPress.org site is to [use the SEO embed code type](http://wistia.com/doc/video-seo#using_the_video_seo_embed_type) and the awesome [Yoast plugin](http://yoast.com/wordpress/video-seo/). Joost, the one-man wrecking crew behind Yoast, has put together a really valuable and easy-to-use workflow that also includes Wistia support (awesome!). When you're using Yoast, you do not need to create a video sitemap in Wistia – Yoast does that for you.
-
-
 <script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
 <script>
   window.wistiaEmbedShepherdReady = function(){

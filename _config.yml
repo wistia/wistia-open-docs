@@ -11,5 +11,5 @@ wistia_embed_settings:
   playerColor: "40aaef" # $accent_blue from screen.sass
   videoWidth: "730"
   playButton: true
-  embedType: "seo"
+  embedType: "async"
   controlsVisibleOnLoad: false
