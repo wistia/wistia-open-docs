@@ -1193,7 +1193,7 @@ The options there are specified as key/val pairs in the container's `class`
 attribute.
 
 For more information on setting options, check out the
-[docs on embed options]({{ '/new-embed-options' | post_url }}).
+[docs on embed options]({{ '/embed-options' | post_url }}).
 
 ### Player API Usage Comparison
 
