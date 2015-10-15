@@ -6,8 +6,11 @@
     <title>
       {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
     </title>
+    {% if page.title %}
+    <meta class='swiftype' content='{{ page.title | escape }}' data-type='string' name='title' />
+    {% endif %}
     {% if page.description %}
-    <meta content='{{ page.description }}' name='description' />
+    <meta class='swiftype' content='{{ page.description | escape }}' data-type='text' name='body' />
     {% endif %}
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
     <link href="{{ '/stylesheets/screen' | stylesheet_url }}" rel='stylesheet' type='text/css' />
@@ -20,6 +23,17 @@
     <script type='text/javascript'>try{Typekit.load();}catch(e){}</script>
     {% endif %}
     <link href='//cloud.typography.com/6901872/779304/css/fonts.css' rel='stylesheet' type='text/css' />
+    <!-- Swiftype search -->
+    <!-- the Hash Change JQuery plugin is required for swiftype.search.js -->
+    <script type='text/javascript'>
+      //<![CDATA[
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+        _st('install','oN7bUy-pbTePRQzSFem7','2.0.0');
+      //]]>
+    </script>
     <script type='text/javascript'>
       //<![CDATA[
         var basepath = "{{ '' | post_url }}";
@@ -36,7 +50,6 @@
     {% include footer.html %}
     {% include getCookie.html %}
     <!-- scripts and such -->
-    <script src="{{ '/javascripts/search_text' | javascript_url }}"></script>
     <script src="{{ '/javascripts/mixpanel' | javascript_url }}"></script>
     <script src="{{ '/javascripts/mixpanel_tracker' | javascript_url }}"></script>
     <script src="{{ '/javascripts/selective_autoplay' | javascript_url }}"></script>
