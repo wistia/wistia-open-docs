@@ -109,26 +109,22 @@ var video1 = Wistia.api("my_video");
 var video2 = Wistia.api("abcde12345");
 var video3 = Wistia.api("my_");
 var video4 = Wistia.api("abc");
-var video5 = Wistia.api("de12");
-var video6 = Wistia.api("vid");
 
 console.log(video1 === video2); // true
 console.log(video2 === video3); // true
 console.log(video3 === video4); // true
-console.log(video4 === video5); // true
-console.log(video5 === video6); // true
 {% endcodeblock %}
 
 If the same video appears several times on the page, `Wistia.api("hashedid")`
 will only return the first instance. If you need a handle for each instance,
 you'll need to assign unique container IDs and reference those.
 
-If the first 3 letters of the hashed ID are used, there is a 1 in 5,800 chance
+If the first 3 letters of the hashed ID are used, there is a 1 in 46,656 chance
 that you will have a collision with another video on the page. To be safe, if
 you have many videos on a page, you may want to be more verbose. For example,
 increasing your matcher to 4 characters decreases the chance of collision to 1
-in 240,000. But short access is convenient and can be used on most pages where
-the number of videos is small.
+in 1,679,616. But short access is convenient and can be used on most pages
+where the number of videos is small.
 
 ---
 
