@@ -30,7 +30,7 @@ provides functionality for both approaches, which we cover below.
 
 ## On-page Markup for Video SEO
 
-When search engines like Google crawl a page on your website, they can only identify a video and index it properly if the page includes the right video markup. Google has [extensive technical documentation](https://developers.google.com/webmasters/videosearch/schema) on how to add that markup... but you don't need to worry about it! Wistia's [Standard embeds]({{ '/embedding#inline_embeds'}}) automatically put that markup on the page for you.
+When search engines like Google crawl a page on your website, they can only identify a video and index it properly if the page includes the right video markup. Google has [extensive technical documentation](https://developers.google.com/webmasters/videosearch/schema) on how to add that markup... but you don't need to worry about it! Wistia's [Standard embeds]({{ '/embedding#inline_embeds' | post_url }}) automatically put that markup on the page for you.
 
 When you have a standard Wistia embed on a page, it will place the following markup in the `<head>` section for search engines to find:
 
@@ -358,8 +358,8 @@ content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-se
 Building links back to your original content can be hugely powerful for
 building your audience.
 
-For more on building SEO links using for your content,
-[see the Customization docs]({{'/customizing-your-video#social_bar' | post_url}}).
+For more information on video backlinks,
+[see the Customization docs]({{'/customizing-your-video#using_video_backlinks' | post_url}}).
 
 ### Can I hear Ben talking about SEO?
 

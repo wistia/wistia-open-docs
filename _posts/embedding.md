@@ -54,7 +54,7 @@ The Fallback embed is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subar
 
 If you can't include JavaScript on your website, or something is making your Standard embed look a little... weird, give the Fallback option a try.
 
-{{ "The Fallback embed should only be used if the Standard inline embed won't work on your website for some strange reason. Please [tell us](http://wistia.com/support/contact) if that happens!" | note }}
+{{ "The Fallback embed should only be used if the Standard inline embed won't work on your website for some strange reason. Please [tell us](http://wistia.com/support/contact) if that happens!" | alert }}
 
 
 ## Popover Embeds
@@ -82,13 +82,13 @@ Copy and paste that into your website to give it a try! Be sure to read the sect
 
 ## Embedding Responsively
 
-Responsive videos are happy videos. Responsiveness works a bit differently between inline embeds and popover embeds, so let's dig into both separately:
+Responsive videos are happy videos. Responsiveness works a bit differently for inline embeds and popover embeds, so let's dig into both separately here 👇.
 
 ### Responsive Design with Inline Embeds
 
 Inline embed codes are responsive by default, meaning that your video will automatically resize itself to the width of its container. Hooray!
 
-With a responsive embed, you will never need to manually adjust the dimensions of your embed code. If the video isn't quite the right size on your webpage, try adjusting the width of its parent container on your webpage first. If you get stuck, just [reach out to our Customer Happiness team](http://wistia.com/support/contact)!
+With a responsive embed, you will never need to manually adjust the dimensions of your embed code. If the video isn't quite the right size, try adjusting the width of its parent container on your webpage first. If you get stuck, just [reach out to our Customer Happiness team](http://wistia.com/support/contact)!
 
 If you need to set the video to specific dimensions though and don't want it to be responsive at all, just switch to the Fixed Size option and choose a width or height. The dimension you _don't_ adjust will automatically change to maintain the aspect ratio of your video.
 
