@@ -26,8 +26,9 @@ The handle will be given as an argument of the callback function.
 #### With API/SEO embeds
 
 We push an object of the form `{ matcher: callback }` onto the queue. Embeds
-that match--as described in the `Wistia.api(matcher)` section below--will run
-the function.
+that match--as described in the
+[`Wistia.api(matcher)`]({{ '/player-api#wistiaapimatcher' | post_url }})
+section below--will run the function.
 
 {% codeblock wistia_html.html %}
 <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
