@@ -14,18 +14,18 @@ In their most basic form, popover embeds look like this:
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=v2" style="width:300px;height:150px;">&nbsp;</div>
+<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=true" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
-That is, they are just a type of Async API embed with the option `popover=v2`.
+That is, they are just a type of Async API embed with the option `popover=true`.
 The popover options defined below would all be added into the `class`
-attribute, right after `popover=v2`. For example, if I wanted a thin border on
+attribute, right after `popover=true`. For example, if I wanted a thin border on
 my popovers, I'd modify the embed code to look like this:
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5
-popover=v2 popoverBorderWidth=2" style="width:300px;height:150px;">&nbsp;</div>
+popover=true popoverBorderWidth=2" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
 You can set any of the options listed below in exactly the same way.
@@ -44,10 +44,10 @@ popover behavior.
 The `autoPlay` option is true by default for popovers. Set it to false if you'd
 like the viewer to click again to play it.
 
-### popover=v2
+### popover=true
 
 The `popover` option is important, but the value should always be the same.
-Setting the `popover=v2` will tell the embed code that it should behave like
+Setting the `popover=true` will tell the embed code that it should behave like
 a popover.
 
 ### popoverShowOnLoad
@@ -73,7 +73,7 @@ thumbnail will be rendered in the container, cropped to fit with no black bars.
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5
-popover=v2 popoverContent=thumbnail" style="width:300px;height:150px;">&nbsp;</div>
+popover=true popoverContent=thumbnail" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
 When `popoverContent` is set to "html", the HTML inside the container is not
@@ -82,7 +82,7 @@ video.
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=v2 popoverContent=html"
+<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=true popoverContent=html"
 style="display:inline-block; white-space:nowrap;">
   <a href="#">Launch the popover!</a>
 </div>
@@ -95,7 +95,7 @@ Here's a similar version where a custom image is also defined:
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=v2 popoverContent=html"
+<div class="wistia_embed wistia_async_5bbw8l7kl5 popover=true popoverContent=html"
 style="display:inline-block; white-space:nowrap;">
   <a href="#">
     <img src="http://wistia.com/doc/custom-image-for-example-purposes.jpg" alt="" />
@@ -111,7 +111,7 @@ default this is set to "000000". To change it to white, use "ffffff".
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5
-popover=v2 popoverOverlayColor=ffffff" style="width:300px;height:150px;">&nbsp;</div>
+popover=true popoverOverlayColor=ffffff" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
 ### popoverOverlayOpacity
@@ -122,7 +122,7 @@ Use this to change the overlay's opacity. This expects a decimal value between
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5
-popover=v2 popoverOverlayOpacity=0.8" style="width:300px;height:150px;">&nbsp;</div>
+popover=true popoverOverlayOpacity=0.8" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
 ### popoverAnimation
@@ -177,7 +177,7 @@ spaces, the value must be percent-encoded, which you can do with the browser's
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5
-popover=v2 popoverCaption=This%20is%20a%20caption." style="width:300px;height:150px;">&nbsp;</div>
+popover=true popoverCaption=This%20is%20a%20caption." style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
 ### popoverCaptionContainer
@@ -191,7 +191,7 @@ so any bindings or styles that target it will stay in tact.
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5
-popover=v2 popoverCaptionContent=caption_content1" style="width:300px;height:150px;">&nbsp;</div>
+popover=true popoverCaptionContent=caption_content1" style="width:300px;height:150px;">&nbsp;</div>
 <div id="caption_content1" style="display:none;">
   I can have <em>complex markup</em> here,
   <a href="#" onclick="alert('hi!'); return false;">setup bindings</a>, or
