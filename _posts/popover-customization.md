@@ -125,6 +125,15 @@ Use this to change the overlay's opacity. This expects a decimal value between
 popover=true popoverOverlayOpacity=0.8" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
+### popoverAnimateThumbnail
+
+Set this to `true` if you want the play button to expand to cover the thumbnail
+on hover, while also displaying the duration of the video. Set to `false` if
+you want no special behavior on hover.
+
+If not specified, the default is `false`, though this option is explicitly set
+to `true` by default in the embed codes you'll get from the Wistia App UI.
+
 ### popoverAnimation
 
 Currently popovers have a few different launch animations. Possible values are:
