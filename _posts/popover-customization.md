@@ -41,8 +41,8 @@ popover behavior.
 
 ### autoPlay
 
-The `autoPlay` option is true by default for popovers. Set it to false if you'd
-like the viewer to click again to play it.
+The `autoPlay` option is true by default for popovers. Setting it to false will
+have no effect.
 
 ### popover=true
 
