@@ -199,19 +199,6 @@ popover=true popoverCaptionContent=caption_content1" style="width:300px;height:1
 </div>
 {% endcodeblock %}
 
-### videoFoam
-
-The `videoFoam` option is traditionally used with inline embed codes to match
-the width of the video to the width of the parent container and maintain the
-aspect ratio. However, since popovers take over the whole window, they operate
-slightly differently.
-
-When `videoFoam` is set to true, the popover video will fit to the screen,
-leaving minimum buffer of 80 pixels from the edge.
-
-The `videoFoam` option _does not_ affect the thumbnail: that is, the region you
-click to launch the popover.
-
 <div style="display:none;" class="navigable_end"></div>
 
 ## Methods
