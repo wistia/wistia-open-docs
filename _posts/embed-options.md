@@ -133,8 +133,7 @@ These options are for use with the
 
 ### autoPlay
 
-The `autoPlay` option has no effect on popovers because they will always play
-when you click to open them.
+If set to true, the video will play as soon as it's ready.
 
 NOTE: `autoPlay` will not work on iOS and other mobile devices due to
 restrictions on bandwidth on cellular networks. You can find more information
