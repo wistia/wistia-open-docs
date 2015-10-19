@@ -17,7 +17,8 @@ In their most basic form, popover embeds look like this:
 <div class="wistia_embed wistia_async_5bbw8l7kl5 popover=true" style="width:300px;height:150px;">&nbsp;</div>
 {% endcodeblock %}
 
-That is, they are just a type of Async API embed with the option `popover=true`.
+That is, they are like [Standard Inline Embeds]({{ '/embedding#inline_embeds' | post_url }}),
+but with the option `popover=true`.
 The popover options defined below would all be added into the `class`
 attribute, right after `popover=true`. For example, if I wanted a thin border on
 my popovers, I'd modify the embed code to look like this:
