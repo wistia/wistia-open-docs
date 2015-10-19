@@ -164,7 +164,7 @@ on all sides.
 
 If you would instead prefer to define specific dimensions for the video, you
 can set `popoverSize` to `widthxheight`. For example, to make the popover
-video display at 640px by 360px, you would use `popvoverSize=640x360`.
+video display at 640px by 360px, you would use `popoverSize=640x360`.
 
 Note: If the specified dimensions would be too large to display on the viewer's
 screen, the video will instead revert to the responsive default.
