@@ -156,6 +156,19 @@ properties on the `<body>` element. If you have a custom scrolling
 implementation, this will not prevent scrolling in it. To implement a custom
 solution, you may want to bind to the "popovershow" and "popoverhide" events.
 
+### popoverSize
+
+By default, popover videos will automatically take over most of the browser
+window, leaving a comfortable space between the video and the edge of the window
+on all sides.
+
+If you would instead prefer to define specific dimensions for the video, you
+can set `popoverSize` to `widthxheight`. For example, to make the popover
+video display at 640px by 360px, you would use `popvoverSize=640x360`.
+
+Note: If the specified dimensions would be too large to display on the viewer's
+screen, the video will instead revert to the responsive default.
+
 ### popoverBorderWidth
 
 Popovers have no borders by default. Use this option to add a border around the
