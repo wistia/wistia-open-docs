@@ -89,7 +89,7 @@ script, we don't need to download it twice.
 and plugin options as arguments.
 
 The `video` argument is a handle to the [Player API](player-api), which means
-you can now do anything that the normal JavasSript API can do.
+you can now do anything that the normal JavaScript API can do.
 
 
 ## Using plugins with an iframe embed
