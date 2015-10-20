@@ -962,7 +962,7 @@ _wq.push({ "_all": function(video) {
 
 ### A/B testing videos against each other
 
-Using an API embed code as a template, we can switch out hashed ID's for multiple
+Using a Standard embed code as a template, we can switch out hashed ID's for multiple
 videos easily. Comparing the viewer analytics in the background will tell you
 which video reigned supreme!
 
@@ -1121,7 +1121,7 @@ class="wistia_embed" name="wistia_embed" width="640"
 height="360"></iframe>
 {% endcodeblock %}
 
-Or an Async API embed would look like this:
+Or a Standard inline embed would look like this:
 
 {% codeblock wistia_html.html %}
 <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>

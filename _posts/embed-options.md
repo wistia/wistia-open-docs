@@ -28,11 +28,13 @@ attribute will be used).
 
 <div class="navigable_start" style="display:none;"></div>
 
-### Setting options on API, Popover, or SEO embeds
+### Setting options on Standard and Popover embeds
 
-Options can be set in two ways with API. First, the most common method is to
-add class in the form `option=value`. Multiple options are separated by spaces.
-If an option value has spaces, you can [percent encode](#percent_encoding) it.
+Options can be set in two ways on Standard embeds and Popover embeds (which are
+actually just Standard Embeds with [a special option]({{'popover-customization#popovertrue' | post_url }})).
+First, the most common method is to add class in the form `option=value`.
+Multiple options are separated by spaces. If an option value has spaces, you can
+[percent encode](#percent_encoding) it.
 
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -67,7 +69,7 @@ video is embedded.
 ### Setting options on iframe embeds
 
 Options can only be set one way with iframe embeds. It is similar to the
-`option=value` syntax of API embeds, but every option and value must be [percent
+`option=value` syntax of Standard embeds, but every option and value must be [percent
 encoded](#percent_encoding) and separated by an `&`. The first character after
 the video's hashed ID must be a `?`.
 
@@ -458,7 +460,7 @@ param is given, it will be used instead of text/image/link.
 
 Links use `target="\_blank"` to pop open a new window when you click. This
 is so that iframe embeds don't open a new link inside the iframe! If you're
-using an API embed and raw HTML, you can omit `target="\_blank"` safely.
+using a Standard embed and raw HTML, you can omit `target="\_blank"` safely.
 
 ### on
 

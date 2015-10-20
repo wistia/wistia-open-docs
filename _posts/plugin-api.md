@@ -5,7 +5,7 @@ api_warning: true
 special_category_link: developers
 api: true
 category: Embedding
-description: Have some cool javascript that you want to use with a bunch of videos? The Plugin API lets you create a simple script package that works with any Wistia embed code.
+description: Have some cool JavaScript that you want to use with a bunch of videos? The Plugin API lets you create a simple script package that works with any Wistia embed code.
 post_intro: <p>The Plugin API provides a light framework for script loading and initialization on a video, as well as some convenient properties for positioning DOM elements.</p><p>It works with all embed types, including iframes, which means you can even use plugins in systems that don't allow script tags.</p>
 ---
 
@@ -19,20 +19,16 @@ using the Wistia.plugin function.
 
 ### Defining plugins in an embed code
 
-For learning purposes, I'll be demonstrating with an API embed code type.
-I've removed the HTML portion and left only the script, since that's what we
-care about.
+For learning purposes, we'll demonstrate with the Standard inline embed code type.
+We've removed the HTML portion and left only the script, since that's the
+important part here.
 
 First, here's an embed code that references one of Wistia's internal plugins,
 "requireEmail-v1".
 
 {% codeblock plugin_api.js %}
-wistiaEmbed = Wistia.embed("hashedId", {
-  version: "v1",
-  videoWidth: 640,
-  videoHeight: 360,
-  volumeControl: true,
-  controlsVisibleOnLoad: true,
+window._wq = window._wq || [];
+_wq.push({ "hashedId": {
   plugin: {
     "requireEmail-v1": {
       topText: "Please enter your email\n to view this video.",
@@ -41,28 +37,28 @@ wistiaEmbed = Wistia.embed("hashedId", {
       }
     }
   }
-});
+}});
 {% endcodeblock %}
+
+
 
 
 Third Party plugins can use the exact same syntax, but they must add a src
 attribute.
 
 {% codeblock plugin_api.js %}
-wistiaEmbed = Wistia.embed("hashedId", {
-  version: "v1",
-  videoWidth: 640,
-  videoHeight: 360,
-  volumeControl: true,
-  controlsVisibleOnLoad: true,
+window._wq = window._wq || [];
+_wq.push({ "hashedId": {
   plugin: {
     "my-plugin-name": {
       customOption: true,
       src: "http://myscriptdomain.com/my-plugin-name.js"
     }
   }
-});
+}});
 {% endcodeblock %}
+
+{{ "The `_wq.push(...)` syntax shown above is covered in more detail in the [Player API documentation](http://wistia.com/doc/player-api#get_started)." | tip }}
 
 The script file is executed asynchronously. And this is where the second part
 of Wistia plugins comes in...
@@ -93,15 +89,15 @@ script, we don't need to download it twice.
 and plugin options as arguments.
 
 The `video` argument is a handle to the [Player API](player-api), which means
-you can now do anything that the normal javascript API can do.
+you can now do anything that the normal JavasSript API can do.
 
 
 ## Using plugins with an iframe embed
 
-Wistia iframe embeds take the exact same JSON parameters as an API embed, but
+Wistia iframe embeds take the exact same JSON parameters as a Standard embed, but
 they must be properly URL-encoded using a bracket syntax.
 
-For example, here's the plugin parameters for the API embed above, but
+For example, here's the plugin parameters for the Standard embed above, but
 translated to be appended on an iframe src attribute.
 
 <code class="full_width">plugin%5Bmy-plugin-name%5D%5BcustomOption%5D=true&plugin%5Bmy-plugin-name%5D%5Bsrc%5D=http%3A%2F%2Fmyscriptdomain.com%2Fmy-plugin-name.js</code>
