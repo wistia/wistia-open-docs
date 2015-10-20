@@ -45,6 +45,8 @@ Those are all of the "Required" and "Recommended" properties listed on [Google's
 
 If you ever change that information in Wistia, it will automatically be updated on your website too. Immediately! There's no need to re-embed your video.
 
+{{ "You can use Google's [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) to verify that Google is able to see your video and its metadata. If everything is working properly, you'll see that Google finds a `VideoObject` on the page." | tip }}
+
 For even more information on embedding, check out the [Embedding]({{ '/embedding' | post_url }}) guide.
 
 
