@@ -10,7 +10,7 @@ category: Developers
 
 Before going on, note that <strong>we do not advise you to use this
 syntax</strong>. If you find yourself needing to set deeply nested options,
-it's almost always easier to just switch to an API embed or rely on customizing
+it's almost always easier to just switch to a Standard embed or rely on customizing
 your video directly in Wistia. But if you can't do either of those things, then
 read on.
 
