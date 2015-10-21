@@ -5,7 +5,7 @@
 %html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', :lang => 'en' }
   %head
     %title
-      {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
+      {% if page.title == '' %} Wistia Help Center {% else %} Wistia Help: {{ page.title }} {% endif %}
 
     {% if page.title %}
     %meta.swiftype{ name: 'title', content: "{{ page.title | escape }}", 'data-type' => 'string' }
@@ -20,7 +20,7 @@
     {% endif %}
     %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
     {% if page.developers %}
-    %script{ type: "text/javascript", src: "//use.typekit.net/pft0gev.js" } 
+    %script{ type: "text/javascript", src: "//use.typekit.net/pft0gev.js" }
     %script{ type: "text/javascript" } try{Typekit.load();}catch(e){}
     {% endif %}
 
@@ -36,7 +36,7 @@
       _st('install','oN7bUy-pbTePRQzSFem7','2.0.0');
 
     :javascript
-      var basepath = "{{ '' | post_url }}";    
+      var basepath = "{{ '' | post_url }}";
   %body{ class: "{{ page.type }}_layout" }
     {% include wgh_config.html %}
     {% include header.html %}
@@ -58,4 +58,3 @@
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KSJ3B');</script>
-
