@@ -1202,6 +1202,7 @@ Field   | Description
 id    | Numeric id of the account
 name  | Account name
 url   | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
+mediaCount   | The total number of medias in this account
 
 ---
 
