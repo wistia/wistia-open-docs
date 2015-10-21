@@ -57,25 +57,19 @@ Don't panic, there are a few easy fixes.
 
 Most of the time when a video fails to process, it means Wistia was not able to create the correct derivatives for smooth playback. This is often caused by a error in the initial exporting process.
 
-First, we recommend **exporting the file from your video editor** again. If there's any error in the file, this is the easiest place to scrub it out. Check out our [exporting guide]({{ 'exporting-guide' | post_url }}) for a quick overview of our suggested settings. Then try uploading the video to Wistia again.
+First, we recommend **exporting the file from your video editor again**. If there's any error in the file, this is the easiest place to scrub it out. Check out our [exporting guide]({{ 'exporting-guide' | post_url }}) for a quick overview of our suggested settings. Then try uploading the video to Wistia again.
 
 If you don't have access to the original file export, we suggest **running the file through [HandBrake](https://handbrake.fr/)**. This will often clear out any corruptions in the file, and get it ready for upload to Wistia. [Check out our suggested HandBrake settings]({{ '/exporting-guide#handbrake' | post_url }}).
 
 Still no dice? Time to call for backup.
 
-**Leave the file in the failed state**, and [send us a link to the video](http://wistia.com/support/contact). We'll get it cleaned up in no time. :)
-
-## Embedding
-
-Someday we'll live in an embed-less world, but until then, things can get a little wonky when you're pasting in the embed code. Luckily, lots of issues can be fixed with a few quick tweaks.
-
- Here are some common challenges, and how to overcome them. <a href="//fast.wistia.net/embed/iframe/jfgvzbaxu2?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">Never give up. Never surrender.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
+**Leave the file in the failed state** (don't delete it!), and [send us a link to the video](http://wistia.com/support/contact). We'll get it cleaned up in no time. :)
 
 ## No Video (Black Screen)
 
 Is your video all bark and no bite - all audio, no video?
 
-This is likely caused by the low frame rate (usually webinars and screencasts suffer from this problem) associated with your video.
+This is likely caused by a very low frame rate associated with your video. Usually webinars and screencasts suffer from this problem.
 
 The good news is that there is a fix! And that's bumping up that frame rate.
 
@@ -88,6 +82,26 @@ You'll want to run the file through HandBrake and **increase** the frames per se
 {% post_image hashed_id: 'bf751d928df000ed21de0eee5834cbbdaa99906c', class: 'center' %}
 
 Then you can [replace that video]({{ '/replace-video' | post_url }})!
+
+### A Note about Screencasts
+
+There's some magic behind-the-scenes on the Wistia side where can detect screencasts and encode them differently. Since most users don't watch screencasts in full screen (they watch them in-line), our system will create a different set of derivatives in this case. Those three derivatives are:
+
+ - iPhone (mobile) asset - **640 px wide** MP4 at **800 kbps**
+ - HD Flash asset at **1200 kbps** (size is determined by the original file)
+ - HD MP4 asset at **1200 kbps** (size is determined by the original file)
+
+The key thing to know with screencasts is that they'll be encoded with screencast logic if the **bitrate is lower than 1200 kbps**. This way Wistia will deliver an HD asset in-line (usually 1080p), so your content is crisper and easier to watch. If you'd like your videos encoded with screencast logic, we recommend keeping your bitrate below 1200 kbps (this is total bitrate - including *both* audio and video).
+
+If you don't have control over this in your video editor, you can always run the file through HandBrake (it's our best friend). Just make sure to set the bitrate to **1200 kbps.**
+
+{{ "HandBrake controls can be a bit finnicky, so if you're still not seeing the correct assets, drop down the bitrate a touch lower. Usually the safest place is 1000 kbps, but you can always check out the final bitrate by inspecting the file." | note }}
+
+## Embedding
+
+Someday we'll live in an embed-less world, but until then, things can get a little wonky when you're pasting in that embed code. Luckily, lots of issues can be fixed with a few quick tweaks.
+
+ Here are some common challenges, and how to overcome them. <a href="//fast.wistia.net/embed/iframe/jfgvzbaxu2?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">Never give up. Never surrender.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
 
 ### Black Bars on the Top and Bottom or Sides of the Video
 
