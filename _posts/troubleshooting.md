@@ -9,23 +9,23 @@ footer: for_intermediates
 ## Uploading
 
 Video not uploading? Bummer! There's a quick checklist we like to run through if
- you're experiencing uploading issues.
+you're experiencing uploading issues.
 
 ### Clear your Cache
 
 First, clear your browser's cache. It seems silly, but it's saved us in a
 *number* of tough situations, so we always recommend it to start. The cache (or
-  temporary internet files) can be cleared in the following locations:
+temporary internet files) can be cleared in the following locations:
 
   * **Chrome** *Preferences --> Show advanced settings... --> Browsing data*
-  * **Safari** *Preferences --> Privacy ---> Remove All Browsing Data*
+  * **Safari** *Preferences --> Privacy --> Remove All Browsing Data*
   * **Firefox** *History --> Clear recent history*
   * **Internet Explorer** *Tools --> Internet Options --> Browsing History*
 
 ### Update Your Browser
 
 Next, make sure your browser is up-to-date. Again, this might seem a bit
-redundant, but since we use an HTML5 uploader, we want to make sure you can
+trivial, but since we use an HTML5 uploader, we want to make sure you can
 access the good stuff. Check your browser's status
 [here](http://browsehappy.com/).
 
@@ -80,7 +80,7 @@ then the processing fails. That's the pits!
 Don't panic, there are a few easy fixes.
 
 Most of the time when a video fails to process, it means Wistia was not able to
-create the correct derivatives for smooth playback. This is often caused by a
+create the correct derivatives for smooth playback. This is often caused by an
 error in the initial exporting process.
 
 First, we recommend **exporting the file from your video editor again**. If
@@ -118,16 +118,16 @@ Otherwise, we've got the old standby - [HandBrake](https://handbrake.fr/).
 You'll want to run the file through HandBrake and **increase** the frames per
 second to **24 fps** at a Constant frame rate.
 
-{% post_image hashed_id: 'bf751d928df000ed21de0eee5834cbbdaa99906c', class: 'center' %}
+{% wistia_embed hashed_id: wn87v8u3zq, embedType: legacy_api %}
 
 Then you can [replace that video]({{ '/replace-video' | post_url }})!
 
 ### A Note about Screencasts
 
-There's some magic behind-the-scenes on the Wistia side where can detect
-screencasts and encode them differently. Since most users don't watch
-screencasts in full screen (they watch them in-line), our system will create a
-different set of derivatives in this case. Those three derivatives are:
+There's some magic behind-the-scenes on the Wistia side where we can detect
+screencasts and encode them differently. Our system will create a
+different set of derivatives for screencasts to help maintain visual quality.
+Those three derivatives are:
 
  - iPhone (mobile) asset - **640 px wide** MP4 at **800 kbps**
  - HD Flash asset at **1200 kbps** (size is determined by the original file)
@@ -152,12 +152,12 @@ Someday we'll live in an embed-less world, but until then, things can get a
 little wonky when you're pasting in that embed code. Luckily, lots of issues can
 be fixed with a few quick tweaks.
 
- Here are some common challenges, and how to overcome them. <a href="//fast.wistia.net/embed/iframe/jfgvzbaxu2?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">Never give up. Never surrender.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
+Here are some common challenges, and how to overcome them. <a href="//fast.wistia.net/embed/iframe/jfgvzbaxu2?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]">Never give up. Never surrender.</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script><script src="//fast.wistia.net/static/iframe-api-v1.js"></script>
 
 ### Fallback Embed
 
 The Standard inline embed, while awesome, doesn't work in every situation. We
-plan for a lot, but we can't plan got everything. If you're not seeing your
+plan for a lot, but we can't plan for everything. If you're not seeing your
 embed, or something is funky, try using the Fallback (iframe) Embed.
 
 Then, [give us a holler](http://wistia.com/support/contact), so we can improve
@@ -197,16 +197,16 @@ menu.
 ### Video Not Resizing Correctly
 
 There are generally two ways in which a video might not display at the size
-you'd expect:
+you'd expect.
 
-1. You're [embedding in WordPress with oEmbed]({{ "/wordpress#using_an_oembed_url" | post_url }}),
+The first, you're [embedding in WordPress with oEmbed]({{ "/wordpress#using_an_oembed_url" | post_url }}),
 but your video is displaying at smaller dimensions than what you set on the
 _Embed & Share_ screen. If that's happening, it's possible that your WordPress
 theme specifies a maximum width for content embedded with oEmbed. See
-[this tip in the Wistia WordPress docs]({{ "/wordpress#video_appearing_smaller_than_it_should_be" | post_url }})
+[this tip in the Wistia WordPress help page]({{ "/wordpress#video_appearing_smaller_than_it_should_be" | post_url }})
 for details on fixing that.
 
-2. You'd like your video to be responsive, but it's not changing size when it
+Alternatively, you'd like your video to be responsive, but it's not changing size when it
 should. First things first, make sure you're using the
 [Responsive option]({{ '/embedding#embedding_responsively' | post_url }}). If
 you're using that already but your video is not responding correctly, check to
@@ -221,8 +221,8 @@ and we'll help you get it looking great!
 ## Playback
 
 Lots of things can cause playback issues, and at Wistia we're always working on
-improving your user's experience. If you think something might be up site-wide,
-the best place to look is to our [Status Page](http://status.wistia.com/). Here
+improving your viewer's experience. If you think something might be up site-wide,
+the best place to look is our [Status Page](http://status.wistia.com/). Here
 we'll report any outages as soon as they happen, and let you know as soon as
 they're resolved.
 
@@ -259,7 +259,7 @@ web browser.
 ### Reset Your Internet Connection
 
 Just like uploading, internet connection can affect playback. Try resetting your
-router and making sure you have a secure connection. All set? It's time to start
+router and make sure you have a secure connection. All set? It's time to start
 investigating.
 
 ### Try a Different Browser
@@ -273,11 +273,11 @@ with you.
 
 Does your playback issue happen in both the HTML5 player and the Flash player?
 The easiest way to test this is to right click and choose "Switch to Flash"
-switch between the two. Alienating one or the other will help us to figure out
+and then switch between the two. Alienating one or the other will help us to figure out
 the source of the problem. [Give us a shout](http://wistia.com/support/contact)
 with these details, and we'll be happy to jump in.
 
-## Opening a Support Ticket
+## Opening a Playback Support Ticket
 
 Sometimes you pull out all the stops, and still nothing works. It's time to call
 for backup. To help expedite your troubleshooting playback experience, we'd love
@@ -305,7 +305,7 @@ it if you:
 ## Account
 
 Sometimes things might look a little funny within your account. Maybe you can't
-see the right menus, or your access certain credentials. Let's check out some
+see the right menus, or access certain credentials. Let's check out some
 common account issues.
 
 ### I Can't See Settings Menu!
@@ -351,29 +351,39 @@ Still confused? [We'll be happy to help.](http://wistia.com/support/contact)
 
 ## Stats
 
-Something strange with your stats? Too many clicks with too few views? Maybe
-your heatmaps aren't showing up? We've got you covered.
+Something strange with your stats? Maybe your heatmaps aren't showing up? We've
+got you covered.
 
 ### Unable to see heatmaps!
 
-One of the most common stats problems is missing heatmaps. This is because we
-parse out your audience from your internal views. Users on your account
-(including the Account Owner, any Managers, and any invited viewers--those who
-have to sign into your account) will have their views logged in Private User
-Sessions.
+So you've uploaded your video to Wistia, and you're ready to watch it and start
+pulling in stats. But they don't appear in your engagement graph, or the Viewer
+Stream!
+
+This is because Wistia separates any logged in views (Account Owner, Manager,
+User) from audience views. If you're logged into your Wistia account (and
+watching your video within your Wistia account) your views will be logged as
+[Private User Sessions]({{ '/private-analytics' post_url }}).
 
 {% post_image hashed_id: '38ce6972b0bc6bdecc97e566b0f9d3cd98e4f329', class: 'center' %}
 
+{{ "Heads up - this is different from IP Filtering. [IP Filtering](http://wistia.com/doc/account-setup#filtering_out_internal_stats) will ignore any views from designated IP addresses - these will not be logged as Private User Sessions." | note }}
+
 Still can't see your heatmaps? They should show up pretty immediately. First
-check out [status page](http://status.wistia.com/) (we'll tell you if heatmaps
+check out our [status page](http://status.wistia.com/) (we'll tell you if heatmaps
 are at all behind real time). If everything is good, feel free to
 [reach out to us](http://wistia.com/support/contact). We'll get to the bottom of
 it!
 
-## Call for Backup
-
-We understand, not every problem is fixed the same way. If you're still
-experiencing problems after running through our troubleshooting (you rock --
-thanks for that!), [please reach out to us](http://wistia.com/support/contact).
-We'll give you one-on-one email troubleshooting support, and help you get to the
-bottom fo the issue.
+<script src="//fast.wistia.com/assets/external/embed_shepherd-v1.js"></script>
+<script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
+<script>
+  wistiaEmbeds.onFind(function(video) {
+    if (video.hashedId() == 'wn87v8u3zq') {
+      video.addPlugin('playWhenVisible', {
+        src: '//fast.wistia.com/labs/play-when-visible/plugin.js',
+        outsideIframe: true
+      });
+    }
+  });
+</script>
