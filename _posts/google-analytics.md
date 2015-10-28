@@ -62,4 +62,4 @@ Using Wistia and Google Analytics is a good way to get all your top-level video 
 
 ## Disable Google Analytics Tracking
 
-Want to prevent a video from generating events in your Google Analytics account? There's an [Embed Option]({{ '/embed-options#googleAnalytics' | post_url }}) for that. Set `googleAnalytics` to `false`, and your video will go about its business without bothering Google Analytics. It will continue to generate stats in your Wistia account as usual.
+Want to prevent a video from generating events in your Google Analytics account? There's an [Embed Option]({{ '/embed-options#googleanalytics' | post_url }}) for that. Set `googleAnalytics` to `false`, and your video will go about its business without bothering Google Analytics. It will continue to generate stats in your Wistia account as usual.
