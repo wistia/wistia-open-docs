@@ -4,7 +4,6 @@
 
 require 'pp'
 require 'rack/rewrite'
-require 'elasticsearch'
 require_relative './_config'
 
 # fix so foreman gets logging
@@ -59,46 +58,6 @@ class TheApp < Sinatra::Base
 
   use SuperStatic
 
-  get '/search/:q' do
-    text = params[:q]
-
-    text.gsub!('_', ' ')
-
-    query = {
-      query: {
-        fuzzy_like_this: {
-          fields: ['body', 'title', 'url', 'description', 'category'],
-          like_text: text
-        }
-      }
-    }
-
-
-    elasticsearch = Elasticsearch::Client.new(
-      log: true,
-      host: '127.0.0.1',
-      port: 9200
-    )
-    result = elasticsearch.search(index: 'docs', body: query)
-
-    hits = (result['hits'] && result['hits']['hits']) or []
-
-    results = hits.map do |hit|
-      {
-        title: hit['_source']['title'],
-        description: hit['_source']['description'],
-        url: hit['_source']['url'],
-      }
-    end
-
-    results = { results: results }
-
-    if params[:callback]
-      "#{params[:callback]}(#{results.to_json})"
-    else
-      results.to_json
-    end
-  end
 
   # TODO: Properly re-initialize the server.
   # github will hit this URL after a commit so we can auto-update
@@ -106,7 +65,7 @@ class TheApp < Sinatra::Base
   post '/update' do
     return 403 unless params[:update_key] == $config.update_key
     spawn({
-        'PATH' => '/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.5.4:/opt/elasticsearch-0.19.9/bin',
+        'PATH' => '/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.5.4',
         'LANG' => 'en_US.UTF-8',
         'LC_ALL' => 'en_US.UTF-8'
       }, 'rake nuclear_update', chdir: File.dirname(__FILE__))

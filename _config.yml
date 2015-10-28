@@ -1,8 +1,7 @@
 markdown: rdiscount
 permalink: /:title
 rdiscount extensions: [smart]
-exclude: [ .gitignore, README.md, Gemfile, Gemfile.lock, Procfile, vendor, Rakefile, the_app.rb, elasticsearch, app, tmp, log ]
-elasticsearch_host: 127.0.0.1:9200 # this is where elasticsearch is running
+exclude: [ .gitignore, README.md, Gemfile, Gemfile.lock, Procfile, vendor, Rakefile, the_app.rb, app, tmp, log ]
 category_dir: /categories
 exclude_from_search: 'no_index'
 

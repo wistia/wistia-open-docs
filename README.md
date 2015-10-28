@@ -44,19 +44,7 @@ If you don't have bundler installed:
 
     gem install bundler
 
-### Installing and starting elasticsearch
-
-If you don't have homebrew:
-
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-Follow the instructions to also download Cask.
-
-In a new window, run:
-
-    brew install elasticsearch
-    elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
-
+### Compiling the Docs
 
 Go back to your old window and run
 
@@ -179,12 +167,6 @@ Push code to github:
 From skycrank, update the docs box with master:
 
     ./crank docs deploy
-
-### Box Problems
-
-Restart Elasticsearch from skycrank
-
-    ./crank docs start_elasticsearch
 
 Contact
 -------
