@@ -178,6 +178,15 @@ button will not appear.
 NOTE: On mobile devices where we use native controls, this option has no
 effect.
 
+### googleAnalytics
+
+If you're using Google Analytics on the page where you embed a video, the video
+will auto-magically send events to your Google Analytics account 📈.
+[Learn more about that here]({{ '/google-analytics' | post_url }}).
+
+If you _don't_ want a video to send those events to Google Analytics, set this
+embed option to `false`.
+
 ### playerPreference
 
 Possible values are "flash", "html5", and "auto". Default is "auto", which will

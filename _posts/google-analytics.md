@@ -33,7 +33,6 @@ __ga(function(){
 });
 {% endcodeblock %}
 
-You can disable our integration for all your videos by default by changing the configuration on the Account Settings page. You can also disable the integration for an individual video by modifying the initialization parameter for an API embed: `Wistia.embed("8cexf3sjf3", { "googleAnalytics": false });`.
 
 ## Google Tag Manager
 
@@ -59,4 +58,8 @@ Let's take a look at the data for the "play event" for this case. You'll see her
 
 {% post_image hashed_id: '1ef890a9af475643ea37b1bd048a7574ef589dee', width: 730, class: 'float_right' %}
 
-Using Wistia and Google Analytics is a good way to get all your top-level video analytics data in the same place you already get your other website tracking information. The screenshots above may not be _exactly_ like you see, since there are a few different versions of Google Analtics, Universal Analytics, etc.
+Using Wistia and Google Analytics is a good way to get all your top-level video analytics data in the same place you already get your other website tracking information. The screenshots above may not be _exactly_ like you see, since there are a few different versions of Google Analytics, Universal Analytics, etc.
+
+## Disable Google Analytics Tracking
+
+Want to prevent a video from generating events in your Google Analytics account? There's an [Embed Option]({{ '/embed-options#googleAnalytics' | post_url }}) for that. Set `googleAnalytics` to `false`, and your video will go about its business without bothering Google Analytics. It will continue to generate stats in your Wistia account as usual.
