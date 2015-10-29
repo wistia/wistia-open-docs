@@ -52,7 +52,7 @@ By default, your account URL is based on the domain of your email address. To ch
 
 {% post_image hashed_id: '1d3b8b8cc903d5df0a3dd9432dd6933428e305b3', width: 600, class: 'center' %}
 
-In the section labeled "Wistia Subdomain", you will see a text box showing the current URL of your Wistia account (in the case of the above picture,`http://home.wistia.com`).  Type the name you wish to use instead in the text box (only letters, numbers, and hyphens) and press <span class="faux_button">Update Account Settings</span> at the bottom to save your changes.
+In the section labeled "Wistia Subdomain", you will see a text box showing the current URL of your Wistia account (in the case of the above picture,`http://home.wistia.com`).  Type the name you wish to use instead in the text box (only letters, numbers, and hyphens) and press *Save Settings* at the bottom to save your changes.
 
 {{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
 
@@ -157,8 +157,7 @@ efficient!), select the *Account* tab in your Account Settings.
 
 {% post_image hashed_id: 'aa398787f771bec9d8d92b4a566f364da6bcbf44', class: 'center' %}
 
-Select the new owner from the *Account Owner* menu, and then <span
-class='faux_button'>UPDATE ACCOUNT SETTINGS</span>. Ownership will be transferred
+Select the new owner from the *Account Owner* menu, and then *Save Settings* at the bottom of the page. Ownership will be transferred
 immediately.
 
 ---
