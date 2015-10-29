@@ -4,7 +4,7 @@ layout: post
 api_warning: true
 special_category_link: developers
 api: true
-category: Embedding
+category: Developers
 description: Have some cool JavaScript that you want to use with a bunch of videos? The Plugin API lets you create a simple script package that works with any Wistia embed code.
 post_intro: <p>The Plugin API provides a light framework for script loading and initialization on a video, as well as some convenient properties for positioning DOM elements.</p><p>It works with all embed types, including iframes, which means you can even use plugins in systems that don't allow script tags.</p>
 ---

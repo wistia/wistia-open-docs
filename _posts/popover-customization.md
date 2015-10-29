@@ -1,7 +1,7 @@
 ---
 title: Popover Embed Customization
 layout: post
-category: For Developers
+category: Developers
 api_warning: true
 description: Customize your 'popover' embeds with these tips.
 footer: 'for_developers'

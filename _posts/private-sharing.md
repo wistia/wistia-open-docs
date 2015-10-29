@@ -1,7 +1,7 @@
 ---
 title: Sharing Video Privately
 layout: post
-category: Private Sharing
+category: embed and share
 description: Wistia makes it easy to privately share your videos with people. Invite people via email, and track how they watch in a secure environment.
 post_intro: <p>For many users, video is something that needs to be shared only amongst a few individuals; otherwise it should be completely private.</p><p>With Wistia, your account is both secure and not indexed - you can't search Google to find the videos inside.  So if you want to share the video, but keep it secure, this guide is here to help.</p><p>Private sharing is right for you if you want to:</p><ul><li>Review and Approve content before it goes live</li><li>Share instructional videos with your team</li><li>Create internal content that contains sensitive information</li><li>Charge your customers to view content in a secure environment</li>
 footer: 'for_beginners'
