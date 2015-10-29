@@ -116,7 +116,7 @@ $(function() {
 
 You can update embed options saved on Wistia's servers using the API. This way,
 wherever you embed your video, it will inherit the customizations you've
-defined. Visit the [Customize API documentation](/data-api#customizations) to
+defined. Visit the [Customize API documentation]({{ '/data-api#customizations' | post_url }}) to
 see how.
 
 NOTE: When using the Customize API to update embed options, you never need to
