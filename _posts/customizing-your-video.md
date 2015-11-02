@@ -164,6 +164,15 @@ changes, and you're ready to rock and roll. 🎸
 
 {% post_image hashed_id: '90f3b0e1802a37c92d3746bec2935363c483b05c', class: 'float_right', width: 300 %}
 
+### A Note About Autoplay on Mobile Devices
+
+Many cell networks have restrictions in place around autoplay videos. Since many
+mobile phone users are on designated data limits, it's a violation of certain
+regulations to force autoplay. (Nobody likes using too much data!)
+
+This means that your videos will autoplay great in a desktop environment, but
+a user will have to click the play button on a mobile device.
+
 ### Annotation Link
 
 An annotation link is a great option to notify your viewers without interrupting
