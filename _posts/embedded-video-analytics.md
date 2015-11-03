@@ -3,11 +3,11 @@ title: Embedded Video Analytics
 layout: post
 category: Stats
 description: Wistia's analytics are designed to help you understand how your audience engages with your content. Dive in to everything you could dream of knowing about Wistia's all time favorite subject, Statistics.
-post_intro: <p>Wistia stats are the best way to get a complete view of who is watching your video, and how they are watching and interacting with it.</p><p>This guide will show you how to approach the two parts of Wistia analytics, <b>Stats Trends</b> and the <b>Viewer Stream</b>.</p>
+post_intro: <p>Wistia stats are the best way to get a complete view of who is watching your video, and how they are watching and interacting with it.</p><p>This guide will show you how to approach the two parts of Wistia analytics, <b>Stats Trends</b> and the <b>View Stream</b>.</p>
 footer: 'for_intermediates'
 ---
 
-{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about that more in our [Private Analytics Documentation](http://wistia.com/doc/private-sharing)." | note }}
+{{ "If someone is logged into Wistia and is viewing the videos, their views will be tracked in your Private User Sessions. You can read more about that more in our [Private Analytics Page](http://wistia.com/doc/private-sharing)." | note }}
 
 ## Account-Level Trends View
 
@@ -17,31 +17,43 @@ Account (perhaps all the videos across your website).
 
 {% post_image hashed_id: 'ab151af1f0acd1d39e5e23af4fa31b98911245fc', class: 'center' %}
 
-Starting from the Projects List page of your Account
-(i.e. *myaccount.wistia.com/projects*), access your high level stats by
-selecting "Trends" from under the Stats drop-down menu.
+Starting from the **[Projects](https://my.wistia.com/projects)** page of your Account, you can access your high level stats by
+selecting **[Trends](https://my.wistia.com/stats/account)** from the Stats drop-down menu.
 
 This will bring up the Trends overview of your account, which is a dashboard
-for public stats performance.
-
----
+for public stats performance. 📈
 
 ### Trends Graph
 
 {% post_image hashed_id: '8c1a38b2ca01d74893d4cefa2b207dacdee9ddbe', class: 'center' %}
 
-The graph at the top shows the Projects in your Account according to views over
-time. You can hover over different blue sections of the graph to see stats for
-an individual Project, or check out the stas for all projects by hovering over the
-white space. Select an individual project to see from the graph to see stats exclusive
-to those videos.
+<!---
+We should split this up to explain sorting better -- Monthly, daily, weekly, and videos vs. projects. Also the graphs are different colors, depending on how you're viewing them (green vs. blue).
+
+Default (after a dump of local storage) is daily videos (green)
+
+-->
+
+There are a few ways to explore your Trends Graph. By default you'll see the
+stats for all of your videos for all time (as long as you've had your Wistia account).
+They'll be displayed as "Daily" stats initially, but you can always change your
+view. More on that [in a minute](#sorting).
+
+We differentiate between video stats and project stats based on color&mdash;the video
+stats chart will show data in green. Projects stats are blue.
+
+You can hover over the different colored sections of the graph to see stats for
+an individual video (or project), or check out the stats for all videos (or projects) by hovering over the
+white space.
+
+Select an individual project from the graph to see stats exclusive
+to those videos. Or select an individual video to hone in on those spikes.
 
 Underneath the graph, use the grey tabs to select a date range for analysis. Drag
 either end to change the range to be displayed in the graph and the chart below.
 
-{{ "The only stats that will adjust within a specific date range are play count." | note }}
-
----
+Keep in mind, **only play count will change** within a specific date range.
+Engagement and play rate are calculated as all time stats.
 
 ### Sorting
 
@@ -56,8 +68,6 @@ way most useful for you. Above the graph choose Projects or Videos, and select d
 Drill down further below the graph to sort by attributes like amount of videos, date
 created, or number of plays. The sorting bar is slightly different at the
 account and project levels, so heads up!
-
----
 
 ### Customizing the View
 
@@ -75,8 +85,6 @@ tool functionality.  Clicking on one specific Project in either the list view
 or in the graph will "lock" it, so you can view the analytics performance for
 the Project more specifically.
 
----
-
 ### Projects/Media List
 
 {% post_image hashed_id: '43e79ea9a8b6a70992787eb7fe12d5935129ef17', class: 'center' %}
@@ -84,8 +92,6 @@ the Project more specifically.
 Underneath the Trends graph is the list of Projects or Media that is
 represented in the graph.  To drill down to the Project or Media level,
 click the title of the Project/Media.
-
----
 
 ## Project-Level Trends
 
@@ -99,8 +105,6 @@ to adjust the date range for data analysis.
 
 
 Clicking the title of an individual media will move you to the Media-level Trends.
-
----
 
 ## Media-Level Trends
 
@@ -125,9 +129,6 @@ Embedding your video on your public webpage?  Wistia Media Stats will tell you
 how it is performing (and [Wistia trends](#accountlevel_trends_view) will show
 you how it is performing compared to your other video initiatives).
 
-
----
-
 ### Engagement Graph
 
 {% post_image hashed_id: '650eecd5f9571392744d720e7cfaf539eb7b80cd', class: 'center' %}
@@ -140,9 +141,6 @@ the video from that point.
 
 
 More on [Audience Engagement Graphs]({{ '/audience-engagement-graph' | post_url }}).
-
-
----
 
 ### Summary Bar
 
@@ -158,8 +156,6 @@ information.
 Under the engagement graph area and summary bar is a list of the individual
 viewers who have watched your video, along with their [**heatmaps**]({{ '/embedded-video-analytics/#heatmaps' | post_url }}).
 
----
-
 ### Actions
 
 Actions are an easy way to track viewer engagement from Calls to Action, Annotations, and
@@ -170,8 +166,6 @@ the waypoint reveals the heatmaps of those viewers.
 {% post_image hashed_id: 'db8a3dfcc3ef0f81d7d428e7b3e7396f29ebfed6', class: 'center' %}
 
 {{ "Have more than one Action on your timeline, and can't remember which one comes first, second, or even seventh? No worries! Hovering over the waypoint on a heatmap will show you the exact Action a viewer took. Just a heads up though, waypoints will only appear on the heatmaps within the Media Stats page." | tip }}
-
----
 
 ## Heatmaps
 
@@ -210,9 +204,6 @@ reveal the IP address of the viewer, along with where they viewed the video
 Clicking on the name link on the heatmap will take you to the Viewer page for
 that viewer.  The Viewer page is part of the **Viewer Stream**.
 
-
----
-
 ## Viewer Stream
 
 The Viewer Stream is the other way of viewing Wistia analytics for your Account.  
@@ -235,8 +226,6 @@ the search box to find a specific viewer.  The number bubbles next to each name
 designate how many videos the viewer has watched.  Clicking on a viewer will
 take you to the Viewer Page.
 
----
-
 ### Viewer Page
 
 {% post_image hashed_id: '31ca09fd5a6da334c0a1e03c269aec1b14c2677b', class: 'center' %}
@@ -253,8 +242,6 @@ they have watched.  Which videos do your new customers watch before signing up?
 Which videos do your customers come back to watch again and again?  The viewer
 page gives you a clear view into the activity of your video viewers.
 
----
-
 ### Tagging With Emails
 
 Adding a name to a viewer makes it easy to track their viewing sessions in your
@@ -263,8 +250,6 @@ analytics.  You can also tag viewers with email address automatically, using
 
 Once your viewer is tagged with an email, you can sort to view them in the Viewer
 Stream by clicking the "With Emails" option on the sorting bar.
-
----
 
 ## Reset Stats
 
@@ -278,9 +263,6 @@ At the media stats page, scroll down to the bottom. There you'll see an options 
 them (there's <a href="//fast.wistia.net/embed/iframe/kmoo4abbal?popover=true" class="wistia-popover[height=450,playerColor=7b796a,width=800]">no going back</a><script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script>), and you're good to go.
 
 {% post_image hashed_id: '3331f6350bbb631db8a4503db9bfa2d9237aed1c', class: 'float_right', width: 500 %}
-
-
----
 
 ## Exporting Analytics Data
 
