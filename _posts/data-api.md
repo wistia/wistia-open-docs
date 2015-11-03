@@ -41,8 +41,8 @@ You must use **SSL** (https instead of http) to access the API.
 
 There are two ways to authenticate when accessing the API:
 
-1. **HTTP Basic authentication** with `api` as your username and your API password as the password.
-2. Add `api_password` as a parameter when making a request. For example:
+1. **HTTP Basic authentication** with `api` as your username and your API token as the password.
+2. Add `api_password` as a parameter and set it equal to your API token when making a request. For example:
 
 <code class="full_width">https://api.wistia.com/v1/medias.json?api_password=xyz123</code>
 
