@@ -27,13 +27,6 @@ for public stats performance. 📈
 
 {% post_image hashed_id: '8c1a38b2ca01d74893d4cefa2b207dacdee9ddbe', class: 'center' %}
 
-<!---
-We should split this up to explain sorting better -- Monthly, daily, weekly, and videos vs. projects. Also the graphs are different colors, depending on how you're viewing them (green vs. blue).
-
-Default (after a dump of local storage) is daily videos (green)
-
--->
-
 There are a few ways to explore your Trends Graph. By default you'll see the
 stats for all of your videos for all time (as long as you've had your Wistia account).
 They'll be displayed as "Daily" stats initially, but you can always change your
@@ -49,8 +42,8 @@ white space.
 Select an individual project from the graph to see stats exclusive
 to those videos. Or select an individual video to hone in on those spikes.
 
-Underneath the graph, use the grey tabs to select a date range for analysis. Drag
-either end to change the range to be displayed in the graph and the chart below.
+Underneath the graph, you can use the grey tabs to select a specific date range for analysis. Drag
+either tab to change the range that will be displayed in the graph and the chart below.
 
 Keep in mind, **only play count will change** within a specific date range.
 Engagement and play rate are calculated as all time stats.
@@ -59,13 +52,13 @@ Engagement and play rate are calculated as all time stats.
 
 {% post_image hashed_id: '4e39e75fa56a0d7ba9f58798f199a4c1e0ada9eb', width: 500, class: 'float_left' %}
 
-Sorting within Wistia analytics pages help prioritize analytics data in the
-way most useful for you. Above the graph choose Projects or Videos, and select date ranges
-(Months, Weeks, Days).
+Sorting data is crucial to understanding it. You've got a lot of data in your Wistia account, so it's helpful to use sorting to make sense of all those sweet, sweet analytics.
+
+With sorting you can prioritize analytics data in the ways most useful to you. Above the graph you can choose Projects or Videos, and select date ranges (Months, Weeks, Days).
 
 {% post_image hashed_id: '2f8b6bcdd778b9844f89fe71123b03f4cfb2169e', class: 'center' %}
 
-Drill down further below the graph to sort by attributes like amount of videos, date
+Drill down further below the graph to sort by attributes like amount of embedded videos, date
 created, or number of plays. The sorting bar is slightly different at the
 account and project levels, so heads up!
 
@@ -73,10 +66,8 @@ account and project levels, so heads up!
 
 {% post_image hashed_id: 'cca81cb21b3f5bdf95fedc8e295f178af545febb', class: 'center' %}
 
-By default, the Trends page will show you all-time stats for all Projects in your account.
-This allows you to see all the views by time as you move your cursor around on
-the map.  The details for the views across the account will appear in the upper
-two rows of the Trends table.
+By default, the Trends page will show you all-time stats for all Projects in your account.This allows you to see all the views by time as you move your cursor around on
+the map. The details for the views across the account will appear below the trends table. These options can be clicked, to help you sort results. Want to see the projects with the lowest number of embeds? Double click that *Videos Embedded* option.
 
 {% post_image hashed_id: '5f836a68a53870b74aeff36b7970de9a588747c8', class: 'center' %}
 
