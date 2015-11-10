@@ -869,9 +869,7 @@ for a full list.
 ## Examples
 
 To get you making video magic as fast as possible, here are some examples of
-common JavaScript player API projects. We have also moved many of the more
-involved examples over to our [Demobin](http://wistia.github.com/demobin) for
-your review.
+common JavaScript player API projects.
 
 ### Start Video Playback at a Specific Time
 
