@@ -35,7 +35,7 @@ This is what a standard inline embed code looks like:
 
 {% codeblock standard_embed.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_wogyyxgk0n" style="height:349px;width:620px">&nbsp;</div>
+<div class="wistia_embed wistia_async_0nhcretdl1" style="height:349px;width:620px">&nbsp;</div>
 {% endcodeblock %}
 
 
