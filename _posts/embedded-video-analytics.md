@@ -209,24 +209,25 @@ menu.
 
 From the Viewer Page, you can track activity for a specific viewer.  Want to
 'tag' this viewer for future tracking?  Edit their name as you would a Wistia
-media title, by clicking the 'edit' tag and then typing changes.
+media title, by clicking the 'edit' tag that will appear on hover. Then type your changes.
 
+Under the viewer's information you'll see a quick summary of their interactions with your videos. This information will tell you:
+* When they watched the first video from you
+* The total number videos they've watched
+* Total time spent watching your videos
+* And average engagement on your videos
 
-The activity bar underneath the viewer name tracks the number of videos the
-viewer has watched, the amount of times they have loaded a page with a video
-on it (to derive video play conversion rate), and the total amount of video
-they have watched.  Which videos do your new customers watch before signing up?  
-Which videos do your customers come back to watch again and again?  The viewer
-page gives you a clear view into the activity of your video viewers.
+You'll also see all of the heatmaps from this viewer. And, if they've been identified via Turnstile, you can see the heatmap which captured the lead.
+
+Want to learn more? Check out our Help Page all about [the Viewer Page]({{ '/identity-tagging' | post_url }}).
 
 ### Tagging With Emails
 
 Adding a name to a viewer makes it easy to track their viewing sessions in your
-analytics.  You can also tag viewers with email address automatically, using
-[email marketing embeds]({{ '/email-marketing' | post_url }}).
+analytics. You can also tag viewers with email address automatically, using
+[email merge tags]({{ '/email-marketing' | post_url }}).
 
-Once your viewer is tagged with an email, you can sort to view them in the Viewer
-Stream by clicking the "With Emails" option on the sorting bar.
+Viewers tagging with an email will appear blue in the View Stream.
 
 ## Reset Stats
 
@@ -246,17 +247,57 @@ them (there's <a href="//fast.wistia.net/embed/iframe/kmoo4abbal?popover=true" c
 While we work hard on making our analytics interface powerful yet easy-to-use,
 it can sometimes be necessary to export your stats data for further analysis.
 
-Read on if you'd like to learn how that is done.
+There are two places you can export stats. The Trends Page, and the Media Stats Page.
 
-First, head to the stats page for one of your videos (it has a link like
-`http://<account>.wistia.com/stats/medias/<id>`).
+### Exporting Trends Stats
 
-On the right hand side of the bar that separates the aggregate statistics from
-the video heatmaps, a link is shown which says `Export as CSV`.
+First up, head to the your account trends page. [Click here](https://my.wistia.com/stats/account) to get to your own. Adjust your settings to what you'd like to export. Do you want a specific date range or all time? Projects or medias? Want to look at data drilled down to the day? Make it happen!
+
+Scroll to the bottom of the page, and click that Export button.
 
 {% post_image hashed_id: '803732dcd4895f85f30062bf8589e5cea2ba0a73', class: 'float_right', width: 500 %}
 
-Click on the link and a dialog box will appear. Get your filters right, and
+**Project level** trends stats for each individual project. That data includes:
+
+* Date Created
+* Name
+* Number of Videos
+* Load Count
+* Plays Over Date Range (if applicable)
+* Play Count
+* Hours Watched
+* Timeline Actions Conversions
+* Timeline Actions Impressions
+
+
+For **Video level** trends stats you'll export data for each video:
+
+* Date Created
+* Name
+* Total Loads
+* Plays Over Date Range (if applicable)
+* Unique Loads
+* Unique Plays
+* Average Percent Viewed
+* Duration
+* Play Rate
+* Hour Watched
+* Timeline Action Conversions
+* Timeline Actions Impressions
+
+
+These will export at CSV files which will be emailed to you.
+
+### Exporting Media Stats
+
+If you want to low-down on an individual video's stats, head to the stats page for that videos (it has a link like
+`http://<account>.wistia.com/stats/medias/<id>`).
+
+At the bottom of the page (past all of your heatmaps), you'll see a button to `Export as CSV`.
+
+{% post_image hashed_id: '803732dcd4895f85f30062bf8589e5cea2ba0a73', class: 'float_right', width: 500 %}
+
+Click on the link and a dialog box will appear. Get your filters right (date range, if needed), and
 then select the <span class="faux_button">EXPORT</span> button.
 
 The CSV file with stats and emails and heatmap data can be spliced and manipulated
@@ -274,14 +315,15 @@ includes:
 *  Longitude
 *  Organization
 *  Email (if passed through)
+*  Name
 *  Percent of Video Viewed
 *  URL where the view happened
+*  Links Clicked (Annotation or CTA)
+*  Browser (and version)
+*  Platform (Mac, Windows, etc)
+*  Device
 
-There are also a variety of options of how to filter the data.  These include:
-
-*  All events or only those where the play button was pressed
-*  Number of events to return and offset in the total set
-*  Date range for the events to retrieve
+You can also filter these stats to a specific date range.
 
 **If something seems fishy, you can always check out our <a href="http://status.wistia.com/">Status Page</a> for more information about what might be going on. Still no luck? [Contact us](http://wistia.com/support/contact). We'd be more than happy to help you out!**
 
