@@ -156,7 +156,7 @@ MP4 asset as the Download Type.
 
 At this point, it isn't possible to gauge which video is causing a hike in
 bandwidth usage if you're seeing one. But if you have a video that's getting a
-lot of traffic (you can check that quickly in the [Viewer Stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})), that's
+lot of traffic (you can check that quickly in the [View Stream]({{ '/embedded-video-analytics#view_stream' | post_url }})), that's
 probably your culprit.
 
 You can always see the sizes of the files we're delivering from your account.

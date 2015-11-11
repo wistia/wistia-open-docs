@@ -48,7 +48,7 @@ anywhere in the name) will allow you to re-name the viewer.  Enter their name,
 and press enter.
 
 In the future, you can check in on your viewer by opening the
-[viewer stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})
+[View Stream]({{ '/embedded-video-analytics#view_stream' | post_url }})
 and searching for their name on the sorting bar.  You can also sort by "named"
 viewer.
 
