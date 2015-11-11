@@ -23,14 +23,14 @@ footer: 'for_beginners'
 
 {% post_image hashed_id: 'b7f77d7e188bc953dfd491ae12d9476ee44f5c2c', class: 'center' %}
 
+Managers in your Wistia account can invite new viewers to view private content
+using the "Sharing and Privacy" feature.  From the Project screen, select
+"Sharing and Privacy" from under the blue "Project Actions" drop-down menu. Or,
+click on the padlock icon next to the title of the project.
 
-Managers in your Wistia account can invite new viewers to view private content using the "Sharing and Privacy" feature.  From the Project screen, select "Sharing and Privacy" from under the green "Project Actions" drop-down menu.
+Next, in the box where it says "Enter email addresses to add users," type in the email addresses for contact you'd like to share the project privately with. You can also customize the test of the message by clicking "Add a personal message."
 
-Enter the email addresses of contacts you would like to share this project privately with in the box where it says "Enter email addresses to add users." You can customize the text from the message they will receive to first access the content you've allowed them to view by clicking on "Add a personal message."
-
-
-{% post_image hashed_id: '49972fd41732b1f35c221718fd6d3fc83568eff7', class: 'center' %}
-
+{% post_image hashed_id: '82a0ef0b697b5f311d80bb9ef7fe07ca73437358', class: 'center' %}
 
 
 <div class="faq">
@@ -39,9 +39,7 @@ Enter the email addresses of contacts you would like to share this project priva
 <p>The best way for unwanted viewers to view secure content is through the original email.  Sending a group email that contains the login and password needed to access secure content can be grabbed easily: from a stolen laptop, from a hacked email account, even read right off the screen at a coffee shop.  With Wistia, your invited viewers receive an email with a one-time use activation code, and then create their own password.</p>
 </div>
 
-----
-
-## Privately share video by link
+## Privately Share Video By Link
 
 {% post_image hashed_id: 'c0abef6318491516e0ec8044efacfa1869cb609a', class: 'right', width: 320 %}
 
@@ -65,12 +63,10 @@ Once the project has been set to *unlocked*, copy the link displayed. You can
 share this link in an email or put it on a webpage, and when users click on the
 link, they will be taken directly into the project.
 
-{% post_image hashed_id: '8316737d63d3d76bd5c8267086af31a337832054', class: 'center' %}
+{% post_image hashed_id: '84b91f68a2d3a09bd4635648e3598bef81efb871', class: 'center' %}
 
 To disable access to your project through the link, set the sharing level to
 *locked*.
-
----
 
 ## Managing Permissions
 
@@ -89,42 +85,37 @@ The share screen shows which users currently have access to the Project, and wha
 *  **Share**, which means the viewer can share the Project with new viewers.
 *  **Stats**, which gives the viewer the ability to view stats for videos in the Project.
 
-{% post_image hashed_id: '167c9f4350ba34ed71c445ac84400dd28e8ee3e1', class: 'center' %}
+{% post_image hashed_id: 'f3bab334f91573315cba67b509d0274d194f5f6e', class: 'center' %}
 
 ### Removing Access
 
 Removing viewer access can also be done by clicking the small **X** icon at the
 end of each viewer row. Make sure to **save** your changes.
 
-----
-
-## Review Your Viewers Activity
+## Private Viewer Analytics
 
 Now that you have invited some viewers in to view your private content, it's
 time to see if they actually watched!  This is especially helpful for reviews
 and approvals and training or educational content.
 
-{% post_image hashed_id: '70e3ae974308c831aac30ad9979aa6056d3bf43a', class: 'center' %}
+{% post_image hashed_id: 'b6aebd416657befa27efa259249ab2b32d158649', class: 'center' %}
 
-To view the individual user statistics for people you invited into Wistia,
-select the *User sessions* option under the *Stats* tab at the top of any page
+To view the individual user statistics for people you've invited into Wistia,
+select the *Private User Sessions* option under the *Account* tab at the top of any page
 in your Wistia account.
 
 You will see a list of all user sessions for the users that have logged into
 your Wistia account.  To see exactly what each user did in each session, click
-on the *Stats* magnifying glass next to the session.
+*View Details* next to the session.
 
-{% post_image hashed_id: 'ac77964367e67b73d9cbc706538c0fe884cb9a60', class: 'center' %}
+{% post_image hashed_id: '3d2c0eff0d4a023770f80abea853267bf3828204', class: 'center' %}
 
 A complete audit trail will be shown with all of the actions the user took
 while they were logged in to your Wistia account.  This includes amount of time
 spent on various pages as well as video heatmaps for the videos that they
 viewed.
 
-{% post_image hashed_id: '30f18531a91fdc69b5ba6911b48f6ec503ba1e3d', class: 'center' %}
-
-
----
+{% post_image hashed_id: '65022f264a05a073e9a1de4196481e099a112184', class: 'center' %}
 
 ## How Wistia Appears For Your Viewers
 
@@ -138,7 +129,7 @@ Let's walk through an example of how this will look from your viewer's perspecti
 
 ### The Invitation Email
 
-{% post_image hashed_id: 'ab18c90e859acd1692ae0ba8db354c58218bc1e3', class: 'center' %}
+{% post_image hashed_id: 'a2892adc2c8a546416f8853efd0eaed65c76112e', class: 'float_right', width: 500 %}
 
 After clicking the *Add User* button, your viewer will receive an email at the
 address you have designated.  This email will include an invitation to view the
@@ -150,7 +141,7 @@ project you are sharing, along with a link for their access.
 
 ### The Credential Creation Screen
 
-{% post_image hashed_id: '6dc3b3ce1c35d22643f5105de3e1ae1140aa3355', class: 'center' %}
+{% post_image hashed_id: 'b24e225a3f0567bd80589ab5ee563c05fcbedcd7', class: 'float_right', width: 500 %}
 
 After clicking the activation link, viewers who have never interacted with the
 Wistia system will land on a page where they can create Wistia credentials.  
@@ -186,4 +177,4 @@ out the permissions that they currently have for that Project. They can also
 customize the email message that is sent out as well. Here is what that Sharing
 screen looks like:
 
-{% post_image hashed_id: '2e2a22f2fa3ff9368c23c213d219030d2246a392', class: 'center' %}
+{% post_image hashed_id: '3f02151ecc91df28777bc63ac177d8dc66223439', class: 'center' %}
