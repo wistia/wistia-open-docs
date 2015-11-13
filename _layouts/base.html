@@ -44,7 +44,7 @@
     {% include wgh_config.html %}
     {% include header.html %}
     {% unless page.no_nav %}{% include doc_nav.html %}{% endunless %}
-    <div class="{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" id='container'>
+    <div class="{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" id='container' data-swiftype-name="body" data-swiftype-type="text">
       {{ content }}
     </div>
     {% include footer.html %}
