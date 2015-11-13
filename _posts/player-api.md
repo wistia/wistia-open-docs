@@ -755,6 +755,16 @@ video.bind("crosstime", 30, showMyCustomCTAOnce);
 
 NOTE: This event currently does not fire on iframe embeds.
 
+### end
+
+Fired when the video's state changes to "ended".
+
+{% codeblock wistia_js.js %}
+video.bind("end", function() {
+  console.log("Lenny was here.");
+});
+{% endcodeblock %}
+
 ### heightchange
 
 Fired whenever the height of the embed changes. If you have element sizes or
