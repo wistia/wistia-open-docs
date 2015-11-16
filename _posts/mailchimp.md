@@ -3,7 +3,7 @@ title: Use Wistia With a MailChimp Email Campaign
 layout: post
 category: Integrations
 description: Have a MailChimp Campaign? Have a Wistia account? Combine their powers for all sorts of awesome.
-post_intro: <p><a href="http://mailchimp.com">MailChimp</a> provide some pretty neat tools for discovering how your email marketing funnel works. For our Wistia users, we wanted to create a seamless experience where they could send tailored email campaigns that included Wistia videos, and then track how their contacts interacted with the video itself. <br ></br>So let's dive in to how to create an email campaign with Wistia & MailChimp!
+post_intro: <p><a href="http://mailchimp.com">MailChimp</a> is one of our favorite email marketing systems. When we need to send out emails, and don't want them to get stuck in spam filters, we use MailChimp. <br></br>They also provide some pretty neat tools for discovering how your email marketing funnel works. For our Wistia users, we wanted to create a seamless experience where they could send tailored email campaigns that included Wistia videos, and then track how their contacts interacted with the video itself. <br></br>So let's dive in to how to create an email campaign with Wistia & MailChimp!
 footer: 'for_intermediates'
 ---
 
