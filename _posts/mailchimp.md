@@ -103,10 +103,21 @@ Give this a shot with your next MailChimp merge tag embed!
 
 ## Troubleshooting
 
-Sometimes you may run into a little trouble with not seeing emails appear in your MailChimp lists. In our experience, there are a few reasons why this may happen.
+Sometimes you may run into a little trouble with not seeing emails appear in
+your MailChimp lists. In our experience, there are a few reasons why this may
+happen.
 
-* If you have previously had this email included in one of your lists in MailChimp but have since deleted it, MailChimp will not allow the email to be included in a list again. This is something that we often run into with test emails!
+1. If you have previously had this email included in one of your lists in
+MailChimp but have since deleted it, MailChimp will not allow the email to be
+included in a list again. This is something that we often run into with test
+emails!
 
-* MailChimp will sometimes cache old thumbnails, if you've previously used a different video in the same template. You can create a new campaign to solve the problem.
+2. MailChimp will sometimes cache old thumbnails, if you've previously used a
+different video in the same template. You can create a new campaign to solve
+the problem.
 
-* MailChimp uses a double opt-in system. If the viewer that has checked out your video hasn't yet had the opportunity to confirm their opt-in for your email list, MailChimp will not populate their email. You can read more about this [here](http://kb.mailchimp.com/article/how-does-confirmed-optin-or-double-optin-work). Thanks! Happy embedding!
+3. MailChimp uses a double opt-in system. If the viewer that has checked out your
+ video hasn't yet had the opportunity to confirm their opt-in for your email
+ list, MailChimp will not populate their email. You can read more about this [here](http://kb.mailchimp.com/article/how-does-confirmed-optin-or-double-optin-work).
+
+Happy embedding!
