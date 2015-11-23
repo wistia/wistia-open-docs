@@ -28,14 +28,15 @@ If that _doesn't_ sound like you yet, and you're feeling enterprisey today <a hr
 After choosing the Enterprise plan, you'll need to configure Turnstile to pass leads from Wistia into Marketo. Just follow these quick steps:
 
 1. In your Wistia account, open the Account menu and click on Settings.
-2. Switch to the Data Integrations tab.
-3. Enter your credentials for Marketo.
-4. Connect!
-5. Call an old friend and catch up. It's been too long, hasn't it?
+2. Navigate to the **Integrations** tab under *Advanced*.
+3. Scroll down to the Enterprise Integrations section.
+4. Enter your credentials for Marketo.
+5. Connect!
+6. Call an old friend and catch up. It's been too long, hasn't it?
 
 Congrats, you're all set up!
 
-{% post_image hashed_id: "dafaa71a97abddfbe5c41fbf6749e7a214429169", class: 'center' %}
+{% post_image hashed_id: "5b12d26e07b6ab0b3710da6a87245a2715d6190e", class: 'center' %}
 
 {{ "If for one reason or another you're <em>not</em> set up after following the steps above, <a href='http://wistia.com/support/contact'>contact us</a> and we'll help you out." | note }}
 
