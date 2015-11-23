@@ -30,9 +30,9 @@ If you have all of that, here's how to get started:
 
 **1. Add your Pardot account in Wistia**
 
-In Wistia, head to *Account Settings* and select **Data Integrations** from the side menu. Enter the credentials you use to login to Pardot, along with your Pardot API User Key (which you can find in [your Pardot settings](https://pi.pardot.com/account)).
+In Wistia, head to *Account Settings* and navigate to the **Integrations** section under *Advanced*. Scroll down to Enterprise integrations. Enter the credentials you use to login to Pardot, along with your Pardot API User Key (which you can find in [your Pardot settings](https://pi.pardot.com/account)).
 
-{% post_image hashed_id: '92bbedd45bb361804d6a7a5d35b4ab33b3009a70', class: 'center' %}
+{% post_image hashed_id: '09acf7dbd24a5f7596efcfd747da49b5acfd8aa8', class: 'center' %}
 
 Connect and you're halfway set up! Proceed to step 2. 👇
 
