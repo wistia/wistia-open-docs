@@ -27,15 +27,13 @@ There are two main types of Wistia embed codes: [Inline embeds](#inline_embeds) 
 
 Inline embeds will place the video directly on the page, inline with the rest of your content. Here's an example "Standard" inline embed:
 
-{% wistia_embed hashed_id: 78evdl8ycp %}
-
-_Nice._
+{% wistia_embed hashed_id: vud7ff4i6w %}
 
 This is what a standard inline embed code looks like:
 
 {% codeblock standard_embed.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_0nhcretdl1" style="height:349px;width:620px">&nbsp;</div>
+<div class="wistia_embed wistia_async_j38ihh83m5" style="height:349px;width:620px">&nbsp;</div>
 {% endcodeblock %}
 
 
@@ -50,9 +48,18 @@ While the Standard inline embed code will work great in most cases, some website
 
 {% post_image hashed_id: 'edf435f5c6927c7995943836170af3654b45ace5', width: 641, class: 'float_left' %}
 
-The Fallback embed is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this documentation, a pretty nice way to get from point A to point B.
+The Fallback embed is like a [Subaru Impreza](http://en.wikipedia.org/wiki/Subaru_Impreza): simple, reliable, and if you ask the Wistian writing this help page, a pretty nice way to get from point A to point B.
+
+{% wistia_embed hashed_id: sztcrbdhr2, embedType: iframe %}
 
 If you can't include JavaScript on your website, or something is making your Standard embed look a little... weird, give the Fallback option a try.
+
+Here's an example of a fallback inline embed code:
+
+{% codeblock %}
+<iframe src="//fast.wistia.net/embed/iframe/avk9twrrbn" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="620" height="349"></iframe>
+<script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
+{% endcodeblock %}
 
 {{ "The Fallback embed should only be used if the Standard inline embed won't work on your website for some strange reason. Please [tell us](http://wistia.com/support/contact) if that happens!" | alert }}
 
@@ -66,13 +73,13 @@ Popover embed codes make your videos _pop over_ the rest of your content instead
 You can launch a popover video with either a text link or thumbnail image. When clicked, that link will open a lightbox
 with your video inside. Here's an example of a popover embed using the thumbnail option:
 
-<div class="wistia_embed wistia_async_ftt9sor9hw popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:169px;width:300px">&nbsp;</div>
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_embed wistia_async_k9bmbixozg popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:169px;width:300px">&nbsp;</div>
 
 And here's the popover embed code behind that video:
 
 {% codeblock popover_example.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_ftt9sor9hw popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:169px;width:300px">&nbsp;</div>
+<div class="wistia_embed wistia_async_pukozq6xf0 popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:169px;width:300px">&nbsp;</div>
 {% endcodeblock %}
 
 Copy and paste that into your website to give it a try! Be sure to read the section on [Responsive Design with Popover Embeds](#responsive_design_with_popover_embeds) as well.
