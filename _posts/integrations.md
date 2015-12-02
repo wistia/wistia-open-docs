@@ -81,6 +81,7 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * Medium
 * MotoCMS
 * Portfoliobox
+* Project Manager
 * [Sharepoint](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/embed-video-on-a-public-website-page-HA102828149.aspx)
 * [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)
 * Smore
