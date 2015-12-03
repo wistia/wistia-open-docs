@@ -4,7 +4,7 @@
       %ul
         {% if page.type != 'post' %}
         %li#breadcrumbs
-          %a{ style: 'padding-left: 0;', href: "{{ '/' | post_url }}" } Documentation
+          %a{ style: 'padding-left: 0;', href: 'http://wistia.com/support' } Help Center
           %span.breadcrumb_post_title
             %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {% if page.type %}
@@ -17,7 +17,7 @@
         %li#breadcrumbs
 
           {% if page.category && page.category != 'no_index' %}
-          %a{ href: "{{ '/' | post_url }}" } Documentation
+          %a{ href: 'http://wistia.com/support' } Help Center
           %span.breadcrumb_post_title
             %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
             {% if page.special_category_link %}
@@ -32,7 +32,7 @@
             {% endif %}
 
           {% else %}
-          %a{ href: "{{ '/' | post_url }}" } Documentation
+          %a{ href: 'http://wistia.com/support' } Help Center
           {% endif %}
           %span.breadcrumb_post_title
             %img{ src: "{{ '/images/greaterThan.png' | image_url }}" }
