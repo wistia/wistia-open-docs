@@ -862,7 +862,7 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 
 .devhq_footer_arrow { margin: 0 auto; }
 
-.wistia-basics-header .project-description, .media-tiles-container .media-tiles .media-tile .description { color: #363945; font-size: 16px; line-height: 140%; text-align: left; }
+.wistia-basics-header .project-description, .media-tiles-container .media-tiles .media-tile .description, .help_videos_header .help-videos-description, .video-tiles-container .video-tiles .video-tile .description { color: #363945; font-size: 16px; line-height: 140%; text-align: left; }
 
 .wistia-basics-header { background-color: white; margin: 30px 0; position: relative; font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif; }
 .wistia-basics-header ul { text-align: center; }
@@ -888,6 +888,35 @@ figure.code .il, .gist-highlight .il { color: #009999; }
 .thumbnail_color:before { content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: none; }
 
 .media-tile:hover .thumbnail_color:before { content: url("http://embed.wistia.com/deliveries/04ce671a8d70642a150ef2c2ad96d3700e1d4caf.bin"); left: 134px; top: 80px; }
+
+.chapter_link { position: relative; }
+
+.wistia-basics-header .project-description, .media-tiles-container .media-tiles .media-tile .description, .help_videos_header .help-videos-description, .video-tiles-container .video-tiles .video-tile .description { color: #363945; font-size: 16px; line-height: 140%; text-align: left; }
+
+.help_videos_header { background-color: white; margin: 30px 0; position: relative; font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif; }
+.help_videos_header ul { text-align: center; }
+.help_videos_header .help-videos-title { margin-bottom: 20px; }
+.help_videos_header .help-videos-title h1 { font-size: 35px; font-style: normal; text-align: left; }
+.help_videos_header .help-videos-description { width: 55%; }
+
+.video-tiles-container { border-top: 1px solid #cbd0d6; margin-bottom: 40px; padding-top: 20px; position: relative; text-align: center; }
+.video-tiles-container .video-tiles { text-align: left; width: 100%; }
+.video-tiles-container .video-tiles h1 { font-size: 54px; text-align: center; }
+.video-tiles-container .video-tiles .row { margin: 20px 0; position: relative; }
+.video-tiles-container .video-tiles .video-tile { background-color: white; font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif; height: 415px; vertical-align: top; width: 425px; -webkit-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; -moz-box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; box-shadow: rgba(0, 0, 0, 0.05), 0, 0, 10px; display: inline-block; *display: inline; vertical-align: top; zoom: 1; }
+.video-tiles-container .video-tiles .video-tile.second_column { position: absolute; right: 0; }
+.video-tiles-container .video-tiles .video-tile:hover { background-color: #eceef1; }
+.video-tiles-container .video-tiles .video-tile a { position: relative; display: block; }
+.video-tiles-container .video-tiles .video-tile img { margin: 0 auto; display: block; width: 425px; }
+.video-tiles-container .video-tiles .video-tile em { font-weight: 200; }
+.video-tiles-container .video-tiles .video-tile .info { width: 70%; padding: 30px; }
+.video-tiles-container .video-tiles .video-tile .title { margin-bottom: 10px; -webkit-font-smoothing: antialiased; }
+.video-tiles-container .video-tiles .video-tile .title a { font-size: 26px; font-weight: 400; text-decoration: none; color: #333333; }
+
+.video_thumbnail_color { position: relative; cursor: pointer; }
+.video_thumbnail_color:before { content: ""; display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: none; }
+
+.video-tile:hover .video_thumbnail_color:before { content: url("http://embed.wistia.com/deliveries/04ce671a8d70642a150ef2c2ad96d3700e1d4caf.bin"); left: 134px; top: 80px; }
 
 .chapter_link { position: relative; }
 
