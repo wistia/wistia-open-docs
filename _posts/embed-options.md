@@ -420,8 +420,8 @@ _wq.push({ "4d8": {
       text: "This clickable message\n will appear after your\n video ends!",
       link: "http://wistia.com"
     }
-}
-});
+  }
+}});
 </script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_4d8229898d" style="width:640px;height:360px;">&nbsp;</div>
