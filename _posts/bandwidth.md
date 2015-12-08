@@ -39,7 +39,7 @@ Still confused? Have no fear, we made you a helpful video too.
 
 ## Video Overview
 
-{% wistia_embed hashed_id: k11pdmyynp %}
+{% wistia_embed hashed_id: odvdgivcwl %}
 
 ## Check Your Bandwidth
 
@@ -68,21 +68,21 @@ Want help gauging how much bandwidth your videos will use? Check out our
 Keep in mind, while this thing is pretty sweet (if I do say so myself), it *is*
 just a predictor tool. The bandwidth you end up using could be different.
 
-## Overage Pricing
+## Extra Bandwidth Pricing
 
-Most Wistia accounts are billed at **$0.33/GB** for overages over 200GB. High
-Volume plans are a bit different. [Read about that pricing here.](http://wistia.com/pricing/highvolume)
+Most Wistia accounts are billed at **$0.33/GB** for bandwidth use over 200GB. High
+Volume bandwidth options are a bit different. [Read about that pricing here.](http://wistia.com/pricing/highvolume)
 
-Let's walk through a fairly standard overage bill.
+Let's walk through a fairly standard bill.
 
-If you're on the $100/mo Pro Plan, and you end up using 350GB of bandwidth for
+If you're on the $100/mo Pro Plan with the default 200GB bandwidth option, and you end up using 350GB of bandwidth for
 the month, here's what your bill would look like:
 
 - $100 for the Pro Plan
-- 150GB of overage at $0.33/GB = $49.50
+- 150GB of additional bandwidth at $0.33/GB = $49.50
 - This month's bill: **$149.50**
 
-If you're on an annual plan you'll be billed monthly for any overages you incur.
+If you're on an annual plan you'll be billed monthly for any extra bandwidth costs you incur.
 You can always see your receipts in [Account Settings]({{ 'account-setup#billing_statements' | post_url }}).
 
 Still not sure if you're in the right spot? [Talk to us.](http://wistia.com/support/contact)
