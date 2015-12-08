@@ -1233,7 +1233,7 @@ _wq.push({ "abcde12345": function(video) {
   video.bind("play", function() {
     console.log("video played", video.name());
   });
-});
+}});
 </script>
 {% endcodeblock %}
 
