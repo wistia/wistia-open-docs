@@ -52,6 +52,9 @@ Go back to your old window and run
 
 ### Installing CoffeeScript
 
+Make sure you have homebrew installed:
+
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 if you don't have node installed:
 
@@ -98,7 +101,7 @@ Images have their own Jekyll 'tag':
 
 Videos are generated using an oEmbed plugin:
 
-    {% wistia_embed hashed_id: AAAAAAA, videoWidth: 660, videoHeight: 400 %}
+    {% wistia_embed hashed_id: AAAAAAA %}
 
 defaults:
 
@@ -108,7 +111,7 @@ defaults:
 * videoWidth: "660"
 * videoHeight: "413"
 * playButton: true
-* embedType: "seo"
+* embedType: "standard"
 * controlsVisibleOnLoad: false
 
 ### How to Add/Update Embedded Code
@@ -144,12 +147,13 @@ Changes to posts, javascript, and sass will take effect dynamically
 Did you find something tragically old in the docs? Yeah, me too. Here's how to delete that bad boy.
 
 1. Delete the markdown file locally, and remove any references to it in the
-site index.
-2. After you've pushed changes to master and deployed, make sure that ish is
+site index. (on wistiacom)
+2. Try to set up a redirect -- if there is a better place to send people, DO THAT. Bug Emily if you want to set one up.
+3. After you've pushed changes to master and deployed, make sure that ish is
 gone by heading to the page. Hard refresh, friend--don't forget!
-3. if it isn't, purge the page in Fastly's cache from skycrank with
+4. if it isn't, purge the page in Fastly's cache from skycrank with
 `curl -X PURGE http://wistia.com/doc/thepageurl`
-4. last but not least, [ask Google to remove it from the interwebs/search](https://www.google.com/webmasters/tools/removals?pli=1)
+5. last but not least, [ask Google to remove it from the interwebs/search](https://www.google.com/webmasters/tools/removals?pli=1) if there is no redirect.
 
 ### Style / Frameworks
 
@@ -158,23 +162,7 @@ Wistia Doc uses Sass and Compass. See more about Compass: http://compass-style.o
 Production Commands
 -------------------
 
-### Deployment
-
-Push code to github:
-
-    git push origin master
-
-From skycrank, update the docs box with master:
-
-    ./crank docs deploy
-
-Contact
--------
-
-Want to chat? Weird, me too. You can [email me](mailto:jeff@wistia.com), or
-reach me on [twitter](http://twitter.com/jeffvincent).
-
-Swiftype
+## Swiftype
 --------
 
 Wistia-doc uses [Swiftype](https://swiftype.com/) search engine to crawl and index the Wistia Docs.
@@ -192,3 +180,19 @@ Switype installer on the page:
       })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
       _st('install','[KEY]','2.0.0');
       </script>
+
+## Deployment
+
+Push code to github:
+
+    git push origin master
+
+From skycrank, update the docs box with master:
+
+    ./crank docs deploy
+
+Contact
+-------
+
+Want to chat? Weird, me too. You can [email me](mailto:jeff@wistia.com), or
+reach me on [twitter](http://twitter.com/jeffvincent).
