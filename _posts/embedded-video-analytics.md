@@ -239,7 +239,7 @@ drop-down menu.
 
 ## Audience
 
-Your viewers aren't just a mass of numbers--they're individual people and potential leads. That's why Wistia created a section entirely devoted to them: your Audience.
+Your viewers aren't just a mass of numbers&mdash;they're individual people and potential leads. That's why Wistia created a section entirely devoted to them: your Audience.
 
 The Audience page is all about tracking viewers through email, via Turnstile submissions, or just old fashioned views.
 
@@ -247,9 +247,21 @@ To get to the Audience page you'll need to choose **Audience** from the **Stats*
 
 {% post_image hashed_id: '1b504300470d4a8d8d3857ad88151f11680215b4', class: 'center' %}
 
-Your Audience is divided into three sections: those who entered information into a Turnstile, those tracked with an email address (through Turnstile or [email merge tags)]({{ '/email-marketing' | post_url }}), and total audience. You also have the opportunity to Search for individual contacts.
+You can check out your Audience in three ways: those who've entered information into a Turnstile, those tracked with an email address (through Turnstile or [email merge tags)]({{ '/email-marketing' | post_url }}), and total audience. You also have the opportunity to Search for individual contacts by name or email address.
 
-Each contact gets its own line. In the blue or grey box on the right (grey for unrecognized, blue for recognized) you'll see a number. This number indicates the number of videos this audience member has watched in your Wistia account. Next to that you'll see the network on which the viewer watched your video and their location. If they've been tagged with an email, that will be on this line too. Still more information provided: where the source came from (passed in? Turnstile?), and when they watched their last video.
+Each audience member has their own summary line.
+
+{% post_image hashed_id: '2d90c362b5d0b1a22493de08d285872d76e4d501', class: 'center' %}
+
+In the blue or grey box on the left (grey for unrecognized, blue for recognized) you'll see a number. This number indicates the number of videos this audience member has watched in your Wistia account.
+
+Next to that you'll see the network on which the viewer watched your video (or their name, if available) and their location.
+
+Still more goodies available:
+
+-   Their email address (if provided)
+-   Where the lead came from (passed in? Turnstile?)
+-   And the last video they watched of yours
 
 Each member of your audience has their own Viewer Page. Clicking anywhere on the line in order to check it out!
 
