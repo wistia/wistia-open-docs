@@ -168,14 +168,15 @@ Wistia has created for streaming.
 
 Are you exceeding your bandwidth limit on the regular? Here's a nifty chart we
 put together to show you the breaking point when you should jump up to the next
-plan.
+bandwidth option.
 
-Plan | Given Bandwidth | Overage | Which Plan Next?
+Bandwidth Option| Monthly cost | Extra bandwidth pricing | When it makes cents 😉 to upgrade
 -----|----------------|---------|------------
-Basic ($25)|200GB | 845GB ($279) | Enterprise 1TB
-Pro ($100) | 200GB | 606GB ($200) | Enterprise 1TB
-Enterprise ($300) | 1 TB | 2,500GB ($450) | High Volume 5TB
-High Volume ($750)| 5 TB | 5,000GB ($750) | High Volume 15TB
+200GB | Free | 0.33¢/GB | 807 GB in total bandwidth ($200.31)
+1 TB | $200 | 0.18¢/GB | 4,080 GB in total bandwidth ($750.08)
+5 TB | $ 750 | 0.15¢/GB | 10,120 GB in total bandwidth ($1,500)
+15 TB | $1500 | 0.10¢/GB | 30,360 GB in total bandwidth ($3,000)
+50 TB | $3000 | 0.06¢/GB | Once you reach max level, you stop leveling.
 
 Still not sure? [Talk to us.](http://wistia.com/support/contact) We weren't all
 Calculus majors, but we can figure our way around a calculator. We'd love to
