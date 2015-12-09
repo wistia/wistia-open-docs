@@ -3,7 +3,7 @@ title: Bandwidth
 layout: post
 category: Account
 description: Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!
-post_intro: <p>Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!</p>
+post_intro: <p>Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from using more than you bargained for!</p>
 footer: 'for_beginners'
 ---
 
@@ -130,7 +130,7 @@ to make an easy playlist of the videos in your series.
 
 Here are some easy things you can do to cut down on bandwidth:
 
-1. Minimize your own views -- your views count toward bandwidth, so try to cut
+1. Minimize your own views&mdash;your views count toward bandwidth, so try to cut
 down on your own views while customizing or testing.
 
 2. Avoid having videos set on autoplay. Once a video starts autoplaying, it will
@@ -170,13 +170,13 @@ Are you exceeding your bandwidth limit on the regular? Here's a nifty chart we
 put together to show you the breaking point when you should jump up to the next
 bandwidth option.
 
-Bandwidth Option| Monthly cost | Extra bandwidth pricing | When it makes cents 😉 to upgrade
+Bandwidth Option| Monthly Cost | Extra Bandwidth Pricing | When It Makes Cents 😉 to Upgrade
 -----|----------------|---------|------------
 200GB | Free | 0.33¢/GB | 807 GB in total bandwidth ($200.31)
 1 TB | $200 | 0.18¢/GB | 4,080 GB in total bandwidth ($750.08)
 5 TB | $ 750 | 0.15¢/GB | 10,120 GB in total bandwidth ($1,500)
 15 TB | $1500 | 0.10¢/GB | 30,360 GB in total bandwidth ($3,000)
-50 TB | $3000 | 0.06¢/GB | Once you reach max level, you stop leveling.
+50 TB | $3000 | 0.06¢/GB | [Contact us](http://wistia.com/support/contact)
 
 Still not sure? [Talk to us.](http://wistia.com/support/contact) We weren't all
 Calculus majors, but we can figure our way around a calculator. We'd love to
