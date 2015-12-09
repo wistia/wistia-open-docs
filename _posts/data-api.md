@@ -148,7 +148,7 @@ publicId  | If the project is public, this field contains a string representing 
 ### Projects: List
 
 Use the Projects#list method to request a list of Projects in your Wistia
-account. This request supports [paging and sorting](#organizing_for_list_methods).
+account. This request supports [paging and sorting](#paging_and_sorting_responses).
 
 Projects#list requests look like this:
 
