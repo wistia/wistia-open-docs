@@ -66,7 +66,7 @@ Wouldn't it be cool if when a person watches at least 50% of a certain video on 
 
 "Why yes, yes that would be quite cool indeed," you say? Phew! Good thing we built this integration.
 
-{{ "Before you can trigger automation in Marketo based on a Wistia video event on your website, that event will need to occur at least once. So before anything else, go onto your website and do the thing you want to use as a trigger in the embedded video (like watch 50% of the video, or click an Annotation Link) – just like regular visitor to your website would. Then Marketo will let you select it as a trigger." | note }}
+{{ "Before you can trigger automation in Marketo based on a Wistia video event on your website, that event will need to occur at least once. So before anything else, go onto your website and do the thing you want to use as a trigger in the embedded video (like watch 50% of the video, or click an Annotation Link) – just like regular visitor to your website would. Then Marketo will let you select it as a trigger." | alert }}
 
 Have you read the super important note above and done the thing you'd like to use as a trigger? Alrighty then, carry on! Here's how to set the automation up:
 
