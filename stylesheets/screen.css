@@ -540,7 +540,7 @@ h1, h2, h3, h4, .seo_faq { color: #363945; font-family: "Whitney A", "Whitney B"
 .post_content ul a:hover { border-bottom: 1px solid #3ea9f5; text-decoration: none; }
 .post_content ol { line-height: 150%; list-style: decimal; }
 .post_content ol li { margin-left: 30px; }
-.post_content p { margin-left: 0px; line-height: 2em; position: relative; font-size: 17px; font-weight: 200; font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif; color: #161d25; margin-top: 10px; margin-bottom: 18px; word-wrap: break-word; }
+.post_content p { margin-left: 0px; line-height: 2em; position: relative; font-size: 17px; font-weight: 400; font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif; color: #161d25; margin-top: 10px; margin-bottom: 18px; word-wrap: break-word; }
 .post_content p a { text-decoration: none !important; }
 .post_content p pre { margin: 0px 0 0px 0px; background-color: #eceef1; }
 
