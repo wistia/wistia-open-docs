@@ -21,6 +21,8 @@ By default, Turnstile will only ask people to enter an email address. "But Wisti
 
 To enable the First Name and Last Name fields, select the "Ask for First and Last Name" option right there in the Turnstile section of Timeline Actions. You'll instantly see an updated preview of Turnstile on your video.
 
+{{ 'If a Turnstile is at the beginning or the middle of the video, the button will say PLAY. Once a Turnstile is end of the video, the button will automatically switch to SUBMIT.' | tip }}
+
 ## Set Up Your Email Provider Integration
 
 Once enabled, a video using Turnstile will automatically track the emails entered
