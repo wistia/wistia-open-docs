@@ -43,8 +43,9 @@ From the Customize Panel, select the *Captions* settings area.
 
 Once your captions are ready, you will be notified by email, and the *CC*
 button will appear to all viewers who view the video within your account. The
-captions will now be included with your embed codes, if you are using the SEO
-embed code type.
+captions will now be injected into the metadata of your video when using the
+[Standard Embed]({{ '/embedding#inline_embeds' | post_url }}). To learn more
+about Video SEO check out our [help page]({{ '/video-seo' | post_url }}).
 
 To customize your video with transcription or captions, select *Customize*
 from the <span class='action_menu'>Video Actions</span> menu. Open the
