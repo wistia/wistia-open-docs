@@ -621,6 +621,7 @@ table { font-size: 15px; line-height: 140%; font-family: "Whitney A", "Whitney B
 table th { font-size: 15px; padding: 10px 20px; background: #3ea9f5; border-bottom: 2px solid white; color: white; }
 table td { padding: 5px 20px; background: rgba(62, 169, 245, 0.2); border-bottom: 1px solid white; color: #3ea9f5; border-top: 1px solid transparent; word-wrap: break-word; }
 table td a { color: #0e7ac4; text-decoration: underline; }
+table td:nth-child(4) { width: 42%; }
 table tr:hover td { background: rgba(62, 169, 245, 0.1); color: #3ea9f5; }
 table tr td pre { margin: 0; padding: 0; }
 
