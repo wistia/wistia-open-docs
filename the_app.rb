@@ -91,6 +91,10 @@ class TheApp < Sinatra::Base
     send_file(File.join(File.dirname(__FILE__), '_site', 'wistia-basics.html'))
   end
 
+  get "/help-videos" do
+    send_file(File.join(File.dirname(__FILE__), '_site', 'help-videos.html'))
+  end
+
   def send_error_file(path)
     [404,
       {
