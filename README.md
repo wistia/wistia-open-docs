@@ -142,6 +142,9 @@ Changes to posts, javascript, and sass will take effect dynamically
 **Note:** Changes to layouts, includes, config files, and static pages
 (anything in HAML) need to be re-converted. Re-run `rake preview` to see updates.
 
+This also means that if you make changes to HAML or SASS files, **you'll need to
+commit both files** -- the HAML and the HTML, the SASS and the CSS.
+
 ### How to Delete Pages
 
 Did you find something tragically old in the docs? Yeah, me too. Here's how to delete that bad boy.
