@@ -155,32 +155,35 @@ If prompted to enter a title, enter one without the full file extension
 
 ---
 
-## Camtasia
+## Camtasia Studio (PC)
 
-Camtasia comes with preset production options to make export easier.
-With the project you wish to share open in Camtasia Studio, click the
-**Produce and Share** button. On the first page of the Production Wizard, choose
-Web from the drop down menu, and click **Next**.
+Camtasia comes with preset production options to make export easier, but sometimes these settings aren't always ideal. Have no fear! Trevor's here to help. 📼
 
-Give your video a name and destination and click **Finish**. The video will be
-rendered in a MP4 file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia.
+{% wistia_embed hashed_id: b0t7ndy3zq %}
 
-If you are not satisfied with the quality of the video produced using Camtasia's
-given presets, you can increase the quality in two ways. Whenever you first
-place a screencast in Camtasia's timeline you are asked to choose what
-dimensions you want to edit the video in.
+Within the project you wish to share open in Camtasia Studio, head up to **File** >
+**Produce and Share**. On the first page of the Production Wizard, choose the **Custom Production Settings** preset.
 
-Larger dimensions allow you to watch the video at a bigger size without losing
-quality. You can also adjust the quality by using the custom production settings
- in the Production Wizard:
+Confirm that the File Format is set to **MP4** and then click next. In the **Size** menu, make sure to set the dimensions to 1920x1080, and check **Keep Aspect Ratio**.
 
-  * **Produce and Share** >
-  * **Custom production settings** >
-  * **Next** >
-  * **MP4/FLV/SWF – Flash Output** >
-  * **Next** >
-  * **Flash Options button** >
-  * **Video tab**
+Under **Video Settings**, change the encoding mode to Bitrate, and change the quality to **15,000 kbps**.
+
+Give your video a name and destination and click **Save**. The video will be
+rendered as an MP4 file which you can then easily [upload]({{ '/upload-video' | post_url }}) to Wistia. Woo!
+
+---
+
+## Camtasia (Mac)
+
+{% wistia_embed hashed_id: 8ygezh06fh %}
+
+To export a perfect MP4 for Wistia from Camtasia, you'll want to first head to **Share** and then **Advanced Export**. Confirm that the File Format is set to **Export to MP4** and then click **Options**.
+
+Set your dimensions to **1920x1080** and make sure that the aspect ratio is preserved (**Preserve Aspect Ratio**).
+
+Change the **Data Rate** to custom, and bump up to **15,000 kbps**. Click **okay** and choose a destination.
+
+Export that file and you're good to go!
 
 ---
 
