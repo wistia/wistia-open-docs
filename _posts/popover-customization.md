@@ -214,7 +214,7 @@ so any bindings or styles that target it will stay in tact.
 {% codeblock wistia_html.html %}
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5
-popover=true popoverCaptionContent=caption_content1" style="width:300px;height:150px;">&nbsp;</div>
+popover=true popoverCaptionContainer=caption_content1" style="width:300px;height:150px;">&nbsp;</div>
 <div id="caption_content1" style="display:none;">
   I can have <em>complex markup</em> here,
   <a href="#" onclick="alert('hi!'); return false;">setup bindings</a>, or
