@@ -328,7 +328,9 @@ Parameter | Description
 ----------|------------
 page | The page of results that you want, based on the per_page parameter.
 per_page | The maximum number of results to return. This value is capped at 100.
-filter | This parameter is optional and can take one of two values: 'has_name' or 'has_email'. Without the parameter, all visitors are returned. For the value 'has_name', only named visitors are returned. For the value 'has_email', only visitors with an email address are returned.
+filter | This parameter is optional and can take one of three values: 'has_name' or 'has_email' or 'turnstile'. Without the parameter, 
+all visitors are returned. For the value 'has_name', only named visitors are returned. For the value 'has_email', 
+only visitors with an email address are returned. For the value 'turnstile', only visitors who have entered a turnstile are returned.
 search | If this parameter is specified, only visitors whose name or email address matches exactly with the given value will be returned.
 
 #### The Response
@@ -347,6 +349,8 @@ last_event_key | The event key which can be used to retrieve the information abo
 load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
 play_count | The total number of videos that have been viewed by this visitor.
 visitor_identity | An object with 2 fields (name and email) that represents and available identity info for this visitor.
+user_agent_details | An object with 4 fields: browser (e.g. 'Chrome'), browser_version (e.g. '46'), platform (e.g. 'mac'), 
+and mobile (boolean value stating whether the visitor was on their mobile phone.
 
 #### Example JSON Response
 
