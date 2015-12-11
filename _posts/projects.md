@@ -87,9 +87,10 @@ on the [private sharing documentation page]({{ '/private-sharing' | post_url }})
 
 ## Playlists
 
-**Playlists** are a video player for multiple videos - all the videos in your
-account. You can select `</> Embed Playlist` to get started, or head over to
-the [playlists doc page]({{ '/playlists' | post_url }}) for more information.
+**Playlists** give you the option to embed all of the videos from one project at
+once. You can select **Playlist** from the Project Actions to get started,
+or head over to the [playlists help page]({{ '/playlists' | post_url }}) for
+more information.
 
 ## Project Sections
 
