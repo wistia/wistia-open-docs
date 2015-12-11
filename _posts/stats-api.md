@@ -451,7 +451,7 @@ received_at | The date and time that the event happened.
 event_key | The ID for that event.
 visitor_key | The id of the visitor, which can be used to retrieve further information about them.
 embed_url | The URL of the page where the video was viewed.
-percent_viewed | How much of the video was watched during this session (0 to 100).
+percent_viewed | The decimal number denoting how much of the video was watched during this session (0 to 1).
 ip | The viewer's IP address.
 org | The organization that the IP address belongs to.
 country | The viewer's country, based on IP.
