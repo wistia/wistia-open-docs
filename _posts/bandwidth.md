@@ -174,9 +174,9 @@ Bandwidth Option| Monthly Cost | Extra Bandwidth Pricing | When It Makes Cents �
 -----|----------------|---------|------------
 200GB | Free | 0.33¢/GB | 807 GB in total bandwidth ($200.31)
 1 TB | $200 | 0.18¢/GB | 4,080 GB in total bandwidth ($750.08)
-5 TB | $ 750 | 0.15¢/GB | 10,120 GB in total bandwidth ($1,500)
-15 TB | $1500 | 0.10¢/GB | 30,360 GB in total bandwidth ($3,000)
-50 TB | $3000 | 0.06¢/GB | [Contact us](http://wistia.com/support/contact)
+5 TB | $750 | 0.15¢/GB | 10,120 GB in total bandwidth ($1,500)
+15 TB | $1,500 | 0.10¢/GB | 30,360 GB in total bandwidth ($3,000)
+50 TB | $3,000 | 0.06¢/GB | [Contact us](http://wistia.com/support/contact)
 
 Still not sure? [Talk to us.](http://wistia.com/support/contact) We weren't all
 Calculus majors, but we can figure our way around a calculator. We'd love to
