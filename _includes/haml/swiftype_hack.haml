@@ -27,6 +27,8 @@
           engineKey: SWIFTYPE_ENGINE_KEY,
           fetchFields: { 'page': ['url','title', 'body'] },
           resultRenderFunction: function(context, page) {
+            context.list.empty();
+
             $resultsList = $('<ul></ul>');
             $.each(page, function(docType, results) {
               $.each(results, function(index, item) {
