@@ -24,16 +24,7 @@
     {% endif %}
     <link href='//cloud.typography.com/6901872/779304/css/fonts.css' rel='stylesheet' type='text/css' />
     <!-- Swiftype search -->
-    <!-- the Hash Change JQuery plugin is required for swiftype.search.js -->
-    <script type='text/javascript'>
-      //<![CDATA[
-        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-        _st('install','oN7bUy-pbTePRQzSFem7','2.0.0');
-      //]]>
-    </script>
+    {% include swiftype_includes.html %}
     <script type='text/javascript'>
       //<![CDATA[
         var basepath = "{{ '' | post_url }}";
@@ -47,6 +38,7 @@
     <div class="{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" id='container'>
       {{ content }}
     </div>
+    {% include swiftype_hack.html %}
     {% include footer.html %}
     {% include getCookie.html %}
     <!-- scripts and such -->
