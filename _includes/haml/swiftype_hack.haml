@@ -13,10 +13,11 @@
           loadingFunction: function(query, $resultContainer) {
             swiftypeQuery = location.href.split('#')[1];
             wistiaSource  = $stSearchFields.attr('wsrc');
-            redirectUrl  = SWIFTYPE_RESULT_PAGE_URL + '#' + swiftypeQuery;
+            redirectUrl  = SWIFTYPE_RESULT_PAGE_URL;
             if (wistiaSource) {
-              redirectUrl += '&wsrc=' + wistiaSource;
+              redirectUrl += '?wsrc=' + wistiaSource;
             }
+            redirectUrl += '#' + swiftypeQuery;
             location.replace(redirectUrl);
           }
         });
