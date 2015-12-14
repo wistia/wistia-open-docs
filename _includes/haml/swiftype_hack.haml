@@ -21,6 +21,25 @@
             location.replace(redirectUrl);
           }
         });
+
+        // Adds Autocomplete a.k.a. Autosuggest
+        $stSearchFields.swiftype({
+          engineKey: SWIFTYPE_ENGINE_KEY,
+          fetchFields: { 'page': ['url','title', 'body'] },
+          resultRenderFunction: function(context, page) {
+            $resultsList = $('<ul></ul>');
+            $.each(page, function(docType, results) {
+              $.each(results, function(index, item) {
+                $li = $('<li class="results"> \
+                  <p class="title">' + item.title + '</p> \
+                  <p class="description">' + item.body[0] + '</p> \
+                  </li>');
+                context.registerResult($li.appendTo($resultsList), item);
+                $resultsList.appendTo(context.list);
+              });
+            });
+          }
+         });
       }
       else {
         (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -29,23 +48,4 @@
         })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
         _st('install','oN7bUy-pbTePRQzSFem7','2.0.0');
       }
-
-      // Adds Autocomplete a.k.a. Autosuggest
-      $stSearchFields.swiftype({
-        engineKey: SWIFTYPE_ENGINE_KEY,
-        fetchFields: { 'page': ['url','title', 'body'] },
-        resultRenderFunction: function(context, page) {
-          $resultsList = $('<ul></ul>');
-          $.each(page, function(docType, results) {
-            $.each(results, function(index, item) {
-              $li = $('<li class="results"> \
-                <p class="title">' + item.title + '</p> \
-                <p class="description">' + item.body[0] + '</p> \
-                </li>');
-              context.registerResult($li.appendTo($resultsList), item);
-              $resultsList.appendTo(context.list);
-            });
-          });
-        }
-       });
     })();
