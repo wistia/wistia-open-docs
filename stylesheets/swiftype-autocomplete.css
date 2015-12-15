@@ -10,7 +10,7 @@ form input.st-search-input {
 }
 
 .swiftype-widget .autocomplete {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif;
     background-color: #fff;
     display: block;
     list-style-type: none;
@@ -29,9 +29,8 @@ form input.st-search-input {
 }
 
 .swiftype-widget .autocomplete ul {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif;
     background-color: #fff;
-    display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -74,12 +73,12 @@ form input.st-search-input {
 .swiftype-widget .autocomplete li.active {
     /*border-top: 1px solid #145A93;*/
     /*border-bottom: 1px solid #086aa8;*/
-    background-color: #E5E5E5;
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #E5E5E5), color-stop(100%, #E5E5E5));
-    background: -webkit-linear-gradient(#E5E5E5, #E5E5E5);
-    background: -moz-linear-gradient(#E5E5E5, #E5E5E5);
-    background: -o-linear-gradient(#E5E5E5, #E5E5E5);
-    background: linear-gradient(#E5E5E5, #E5E5E5);
+    background-color: #Edf8ff;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #Edf8ff), color-stop(100%, #Edf8ff));
+    background: -webkit-linear-gradient(#Edf8ff, #Edf8ff);
+    background: -moz-linear-gradient(#Edf8ff, #Edf8ff);
+    background: -o-linear-gradient(#Edf8ff, #Edf8ff);
+    background: linear-gradient(#Edf8ff, #Edf8ff);
     /*-webkit-box-shadow: 0 1px 0 #69bdf3 inset;*/
     /*-moz-box-shadow: 0 1px 0 #69bdf3 inset;*/
     /*box-shadow: 0 1px 0 #69bdf3 inset;*/
@@ -89,28 +88,27 @@ form input.st-search-input {
     font-size: 13px;
     line-height: 16px;
     margin: 0;
-    padding: 5px;
+    padding: 3px;
 }
 
 .swiftype-widget .autocomplete li p.title {
-    font-weight: bold;
+    font-weight: 600;
     /* color: #1c6cb5; */
-    color: #0089d7;
+    color: #2659aa;
 }
 
 .swiftype-widget .autocomplete li p.title em {
     color: #0b2644;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .swiftype-widget .autocomplete li.active p.title {
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-    color: #0089d7;
+    color: #54bbff;
 }
 
 .swiftype-widget .autocomplete li.active p.title em {
-    color: #0089d7;
+    color: #2659aa;
     font-style: normal;
 }
 
@@ -129,8 +127,7 @@ form input.st-search-input {
 }
 
 .swiftype-widget .autocomplete li.active .sections {
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-    color: #a9d7f1;
+    color: #54bbff;
 }
 
 .swiftype-widget .autocomplete li.active .sections em {
