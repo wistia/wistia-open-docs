@@ -241,13 +241,15 @@ drop-down menu.
 
 Your viewers aren't just a mass of numbers&mdash;they're individual people and potential leads. That's why Wistia created a section entirely devoted to them: your Audience.
 
-The Audience page is all about tracking viewers through email, via Turnstile submissions, or just old fashioned views.
+The Audience page is all about leads. Here you can track viewers through email addresses and see all untracked views.
 
-To get to the Audience page you'll need to choose **Audience** from the **Stats** menu.
+To get to the Audience page choose **Audience** from the **Stats** menu.
 
 {% post_image hashed_id: '1b504300470d4a8d8d3857ad88151f11680215b4', class: 'center' %}
 
-You can check out your Audience in three ways: those who've entered information into a Turnstile, those tracked with an email address (through Turnstile or [email merge tags)]({{ '/email-marketing' | post_url }}), and total audience. You also have the opportunity to Search for individual contacts by name or email address.
+You can check out your Audience in two ways: those tracked with an email address (through [Turnstile]({{ '/turnstile' | post_url }}) or [email merge tags)]({{ '/email-marketing' | post_url }})) or look at the total audience. You also have the opportunity to Search for individual contacts by name or email address. (At this time, you can't search for network or location&mdash;just name and email address.)
+
+If you want to drill down further and just see Turnstile entries click "Turnstile" in the description.
 
 Each audience member has their own summary line.
 
@@ -263,7 +265,7 @@ Still more goodies available:
 -   Where the lead came from (passed in? Turnstile?)
 -   And the last video they watched of yours
 
-Each member of your audience has their own Viewer Page. Clicking anywhere on the line in order to check it out!
+Each member of your audience has their own Viewer Page. Clicking anywhere on the summary line will bring you there!
 
 ### Viewer Page
 
