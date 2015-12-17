@@ -45,7 +45,7 @@ Next, in the box where it says "Enter email addresses to add users," type in the
 
 This is the best sharing method to use if you want to:
 
-* Send out a single link from your own email account to a group people to allow
+* Send out a single link from your own email account to a group of people to allow
   them to view your video.
 * Track how people watch your video, but are less concerned about associating
   viewing with a viewer's email address.
