@@ -9,17 +9,19 @@ category: Wistia Basics
       %li.help-videos-title
         %h1
           Help Videos
-      %li.help-videos-description
-        Not sure how your Wistia account works? Just want to learn about Jeff's side
-        business? Check out the Getting Started series all about Uploading, Customizing,
-        Timeline Actions, Embedding, and Stats.
   %script{:async => "", :charset => "ISO-8859-1", :src => "//fast.wistia.com/assets/external/E-v1.js"}
+.top_video
   #top_video_container
     .wistia_responsive_padding{:style => "padding:56.25% 0 0 0;position:relative;"}
       .wistia_responsive_wrapper{:style => "height:100%;left:0;position:absolute;top:0;width:100%;"}
         .wistia_embed.wistia_async_xoqgq8ntw1{:class => "videoFoam=true playlistLinks=onboarding", :style => "height:100%;width:100%"}  
   %br/
-  %br/
+  .onboarding_series
+    %h2
+      Onboarding
+      %description
+        %a{:href => "#wistia_xoqgq8ntw1"}
+          (Play All)
   #onboarding.wistia_playlist_links
     .video-tiles-container
       .video-tiles
@@ -32,8 +34,6 @@ category: Wistia Basics
               .title
                 %a{:href => "#wistia_xoqgq8ntw1"}
                   Uploading
-              .description
-                Let's walk through a quick guide to uploading your videos to Wistia.
           .video-tile
             %a{:href => "#wistia_99q1940jk1"}
               .video_thumbnail_color
@@ -42,8 +42,6 @@ category: Wistia Basics
               .title
                 %a{:href => "#wistia_99q1940jk1"}
                   Customizing
-              .description
-                Now let's customize that amazing video!
           .video-tile
             %a{:href => "#wistia_wh03at0t7x"}
               .video_thumbnail_color
@@ -52,10 +50,6 @@ category: Wistia Basics
               .title
                 %a{:href => "#wistia_wh03at0t7x"}
                   Timeline Actions
-              .description
-                Let's dive deeper into the awesome tools in Timeline Actions.
-                This video is all about Turnstile email collector, Annotation links
-                and Calls to Action.
           .video-tile
             %a{:href => "#wistia_6zu83mlw8x"}
               .video_thumbnail_color
@@ -64,9 +58,6 @@ category: Wistia Basics
               .title
                 %a{:href => "#wistia_6zu83mlw8x"}
                   Embed and Share
-              .description
-                Now that you've made the video perfect, it's time to share it with
-                the world!
           .video-tile
             %a{:href => "#wistia_nl4cr3xh1l"}
               .video_thumbnail_color
@@ -75,9 +66,6 @@ category: Wistia Basics
               .title
                 %a{:href => "#wistia_nl4cr3xh1l"}
                   Stats
-              .description
-                Now that your video has been watched a bit, you should check out
-                the awesome stats!
 <script type='text/javascript'>
 window._wq = window._wq || [];
 _wq.push(function(W) {

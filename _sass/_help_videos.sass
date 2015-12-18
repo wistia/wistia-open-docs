@@ -14,25 +14,41 @@
   ul
     text-align: center
   .help-videos-title
-    margin-bottom: 20px
+    margin-bottom: 10px
     h1
       font:
-        size: 35px
+        size: 50px
         style: normal
-      text-align: left
+      text-align: center
+
   .help-videos-description
     @extend %wistia_basics_paragraph
     width: 55%
 
+.top_video
+  padding-top: 0px
+  padding-bottom: 30px
+  padding-left: 12%
+  padding-right: 12%
+
+.onboarding_series
+  h2
+    padding-top: 5px
+    font:
+      size: 35px
+      text-align: left
+  description
+    font:
+      size: 18px
+
 .video-tiles-container
-  border-top: 1px solid $accent_gray
   margin-bottom: 40px
-  padding-top: 20px
+  padding-top: 5px
   position: relative
   text-align: center
 
   .video-tiles
-    text-align: left
+    text-align: center
     width: 100%
     h1
       font-size: 54px
@@ -45,36 +61,37 @@
     .video-tile
       background-color: white
       font-family: $title-fonts
-      height: 300px
+      height: 200px
       vertical-align: top
-      width: 175px
+      width: 195px
+      padding-right: 3px
+      padding-left: 3px
       +box-shadow(rgba(0,0,0,.05), 0, 0, 10px)
       +col
       &.second_column
         position: absolute
         right: 0
-      &:hover
-        background-color: $background_gray
       a
         position: relative
         display: block
       img
         margin: 0 auto
-        display: block
-        width: 175px
+        display: center
+        width: 190px
       em
         font-weight: 200
 
       .info
-        width: 70%
-        padding: 30px
+        width: 79%
+        padding: 20px
       .title
         margin-bottom: 10px
         +anti-alias
         a
+          text-align: center
           font:
-            size: 26px
-            weight: 400
+            size: 17px
+            weight: 500
           text-decoration: none
           color: #333
       .description
@@ -98,8 +115,7 @@
 .video-tile:hover
   .video_thumbnail_color:before
     content: url('images/yellow-play-button-transparent.png')
-    left: 23px
-    top: 9px
+    top: 12px
 
 // Individual Randor Pages
 
