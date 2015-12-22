@@ -989,7 +989,7 @@ Parameter Name      |  Description
 --------------------|-------------------------
 name               | The media's new name.
 new_still_media_id | The Wistia hashed ID of an image that will replace the still that's displayed before the player starts playing.  Will return failure message unless media to update is a video, and new still is an image.
-description        | A new description to display with the media within Wistia.
+description        | A new description for this media. Accepts plain text or markdown.
 
 
 #### Example Media#Update Request
