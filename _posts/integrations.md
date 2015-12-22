@@ -7,14 +7,11 @@ post_intro: <p>As we update our embedding processes and APIs, Wistia will get be
 footer: 'for_intermediates'
 ---
 
-## Pardot
+## Turnstile Email Capture Integrations
 
-{% post_image hashed_id: 'ad8170872957e7aa3dcb8b214cb08ddbf78eb74e', class: 'integration_logo' %}
+## Email Campaign Integrations
 
-Using the [Pardot Connector]({{ '/pardot' | post_url }}), you can pass Wistia
-analytics back to your Pardot prospect data.
-
-Read up on the [Pardot integration page]({{ '/pardot' | post_url }}).
+## Advanced Data Integrations
 
 ## HubSpot
 
@@ -23,6 +20,17 @@ Read up on the [Pardot integration page]({{ '/pardot' | post_url }}).
 Using the [HubSpot integration](http://knowledge.hubspot.com/how-to-integrate-hubspot-and-wistia) with Wistia, you can get all your HubSpot customer data in the same spot for prime data organization.
 
 You can learn how to set this up over on [HubSpot's site](http://knowledge.hubspot.com/how-to-integrate-hubspot-and-wistia) or [in our docs]({{ '/hubspot' | post_url }})
+
+## Marketo
+
+## Pardot
+
+{% post_image hashed_id: 'ad8170872957e7aa3dcb8b214cb08ddbf78eb74e', class: 'integration_logo' %}
+
+Using the [Pardot Connector]({{ '/pardot' | post_url }}), you can pass Wistia
+analytics back to your Pardot prospect data.
+
+Read up on the [Pardot integration page]({{ '/pardot' | post_url }}).
 
 ## WordPress
 
@@ -81,7 +89,7 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * Medium
 * MotoCMS
 * Portfoliobox
-* [Project Manager](https://www.projectmanager.com/integrations-more)
+* [ProjectManager.com](https://www.projectmanager.com/integrations-more)
 * [Sharepoint](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/embed-video-on-a-public-website-page-HA102828149.aspx)
 * [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)
 * Smore
