@@ -9,7 +9,45 @@ footer: 'for_intermediates'
 
 ## Turnstile Email Capture Integrations
 
+* Act-On
+* ActiveCampaign
+* AWeber
+* Campaign Monitor
+* Constant Contact
+* Emma
+* GetResponse
+* HubSpot
+* Infusionsoft
+* MailChimp
+* Marketo
+* Ontraport
+* Pardot
+
 ## Email Campaign Integrations
+
+* Accrisoft
+* ActiveCampaign
+* AWeber
+* Blue Hornet
+* Campaign Monitor
+* Constant Contact
+* Dotmailer
+* Email Contact
+* Emailvision
+* Emma
+* GetResponse
+* HubSpot
+* iContact
+* Infusionsoft
+* Lyris
+* Mad Mimi
+* MailChimp
+* Marketo
+* Ontraport
+* Pardot
+* Sendible
+* Vertical Response
+* WhatCounts
 
 ## Advanced Data Integrations
 
