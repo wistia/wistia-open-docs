@@ -348,9 +348,9 @@ last_active_at | The last time the visitor played a video.
 last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
 load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
 play_count | The total number of videos that have been viewed by this visitor.
-visitor_identity | An object with 2 fields (name and email) that represents and available identity info for this visitor.
+visitor_identity | An object with 3 fields (name, email, and org) that represents the available identity info for this visitor.
 user_agent_details | An object with 4 fields: browser (e.g. 'Chrome'), browser_version (e.g. '46'), platform (e.g. 'mac'), 
-and mobile (boolean value stating whether the visitor was on their mobile phone.
+and mobile (boolean value stating whether the visitor was on their mobile phone.)
 
 #### Example JSON Response
 
@@ -365,7 +365,20 @@ and mobile (boolean value stating whether the visitor was on their mobile phone.
     "last_event_key": "1355282055737f0.4801975437439978",
     "load_count": 3,
     "play_count": 2,
-    "visitor_identity": { "name": "Jim", "email": "jim@example.com" }
+    "visitor_identity": { 
+      "name": "Jim", 
+      "email": "jim@example.com",
+      "org": {
+        "name": "Jim's Lemonade",
+        "title": "Expert lemon squeezer"
+      }
+    },
+    "user_agent_details":  { 
+      "browser": "Chrome", 
+      "browser_version": "45",
+      "platform": "mac",
+      "mobile": false
+    }
   },
   {
     "visitor_key": "9DC9D7F525236E25E27E9743C0524DB0F02C703D",
@@ -374,7 +387,20 @@ and mobile (boolean value stating whether the visitor was on their mobile phone.
     "last_event_key": "1355282030102f0.8788125906139612",
     "load_count": 17,
     "play_count": 9,
-    "visitor_identity": { "name": "John Doe", "email": "john@example.com" }
+    "visitor_identity": { 
+      "name": "", 
+      "email": "",
+      "org": {
+        "name": "",
+        "title": ""
+      }
+    },
+    "user_agent_details":  { 
+      "browser": "Chrome", 
+      "browser_version": "45",
+      "platform": "mac",
+      "mobile": false
+    }
   }
 ]
 {% endcodeblock %}
@@ -405,7 +431,9 @@ last_active_at | The last time the visitor played a video.
 last_event_key | The event key that can be used to retrieve the information about what happened when they last played a video.
 load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
 play_count | The total number of videos that have been viewed by this visitor.
-visitor_identity | An object with 2 fields (name and email) that represents any available identity info for this visitor.
+visitor_identity | An object with 3 fields (name, email, and org) that represents the available identity info for this visitor.
+user_agent_details | An object with 4 fields: browser (e.g. 'Chrome'), browser_version (e.g. '46'), platform (e.g. 'mac'), 
+and mobile (boolean value stating whether the visitor was on their mobile phone.)
 
 #### Example JSON Response
 
@@ -419,7 +447,20 @@ visitor_identity | An object with 2 fields (name and email) that represents any 
   "last_event_key": "1355282055737f0.4801975437439978",
   "load_count": 3,
   "play_count": 2,
-  "visitor_identity": { "name": "Jim", "email": "jim@example.com" }
+  "visitor_identity": { 
+    "name": "Jim", 
+    "email": "jim@example.com",
+    "org": {
+      "name": "Jim's Lemonade",
+      "title": "Expert lemon squeezer"
+    }
+  },
+  "user_agent_details":  { 
+    "browser": "Chrome", 
+    "browser_version": "45",
+    "platform": "mac",
+    "mobile": false
+  }
 }
 {% endcodeblock %}
 
