@@ -328,9 +328,9 @@ Parameter | Description
 ----------|------------
 page | The page of results that you want, based on the per_page parameter.
 per_page | The maximum number of results to return. This value is capped at 100.
-filter | This parameter is optional and can take one of three values: 'has_name' or 'has_email' or 'turnstile'. Without the parameter, 
+filter | This parameter is optional and can take one of three values: 'has_name' or 'has_email' or 'identified_by_email_gate'. Without the parameter, 
 all visitors are returned. For the value 'has_name', only named visitors are returned. For the value 'has_email', 
-only visitors with an email address are returned. For the value 'turnstile', only visitors who have entered a turnstile are returned.
+only visitors with an email address are returned. For the value 'identified_by_email_gate', only visitors who have entered their email in a video email gate are returned.
 search | If this parameter is specified, only visitors whose name or email address contains the exact given value will be returned.
 
 #### The Response
@@ -369,7 +369,7 @@ and mobile (boolean value stating whether the visitor was on their mobile phone.
       "name": "Jim", 
       "email": "jim@example.com",
       "org": {
-        "name": "Jim's Lemonade",
+        "name": "Jeff's Lemonade",
         "title": "Expert lemon squeezer"
       }
     },
