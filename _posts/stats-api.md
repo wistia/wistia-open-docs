@@ -435,7 +435,6 @@ last_active_at | The last time the visitor played a video.
 last_event_key | The event key that can be used to retrieve the information about what happened when they last played a video.
 load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
 play_count | The total number of videos that have been viewed by this visitor.
-identifying_event_key | The key of the event that was used to identify this visitor. Some examples: the first turnstile this visitor entered
 or the first load event that was tagged with this visitor info via wemail.
 visitor_identity | An object with 3 fields (name, email, and org) that represents the available identity info for this visitor.
 user_agent_details | An object with 4 fields: browser (e.g. 'Chrome'), browser_version (e.g. '46'), platform (e.g. 'mac'), 
@@ -451,7 +450,6 @@ and mobile (boolean value stating whether the visitor was on their mobile phone.
   "created_at": "2012-12-12T01:51:36Z",
   "last_active_at": "2012-12-12T03:15:56Z",
   "last_event_key": "1355282055737f0.4801975437439978",
-  "identifying_event_key": "1390862572596e0.8447021404281259",
   "load_count": 3,
   "play_count": 2,
   "visitor_identity": { 
