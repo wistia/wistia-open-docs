@@ -130,7 +130,7 @@ Links also use a custom filter, so we can control the root path:
 
 ### See changes
 
-    rake preview
+    foreman start
 
 * compile site,
 * launch local server,
