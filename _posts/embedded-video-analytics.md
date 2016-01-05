@@ -237,6 +237,39 @@ drop-down menu.
 
 {% post_image hashed_id: 'd6ebdf73293282176ad7dacbd6855630c9d49c68', class: 'center' %}
 
+## Audience
+
+Your viewers aren't just a mass of numbers&mdash;they're individual people and potential leads. That's why Wistia created a section entirely devoted to them: your Audience.
+
+The Audience page is all about leads. Here you can track viewers through names and email addresses, and also see all untracked views.
+
+To get to the Audience page choose **Audience** from the **Stats** menu.
+
+{% post_image hashed_id: '1b504300470d4a8d8d3857ad88151f11680215b4', class: 'center' %}
+
+You can check out your Audience in two ways: those tracked with an email address (as with [Turnstile]({{ '/turnstile' | post_url }}) or [email merge tags)]({{ '/email-marketing' | post_url }})) or look at the total audience. You also have the opportunity to Search for individual contacts anyway you need to&mdash;via IP address, name, email address, location, company&mdash;the sky's the limit.
+
+If you want to drill down further and just see Turnstile entries click "Turnstile" in the description.
+
+Each audience member has their own summary line.
+
+{% post_image hashed_id: '9fa7b8084d6c4314d2a31b7eb7547bb412321305', class: 'center' %}
+
+In the grey or blue box on the left (grey for unrecognized, blue for recognized) you'll see a number. This number indicates the number of videos this audience member has watched in your Wistia account.
+
+Next to that you'll see the network on which the viewer watched your video (or their name, if provided) and their location.
+
+Still more goodies you might see:
+
+-   Their email address (if provided)
+-   Their smiling face (if available)
+-   Information about where the lead came from (Turnstile? Tagged with a merge tag?)
+-   And the video that identified the lead
+
+{% post_image hashed_id: 'a96be3270da25bb3d36acd6613dc42ef495d178e', class: 'center' %}
+
+Each member of your audience has their own Viewer Page. Clicking anywhere on the summary line will bring you there!
+
 ### Viewer Page
 
 {% post_image hashed_id: '06e6d4619ed7ca5a9cb612df174b5edf87bad37f', class: 'center' %}
