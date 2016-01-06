@@ -938,7 +938,7 @@ If you need more fine-grained control, try binding to the `timechange` event ins
 
 ### Pause Other Videos When Another is Played
 
-Don't like the barage of sound that comes from three different videos playing
+Don't like the barrage of sound that comes from three different videos playing
 in the same page? This snippet will pause all videos that aren't currently
 playing:
 
