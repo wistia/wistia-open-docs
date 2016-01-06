@@ -1,6 +1,7 @@
 ---
 special_category_link: developers
 api: true
+api_warning: true
 layout: post
 title: The Wistia Data API
 description: Learn how to enable Data API access for your account.

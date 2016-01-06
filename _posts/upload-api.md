@@ -2,6 +2,7 @@
 layout: post
 title: The Wistia Upload API
 api: true
+api_warning: true
 special_category_link: developers
 description: A simple mechanism for getting your videos into Wistia.
 category: Developers
