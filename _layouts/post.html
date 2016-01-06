@@ -34,53 +34,47 @@ type: post
 {% include swiftype_hack.html %}
 {% if page.api == true %}
 {% include toplink.html %}
-<script type='text/javascript'>
-  //<![CDATA[
-    var api = true;
-  //]]>
+<script>
+  var api = true;
 </script>
 {% else %}
-<script type='text/javascript'>
-  //<![CDATA[
-    var api = false;
-  //]]>
+<script>
+  var api = false;
 </script>
 {% endif %}
 {% include post_js.html %}
 {% include qualaroo.html %}
-<script type='text/javascript'>
-  //<![CDATA[
-    var keepFixed = false;
-    
-    $(function() {
-      var windowHeight = $(window).height();
-      var postContentNavHeight = $('#page_nav').outerHeight();
-      if (windowHeight < postContentNavHeight) {
-        keepFixed = true;
-      }
-    });
-    
-    $(window).scroll(function(){
-      var scroll = $(document).scrollTop();
-      var docHeight = $(document).height();
-      var navHeight = $('#page_nav').height();
-      var footerHeight = 286;
-      var bottomPadding = 55;
-      var yPosition = scroll + navHeight;
-      var pageHeight = docHeight - footerHeight - bottomPadding - 25;
-    
-      if (!keepFixed) {
-        if (scroll >= 250 && yPosition < pageHeight) {
-          $('#page_nav').addClass('fixedPosition');
-          $('#page_nav').removeClass('bottomPadding');
-        } else if (yPosition >= pageHeight){
-          $('#page_nav').removeClass('fixedPosition');
-          $('#page_nav').addClass('bottomPadding');
-        } else {
-          $('#page_nav').removeClass('fixedPosition');
-          $('#page_nav').removeClass('bottomPadding');
-        };
+<script>
+  var keepFixed = false;
+  
+  $(function() {
+    var windowHeight = $(window).height();
+    var postContentNavHeight = $('#page_nav').outerHeight();
+    if (windowHeight < postContentNavHeight) {
+      keepFixed = true;
+    }
+  });
+  
+  $(window).scroll(function(){
+    var scroll = $(document).scrollTop();
+    var docHeight = $(document).height();
+    var navHeight = $('#page_nav').height();
+    var footerHeight = 286;
+    var bottomPadding = 55;
+    var yPosition = scroll + navHeight;
+    var pageHeight = docHeight - footerHeight - bottomPadding - 25;
+  
+    if (!keepFixed) {
+      if (scroll >= 250 && yPosition < pageHeight) {
+        $('#page_nav').addClass('fixedPosition');
+        $('#page_nav').removeClass('bottomPadding');
+      } else if (yPosition >= pageHeight){
+        $('#page_nav').removeClass('fixedPosition');
+        $('#page_nav').addClass('bottomPadding');
+      } else {
+        $('#page_nav').removeClass('fixedPosition');
+        $('#page_nav').removeClass('bottomPadding');
       };
-    });
-  //]]>
+    };
+  });
 </script>
