@@ -103,9 +103,9 @@ news feed.
 
 If you've turned on the *Social Bar* customization for your video, you might be wondering what all those likes next to the Facebook button mean. Those likes are attributed to the page where your video lives and not the video itself. You can enter a different URL for those likes to be attributed to on the *Social Bar* tab of the *Customize Panel* for your video.
 
-For example, if Jeff added the Facebook like button to the [Onboarding Video](http://wistia.com/doc/help-videos), anytime someone likes it, the likes would be attributed to that Wistia help page. If Jeff decided that he wanted those likes to be going to his [Jeff's Lemonade site](http://www.jeffslemonade.com/), he could change the URL in his Social Bar tab of his video's Customize Panel so that anyone pressing the button would be liking his Jeff's Lemonade site instead of the Wistia help page containing the video.
+For example, if Jeff added the Facebook like button to the [Onboarding video]({{ '/help-videos' | post_url }}), anytime someone likes it, the likes would be attributed to that Wistia help page. If Jeff decided that he wanted those likes to be going to his [Jeff's Lemonade site](http://www.jeffslemonade.com/), he could change the URL in his Social Bar tab of his video's Customize Panel so that anyone pressing the button would be liking his Jeff's Lemonade site instead of the Wistia help page containing the video.
 
-You can read more about customizing the *Social Bar* on our [Customizing Your Video](http://wistia.com/doc/customizing-your-video#social_bar) help page!
+You can read more about customizing the *Social Bar* on our [Customizing Your Video]({{'/doc/customizing-your-video#social_bar' | post_url }}) help page!
 
 ### Posting to Facebook from Your Website
 
