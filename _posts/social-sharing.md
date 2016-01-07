@@ -101,9 +101,20 @@ news feed.
 
 ### The Facebook Like Button
 
-If you've turned on the *Social Bar* customization for your video, you might be wondering what all those likes next to the Facebook button mean. Those likes are attributed to the page where your video lives and not the video itself. You can enter a different URL for those likes to be attributed to on the *Social Bar* tab of the *Customize Panel* for your video.
+If you've turned on the *[Social Bar]({{ '/customizing-your-video#social_bar' | post_url }})*
+for your video, you might be wondering what all those Likes next to the Facebook
+button mean. Those Likes are attributed to the page where your video lives,
+not the video itself. You can enter a different URL for those Likes to be
+attributed to on the *Social Bar* tab of the *Customize Panel* for your video.
 
-For example, if Jeff added the Facebook like button to the [Onboarding Video](http://wistia.com/doc/help-videos), anytime someone likes it, the likes would be attributed to that Wistia help page. If Jeff decided that he wanted those likes to be going to his [Jeff's Lemonade site](http://www.jeffslemonade.com/), he could change the URL in his Social Bar tab of his video's Customize Panel so that anyone pressing the button would be liking his Jeff's Lemonade site instead of the Wistia help page containing the video.
+Let's take Jeff's Lemonade as an example. If Jeff added the Facebook Like button
+to the [Onboarding Video](http://wistia.com/doc/help-videos), anytime someone
+Likes it, the Likes would be attributed to that Wistia help page. If Jeff
+decided that he wanted those Likes to be going to his
+[Jeff's Lemonade site](http://www.jeffslemonade.com/) instead, he could change
+the URL in the Social Bar tab of his video's Customize Panel. This way anyone
+pressing the Like button would be Liking the Jeff's Lemonade site instead of the
+Wistia help page containing the video.
 
 You can read more about customizing the *Social Bar* on our [Customizing Your Video](http://wistia.com/doc/customizing-your-video#social_bar) help page!
 
