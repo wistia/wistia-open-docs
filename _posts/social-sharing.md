@@ -99,6 +99,25 @@ news feed.
 
 {{ "Wistia videos won't play inline in the Facebook mobile app; they'll open in a web page in a new panel." | note }}
 
+### The Facebook Like Button
+
+If you've turned on the *[Social Bar]({{ '/customizing-your-video#social_bar' | post_url }})*
+for your video, you might be wondering what all those Likes next to the Facebook
+button mean. Those Likes are attributed to the page where your video lives,
+not the video itself. You can enter a different URL for those Likes to be
+attributed to on the *Social Bar* tab of the *Customize Panel* for your video.
+
+Let's take Jeff's Lemonade as an example. If Jeff added the Facebook Like button
+to the [Onboarding video]({{ '/help-videos' | post_url }}), anytime someone
+Likes it, the Likes would be attributed to that Wistia help page. If Jeff
+decided that he wanted those Likes to be going to his
+[Jeff's Lemonade site](http://www.jeffslemonade.com/) instead, he could change
+the URL in the Social Bar tab of his video's Customize Panel. This way anyone
+pressing the Like button would be Liking the Jeff's Lemonade site instead of the
+Wistia help page containing the video.
+
+You can read more about customizing the *Social Bar* on our [Customizing Your Video]({{'/customizing-your-video#social_bar' | post_url }}) help page!
+
 ### Posting to Facebook from Your Website
 
 {{ "Be aware, this is technical territory!" | alert }}
