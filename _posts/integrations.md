@@ -9,6 +9,8 @@ footer: 'for_intermediates'
 
 ## Turnstile Email Capture Integrations
 
+Using [Turnstile](http://wistia.com/doc/turnstile) to collect viewer emails? Take it one step further and have them passed to your email service provider! If you're on a Pro or Enterprise plan, you can configure Turnstile with these platforms:
+
 * Act-On
 * ActiveCampaign
 * AWeber
@@ -24,6 +26,8 @@ footer: 'for_intermediates'
 * Pardot
 
 ## Email Campaign Integrations
+
+Our "Link in Email Campaign" feature makes it easy for you include Wistia video thumbnail links in your emails! See our [Email Marketing Help Page](http://wistia.com/doc/email-marketing) to learn more about it. We've built email merge tags for the following providers:
 
 * Accrisoft
 * ActiveCampaign
@@ -48,6 +52,8 @@ footer: 'for_intermediates'
 * Sendible
 * Vertical Response
 * WhatCounts
+
+*Don't use one of these email service providers? No sweat! Try out a generic email merge tag instead.*
 
 ## Advanced Data Integrations
 
