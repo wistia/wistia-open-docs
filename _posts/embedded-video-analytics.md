@@ -241,6 +241,8 @@ drop-down menu.
 
 Your viewers aren't just a mass of numbers&mdash;they're individual people and potential leads. That's why Wistia created a section entirely devoted to them: your Audience.
 
+{% wistia_embed hashed_id: hvgq7mr1xz %}
+
 The Audience page is all about leads. Here you can track viewers through names and email addresses, and also see all untracked views.
 
 To get to the Audience page choose **Audience** from the **Stats** menu.
