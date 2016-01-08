@@ -134,7 +134,7 @@ Links also use a custom filter, so we can control the root path:
 
 * compile site,
 * launch local server,
-* and track changes to site/styling (localhost:9292)
+* and track changes to site/styling (localhost:3040/doc)
 
 Changes to posts, javascript, and sass will take effect dynamically
 (you'll still need to re-load, you slacker).
