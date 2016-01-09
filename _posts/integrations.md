@@ -7,7 +7,7 @@ post_intro: <p>As we update our embedding processes and APIs, Wistia will get be
 footer: 'for_intermediates'
 ---
 
-## Turnstile Email Capture Integrations
+## Turnstile Integrations
 
 Using [Turnstile](http://wistia.com/doc/turnstile) to collect viewer emails? Take it one step further and have them passed to your email service provider! If you're on a Pro or Enterprise plan, you can configure Turnstile with these platforms:
 
@@ -24,6 +24,10 @@ Using [Turnstile](http://wistia.com/doc/turnstile) to collect viewer emails? Tak
 * Marketo
 * Ontraport
 * Pardot
+
+To set up your Turnstile integration, head over to the Integrations page of your account settings.
+
+---
 
 ## Email Campaign Integrations
 
@@ -55,6 +59,8 @@ Our "Link in Email Campaign" feature makes it easy for you include Wistia video 
 
 *Don't use one of these email service providers? No sweat! Try out a generic email merge tag instead.*
 
+---
+
 ## Advanced Data Integrations
 
 ## HubSpot
@@ -76,70 +82,38 @@ analytics back to your Pardot prospect data.
 
 Read up on the [Pardot integration page]({{ '/pardot' | post_url }}).
 
-## WordPress
+---
 
-{% post_image hashed_id: 'bdad3d0b4f6e6581194fbcbd25dd9626501c7c80', width: 200, class: 'integration_logo' %}
+## CMS Integrations
 
-Using the [Wistia WordPress Plug-in](http://wordpress.org/extend/plugins/wistia-wordpress-oembed-plugin), you can add your embed codes and they will be protected. It won't take up any space in your WordPress admin dashboard, but instead works quietly in the background (as it should).
+* [Drupal](https://www.drupal.org/project/field_wistia) *(Note: Wistia embed codes have only been tested and verified through Drupal v6.)*
+* [MotoCMS](http://www.motocms.com/)
+* [Portfoliobox](https://www.portfoliobox.net/)
+* [Sharepoint](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/embed-video-on-a-public-website-page-HA102828149.aspx)
+* [Squarespace]({{ '/squarespace' | post_url }})
+* [Weebly](http://kb.weebly.com/embed-audio-and-video.html)
+* [Wix](https://www.wix.com/support/html5/the-wix-editor/more/kb/adding-html-code)
+* [WordPress]({{ "/wordpress" | post_url }})
 
-We have some other information on using Wistia and WordPress, including styling tips (we so stylish!) on the [WordPress integration page]({{ "/wordpress" | post_url }}).
+---
 
-{{ "Wistia embed codes can only be used with WordPress.org installs. <a href='http://en.support.wordpress.com/com-vs-org'>Read up on the difference between WordPress.com hosted blogs and WordPress installs</a>." | note }}
-
-## Zapier
-
-{% post_image hashed_id: 'b182cbf925e093852d701f6350c40281b5799ffc', width: 500, class: 'integration_logo' %}
-
-[Zapier](https://zapier.com/how-it-works/) is a system that allows users to connect all sorts of web apps to each other, creating "zaps" to automate repetitive tasks with little to no trouble at all. Wistia is now featured among the list of web apps they integrate with, giving you even more power for connecting Wistia with all your other favorite web services.
-
-On the Zapbook page for Wistia, Zapier has handily included a bunch of sample zaps to help you get the ball rolling--just [head over to that zapbook](https://zapier.com/zapbook/wistia/) to get started!
-
-## Squarespace
-
-{% post_image hashed_id: '5bc3046a0b10664ef4c5bc96b4cd18ad3c056215', width: 200, class: 'integration_logo' %}
-
-With Wistia and Squarespace, embedding a video is as easy as pasting in your URL.
-
-<a href="{{ '/squarespace' | post_url }}">Get the details on how it all works.</a>
-
-## Drupal
-
-Right now Wistia embed codes have only been tested and verified through Drupal v6. Using Drupal beyond v6? Safety not guaranteed.
-
-The [Field Wistia](https://www.drupal.org/project/field_wistia) module for Drupal is actively maintained.
-
-## Wix
-
-{% post_image hashed_id: 'eaa07cfdb573a9e1c555947d25bf10933de060e3', width: 200, class: 'integration_logo' %}
-
-To embed a Wistia video in your Wix website, go to *Add --> Widgets --> HTML*. Click on the '*Settings*' for the HTML widget and you can paste your Wistia embed code where it reads '*Insert HTML Code*'. Once you save it, you should be all set.
-
-{{ "Some Wix layouts do not reload the window to change pages, essentially creating HTML overlays that leave your video playing in the background." | note }}
+## Social Sharing
+* [Facebook]({{ '/social-sharing#facebook' | post_url }})
+* [Twitter]({{ '/social-sharing#twitter' | post_url }})
 
 ---
 
 ## Other Services Wistia Plays Well With
-
 We love seeing Wistia videos out there in the wild. This is an incomplete list of services that make Wistia embed codes feel right at home.
 
-* Basecamp
-* Blogger
+* [Basecamp](https://basecamp.com/)
 * [Confluence](https://answers.atlassian.com/questions/251000/how-can-i-embed-a-wistia-hosted-video-to-my-confluence-page)
-* DecalCMS
 * [Delivr](http://blog.delivr.com/post/87004293105/delivr-adds-support-for-wistia-video-hosting-platform)
-* [Facebook]({{ '/social-sharing' | post_url }})
-* Google Sites
-* Lexblog
-* Medium
-* MotoCMS
-* Portfoliobox
+* [Medium](https://medium.com/@Medium/embed-videos-tweets-music-and-more-into-your-medium-stories-3b5c09c116e8#.19w34ocuw)
 * [ProjectManager.com](https://www.projectmanager.com/integrations-more)
-* [Sharepoint](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/embed-video-on-a-public-website-page-HA102828149.aspx)
 * [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)
-* Smore
-* Tumblr
-* [Twitter]({{ '/social-sharing' | post_url }})
-* [Weebly](http://kb.weebly.com/embed-audio-and-video.html)
+* [Tumblr](http://tumblr.com)
 * [WildApricot](http://help.wildapricot.com/display/DOC/Adding+video+clips)
+* [Zapier](https://zapier.com/zapbook/wistia/)
 
 {{ "If you know of a service that plays well with Wistia that is not on this list, send it along! [Contact us](http://wistia.com/support/contact) and we'll give you a high five for it or something!" | alert }}
