@@ -316,9 +316,3 @@ window.wistiaInitQueue.push(function(W) { W.dontWatch(); });
 If you choose to turn off the watch, then you will need to call
 `Wistia.embeds.setup()` manually whenever you inject a new Wistia embed into
 the DOM.
-
-
-## Known Issues
-
-- Async API Embeds currently do not work with labs. We need to update our lab
-scripts to properly identify them.

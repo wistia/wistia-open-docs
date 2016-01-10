@@ -1,29 +1,32 @@
 ---
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
     <title>
-      {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
+      {% if page.title == '' %} Wistia Help Center {% else %} Wistia Help: {{ page.title }} {% endif %}
     </title>
-    {% if page.description %}
-    <meta content='{{ page.description }}' name='description' />
+    {% if page.title %}
+    <meta class='swiftype' content='{{ page.title | escape }}' data-type='string' name='title'>
     {% endif %}
-    <meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
-    <link href="{{ '/stylesheets/screen' | stylesheet_url }}" rel='stylesheet' type='text/css' />
+    {% if page.description %}
+    <meta class='swiftype' content='{{ page.description | escape }}' data-type='text' name='body'>
+    {% endif %}
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+    <link href="{{ '/stylesheets/screen' | stylesheet_url }}" rel='stylesheet' type='text/css'>
     {% if page.plans_comparison %}
-    <link href="{{ '/stylesheets/plans_comparison' | stylesheet_url }}" rel='stylesheet' type='text/css' />
+    <link href="{{ '/stylesheets/plans_comparison' | stylesheet_url }}" rel='stylesheet' type='text/css'>
     {% endif %}
     <script src="{{ '/javascripts/jquery.min' | javascript_url }}" type='text/javascript'></script>
     {% if page.developers %}
     <script src='//use.typekit.net/pft0gev.js' type='text/javascript'></script>
     <script type='text/javascript'>try{Typekit.load();}catch(e){}</script>
     {% endif %}
-    <link href='//cloud.typography.com/6901872/779304/css/fonts.css' rel='stylesheet' type='text/css' />
-    <script type='text/javascript'>
-      //<![CDATA[
-        var basepath = "{{ '' | post_url }}";
-      //]]>
+    <link href='//cloud.typography.com/6901872/779304/css/fonts.css' rel='stylesheet' type='text/css'>
+    <!-- Swiftype search -->
+    {% include swiftype_includes.html %}
+    <script>
+      var basepath = "{{ '' | post_url }}";
     </script>
   </head>
   <body class='{{ page.type }}_layout'>
@@ -33,10 +36,13 @@
     <div class="{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" id='container'>
       {{ content }}
     </div>
+    {% include swiftype_hack.html %}
     {% include footer.html %}
     {% include getCookie.html %}
     <!-- scripts and such -->
-    <script src="{{ '/javascripts/search_text' | javascript_url }}"></script>
+    <script src="{{ '/javascripts/mixpanel' | javascript_url }}"></script>
+    <script src="{{ '/javascripts/mixpanel_tracker' | javascript_url }}"></script>
+    <script src="{{ '/javascripts/selective_autoplay' | javascript_url }}"></script>
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSJ3B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);

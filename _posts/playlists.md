@@ -4,6 +4,7 @@ layout: post
 category: embed and share
 description: Video playlists are a great way to embed multiple videos on your website through a single embed.  Playlists allow you to update content in your playlist without messing with embed codes (even after embedding!).
 post_intro: <p>Video playlists are a great way to embed multiple videos on your website through a single embed.  Playlists allow you to update content in your playlist without messing with embed codes (even after embedding!).</p><p>They take up less real estate than separate video embeds, while being easier to navigate.  In short, they are a super cool and useful embed type.</p>
+footer: 'for_intermediates'
 ---
 
 ## Playlists and Projects

@@ -1,0 +1,86 @@
+\---
+layout: base
+title: Help Videos
+category: Wistia Basics
+\---
+.content_container
+  .help_videos_header
+    %ul
+      %li.help-videos-title
+        %h1
+          Help Videos
+  %script{:async => "", :charset => "ISO-8859-1", :src => "//fast.wistia.com/assets/external/E-v1.js"}
+.top_video
+  #top_video_container
+    .wistia_responsive_padding{:style => "padding:56.25% 0 0 0;position:relative;"}
+      .wistia_responsive_wrapper{:style => "height:100%;left:0;position:absolute;top:0;width:100%;"}
+        .wistia_embed.wistia_async_xoqgq8ntw1{:class => "videoFoam=true playlistLinks=onboarding", :style => "height:100%;width:100%"}  
+  %br/
+  .onboarding_series
+    %h2
+      Onboarding
+      %description
+        %a{:href => "#wistia_xoqgq8ntw1"}
+          (Play All)
+  #onboarding.wistia_playlist_links
+    .video-tiles-container
+      .video-tiles
+        .row
+          .video-tile
+            %a{:href => "#wistia_xoqgq8ntw1"}
+              .video_thumbnail_color
+                %img{"data-video_hashed_id" => "xoqgq8ntw1", :img => "", :src => "http://embed.wistia.com/deliveries/f75fa2343020629dcfe38d1f3ef0c8393c0e8e6a.jpg"}/
+            .info
+              .title
+                %a{:href => "#wistia_xoqgq8ntw1"}
+                  Uploading
+          .video-tile
+            %a{:href => "#wistia_99q1940jk1"}
+              .video_thumbnail_color
+                %img{"data-video_hashed_id" => "99q1940jk1", :src => "http://embed.wistia.com/deliveries/af1583c4c453b9e93346ec6843bdd0a70390799b.jpg"}/
+            .info
+              .title
+                %a{:href => "#wistia_99q1940jk1"}
+                  Customizing
+          .video-tile
+            %a{:href => "#wistia_wh03at0t7x"}
+              .video_thumbnail_color
+                %img{"data-video_hashed_id" => "wh03at0t7x", :src => "http://embed.wistia.com/deliveries/525c29c2e91453f43fb22f75db03bf3161549d5c.jpg"}/
+            .info
+              .title
+                %a{:href => "#wistia_wh03at0t7x"}
+                  Timeline Actions
+          .video-tile
+            %a{:href => "#wistia_6zu83mlw8x"}
+              .video_thumbnail_color
+                %img{"data-video_hashed_id" => "6zu83mlw8x", :src => "http://embed.wistia.com/deliveries/671a629d305645b3311a93182342f8992a52adda.jpg"}/
+            .info
+              .title
+                %a{:href => "#wistia_6zu83mlw8x"}
+                  Embed and Share
+          .video-tile
+            %a{:href => "#wistia_nl4cr3xh1l"}
+              .video_thumbnail_color
+                %img{"data-video_hashed_id" => "nl4cr3xh1l", :src => "http://embed.wistia.com/deliveries/b047a5ec5e949b11160a0ef415301185636ae226.jpg"}/
+            .info
+              .title
+                %a{:href => "#wistia_nl4cr3xh1l"}
+                  Stats
+<script type='text/javascript'>
+window._wq = window._wq || [];
+_wq.push(function(W) {
+W.api(function(video) {
+if (/[&?]uploading/i.test(location.href)) {
+$('#top_video_container').replaceWith('<div class="wistia_embed wistia_async_xoqgq8ntw1 videoFoam=true autoPlay=true playlistLinks=onboarding " style="height:100%;width:100%">&nbsp;</div>')
+} else if (/[&?]customizing/i.test(location.href)) {
+$('#top_video_container').replaceWith('<div class="wistia_embed wistia_async_99q1940jk1 videoFoam=true autoPlay=true playlistLinks=onboarding " style="height:100%;width:100%">&nbsp;</div>')
+} else if (/[&?]timeline-actions/i.test(location.href)) {
+$('#top_video_container').replaceWith('<div class="wistia_embed wistia_async_wh03at0t7x videoFoam=true autoPlay=true playlistLinks=onboarding " style="height:100%;width:100%">&nbsp;</div>')
+} else if (/[&?]embedding/i.test(location.href)) {
+$('#top_video_container').replaceWith('<div class="wistia_embed wistia_async_6zu83mlw8x videoFoam=true autoPlay=true playlistLinks=onboarding " style="height:100%;width:100%">&nbsp;</div>')
+} else if (/[&?]stats/i.test(location.href)) {
+$('#top_video_container').replaceWith('<div class="wistia_embed wistia_async_nl4cr3xh1l videoFoam=true autoPlay=true playlistLinks=onboarding " style="height:100%;width:100%">&nbsp;</div>')
+}
+});
+});
+</script>

@@ -7,7 +7,7 @@ post_intro: <p> Here's the lowdown on your Account Settings. Billing questions? 
 footer: 'for_intermediates'
 ---
 
-## Opening Your Account Settings
+### Opening Your Account Settings
 
 Most of the important settings for your Wistia Account are housed in the
 *Account Settings*. Many of the tips below require you to open the Account
@@ -33,9 +33,27 @@ If you'd like to place your logo below an embedded video, check out the Social B
 
 ---
 
+## Change the Subdomain (URL) of your Wistia Account
+
+By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the Account Owner. Click the Account tab in *Settings*, and scroll down to find the *Wistia URL* section shown here:
+
+{% post_image hashed_id: '1d3b8b8cc903d5df0a3dd9432dd6933428e305b3', width: 600, class: 'center' %}
+
+In the section labeled "Wistia Subdomain", you will see a text box showing the current URL of your Wistia account (in the case of the above picture,`http://home.wistia.com`).  Type the name you wish to use instead in the text box (only letters, numbers, and hyphens) and press *Save Settings* at the bottom to save your changes.
+
+{{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
+
+---
+
+## Twitter Handle
+
+Want to make sure tweets referencing your Wistia videos tag your Twitter account? Learn more about Wistia and Twitter on the [Social Sharing page]({{ '/social-sharing#twitter_handle' | post_url }}).
+
+---
+
 ## Filtering Out Internal Stats
 
-Want to make sure you're not skewing the stats during testing? Good news! You can filter out your own viewing activity (and the viewing activity of anyone else on your team) from your Wistia stats based on IP address.
+Need to make sure you're not skewing the stats during testing? Good news! You can filter out your own viewing activity (and the viewing activity of anyone else on your team) from your Wistia stats based on IP address.
 
 In *Settings*, click the Account tab on the right - this contains an IP filtering section where you can enter comma-separated IP addresses. You can find your IP address by <a href="https://www.google.com/search?q=ip">searching for "ip" in Google</a>. Google will tell you what yours is at the top of the search results.
 
@@ -43,18 +61,15 @@ In *Settings*, click the Account tab on the right - this contains an IP filterin
 
 {{ "Activating IP filtering will not remove any historical data – it will, however, keep your activity from getting tracked in the stats going forward." | note }}
 
-
 ---
 
-## Change the Subdomain (URL) of your Wistia Account
+## Anonymize IPs
 
-By default, your account URL is based on the domain of your email address. To change your Wistia account URL, you must be logged in as the Account Owner. Click the Account tab in *Settings*, and scroll down to find the *Wistia URL* section shown here:
+Sometimes you'll need to anonymize the IPs Wistia collects in order to abide by local laws (looking at you Germany). If you need to anonymize the IP addresses Wistia pulls in, in *Settings* click on the **Account** tab on the right. Scroll down to the Anonymize IPs section, and click **Activate**.
 
-{% post_image hashed_id: '1d3b8b8cc903d5df0a3dd9432dd6933428e305b3', width: 600, class: 'center' %}
+{% post_image hashed_id: '207aeca78e6f7d95c1ddc80d94b052dfbeb43738', width: 600, class: 'center' %}
 
-In the section labeled "Wistia Subdomain", you will see a text box showing the current URL of your Wistia account (in the case of the above picture,`http://home.wistia.com`).  Type the name you wish to use instead in the text box (only letters, numbers, and hyphens) and press <span class="faux_button">Update Account Settings</span> at the bottom to save your changes.
-
-{{ "Once you change the URL for your account, all previous links referenced by <em>http://YourOldName.wistia.com</em> will no longer work." | note }}
+Make sure you scroll all the way to the bottom of the page to **Save** your settings!
 
 ---
 
@@ -157,8 +172,7 @@ efficient!), select the *Account* tab in your Account Settings.
 
 {% post_image hashed_id: 'aa398787f771bec9d8d92b4a566f364da6bcbf44', class: 'center' %}
 
-Select the new owner from the *Account Owner* menu, and then <span
-class='faux_button'>UPDATE ACCOUNT SETTINGS</span>. Ownership will be transferred
+Select the new owner from the *Account Owner* menu, and then *Save Settings* at the bottom of the page. Ownership will be transferred
 immediately.
 
 ---

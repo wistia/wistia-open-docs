@@ -25,7 +25,8 @@ no_nav: true
             %a{ href: "{{ '/embedded-video-analytics' | post_url }}" } Wistia Analytics
       #search.columnBig.firstRow.homepage-search
         %h2 Search
-        %input#searchField.st-default-search-input{ type: "text", placeholder: 'What are you looking for?' }
+        %form
+          %input#searchField.st-default-search-input{ type: "text", placeholder: 'What are you looking for?', wsrc: 'doc' }
     .section
       {% include wistia-basics-thumbnails.html %}
 
@@ -100,7 +101,7 @@ no_nav: true
             %a{ href: "{{ '/embedding' | post_url }}" }
               Embedding
           %li
-            %a{ href: "{{ '/video-seo | post_url }}" }
+            %a{ href: "{{ '/video-seo' | post_url }}" }
               Video SEO
           %li
             %a{ href: "{{ '/social-sharing' | post_url }}" }
@@ -109,8 +110,10 @@ no_nav: true
             %a{ href: "{{ '/email-marketing' | post_url }}" }
               Email Marketing and Wistia
           %li
-            %a{ href: "{{ '/playlists' | post_url }}" }
-              Playlists
+            %a{ href: "{{ '/private-sharing' | post_url }}" }
+              Sharing Videos Privately
+        %a.viewAll{ href: "{{ 'embed-and-share' | category_url }}" }
+          View All 7
       #integrations.column.middle.thirdRow
         %h2
           %a{ href: "{{ 'integrations' | category_url }}" }
@@ -145,7 +148,7 @@ no_nav: true
             %a{ href: "{{ '/audience-engagement-graph' | post_url }}" }
               Engagement Graphs
           %li
-            %a{ href: "{{ '/private-analytics' | post_url }}" }
+            %a{ href: "{{ '/private-sharing#private_viewer_analytics' | post_url }}" }
               Private Analytics
           %li
             %a{ href: "{{ '/identity-tagging' | post_url }}" }

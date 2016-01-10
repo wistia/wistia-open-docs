@@ -1,15 +1,13 @@
 ---
 title: Using Wistia with Campaign Monitor
 layout: post
-description: We love Campaign Monitor. Lucky for us, adding a Wistia video to an email campaign is pretty easy, too. Learn how here!
 category: Integrations
+description: We love Campaign Monitor. Lucky for us, adding a Wistia video to an email campaign is pretty easy, too. Learn how here!
+post_intro: <p> Campaign Monitor is great email marketing software.  Their interface is elegant and easy to use, the team is top-notch and they have great taste in music. Oh, and creating an email campaign including a Wistia video with Campaign Monitor is easy, too! </p>
+footer: 'for_beginners'
 ---
 
-{% post_image hashed_id: '53bf14a1c11bf428cfcec9dbebc40dee17823e76', width: 190, class: 'float_right intro_image' %}
-
-Campaign Monitor is great email marketing software.  Their interface is elegant and easy to use, the team is top-notch and they have great taste in music.
-
-Oh, and creating an email campaign including a Wistia video with Campaign Monitor is easy, too!
+{% post_image hashed_id: '53bf14a1c11bf428cfcec9dbebc40dee17823e76', width: 190, class: 'integration_logo' %}
 
 ----
 

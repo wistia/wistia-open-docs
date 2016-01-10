@@ -1,9 +1,10 @@
 ---
-layout: post
 title: Bandwidth
-description: Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!
+layout: post
 category: Account
-post_intro: <p>Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!</p>
+description: Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from overages!
+post_intro: <p>Bandwidth can be pretty confusing. What is it? Where does it go? And how did I use it all? Fear not! We're here to help. Let's walk through how Wistia does bandwidth, how to see your bandwidth, and some tips to save you from using more than you bargained for!</p>
+footer: 'for_beginners'
 ---
 
 ## Understanding Bandwidth
@@ -38,7 +39,7 @@ Still confused? Have no fear, we made you a helpful video too.
 
 ## Video Overview
 
-{% wistia_embed hashed_id: k11pdmyynp %}
+{% wistia_embed hashed_id: odvdgivcwl %}
 
 ## Check Your Bandwidth
 
@@ -67,21 +68,21 @@ Want help gauging how much bandwidth your videos will use? Check out our
 Keep in mind, while this thing is pretty sweet (if I do say so myself), it *is*
 just a predictor tool. The bandwidth you end up using could be different.
 
-## Overage Pricing
+## Extra Bandwidth Pricing
 
-Most Wistia accounts are billed at **$0.33/GB** for overages over 200GB. High
-Volume plans are a bit different. [Read about that pricing here.](http://wistia.com/pricing/highvolume)
+Most Wistia accounts are billed at **$0.33/GB** for bandwidth use over 200GB. High
+Volume bandwidth options are a bit different. [Read about that pricing here.](http://wistia.com/pricing/highvolume)
 
-Let's walk through a fairly standard overage bill.
+Let's walk through a fairly standard bill.
 
-If you're on the $100/mo Pro Plan, and you end up using 350GB of bandwidth for
+If you're on the $100/mo Pro Plan with the default 200GB bandwidth option, and you end up using 350GB of bandwidth for
 the month, here's what your bill would look like:
 
 - $100 for the Pro Plan
-- 150GB of overage at $0.33/GB = $49.50
+- 150GB of additional bandwidth at $0.33/GB = $49.50
 - This month's bill: **$149.50**
 
-If you're on an annual plan you'll be billed monthly for any overages you incur.
+If you're on an annual plan you'll be billed monthly for any extra bandwidth costs you incur.
 You can always see your receipts in [Account Settings]({{ 'account-setup#billing_statements' | post_url }}).
 
 Still not sure if you're in the right spot? [Talk to us.](http://wistia.com/support/contact)
@@ -129,7 +130,7 @@ to make an easy playlist of the videos in your series.
 
 Here are some easy things you can do to cut down on bandwidth:
 
-1. Minimize your own views -- your views count toward bandwidth, so try to cut
+1. Minimize your own views&mdash;your views count toward bandwidth, so try to cut
 down on your own views while customizing or testing.
 
 2. Avoid having videos set on autoplay. Once a video starts autoplaying, it will
@@ -155,7 +156,7 @@ MP4 asset as the Download Type.
 
 At this point, it isn't possible to gauge which video is causing a hike in
 bandwidth usage if you're seeing one. But if you have a video that's getting a
-lot of traffic (you can check that quickly in the [Viewer Stream]({{ '/embedded-video-analytics#viewer_stream' | post_url }})), that's
+lot of traffic (you can check that quickly in the [View Stream]({{ '/embedded-video-analytics#view_stream' | post_url }})), that's
 probably your culprit.
 
 You can always see the sizes of the files we're delivering from your account.
@@ -167,14 +168,15 @@ Wistia has created for streaming.
 
 Are you exceeding your bandwidth limit on the regular? Here's a nifty chart we
 put together to show you the breaking point when you should jump up to the next
-plan.
+bandwidth option.
 
-Plan | Given Bandwidth | Overage | Which Plan Next?
+Bandwidth Option| Monthly Cost | Extra Bandwidth Pricing | When It Makes Cents 😉 to Upgrade
 -----|----------------|---------|------------
-Basic ($25)|200GB | 845GB ($279) | Enterprise 1TB
-Pro ($100) | 200GB | 606GB ($200) | Enterprise 1TB
-Enterprise ($300) | 1 TB | 2,500GB ($450) | High Volume 5TB
-High Volume ($750)| 5 TB | 5,000GB ($750) | High Volume 15TB
+200GB | Free | 0.33¢/GB | 807 GB in total bandwidth ($200.31)
+1 TB | $200 | 0.18¢/GB | 4,080 GB in total bandwidth ($750.08)
+5 TB | $750 | 0.15¢/GB | 10,120 GB in total bandwidth ($1,500)
+15 TB | $1,500 | 0.10¢/GB | 30,360 GB in total bandwidth ($3,000)
+50 TB | $3,000 | 0.06¢/GB | [Contact us](http://wistia.com/support/contact)
 
 Still not sure? [Talk to us.](http://wistia.com/support/contact) We weren't all
 Calculus majors, but we can figure our way around a calculator. We'd love to

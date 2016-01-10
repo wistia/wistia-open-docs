@@ -328,8 +328,8 @@ Parameter | Description
 ----------|------------
 page | The page of results that you want, based on the per_page parameter.
 per_page | The maximum number of results to return. This value is capped at 100.
-filter | This parameter is optional and can take one of two values: 'has_name' or 'has_email'. Without the parameter, all visitors are returned. For the value 'has_name', only named visitors are returned. For the value 'has_email', only visitors with an email address are returned.
-search | If this parameter is specified, only visitors whose name or email address matches exactly with the given value will be returned.
+filter | This parameter is optional and can take one of three values: 'has_name' or 'has_email' or 'identified_by_email_gate'. Without the parameter, all visitors are returned. For the value 'has_name', only named visitors are returned. For the value 'has_email', only visitors with an email address are returned. For the value 'identified_by_email_gate', only visitors who have entered their email in a video email gate are returned.
+search | If this parameter is specified, only visitors whose name or email address contains the exact given value will be returned.
 
 #### The Response
 
@@ -346,7 +346,9 @@ last_active_at | The last time the visitor played a video.
 last_event_key | The event key which can be used to retrieve the information about what happened when they last played a video.
 load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
 play_count | The total number of videos that have been viewed by this visitor.
-visitor_identity | An object with 2 fields (name and email) that represents and available identity info for this visitor.
+identifying_event_key | The key of the event that was used to identify this visitor. Some examples: the first turnstile this visitor entered or the first load event that was tagged with this visitor info via wemail.
+visitor_identity | An object with 3 fields (name, email, and org) that represents the available identity info for this visitor.
+user_agent_details | An object with 4 fields: browser (e.g. 'Chrome'), browser_version (e.g. '46'), platform (e.g. 'mac'), and mobile (boolean value stating whether the visitor was on their mobile phone.)
 
 #### Example JSON Response
 
@@ -361,7 +363,21 @@ visitor_identity | An object with 2 fields (name and email) that represents and 
     "last_event_key": "1355282055737f0.4801975437439978",
     "load_count": 3,
     "play_count": 2,
-    "visitor_identity": { "name": "Jim", "email": "jim@example.com" }
+    "identifying_event_key": 1390862572596e0.8447021404281259,
+    "visitor_identity": { 
+      "name": "Jim", 
+      "email": "jim@example.com",
+      "org": {
+        "name": "Jeff's Lemonade",
+        "title": "Expert lemon squeezer"
+      }
+    },
+    "user_agent_details":  { 
+      "browser": "Chrome", 
+      "browser_version": "45",
+      "platform": "mac",
+      "mobile": false
+    }
   },
   {
     "visitor_key": "9DC9D7F525236E25E27E9743C0524DB0F02C703D",
@@ -370,7 +386,21 @@ visitor_identity | An object with 2 fields (name and email) that represents and 
     "last_event_key": "1355282030102f0.8788125906139612",
     "load_count": 17,
     "play_count": 9,
-    "visitor_identity": { "name": "John Doe", "email": "john@example.com" }
+    "identifying_event_key": null,
+    "visitor_identity": { 
+      "name": null, 
+      "email": null,
+      "org": {
+        "name": null,
+        "title": null
+      }
+    },
+    "user_agent_details":  { 
+      "browser": "Chrome", 
+      "browser_version": "45",
+      "platform": "mac",
+      "mobile": false
+    }
   }
 ]
 {% endcodeblock %}
@@ -401,7 +431,8 @@ last_active_at | The last time the visitor played a video.
 last_event_key | The event key that can be used to retrieve the information about what happened when they last played a video.
 load_count | The total number of videos that have been loaded (but not necessarily viewed) by this visitor.
 play_count | The total number of videos that have been viewed by this visitor.
-visitor_identity | An object with 2 fields (name and email) that represents any available identity info for this visitor.
+visitor_identity | An object with 3 fields (name, email, and org) that represents the available identity info for this visitor.
+user_agent_details | An object with 4 fields: browser (e.g. 'Chrome'), browser_version (e.g. '46'), platform (e.g. 'mac'), and mobile (boolean value stating whether the visitor was on their mobile phone.)
 
 #### Example JSON Response
 
@@ -415,7 +446,20 @@ visitor_identity | An object with 2 fields (name and email) that represents any 
   "last_event_key": "1355282055737f0.4801975437439978",
   "load_count": 3,
   "play_count": 2,
-  "visitor_identity": { "name": "Jim", "email": "jim@example.com" }
+  "visitor_identity": { 
+    "name": "Jim", 
+    "email": "jim@example.com",
+    "org": {
+      "name": "Jim's Lemonade",
+      "title": "Expert lemon squeezer"
+    }
+  },
+  "user_agent_details":  { 
+    "browser": "Chrome", 
+    "browser_version": "45",
+    "platform": "mac",
+    "mobile": false
+  }
 }
 {% endcodeblock %}
 
@@ -451,7 +495,7 @@ received_at | The date and time that the event happened.
 event_key | The ID for that event.
 visitor_key | The id of the visitor, which can be used to retrieve further information about them.
 embed_url | The URL of the page where the video was viewed.
-percent_viewed | How much of the video was watched during this session (0 to 100).
+percent_viewed | The decimal number denoting how much of the video was watched during this session (0 to 1).
 ip | The viewer's IP address.
 org | The organization that the IP address belongs to.
 country | The viewer's country, based on IP.

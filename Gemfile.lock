@@ -19,16 +19,6 @@ GEM
     domainatrix (0.0.11)
       addressable
     dotenv (0.9.0)
-    elasticsearch (1.0.6)
-      elasticsearch-api (= 1.0.6)
-      elasticsearch-transport (= 1.0.6)
-    elasticsearch-api (1.0.6)
-      multi_json
-    elasticsearch-transport (1.0.6)
-      faraday
-      multi_json
-    faraday (0.9.1)
-      multipart-post (>= 1.2, < 3)
     fast-stemmer (1.0.2)
     foreman (0.63.0)
       dotenv (>= 0.7)
@@ -53,9 +43,6 @@ GEM
     maruku (0.6.1)
       syntax (>= 1.0.0)
     method_source (0.8.2)
-    multi_json (1.7.2)
-    multipart-post (2.0.0)
-    nokogiri (1.5.9)
     posix-spawn (0.3.6)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -106,12 +93,10 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   compass (~> 0.12.2)
   domainatrix (~> 0.0.11)
-  elasticsearch
   foreman (~> 0.63.0)
   haml (~> 3.1.6)
   jekyll (~> 1.0)
   json
-  nokogiri (~> 1.5.5)
   pry (~> 0.9.12.6)
   psych (~> 2.0.6)
   rack-rewrite (~> 1.5.0)

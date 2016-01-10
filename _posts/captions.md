@@ -2,11 +2,9 @@
 title: Captions
 layout: post
 category: Customize
-description:
-  Closed captioning makes content that’s easier for viewers
-  to digest and read (even in different languages), and has
-  awesome SEO benefits.
+description: Closed captioning makes content that’s easier for viewers to digest and read (even in different languages), and has awesome SEO benefits.
 post_intro: <p>Captions make it easy for viewers to digest the content of your videos. They're a critical part of content accessibility, but they are also helpful for longer form and educational content in any language.</p>
+footer: 'for_beginners'
 ---
 
 Whether you're trying to make sure people can get the message of your video
@@ -45,8 +43,9 @@ From the Customize Panel, select the *Captions* settings area.
 
 Once your captions are ready, you will be notified by email, and the *CC*
 button will appear to all viewers who view the video within your account. The
-captions will now be included with your embed codes, if you are using the SEO
-embed code type.
+captions will now be injected into the metadata of your video when using the
+[Standard Embed]({{ '/embedding#inline_embeds' | post_url }}). To learn more
+about Video SEO check out our [help page]({{ '/video-seo' | post_url }}).
 
 To customize your video with transcription or captions, select *Customize*
 from the <span class='action_menu'>Video Actions</span> menu. Open the

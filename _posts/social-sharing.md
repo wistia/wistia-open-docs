@@ -1,9 +1,10 @@
 ---
-layout: post
 title: Wistia and Social Sharing
+layout: post
 category: embed and share
 description: Want to get social with your Wistia videos? We make it simple to share and track your videos on your favorite social media sites, such as Facebook and Twitter.
 post_intro: <p>Social Media can drive some serious ROI if done right.  Vehicles like Facebook and Twitter can be used to spread a business message effectively, especially if delivered in an easy to consume and share way.  The best way to do that is with video - it's perfect for social media attention spans, so it tends to 'travel' better than blocks of text.</p><p>Now that you've got your video uploaded to Wistia, how do you share it and track the performance on Social Media sites?  This tutorial will help.  The two services we're focused on here are Facebook and Twitter.</p>
+footer: 'for_beginners'
 ---
 
 {% wistia_embed hashed_id: 430tdjcty4 %}
@@ -97,6 +98,25 @@ Once you share the update, viewers can watch the video inline in the Facebook
 news feed.
 
 {{ "Wistia videos won't play inline in the Facebook mobile app; they'll open in a web page in a new panel." | note }}
+
+### The Facebook Like Button
+
+If you've turned on the *[Social Bar]({{ '/customizing-your-video#social_bar' | post_url }})*
+for your video, you might be wondering what all those Likes next to the Facebook
+button mean. Those Likes are attributed to the page where your video lives,
+not the video itself. You can enter a different URL for those Likes to be
+attributed to on the *Social Bar* tab of the *Customize Panel* for your video.
+
+Let's take Jeff's Lemonade as an example. If Jeff added the Facebook Like button
+to the [Onboarding video]({{ '/help-videos' | post_url }}), anytime someone
+Likes it, the Likes would be attributed to that Wistia help page. If Jeff
+decided that he wanted those Likes to be going to his
+[Jeff's Lemonade site](http://www.jeffslemonade.com/) instead, he could change
+the URL in the Social Bar tab of his video's Customize Panel. This way anyone
+pressing the Like button would be Liking the Jeff's Lemonade site instead of the
+Wistia help page containing the video.
+
+You can read more about customizing the *Social Bar* on our [Customizing Your Video]({{'/customizing-your-video#social_bar' | post_url }}) help page!
 
 ### Posting to Facebook from Your Website
 

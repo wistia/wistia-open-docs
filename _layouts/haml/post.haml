@@ -12,7 +12,7 @@ type: post
       %a{ href: "#top", id: "top-link" } to the tippy &uarr;
       .post_title
         %h1 {{ page.title }}
-      .post_content
+      .post_content{ 'data-swiftype-name' => 'body', 'data-swiftype-type' => 'text' }
 
         {% if page.api_warning %}{% include api_warning.html %}{% endif %}
 
@@ -29,6 +29,9 @@ type: post
 %script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/jquery.nav' | javascript_url }}" }
 
+-# This custom Swiftype HACK appends a source identifier to the search result URL
+{% include swiftype_hack.html %}
+
 
 {% if page.api == true %}
 {% include toplink.html %}
@@ -37,7 +40,7 @@ type: post
 {% else %}
 :javascript
   var api = false;
-{% endif %} 
+{% endif %}
 {% include post_js.html %}
 {% include qualaroo.html %}
 

@@ -1,0 +1,53 @@
+-# The ENGINE_KEY key points the Swiftype's Javascript to the wistia-docs engine
+-# The RESULT_PAGE_URL should be the same as in https://swiftype.com/engines/wistia-docs/install_flow/results_container
+:javascript
+  var SWIFTYPE_ENGINE_KEY = 'qbRXwAFAkGtpnYYJAZgz';
+  var SWIFTYPE_RESULT_PAGE_URL = '/doc/search';
+
+:javascript
+    (function() {
+      var $stSearchFields = $('.st-default-search-input');
+      if (location.pathname != SWIFTYPE_RESULT_PAGE_URL) {
+        $stSearchFields.swiftypeSearch({
+          engineKey: SWIFTYPE_ENGINE_KEY,
+          loadingFunction: function(query, $resultContainer) {
+            swiftypeQuery = location.href.split('#')[1];
+            wistiaSource  = $stSearchFields.attr('wsrc');
+            redirectUrl  = SWIFTYPE_RESULT_PAGE_URL;
+            if (wistiaSource) {
+              redirectUrl += '?wsrc=' + wistiaSource;
+            }
+            redirectUrl += '#' + swiftypeQuery;
+            location.replace(redirectUrl);
+          }
+        });
+
+        // Adds Autocomplete a.k.a. Autosuggest
+        $stSearchFields.swiftype({
+          engineKey: SWIFTYPE_ENGINE_KEY,
+          fetchFields: { 'page': ['url','title', 'body'] },
+          resultRenderFunction: function(context, page) {
+            context.list.empty();
+
+            $resultsList = $('<ul></ul>');
+            $.each(page, function(docType, results) {
+              $.each(results, function(index, item) {
+                $li = $('<li class="results"> \
+                  <p class="title">' + item.title + '</p> \
+                  <p class="description">' + item.body[0] + '</p> \
+                  </li>');
+                context.registerResult($li.appendTo($resultsList), item);
+                $resultsList.appendTo(context.list);
+              });
+            });
+          }
+         });
+      }
+      else {
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+        _st('install','oN7bUy-pbTePRQzSFem7','2.0.0');
+      }
+    })();

@@ -106,21 +106,3 @@ wistiaPlaylist.bind("afterembed", function(sectionIndex, videoIndex) {
   }
 });
 {% endcodeblock %}
-
-## Playlist API Examples
-
-### Use a Link to Start a Specific Video or Playlist Section
-
-Using the `play(sectionIndex, videoIndex)` method, you can build a link that
-will start a specific Section or Video for you.
-
-Check out how to get it done in the [Demobin](http://wistia.github.com/demobin/playlist-control-links/).
-
----
-
-### Load a random video on page load
-
-You can load a random video from your playlist on page load, and then play a
-random video after each video ends, using a the playlistData methods, and a bind on "end".
-
-Check out how it works in the [Demobin](http://wistia.github.com/demobin/random-playlist-video/).

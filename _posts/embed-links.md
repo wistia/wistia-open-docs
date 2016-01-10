@@ -22,7 +22,7 @@ Embed Links are best illustrated by example. Check out the markup below.
 <a href="#wistia_342jss6yh5">Wistia Team Intro</a><br/>
 {% endcodeblock %}
 
-Here we have an async API embed code followed by two links. The links have
+Here we have a Standard inline embed code followed by two links. The links have
 a particular format. They start with a `#`, which makes them "anchor tags".
 The `#` is followed by a video's 10 character hashed ID. A `?` separates the
 hashed ID from a list of optional

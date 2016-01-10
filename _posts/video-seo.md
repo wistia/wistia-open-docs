@@ -4,6 +4,7 @@ layout: post
 category: embed and share
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
 post_intro: <p>Video SEO is the practice of providing the metadata (or "information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia provides both recommended approaches to Video SEO - using what's called a "video sitemap", and also utilizing specific markup in the on-page embed code. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
+footer: 'for_beginners'
 ---
 
 ## What is Video SEO?
@@ -27,42 +28,31 @@ provides functionality for both approaches, which we cover below.
 ----
 
 
-## Using the Video SEO Embed Type
+## On-page Markup for Video SEO
 
-The Video SEO embed code type has been optimized for Video SEO, including best
-practices like Open Graph tags and schema.org markup.
+When search engines like Google crawl a page on your website, they can only identify a video and index it properly if the page includes the right video markup. Google has [extensive technical documentation](https://developers.google.com/webmasters/videosearch/schema) on how to add that markup... but you don't need to worry about it! Wistia's [Standard embeds]({{ '/embedding#inline_embeds' | post_url }}) automatically put that markup on the page for you.
 
-{{ "Even if you aren't able to set up a video sitemap, you can still get SEO benefits from using the Video SEO embed code type." | note }}
+When you have a standard Wistia embed on a page, it will place the following markup in the `<head>` section for search engines to find:
 
-The Video SEO embed code includes the following data for the video, which you
-will want to set *before* generating an embed code:
+* **Name**: The title of your video, which you can set on the video's page in your account.
+* **Description:** A brief description of the video's content. It's important to write a description for each video, which you can do from the video's page in your account.
+* **Thumbnail URL:** The URL of the image search engines will use if they choose to display a preview of your video in the search results.
+* **Embed URL:** The URL of the page the video is embedded on.
+* **Duration:** How long is your video? The search engine won't know unless you tell it! So, this tells it for you.
+* **Upload Date:** When the video uploaded to Wistia.
 
-* Video Thumbnail (the image that shows before it is played, which can be
-  [customized]({{ '/customizing-your-video#changing_the_thumbnail' | post_url }}))
-* Video Title (which can be edited [on the media page]({{ '/media#update_video_title' | post_url }}))
-* Video Description (which can also be edited [on the media page]({{ '/media#video_description' | post_url}}))
+Those are all of the "Required" and "Recommended" properties listed on [Google's guide for video markup](https://developers.google.com/webmasters/videosearch/schema). You're covered 👍.
 
-While you can always edit this information later, you will need to generate a
-new embed code and re-paste it into your website to take advantage of any
-changes.
+If you ever change that information in Wistia, it will automatically be updated on your website too. Immediately! There's no need to re-embed your video.
 
-Once this information is set correctly, you can generate a Video SEO embed code
-by opening the video you'd like to embed, and select *Embed & Share* from the
-<span class="action_menu">Video Actions</span> menu.
+{{ "You can use Google's [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) to verify that Google is able to see your video and its metadata. If everything is working properly, you'll see that Google finds a `VideoObject` on the page." | tip }}
 
-{% post_image hashed_id: '54b400284c735b813bf9350c4e827b0e21636a77' %}
-
-In the *Embed & Share* window, select *SEO* from the *Embed Type* list. Copy
-the generated embed code and add it to your site.
-
-{% post_image hashed_id: '7452163a3e9bd6b3d4dd8ef6a7250e491b313ea5' %}
-
-For even more information on embedding, review the [embedding a video]({{ '/embedding' | post_url }}) guide.
+For even more information on embedding, check out the [Embedding]({{ '/embedding' | post_url }}) guide.
 
 
 ## Creating a Video Sitemap
 
-{% wistia_embed hashed_id: 38bcf1939d, embedType: iframe %}
+{% wistia_embed hashed_id: 38bcf1939d %}
 
 Video Sitemaps are a metadata document that must follow a pretty rigid syntax
 ([here's an example](http://app.wistia.com/sitemaps/4721.xml)). They
@@ -118,7 +108,7 @@ editor (like TextEdit, Vim, or Word), and add the line:
 Add the Video Sitemap link as outlined below, then save the file as
 `robots.txt`.
 
-{{ "If you cannot create or edit the robots.txt file for your website, you can still get SEO benefits using the [SEO embed code type](#using_the_video_seo_embed_type)." | note }}
+{{ "Even you cannot create or edit the robots.txt file for your website, you can still get SEO benefits using the [Standard inline embed code type]({{ '/embedding/inline_embeds' | post_url }})." | note }}
 
 
 ### Adding the Video Sitemap URL
@@ -142,9 +132,6 @@ viewable by Google.
 
 {{ "Robots.txt do need to follow a certain format! Make sure yours is correct by [reviewing the guidelines](http://tool.motoricerca.info/robots-checker.phtml)." | note }}
 
-Next, we'll embed the video using the SEO embed code type.
-
-
 
 ## Making a video sitemap entry
 
@@ -162,8 +149,6 @@ After you have embedded a video on your website, go to your video's media page
 (i.e. the page in Wistia where you can view the video, which has a URL like
 `<youraccount>.wistia.com/medias/12345`).  Select *Add to SEO Sitemap* from the
 <span class="action_menu">Video Actions</span> menu.
-
-{{ "Before adding a Video Sitemap entry, make sure you have embedded your video using the SEO embed code type." | note }}
 
 {% post_image hashed_id: '784a5ef4c90f5e393e9b55bdde8b9c6abbebbe00', class: 'center' %}
 
@@ -228,10 +213,7 @@ have context surrounding the video. If you notice an increase in traffic from
 specific searches, add more content for those visitors.
 
 Second, the thing that drives folks to click on the video is the thumbnail!
-Choose a thumbnail that looks attractive for the topic at hand. If you update
-the thumbnail of your video, you will need to re-embed it, because the SEO
-embed code contains a direct URL to that image. Google will automatically
-update their index every few weeks.
+Choose a thumbnail that looks attractive for the topic at hand.
 
 {% post_image hashed_id: '53a36ccf4c2bfe6215f13d2d5523d5d919176224', class: 'center' %}
 
@@ -315,17 +297,13 @@ to watch your video. That is where Video SEO can be a valuable tool.
 
 ### I can't update my robots.txt file. What should I do?
 
-We don't create a sitemap for your account unless we can verify the robots.txt
-file is accurate. That being said, the SEO embed code type can still provide
-plenty of value. Because it is optimized to use Open Graph tags and Schema.org
-markup, we've seen videos get indexed without the need for a sitemap. While the
-sitemap is still considered a *best practice*, it is no longer a must-have for
-Video SEO.
+We don't create a sitemap for your account unless we can verify the robots.txt file is accurate. But don't worry! Search engines can identify and index your video content just by looking at the on-page markup alone. While the sitemap is still considered a *best practice*, it is
+no longer a must-have for Video SEO.
 
-### Can I use popover (lightbox) or playlist embeds?
+### Can I use playlist embeds?
 
-At this time, we don't provide search engine optimized embed codes for the
-popover (lightbox) or playlist player types. We made that decision because in
+At this time, we don't provide search engine optimized embed codes for the playlist player types.
+We made that decision because in
 our tests it seemed required for the Google bots to have direct access to the
 video on the page, and immediately accessible to the visitor, in order to reap
 the benefits of video on page rankings.
@@ -382,8 +360,8 @@ content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-se
 Building links back to your original content can be hugely powerful for
 building your audience.
 
-For more on building SEO links using for your content,
-[see the Customization docs]({{'/customizing-your-video#social_bar' | post_url}}).
+For more information on video backlinks,
+[see the Customization docs]({{'/customizing-your-video#using_video_backlinks' | post_url}}).
 
 ### Can I hear Ben talking about SEO?
 

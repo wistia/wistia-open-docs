@@ -4,6 +4,7 @@ layout: post
 category: Account
 description: Projects are where you store, organize, and access media. Projects are the building blocks for Wistia organization.
 post_intro: <p>A <strong>project</strong> is Wistia's method for grouping related media. It's our way of helping you stay organized and happy.</p><p>A project could contain all the training videos for your organization, all the sales materials related to a specific product, or just a bunch of your upcoming content.</p>
+footer: 'for_beginners'
 ---
 
 {% wistia_embed hashed_id: pkaapem031 %}
@@ -86,9 +87,10 @@ on the [private sharing documentation page]({{ '/private-sharing' | post_url }})
 
 ## Playlists
 
-**Playlists** are a video player for multiple videos - all the videos in your
-account. You can select `</> Embed Playlist` to get started, or head over to
-the [playlists doc page]({{ '/playlists' | post_url }}) for more information.
+**Playlists** give you the option to embed all of the videos from one project at
+once. You can select **Playlist** from the Project Actions to get started,
+or head over to the [playlists help page]({{ '/playlists' | post_url }}) for
+more information.
 
 ## Project Sections
 

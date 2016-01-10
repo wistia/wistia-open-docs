@@ -1,9 +1,11 @@
 ---
-layout: post
 title: Customizing Your Video
-description: Drive more interaction and better engagement with your content using Wistia video customization features.
+layout: post
 category: Customize
+description: Drive more interaction and better engagement with your content using Wistia video customization features.
 post_intro: <p>Your video content is truly powerful - and Wistia customization can ensure engagement with your audience, which drives business for you.</p><p>This article will cover the customization options for your video, and how to make them work for you.</p><p>Once you customize your video, you can also choose to <a href="http://wistia.com/doc/embedding">embed it</a> with your customizations.</p>
+footer: 'for_intermediates'
+api: true
 ---
 
 ## The Customize Panel
@@ -34,8 +36,6 @@ your viewer's experience.
 
 Finally - you can choose whether visitors to the video page will have the
 option to [leave comments](#turn_off_comments).
-
-{{ "Changes to the thumbnail won't apply to popover embeds without re-embedding. Since popovers reference the exact image used when they're first embedded, you'll want to update their embed codes out in the wild." | note }}
 
 ### Changing the Thumbnail
 
@@ -82,7 +82,8 @@ the video and make it easy to share the video in social networks.
 {% post_image hashed_id: '6315a5aa70d7d5aa1d672fc6453f0115ed3127c9', class: 'float_right', width: 300 %}
 
 The Social Bar has a bunch of options, from social networks like Twitter and
-Facebook to actions like *Email* and *Download*.
+Facebook to actions like *Email* and *Download*. You can learn more about what
+the Facebook button is liking on our [Social Sharing]({{'/social-sharing#the_facebook_like_button' | post_url }}) help page!
 
 ### Configuring the Social Bar Buttons
 
@@ -127,8 +128,7 @@ Configure the link location and link text using the *Buttons link to* and
 *Specific Page* options (the embed configuration window will also include those
 instructions).
 
-Once that is done, save your customizations. Open the [Embed & Share]({{'/embedding#generate_an_embed_code' | post_url}})
-window, and make sure to select an SEO embed code.
+Once that is done, save your customizations.
 
 ## Timeline Actions
 
@@ -153,7 +153,26 @@ Actions menu or drag the waypoints to the exact frames they're to appear.
 
 {% post_image hashed_id: 'ab4efc1f613f79a1bf8a4438a4a525ad2354fc73', class: 'center' %}
 
-{{ "Looking to make your video autoplay? Make sure to choose <strong>Autoplay video</strong> as your <strong>Start</strong> action from the dropdown menu." | tip }}
+### Autoplay Your Videos
+
+Need to capture your viewer's attention right at page load? Can't wait for them
+to click play? Autoplay is your new best friend.
+
+To set your video to autoplay you'll want to navigate to Timeline Actions in the
+Customize panel. There you'll see an option to choose **Start** behavior, which
+is set to default on the thumbnail. Switch that to "Autoplay video," save your
+changes, and you're ready to rock and roll. 🎸
+
+{% post_image hashed_id: '90f3b0e1802a37c92d3746bec2935363c483b05c', class: 'float_right', width: 300 %}
+
+### A Note About Autoplay on Mobile Devices
+
+Many cell networks have restrictions in place around autoplay videos. Since many
+mobile phone users are on designated data limits, it's a violation of certain
+regulations to force autoplay. (Nobody likes using too much data!)
+
+This means that your videos will autoplay great in a desktop environment, but
+a user will have to click the play button on a mobile device.
 
 ### Annotation Link
 

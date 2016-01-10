@@ -1,9 +1,10 @@
 ---
-layout: post
 title: The Wistia-Marketo Integration
+layout: post
+category: Integrations
 description: Wistia and Marketo go together like peanut butter and jelly -- like Sherlock and Watson! Want to get in on the fun? Here's our guide to getting the Wistia-Marketo integration working for you.
 post_intro: <p>Wistia and Marketo go together like peanut butter and jelly -- like Sherlock and Watson, like <a href="//fast.wistia.net/embed/iframe/4n068wv4j6?popover=true" class="wistia-popover[height=405,playerColor=7b796a,width=720]">Meredith and pugs</a>! Want to get in on the fun? Here's our guide to getting the Wistia-Marketo integration working for you.</p>
-category: Integrations
+footer: 'for_intermediates'
 ---
 
 {% post_image hashed_id: 'afa099a230c97dc5b1f7221df7fa715278c226f2', class: 'integration_logo' %}
@@ -27,14 +28,15 @@ If that _doesn't_ sound like you yet, and you're feeling enterprisey today <a hr
 After choosing the Enterprise plan, you'll need to configure Turnstile to pass leads from Wistia into Marketo. Just follow these quick steps:
 
 1. In your Wistia account, open the Account menu and click on Settings.
-2. Switch to the Data Integrations tab.
-3. Enter your credentials for Marketo.
-4. Connect!
-5. Call an old friend and catch up. It's been too long, hasn't it?
+2. Navigate to the **Integrations** tab under *Advanced*.
+3. Scroll down to the Enterprise Integrations section.
+4. Enter your credentials for Marketo.
+5. Connect!
+6. Call an old friend and catch up. It's been too long, hasn't it?
 
 Congrats, you're all set up!
 
-{% post_image hashed_id: "dafaa71a97abddfbe5c41fbf6749e7a214429169", class: 'center' %}
+{% post_image hashed_id: "5b12d26e07b6ab0b3710da6a87245a2715d6190e", class: 'center' %}
 
 {{ "If for one reason or another you're <em>not</em> set up after following the steps above, <a href='http://wistia.com/support/contact'>contact us</a> and we'll help you out." | note }}
 
@@ -64,7 +66,7 @@ Wouldn't it be cool if when a person watches at least 50% of a certain video on 
 
 "Why yes, yes that would be quite cool indeed," you say? Phew! Good thing we built this integration.
 
-{{ "Before you can trigger automation in Marketo based on a Wistia video event on your website, that event will need to occur at least once. So before anything else, go onto your website and do the thing you want to use as a trigger in the embedded video (like watch 50% of the video, or click an Annotation Link) – just like regular visitor to your website would. Then Marketo will let you select it as a trigger." | note }}
+{{ "Before you can trigger automation in Marketo based on a Wistia video event on your website, that event will need to occur at least once. So before anything else, go onto your website and do the thing you want to use as a trigger in the embedded video (like watch 50% of the video, or click an Annotation Link) – just like regular visitor to your website would. Then Marketo will let you select it as a trigger." | alert }}
 
 Have you read the super important note above and done the thing you'd like to use as a trigger? Alrighty then, carry on! Here's how to set the automation up:
 

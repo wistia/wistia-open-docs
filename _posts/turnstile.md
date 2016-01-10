@@ -1,17 +1,10 @@
 ---
 title: Email Capture with Wistia Turnstile
-category: Customize
 layout: post
-description:
-  Turnstile makes it easy to add email capture to any video. Build a better email
-  list with Wistia Turnstile.
-post_intro:
-  <p>Turnstile is a great way to identify high-quality leads with video. Connect
-  your account to your favorite email provider, then add an email capture gate to
-  any point.</p><p>Setting up Turnstile is a breeze, we'll show
-  you how!</p><p>If you use an email provider or marketing automation system
-  that rocks but isn't on our current Turnstile list, submit them using <a
-  href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
+category: Customize
+description: Turnstile makes it easy to add email capture to any video. Build a better email list with Wistia Turnstile.
+post_intro: <p>Turnstile is a great way to identify high-quality leads with video. Connect your account to your favorite email provider, then add an email capture gate to any point.</p><p>Setting up Turnstile is a breeze, we'll show you how!</p><p>If you use an email provider or marketing automation system that rocks but isn't on our current Turnstile list, submit them using <a href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
+footer: 'for_intermediates'
 ---
 
 ## Add Turnstile to Your Video
@@ -27,6 +20,8 @@ By default, Turnstile will only ask people to enter an email address. "But Wisti
 {% wistia_embed hashed_id: qmdaw5lke0, embedType: iframe %}
 
 To enable the First Name and Last Name fields, select the "Ask for First and Last Name" option right there in the Turnstile section of Timeline Actions. You'll instantly see an updated preview of Turnstile on your video.
+
+{{ 'If a Turnstile is at the beginning or the middle of the video, the button will say PLAY. Once a Turnstile is end of the video, the button will automatically switch to SUBMIT.' | tip }}
 
 ## Set Up Your Email Provider Integration
 

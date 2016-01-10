@@ -1,6 +1,7 @@
 ---
 special_category_link: developers
 api: true
+api_warning: true
 layout: post
 title: The Wistia Data API
 description: Learn how to enable Data API access for your account.
@@ -41,8 +42,8 @@ You must use **SSL** (https instead of http) to access the API.
 
 There are two ways to authenticate when accessing the API:
 
-1. **HTTP Basic authentication** with `api` as your username and your API password as the password.
-2. Add `api_password` as a parameter when making a request. For example:
+1. **HTTP Basic authentication** with `api` as your username and your API token as the password.
+2. Add `api_password` as a parameter and set it equal to your API token when making a request. For example:
 
 <code class="full_width">https://api.wistia.com/v1/medias.json?api_password=xyz123</code>
 
@@ -148,7 +149,7 @@ publicId  | If the project is public, this field contains a string representing 
 ### Projects: List
 
 Use the Projects#list method to request a list of Projects in your Wistia
-account. This request supports [paging and sorting](#organizing_for_list_methods).
+account. This request supports [paging and sorting](#paging_and_sorting_responses).
 
 Projects#list requests look like this:
 
@@ -989,7 +990,7 @@ Parameter Name      |  Description
 --------------------|-------------------------
 name               | The media's new name.
 new_still_media_id | The Wistia hashed ID of an image that will replace the still that's displayed before the player starts playing.  Will return failure message unless media to update is a video, and new still is an image.
-description        | A new description to display with the media within Wistia.
+description        | A new description for this media. Accepts plain text or markdown.
 
 
 #### Example Media#Update Request
@@ -1202,6 +1203,7 @@ Field   | Description
 id    | Numeric id of the account
 name  | Account name
 url   | Account's main Wistia URL (e.g. `http://brendan.wistia.com`)
+mediaCount   | The total number of medias in this account
 
 ---
 

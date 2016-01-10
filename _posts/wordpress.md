@@ -1,9 +1,10 @@
 ---
-title: WordPress &amp; Wistia
+title: WordPress & Wistia
 layout: post
 category: Integrations
 description: WordPress is one of the most popular blog/website platforms out there, and Wistia videos work quite well in the WordPress environment.
 post_intro: <p>WordPress is a wonderful platform that you can use to create powerful websites, but it can sometimes strip out important parts of Wistia embed codes. Fortunately, there's an easy fix for that!</p> <p>To use Wistia and WordPress together in harmony, check out the <a href="#the_wistia_wordpress_plugin">Wistia WordPress plugin</a>. </p>
+footer: 'for_intermediates'
 ---
 
 {{ "WordPress.com sites now work easily with Wistia! We're a default oEmbed provider, so it's as simple as pasting the media URL of your video. Check out their documentation <a href='https://en.support.wordpress.com/videos/wistia/'>here</a>. Wahoo!" | note }}
@@ -55,12 +56,6 @@ style `display: inline-block;`, as seen here:
 {% endcodeblock %}
 
 For more info on centering your video, refer to our tips in the [embedding documentation]({{ '/embedding#styling_your_embed' | post_url }}).
-
-
-## Using Wistia Video SEO Embeds with WordPress
-
-The simplest way to help search engines find and index the Wistia videos on your WordPress.org site is to [use the SEO embed code type](http://wistia.com/doc/video-seo#using_the_video_seo_embed_type) and the awesome [Yoast plugin](http://yoast.com/wordpress/video-seo/). Joost, the one-man wrecking crew behind Yoast, has put together a really valuable and easy-to-use workflow that also includes Wistia support (awesome!). When you're using Yoast, you do not need to create a video sitemap in Wistia – Yoast does that for you.
-
 
 <script src="//fast.wistia.com/labs/play-when-visible/plugin.js"></script>
 <script>

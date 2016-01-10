@@ -5,7 +5,7 @@
 %html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en', :lang => 'en' }
   %head
     %title
-      {% if page.title == '' %} Support Documentation and Help {% else %} wDoc: {{ page.title }} {% endif %}
+      {% if page.title == '' %} Wistia Help Center {% else %} Wistia Help: {{ page.title }} {% endif %}
 
     {% if page.title %}
     %meta.swiftype{ name: 'title', content: "{{ page.title | escape }}", 'data-type' => 'string' }
@@ -20,23 +20,17 @@
     {% endif %}
     %script{ type: 'text/javascript', src: "{{ '/javascripts/jquery.min' | javascript_url }}" }
     {% if page.developers %}
-    %script{ type: "text/javascript", src: "//use.typekit.net/pft0gev.js" } 
+    %script{ type: "text/javascript", src: "//use.typekit.net/pft0gev.js" }
     %script{ type: "text/javascript" } try{Typekit.load();}catch(e){}
     {% endif %}
 
     %link{href: "//cloud.typography.com/6901872/779304/css/fonts.css", rel: "stylesheet", type: "text/css"}/
 
     / Swiftype search
-    /  the Hash Change JQuery plugin is required for swiftype.search.js
-    :javascript
-      (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-      (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-      e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-      })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-      _st('install','oN7bUy-pbTePRQzSFem7','2.0.0');
+    {% include swiftype_includes.html %}
 
     :javascript
-      var basepath = "{{ '' | post_url }}";    
+      var basepath = "{{ '' | post_url }}";
   %body{ class: "{{ page.type }}_layout" }
     {% include wgh_config.html %}
     {% include header.html %}
@@ -44,6 +38,9 @@
 
     #container{ class: "{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" }
       {{ content }}
+
+    -# This custom Swiftype HACK appends a source identifier to the search result URL
+    {% include swiftype_hack.html %}
 
     {% include footer.html %}
     {% include getCookie.html %}
@@ -58,4 +55,3 @@
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KSJ3B');</script>
-

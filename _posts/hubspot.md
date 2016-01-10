@@ -1,9 +1,10 @@
 ---
 title: Integrate HubSpot and Wistia
 layout: post
-description:
-  HubSpot is a suite of popular marketing tools for driving more leads and better engagment. See how Wistia works with HubSpot to give it special powers!
+description: HubSpot is a suite of popular marketing tools for driving more leads and better engagement. See how Wistia works with HubSpot to give it special powers!
+post_intro: <p> With your Wistia-HubSpot powers combined... well, you won't be Captain Planet, but you'll be pretty close. Here's the run down on how to get that sweet, sweet integration power.</p>
 category: Integrations
+footer: 'for_intermediates'
 ---
 
 {% post_image hashed_id: 'baa410e5f85c4a749f40f29679ad49f901f1975e', class: 'integration_logo' %}
@@ -56,9 +57,9 @@ Once you've entered your [HubSpot ID](http://help.hubspot.com/articles/KCS_Artic
 
 {% wistia_embed hashed_id: cuvw05s7qb %}
 
-Jump back to your Wistia account, and head into [Account Settings]({{ '/account-setup#account_settings' | post_url }}). (Keep in mind, only the **Account Owner** can get into Account Settings.) Once you're there head to **Data Integrations** under *Integrations*. Enter your [HubSpot ID](http://help.hubspot.com/articles/KCS_Article/Account/Where-can-I-find-my-HUB-ID) and connect.
+Jump back to your Wistia account, and head into [Account Settings]({{ '/account-setup#account_settings' | post_url }}). (Keep in mind, only the **Account Owner** can get into Account Settings.) Once you're there head to **Integrations** under *Advanced*. Scroll down to the Enterprise Integrations section. Enter your [HubSpot ID](http://help.hubspot.com/articles/KCS_Article/Account/Where-can-I-find-my-HUB-ID) and connect.
 
-{% post_image hashed_id: "10ffed086dc13b7475fe1788eaa173397e23c93d", class: 'center' %}
+{% post_image hashed_id: "a2718df89fa85bcf34bec34b20d5b51f2ec09de9", class: 'center' %}
 
 HubSpot will ask you to login to your account, and verify that you're cool with authorizing Wistia.
 
@@ -136,7 +137,7 @@ email, you'll be able to see who they are and what parts of the video they've wa
 
 First you'll want to grab the [email merge tag]({{ '/email-marketing#select_your_video' | post_url }}) from Wistia. Pick the video you'd like to share, and select *Embed & Share* from the *Video Actions* drop down menu. The select *Link in Email Campaign*, and make sure HubSpot is chosen at the Email Provider.
 
-{% post_image hashed_id: '5db146143f379d6b79228b42ada298c105f07b42', class: 'center' %}
+{% post_image hashed_id: 'f9b3df97c30e067cc116005f3e7c50a6416367ec', class: 'center' %}
 
 Change the size, play button color, and page the video links to. Then copy the email merge tag.
 

@@ -3,6 +3,8 @@ title: Media in Wistia
 layout: post
 category: Account
 description: From changing the title, to embedding it on your website or blog, learn all the functionality for uploaded media here.
+post_intro: <p> From changing the title, to embedding it on your website or blog, learn all the functionality for uploaded media here.</p>
+footer: 'for_beginners'
 
 ---
 
@@ -99,16 +101,34 @@ The ins-and-outs of embedding your video is the subject of our
 
 ## Downloading Media
 
-By default, contacts invited into Wistia are not permitted to download your
-media files. A contact's ability to download files is controlled via
-permissions at the project level.
+There are two ways to download media within your Wistia account.
 
-To adjust a contact's permissions for a particular project, go into that
-project and choose *Manage Viewers* from the
-<span class="action_menu">Project Actions</span> menu.
+The most common way is found within the <span class="action_menu">Video Actions</span>
+menu on a media's page.
+If you open the menu you will see an option to download the video file. You are
+able to choose to download either the original media file that was uploaded or
+one of the video's derivatives we created when we encoded your video.
+
+Or you could go to a project's page and open the <span class="action_menu">Project Actions</span>
+menu.
+Here you will see an option to Export All Media. Clicking this will allow you
+to export all of the original media files within the project as a .zip file.
+There is a 4GB limit on the size of the .zip file.
+
+### Who can download?
+
+Account Owners and Managers by default are the only users with access to the
+Video Actions menu and therefore the download option.
+
+By default, contacts invited into Wistia are not permitted to download your
+media files, but they can be granted this permission. A contact's ability to
+download files is controlled via permissions at the project level.
 
 There is more on giving download permissions in the [private sharing]({{ '/private-sharing' | post_url}})
 documentation.
+
+You can also allow any viewers to download your video via a Social Bar button.
+[More on that here.]({{'/customizing-your-video#social_bar' | post_url}})
 
 ## Timecoded Comments
 

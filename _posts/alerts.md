@@ -4,6 +4,8 @@ title: Wistia Tracking Alerts
 layout: post
 category: Account
 description: When sharing videos privately within Wistia, you can set up email alerts to stay in the know on how your contacts are navigating through your content. Learn more here!
+post_intro: <p> When sharing videos privately within Wistia, you can set up email alerts to stay in the know on how your contacts are navigating through your content. </p>
+footer: 'for_intermediates'
 
 ---
 
