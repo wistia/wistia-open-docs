@@ -996,3 +996,12 @@ ol li a:hover { border-bottom: 1px solid #56be8e; text-decoration: none; }
 .st-ui-search-input .st-default-search-input { background: white; }
 
 #searchField { line-height: normal; padding-top: 7px; padding-right: 11px; padding-bottom: 7px; padding-left: 28px; border-radius: 5px; }
+
+.st-ui-injected-on-page-container { font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif !important; }
+
+a.st-ui-result { padding: 25px 18px 25px 0 !important; }
+a.st-ui-result:hover { text-decoration: none; }
+
+a .st-ui-type-heading { font-size: 18px !important; }
+a .st-ui-type-detail { max-height: 60px !important; font-size: 16px !important; line-height: 32px !important; }
+a .st-ui-type-detail-bold { font-size: 16px !important; }
