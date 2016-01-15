@@ -88,13 +88,7 @@ While the codes are different, the popover player works the exact same way. One
 of the only big differences is that the "Close Window" icon has been redesigned
 and simplified.
 
-Old "Close Window" button:
-
-{% post_image hashed_id: '8e1ff5f3c1567e94c391396cf673b85fc9195cb8', width: 182, class: 'float_left' %}
-
-New "Close Window" button:
-
-{% post_image hashed_id: '2edb1da4306f8af6487e8c5f76883a42d2c7b549', width: 182, class: 'float_left' %}
+{% post_image hashed_id: 'b2ac3a58664d9dd01a1c71d015d1644fc441e524', width: 481, class: 'float_left' %}
 
 ## How to Update Your Embeds
 
