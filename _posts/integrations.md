@@ -3,7 +3,7 @@ title: Integrations
 layout: post
 category: integrations
 description: Wistia plays well with lots of 3rd party services. See some of the best, and how to use them, in this article.
-post_intro: <p>As we update our embedding processes and APIs, Wistia will get better and better at integrating with other top-notch services. On this doc page, we'll do our best to keep track of places where Wistia works out-of-the-box for embedding, and also where deeper integrations have been built out by our awesome friends.</p><p>If you currently use a service that you think rocks, and would work well with Wistia, submit your request in <a href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
+post_intro: <p>As we update our embedding processes and APIs, Wistia will get better and better at integrating with other top-notch services. On this page, we'll do our best to keep track of places where Wistia works out-of-the-box for embedding, and also where deeper integrations have been built out by our awesome friends.</p><p>If you currently use a service that would work well with Wistia, submit your request using <a href="https://docs.google.com/a/wistia.com/forms/d/1x2Z2KUdxXKhPYpfzfQJLVq7upAnhryBWZt2Y4IUPiTs/viewform" target="_blank">this form</a>.</p>
 footer: 'for_intermediates'
 ---
 
@@ -25,7 +25,9 @@ Using [Turnstile]({{ '/turnstile' | post_url }}) to collect viewer emails? Take 
 * [Ontraport](https://ontraport.com/)
 * [Pardot]({{ '/pardot#collect_contact_information_with_turnstile' | post_url }})
 
-To set up your Turnstile integration, head over to the Integrations page of your account settings.
+To set up your Turnstile integration, head over to the Integrations page of your account settings:
+
+{% post_image hashed_id: 'c2f26f8bf16e4fff71424ba6461643fe6623eb20', class: 'integration_logo' %}
 
 ## Link in Email Campaign Integrations
 
@@ -66,7 +68,7 @@ We've built Advanced Data Integrations with [HubSpot](http://hubspot.com), [Mark
 
 Using the [HubSpot integration](http://knowledge.hubspot.com/how-to-integrate-hubspot-and-wistia) with Wistia, you can get all your HubSpot customer data in the same spot for prime data organization.
 
-You can learn how to set this up over on [HubSpot's site](http://knowledge.hubspot.com/how-to-integrate-hubspot-and-wistia) or [in our docs]({{ '/hubspot' | post_url }})
+You can learn how to set this up over on [HubSpot's site](http://knowledge.hubspot.com/how-to-integrate-hubspot-and-wistia) or [in our docs]({{ '/hubspot' | post_url }}).
 
 ## Marketo
 
@@ -87,6 +89,8 @@ Read up on the [Pardot integration page]({{ '/pardot' | post_url }}).
 
 ## CMS Integrations
 
+On the lookout for a content management system that plays well with Wistia embeds? Here's a good place to start!
+
 * [Drupal](https://www.drupal.org/project/field_wistia) *(Note: Wistia embed codes have only been tested and verified through Drupal v6.)*
 * [MotoCMS](http://www.motocms.com/)
 * [Portfoliobox](https://www.portfoliobox.net/)
@@ -97,10 +101,13 @@ Read up on the [Pardot integration page]({{ '/pardot' | post_url }}).
 * [WordPress]({{ "/wordpress" | post_url }})
 
 ## Social Sharing
+
+Head over to our [Social Sharing page]({{ '/social-sharing' | post_url }}) to learn more about getting social with Wistia.
+
 * [Facebook]({{ '/social-sharing#facebook' | post_url }})
 * [Twitter]({{ '/social-sharing#twitter' | post_url }})
 
-## Other Services Wistia Plays Well With
+## Other Services
 We love seeing Wistia videos out there in the wild. This is an incomplete list of services that make Wistia embed codes feel right at home.
 
 * [Basecamp](https://basecamp.com/)
@@ -112,5 +119,3 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * [Tumblr](http://tumblr.com)
 * [WildApricot](http://help.wildapricot.com/display/DOC/Adding+video+clips)
 * [Zapier](https://zapier.com/zapbook/wistia/)
-
-{{ "If you know of a service that plays well with Wistia that is not on this list, send it along! [Contact us](http://wistia.com/support/contact) and we'll give you a high five for it or something!" | alert }}
