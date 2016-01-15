@@ -2,7 +2,7 @@
 title: Updating Your Popover Embeds
 layout: post
 category: Developers
-description:
+description: Here's how to keep your popover embeds up to date.
 post_intro: <p> </p>
 footer: for_developers
 ---
