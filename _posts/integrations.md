@@ -9,7 +9,7 @@ footer: 'for_intermediates'
 
 ## Turnstile Integrations
 
-Using [Turnstile]({{ '/turnstile' | post_url }}) to collect viewer emails? Take it one step further and have them passed to your email service provider! If you're on a Pro or Enterprise plan, you can configure Turnstile with these platforms:
+Using [Turnstile]({{ '/turnstile' | post_url }}) to collect viewer emails? Take it one step further and have them passed to your email service provider! You can configure Turnstile with these platforms:
 
 * [Act-On](https://www.act-on.com/apexpartners/wistia/)
 * [ActiveCampaign](http://www.activecampaign.com/apps/wistia)
