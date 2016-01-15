@@ -11,6 +11,14 @@ footer: for_developers
 On February 1, 2016, Wistia will be making a change to one of our CDN providers.
 This update will affect old popover embeds created before October 2015.
 
+We’re making a change to Wistia's infrastructure that will deprecate old popover
+embeds.
+
+If you’re affected, you’ll need to replace the old code with the new popover
+code. The good news is that this change will improve the user experience for you
+and your viewers, since the new popovers embeds are more reliable and
+versatile.
+
 Normally, your popover embeds should look like this:
 
 {% post_image hashed_id: 'e68302eec90c3ed124c7ba83e1c8f495f61c7fc2', width: 408, class: 'float_left' %}
@@ -19,14 +27,6 @@ But because of the upcoming changes to Wistia's infrastructure, they may break
 and look like this:
 
 {% post_image hashed_id: '84f1748dd49f21969df879edebae557fc666370a', width: 408, class: 'float_left' %}
-
-We’re making a change to Wistia's infrastructure that will deprecate old popover
-embeds.
-
-If you’re affected, you’ll need to replace the old code with the new popover
-code. The good news is that this change will improve the user experience for you
-and your viewers, since the new popovers embeds are more reliable and
-versatile.
 
 ## Why Are We Making This Change?
 
@@ -44,6 +44,8 @@ You will need to re-embed your videos using the new popover embed code. If your
 account was affected, your Account Owner should have received an email with a
 list of the embeds that you’ll need to replace.
 
+Don't worry, at the bottom of this page you'll see step by step instructions to create a new popover embed code.
+
 ### Why is the New Popover Embed Code Better?
 
 We released a new, more robust version of our popover embed back in October.
@@ -52,10 +54,11 @@ We released a new, more robust version of our popover embed back in October.
 - The new popover embed is responsive just like our inline embed, which means it can adapt to your website’s style based on the device or size of the browser window.
 - The best part is that the new popover embed comes with Wistia's full [SEO benefits](http://wistia.com/blog/seo-standard-embed). Once you embed a popover, JSON-LD metadata is injected directly onto your page, giving it an SEO boost.
 
-
 ## Where Are My Old Popovers Embedded?
 
-If you've forgetten where your old popover embeds live, you can go to the
+If you're on this page, you've received an email with a list of embeds that will need to be updated.
+
+If you've forgotten where your old popover embeds live, you can go to the
 [media stats page]({{ '/embedded-video-analytics#medialevel_trends' | post_url }}) for
 the videos we shared with you and open any viewers' heatmap. Here, you'll find
 the URL where the video was viewed, and voilà, now you know which page you’ll
