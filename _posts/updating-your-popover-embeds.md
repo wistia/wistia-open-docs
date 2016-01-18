@@ -9,7 +9,7 @@ footer: for_developers
 ### Updating Popover Embeds Before February 1, 2016
 
 On February 1, 2016, Wistia will be making a change to one of our CDN providers.
-This infrastructure update will affect old popover embeds created before October 2015.
+This infrastructure update will affect old popover embeds using SSL created before 2013.
 
 If your popover embeds are affected, you’ll need to replace the old code with the new popover
 code. The good news is that this change will improve the user experience for you
@@ -74,7 +74,7 @@ embed code in comparison to the new one.
 Your **old** popover embed code will look something like this:
 
 {% codeblock popover_example.html %}
-<a href="//fast.wistia.net/embed/iframe/elhrbf4rb?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]"><img src="https://embed.wistia.com/deliveries/kehrb3i4978bq38ofybq4o8ff4y28yf2edwrg/file.jpg" /></a>
+<a href="https://wistia.sslcs.cdngc.net/embed/iframe/elhrbf4rb?popover=true" class="wistia-popover[height=360,playerColor=84afde,width=640]"><img src="https://embed.wistia.com/deliveries/kehrb3i4978bq38ofybq4o8ff4y28yf2edwrg/file.jpg" /></a>
 <script charset="ISO-8859-1" src="http://fast.wistia.com/assets/external/popover-v1.js"></script>
 {% endcodeblock %}
 
@@ -84,7 +84,7 @@ Your **new** popover embed code will look something like this:
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_k9bmbixozg popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:207px;width:368px">&nbsp;</span>
 {% endcodeblock %}
 
-While the codes are different, the popover player works the exact same way. One
+While the codes are different, the popover player looks essentially the same. One
 of the only big differences is that the "Close Window" icon has been redesigned
 and simplified.
 
@@ -95,7 +95,7 @@ and simplified.
 Head to the **Video Actions** dropdown menu for your video and choose **Embed &
 Share**. Navigate to the *Popover Embed* tab. It will look like this:
 
-{% post_image hashed_id: 'ddb4224153a60be9cc27bc82523355d78515679a', width: 714, class: 'float_left' %}
+{% post_image hashed_id: '37fd34104202d643c8f759fcdfd81d2fc286d8f7', width: 714, class: 'float_left' %}
 
 You can customize the display of your popover using the *Options* box. Plus,
 with the new popover embed, you can now have a responsive thumbnail!
