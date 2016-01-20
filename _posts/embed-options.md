@@ -57,7 +57,7 @@ _wq.push({ "5bb": {
       lowerText: "Thanks in advance!"
     }
   }
-});
+}});
 </script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5" style="width:640px;height:360px;">&nbsp;</div>
@@ -328,7 +328,7 @@ _wq.push({ "5bb": {
       askName: true
     }
   }
-});
+}});
 </script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_5bbw8l7kl5" style="width:640px;height:360px;">&nbsp;</div>
@@ -511,8 +511,7 @@ _wq.push({ "4d8": {
       buttons: "embed-twitter-facebook"
     }
   }
-}
-});
+}});
 </script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_4d8229898d" style="width:640px;height:360px;">&nbsp;</div>
@@ -532,8 +531,7 @@ _wq.push({ "4d8": {
       pageTitle: "Wistia's Blog"
     }
   }
-}
-});
+}});
 </script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_embed wistia_async_4d8229898d" style="width:640px;height:360px;">&nbsp;</div>
