@@ -511,6 +511,7 @@ _wq.push({ "4d8": {
       buttons: "embed-twitter-facebook"
     }
   }
+}
 });
 </script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -531,6 +532,7 @@ _wq.push({ "4d8": {
       pageTitle: "Wistia's Blog"
     }
   }
+}
 });
 </script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
