@@ -41,10 +41,13 @@ Next, select *Embed & Share* from the <span class="action_menu">Video Actions</s
 
 ### Select Your Email Marketing Provider
 
-Select <strong>Link in Email Campaign</strong>, then select your provider from the drop-down list.  We've got a whole list of
-the best in the biz, like [Constant Contact](http://constantcontact.com),
-[MailChimp](http://mailchimp.com), [Campaign Monitor](http://www.campaignmonitor.com),
-and [Mad Mimi](http://madmimi.com).
+Select **Link in Email Campaign** tab, in the *Embed & Share* modal, and choose
+your provider from the drop-down list.  We've got a whole list of the best in
+the biz, like [Constant Contact](http://constantcontact.com),
+[MailChimp](http://mailchimp.com),
+[Campaign Monitor](http://www.campaignmonitor.com),
+and [Mad Mimi](http://madmimi.com). Check out our
+[integrations page]({{ '/integrations' | post_url}}) for the full list!
 
 {% post_image hashed_id: 'd7b89dafd94baf1a5f103bf7ffea346ba3dcb126', class: 'center' %}
 
@@ -81,59 +84,59 @@ of your account).
 
 ## Advanced Email Marketing Integration
 
+Wistia provides a good smattering of email merge tags right within the app. But if
+you'd like the construct your own, read on!
+
 ### Using Dynamic Links in Email Marketing Services
 
-{{ "Using the <strong>Link in Email Campaign</strong> steps outlined above? You're all set, then! No need to construct dynamic links." | note }}
+{{ "Using the <strong>Link in Email Campaign</strong> steps outlined above? You're all set, then! No need to construct dynamic links." | alert }}
 
 ### Step 1: Upload and embed the video
 
 As mentioned above, the video that you wish people to view needs to be viewable
-at a publicly accessible web page.  To do this, you will need to upload your
-video to your Wistia account and then embed it on a page on your website.  For
-instructions on how to do that see the following Quickstart articles:
+at a publicly accessible web page. To do this, you will need to upload your
+video to your Wistia account and then embed it on a page on your website. For
+instructions on how to do that see the following help pages:
 
 * [How to upload]({{ '/upload-video' | post_url }})
 * [How to embed]({{ '/embedding' | post_url }})
 
----
-
 ### Step 2: Construct the dynamic link
 
-The way that Wistia is able to attach views of your video on your website to
-individual email addresses is through the use of a special hyper-link called a
-dynamic link. It is called a dynamic link because it uses the mail merge
-capabilities of your email marketing provider to create a personalized URL for
-every person in your mailing list. The dynamic link created here is what will
-be input into your email marketing tool to create the link that your users will
-click on to view your video.
+Wistia attaches views of your video on your website to individual email
+addresses through the use of a special hyperlink called a *dynamic link*.
+Dynamic links use the mail merge capabilities of your email marketing provider
+to create a personalized URL for every person in your mailing list.
 
-First, start with the URL of the page where you embedded your video.  As an
+The dynamic link we make here should be input into your email marketing tool to create
+the link that your users will click on to view your video. Then we can start
+tracking!
+
+First, start with the URL of the page where you embedded your video. As an
 example, let's say your video was embedded on the following page:
 
-<code class="full_width">http://wistia.com/solutions/video_marketing</code>
+<code class="full_width">http://wistia.com/library/shooting-video-with-an-iphone</code>
 
 Next, we add a [query string parameter](http://en.wikipedia.org/wiki/Query_string.html)
-to this URL where the user's email will be passed.  The query string parameter
+to this URL where the user's email will be passed. The query string parameter
 to add here is: `?wemail=`
 
 Which gives a resulting URL of:
 
-`http://wistia.com/solutions/video_marketing?wemail=`
+`http://wistia.com/library/shooting-video-with-an-iphone?wemail=`
 
 If the URL where your video was embedded already contains a query string, i.e.:
 
-`http://wistia.com/solutions/video_marketing?test=true`
+`http://wistia.com/library/shooting-video-with-an-iphone?test=true`
 
 then simply add an ampersand before the `wemail=`:
 
-`http://wistia.com/solutions/video_marketing?test=true&wemail=`
-
----
+`http://wistia.com/library/shooting-video-with-an-iphone?test=true&wemail=`
 
 ### Step 3: Finish and use the dynamic link
 
 The final step to finish the dynamic link is to add the email merge tag from
-your email marketing tool.  A merge tag is a special character that your email
+your email marketing tool. A merge tag is a special character that your email
 marketing client uses to personalize your email for each individual recipient.
 
 It is necessary to find out:
@@ -142,53 +145,54 @@ It is necessary to find out:
 2.  What the URL email merge tag is for your email marketing tool
 
 We have compiled a [growing list]({{ '/email-marketing#email_clients_that_support_dynamic_links' | post_url }})
-of email marketing tools and created a table to show whether they support
-dynamic links and if so what the URL email merge tag is for that tool.
+of email marketing tools, and we've created a table what the URL email merge tag
+ is for that tool.
 
-Let's assume, for an example, that we are using MailChimp as our email
-marketing tool.  MailChimp does support dynamic links and the URL email
-merge tag is: `*|URL:EMAIL|*`
+Let's assume, for an example, that we are using INinbox as our email
+marketing tool.  The URL email merge tag for INinbox is: `##email##`
 
 To complete the dynamic link, we simply append this URL email merge tag to the
 end of the link created in Step #2.  The result is:
 
-`http://wistia.com/solutions/video_marketing?test=true&wemail=*|URL:EMAIL|*`
+`http://wistia.com/library/shooting-video-with-an-iphone?test=true&wemail=##email##`
 
-This is the link that can be used in your email marketing campaign.  Your finished link in HTML might look something like the following:
+This is the link that can be used in your email marketing campaign. Your
+finished link in HTML might look something like the following:
 
-`&lt;a href="http://wistia.com/solutions/video_marketing?test=true&wemail=*|URL:EMAIL|*"&gt;See our short 30 second video!&lt;/a&gt;`
+`&lt;a href="http://wistia.com/library/shooting-video-with-an-iphone?test=true&wemail=##email##"&gt;See our short 30 second video!&lt;/a&gt;`
 
----
 
 ### The Results
 
 When someone clicks the dynamic link in your email campaign, they will be taken
-to the page on your site containing the embedded video.  Wistia will capture
-the user's email address and will associate it with that person's viewing of
-video on your website.
+to the page on your site containing the embedded video. Wistia will capture
+the user's email address and associate it with that person's viewing session on
+your website.
 
-When you view the statistics for your video you will see analytics for each
-person who clicked through from your email campaign as shown in the following
-example:
+When you view the [stats]({{ '/embedded-video-analytics#media_level_trends' | post_url }})
+for your video you'll see analytics for each person who clicked through from
+your email campaign as shown in the following example:
 
 {% post_image hashed_id: '96221f9edb1dab5794bdca3c634426dfb1d48189', class: 'center' %}
 
-This data can also be exported to a spreadsheet as well using Wistia's
-[Stats Export feature]({{ '/stats-api' | post_url }}) to help you more easily
-sort through large data sets.
+You can see this data in the [Audience page](https://my.wistia.com/stats/audience) too!
 
-By having a true read on individual viewer engagement, you will know who is
-interested and who is not based on how each viewer watched your content and
-how much time they spent doing so.  This information allows you to score (rank)
-your leads, target future follow-up with pin-point precision, and calculate the
-return on investment of your campaigns.
+Additionally, this data can also be exported to a spreadsheet using the
+[export to CSV]({{ '/embedded-video-analytics#exporting_media_stats' | post_url }})
+feature on the stats media page, or via Wistia's [Stats API]({{ '/stats-api' | post_url }}),
+to help you more easily sort through large data sets.
+
+This true read on individual viewer engagement allows you to know who your most
+interested viewers are. From there you can score your leads, track future
+communications with pin-pointed precision, and calculate the ROI of your
+campaigns.
 
 ### Email Clients That Support Dynamic Links
 
 The following is a table that includes the email clients we have encountered
 that support dynamic links, and the merge tags needed to take advantage of them.
-Some of them are not included in the product itself - directions for using them are
-given in the following section.
+Some of them are not included in the product itself - directions for use are
+given in the previous section.
 
 Provider  |  URL Email Merge Tag
 ----------|----------------------
@@ -200,14 +204,14 @@ Constant Contact | `$SUBSCRIBER.EMAIL$`
 Emailvision  |  `[EMV FIELD]EMAIL[EMV /FIELD]`
 Emma  | `[[email]]`
 GetResponse  |  `[email]`
-Hubspot  | `{ contact.email }`
+HubSpot  | `{ contact.email }`
 iContact  |  `[email]`
 Infusionsoft  |  `~Contact.Email~`
 Mad Mimi | `(email)`
 MailChimp  |  `*|URL:EMAIL|*`
 Marketo  |  `{lead.Email Address:default=noemail}`
-Ontraport v2.4 | `[E-mail]`
-Ontraport v3.0+ | `[Email]`
+ONTRAPORT v2.4 | `[E-mail]`
+ONTRAPORT v3.0+ | `[Email]`
 Pardot  |  `%%email%%`
 Vertical Response  |  `{EMAIL_ADDRESS}`
 ExactTarget  |  `%%Email Address%%`
