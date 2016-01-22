@@ -176,8 +176,6 @@ list of services that make Wistia embed codes feel right at home. 💕
 * [Medium](https://medium.com/@Medium/embed-videos-tweets-music-and-more-into-your-medium-stories-3b5c09c116e8#.19w34ocuw)
 * [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)
 * [Slack](https://slack.com/)
-* [Tumblr](http://tumblr.com)
-* [WildApricot](http://help.wildapricot.com/display/DOC/Adding+video+clips)
 * [Zapier](https://zapier.com/zapbook/wistia/)
 * [Zendesk](https://support.zendesk.com/hc/en-us/articles/203660446-How-to-embed-videos-in-your-articles)
 
