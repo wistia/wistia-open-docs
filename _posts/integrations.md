@@ -115,6 +115,7 @@ We love seeing Wistia videos out there in the wild. This is an incomplete list o
 * [Delivr](http://blog.delivr.com/post/87004293105/delivr-adds-support-for-wistia-video-hosting-platform)
 * [Medium](https://medium.com/@Medium/embed-videos-tweets-music-and-more-into-your-medium-stories-3b5c09c116e8#.19w34ocuw)
 * [ProjectManager.com](https://www.projectmanager.com/integrations-more)
+* <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_8b0y8pzuwg popover=true popoverContent=link" style="display:inline"><a href="#">Slack</a></span>
 * [Shopify](http://docs.shopify.com/manual/configuration/store-customization/embed-video)
 * [Tumblr](http://tumblr.com)
 * [WildApricot](http://help.wildapricot.com/display/DOC/Adding+video+clips)
