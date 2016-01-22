@@ -1,5 +1,5 @@
 ---
-title: Integrations
+title: Integrations Index
 layout: post
 category: integrations
 description: Wistia plays well with lots of 3rd party services. See some of the best, and how to use them, in this article.
