@@ -99,7 +99,7 @@ news feed.
 
 {{ "Wistia videos won't play inline in the Facebook mobile app; they'll open in a web page in a new panel." | note }}
 
-### The Facebook Like Button
+## The Facebook Like Button
 
 If you've turned on the *[Social Bar]({{ '/customizing-your-video#social_bar' | post_url }})*
 for your video, you might be wondering what all those Likes next to the Facebook
@@ -117,6 +117,34 @@ pressing the Like button would be Liking the Jeff's Lemonade site instead of the
 Wistia help page containing the video.
 
 You can read more about customizing the *Social Bar* on our [Customizing Your Video]({{'/customizing-your-video#social_bar' | post_url }}) help page!
+
+## Updating Your Thumbnail on Facebook
+
+Sometimes you're just not happy with the thumbnail that displays for your video,
+[it happens to all of us](http://wistia.com/blog/common-thumbnail-mistakes).
+So you head to the [Customize panel]({{'/customizing-your-video#changing_the_thumbnail' | post_url }})
+and update that beautiful thumbnail. Super easy, right?
+
+But when you go to Facebook the new thumbnail doesn't show up for your video no
+matter how many times you reload the page or repost the video. Bummer!
+
+Stay calm, video friend. The good news is that we've got a solution:
+[The Facebook Debugger](http://developers.facebook.com/tools/debug/)!
+
+The Facebook Debugger allows you to input your video's URL so that Facebook will
+re-scrape it for its metadata (like the video thumbnail). When you share content
+on Facebook, the shared page often contains
+[Open Graph tags](https://developers.facebook.com/docs/sharing/webmasters)
+that tell Facebook which information about your video to display for your post.
+[OG tags]({{ '#posting_to_facebook_from_your_website' }}) include your
+thumbnail, as well as things like the title and description.
+
+The problem with updating your thumbnail is that Facebook will only
+automatically re-scrape this information
+[every 30 days](https://developers.facebook.com/docs/sharing/opengraph/using-objects#update).
+When you put your video's URL into the Facebook Debugger, you are letting
+Facebook know that it should re-scrape your video's metadata. This will update
+its cache for your video and display your cool new thumbnail. 👍
 
 ### Posting to Facebook from Your Website
 
