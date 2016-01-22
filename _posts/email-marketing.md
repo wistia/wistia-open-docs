@@ -41,7 +41,7 @@ Next, select *Embed & Share* from the <span class="action_menu">Video Actions</s
 
 ### Select Your Email Marketing Provider
 
-Select your provider from the drop-down list.  We've got a whole list of
+Select <strong>Link in Email Campaign</strong>, then select your provider from the drop-down list.  We've got a whole list of
 the best in the biz, like [Constant Contact](http://constantcontact.com),
 [MailChimp](http://mailchimp.com), [Campaign Monitor](http://www.campaignmonitor.com),
 and [Mad Mimi](http://madmimi.com).
@@ -82,6 +82,8 @@ of your account).
 ## Advanced Email Marketing Integration
 
 ### Using Dynamic Links in Email Marketing Services
+
+{{ "Using the <strong>Link in Email Campaign</strong> steps outlined above? You're all set, then! No need to construct dynamic links." | note }}
 
 ### Step 1: Upload and embed the video
 
@@ -143,8 +145,8 @@ We have compiled a [growing list]({{ '/email-marketing#email_clients_that_suppor
 of email marketing tools and created a table to show whether they support
 dynamic links and if so what the URL email merge tag is for that tool.
 
-Let's assume, for an example, that we are using Mail Chimp as our email
-marketing tool.  Mail Chimp does support dynamic links and the URL email
+Let's assume, for an example, that we are using MailChimp as our email
+marketing tool.  MailChimp does support dynamic links and the URL email
 merge tag is: `*|URL:EMAIL|*`
 
 To complete the dynamic link, we simply append this URL email merge tag to the
