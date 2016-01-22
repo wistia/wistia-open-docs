@@ -26,7 +26,7 @@ configure Turnstile with these platforms:
 * [Infusionsoft](http://www.infusionsoft.com)
 * [MailChimp]({{ '/mailchimp#the_mailchimpwistia_integration' | post_url }})
 * [Marketo]({{ '/marketo#collect_leads_with_turnstile' | post_url }})
-* [ONTRAPORT](https://ontraport.com/)
+* [ONTRAPORT](http://support.ontraport.com/entries/23134369-Wistia-Integration)
 * [Pardot]({{ '/pardot#collect_contact_information_with_turnstile' | post_url }})
 
 To set up your Turnstile integration, you'll need to be an **Account Owner**.
@@ -73,7 +73,7 @@ it. Wistia supplies email merge tags for the following providers:
 * [Mad Mimi](https://madmimi.com/wistia)
 * [MailChimp]({{ '/mailchimp#create_your_merge_tag' | post_url }})
 * [Marketo]({{ '/marketo#add_video_thumbnail_links_to_your_emails' | post_url }})
-* [ONTRAPORT](https://ontraport.com/)
+* [ONTRAPORT](http://support.ontraport.com/entries/23134369-Wistia-Integration)
 * [Pardot]({{ '/pardot#add_video_to_your_email_campaigns' | post_url }})
 * [Sendible](http://sendible.com/)
 * [VerticalResponse](http://www.verticalresponse.com/)
