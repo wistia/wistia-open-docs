@@ -22,12 +22,12 @@ configure Turnstile with these platforms:
 * [Constant Contact](http://www.constantcontact.com/)
 * [Emma](http://myemma.com/email-marketing-integrations/cms-email-integration/wistia)
 * [GetResponse](http://www.getresponse.com/)
-* [HubSpot]({{ '/hubspot#turnstile' | post_url }}) (Enterprise)
+* [HubSpot]({{ '/hubspot#turnstile' | post_url }}) *(only available with an Enterprise plan)*
 * [Infusionsoft](http://www.infusionsoft.com)
 * [MailChimp]({{ '/mailchimp#the_mailchimpwistia_integration' | post_url }})
-* [Marketo]({{ '/marketo#collect_leads_with_turnstile' | post_url }}) (Enterprise)
+* [Marketo]({{ '/marketo#collect_leads_with_turnstile' | post_url }}) *(Enterprise)*
 * [ONTRAPORT](http://support.ontraport.com/entries/23134369-Wistia-Integration)
-* [Pardot]({{ '/pardot#collect_contact_information_with_turnstile' | post_url }}) (Enterprise)
+* [Pardot]({{ '/pardot#collect_contact_information_with_turnstile' | post_url }}) *(Enterprise)*
 
 To set up your Turnstile integration, you'll need to be an **Account Owner**.
 Navigate to **Account > Settings** and choose **Integrations** from under
