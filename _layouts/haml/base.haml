@@ -26,9 +26,6 @@
 
     %link{href: "//cloud.typography.com/6901872/779304/css/fonts.css", rel: "stylesheet", type: "text/css"}/
 
-    / Swiftype search
-    {% include swiftype_includes.html %}
-
     :javascript
       var basepath = "{{ '' | post_url }}";
   %body{ class: "{{ page.type }}_layout" }
@@ -39,8 +36,8 @@
     #container{ class: "{% if page.api %}api{% endif %}{% if page.type == 'devhq'%}devhq{% endif %}" }
       {{ content }}
 
-    -# This custom Swiftype HACK appends a source identifier to the search result URL
-    {% include swiftype_hack.html %}
+    -# Swiftype search
+    {% include swiftype_installer.html %}
 
     {% include footer.html %}
     {% include getCookie.html %}
