@@ -81,9 +81,10 @@ the video and make it easy to share the video in social networks.
 
 {% post_image hashed_id: '6315a5aa70d7d5aa1d672fc6453f0115ed3127c9', class: 'float_right', width: 300 %}
 
-The Social Bar has a bunch of options, from social networks like Twitter and
-Facebook to actions like *Email* and *Download*. You can learn more about what
-the Facebook button is liking on our [Social Sharing]({{'/social-sharing#the_facebook_like_button' | post_url }}) help page!
+The Social Bar has a bunch of button options, from social networks like Twitter and
+Facebook to actions like *Email* and *Download*. If you're curious, you can
+learn more about the Facebook like button on our
+[Social Sharing]({{'/social-sharing#the_facebook_like_button' | post_url }}) help page!
 
 ### Configuring the Social Bar Buttons
 
