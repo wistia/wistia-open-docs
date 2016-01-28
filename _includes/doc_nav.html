@@ -6,7 +6,7 @@
         <li id='breadcrumbs'>
           <a href='http://wistia.com/support' style='padding-left: 0;'>Help Center</a>
           <span class='breadcrumb_post_title'>
-            <img src="{{ '/images/greaterThan.png' | image_url }}">
+            <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {% if page.type %}
             {% case page.type %}{% when 'category' %}{{ page.category }}{% when 'search' %} Search {% endcase %}
             {% else %}
@@ -19,7 +19,7 @@
           {% if page.category && page.category != 'no_index' %}
           <a href='http://wistia.com/support'>Help Center</a>
           <span class='breadcrumb_post_title'>
-            <img src="{{ '/images/greaterThan.png' | image_url }}">
+            <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {% if page.special_category_link %}
             {% case page.special_category_link %}
             {% when "developers" %}
@@ -35,15 +35,13 @@
           <a href='http://wistia.com/support'>Help Center</a>
           {% endif %}
           <span class='breadcrumb_post_title'>
-            <img src="{{ '/images/greaterThan.png' | image_url }}">
+            <img src="{{ '/images/greaterThan.png' | image_url }}" />
             {{ page.title }}
           </span>
         </li>
         {% endif %}
         <li class='doc_nav_search' id='search'>
-          <form>
-            <input class='st-default-search-input' id='searchField' placeholder='Search our Help Pages' type='text'>
-          </form>
+          <input class='st-default-search-input' id='searchField' placeholder='Search our Help Pages' type='text' />
         </li>
       </ul>
     </div>

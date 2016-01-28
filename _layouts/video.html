@@ -32,26 +32,30 @@ layout: base
     </div>
   </div>
 </div>
-<script>
-  $('.chapter_link').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop: $('#video-container').offset().top
-    }, 500);
-  });
+<script type='text/javascript'>
+  //<![CDATA[
+    $('.chapter_link').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('#video-container').offset().top
+      }, 500);
+    });
+  //]]>
 </script>
-<script>
-  var url = window.location.href.toString();
-  var playInterval;
-  if (url.indexOf('hf') != -1 || url.indexOf('hm') != -1)
-  {
-    playInterval = setInterval(autoPlay, 100);
-  }
-  function autoPlay()
-  {
-    try{
-      wistiaEmbed.play();
-      clearInterval(playInterval);
-    } catch (e) {}
-  }
+<script type='text/javascript'>
+  //<![CDATA[
+    var url = window.location.href.toString();
+    var playInterval;
+    if (url.indexOf('hf') != -1 || url.indexOf('hm') != -1)
+    {
+      playInterval = setInterval(autoPlay, 100);
+    }
+    function autoPlay()
+    {
+      try{
+        wistiaEmbed.play();
+        clearInterval(playInterval);
+      } catch (e) {}
+    }
+  //]]>
 </script>
