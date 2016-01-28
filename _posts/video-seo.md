@@ -3,16 +3,13 @@ title: Video SEO
 layout: post
 category: embed and share
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
-post_intro: <p>Video SEO is the practice of providing the metadata (or "information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia provides both recommended approaches to Video SEO - using what's called a "video sitemap", and also utilizing specific markup in the on-page embed code. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
+post_intro: <p>Video SEO is the practice of providing the metadata (or "information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia gets this metadata on your page by injecting JSON-LD into your webpage's header. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
 footer: 'for_beginners'
 ---
 
 ## What is Video SEO?
 
-Confused on what Video SEO is? Not to worry, we'll get you started right. Watch
-this introduction from Ezra, Director of the Wistia Marketing team.
-
-{% wistia_embed hashed_id: 2u20d12eg4 %}
+Confused on what Video SEO is? Not to worry, we'll get you started right.
 
 Some key take-aways:
 
@@ -20,12 +17,6 @@ Some key take-aways:
 * Research shows Google prefers videos to other search results.
 * Using the recommended markup makes it easier for Google to discover and index
   your content.
-
-The two recommended ways to help web crawlers find and index your content are
-**on-page markup** (which comes in embed codes) and **video sitemaps**. Wistia
-provides functionality for both approaches, which we cover below.
-
-----
 
 
 ## On-page Markup for Video SEO
@@ -50,117 +41,7 @@ If you ever change that information in Wistia, it will automatically be updated 
 For even more information on embedding, check out the [Embedding]({{ '/embedding' | post_url }}) guide.
 
 
-## Creating a Video Sitemap
-
-{% wistia_embed hashed_id: 38bcf1939d %}
-
-Video Sitemaps are a metadata document that must follow a pretty rigid syntax
-([here's an example](http://app.wistia.com/sitemaps/4721.xml)). They
-can be complex to make and a mess to keep up-to-date. Wistia can create, host,
-and submit your video sitemap for you, and also update it for new content.
-
-To create a video sitemap, we have to go through a few set up steps. These
-steps are a one-time thing, and you won't have to do it for each video or for
-each update.
-
-Here are the two steps we need to complete:
-
-  1. Add *Sitemap* line provided to your site's `robots.txt` file, then verify it.
-  2. Create a `video sitemap entry` for each video you want embedded and indexed.
-
-The first thing we need to do is authorize Wistia to host your video sitemap
-and reference pages on your site. This is done through the robots.txt file on
-your web server.
-
-## Robots.txt File Setup
-
-When search engines crawl your web content they refer to a file called
-`robots.txt` in the root of your website. This file tells search engines what
-to index on your site and also where your video sitemap is located.
-
-The robots.txt file also informs search engines about sitemaps that exist for
-your website. To see your robots.txt file, open your browser and head to
-`yourdomainname.com/robots.txt` (substituting your domain name in).
-
-See the Wistia robots.txt file here:
-[http://wistia.com/robots.txt](http://wistia.com/robots.txt)
-
-A common SEO problem is accidentally blocking search engines from crawling your
-website with robots.txt. Make sure you allow search engines to crawl and find
-your content.
-
-* Make sure there is a line that looks like: `User-Agent: *`
-* If you see a `Disallow:` line in your robots.txt file, make sure
-it doesn't point to pages where your videos are embedded.
-
-### Creating a robots.txt file
-
-Creating a robots.txt file is different depending on the CMS or website
-management system you are using. In some cases, a robots.txt file might have
-been created for you, and in some CMS platforms, it is not editable.
-
-If you are self-hosting your site, you can create a robots.txt file, and add it
-to your site's root directory. To create a new robots.txt file, open a text
-editor (like TextEdit, Vim, or Word), and add the line:
-
-    User-Agent: *
-
-Add the Video Sitemap link as outlined below, then save the file as
-`robots.txt`.
-
-{{ "Even you cannot create or edit the robots.txt file for your website, you can still get SEO benefits using the [Standard inline embed code type]({{ '/embedding/inline_embeds' | post_url }})." | note }}
-
-
-### Adding the Video Sitemap URL
-
-You will be adding one line to your robots.txt file that notifies Google your
-video video sitemap is hosted by Wistia. To find the line you'll be adding for
-your account, open up the *Video SEO* area of your account, which can be found
-under the *Account* menu.
-
-{% post_image hashed_id: '9066ac8fec778db22277a2012c0c0be4439d1c2d', class: 'center' %}
-
-The three steps to getting your sitemap set up are also outlined on the Video
-SEO page in your account.
-
-{% post_image hashed_id: 'f4b03dbe2604ef4825da70899fec49d7b8bbf27f', class: 'center' %}
-
-Once you have added the line to your robots.txt and typed the URL, click the
-<span class="faux_button">VERIFY YOUR ROBOTS.TXT</span> button.
-This will retrieve your specified robots.txt and verify that the information is
-viewable by Google.
-
-{{ "Robots.txt do need to follow a certain format! Make sure yours is correct by [reviewing the guidelines](http://tool.motoricerca.info/robots-checker.phtml)." | note }}
-
-
-## Making a video sitemap entry
-
-{% post_image hashed_id: 'c65b0df80e77faa460ec36a24aaee1061ee0879e', class: 'center' %}
-
-Once you have verified the entry in your robots.txt file, you will be able to
-add entries to your video sitemap.  Once a video sitemap entry is made, it will
-be automatically picked up by Google and your content will be indexed
-according to Google's indexing queue.
-
-Making a new video sitemap entry is the fun part of the process! You get to
-talk all about your content and why it is valuable.
-
-After you have embedded a video on your website, go to your video's media page
-(i.e. the page in Wistia where you can view the video, which has a URL like
-`<youraccount>.wistia.com/medias/12345`).  Select *Add to SEO Sitemap* from the
-<span class="action_menu">Video Actions</span> menu.
-
-{% post_image hashed_id: '784a5ef4c90f5e393e9b55bdde8b9c6abbebbe00', class: 'center' %}
-
-This will then bring up a dialog box where you can enter the relevant
-information about your video (like tags, description).
-
-Enter your video's information, and click
-<span class="faux_button">Add to video sitemap</span>.  Your sitemap will then
-be automatically updated and the new changes that should be indexed.
-
-
-### Making Better Sitemap Entries
+### Managing your metadata
 
 **Title**
 
@@ -180,20 +61,9 @@ We’ve found that having 3 to 4 word descriptive tags works best for our
 videos. Don’t get too wordy with your tags and keep it simple.
 
 
-## Managing your video sitemap entries
+### How can I see what my metadata will look like?
 
-{% post_image hashed_id: '9066ac8fec778db22277a2012c0c0be4439d1c2d', class: 'center' %}
-
-Video sitemap entries can be managed from the video SEO dashboard within your
-Wistia account. Select *Video SEO* from under the *Account* menu.
-
-This will take you to the video SEO dashboard where you can:
-
-*  See all videos currently in your sitemap
-*  Edit the sitemap entries by clicking the "Edit" button on any entry
-*  Remove any entries that may no longer be valid using the "Remove" button
-
-{% post_image hashed_id: '6daa77704da771e666aebe6c8d7a0372ffab491b', class: 'center' %}
+We've got some good news. We've updated our Embed & Share module to include a dropdown menu that lets you look at all of the  
 
 ## Optimizing After Indexing
 
@@ -218,56 +88,8 @@ Choose a thumbnail that looks attractive for the topic at hand.
 {% post_image hashed_id: '53a36ccf4c2bfe6215f13d2d5523d5d919176224', class: 'center' %}
 
 
-## Adding Additional Domains
 
-{% post_image hashed_id: 'ca4b768ca28ebcdb98c56aca16357510954e8cac', width: 320, class: 'float_right' %}
 
-Adding more than one domain to your Video SEO in Wistia is easy to do.  After
-adding your first domain, a button will appear on the right bar in your Video
-SEO account section for adding additional domains (see the image at right).
-
-You will be prompted to walk through the same steps as adding your initial domain.
-
-## Host Your Own Video Sitemap
-
-The functionality we have designed is meant to *reduce* headaches around using
-Video SEO. There are some situations, however, when you might want use Wistia
-to build your Video Sitemap file, but self-host it somewhere else. This section
-will cover the steps to hosting and submitting a Video Sitemap file yourself.
-
-**Build your Video sitemap**
-
-In order for these steps to be useful, you must first go through the [normal
-Video SEO setup steps]('#getting_set_up'). You'll need to confirm your
-[Robots.txt file]('#robotstxt_file_setup'). Once that is complete, you can use
-the “Add to SEO Sitemap” function under the Media Actions menu to create new
-entries for your videos.
-
-**Export your Video sitemap**
-
-The next step is to export the Video sitemap Wistia built based on your metadata
-entries. To save the contents of your Video Sitemap file, navigate to the Sitemap
-URL (i.e. http://app.wistia.com/sitemaps/26547.xml), and then save that webpage.
-
-To track down the URL of the Sitemap, look under the help bubble (question mark
-icon) on the Video SEO tool page. See the screenshot below.
-
-{% post_image hashed_id: '0ca8fda6bfa40c2d95f99083f990225542b0a5e2', class: 'center' %}
-
-**Upload Video sitemap to your own host**
-
-Upload to your web host, the same way you might for a new web page or web page
-image. Doesn’t need to go anywhere in particular, just needs to be accessible
-by Google.
-
-**Submit Sitemap URL to Google Webmaster Tools**
-
-Follow [this guide](https://support.google.com/webmasters/answer/183669?hl=en)
-to make sure you submit your new Video Sitemap correctly.
-
-When you add a new video to your sitemap, you will need to re-export, replace
-the version you have on your end, and re-submit to Google. Annoying, but if our
-hosting paradigm doesn't work for some reason, this might be a good solution!
 
 ## Video SEO FAQ
 
@@ -275,11 +97,6 @@ Video SEO is tough, but valuable. Customers have asked us lots of questions
 about using our Video SEO tool for their video. We'll attempt to compile them
 here.
 
-### Do I still need to create an sitemap, or submit something to Google Webmaster Tools?
-
-Wistia tools take care of that process automatically for you.  We create a
-sitemap, add the videos you designate, and submit it through Google Webmaster
-Tools, all automatically.
 
 ### I thought only YouTube got indexed on Google search results? Should I have my video on both platforms?
 
@@ -295,10 +112,7 @@ place for them. If your goal is to encourage a *conversion event*, like a
 sign-up, subscription, or a share, then you want to drive viewers to your site
 to watch your video. That is where Video SEO can be a valuable tool.
 
-### I can't update my robots.txt file. What should I do?
-
-We don't create a sitemap for your account unless we can verify the robots.txt file is accurate. But don't worry! Search engines can identify and index your video content just by looking at the on-page markup alone. While the sitemap is still considered a *best practice*, it is
-no longer a must-have for Video SEO.
+#
 
 ### Can I use playlist embeds?
 
@@ -308,12 +122,6 @@ our tests it seemed required for the Google bots to have direct access to the
 video on the page, and immediately accessible to the visitor, in order to reap
 the benefits of video on page rankings.
 
-### Is hosting my video sitemap with Wistia ok? Will Google accept it?
-
-**Yes.** Google has made cross-submission support via a robots.txt file an
-accepted and efficient part of the SEO workflow.
-See [this article from the Google Webmaster Central Blog](http://googlewebmastercentral.blogspot.com/2008/02/cross-submissions-via-robotstxt-on.html)
-for more.
 
 ### It's been several days, when can I expect to see my video ranked in SERPs?
 
@@ -363,9 +171,8 @@ building your audience.
 For more information on video backlinks,
 [see the Customization docs]({{'/customizing-your-video#using_video_backlinks' | post_url}}).
 
-### Can I hear Ben talking about SEO?
+### Do I still need to create an sitemap, or submit something to Google Webmaster Tools?
 
-**Yes!** Our Video SEO expert, Ben, got up-close with the camera to talk about
-the business benefits of using Video SEO properly:
-
-{% wistia_embed hashed_id: b96bdea4c2, embedType: iframe %}
+Wistia tools take care of that process automatically for you.  We create a
+sitemap, add the videos you designate, and submit it through Google Webmaster
+Tools, all automatically.
