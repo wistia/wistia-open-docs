@@ -237,6 +237,6 @@ If you've built your own webpage you'll want to make sure the HubSpot tracking c
 
 Here's HubSpot's guide on adding your [tracking code](http://knowledge.hubspot.com/getting-started-with-hubspot/how-to-install-the-tracking-code-on-a-generic-website).
 
-{{ "The HubSpot tracking code can't be added to Wistia media pages. You'll need to embed your video in the wild in order to add the tracking code!" | alert }}
+{{ "Just a heads up, Wistia media pages don't have the HubSpot tracking code on them. You'll need to embed your videos out in the wild in order to start pulling data into HubSpot." | alert }}
 
-Still not working? We're happy to help! [Give us a holler](http://wistia.com/support/contact), and we'll jump on the case. :)
+Still not working? We're happy to help! [Give us a holler](http://wistia.com/support/contact), and we'll jump on the case. 🤓
