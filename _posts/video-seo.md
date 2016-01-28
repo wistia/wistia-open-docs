@@ -3,21 +3,25 @@ title: Video SEO
 layout: post
 category: embed and share
 description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
-post_intro: <p>Video SEO is the practice of providing the metadata (or "information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia gets this metadata on your page by injecting JSON-LD into your webpage's header. As a part of your marketing arsenal, following the proper metadata and markup conventions improves your video asset's presence on search engines.</p>
+post_intro: <p>Video SEO is the practice of providing the metadata ("information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia gets this metadata on your page by injecting JSON-LD into your webpage's header. As a part of your marketing arsenal, following the proper metadata and general SEO conventions improves your video asset's presence on search engines.</p>
 footer: 'for_beginners'
 ---
 
+## How does it work?
+
+All you have to do is put either our Standard embed or our Popover embed code onto your website. The JSON-LD file is automatically injected into the head of your website once your page is live. We handle all of the tricky stuff. No sitemaps, no extra coding, just copy and paste.
+
 ## What is Video SEO?
 
-Confused on what Video SEO is? Not to worry, we'll get you started right.
+Confused on what Video SEO is? Not to worry, we'll get you started right. Video SEO is the process of adding metadata to your website that a search engine can then read to see what's on your page. The video's metadata in the JSON-LD file will tell search engines what the video is about, how long it is and what thumbnail is could show in its results.
 
-Some key take-aways:
+Some important things to know:
 
 * Video data can show up in search results in the form of *rich snippets*.
 * Research shows Google prefers videos to other search results.
-* Using the recommended markup makes it easier for Google to discover and index
-  your content.
+* Using recommended markup makes it easier for Google to discover and index your content.
 
+Wistia's SEO functionality automatically includes the metadata that optimizes your web pages to be indexed by search engines.
 
 ## On-page Markup for Video SEO
 
@@ -27,6 +31,7 @@ When you have a standard Wistia embed on a page, it will place the following mar
 
 * **Name**: The title of your video, which you can set on the video's page in your account.
 * **Description:** A brief description of the video's content. It's important to write a description for each video, which you can do from the video's page in your account.
+* **Transcripts:** Your video's transcript is automatically formatted as metadata to let search engines see that your video has captions.
 * **Thumbnail URL:** The URL of the image search engines will use if they choose to display a preview of your video in the search results.
 * **Embed URL:** The URL of the page the video is embedded on.
 * **Duration:** How long is your video? The search engine won't know unless you tell it! So, this tells it for you.
@@ -60,10 +65,16 @@ for viewers, not for bots.
 We’ve found that having 3 to 4 word descriptive tags works best for our
 videos. Don’t get too wordy with your tags and keep it simple.
 
+**Transcripts**
+
+If your video has captions you can leverage that information to help your video get indexed with optimal context. If you want to see how you can add captions to your site, our [Captions help page](http://wistia.com/doc/captions#select_your_video) will show you how!
+
+
 
 ### How can I see what my metadata will look like?
 
-We've got some good news. We've updated our Embed & Share module to include a dropdown menu that lets you look at all of the  
+We've got some good news. We've updated our Embed & Share module to include a dropdown menu that lets you look at all of the aforementioned fields. It'll be easier than ever to see the same information that search engines are reading to help them rank your page.
+
 
 ## Optimizing After Indexing
 
@@ -112,7 +123,7 @@ place for them. If your goal is to encourage a *conversion event*, like a
 sign-up, subscription, or a share, then you want to drive viewers to your site
 to watch your video. That is where Video SEO can be a valuable tool.
 
-#
+
 
 ### Can I use playlist embeds?
 
