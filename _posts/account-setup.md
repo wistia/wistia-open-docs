@@ -152,7 +152,8 @@ To access those credentials for your account, select the API tab from your *Acco
 ## Integrations
 
 Want to integrate Wistia with your email service provider or marketing automation
-platform? This is the place to start setting it up!
+platform? This is the place to start setting it up! From your Account Settings just
+select **[Integrations](https://my.wistia.com/account/integrations)** under *Advanced*.
 
 {% post_image hashed_id: 'e240fa09932698de83f7cb7d2b20d23b1075849c', class: 'center' %}
 
