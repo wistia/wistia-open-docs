@@ -159,11 +159,11 @@ platform? This is the place to start setting it up!
 For more information about email and marketing automation integrations, head over
 to the [Integrations Index]({{ '/integrations' | post_url }}).
 
----
 ### Beta Features
 
 Here you can enable (or disable) new and experimental features! Fair warning:
-Beta Features may change, break, or be removed at any time.
+**Beta features may change, break, or be removed at any time**. For more information
+on Beta features check out our [Betapugs](http://wistia.com/beta) program.
 
 {% post_image hashed_id: '508d66c23dd4ddf08a51d1b8011de37c1620ec2d', class: 'center' %}
 
