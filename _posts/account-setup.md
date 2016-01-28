@@ -158,7 +158,25 @@ An API token and password can be used for interacting with the [Wistia APIs]({{ 
 
 To access those credentials for your account, select the API tab from your *Account Settings*.
 
+---
 
+## Integrations
+
+Want to integrate Wistia with your email service provider or marketing automation
+platform? This is the place to start setting it up!
+
+{% post_image hashed_id: 'e240fa09932698de83f7cb7d2b20d23b1075849c', class: 'center' %}
+
+For more information about email and marketing automation integrations, head over
+to the [Integrations Index]({{ '/integrations' | post_url }}).
+
+---
+## Beta Features
+
+Here you can enable (or disable) new and experimental features! Fair warning:
+Beta Features may change, break, or be removed at any time. 
+
+{% post_image hashed_id: '508d66c23dd4ddf08a51d1b8011de37c1620ec2d', class: 'center' %}
 
 ---
 
