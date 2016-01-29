@@ -29,10 +29,6 @@ type: post
 %script{ src: "{{ '/javascripts/jquery.scrollTo' | javascript_url }}" }
 %script{ src: "{{ '/javascripts/jquery.nav' | javascript_url }}" }
 
--# This custom Swiftype HACK appends a source identifier to the search result URL
-{% include swiftype_hack.html %}
-
-
 {% if page.api == true %}
 {% include toplink.html %}
 :javascript
