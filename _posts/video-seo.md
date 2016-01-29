@@ -35,7 +35,7 @@ file will tell search engines things like:
 
 Wistia's SEO functionality automatically includes this metadata in your website
 to optimize your site for search engine indexing. Using recommended markup makes
- it easier for Google to discover and index your content. Follow these steps to
+it easier for Google to discover and index your content. Follow these steps to
 make your video SEO game top notch.
 
 ## On-Page Markup for Video SEO
@@ -44,80 +44,90 @@ When search engines, like Google, crawl a page on your website, they can only
 identify and index a video properly if the page includes the right video
 markup. Google has
 [extensive technical documentation](https://developers.google.com/webmasters/videosearch/schema)
-about adding that markup, but you don't need to worry about it! Wistia's
-[Standard]({{ '/embedding#inline_embeds' | post_url }}) and [Popover]({{ '/embedding#popover_embed' | post_url }})
+about adding that markup (if you're feeling like a light read), but you don't
+need to worry about it! Wistia's
+[Standard]({{ '/embedding#inline_embeds' | post_url }}) and
+[Popover]({{ '/embedding#popover_embed' | post_url }})
 embeds automatically put that markup on the page for you.
 
-When you have a Standard Wistia embed on a page, it will place the following
+When you add a Standard Wistia embed on a page, we'll inject the following
 markup in the `<head>` section for search engines to find:
 
-* **Name**: The title of your video, which you can set on the video's page in your account.
-* **Description:** A brief description of the video's content. It's important to write a description for each video, which you can do from the video's page in your account.
-* **Transcripts:** Your video's transcript is automatically formatted as metadata to let search engines see that your video has captions.
-* **Thumbnail URL:** The URL of the image search engines will use if they choose to display a preview of your video in the search results.
-* **Embed URL:** The URL of the page the video is embedded on.
-* **Duration:** How long is your video? The search engine won't know unless you tell it! So, this tells it for you.
-* **Upload Date:** When the video uploaded to Wistia.
+* **Name**: The title of your video, which you [can set]({{ '/media#update_video_title' | post_url }}) on the video's page in your account.
+* **Description:** A brief description of the video's content. It's important to [write a description]({{ '/media#video_description' | post_url}}) for each video, which you can do from the video's page in your account.
+* **Transcripts:** Your video's transcript is automatically formatted as metadata to let search engines see that your video has [captions]({{ '/captions' | post_url }}).
+* **Thumbnail URL:** The URL of the image search engines will use if they choose to display a preview of your video in the search results. Wistia's got you covered on this front!
+* **Embed URL:** A URL pointing to a player for a specific video.
+* **Duration:** The length of your video.
+* **Upload Date:** When the video was uploaded to Wistia.
 
-Those are all of the "Required" and "Recommended" properties listed on [Google's guide for video markup](https://developers.google.com/webmasters/videosearch/schema). You're covered 👍.
+These are all of the "Required" and "Recommended" properties listed on
+[Google's guide for video markup](https://developers.google.com/webmasters/videosearch/schema).
+As long as you fill out the Name and Description (and get yourself some captions,
+if you're feeling so bold), Wistia's got the rest covered. 👍
 
-If you ever change that information in Wistia, it will automatically be updated on your website too. Immediately! There's no need to re-embed your video.
+If you ever change that information in Wistia, it will automatically be updated
+on your website. Immediately! There's no need to re-embed your video.
 
 {{ "You can use Google's [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) to verify that Google is able to see your video and its metadata. If everything is working properly, you'll see that Google finds a `VideoObject` on the page." | tip }}
 
-For even more information on embedding, check out the [Embedding]({{ '/embedding' | post_url }}) guide.
+For even more information on embedding, check out the
+[embedding]({{ '/embedding' | post_url }}) guide.
 
 ### Can I See an Example?
 
 Yes you can, you SEO-lover.
 
 Here's an example for one of the videos on our [embedding]({{ '/embedding' | post_url }}) page!
+Which, if you're feeling extra exploratory, you can go check out by inspecting
+the `<head>` code of the page.
 
-{% codeblock wistia_html.html %}
-"@context":"http://schema.org/","@id":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","@type":"VideoObject","duration":"PT31S","name":"Standard Embed Final Proof 1","thumbnailUrl":"https://embed-ssl.wistia.com/deliveries/c2e61496651bc2e88ce8e7f7006aa384c641d708.jpg?image_crop_resized=960x540","embedUrl":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","uploadDate":"2015-11-24","transcript":"Hi.\n\nI'm your standard embed code.\n\nI'm your basic go-to embed\ncode for getting video\n\nonto your website.\n\nI display inline on your page\nwith the rest of your content,\n\nand I'm also responsive.\n\nBecause I'm\nasynchronous, I won't\n\nblock the loading of all the\nother content on your web page.\n\nFor developers, I\nintegrate easily\n\nwith a player API, which\nsupports a bunch of ways\n\nto control the video player.\n\nAnd like all Wistia\nembed codes, any changes\n\nyou make to me, like the\nplayer color or controls,\n\nwill automatically update\nwithout having to re-embed.\n\nSo long!","description":"a /embedding video from wDoc"
-{% endcodeblock %}
+<pre><code class="language-html" style="white-space: pre-wrap; white-space: -moz-pre-wrap; ">"@context":"http://schema.org/","@id":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","@type":"VideoObject","duration":"PT31S","name":"Standard Embed Hello","thumbnailUrl":"https://embed-ssl.wistia.com/deliveries/c2e61496651bc2e88ce8e7f7006aa384c641d708.jpg?image_crop_resized=960x540","embedUrl":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","uploadDate":"2015-11-24","transcript":"Hi.\n\nI'm your standard embed code.\n\nI'm your basic go-to embed\ncode for getting video\n\nonto your website.\n\nI display inline on your page\nwith the rest of your content,\n\nand I'm also responsive.\n\nBecause I'm\nasynchronous, I won't\n\nblock the loading of all the\nother content on your web page.\n\nFor developers, I\nintegrate easily\n\nwith a player API, which\nsupports a bunch of ways\n\nto control the video player.\n\nAnd like all Wistia\nembed codes, any changes\n\nyou make to me, like the\nplayer color or controls,\n\nwill automatically update\nwithout having to re-embed.\n\nSo long!","description":"A video that explains the standard embed. Featuring, Bobby!"</code></pre>
 
-
-### Managing your metadata
+## Managing Your Metadata
 
 **Title**
 
-The title should be relevant for the video. Don't try and make it overly wordy
-or contain too many *tags*, just focus on appropriately naming the video for a
-viewer's experience.
+The title should be relevant for the video. Make sure it's short and sweet.
+Don't try too hard to make it wordy, or shove too many keywords into it. Just
+focus on appropriately naming the video for a viewer's experience.
 
 **Description**
 
-Be as descriptive as possible but make sure you are not going overboard
-with keywords you want your video to rank for. Make the description useful
-for viewers, not for bots.
-
-**Tags**
-
-We’ve found that having 3 to 4 word descriptive tags works best for our
-videos. Don’t get too wordy with your tags and keep it simple.
+Be as descriptive as possible, but again don't go overboard with keywords. Make
+the description useful for viewers, not for bots.
 
 **Transcripts**
 
-If your video has captions you can leverage that information to help your video get indexed with optimal context. If you want to see how you can add captions to your site, our [Captions help page](http://wistia.com/doc/captions#select_your_video) will show you how!
+If your video has captions you can leverage that information to help your video
+get indexed with optimal context. If you want to see how you can add captions to
+your video, our
+[Captions help page](http://wistia.com/doc/captions#select_your_video) will
+show you how!
 
 
+### How Can I See What My Metadata Will Look Like?
 
-### How can I see what my metadata will look like?
+Easy peasy! Our Embed & Share modal includes a dropdown menu
+that lets you look at all of that sweet SEO data. It's easier than ever to
+see the same information that search engines are reading to help them rank your
+page.
 
-We've got some good news. We've updated our Embed & Share module to include a dropdown menu that lets you look at all of the aforementioned fields. It'll be easier than ever to see the same information that search engines are reading to help them rank your page.
-
+From the *Video Actions* menu, select **Embed &Share**. From the *Inline Embed*
+tab, scroll down. There you'll see an option for SEO Metadata. Click the carrot
+next to the "Inject video metadata..." option to see all of that metadata glory.
 
 ## Optimizing After Indexing
 
-In the end, the goal is to drive more traffic back to your website. Optimizing
-your video content for search engines means the pages show in results with
-a video (which gets clicked more often) and in video-specific search results as
-well. When a searcher clicks the video still in results, they will be taken to
+The goal of SEO is to drive more traffic to your website. Optimizing your video
+content for search engines means that your pages will show up in video-specific
+search results, thus driving more traffic to your site.
+
+When a searcher clicks the video still in results, they will be taken to
 *your* website, which is a major advantage over YouTube SEO.
 
 We recommend keeping a close eye on your traffic during the SEO indexing
-process - see if you notice an uptick after your video content is indexed. From
+process&mdash;see if you notice an uptick after your video content is indexed. From
 that baseline data, you can experiment with changes to improve incoming
 traffic.
 
@@ -128,15 +138,11 @@ specific searches, add more content for those visitors.
 Second, the thing that drives folks to click on the video is the thumbnail!
 Choose a thumbnail that looks attractive for the topic at hand.
 
-{% post_image hashed_id: '53a36ccf4c2bfe6215f13d2d5523d5d919176224', class: 'center' %}
-
-
-
-
+{% post_image hashed_id: '6d0d9cf14d2f214a6e46e9cac6cad9da678f84ae', class: 'center' %}
 
 ## Video SEO FAQ
 
-Video SEO is tough, but valuable. Customers have asked us lots of questions
+Video SEO is tough but valuable. Customers have asked us lots of questions
 about using our Video SEO tool for their video. We'll attempt to compile them
 here.
 
@@ -146,31 +152,28 @@ here.
 Google has continued to support an open market, indexing videos that follow
 their SEO guidelines, regardless of where they are hosted.
 
-That being said, you don't really want to have your video on YouTube *and* use
+That being said, you probably don't want to have your video on YouTube *and* use
 Wistia Video SEO. Because YouTube videos are indexed by default, your content
-will compete with itself in the rankings if you use both.
+will compete with itself in the rankings if you use both. Then the YouTube links
+to your video will drive traffic to YouTube, instead of to your website.
 
 If the most important metric for your video is *views*, YouTube is a great
 place for them. If your goal is to encourage a *conversion event*, like a
 sign-up, subscription, or a share, then you want to drive viewers to your site
 to watch your video. That is where Video SEO can be a valuable tool.
 
-
-
 ### Can I use playlist embeds?
 
-At this time, we don't provide search engine optimized embed codes for the playlist player types.
-We made that decision because in
-our tests it seemed required for the Google bots to have direct access to the
-video on the page, and immediately accessible to the visitor, in order to reap
-the benefits of video on page rankings.
-
+At this time, we don't provide SEO for the playlist player types. We made that
+decision because in our tests it seemed required for the Google bots to have
+direct access to the video on the page, and immediately accessible to the
+visitor, in order to reap the benefits of video on page rankings.
 
 ### It's been several days, when can I expect to see my video ranked in SERPs?
 
 It can take up to 2 weeks for Google to index new content.
 
-Because Google can be a bit of a black box, it's not
+Because Google can be a bit of a black box sometimes, it's not
 possible to determine exactly when new content will be indexed for video
 results. In our experience, a waiting period of **10 - 15 days** is not uncommon.
 
@@ -186,36 +189,26 @@ There are a few practices that we have seen prevent indexing.
   cause failures. Google might not follow the redirect when crawling, or the
   redirects might be set up incorrectly.
 * **Disallowing content in the robots.txt file** would result in everything
-  appearing "successful", but your content never appears in search results.
+  appearing "successful," but your content never appears in search results.
   Double-check that any "disallow" blocks in your robots.txt file do not point
   to content you *want* indexed.
-* **Dynamically loading content** using javascript, or light-boxes (like Wistia
-  popovers), etc. does not currently work. Google wants your content to be on
-  the page when a visitor loads it up (no additional clicks or actions required).
-* **Putting video farther down the page** can have a negative and even negating
-  effect on the content. Where possible, make sure your videos are embedded at
+* **Putting video farther down the page** can have a negative effect on the
+  content. Where possible, make sure your videos are embedded at
   a good viewing size (at least 600px wide) and near the top of the page.
 
 ### Can I use Wistia embeds to build links for SEO?
 
 The *Social Bar* includes an *embed* button, which allows viewers to embed your
 video in other places. Wistia includes a
-[customize option]({{ '/customizing-your-video' | post_url }}) for adding links
+[customize option]({{ '/customizing-your-video#social_bar' | post_url }}) for adding links
 that point back to the original site into the embed code your viewers can access.
 
 So if one of your viewers re-embeds the video, new viewers can track down the
 original source of the content, which Google and search engines also value.
-Phil Nottingham from [Distilled](http://distilled.net), who is a real SEO
-expert (we just play one on video), [posted at length about using this for your
-content](http://www.distilled.net/blog/video/using-wistias-customisable-embed-settings-to-build-links-with-your-video-content/).
-Building links back to your original content can be hugely powerful for
-building your audience.
 
-For more information on video backlinks,
-[see the Customization docs]({{'/customizing-your-video#using_video_backlinks' | post_url}}).
+For more information on video backlinks, check out our
+[Customize help page]({{'/customizing-your-video#using_video_backlinks' | post_url}}).
 
-### Do I still need to create an sitemap, or submit something to Google Webmaster Tools?
-
-Wistia tools take care of that process automatically for you.  We create a
-sitemap, add the videos you designate, and submit it through Google Webmaster
-Tools, all automatically.
+More questions? Just want to talk about SEO?
+[Give us a shout](http://wistia.com/support/contact). We'll be happy to talk
+more!
