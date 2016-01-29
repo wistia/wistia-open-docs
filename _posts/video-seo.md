@@ -2,32 +2,54 @@
 title: Video SEO
 layout: post
 category: embed and share
-description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn the steps to get that set up in your account here.
-post_intro: <p>Video SEO is the practice of providing the metadata ("information") for your content to search engines to improve the richness of search results (i.e. "rich snippets") and ultimately drive more web visitors.</p><p>Wistia gets this metadata on your page by injecting JSON-LD into your webpage's header. As a part of your marketing arsenal, following the proper metadata and general SEO conventions improves your video asset's presence on search engines.</p>
+description: Video SEO is a powerful tool for your business, and here at Wistia we've got it fully covered. Learn more about Wistia and video SEO here.
+post_intro: <p>Video SEO is the practice of providing the metadata ("information") for your content to search engines to improve the richness of search results (i.e. "rich snippets"). This, in turn, drives more visits to your website.</p><p>Wistia puts this video metadata on your page by injecting JSON-LD into your webpage's header. As a part of your marketing efforts, following the proper metadata and general SEO conventions will help to improve your video's presence on search engines.</p>
 footer: 'for_beginners'
 ---
 
-## How does it work?
+## Getting Started
 
-All you have to do is put either our Standard embed or our Popover embed code onto your website. The JSON-LD file is automatically injected into the head of your website once your page is live. We handle all of the tricky stuff. No sitemaps, no extra coding, just copy and paste.
+To get those sweet SEO benefits, all you'll need to do is use the
+[Standard]({{ '/embedding#inline_embeds' | post_url}}) or
+[Popover]({{ '/embedding#popover_embed' | post_url }})
+embed code type on your website. Seriously, it's that easy.
+
+Wistia does all of the hard work for you. The JSON-LD file is automatically
+injected into the head of your website once your page is live. We handle all of
+the tricky stuff. No sitemaps, no extra coding, just copy and paste, and rock
+out. 🤘
 
 ## What is Video SEO?
 
-Confused on what Video SEO is? Not to worry, we'll get you started right. Video SEO is the process of adding metadata to your website that a search engine can then read to see what's on your page. The video's metadata in the JSON-LD file will tell search engines what the video is about, how long it is and what thumbnail is could show in its results.
+Confused about what Video SEO is? Don't worry! We've got <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_4d6vocr5m5 popover=true popoverContent=link" style="display:inline"><a href="#">experts</a></span> on hand.
 
-Some important things to know:
+Video SEO is the process of adding metadata to your website so that a search
+engine can better read what's on your page. The video's metadata in the JSON-LD
+file will tell search engines things like:
 
-* Video data can show up in search results in the form of *rich snippets*.
-* Research shows Google prefers videos to other search results.
-* Using recommended markup makes it easier for Google to discover and index your content.
+- the video title
+- the video description
+- the length of the video
+- the video transcript (if available)
+- and the video thumbnail
 
-Wistia's SEO functionality automatically includes the metadata that optimizes your web pages to be indexed by search engines.
+Wistia's SEO functionality automatically includes this metadata in your website
+to optimize your site for search engine indexing. Using recommended markup makes
+ it easier for Google to discover and index your content. Follow these steps to
+make your video SEO game top notch.
 
-## On-page Markup for Video SEO
+## On-Page Markup for Video SEO
 
-When search engines like Google crawl a page on your website, they can only identify a video and index it properly if the page includes the right video markup. Google has [extensive technical documentation](https://developers.google.com/webmasters/videosearch/schema) on how to add that markup... but you don't need to worry about it! Wistia's [Standard embeds]({{ '/embedding#inline_embeds' | post_url }}) automatically put that markup on the page for you.
+When search engines, like Google, crawl a page on your website, they can only
+identify and index a video properly if the page includes the right video
+markup. Google has
+[extensive technical documentation](https://developers.google.com/webmasters/videosearch/schema)
+about adding that markup, but you don't need to worry about it! Wistia's
+[Standard]({{ '/embedding#inline_embeds' | post_url }}) and [Popover]({{ '/embedding#popover_embed' | post_url }})
+embeds automatically put that markup on the page for you.
 
-When you have a standard Wistia embed on a page, it will place the following markup in the `<head>` section for search engines to find:
+When you have a Standard Wistia embed on a page, it will place the following
+markup in the `<head>` section for search engines to find:
 
 * **Name**: The title of your video, which you can set on the video's page in your account.
 * **Description:** A brief description of the video's content. It's important to write a description for each video, which you can do from the video's page in your account.
@@ -44,6 +66,16 @@ If you ever change that information in Wistia, it will automatically be updated 
 {{ "You can use Google's [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) to verify that Google is able to see your video and its metadata. If everything is working properly, you'll see that Google finds a `VideoObject` on the page." | tip }}
 
 For even more information on embedding, check out the [Embedding]({{ '/embedding' | post_url }}) guide.
+
+### Can I See an Example?
+
+Yes you can, you SEO-lover.
+
+Here's an example for one of the videos on our [embedding]({{ '/embedding' | post_url }}) page!
+
+{% codeblock wistia_html.html %}
+"@context":"http://schema.org/","@id":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","@type":"VideoObject","duration":"PT31S","name":"Standard Embed Final Proof 1","thumbnailUrl":"https://embed-ssl.wistia.com/deliveries/c2e61496651bc2e88ce8e7f7006aa384c641d708.jpg?image_crop_resized=960x540","embedUrl":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","uploadDate":"2015-11-24","transcript":"Hi.\n\nI'm your standard embed code.\n\nI'm your basic go-to embed\ncode for getting video\n\nonto your website.\n\nI display inline on your page\nwith the rest of your content,\n\nand I'm also responsive.\n\nBecause I'm\nasynchronous, I won't\n\nblock the loading of all the\nother content on your web page.\n\nFor developers, I\nintegrate easily\n\nwith a player API, which\nsupports a bunch of ways\n\nto control the video player.\n\nAnd like all Wistia\nembed codes, any changes\n\nyou make to me, like the\nplayer color or controls,\n\nwill automatically update\nwithout having to re-embed.\n\nSo long!","description":"a /embedding video from wDoc"
+{% endcodeblock %}
 
 
 ### Managing your metadata
