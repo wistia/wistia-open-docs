@@ -45,7 +45,7 @@ In the section labeled "Wistia Subdomain", you will see a text box showing the c
 
 ---
 
-## Twitter Handle
+### Twitter Handle
 
 Want to make sure tweets referencing your Wistia videos tag your Twitter account? Learn more about Wistia and Twitter on the [Social Sharing page]({{ '/social-sharing#twitter_handle' | post_url }}).
 
@@ -106,7 +106,6 @@ in *Settings*, and scroll down to find the *Video Quality* section.
 
 Choose a Video Quality, and don't forget to save!
 
----
 
 ## Monthly Usage
 
@@ -117,9 +116,6 @@ To see the storage and bandwidth usage on your account, you must be logged in as
 This will show you how much bandwidth you have used, along with your current account limits. If you have a storage limit on your account, that will be displayed as well.
 
 
-
----
-
 ## Billing Statements
 
 To see billing statements, you must be logged in as the Account Owner.
@@ -127,8 +123,6 @@ Click the  "Billing" tab in your Account Settings.  This will display a complete
 
 {% post_image hashed_id: 'b00b87b48826ed1a31d96b045bf6579a79c3a7b3', width: 600, class: 'center' %}
 
-
----
 
 ## Updating your Credit Card
 
@@ -139,7 +133,6 @@ a form to enter your credit card information.
 
 After updating your credit card, you can check to make sure that your recent payments went through successfully by looking at the [Billing Statements](#billing_statements) section.
 
----
 
 ## Adding & Removing Managers
 
@@ -150,17 +143,31 @@ email address into the text box and click <span class="faux_button">ADD AS MANAG
 
 To remove existing Managers, click *Remove* next to their email address in the Current Managers list.
 
----
-
 ## API Access
 
 An API token and password can be used for interacting with the [Wistia APIs]({{ '/developers' | post_url }}), and for setting up 3rd party integrations (like Pardot and HubSpot).
 
 To access those credentials for your account, select the API tab from your *Account Settings*.
 
+## Integrations
 
+Want to integrate Wistia with your email service provider or marketing automation
+platform? This is the place to start setting it up! From your Account Settings just
+select **[Integrations](https://my.wistia.com/account/integrations)** under *Advanced*.
 
----
+{% post_image hashed_id: 'e240fa09932698de83f7cb7d2b20d23b1075849c', class: 'center' %}
+
+For more information about email and marketing automation integrations, head over
+to the [Integrations Index]({{ '/integrations' | post_url }}).
+
+### Beta Features
+
+Here you can enable (or disable) new and experimental features! Fair warning:
+**Beta features may change, break, or be removed at any time**. For more information
+on Beta features check out our [Betapugs](http://wistia.com/beta) program.
+
+{% post_image hashed_id: '508d66c23dd4ddf08a51d1b8011de37c1620ec2d', class: 'center' %}
+
 
 ## Transferring Ownership of Your Account
 
@@ -175,8 +182,6 @@ efficient!), select the *Account* tab in your Account Settings.
 Select the new owner from the *Account Owner* menu, and then *Save Settings* at the bottom of the page. Ownership will be transferred
 immediately.
 
----
-
 ## Changing your Email Address
 
 If you would like to change the email address associated with your user account, it's actually super easy! Click the *Personal* tab in Settings sidebar.
@@ -184,8 +189,6 @@ If you would like to change the email address associated with your user account,
 {% post_image hashed_id: '71ead07ca1c43264669608f037bdc00216abe6ba', class: 'center' %}
 
 From there you can very easily change the email that you use to log in to Wistia and receive notifications to!
-
----
 
 ## Canceling Your Account
 
