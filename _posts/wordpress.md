@@ -3,31 +3,27 @@ title: WordPress & Wistia
 layout: post
 category: Integrations
 description: WordPress is one of the most popular blog/website platforms out there, and Wistia videos work quite well in the WordPress environment.
-post_intro: <p>WordPress is a wonderful platform that you can use to create powerful websites, but it can sometimes strip out important parts of Wistia embed codes. Fortunately, there's an easy fix for that!</p> <p>To use Wistia and WordPress together in harmony, check out the <a href="#the_wistia_wordpress_plugin">Wistia WordPress plugin</a>. </p>
+post_intro: <p>WordPress is a wonderful platform that you can use to create powerful websites, but it can sometimes strip out important parts of Wistia embed codes. Fortunately, there's an easy fix for that!</p>
 footer: 'for_intermediates'
 ---
 
 {{ "WordPress.com sites now work easily with Wistia! We're a default oEmbed provider, so it's as simple as pasting the media URL of your video. Check out their documentation <a href='https://en.support.wordpress.com/videos/wistia/'>here</a>. Wahoo!" | note }}
 
-## The Wistia WordPress Plugin
 
-The [Wistia WordPress plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) adds support for [Wistia oEmbed URLs](#using_an_oembed_url) to WordPress, which make embedding videos in your posts super easy. For more information about how that works, see this guide from the WordPress documentation: [Embeds in WordPress](http://codex.wordpress.org/Embeds).
-
-[Install the Wistia WordPress plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/).
 
 ## Using an oEmbed URL
 
 An oEmbed URL is a simple link that tells WordPress how to embed content from third-party sources (like that cool video hosting platform for businesses you're so fond of).
 
-To create an oEmbed URL for a video in your Wistia account, select the "Use oEmbed" option under _Advanced Options_ on the [_Embed & Share_]({{ '/embedding' | post_url }}) screen. Take a look-see:
+To create an oEmbed URL for a video in your Wistia account, select "Use oEmbed URL" under _Options_ on the [_Embed & Share_]({{ '/embedding' | post_url }}) screen. Take a look-see:
 
-{% wistia_embed hashed_id: 930hwszdyh %}
+{% wistia_embed hashed_id: 1vmfqwiif7 %}
 
 That'll give you an oEmbed URL like this example:
 
 `http://dave.wistia.com/medias/azmurdmroz?embedType=api&videoWidth=640`.
 
-If you copy and paste that URL into a WordPress post and you have the Wistia WordPress plugin installed, WordPress will convert the oEmbed URL into an embedded video.
+If you copy and paste that URL into a WordPress post, WordPress will convert the oEmbed URL into an embedded video.
 
 If you're curious about the technical details behind oEmbed's sneaky magic, check out [oEmbed.com](http://oembed.com).
 
@@ -77,6 +73,12 @@ For more info on centering your video, refer to our tips in the [embedding docum
     });
   });
 </script>
+
+## The Wistia WordPress Plugin
+
+If you're having trouble using oEmbeds with your WordPress theme, the [Wistia WordPress plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/) adds support for [Wistia oEmbed URLs](#using_an_oembed_url). For more information about how that works, see this guide from the WordPress documentation: [Embeds in WordPress](http://codex.wordpress.org/Embeds).
+
+[Install the Wistia WordPress plugin](https://wordpress.org/plugins/wistia-wordpress-oembed-plugin/).
 
 ## The Anti-Mangler
 
