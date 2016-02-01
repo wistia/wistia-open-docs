@@ -1001,7 +1001,8 @@ ol li a:hover { border-bottom: 1px solid #56be8e; text-decoration: none; }
 
 a.st-ui-result { font-family: "Whitney A", "Whitney B", "Avenir", Helvetica, sans-serif; }
 a.st-ui-result:hover { text-decoration: none; background: #edf8ff !important; }
+a.st-ui-result::before { right: 10px !important; }
 
-a .st-ui-type-heading { font-size: 15px !important; }
-a .st-ui-type-detail { max-height: 30px !important; font-size: 13px !important; line-height: 20px !important; }
+a .st-ui-type-heading { padding-left: 10px !important; font-size: 15px !important; }
+a .st-ui-type-detail { padding-left: 10px !important; max-height: 60px !important; font-size: 13px !important; line-height: 20px !important; }
 a .st-ui-type-detail-bold { font-size: 15px !important; }
