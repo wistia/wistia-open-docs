@@ -157,7 +157,7 @@ style `display: inline-block;`, as seen here:
 </div>
 {% endcodeblock %}
 
-### Code not converting to video
+### Code not converting to video?
 
 If you've tried adding a Standard Wistia embed (or Fallback or popover), and
 it's not converting to a video, try installing the
