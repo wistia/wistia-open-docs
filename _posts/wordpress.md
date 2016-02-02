@@ -2,31 +2,93 @@
 title: WordPress & Wistia
 layout: post
 category: Integrations
-description: WordPress is one of the most popular blog/website platforms out there, and Wistia videos work quite well in the WordPress environment.
-post_intro: <p>WordPress is a wonderful platform that you can use to create powerful websites, but it can sometimes strip out important parts of Wistia embed codes. Fortunately, there's an easy fix for that!</p>
+description: WordPress is one of the most popular website builders out there, and Wistia videos sometimes need a little TLC in WordPress environments. Have no fear! We've got you covered.
+post_intro: <p>WordPress is an awesome platform for creating powerful websites. Here's a quick guide to making Wistia and WordPress go together like PB&J.</p>
 footer: 'for_intermediates'
 ---
 
 {{ "WordPress.com sites now work easily with Wistia! We're a default oEmbed provider, so it's as simple as pasting the media URL of your video. Check out their documentation <a href='https://en.support.wordpress.com/videos/wistia/'>here</a>. Wahoo!" | note }}
 
+## Getting Started
 
+Depending on the type of environment you're embedding in, you'll want to use a
+different type of Wistia embed code.
+
+Let's start with WordPress.com. Adding video to your posts is super easy since
+Wistia is a default oEmbed provider. So let's dive into grabbing that oEmbed and
+sharing your fantastic video.
+
+## Embedding on Wordpress.com
 
 ## Using an oEmbed URL
 
-An oEmbed URL is a simple link that tells WordPress how to embed content from third-party sources (like that cool video hosting platform for businesses you're so fond of).
+An oEmbed URL is a simple link that tells WordPress how to embed content from
+third-party sources (like that cool video hosting platform for businesses you're
+so fond of).
 
-To create an oEmbed URL for a video in your Wistia account, select "Use oEmbed URL" under _Options_ on the [_Embed & Share_]({{ '/embedding' | post_url }}) screen. Take a look-see:
+To create an oEmbed URL for a video in your Wistia account, select "Use oEmbed
+URL" under _Options_ on the [_Embed & Share_]({{ '/embedding' | post_url }})
+screen. Take a look-see:
 
 {% wistia_embed hashed_id: 1vmfqwiif7 %}
 
 That'll give you an oEmbed URL like this example:
 
-`http://dave.wistia.com/medias/azmurdmroz?embedType=api&videoWidth=640`.
+`http://fantastic.wistia.com/medias/60cf0ufhoo?embedType=async&videoFoam=true&videoWidth=640`.
 
-If you copy and paste that URL into a WordPress post, WordPress will convert the oEmbed URL into an embedded video.
+If you copy and paste that URL into a WordPress post, WordPress will convert the
+oEmbed URL into an embedded video. It's <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_4ebsteci2g popover=true popoverContent=link" style="display:inline"><a href="#">like magic</a></span>.
 
-If you're curious about the technical details behind oEmbed's sneaky magic, check out [oEmbed.com](http://oembed.com).
+{% wistia_embed hashed_id: 3r0naiqkgs %}
 
+If you're curious about the technical details behind oEmbed's sneaky magic,
+check out [oEmbed.com](http://oembed.com).
+
+## Popover oEmbeds
+
+Wistia doesn't currently offer an option to select the "oEmbed" options from
+the [Popover Embed]({{ '/embedding#popover_embed' | post_url }}) tab. But that
+doesn't mean it isn't possible. Time to join our secret club!
+
+Creating a popover oEmbed is as easy as adding the `popover=true` string to your
+oEmbed.
+
+So this Standard oEmbed:
+
+`http://fantastic.wistia.com/medias/60cf0ufhoo?embedType=async&videoFoam=true&videoWidth=640`
+
+would become:
+
+`http://fantastic.wistia.com/medias/60cf0ufhoo?embedType=async&popover=true&videoFoam=true&videoWidth=640`
+
+It's as easy as that!
+
+If you want to specify the size of the popover thumbnail (when playing, popover videos
+will always be responsive), remove '`videoFoam=true` and change the `videoWidth` string.
+
+`http://fantastic.wistia.com/medias/60cf0ufhoo?embedType=async&popover=true&videoWidth=200`
+
+{{ "WordPress.com will sometimes automatically show the Wistia video when you're editing your blog post or page. You can always switch from 'Visual' editing to 'HTML' for easier viewing." | tip }}
+
+## Embedding on WordPress.org
+
+If you're embedding on your WordPress.org site, you'll want to use the
+[Standard]({{ '/embedding#inline_embed' |post_url }}) (or Popover) Wistia embed.
+Just paste your standard embed code into your post, and you're good to go!
+
+{% wistia_embed hashed_id: mvankkqtxb %}
+
+## Fallback Options
+
+With WordPress one size doesn't always fit all! We recommend beginning with the
+oEmbed URL first. If that doesn't work for you, using the [Standard]({{ '/embedding#inline_embed' | post_url }}),
+[Fallback]({{ '/embedding#fallback_iframe_embed' | post_url }}), or regular
+Popover embed code types (by adding them as HTML elements in your posts) is a
+solid alternative.
+
+Still no dice?
+
+Check out our troubleshooting tips below.
 
 ## Tips for Using WordPress
 
