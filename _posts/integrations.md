@@ -76,6 +76,7 @@ it. Wistia supplies email merge tags for the following providers:
 * [ONTRAPORT](http://support.ontraport.com/entries/23134369-Wistia-Integration)
 * [Pardot]({{ '/pardot#add_video_to_your_email_campaigns' | post_url }})
 * [Sendible](http://sendible.com/)
+* [SmartFocus](http://smartfocus.com/)
 * [VerticalResponse](http://www.verticalresponse.com/)
 * [WhatCounts](http://www.whatcounts.com/)
 
