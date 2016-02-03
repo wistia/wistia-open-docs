@@ -3,7 +3,7 @@ title: Embedded Video Analytics
 layout: post
 category: Stats
 description: Wistia's analytics are designed to help you understand how your audience engages with your content. Dive in to everything you could dream of knowing about Wistia's all time favorite subject, Statistics.
-post_intro: <p>Wistia stats are the best way to get a complete view of who is watching your video, and how they are watching and interacting with it.</p><p>This guide will show you how to approach the two parts of Wistia analytics, <b>Stats Trends</b> and the <b>View Stream</b>.</p>
+post_intro: <p>Wistia stats are the best way to get a complete view of who is watching your video and how they are watching and interacting with it.</p><p>This guide will show you how to approach all of the parts to Wistia analytics, <b>Trends</b>, the <b>Audience</b>, the <b>View Stream</b>, and <b>Media Stats pages</b>.</p>
 footer: 'for_intermediates'
 ---
 
@@ -11,11 +11,11 @@ footer: 'for_intermediates'
 
 ## Account-Level Trends View
 
-Wistia provides detailed insights into the performance of a single video, an individual Project
-(like a collection of your tutorial or marketing videos), or the entire
-Account (perhaps all the videos across your website).
+Wistia provides detailed insights into the performance of a single video, an
+individual Project (like a collection of your tutorial or marketing videos), or
+the entire Account (perhaps all the videos across your website).
 
-{% post_image hashed_id: '0736b9299aa87764c9247702eba5afa053d3bf88', class: 'center' %}
+{% post_image hashed_id: '8180c8c5f9437b309824a3a9bc78ac93d8ea0685', class: 'center' %}
 
 Starting from the **[Projects](https://my.wistia.com/projects)** page of your
 Account, you can access your high level stats by selecting
@@ -26,10 +26,10 @@ for public stats performance. 📈
 
 ### Trends Graph
 
-{% post_image hashed_id: '8c1a38b2ca01d74893d4cefa2b207dacdee9ddbe', class: 'center' %}
+{% post_image hashed_id: '0a005276debff45579ba9851d80a6d0f99627294', class: 'center' %}
 
 There are a few ways to explore your Trends Graph. By default you'll see the
-stats for all of your videos for all time (as long as you've had your Wistia account).
+stats for all of your videos for the last week.
 They'll be displayed as "Daily" stats initially, but you can always change your
 view. More on that [in a minute](#sorting).
 
@@ -43,16 +43,36 @@ projects) by hovering over the white space.
 Select an individual project from the graph to see stats exclusive
 to those videos. Or select an individual video to hone in on any spikes.
 
-Underneath the graph, you can use the grey tabs to select a specific date range
-for analysis. Drag either tab to change the range that will be displayed in the
-graph and the chart below.
+Above the graph you'll see an option to select a date range. Wistia supplies
+five preset date ranges:
+
+- Month to date
+- Last month
+- Last 90 days
+- Year to date
+- Last year
+
+You can choose from any of these options, or select your own date range by
+typing one in.
+
+If you want to see all-time stats for your account, pick any date from before
+you opened your account. We'll automatically snap your date to the start date of
+your account.
+
+So for our home account:
+
+{% post_image hashed_id: '6d75f1f8ded7af2bd574b87199e9187c4a7cd7f8', width: 200, class: 'float_left' %}
+
+became:
+
+{% post_image hashed_id: 'f427c0af9d2f206502e65b779383fc9dee06e502', width: 200, class: 'float_left' %}
 
 Keep in mind, **only play count will change** within a specific date range.
 Engagement and play rate are calculated as all-time stats.
 
 ### Sorting
 
-{% post_image hashed_id: '4e39e75fa56a0d7ba9f58798f199a4c1e0ada9eb', width: 500, class: 'float_left' %}
+{% post_image hashed_id: '1e3e528428c887ed8a2b6b258f46a0a105b77482', width: 600, class: 'float_left' %}
 
 Sorting data is crucial to understanding it. You've got a lot of data in your
 Wistia account, so it's helpful to use sorting to make sense of all those sweet,
@@ -62,7 +82,10 @@ With sorting you can prioritize analytics data in the ways most useful to you.
 Above the graph you can choose Projects or Videos, and select date ranges
 (Months, Weeks, Days).
 
-{% post_image hashed_id: '2f8b6bcdd778b9844f89fe71123b03f4cfb2169e', class: 'center' %}
+{% post_image hashed_id: '7e1e1649e286bb941d53a47a21f25b61c3af4a1c', width: 303, class: 'float_left' %}
+
+You'll also be able to pick a specific date range. Either select one of Wistia's
+preset options, or choose your own date range by typing it in.
 
 Drill down further below the graph to sort by attributes like amount of embedded
 videos, date created, or number of plays. The sorting bar is slightly different
@@ -70,7 +93,7 @@ at the account and project levels, so heads up!
 
 ### Customizing the View
 
-{% post_image hashed_id: 'cca81cb21b3f5bdf95fedc8e295f178af545febb', class: 'center' %}
+{% post_image hashed_id: 'ba4e258f7479c89a880772119daf5f96a2f84e37', class: 'center' %}
 
 By default, the Trends page will show you all-time stats for all Projects in
 your account. This allows you to see all the views by time as you move your
@@ -79,7 +102,7 @@ appear below the trends table. These options can be clicked, to help you sort
 results. Want to see the projects with the lowest number of embeds? Double click
 that *Videos Embedded* option.
 
-{% post_image hashed_id: '5f836a68a53870b74aeff36b7970de9a588747c8', class: 'center' %}
+{% post_image hashed_id: 'ddf27148479b88e0379192566b7fa8dcdb78feae', class: 'center' %}
 
 To see the data for a specific Project compared to the others, use the selection
 tool functionality.  Clicking on one specific Project in either the list view
@@ -88,7 +111,7 @@ the Project more specifically.
 
 ### Projects/Media List
 
-{% post_image hashed_id: '43e79ea9a8b6a70992787eb7fe12d5935129ef17', class: 'center' %}
+{% post_image hashed_id: 'bc4813804c8a15030fecce5a4549ea3094952166', class: 'center' %}
 
 Underneath the Trends graph is the list of Projects or Media that is
 represented in the graph.  To drill down to the Project or Media level,
@@ -96,7 +119,7 @@ click its title.
 
 ## Project-Level Trends
 
-{% post_image hashed_id: 'feea6eccd1d84260b7105dbb330c8a193fd8c40f', class: 'center' %}
+{% post_image hashed_id: '40b478cc2f0a5a5e806fcce1327d38c7ddf634f4', class: 'center' %}
 
 Project-level Trends are pretty similar to Account-level trends. You can hover
 your cursor along the graph to show information on the corresponding date. See a
