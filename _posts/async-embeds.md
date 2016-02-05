@@ -6,21 +6,20 @@ special_category_link: developers
 category: Developers
 title: Async Embeds
 description: Async API embeds have a different syntax than traditional API embeds. It's the future!
-post_intro: "<p>Async API embeds work a lot like traditional API embeds, except we have a different way of setting options and getting an API handle. These docs explain how Async API embeds work.</p>"
+post_intro: "<p>Async API embeds work a lot like traditional API embeds, except we have a different way of setting options and getting an API handle. These docs explain how Async API (or Standard) embeds work.</p>"
 ---
 
 ## How to get an Async Embed Code
 
-Async embeds will some day be the default in Wistia. But until that day comes,
-here's how you get them. On your video's page in Wistia, go to Video Actions
-&gt; Embed. Choose the `Inline Embed` tab and select `API` as the Embed Type.
-Open the Advanced Options section and put a check next to `Async [BETA]`.
-Simple!
+Async embeds are here! Wistia's Standard and Popover embeds are asynchronous.
+Just navigate to the Embed and Share modal and select the "Standard Embed" from
+the "Inline Embed" tab, choose the "Popover Embed" tab. It's seriously that easy.
 
 Note that __iframe embeds are already async__ because that's just how iframes
 work.
 
-__Popover embeds and playlists will also be made async when the time comes.__
+Playlists are _not_ asynchronous. But we've got
+[Embed Links]({{ '/embed-links' | post_url }}), which are better anyway. :)
 
 ## The Composition of an Async API Embed
 
@@ -31,7 +30,7 @@ Here's an example async API embed, straight out of the embed modal:
 <div class="wistia_embed wistia_async_g5pnf59ala videoFoam=true" style="width:640px;height:360px;">&nbsp;</div>
 {% endcodeblock %}
 
-First, we have an <strong>async script tag for E-v1.js</strong>.
+First, we have an **async script tag for E-v1.js**.
 
 <code class="full_width">
 <strong>&lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot; async&gt;&lt;/script&gt;</strong><br>
@@ -44,7 +43,7 @@ libraries into the `window.Wistia` namespace and
 [watches the page for markup that looks like async Wistia embed
 codes](#how_async_embeds_are_initialized_for_the_curious).
 
-Next we have the <strong>video container</strong>.
+Next we have the **video container**.
 
 <code class="full_width">
 &lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot; async&gt;&lt;/script&gt;<br>
@@ -52,9 +51,10 @@ Next we have the <strong>video container</strong>.
 </code>
 
 The video container is where your video will be placed when all the
-initialization steps are complete. The video container's attributes control how the video is initialized.
+initialization steps are complete. The video container's attributes control how
+the video is initialized.
 
-As part of the video container, first, the <strong>wistia_embed</strong> class.
+As part of the video container, first, the **wistia_embed** class.
 
 <code class="full_width">
 &lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot; async&gt;&lt;/script&gt;<br>
@@ -76,7 +76,7 @@ This class tells our embedding library two things: (1) it's an async embed, and
 code from the Embed Modal, it will have its own hashed ID unique to the video.
 
 <a name="option-value-style-classes"></a>
-Third, <strong>option=value</strong> style classes.
+Third, **option=value** style classes.
 
 <code class="full_width">
 &lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot; async&gt;&lt;/script&gt;<br>
@@ -84,7 +84,7 @@ Third, <strong>option=value</strong> style classes.
 </code>
 
 In this case, we set videoFoam to true. But you could also set any options available
-in the [Embedding Options Documentation]({{ '/embed-options' | post_url }}). If
+in the [Embedding Options page]({{ '/embed-options' | post_url }}). If
 you're setting more than one option, just separate them with spaces. If your
 option's value includes spaces, then [percent
 encode](http://en.wikipedia.org/wiki/Percent-encoding) it!
@@ -102,7 +102,7 @@ We chose to set options in the class attribute because they are less likely
 than HTML5 `data-` attributes to be stripped out of CMSes, and the syntax
 aligns nicely with options for our iframe embeds.
 
-Fourth, the <strong>style attribute</strong>.
+Fourth, the **style attribute**.
 
 <code class="full_width">
 &lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot; async&gt;&lt;/script&gt;<br>
@@ -116,7 +116,7 @@ fullscreen, we recommend NOT adding borders, padding, or margin directly to
 the video container. Instead, you should create a wrapper element and add them
 there.
 
-Last, the <strong>contents of the container</strong>.
+Last, the **contents of the container**.
 
 <code class="full_width">
 &lt;script charset=&quot;ISO-8859-1&quot; src=&quot;//fast.wistia.com/assets/external/E-v1.js&quot; async&gt;&lt;/script&gt;<br>
@@ -125,11 +125,10 @@ Last, the <strong>contents of the container</strong>.
 &lt;/div&gt;
 </code>
 
-By default, we have an invisible space <strong>&amp;nbsp;</strong> as the
+By default, we have an invisible space **&amp;nbsp;** as the
 content, which means nothing appears in the element until the video is ready.
 You can change this to be any HTML. When the video initialization is complete,
-this content will be completely replaced by the video. Sidenote: That is how
-SEO embeds work.
+this content will be completely replaced by the video.
 
 
 ## Using the Wistia library asynchronously
@@ -256,29 +255,6 @@ window.wistiaInit = function(W) {
   W.options({ playerColor: "ff0000" });
 };
 {% endcodeblock %}
-
-
-## Async SEO Embed Codes
-
-The standard Wistia SEO embed codes must be synchronous because they include
-a script specific to the video--metadata.js--which must be run synchronously
-during page load. This is the best solution for most people because it's a
-single Copy &amp; Paste operation. Because alternative workflows are too
-complex for most users and environments, we do not allow the async option in
-the Wistia user interface.
-
-However, it is possible to get an async SEO embed code via the [oembed
-endpoint]({{ '/construct-an-embed-code#using_the_oembed_endpoint' | post_url }}).
-To do that, simply make your oembed request with query params
-`embedType=seo&async=true`. It will return an SEO embed code with an additional
-property: `"meta_tags_for_head"`. You should put these tags in the `<head>` of
-the page where the video is embedded. They can technically be modified or
-dropped, but we have found that including them improves the speed and accuracy
-of being indexed with Google.
-
-The process for fetching and using this kind of embed code is highly technical,
-so __if you are not a programmer, we recommend NOT using async SEO embed
-codes__.
 
 
 ## How async embeds are initialized (for the curious)

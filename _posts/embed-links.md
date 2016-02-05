@@ -42,8 +42,8 @@ Check out a live example!
 <a href="#wistia_30q7n48g4f?replace=closestAbove">Make French Toast</a><br/>
 <a href="#wistia_342jss6yh5?replace=closestAbove">Wistia Team Intro</a><br/>
 
-"Make French Toast" is embedded by default by the API embed code. When you
-click a link below that code, it replaces the video with another and
+"Make French Toast" is embedded by default by the Standard (or async) embed code.
+When you click a link below that code, it replaces the video with another and
 automatically plays it.
 
 ## Simple Playlist Link Example
@@ -333,7 +333,7 @@ The link above is closest to the first video, so that's the one it connects to.
 
 ## Notes
 
-API or SEO embed codes only. This does not work with iframes or popovers.
+Standard embed codes only. This does not work with iframes (fallback) or popovers.
 
 Embed Links should exist in the DOM within 5 seconds of the video being
 embedded. Otherwise, you'll need to run `Wistia.EmbedLink.setupAll()` right
