@@ -333,7 +333,7 @@ The link above is closest to the first video, so that's the one it connects to.
 
 ## Notes
 
-API or SEO embed codes only. This does not work with iframes or popovers.
+Standard embed codes only. This does not work with iframes (fallback) or popovers.
 
 Embed Links should exist in the DOM within 5 seconds of the video being
 embedded. Otherwise, you'll need to run `Wistia.EmbedLink.setupAll()` right
