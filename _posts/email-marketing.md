@@ -30,7 +30,7 @@ If you are having any trouble, check out our
 [customizing]({{ '/customizing-your-video' | post_url }}) and [embedding]({{ '/embedding' | post_url }})
 articles for more.
 
-{% post_image hashed_id: '040563313d58c1fd7e00a8f9daae83061838ddc0', class: 'center' %}
+{% post_image hashed_id: '1a27c08517115d9f846a8e6f0f36c38a0e27d5a1', class: 'center' %}
 
 Next, select *Embed & Share* from the <span class="action_menu">Video Actions</span> menu.
 
