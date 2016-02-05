@@ -42,8 +42,8 @@ Check out a live example!
 <a href="#wistia_30q7n48g4f?replace=closestAbove">Make French Toast</a><br/>
 <a href="#wistia_342jss6yh5?replace=closestAbove">Wistia Team Intro</a><br/>
 
-"Make French Toast" is embedded by default by the API embed code. When you
-click a link below that code, it replaces the video with another and
+"Make French Toast" is embedded by default by the Standard (or async) embed code.
+When you click a link below that code, it replaces the video with another and
 automatically plays it.
 
 ## Simple Playlist Link Example
