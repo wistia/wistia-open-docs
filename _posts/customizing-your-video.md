@@ -219,7 +219,7 @@ There are three types of Calls to Action:
 
 * **Text:** add a quick, customizable message and link to direct your viewers.
 * **Image:** use an image instead of a text link to direct viewers.
-* **HTML:** write your own custom Call To Action *(advanced users only)*.
+* **HTML:** write your own custom Call To Action.
 
 {{ "When adding your link, make sure you include the `http://`" | note }}
 
