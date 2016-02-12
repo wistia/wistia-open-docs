@@ -20,7 +20,7 @@ image_play_button | Whether or not to overlay a play button in the middle of the
 image_play_button_color | The color of the play button. Specify an RGB or RGBA hex color string. | 68656080
 image_rotate | Rotate the image clockwise by the specified number of degrees. For example, a value of 180 would flip the image upside-down. |
 
-"Geometry Strings" follow the the same format Image Magick uses for resizing and cropping images.
+"Geometry Strings" follow the same format Image Magick uses for resizing and cropping images.
 [Here is a good reference on geometry strings](http://www.simplesystems.org/RMagick/doc/imusage.html#geometry).
 
 **NOTE** When you're adjusting these parameters, our servers have to create
