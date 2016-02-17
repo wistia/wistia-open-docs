@@ -16,8 +16,10 @@ embed code type on your website. Seriously, it's that easy.
 
 Wistia does all of the hard work for you. The JSON-LD file is automatically
 injected into the head of your website once your page is live. We handle all of
-the tricky stuff. No sitemaps, no extra coding, just copy and paste, and rock
+the tricky stuff. No sitemaps, no extra coding, just copy, paste, and rock
 out. 🤘
+
+{% wistia_embed hashed_id: o2rli0hmq2, embedType: async %}
 
 ## What is Video SEO?
 
@@ -78,11 +80,11 @@ For even more information on embedding, check out the
 
 Yes you can, you SEO-lover.
 
-Here's an example for one of the videos on our [embedding]({{ '/embedding' | post_url }}) page!
-Which, if you're feeling extra exploratory, you can go check out by inspecting
-the `<head>` code of the page.
+Here's an example for the video right on this page! If you're feeling
+extra exploratory, you can check this out live by inspecting the `<head>` code
+of the current page.
 
-<pre><code class="language-html" style="white-space: pre-wrap; white-space: -moz-pre-wrap; ">"@context":"http://schema.org/","@id":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","@type":"VideoObject","duration":"PT31S","name":"Standard Embed Hello","thumbnailUrl":"https://embed-ssl.wistia.com/deliveries/c2e61496651bc2e88ce8e7f7006aa384c641d708.jpg?image_crop_resized=960x540","embedUrl":"https://fast.wistia.net/embed/iframe/vud7ff4i6w","uploadDate":"2015-11-24","transcript":"Hi.\n\nI'm your standard embed code.\n\nI'm your basic go-to embed\ncode for getting video\n\nonto your website.\n\nI display inline on your page\nwith the rest of your content,\n\nand I'm also responsive.\n\nBecause I'm\nasynchronous, I won't\n\nblock the loading of all the\nother content on your web page.\n\nFor developers, I\nintegrate easily\n\nwith a player API, which\nsupports a bunch of ways\n\nto control the video player.\n\nAnd like all Wistia\nembed codes, any changes\n\nyou make to me, like the\nplayer color or controls,\n\nwill automatically update\nwithout having to re-embed.\n\nSo long!","description":"A video that explains the standard embed. Featuring, Bobby!"</code></pre>
+<pre><code class="language-html" style="white-space: pre-wrap; white-space: -moz-pre-wrap; ">"@context":"http://schema.org/","@id":"https://fast.wistia.net/embed/iframe/o2rli0hmq2","@type":"VideoObject","duration":"PT1M42S","name":"Wistia Video SEO","thumbnailUrl":"https://embed-ssl.wistia.com/deliveries/702fbe1279c66aa8b60fb0b2db60ddfb949099d3.jpg?image_crop_resized=960x540","embedUrl":"https://fast.wistia.net/embed/iframe/o2rli0hmq2","uploadDate":"2016-02-11","transcript":"[MUSIC PLAYING]\n\nWe've included all\nthe SEO functionality\n\ninto our existing embed codes\nthrough the power of JSON-LD.\n\nWhat's JSON-LD, might you ask?\n\nJSON-LD is structured,\ncanonical data\n\nrepresenting a resource which\ncan be dynamically injected\n\ninto your page at runtime.\n\nSo, what you're saying is,\nwe provide the same code\n\nwe had before, but it's in\nthe head of the page rather\n\nthan the body.\n\nYep.\n\nAnd it all works with\nasynchronous JavaScript, which\n\nmeans it's super fast,\nand it won't slow down\n\nyour page's load time.\n\nGoogle loves fast websites, so\nthis performance improvement\n\nis good for SEO, too.\n\nHead to your Embed page.\n\nCopy a standard embed code,\nand paste it on your site.\n\nHere's a tip to see if your\nvideo is being indexed.\n\nHead to Google.com/video and\ntype in the URL of the page\n\nwhere your video is embedded.\n\nIf the page comes up\nwith a video thumbnail,\n\nthen hey, cool!\n\nIt worked.\n\nBut, if it doesn't happen\nimmediately, don't panic.\n\nIt can sometimes take a\nfew weeks to appear there.\n\nWhile the newest embed will\nensure your video gets indexed,\n\nit doesn't always\nmean your page will\n\nrank with the video snippet\nin Google's universal search.\n\nThat comes down to a\nwhole bunch of domain-\n\nand page-level factors,\nincluding the authority\n\nof the site, how prominent\nthe video is on the page,\n\nand whether Google thinks the\nsearch results should contain\n\nvideo results.\n\nAnd, if you don't\nwant your videos\n\nappearing in search\nresults, you're\n\nstill all good with\nthese new embed codes.\n\nThe new markup will\nonly take effect\n\non pages open to\nGoogle's searchbots.\n\nIn other words, it won't appear\nwhen there is a meta noindex\n\ntag in the head of the page or\nif there is a robots.txt block\n\npresent.\n\nSo, that's it.\n\nEverything just works.\n\nIt's not in the head,\nit's in the body.\n\n[LAUGHTER]","description":"Brendan, Max, and Jeff explain Wistia's video SEO functionality."</code></pre>
 
 ## Managing Your Metadata
 
