@@ -265,6 +265,12 @@ video.embedded(function() {
 });
 {% endcodeblock %}
 
+
+### eventKey()
+
+Returns the `event_key` for the current viewing session. You can get all events
+for your account from the [Stats API]({{ '/stats-api#events' | post_url }}).
+
 ### hasData()
 
 Returns true if the video has received data from the Wistia server, false if
@@ -611,6 +617,12 @@ also be updated to maintain the correct aspect ratio.
 video.videoWidth(640);
 video.videoWidth(640, { constrain: true });
 {% endcodeblock %}
+
+### visitorKey()
+
+Returns the `visitor_key` of the person watching the video. This is
+used to associate multiple viewing sessions with a single person. You can use it
+to filter [events]({{'/stats-api#events' | post_url }}) in the Stats API.
 
 ### volume()
 
