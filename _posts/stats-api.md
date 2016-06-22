@@ -529,7 +529,11 @@ iframe_heatmap_url | The URL of an HTML page that will render the heatmap for th
     "percent_viewed": 0.22457664233576624,
     "embed_url": "http://wistia.github.io/demobin/post-roll-video-play/",
     "conversion_type": "",
-    "conversion_data": "",
+    "conversion_data": {
+      "email": "test@wistia.com",
+      "first_name" : "Jeff",
+      "last_name"  : "Vincent"
+    },
     "iframe_heatmap_url": "https://api.wistia.com/v1/stats/events/1390862572596e0.8447021404281259/iframe.html?public_token=xxxxxx",
     "visitor_key": "B6D1F47963577AF26697138FAB75BD1B7086697B",
     "media_id": "993554ba94",
@@ -558,7 +562,11 @@ iframe_heatmap_url | The URL of an HTML page that will render the heatmap for th
     "percent_viewed": 0.04356993736951984,
     "embed_url": "http://wistia.github.io/demobin/multiple-plays-at-once/",
     "conversion_type": "",
-    "conversion_data": "",
+    "conversion_data": {
+      "email": "test@wistia.com",
+      "first_name" : "Jeff",
+      "last_name"  : "Vincent"
+    },
     "iframe_heatmap_url": "https://api.wistia.com/v1/stats/events/1390856239396e0.3702384910728902/iframe.html?public_token=xxxxxx",
     "visitor_key": "7C1125427A252C6DE06FDC2B007712911DAF17B7",
     "media_id": "r2wybv7xr0",
@@ -613,7 +621,11 @@ Events: List method.
   "percent_viewed": 0.22457664233576624,
   "embed_url": "http://wistia.github.io/demobin/post-roll-video-play/",
   "conversion_type": "",
-  "conversion_data": "",
+  "conversion_data": {
+      "email": "test@wistia.com",
+      "first_name" : "Jeff",
+      "last_name"  : "Vincent"
+  },
   "iframe_heatmap_url": "https://api.wistia.com/v1/stats/events/1390862572596e0.8447021404281259/iframe.html?public_token=xxxxxxx",
   "visitor_key": "B6D1F47963577AF26697138FAB75BD1B7086697B",
   "media_id": "993554ba94",
