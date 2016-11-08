@@ -190,9 +190,6 @@ Push code to github:
 
     git push origin master
 
-From skycrank, update the docs box with master:
-
-    ./crank docs deploy
 
 Contact
 -------
